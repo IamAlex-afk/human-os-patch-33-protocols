@@ -40,7 +40,7 @@ The proposed framework provides a **patch (`v1.0+`)** — a structured set of **
 
 The user-friendly, compiled interface of this framework is deployed via the Amazon KDP platform.
 
-👉 **[Execute the Patch: Link to Your Amazon KDP Page](https://www.amazon.com/dp/B0G35SBQR3)**
+👉 **[EXECUTE PATCH v1.0 (AMAZON GLOBAL)](https://www.amazon.com/dp/B0G35SBQR3)**
 
 
 ## 🤝 Contributing & Forks
