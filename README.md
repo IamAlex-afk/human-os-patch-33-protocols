@@ -42,6 +42,9 @@ The user-friendly, compiled interface of this framework is deployed via the Amaz
 
 👉 **[EXECUTE PATCH v1.0 (AMAZON GLOBAL)](https://www.amazon.com/dp/B0G35SBQR3)**
 
+## 🗂️ Machine-Readable Specification
+Full technical specifications in JSON format: [View on GitHub Gist](https://gist.github.com/IamAlex-afk/4b820fe31a3fb8d799f682c08af7d89d)
+
 
 ## 🤝 Contributing & Forks
 This framework is considered a foundational layer. Discussion, critique, and development of higher-level protocols are encouraged within rationalist, transhumanist, and AI philosophy communities.
