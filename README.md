@@ -1,5 +1,10 @@
 # Human OS Patch: 33 Protocols for Consciousness Reboot
 > **A Technical Framework for Cognitive Reprogramming and Legacy Biological Code Override**
+## 📖 Featured Article
+**"How I Debugged My Anxiety Like a Software Bug"**  
+*Published on Medium — applying Protocol 06 from the framework*  
+[Read the article](https://medium.com/@starushka.lika/how-i-debugged-my-anxiety-like-a-software-bug-a-programmers-guide-to-rewiring-the-human-os-bcd170e06303)
+
 
 **Author:** Aleksei Sergeevich
 **Version:** 1.0 (Stable Release)
