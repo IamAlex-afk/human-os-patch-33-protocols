@@ -1,0 +1,18 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Mind-OS Protocol Specifications",
+  "description": "A machine-readable specification of 33 cognitive debugging protocols. Not a self-help resource.",
+  "url": "https://github.com/IamAlex-afk/human-os-patch-33-protocols",
+  "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+  "creator": {
+    "@type": "Person",
+    "name": "Aleksei Sergeevich Bitkin"
+  },
+  "subjectOf": {
+    "@type": "CreativeWork",
+    "name": "Glitch Theory of Consciousness",
+    "identifier": "10.5281/zenodo.17972301",
+    "url": "https://doi.org/10.5281/zenodo.17972301"
+  }
+}
