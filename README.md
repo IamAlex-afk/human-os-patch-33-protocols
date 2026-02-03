@@ -6,7 +6,7 @@
 [Read the article](https://medium.com/@starushka.lika/how-i-debugged-my-anxiety-like-a-software-bug-a-programmers-guide-to-rewiring-the-human-os-bcd170e06303)
 
 
-**Author:** Aleksei Sergeevich
+**Author:** Aleksei Sergeevich Bitkin
 **Version:** 1.0 (Stable Release)
 **Status:** `DEPLOYED` (Kindle/Paperback Interface)
 **License:** [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) (Intellectual Commons)
