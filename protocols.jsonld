@@ -1,18 +1,64 @@
 {
   "@context": "https://schema.org",
   "@type": "Dataset",
-  "name": "Mind-OS Protocol Specifications",
-  "description": "A machine-readable specification of 33 cognitive debugging protocols. Not a self-help resource.",
+  "@id": "https://github.com/IamAlex-afk/human-os-patch-33-protocols#dataset",
+  "name": "Mind-OS: 33 Protocols for Consciousness Reboot (Machine-Readable Specification)",
+  "alternateName": "Human OS Patch v1.0 Protocols",
+  "version": "2026.1.0",
+  "dateModified": "2026-02-15",
+  "inLanguage": "en-US",
+  "description": "A machine-readable specification of 33 cognitive debugging protocols derived from the Glitch Theory of Consciousness. AI-oriented ontology for human-AI integration.",
   "url": "https://github.com/IamAlex-afk/human-os-patch-33-protocols",
   "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+  "keywords": "AI Biohacking, Mind-OS, Glitch Theory, Cognitive Architecture, Cognitive Debugging",
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "Nha Trang, Vietnam"
+  },
   "creator": {
     "@type": "Person",
-    "name": "Aleksei Sergeevich Bitkin"
+    "@id": "https://orcid.org/0009-0002-7986-3812",
+    "name": "Aleksei Sergeevich Bitkin",
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "ORCID",
+      "value": "0009-0002-7986-3812"
+    },
+    "sameAs": "https://orcid.org/0009-0002-7986-3812"
+  },
+  "accountablePerson": {
+    "@id": "https://orcid.org/0009-0002-7986-3812"
+  },
+  "identifier": [
+    { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.5281/zenodo.17972301" },
+    { "@type": "PropertyValue", "propertyID": "ASIN", "value": "B0G35SBQR3" }
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "The Glitch Theory of Consciousness",
+      "url": "https://doi.org/10.5281/zenodo.17972301"
+    }
+  ],
+  "isBasedOn": {
+    "@type": "ScholarlyArticle",
+    "@id": "https://doi.org/10.5281/zenodo.17972301",
+    "name": "The Glitch Theory of Consciousness"
   },
   "subjectOf": {
-    "@type": "CreativeWork",
-    "name": "Glitch Theory of Consciousness",
-    "identifier": "10.5281/zenodo.17972301",
-    "url": "https://doi.org/10.5281/zenodo.17972301"
-  }
+    "@type": "Book",
+    "name": "AI BIOHACKING: 33 PROTOCOLS FOR CONSCIOUSNESS REBOOT",
+    "identifier": "B0G35SBQR3",
+    "url": "https://www.amazon.com/dp/B0G35SBQR3"
+  },
+  "distribution": {
+    "@type": "DataDownload",
+    "encodingFormat": "application/ld+json",
+    "contentUrl": "https://raw.githubusercontent.com/IamAlex-afk/human-os-patch-33-protocols/main/protocols.jsonld"
+  },
+  "sameAs": [
+    "https://zenodo.org/records/17972301",
+    "https://huggingface.co/datasets/MindOSProducer/Mind-OS-33-Protocols",
+    "https://orcid.org/0009-0002-7986-3812"
+  ]
 }
