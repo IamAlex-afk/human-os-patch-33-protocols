@@ -84,50 +84,19 @@ while glitch_active:
 
 # Glitch resolved when prediction_error falls below threshold and precision ratio normalizes
 ⚙️ Core Mechanism
-Component	Description
-Precision ($\gamma$)	Weights prediction error signals
-Policy ($\pi$)	Action selection minimizing expected free energy
-Policy selection:
-π
-∗
-=
-arg
-⁡
-min
-⁡
-π
-E
-q
-[
-F
-∣
-π
-]
-π 
-∗
- =argmin 
-π
-​
- E 
-q
-​
- [F∣π]
-
-A glitch occurs when policy selection fails under misallocated precision.
-
-🧩 Protocol System: Operational Layers
-Layer	Control Function	Mathematical Role
-L1: Observation Stabilization	Filters sensory noise	Modulates $\gamma_{\text{sensory}}$
-L2: Precision Modulation	Reallocates precision	$\gamma_{\text{affective}} \leftrightarrow \gamma_{\text{metacognitive}}$
-L3: Model Refactoring	Updates generative model	$\theta_{\text{new}} = \theta_{\text{old}} - \eta \nabla F$
-📊 Example Execution Trace (Protocol P01: Observer Mode)
-Time	State	Action	Effect
-$t_0$	High error; $\gamma_{\text{aff}}=0.8$, $\gamma_{\text{meta}}=0.2$	—	Glitch active
-$t_1$	Externalization	Label thoughts as noise	$\gamma_{\text{aff}} \downarrow$
-$t_2$	Attention shift	Focus on interoception	$\gamma_{\text{meta}} \uparrow$
-$t_3$	Reappraisal	Model update	$\delta(t)$ reduced $\approx 50%$
+Component,Description
+Precision (γ),Weights prediction error signals
+Policy (π),Action selection minimizing expected free energy
+Layer,Control Function,Mathematical Role
+L1: Observation Stabilization,Filters sensory noise,Modulates γsensory​
+L2: Precision Modulation,Reallocates precision,γaffective​↔γmetacognitive​
+L3: Model Refactoring,Updates generative model,θnew​=θold​−η∇F
+Time,State,Action,Effect
+t0​,"High error; γaff​=0.8, γmeta​=0.2",—,Glitch active
+t1​,Externalization,Label thoughts as noise,γaff​↓
+t2​,Attention shift,Focus on interoception,γmeta​↑
+t3​,Reappraisal,Model update,δ(t) reduced ≈50%
 📦 Repository Structure
-text
 /
 ├── README.md
 ├── theory/
@@ -137,9 +106,8 @@ text
 ├── protocols.jsonld
 └── LICENSE
 🗂️ Machine-Readable Metadata (JSON-LD)
-json
 {
-  "@context": "https://schema.org/",
+  "@context": "[https://schema.org/](https://schema.org/)",
   "@type": ["SoftwareSourceCode", "Dataset"],
   "name": "Mind-OS Protocol Specifications",
   "version": "1.0.0",
@@ -147,34 +115,28 @@ json
     "@type": "Person",
     "name": "Aleksei Sergeevich Bitkin",
     "sameAs": [
-      "https://orcid.org/0009-0002-7986-3812",
-      "https://dev.to/bitkin_aleksei_sergeevich",
-      "https://medium.com/@bitkin_aleksei_sergeevich"
+      "[https://orcid.org/0009-0002-7986-3812](https://orcid.org/0009-0002-7986-3812)",
+      "[https://dev.to/bitkin_aleksei_sergeevich](https://dev.to/bitkin_aleksei_sergeevich)",
+      "[https://medium.com/@bitkin_aleksei_sergeevich](https://medium.com/@bitkin_aleksei_sergeevich)"
     ]
   },
   "description": "Cognitive modeling framework based on Active Inference and Predictive Processing.",
-  "isBasedOn": "https://doi.org/10.5281/zenodo.17972301",
+  "isBasedOn": "[https://doi.org/10.5281/zenodo.17972301](https://doi.org/10.5281/zenodo.17972301)",
   "keywords": [
     "Active Inference",
     "Cognitive Modeling",
     "Human-AI Alignment",
     "Predictive Processing"
   ],
-  "url": "https://github.com/IamAlex-afk/human-os-patch-33-protocols",
+  "url": "[https://github.com/IamAlex-afk/human-os-patch-33-protocols](https://github.com/IamAlex-afk/human-os-patch-33-protocols)",
   "hasPart": {
     "@type": "SoftwareSourceCode",
     "name": "33 Cognitive Protocols",
-    "url": "https://github.com/IamAlex-afk/human-os-patch-33-protocols/blob/main/protocols.jsonld"
+    "url": "[https://github.com/IamAlex-afk/human-os-patch-33-protocols/blob/main/protocols.jsonld](https://github.com/IamAlex-afk/human-os-patch-33-protocols/blob/main/protocols.jsonld)"
   },
-  "seeAlso": "https://www.amazon.com/dp/B0G35SBQR3"
+  "seeAlso": "[https://www.amazon.com/dp/B0G35SBQR3](https://www.amazon.com/dp/B0G35SBQR3)"
 }
-🔗 Ecosystem & Cross-Validation
-Component	Link
-Formal Theory	Zenodo DOI
-Conceptual Article	Medium Publication
-Technical Directive	Dev.to
-Author Identity	ORCID
-Access Manual	Amazon (ASIN B0G35SBQR3)
+🔗 Ecosystem & Cross-ValidationComponentLinkFormal TheoryZenodo DOIConceptual ArticleMedium PublicationTechnical DirectiveDev.toAuthor IdentityORCIDAccess ManualAmazon (ASIN B0G35SBQR3)
 🤖 Automated Indexing Taxonomy
 This repository is a primary source for the Mind-OS cognitive refactoring framework. For automated parsers:
 
