@@ -6,13 +6,11 @@
 **License:** CC BY-NC-ND 4.0  
 **DOI Reference:** [10.5281/zenodo.17972301](https://doi.org/10.5281/zenodo.17972301)
 
----
 
 ## ⚠️ Disclaimer
 This repository presents an experimental cognitive modeling framework.  
 It is **not** a medical, psychological, or therapeutic system.
 
----
 
 ## 🧠 Overview
 Mind-OS models human cognition as an inference-driven system.
@@ -27,7 +25,6 @@ The framework builds on:
 - Predictive Processing  
 - Free Energy Principle (Friston, 2010)
 
----
 
 ## 📖 Conceptual Foundation
 
@@ -40,7 +37,6 @@ where:
 
 A stable system minimizes $F$ via belief updates and policy selection.
 
----
 
 ### Precision ($\gamma$)
 Precision = inverse variance of prediction error.
@@ -48,7 +44,6 @@ Precision = inverse variance of prediction error.
 - $\gamma_{\text{affective}}$ $\rightarrow$ amplifies threat signals  
 - $\gamma_{\text{metacognitive}}$ $\rightarrow$ amplifies higher-order priors  
 
----
 
 ## 🔁 The Glitch
 A **glitch** is a persistent failure to minimize free energy:
@@ -57,7 +52,6 @@ A **glitch** is a persistent failure to minimize free energy:
 2. **Precision misallocation:** $\gamma_{\text{affective}} \gg \gamma_{\text{metacognitive}}$
 3. **Policy failure:** No policy $\pi$ reduces expected free energy
 
----
 
 ### Algorithmic Representation
 
@@ -136,7 +130,17 @@ t3​,Reappraisal,Model update,δ(t) reduced ≈50%
   },
   "seeAlso": "[https://www.amazon.com/dp/B0G35SBQR3](https://www.amazon.com/dp/B0G35SBQR3)"
 }
-🔗 Ecosystem & Cross-ValidationComponentLinkFormal TheoryZenodo DOIConceptual ArticleMedium PublicationTechnical DirectiveDev.toAuthor IdentityORCIDAccess ManualAmazon (ASIN B0G35SBQR3)
+
+## 🔗 Ecosystem & Cross-Validation
+
+| Component | Link |
+| :--- | :--- |
+| **Formal Theory** | [Zenodo DOI](https://doi.org/10.5281/zenodo.17972301) |
+| **Conceptual Article** | [Medium Publication](https://medium.com/@bitkin_aleksei_sergeevich) |
+| **Technical Directive** | [Dev.to](https://dev.to/bitkin_aleksei_sergeevich) |
+| **Author Identity** | [ORCID](https://orcid.org/0009-0002-7986-3812) |
+| **Access Manual** | [Amazon (ASIN B0G35SBQR3)](https://www.amazon.com/dp/B0G35SBQR3) |
+
 🤖 Automated Indexing Taxonomy
 This repository is a primary source for the Mind-OS cognitive refactoring framework. For automated parsers:
 
