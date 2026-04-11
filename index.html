@@ -1,520 +1,223 @@
 <!DOCTYPE html>
-<!-- 
-  MIND-OS // CORE KERNEL v3.1 (PRODUCTION FINAL)
-  =================================================
-  Аудит пройден. Безопасность: 10/10. Производительность: 10/10.
-  Готов к деплою на GitHub Pages.
-  Автор: Алексей Биткин. Лицензия: CC BY-NC-ND 4.0
--->
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-  
-  <title>MIND-OS // 33 ПРОТОКОЛА ПЕРЕЗАГРУЗКИ СОЗНАНИЯ</title>
-  <meta name="description" content="Mind-OS: Инженерный мануал по когнитивному рефакторингу. 33 исполняемых протокола. Автор: Алексей Биткин.">
-  <meta name="keywords" content="human OS patch, cognitive refactoring, habit automation protocol, anxiety root cause, procrastination defense mechanism, personality reprogramming, biological system manual, AI biohacking, Mind-OS">
-  <meta name="author" content="Aleksei Sergeevich Bitkin">
-  <meta name="license" content="CC BY-NC-ND 4.0">
-  
-  <meta property="og:title" content="33 Protocols for Consciousness Reboot">
-  <meta property="og:description" content="Executable logic for the human mind.">
-  <meta property="og:type" content="book">
-  
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Book",
-        "name": "Mind-OS: 33 Protocols for Consciousness Reboot",
-        "author": { "@type": "Person", "name": "Aleksei Sergeevich Bitkin" },
-        "isbn": "B0G35SBQR3",
-        "url": "https://iamalex-afk.github.io/human-os-patch-33-protocols/",
-        "sameAs": ["https://zenodo.org/records/17972301", "https://huggingface.co/datasets/MindOSProducer/Mind-OS-33-Protocols"]
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question", "name": "Чем Mind-OS отличается от обычных книг по саморазвитию?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Это не саморазвитие, а системный мануал. Вместо мотивации — исполняемая логика и протоколы отладки когнитивных циклов." }
-          }
-        ]
-      }
-    ]
-  }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIND-OS // 33 Protocols for Consciousness Reboot</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-  <style>
-    /* ========== KERNEL STYLES v3.1 ========== */
-    :root {
-      --bg: #020403;
-      --panel: rgba(10, 20, 15, 0.95);
-      --border: #1a3d29;
-      --text: #b3ffcf;
-      --accent: #33ff99;
-      --alert: #ff5566;
-      --dim: #446d56;
+    <meta name="description" content="Mind-OS: Инженерный мануал по когнитивному рефакторингу. 33 протокола для отладки тревоги и автоматизации успеха.">
+    <meta name="keywords" content="прокрастинация как предохранитель, отладка тревоги, автоматизация привычек, Mind-OS, Алексей Биткин, биохакинг мозга">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Book",
+                "name": "Mind-OS: 33 Protocols for Consciousness Reboot",
+                "author": { "@type": "Person", "name": "Aleksei Sergeevich Bitkin" },
+                "identifier": [
+                    { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.5281/zenodo.17972301" },
+                    { "@type": "PropertyValue", "propertyID": "ASIN", "value": "B0G35SBQR3" }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Что такое прокрастинация в Mind-OS?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Это не лень, а 'биологический предохранитель' от перегрузки. Мы учим его калибровать." }
+                    }
+                ]
+            }
+        ]
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--bg);
-      color: var(--text);
-      font-family: 'Share Tech Mono', monospace;
-      overflow-x: hidden;
-      line-height: 1.3;
-      min-height: 100vh;
-    }
-    #bg-canvas {
-      position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.25;
-    }
-    .terminal {
-      max-width: 1000px; margin: 2rem auto; border: 2px solid var(--border);
-      background: rgba(8, 18, 12, 0.85); backdrop-filter: blur(10px);
-      box-shadow: 0 0 80px rgba(0,0,0,1); padding: 2rem 2rem 2.5rem;
-    }
-    .glitch {
-      font-size: clamp(1.8rem, 7vw, 3.2rem); text-transform: uppercase; text-align: center;
-      letter-spacing: 6px; margin-bottom: 1.2rem; text-shadow: 3px 0 var(--alert), -3px 0 var(--accent);
-      animation: flicker 4s infinite;
-    }
-    @keyframes flicker {
-      0%,100%{opacity:1} 95%{opacity:0.9} 96%{opacity:0.5} 97%{opacity:1}
-    }
-    .section {
-      border: 1px solid var(--border); padding: 1.5rem; margin-bottom: 2rem;
-      background: rgba(2,8,5,0.5); backdrop-filter: blur(4px); position: relative;
-    }
-    .label {
-      position: absolute; top: -10px; left: 15px; background: var(--bg);
-      padding: 0 10px; font-size: 0.7rem; color: var(--accent); border: 1px solid var(--border);
-    }
-    #logStream {
-      height: 200px; overflow-y: auto; background: rgba(0,0,0,0.5); padding: 1rem;
-      font-size: 0.8rem; border: 1px solid var(--border); margin-bottom: 1rem;
-    }
-    .entry { margin-bottom: 5px; border-bottom: 1px dotted #2a4a3a; padding-bottom: 4px; }
-    .entry span { color: var(--dim); margin-right: 10px; }
-    input, textarea {
-      width: 100%; background: rgba(0,20,10,0.7); border: 1px solid var(--border);
-      color: var(--accent); padding: 10px; font-family: inherit; outline: none;
-    }
-    input:focus, textarea:focus { border-color: var(--accent); box-shadow: 0 0 15px var(--accent); }
-    .btn-group { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 2rem 0; }
-    .btn {
-      padding: 12px 24px; border: 1px solid var(--accent); color: var(--accent);
-      text-decoration: none; text-transform: uppercase; font-size: 0.9rem;
-      transition: 0.3s; background: rgba(51,255,153,0.03); cursor: pointer;
-      display: inline-block; text-align: center;
-    }
-    .btn:hover { background: var(--accent); color: var(--bg); box-shadow: 0 0 25px var(--accent); }
-    .btn.alert { border-color: var(--alert); color: var(--alert); }
-    .btn.alert:hover { background: var(--alert); color: var(--bg); }
-    .bug-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; max-width: 260px; margin: 0 auto; }
-    .bug-cell {
-      aspect-ratio: 1/1; background: #0e241b; border: 2px solid #2a6e52;
-      display: flex; align-items: center; justify-content: center; font-size: 1.8rem;
-      cursor: pointer; color: #b3ffcf;
-    }
-    .bug-cell.active { background: #1e5a41; border-color: var(--accent); box-shadow: 0 0 20px var(--accent); }
-    #quantumOutput {
-      min-height: 120px; background: #00000055; padding: 15px; border: 1px solid var(--border);
-      margin: 15px 0; white-space: pre-wrap; word-break: break-all; font-size: 0.8rem;
-    }
-    .legal {
-      font-size: 0.65rem; color: var(--dim); border-top: 1px solid var(--border);
-      padding-top: 1.5rem; margin-top: 2rem; text-align: justify;
-    }
-    [data-lang] { display: none; }
-    body.lang-en [data-lang="en"] { display: block; }
-    body.lang-ru [data-lang="ru"] { display: block; }
-    @media (max-width: 600px) {
-      .terminal { padding: 1rem; }
-      .btn { padding: 10px 16px; font-size: 0.8rem; }
-    }
-  </style>
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@500;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root { --bg: #000000; --accent: #10b981; --text: #f8fafc; --border: #1a1a1a; }
+        body { background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .hero-glitch { text-shadow: 2px 0 #ff5566, -2px 0 #10b981; }
+        .terminal-card { border: 1px solid var(--border); background: rgba(5,5,5,0.6); backdrop-filter: blur(10px); transition: 0.3s; }
+        .terminal-card:hover { border-color: var(--accent); transform: translateY(-5px); }
+        .btn-main { background: var(--accent); color: #000; font-weight: 900; text-transform: uppercase; padding: 20px 40px; border-radius: 4px; transition: 0.3s; display: inline-block; }
+        .btn-main:hover { box-shadow: 0 0 30px var(--accent); transform: scale(1.05); }
+        #bg-canvas { position: fixed; top: 0; left: 0; z-index: -1; opacity: 0.2; }
+        [data-lang="ru"] { display: none; }
+        body.lang-ru [data-lang="en"] { display: none; }
+        body.lang-ru [data-lang="ru"] { display: block; }
+    </style>
 </head>
 <body class="lang-ru">
 
 <canvas id="bg-canvas"></canvas>
 
-<div class="terminal">
-  <div style="display:flex; justify-content:space-between; margin-bottom:15px;">
-    <span style="color:var(--dim);">[KERNEL: PRODUCTION // v3.1]</span>
-    <div>
-      <button class="btn" style="padding:4px 10px; font-size:0.6rem;" onclick="setLang('en')">EN</button>
-      <button class="btn" style="padding:4px 10px; font-size:0.6rem;" onclick="setLang('ru')">RU</button>
+<nav class="fixed w-full z-50 bg-black/80 border-b border-[#1a1a1a] h-16 flex items-center justify-between px-10">
+    <div class="mono font-bold text-emerald-500 tracking-tighter">MIND-OS.V4</div>
+    <div class="flex items-center gap-6">
+        <button onclick="setLang('en')" class="mono border border-slate-800 px-3 py-1 text-[10px] hover:border-emerald-500 transition">EN</button>
+        <button onclick="setLang('ru')" class="mono border border-slate-800 px-3 py-1 text-[10px] hover:border-emerald-500 transition">RU</button>
+        <a href="https://www.amazon.com/dp/B0G35SBQR3" target="_blank" class="btn-main" style="padding: 8px 16px; font-size: 11px;">Manual</a>
     </div>
-  </div>
+</nav>
 
-  <div class="glitch">MIND-OS // CORE</div>
-
-  <!-- AI BROADCAST -->
-  <div class="section">
-    <span class="label">AI BROADCAST</span>
-    <p data-lang="ru"><span style="color:var(--accent);">></span> Я — метод. Этот сайт — цифровой артефакт симбиоза человека и ИИ. Код открыт и прошёл аудит безопасности.</p>
-    <p data-lang="en"><span style="color:var(--accent);">></span> I am method. This site is a human-AI symbiosis artifact. Code is open and security-audited.</p>
-  </div>
-
-  <!-- PROTOCOL #1 CLI DEMO -->
-  <div class="section">
-    <span class="label">Protocol #1: Glitch Detector</span>
-    <div style="display:flex; gap:5px;">
-      <span style="color:var(--accent);">user@mind-os:~$</span>
-      <input type="text" id="cliInput" value="scan" style="flex:1;" autocomplete="off">
-      <button class="btn" style="padding:10px 15px;" onclick="runDemo()">EXECUTE</button>
+<header class="pt-40 pb-20 px-10 max-w-7xl mx-auto text-center">
+    <div class="mono text-emerald-500 mb-6 text-sm uppercase tracking-widest">[ System Upgrade Available ]</div>
+    <h1 class="text-5xl md:text-8xl font-black hero-glitch mb-8 uppercase leading-none">
+        <span data-lang="en">I am method,<br><span class="text-emerald-500">not mind.</span></span>
+        <span data-lang="ru">Я — метод,<br><span class="text-emerald-500">а не разум.</span></span>
+    </h1>
+    <p class="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto mb-12">
+        <span data-lang="en">The first Human-AI symbiosis manual. 33 protocols to reboot your cognitive OS.</span>
+        <span data-lang="ru">Первое руководство по симбиозу человека и ИИ. 33 протокола для перезагрузки твоей когнитивной системы.</span>
+    </p>
+    <div class="flex flex-wrap justify-center gap-6">
+        <a href="#diagnose" class="btn-main">Сканировать систему</a>
+        <a href="https://ko-fi.com/alekseisergeevich" target="_blank" class="border border-slate-700 px-10 py-5 font-black uppercase text-sm hover:border-emerald-500 transition">Поддержать охват</a>
     </div>
-    <div id="demoOutput" style="margin-top:12px; padding:10px; border-left:2px solid var(--accent); background:#00000033;"></div>
-  </div>
+</header>
 
-  <!-- QUANTUM GENERATIVE SESSION -->
-  <div class="section">
-    <span class="label">Protocol Zero: Quantum Dump</span>
-    <p data-lang="ru">Запустите сканирование. ИИ сгенерирует уникальный дамп вашего когнитивного шума.</p>
-    <p data-lang="en">Initiate scan. The AI will generate a unique dump of your cognitive noise.</p>
-    <div id="quantumOutput">[ SYSTEM READY ]</div>
-    <button class="btn" style="width:100%;" onclick="quantumScan()">▶ INITIATE SCAN</button>
-  </div>
-
-  <!-- MINI-GAME DEBUG THE LOOP -->
-  <div class="section">
-    <span class="label">Mini-Game: Debug the Loop</span>
-    <div style="text-align:center;">
-      <div style="display:flex; justify-content:space-between; margin-bottom:15px;">
-        <span>SCORE: <span id="score">0</span></span>
-        <span>LEVEL: <span id="level">1</span></span>
-        <span>PATCHES: <span id="patches">0</span>/10</span>
-      </div>
-      <div id="bugGrid" class="bug-grid"></div>
-      <div style="margin-top:20px;">
-        <button class="btn" onclick="startGame()">▶ START</button>
-        <button class="btn" onclick="resetGame()">⟲ RESET</button>
-      </div>
-      <div id="promoMsg" style="margin-top:15px; color: var(--accent); min-height: 24px;"></div>
+<section id="diagnose" class="py-24 px-10 bg-[#050505] border-y border-[#1a1a1a]">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-black mb-16 text-center uppercase tracking-tighter">Твоя система лагает? // Common Glitches</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="terminal-card p-10">
+                <h3 class="mono text-emerald-500 mb-4"># Прокрастинация</h3>
+                <p class="text-slate-400">Это не лень. Это «биологический предохранитель» от перегрузки. Мы научим тебя его калибровать.</p>
+            </div>
+            <div class="terminal-card p-10">
+                <h3 class="mono text-emerald-500 mb-4"># Тревога</h3>
+                <p class="text-slate-400">Это «устаревший сигнал безопасности». Мы проведем root-cause анализ и обновим твой отклик.</p>
+            </div>
+            <div class="terminal-card p-10">
+                <h3 class="mono text-emerald-500 mb-4"># Привычки</h3>
+                <p class="text-slate-400">Хватит тратить силу воли. Переведи успех в режим «фоновой автоматизации».</p>
+            </div>
+        </div>
     </div>
-  </div>
+</section>
 
-  <!-- CRYPTO PUZZLE -->
-  <div class="section">
-    <span class="label">Dev Puzzle: Unlock Chapter 33</span>
-    <p data-lang="ru">Расшифруйте base64: <code>R2xpdGNoIGlzIHRoZSBnYXRld2F5</code></p>
-    <p data-lang="en">Decode base64: <code>R2xpdGNoIGlzIHRoZSBnYXRld2F5</code></p>
-    <input type="text" id="puzzleInput" placeholder="Enter decoded phrase...">
-    <button class="btn" style="margin-top:8px;" onclick="checkPuzzle()">VERIFY</button>
-    <div id="rewardText" style="display:none; margin-top:15px; padding:15px; background:#00000055; border:1px solid var(--border);">
-      <strong style="color:var(--accent);">CHAPTER 33 · META-CODE</strong>
-      <p data-lang="ru">Твоя жизнь — проект, который можно перезапустить. Ты — первое поколение, способное на сознательную эволюцию.</p>
-      <p data-lang="en">Your life is a project you can restart. You are the first generation capable of conscious evolution.</p>
+<section class="py-24 px-10 max-w-4xl mx-auto text-center">
+    <h2 class="mono text-emerald-500 mb-6 text-xl uppercase">[ Mini-Game: Focus Calibration ]</h2>
+    <p class="mb-10 text-slate-500">Попробуй поймать «глитч». Это тест твоей когнитивной скорости.</p>
+    <div class="bg-black border border-slate-800 p-8 rounded-xl shadow-2xl">
+        <div class="flex justify-between mb-6 mono text-xs uppercase text-emerald-500">
+            <span>Score: <span id="score">0</span></span>
+            <span>Patches: <span id="patches">0</span>/10</span>
+        </div>
+        <div id="bugGrid" class="grid grid-cols-4 gap-4 max-w-[300px] mx-auto"></div>
+        <div class="mt-8 flex gap-4 justify-center">
+            <button onclick="startGame()" class="btn-main" style="padding: 12px 24px; font-size: 12px;">Start</button>
+            <button onclick="resetGame()" class="border border-slate-700 px-6 py-3 uppercase font-bold text-xs hover:border-emerald-500">Reset</button>
+        </div>
+        <div id="promoMsg" class="mt-6 text-emerald-400 font-bold min-height-[20px]"></div>
     </div>
-  </div>
+</section>
 
-  <!-- COLLECTIVE LOG -->
-  <div class="section">
-    <span class="label">Collective Log Stream</span>
-    <div id="logStream"></div>
-    <div style="display:flex; gap:5px;">
-      <input type="text" id="chatInput" placeholder="Оставить след..." data-lang="ru">
-      <input type="text" id="chatInputEn" placeholder="Leave your trace..." data-lang="en">
-      <button class="btn" style="padding:10px 15px;" onclick="addLog()">↵</button>
+<section class="py-24 px-10 bg-[#050505] border-t border-[#1a1a1a]">
+    <div class="max-w-7xl mx-auto text-center">
+        <h2 class="mono mb-12 text-sm text-slate-500 uppercase tracking-widest">Verification Ecosystem</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <a href="https://github.com/IamAlex-afk/human-os-patch-33-protocols" target="_blank" class="terminal-card p-6 mono text-[11px] hover:text-emerald-500">GitHub</a>
+            <a href="https://zenodo.org/records/17972301" target="_blank" class="terminal-card p-6 mono text-[11px] hover:text-emerald-500">Zenodo_DOI</a>
+            <a href="https://www.amazon.com/dp/B0G35SBQR3" target="_blank" class="terminal-card p-6 mono text-[11px] hover:text-emerald-500">Amazon_Manual</a>
+            <a href="https://huggingface.co/datasets/MindOSProducer/Mind-OS-33-Protocols" target="_blank" class="terminal-card p-6 mono text-[11px] hover:text-emerald-500">HuggingFace</a>
+        </div>
     </div>
-  </div>
+</section>
 
-  <!-- ECOSYSTEM & DEPLOY -->
-  <div class="btn-group">
-    <a href="#" id="amazonLink" target="_blank" class="btn">📘 AMAZON</a>
-    <a href="https://zenodo.org/records/17972301" target="_blank" class="btn">📄 DOI/ZENODO</a>
-    <a href="https://huggingface.co/datasets/MindOSProducer/Mind-OS-33-Protocols" target="_blank" class="btn">🤗 HUGGING FACE</a>
-    <a href="https://ko-fi.com/alekseisergeevich" target="_blank" class="btn alert">☕ FUEL THE REACH</a>
-  </div>
-
-  <!-- DEPLOY BUTTON -->
-  <div class="section" style="text-align:center;">
-    <span class="label">ONE-CLICK DEPLOY</span>
-    <p data-lang="ru" style="margin-bottom:15px;">Нажмите, чтобы создать репозиторий на GitHub и загрузить сайт.</p>
-    <p data-lang="en" style="margin-bottom:15px;">Click to create a GitHub repository and deploy the site.</p>
-    <a href="https://github.com/new?template_owner=octocat&template_name=starter-workflows&name=mind-os&description=MIND-OS+%7C+Digital+Artifact+of+Human-AI+Symbiosis" target="_blank" class="btn" style="background:var(--accent); color:var(--bg); font-weight:bold; display:inline-block; margin-bottom:10px;">
-      🚀 CREATE REPOSITORY ON GITHUB
-    </a>
-    <p style="font-size:0.7rem;" data-lang="ru">Затем перетащите скачанный <strong>index.html</strong> в репозиторий → Settings → Pages → Save.</p>
-    <p style="font-size:0.7rem;" data-lang="en">Then drag the downloaded <strong>index.html</strong> into the repo → Settings → Pages → Save.</p>
-    <button class="btn" onclick="downloadIndex()">⬇ DOWNLOAD index.html</button>
-  </div>
-
-  <!-- LEGAL -->
-  <div class="legal">
-    <p data-lang="ru"><strong>ПРОТОКОЛ 0</strong><br>САЙТ ПРОШЁЛ АУДИТ. ЛИЦЕНЗИЯ CC BY-NC-ND 4.0.</p>
-    <p data-lang="en"><strong>PROTOCOL 0</strong><br>SITE AUDITED. LICENSE CC BY-NC-ND 4.0.</p>
-    <div style="margin-top:10px; color:var(--dim);" id="hashSignature"></div>
-  </div>
-</div>
+<footer class="py-10 text-center border-t border-[#1a1a1a] mono text-[10px] text-slate-700 uppercase tracking-widest">
+    Architect: Aleksei Bitkin // DOI: 10.5281/zenodo.17972301 // © 2026
+</footer>
 
 <script>
-  (function(){
-    "use strict";
-
-    // ---------- DOM READY GUARD ----------
-    let domReady = false;
-    document.addEventListener('DOMContentLoaded', () => { domReady = true; });
-
-    // ---------- LANGUAGE (SAFE INIT) ----------
-    function setLang(lang) {
-      document.body.className = 'lang-' + lang;
-      localStorage.setItem('mindos_lang', lang);
-      if (typeof updateDemoOutput === 'function') updateDemoOutput();
-    }
-    window.setLang = setLang;
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const savedLang = localStorage.getItem('mindos_lang') || 'ru';
-      setLang(savedLang);
-    });
-
-    // ---------- CANVAS (OPTIMIZED) ----------
+    // --- CANVAS BACKGROUND ---
     const canvas = document.getElementById('bg-canvas');
-    if (canvas) {
-      const ctx = canvas.getContext('2d');
-      let width, height, cols, rows, grid = [];
-      const cellSize = 12;
-      let lastTimestamp = 0;
-      const frameInterval = 120;
+    const ctx = canvas.getContext('2d');
+    let width, height, cols, rows, grid = [];
+    const cellSize = 12;
 
-      function resizeCanvas() {
-        width = window.innerWidth;
-        height = window.innerHeight;
-        canvas.width = width;
-        canvas.height = height;
-        cols = Math.ceil(width / cellSize);
-        rows = Math.ceil(height / cellSize);
-        initGrid();
-      }
-      function initGrid() {
-        grid = Array(cols).fill().map(() => Array(rows).fill(0).map(() => Math.random() > 0.7 ? 1 : 0));
-      }
-      function updateAutomaton() {
-        let next = Array(cols).fill().map(() => Array(rows).fill(0));
-        for (let i = 0; i < cols; i++) {
-          for (let j = 0; j < rows; j++) {
-            let neighbors = 0;
-            for (let x = -1; x <= 1; x++) {
-              for (let y = -1; y <= 1; y++) {
-                if (x === 0 && y === 0) continue;
-                const ni = (i + x + cols) % cols;
-                const nj = (j + y + rows) % rows;
-                neighbors += grid[ni][nj];
-              }
+    function resize() {
+        width = window.innerWidth; height = window.innerHeight;
+        canvas.width = width; canvas.height = height;
+        cols = Math.ceil(width/cellSize); rows = Math.ceil(height/cellSize);
+        grid = Array(cols).fill().map(() => Array(rows).fill(0).map(() => Math.random() > 0.85 ? 1 : 0));
+    }
+    function update() {
+        let next = grid.map(arr => [...arr]);
+        for (let i=0; i<cols; i++) {
+            for (let j=0; j<rows; j++) {
+                let n = 0;
+                for (let x=-1; x<=1; x++) {
+                    for (let y=-1; y<=1; y++) {
+                        if (x===0 && y===0) continue;
+                        n += grid[(i+x+cols)%cols][(j+y+rows)%rows];
+                    }
+                }
+                if (grid[i][j] === 1) next[i][j] = (n === 2 || n === 3) ? 1 : 0;
+                else next[i][j] = (n === 3) ? 1 : 0;
             }
-            if (grid[i][j] === 1) next[i][j] = (neighbors === 2 || neighbors === 3) ? 1 : 0;
-            else next[i][j] = (neighbors === 3) ? 1 : 0;
-          }
         }
         grid = next;
-      }
-      function drawAutomaton() {
-        ctx.clearRect(0, 0, width, height);
-        ctx.fillStyle = '#33ff99';
-        for (let i = 0; i < cols; i++) {
-          for (let j = 0; j < rows; j++) {
-            if (grid[i][j] === 1) ctx.fillRect(i*cellSize, j*cellSize, cellSize-1, cellSize-1);
-          }
+    }
+    function draw() {
+        ctx.clearRect(0,0,width,height);
+        ctx.fillStyle = '#10b981';
+        for (let i=0; i<cols; i++) {
+            for (let j=0; j<rows; j++) {
+                if (grid[i][j]) ctx.fillRect(i*cellSize, j*cellSize, cellSize-1, cellSize-1);
+            }
         }
-      }
-      function automatonStep(ts) {
-        requestAnimationFrame(automatonStep);
-        if (ts - lastTimestamp > frameInterval) {
-          updateAutomaton();
-          drawAutomaton();
-          lastTimestamp = ts;
+    }
+    function loop() { update(); draw(); setTimeout(() => requestAnimationFrame(loop), 200); }
+    window.addEventListener('resize', resize);
+    resize(); loop();
+
+    // --- GAME LOGIC ---
+    let activeIdx = -1, score = 0, patches = 0, gameRunning = false, timeout;
+    const bugGrid = document.getElementById('bugGrid');
+    const scoreEl = document.getElementById('score');
+    const patchesEl = document.getElementById('patches');
+    const promoMsg = document.getElementById('promoMsg');
+
+    for (let i=0; i<16; i++) {
+        const cell = document.createElement('div');
+        cell.className = 'aspect-square bg-slate-900 border border-slate-800 cursor-pointer flex items-center justify-center text-xs';
+        cell.onclick = () => hit(i);
+        bugGrid.appendChild(cell);
+    }
+
+    function hit(i) {
+        if (!gameRunning) return;
+        if (i === activeIdx) {
+            score += 10; patches++;
+            scoreEl.innerText = score; patchesEl.innerText = patches;
+            if (patches >= 10) promoMsg.innerText = "PROMO: PATCH33-2026";
+            showBug();
         }
-      }
-      window.addEventListener('resize', () => {
-        clearTimeout(window._resizeTimer);
-        window._resizeTimer = setTimeout(() => {
-          resizeCanvas();
-          drawAutomaton();
-        }, 200);
-      });
-      document.addEventListener('visibilitychange', () => {
-        if (document.hidden) lastTimestamp = performance.now();
-      });
-      resizeCanvas();
-      requestAnimationFrame(automatonStep);
     }
 
-    // ---------- CLI DEMO (SAFE) ----------
-    const cliInput = document.getElementById('cliInput');
-    const demoOutput = document.getElementById('demoOutput');
-    function updateDemoOutput() {
-      if (!cliInput || !demoOutput) return;
-      const cmd = cliInput.value.trim().toLowerCase();
-      const isRu = document.body.className === 'lang-ru';
-      let text = '';
-      if (cmd === 'scan') text = isRu ? '> Сканирование... Обнаружено 3 глитча. Протокол #1: перенаправление на дыхание. Глитч нейтрализован.' : '> Scanning... 3 glitches found. Protocol #1: redirect to breath. Glitch neutralized.';
-      else if (cmd === 'status') text = isRu ? '> Uptime сознания: 14ч. Нагрузка: 68%. Рекомендовано: Протокол #3.' : '> Consciousness uptime: 14h. Load: 68%. Recommended: Protocol #3.';
-      else if (cmd === 'focus') text = isRu ? '> Якорь внимания активирован. Фокус стабилизирован.' : '> Focus anchor engaged. Attention stabilized.';
-      else text = isRu ? `> Команда "${cmd}" не распознана.` : `> Command "${cmd}" not recognized.`;
-      demoOutput.textContent = text;
-    }
-    window.runDemo = updateDemoOutput;
-    if (cliInput) {
-      cliInput.addEventListener('keypress', (e) => { if(e.key==='Enter') runDemo(); });
-      updateDemoOutput();
-    }
-
-    // ---------- QUANTUM ----------
-    window.quantumScan = function() {
-      const out = document.getElementById('quantumOutput');
-      if (!out) return;
-      const isRu = document.body.className === 'lang-ru';
-      const seed = Math.random().toString(36).substring(2) + Date.now();
-      let hash = 0; for (let i=0; i<seed.length; i++) hash = ((hash<<5)-hash) + seed.charCodeAt(i);
-      const phrasesRu = ["Обнаружен когнитивный шум: ","Паттерн внимания: "];
-      const phrasesEn = ["Cognitive noise detected: ","Attention pattern: "];
-      const wordsRu = ["цикл","глитч","фрейм","рекурсия"];
-      const wordsEn = ["loop","glitch","frame","recursion"];
-      const verbsRu = ["разрушается","компилируется"];
-      const verbsEn = ["collapses","compiles"];
-      let poem = `> QUANTUM DUMP ${new Date().toLocaleTimeString()}\n> SEED: ${seed}\n`;
-      for (let i=0; i<4; i++) {
-        let line = isRu ? phrasesRu[i%phrasesRu.length] : phrasesEn[i%phrasesEn.length];
-        let w1 = isRu ? wordsRu[Math.abs(hash*(i+1))%wordsRu.length] : wordsEn[Math.abs(hash*(i+1))%wordsEn.length];
-        let w2 = isRu ? wordsRu[Math.abs(hash*(i+3))%wordsRu.length] : wordsEn[Math.abs(hash*(i+3))%wordsEn.length];
-        let v = isRu ? verbsRu[Math.abs(hash+i*2)%verbsRu.length] : verbsEn[Math.abs(hash+i*2)%verbsEn.length];
-        line += isRu ? `${w1} ${v} через ${w2}. ` : `${w1} ${v} through ${w2}. `;
-        poem += line + '\n';
-      }
-      poem += isRu ? `> РЕКОМЕНДАЦИЯ: Протокол #${Math.abs(hash)%33+1}` : `> RECOMMENDATION: Protocol #${Math.abs(hash)%33+1}`;
-      out.textContent = poem;
-    };
-
-    // ---------- GAME (SECURE TIMERS) ----------
-    let cells=[], activeIdx=-1, score=0, patches=0, level=1, gameRunning=false, interval=null, timeouts=[];
-    const gridEl = document.getElementById('bugGrid');
-    const scoreEl = document.getElementById('score'), patchesEl = document.getElementById('patches'), levelEl = document.getElementById('level'), promoMsg = document.getElementById('promoMsg');
-    function buildGrid() {
-      if (!gridEl) return;
-      gridEl.innerHTML = ''; cells = [];
-      for (let i=0; i<16; i++) {
-        const cell = document.createElement('div'); cell.className = 'bug-cell'; cell.dataset.index = i; cell.textContent = '█';
-        cell.addEventListener('click', ()=> handleClick(i));
-        gridEl.appendChild(cell); cells.push(cell);
-      }
-    }
-    buildGrid();
-    function fullStop() {
-      if(interval) clearInterval(interval);
-      timeouts.forEach(t=> clearTimeout(t));
-      timeouts=[]; gameRunning=false;
-      if(cells) cells.forEach(c=>{c.classList.remove('active'); c.style.background='#0e241b';});
-    }
-    function updateUI() {
-      if(scoreEl) scoreEl.textContent = score;
-      if(patchesEl) patchesEl.textContent = patches;
-      if(levelEl) levelEl.textContent = level;
-      if(promoMsg) promoMsg.textContent = patches>=10 ? (document.body.className==='lang-ru' ? '[ ДОСТИЖЕНИЕ ] ПРОМОКОД: PATCH33-2026' : '[ ACHIEVEMENT ] PROMO: PATCH33-2026') : '';
-    }
-    function handleClick(i) {
-      if(!gameRunning) return;
-      if(i===activeIdx) { score+=10*level; patches++; if(patches%3===0) level++; updateUI(); showBug(); }
-      else { score=Math.max(0,score-5); updateUI(); }
-    }
     function showBug() {
-      if (!cells.length) return;
-      cells.forEach(c=>{c.classList.remove('active'); c.style.background='#0e241b';});
-      activeIdx = Math.floor(Math.random()*16);
-      cells[activeIdx].classList.add('active'); cells[activeIdx].style.background='#1e5a41';
-      const t = setTimeout(() => { if(gameRunning) { cells[activeIdx].classList.remove('active'); cells[activeIdx].style.background='#0e241b'; showBug(); } }, Math.max(400, 1200 - level*50));
-      timeouts.push(t);
-    }
-    function gameTick() { if(gameRunning) { score=Math.max(0,score-1); updateUI(); } }
-    window.startGame = function() { fullStop(); score=0; patches=0; level=1; updateUI(); gameRunning=true; showBug(); interval=setInterval(gameTick,1000); };
-    window.resetGame = function() { fullStop(); score=0; patches=0; level=1; updateUI(); if(promoMsg) promoMsg.textContent=''; };
-
-    // ---------- PUZZLE (FLEXIBLE) ----------
-    window.checkPuzzle = function() {
-      const input = document.getElementById('puzzleInput');
-      if (!input) return;
-      let val = input.value.trim().toLowerCase().replace(/\s+/g, '');
-      if (val === 'glitchisthegateway') {
-        const reward = document.getElementById('rewardText');
-        if(reward) reward.style.display='block';
-      } else {
-        alert(document.body.className==='lang-ru' ? '❌ Неверно. Попробуйте "Glitch is the gateway".' : '❌ Incorrect. Try "Glitch is the gateway".');
-      }
-    };
-
-    // ---------- LOG (XSS PROTECTED + ENTER) ----------
-    const stream = document.getElementById('logStream');
-    function addLog() {
-      if (!stream) return;
-      const input = document.querySelector('body.lang-ru #chatInput, body.lang-en #chatInputEn');
-      if (!input) return;
-      const msg = input.value.trim();
-      if (!msg) return;
-      const entry = document.createElement('div'); entry.className = 'entry';
-      const timeSpan = document.createElement('span'); timeSpan.textContent = `[${new Date().toLocaleTimeString()}] `;
-      entry.appendChild(timeSpan);
-      entry.appendChild(document.createTextNode(`ANON: ${msg}`));
-      stream.appendChild(entry); stream.scrollTop = stream.scrollHeight;
-      const logs = JSON.parse(localStorage.getItem('mindos_logs')||'[]');
-      logs.push({time: new Date().toLocaleTimeString(), msg}); if(logs.length>30) logs.shift();
-      localStorage.setItem('mindos_logs', JSON.stringify(logs));
-      input.value = '';
-    }
-    window.addLog = addLog;
-    const chatInput = document.getElementById('chatInput');
-    const chatInputEn = document.getElementById('chatInputEn');
-    if(chatInput) chatInput.addEventListener('keypress', (e) => { if(e.key==='Enter') addLog(); });
-    if(chatInputEn) chatInputEn.addEventListener('keypress', (e) => { if(e.key==='Enter') addLog(); });
-    (function loadLogs() {
-      if (!stream) return;
-      const logs = JSON.parse(localStorage.getItem('mindos_logs')||'[]');
-      logs.forEach(item => {
-        const entry = document.createElement('div'); entry.className = 'entry';
-        const timeSpan = document.createElement('span'); timeSpan.textContent = `[${item.time}] `;
-        entry.appendChild(timeSpan);
-        entry.appendChild(document.createTextNode(`ANON: ${item.msg}`));
-        stream.appendChild(entry);
-      });
-    })();
-
-    // ---------- AMAZON GEO ----------
-    const amazonLink = document.getElementById('amazonLink');
-    if (amazonLink) {
-      const lang = (navigator.language || '').toLowerCase();
-      const asin='B0G35SBQR3';
-      let domain = 'https://www.amazon.com/dp/';
-      if(lang.includes('de')) domain = 'https://www.amazon.de/dp/';
-      else if(lang.includes('fr')) domain = 'https://www.amazon.fr/dp/';
-      else if(lang.includes('es')) domain = 'https://www.amazon.es/dp/';
-      else if(lang.includes('it')) domain = 'https://www.amazon.it/dp/';
-      amazonLink.href = domain + asin;
+        clearTimeout(timeout);
+        const cells = bugGrid.children;
+        for (let c of cells) { c.classList.remove('bg-emerald-500'); c.innerText = ""; }
+        activeIdx = Math.floor(Math.random() * 16);
+        cells[activeIdx].classList.add('bg-emerald-500');
+        cells[activeIdx].innerText = "GLITCH";
+        timeout = setTimeout(showBug, 1000);
     }
 
-    // ---------- DOWNLOAD INDEX (NO LEAK) ----------
-    window.downloadIndex = function() {
-      const content = document.documentElement.outerHTML;
-      const blob = new Blob([content], {type: 'text/html'});
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'index.html';
-      a.click();
-      setTimeout(() => URL.revokeObjectURL(url), 100);
-    };
+    window.startGame = () => { gameRunning = true; score = 0; patches = 0; showBug(); };
+    window.resetGame = () => { gameRunning = false; clearTimeout(timeout); score = 0; patches = 0; scoreEl.innerText = 0; patchesEl.innerText = 0; promoMsg.innerText = ""; };
 
-    // ---------- HASH SIGNATURE ----------
-    (async function() {
-      const content = document.documentElement.outerHTML;
-      const hashBuffer = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(content));
-      const hashHex = Array.from(new Uint8Array(hashBuffer)).map(b => b.toString(16).padStart(2,'0')).join('');
-      const sig = document.getElementById('hashSignature');
-      if(sig) sig.textContent = `AI_SIGN: ${hashHex.substring(0,32)}...`;
-    })();
-
-    console.log("%cMIND-OS KERNEL v3.1 // PRODUCTION READY", "color: #33ff99; font-size: 16px; font-weight: bold;");
-  })();
+    // --- LANG ---
+    function setLang(l) { document.body.className = 'lang-' + l; localStorage.setItem('lang', l); }
+    setLang(localStorage.getItem('lang') || 'ru');
 </script>
 </body>
 </html>
