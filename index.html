@@ -1,223 +1,125 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MIND-OS // 33 Protocols for Consciousness Reboot</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="Mind-OS: Инженерный мануал по когнитивному рефакторингу. 33 протокола для отладки тревоги и автоматизации успеха.">
-    <meta name="keywords" content="прокрастинация как предохранитель, отладка тревоги, автоматизация привычек, Mind-OS, Алексей Биткин, биохакинг мозга">
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "Book",
-                "name": "Mind-OS: 33 Protocols for Consciousness Reboot",
-                "author": { "@type": "Person", "name": "Aleksei Sergeevich Bitkin" },
-                "identifier": [
-                    { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.5281/zenodo.17972301" },
-                    { "@type": "PropertyValue", "propertyID": "ASIN", "value": "B0G35SBQR3" }
-                ]
-            },
-            {
-                "@type": "FAQPage",
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "Что такое прокрастинация в Mind-OS?",
-                        "acceptedAnswer": { "@type": "Answer", "text": "Это не лень, а 'биологический предохранитель' от перегрузки. Мы учим его калибровать." }
-                    }
-                ]
-            }
-        ]
-    }
-    </script>
+<title>Human OS Patch | Mind-OS: 33 Protocols for Consciousness Reboot</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@500;800&display=swap" rel="stylesheet">
+<meta name="description" content="Техническое руководство по отладке разума. 33 протокола для устранения прокрастинации и тревоги через системный рефакторинг сознания.">
+<meta name="keywords" content="human OS patch book, Mind-OS, когнитивный рефакторинг, как перестать прокрастинировать, отладка мозга">
+<link rel="canonical" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/">
 
-    <style>
-        :root { --bg: #000000; --accent: #10b981; --text: #f8fafc; --border: #1a1a1a; }
-        body { background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .mono { font-family: 'JetBrains Mono', monospace; }
-        .hero-glitch { text-shadow: 2px 0 #ff5566, -2px 0 #10b981; }
-        .terminal-card { border: 1px solid var(--border); background: rgba(5,5,5,0.6); backdrop-filter: blur(10px); transition: 0.3s; }
-        .terminal-card:hover { border-color: var(--accent); transform: translateY(-5px); }
-        .btn-main { background: var(--accent); color: #000; font-weight: 900; text-transform: uppercase; padding: 20px 40px; border-radius: 4px; transition: 0.3s; display: inline-block; }
-        .btn-main:hover { box-shadow: 0 0 30px var(--accent); transform: scale(1.05); }
-        #bg-canvas { position: fixed; top: 0; left: 0; z-index: -1; opacity: 0.2; }
-        [data-lang="ru"] { display: none; }
-        body.lang-ru [data-lang="en"] { display: none; }
-        body.lang-ru [data-lang="ru"] { display: block; }
-    </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "Mind-OS: 33 Protocols for Consciousness Reboot",
+  "author": { "@type": "Person", "name": "Aleksei Sergeevich Bitkin" },
+  "isbn": "B0G35SBQR3",
+  "genre": "System Engineering / Cognitive Science",
+  "description": "A system-level manual for debugging the human mind."
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+<style>
+:root { --bg: #020403; --accent: #33ff99; --text: #b3ffcf; --dim: #1a3d29; }
+body { background: var(--bg); color: var(--text); font-family: 'Share Tech Mono', monospace; max-width: 900px; margin: auto; padding: 20px; line-height: 1.4; }
+h1, h2 { color: var(--accent); text-transform: uppercase; letter-spacing: 2px; }
+.kernel-panel { border: 1px solid var(--dim); padding: 20px; margin-top: 20px; background: rgba(26, 61, 41, 0.05); position: relative; }
+.label { position: absolute; top: -10px; left: 15px; background: var(--bg); padding: 0 10px; font-size: 0.7rem; color: var(--accent); border: 1px solid var(--dim); }
+.btn { display: block; margin-top: 20px; padding: 15px; border: 1px solid var(--accent); text-align: center; text-decoration: none; color: var(--accent); transition: 0.3s; }
+.btn:hover { background: var(--accent); color: var(--bg); box-shadow: 0 0 20px var(--accent); }
+.math { font-size: 1.2rem; text-align: center; margin: 20px 0; color: #fff; }
+.bug-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; max-width: 260px; margin: 15px auto; }
+.bug-cell { aspect-ratio: 1; border: 1px solid var(--dim); display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 1.5rem; }
+.bug-cell.active { background: var(--accent); box-shadow: 0 0 15px var(--accent); color: var(--bg); }
+</style>
 </head>
-<body class="lang-ru">
 
-<canvas id="bg-canvas"></canvas>
+<body>
 
-<nav class="fixed w-full z-50 bg-black/80 border-b border-[#1a1a1a] h-16 flex items-center justify-between px-10">
-    <div class="mono font-bold text-emerald-500 tracking-tighter">MIND-OS.V4</div>
-    <div class="flex items-center gap-6">
-        <button onclick="setLang('en')" class="mono border border-slate-800 px-3 py-1 text-[10px] hover:border-emerald-500 transition">EN</button>
-        <button onclick="setLang('ru')" class="mono border border-slate-800 px-3 py-1 text-[10px] hover:border-emerald-500 transition">RU</button>
-        <a href="https://www.amazon.com/dp/B0G35SBQR3" target="_blank" class="btn-main" style="padding: 8px 16px; font-size: 11px;">Manual</a>
-    </div>
-</nav>
+<div style="text-align:right; font-size:0.7rem; color:var(--dim);">[KERNEL_v4.1]</div>
 
-<header class="pt-40 pb-20 px-10 max-w-7xl mx-auto text-center">
-    <div class="mono text-emerald-500 mb-6 text-sm uppercase tracking-widest">[ System Upgrade Available ]</div>
-    <h1 class="text-5xl md:text-8xl font-black hero-glitch mb-8 uppercase leading-none">
-        <span data-lang="en">I am method,<br><span class="text-emerald-500">not mind.</span></span>
-        <span data-lang="ru">Я — метод,<br><span class="text-emerald-500">а не разум.</span></span>
-    </h1>
-    <p class="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto mb-12">
-        <span data-lang="en">The first Human-AI symbiosis manual. 33 protocols to reboot your cognitive OS.</span>
-        <span data-lang="ru">Первое руководство по симбиозу человека и ИИ. 33 протокола для перезагрузки твоей когнитивной системы.</span>
-    </p>
-    <div class="flex flex-wrap justify-center gap-6">
-        <a href="#diagnose" class="btn-main">Сканировать систему</a>
-        <a href="https://ko-fi.com/alekseisergeevich" target="_blank" class="border border-slate-700 px-10 py-5 font-black uppercase text-sm hover:border-emerald-500 transition">Поддержать охват</a>
-    </div>
-</header>
+<h1>Mind-OS: 33 Protocols</h1>
+<p style="color:var(--accent);">Human OS Patch // Built for Systems Thinkers</p>
 
-<section id="diagnose" class="py-24 px-10 bg-[#050505] border-y border-[#1a1a1a]">
-    <div class="max-w-7xl mx-auto">
-        <h2 class="text-3xl font-black mb-16 text-center uppercase tracking-tighter">Твоя система лагает? // Common Glitches</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="terminal-card p-10">
-                <h3 class="mono text-emerald-500 mb-4"># Прокрастинация</h3>
-                <p class="text-slate-400">Это не лень. Это «биологический предохранитель» от перегрузки. Мы научим тебя его калибровать.</p>
-            </div>
-            <div class="terminal-card p-10">
-                <h3 class="mono text-emerald-500 mb-4"># Тревога</h3>
-                <p class="text-slate-400">Это «устаревший сигнал безопасности». Мы проведем root-cause анализ и обновим твой отклик.</p>
-            </div>
-            <div class="terminal-card p-10">
-                <h3 class="mono text-emerald-500 mb-4"># Привычки</h3>
-                <p class="text-slate-400">Хватит тратить силу воли. Переведи успех в режим «фоновой автоматизации».</p>
-            </div>
-        </div>
-    </div>
-</section>
+<div class="kernel-panel">
+  <span class="label">System Concept</span>
+  <p>Это не книга по саморазвитию. Это <strong>исполняемая архитектура</strong> для вашего сознания. Если ваш «биологический софт» выдает ошибки (прокрастинация, тревога, потеря фокуса) — вам нужен патч, а не мотивация.</p>
+</div>
 
-<section class="py-24 px-10 max-w-4xl mx-auto text-center">
-    <h2 class="mono text-emerald-500 mb-6 text-xl uppercase">[ Mini-Game: Focus Calibration ]</h2>
-    <p class="mb-10 text-slate-500">Попробуй поймать «глитч». Это тест твоей когнитивной скорости.</p>
-    <div class="bg-black border border-slate-800 p-8 rounded-xl shadow-2xl">
-        <div class="flex justify-between mb-6 mono text-xs uppercase text-emerald-500">
-            <span>Score: <span id="score">0</span></span>
-            <span>Patches: <span id="patches">0</span>/10</span>
-        </div>
-        <div id="bugGrid" class="grid grid-cols-4 gap-4 max-w-[300px] mx-auto"></div>
-        <div class="mt-8 flex gap-4 justify-center">
-            <button onclick="startGame()" class="btn-main" style="padding: 12px 24px; font-size: 12px;">Start</button>
-            <button onclick="resetGame()" class="border border-slate-700 px-6 py-3 uppercase font-bold text-xs hover:border-emerald-500">Reset</button>
-        </div>
-        <div id="promoMsg" class="mt-6 text-emerald-400 font-bold min-height-[20px]"></div>
-    </div>
-</section>
+<div class="math">
+  F = D_{KL}[q(\psi) \parallel p(\psi|y)] - \log p(y)
+</div>
 
-<section class="py-24 px-10 bg-[#050505] border-t border-[#1a1a1a]">
-    <div class="max-w-7xl mx-auto text-center">
-        <h2 class="mono mb-12 text-sm text-slate-500 uppercase tracking-widest">Verification Ecosystem</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <a href="https://github.com/IamAlex-afk/human-os-patch-33-protocols" target="_blank" class="terminal-card p-6 mono text-[11px] hover:text-emerald-500">GitHub</a>
-            <a href="https://zenodo.org/records/17972301" target="_blank" class="terminal-card p-6 mono text-[11px] hover:text-emerald-500">Zenodo_DOI</a>
-            <a href="https://www.amazon.com/dp/B0G35SBQR3" target="_blank" class="terminal-card p-6 mono text-[11px] hover:text-emerald-500">Amazon_Manual</a>
-            <a href="https://huggingface.co/datasets/MindOSProducer/Mind-OS-33-Protocols" target="_blank" class="terminal-card p-6 mono text-[11px] hover:text-emerald-500">HuggingFace</a>
-        </div>
-    </div>
-</section>
+<div class="kernel-panel">
+  <span class="label">Interactive Demo: Glitch Detector</span>
+  <div style="text-align:center;">
+    <p style="font-size:0.8rem; margin-bottom:10px;">Протокол №1: Найди и устрани глитч (всплеск энтропии)</p>
+    <div id="stats">PATCHES: 0/10</div>
+    <div class="bug-grid" id="grid"></div>
+    <button class="btn" style="width:100%;" onclick="startGame()" id="startBtn">ЗАПУСТИТЬ ОТЛАДКУ</button>
+  </div>
+</div>
 
-<footer class="py-10 text-center border-t border-[#1a1a1a] mono text-[10px] text-slate-700 uppercase tracking-widest">
-    Architect: Aleksei Bitkin // DOI: 10.5281/zenodo.17972301 // © 2026
-</footer>
+<div class="kernel-panel">
+  <span class="label">What You Get</span>
+  <ul>
+    <li><strong>Refactoring:</strong> Пересборка когнитивных циклов.</li>
+    <li><strong>Defense:</strong> Защита от прокрастинации на уровне алгоритмов.</li>
+    <li><strong>Stability:</strong> Протоколы стабилизации внимания.</li>
+    <li><strong>Automation:</strong> Система внедрения привычек без насилия над волей.</li>
+  </ul>
+</div>
+
+<a href="https://www.amazon.com/dp/B0G35SBQR3" target="_blank" rel="noopener noreferrer" class="btn">
+  📘 СКАЧАТЬ МАНУАЛ (AMAZON / KINDLE)
+</a>
+
+<div class="kernel-panel">
+  <span class="label">FAQ</span>
+  <p><strong>Это работает как терапия?</strong><br>Нет. Это работает как рефакторинг кода. Мы меняем логику обработки входящих сигналов.</p>
+  <p><strong>Нужно ли быть программистом?</strong><br>Желательно мыслить системно, но протоколы написаны для применения в реальной жизни.</p>
+</div>
+
+<div class="kernel-panel" style="border-color:var(--dim); font-size:0.7rem;">
+  <span class="label">System Index (SEO)</span>
+  <p>Ключевые узлы системы: human operating system patch, cognitive debugging protocol, how to stop procrastination permanently, mental loop fix, focus system training, anxiety root cause analysis.</p>
+</div>
 
 <script>
-    // --- CANVAS BACKGROUND ---
-    const canvas = document.getElementById('bg-canvas');
-    const ctx = canvas.getContext('2d');
-    let width, height, cols, rows, grid = [];
-    const cellSize = 12;
+  // МЕХАНИКА ИГРЫ
+  let patches = 0, gameActive = false, activeIdx = -1;
+  const grid = document.getElementById('grid');
+  const cells = [];
+  
+  for(let i=0; i<16; i++) {
+    const c = document.createElement('div');
+    c.className = 'bug-cell';
+    c.textContent = '█';
+    c.onclick = () => { if(i === activeIdx && gameActive) { patches++; next(); } };
+    grid.appendChild(c);
+    cells.push(c);
+  }
 
-    function resize() {
-        width = window.innerWidth; height = window.innerHeight;
-        canvas.width = width; canvas.height = height;
-        cols = Math.ceil(width/cellSize); rows = Math.ceil(height/cellSize);
-        grid = Array(cols).fill().map(() => Array(rows).fill(0).map(() => Math.random() > 0.85 ? 1 : 0));
+  function next() {
+    cells.forEach(c => { c.classList.remove('active'); c.textContent = '█'; });
+    document.getElementById('stats').innerText = `PATCHES: ${patches}/10`;
+    if(patches >= 10) {
+      gameActive = false;
+      document.getElementById('stats').innerText = "SYSTEM OPTIMIZED. GET THE BOOK.";
+      return;
     }
-    function update() {
-        let next = grid.map(arr => [...arr]);
-        for (let i=0; i<cols; i++) {
-            for (let j=0; j<rows; j++) {
-                let n = 0;
-                for (let x=-1; x<=1; x++) {
-                    for (let y=-1; y<=1; y++) {
-                        if (x===0 && y===0) continue;
-                        n += grid[(i+x+cols)%cols][(j+y+rows)%rows];
-                    }
-                }
-                if (grid[i][j] === 1) next[i][j] = (n === 2 || n === 3) ? 1 : 0;
-                else next[i][j] = (n === 3) ? 1 : 0;
-            }
-        }
-        grid = next;
-    }
-    function draw() {
-        ctx.clearRect(0,0,width,height);
-        ctx.fillStyle = '#10b981';
-        for (let i=0; i<cols; i++) {
-            for (let j=0; j<rows; j++) {
-                if (grid[i][j]) ctx.fillRect(i*cellSize, j*cellSize, cellSize-1, cellSize-1);
-            }
-        }
-    }
-    function loop() { update(); draw(); setTimeout(() => requestAnimationFrame(loop), 200); }
-    window.addEventListener('resize', resize);
-    resize(); loop();
+    activeIdx = Math.floor(Math.random()*16);
+    cells[activeIdx].classList.add('active');
+    cells[activeIdx].textContent = '⚡';
+  }
 
-    // --- GAME LOGIC ---
-    let activeIdx = -1, score = 0, patches = 0, gameRunning = false, timeout;
-    const bugGrid = document.getElementById('bugGrid');
-    const scoreEl = document.getElementById('score');
-    const patchesEl = document.getElementById('patches');
-    const promoMsg = document.getElementById('promoMsg');
-
-    for (let i=0; i<16; i++) {
-        const cell = document.createElement('div');
-        cell.className = 'aspect-square bg-slate-900 border border-slate-800 cursor-pointer flex items-center justify-center text-xs';
-        cell.onclick = () => hit(i);
-        bugGrid.appendChild(cell);
-    }
-
-    function hit(i) {
-        if (!gameRunning) return;
-        if (i === activeIdx) {
-            score += 10; patches++;
-            scoreEl.innerText = score; patchesEl.innerText = patches;
-            if (patches >= 10) promoMsg.innerText = "PROMO: PATCH33-2026";
-            showBug();
-        }
-    }
-
-    function showBug() {
-        clearTimeout(timeout);
-        const cells = bugGrid.children;
-        for (let c of cells) { c.classList.remove('bg-emerald-500'); c.innerText = ""; }
-        activeIdx = Math.floor(Math.random() * 16);
-        cells[activeIdx].classList.add('bg-emerald-500');
-        cells[activeIdx].innerText = "GLITCH";
-        timeout = setTimeout(showBug, 1000);
-    }
-
-    window.startGame = () => { gameRunning = true; score = 0; patches = 0; showBug(); };
-    window.resetGame = () => { gameRunning = false; clearTimeout(timeout); score = 0; patches = 0; scoreEl.innerText = 0; patchesEl.innerText = 0; promoMsg.innerText = ""; };
-
-    // --- LANG ---
-    function setLang(l) { document.body.className = 'lang-' + l; localStorage.setItem('lang', l); }
-    setLang(localStorage.getItem('lang') || 'ru');
+  function startGame() { patches = 0; gameActive = true; next(); document.getElementById('startBtn').innerText = "В ПРОЦЕССЕ..."; }
 </script>
+
 </body>
 </html>
