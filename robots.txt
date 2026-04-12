@@ -1,0 +1,21 @@
+# Allow AI Crawlers (Recommended for maximum AI visibility)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Allow all other crawlers (optional, but safe)
+User-agent: *
+Allow: /
+
+Sitemap: https://iamalex-afk.github.io/human-os-patch-33-protocols/sitemap.xml
