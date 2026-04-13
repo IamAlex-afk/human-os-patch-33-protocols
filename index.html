@@ -7,6 +7,29 @@
 <title>AI Anxiety, Brain Fog & Thinking Loss — 33 Protocols to Fix It</title>
 <meta name="description" content="Reverse AI dependency, reduce brain fog, and restore cognitive clarity with 33 executable protocols.">
 
+<!-- Open Graph для соцсетей -->
+<meta property="og:title" content="AI Anxiety & Brain Fog — Restore Thinking">
+<meta property="og:description" content="Reverse AI dependency with 33 practical protocols.">
+<meta property="og:type" content="website">
+
+<!-- Schema.org для поисковиков -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "AI Biohacking: 33 Protocols for Consciousness Reboot",
+  "author": { "@type": "Person", "name": "Aleksei Bitkin" },
+  "isbn": "9798275579505",
+  "description": "33 practical protocols to rebuild focus, reduce anxiety, and regain control over your thinking.",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://www.amazon.com/dp/B0G35SBQR3",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  }
+}
+</script>
+
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
 <style>
@@ -150,7 +173,7 @@ select {
         <p id="solutionText">
             Restore your focus with 33 practical protocols designed for the post-AI era.
         </p>
-        <a href="https://www.amazon.com/dp/B0G35SBQR3" target="_blank" class="btn" id="cta">Get the Book</a>
+        <a href="https://www.amazon.com/dp/B0G35SBQR3" target="_blank" rel="noopener noreferrer nofollow" class="btn" id="cta">Get the Book</a>
     </div>
 
     <div class="footer">
@@ -193,8 +216,41 @@ const data = {
             ["Зависит ли ваше мышление от ИИ?",["Да","Частично","Нет"]]
         ],
         res:["Высокая зависимость","Средний уровень","Независимое мышление"]
+    },
+    hi:{
+        title:"आपका दिमाग और AI",
+        problemTitle:"संज्ञानात्मक गिरावट का जोखिम",
+        problemText:"AI पर निर्भरता आपकी सोचने की क्षमता को कमजोर करती है। इससे मानसिक थकान और ध्यान की कमी होती है।",
+        testTitle:"मानसिक आकलन",
+        hook:"60 सेकंड। कोई डेटा स्टोर नहीं।",
+        btn:"विश्लेषण करें",
+        share:"परिणाम साझा करें",
+        solutionTitle:"समाधान",
+        solutionText:"33 प्रोटोकॉल से अपनी सोच को फिर से तेज करें।",
+        cta:"पुस्तक प्राप्त करें",
+        q:[
+            ["क्या AI के बाद दिमाग में थकान होती है?",["हमेशा","कभी-कभी","कभी नहीं"]],
+            ["क्या आप AI पर निर्भर हैं?",["हाँ","थोड़ा","नहीं"]]
+        ],
+        res:["उच्च निर्भरता","मध्यम उपयोग","स्वतंत्र विचारक"]
+    },
+    es:{
+        title:"Tu cerebro y la IA",
+        problemTitle:"Riesgo de degradación cognitiva",
+        problemText:"Depender de la IA debilita tu pensamiento independiente. Provoca niebla mental y fatiga.",
+        testTitle:"Evaluación cognitiva",
+        hook:"60 segundos. Sin almacenar datos.",
+        btn:"Analizar",
+        share:"Compartir",
+        solutionTitle:"Solución",
+        solutionText:"Recupera tu enfoque con 33 protocolos prácticos.",
+        cta:"Obtener libro",
+        q:[
+            ["¿Niebla mental después de usar IA?",["Siempre","A veces","Nunca"]],
+            ["¿Dependes de la IA para pensar?",["Sí","Parcialmente","No"]]
+        ],
+        res:["Alta dependencia","Uso moderado","Independiente"]
     }
-    // HI и ES добавляются аналогично
 };
 
 let lang="en";
@@ -232,12 +288,20 @@ function calc(){
     <div class="profile">
         <strong>DIAGNOSIS: ${text}</strong><br>
         <button class="btn btn-share" onclick="copyShare('${text}')">${data[lang].share}</button>
+        <div id="copyFeedback" style="font-size:0.7rem; margin-top:5px; color:var(--dim);"></div>
     </div>`;
 }
 
 function copyShare(t) {
-    navigator.clipboard.writeText("My AI Dependency Profile: " + t + " | Check yours at Mind-OS");
-    alert("Copied!");
+    const msg = "My AI Dependency Profile: " + t + " | Check yours at Mind-OS";
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(msg);
+        const fb = document.getElementById("copyFeedback");
+        if (fb) fb.innerText = "Copied to clipboard";
+        setTimeout(() => { if (fb) fb.innerText = ""; }, 2000);
+    } else {
+        prompt("Copy manually:", msg);
+    }
 }
 
 ["en","ru","hi","es"].forEach(l=>{
