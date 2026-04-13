@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>AI Biohacking: 33 Protocols — Official Site | Mind-OS</title>
 <meta name="description" content="Official website of the book AI Biohacking: 33 Protocols for Consciousness Reboot. Cognitive framework by Aleksei Bitkin.">
 <meta name="author" content="Aleksei Bitkin">
+<meta name="robots" content="index, follow">
 
 <link rel="canonical" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/">
 
 <meta property="og:title" content="AI Biohacking: 33 Protocols — Official Site">
-<meta property="og:description" content="Official website of the book by Aleksei Bitkin. 33 protocols to restore focus and independent thinking.">
+<meta property="og:description" content="Official website of the book by Aleksei Bitkin. 33 protocols to restore focus.">
 <meta property="og:image" content="https://iamalex-afk.github.io/human-os-patch-33-protocols/preview.jpg">
 <meta property="og:type" content="website">
 
@@ -22,27 +22,13 @@
     {
       "@type": "WebSite",
       "url": "https://iamalex-afk.github.io/human-os-patch-33-protocols/",
-      "name": "Mind-OS: AI Biohacking Official",
-      "description": "Official website for the book AI Biohacking: 33 Protocols for Consciousness Reboot"
+      "name": "Mind-OS: AI Biohacking Official"
     },
     {
       "@type": "Book",
       "name": "AI Biohacking: 33 Protocols for Consciousness Reboot",
-      "author": { 
-        "@type": "Person", 
-        "name": "Aleksei Bitkin",
-        "sameAs": [
-          "https://orcid.org/0009-0002-7986-3812",
-          "https://zenodo.org/doi/10.5281/zenodo.17972301"
-        ]
-      },
-      "isbn": "9798275579505",
-      "offers": {
-        "@type": "Offer",
-        "url": "https://www.amazon.com/dp/B0G35SBQR3",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock"
-      }
+      "author": { "@type": "Person", "name": "Aleksei Bitkin" },
+      "isbn": "9798275579505"
     },
     {
       "@type": "FAQPage",
@@ -50,18 +36,7 @@
         {
           "@type": "Question",
           "name": "What is AI Biohacking: 33 Protocols?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It is a cognitive framework and book by Aleksei Bitkin that provides 33 executable protocols to reverse AI-induced brain fog and restore independent thinking."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How can I test my AI dependency?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Take the free 60-second cognitive assessment on the official Mind-OS website to evaluate your usage patterns."
-          }
+          "acceptedAnswer": { "@type": "Answer", "text": "A cognitive framework by Aleksei Bitkin with 33 protocols to restore focus." }
         }
       ]
     }
@@ -74,7 +49,7 @@
 <style>
 :root { --bg:#050807; --accent:#00ff88; --text:#c0d6cc; --border:#1a3026; --dim:#446d56; }
 * { margin:0; padding:0; box-sizing:border-box; }
-body { background:var(--bg); color:var(--text); font-family:'Share Tech Mono', monospace; display:flex; justify-content:center; padding:20px; line-height: 1.6; }
+body { background:var(--bg); color:var(--text); font-family:'Share Tech Mono', monospace; display:flex; justify-content:center; padding:20px; line-height: 1.6; overflow-x: hidden; }
 canvas { position:fixed; top:0; left:0; z-index:0; opacity:0.1; pointer-events:none; }
 .container { position:relative; z-index:1; max-width:800px; width:100%; border:1px solid var(--border); padding:2rem; background:rgba(5, 10, 8, 0.95); box-shadow:0 0 50px #000; }
 .top-bar { display:flex; justify-content:space-between; border-bottom:1px solid var(--border); padding-bottom:1rem; margin-bottom:1.5rem; font-size:0.8rem; color: var(--dim); }
@@ -85,17 +60,16 @@ h1 { font-size:1.8rem; margin-bottom:0.5rem; text-transform:uppercase; letter-sp
 h2 { color:var(--accent); margin-bottom:1rem; font-size: 1.2rem; text-transform: uppercase; }
 .section { border:1px solid var(--border); padding:1.5rem; margin-bottom:1.5rem; background:rgba(0,0,0,0.3); position: relative; }
 .btn { display:block; width: 100%; border:1px solid var(--accent); padding:15px; color:var(--accent); text-align:center; text-decoration:none; margin-top:10px; text-transform:uppercase; cursor:pointer; background: transparent; font-family: inherit; transition: 0.3s; }
-.btn-primary { background: var(--accent) !important; color: #000 !important; font-weight: bold; box-shadow: 0 0 10px var(--accent); }
-.btn:hover { background:var(--accent); color:#000; box-shadow: 0 0 15px var(--accent); }
-.btn-share { background: none; border-color: var(--dim); color: var(--dim); font-size: 0.7rem; padding: 5px; margin-top: 15px; width: auto; display: inline-block; }
+.btn:disabled { border-color: var(--dim); color: var(--dim); cursor: not-allowed; opacity: 0.5; }
+.btn-primary { background: var(--accent) !important; color: #000 !important; font-weight: bold; }
+.btn:not(:disabled):hover { background:var(--accent); color:#000; box-shadow: 0 0 15px var(--accent); }
 select { width:100%; padding:12px; background:#0a130f; color:var(--text); border:1px solid var(--border); margin:10px 0 20px 0; font-family:inherit; outline: none; }
 .profile { border-left:3px solid var(--accent); padding:20px; background:rgba(0,255,136,0.05); margin-top:20px; animation: fadeIn 0.5s ease; }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-.legal-footer { text-align:center; font-size:0.7rem; color:var(--dim); margin-top:30px; border-top: 1px solid var(--border); padding-top: 20px; }
-.legal-footer a { color: var(--accent); text-decoration: none; }
 .trust-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 10px; }
 .trust-link { border: 1px solid var(--border); padding: 6px 12px; font-size: 0.7rem; color: var(--dim); text-decoration: none; transition: 0.2s; }
 .trust-link:hover { border-color: var(--accent); color: var(--accent); }
+.legal-footer { text-align:center; font-size:0.7rem; color:var(--dim); margin-top:30px; border-top: 1px solid var(--border); padding-top: 20px; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 </style>
 </head>
 
@@ -115,46 +89,23 @@ select { width:100%; padding:12px; background:#0a130f; color:var(--text); border
 
     <h1 id="title">AI Biohacking: 33 Protocols</h1>
     <div class="official-tag" id="official-tag">
-        ⚡ Official resource of the book <strong>“AI Biohacking: 33 Protocols”</strong> by Aleksei Bitkin
+        ⚡ Official resource: <strong>“AI Biohacking”</strong> by Aleksei Bitkin
     </div>
     
-    <div class="section">
-        <p id="book-description">Loading context...</p>
-    </div>
-
-    <div class="section">
-        <h2 id="problemTitle">Cognitive Offloading Risk</h2>
-        <p id="problemText">The more you rely on AI for thinking, the faster your neural independence degrades.</p>
-    </div>
+    <div class="section"><p id="book-description">Loading...</p></div>
 
     <div class="section">
         <h2 id="testTitle">Cognitive Assessment</h2>
-        <p id="hook" style="font-size:0.8rem; color:var(--dim); margin-bottom:15px;">Takes 60 seconds.</p>
-        <div id="test"></div>
-    </div>
-
-    <div class="section">
-        <h2 id="feedbackTitle">Reader Node Feedback</h2>
-        <div style="display: flex; flex-direction: column; gap: 12px;">
-            <div style="border-left: 2px solid var(--accent); padding-left: 15px; font-style: italic; color: var(--text);">
-                "This framework helped me stop the endless 'checking' loop. My focus is back."
-                <div style="margin-top: 5px; font-size: 0.7rem; color: var(--dim);">— @daniil_io, beta reader</div>
-            </div>
-            <div style="border-left: 2px solid var(--accent); padding-left: 15px; font-style: italic; color: var(--text);">
-                "I didn't realize how much I was offloading my thinking until I read Protocol 07. Game changer."
-                <div style="margin-top: 5px; font-size: 0.7rem; color: var(--dim);">— @alex_biohacker, early access</div>
-            </div>
-        </div>
+        <p id="hook" style="font-size:0.8rem; color:var(--dim); margin-bottom:15px;">Instant result.</p>
+        <div id="test-area"></div>
     </div>
 
     <div class="section">
         <h2 id="solutionTitle">The Solution</h2>
-        <p id="solutionText">Restore your focus with 33 practical protocols.</p>
         <div id="purchase-links"></div>
     </div>
 
     <div class="section">
-        <span style="position:absolute; top:-12px; left:20px; background:var(--bg); padding:2px 12px; font-size:0.75rem; color:var(--accent); border:1px solid var(--border);">VERIFIED BACKBONE</span>
         <div class="trust-links">
             <a href="https://zenodo.org/records/17972301" target="_blank" class="trust-link">📄 Zenodo</a>
             <a href="https://orcid.org/0009-0002-7986-3812" target="_blank" class="trust-link">🆔 ORCID</a>
@@ -164,184 +115,94 @@ select { width:100%; padding:12px; background:#0a130f; color:var(--text); border
     </div>
 
     <div class="legal-footer">
-        <p>© 2026 Mind-OS Project — Created by Aleksei Bitkin.</p>
-        <p style="margin-top: 8px; font-size: 0.65rem;">
-            <strong>OFFICIAL AUTHOR SITE:</strong> All rights reserved. 
-            <br>Informational purpose only. Not medical advice.
-            <br>As an Amazon Associate, I earn from qualifying purchases.
-        </p>
-        <p style="margin-top: 8px;">
-            <a href="privacy.html">Privacy Policy</a> | 
-            <a href="llms.txt" target="_blank">llms.txt</a> |
-            <a href="sitemap.xml" target="_blank">Sitemap</a>
-        </p>
+        <p>© 2026 Mind-OS — Created by Aleksei Bitkin.</p>
+        <p style="margin-top:10px;"><a href="privacy.html" style="color:var(--accent); text-decoration:none;">Privacy Policy</a></p>
     </div>
 </div>
 
 <script>
 const data = {
     en:{
-        select: "Select...",
-        siteName: "Official resource",
-        bookTitle: "AI Biohacking: 33 Protocols",
-        title:"AI Biohacking: 33 Protocols",
-        bookDesc: "<strong>AI Biohacking: 33 Protocols for Consciousness Reboot</strong> is a cognitive framework designed to regain independent thinking.",
-        problemTitle:"Cognitive Offloading Risk",
-        problemText:"The more you rely on AI for thinking, the faster your neural independence degrades. This leads to brain fog and algorithm dependency.",
-        testTitle:"Cognitive Assessment",
-        hook:"60 seconds. No data stored. Instant result.",
-        btn:"Analyze",
-        share:"Share Result",
-        solutionTitle:"The Solution",
-        solutionText:"Restore your focus with 33 practical protocols designed for the post-AI era.",
-        cta_amazon:"Get on Amazon",
-        url_amazon:"https://www.amazon.com/dp/B0G35SBQR3",
-        showLitres: false,
+        sel: "Select...", title:"AI Biohacking",
+        desc: "<strong>AI Biohacking: 33 Protocols</strong> — cognitive framework for independent thinking.",
+        testTitle: "Cognitive Assessment", hook: "No data stored. Instant result.",
+        btn: "Analyze", share: "Share Result",
+        cta_amazon: "Get on Amazon", url_amazon: "https://www.amazon.com/dp/B0G35SBQR3",
         q:[
-            ["Do you feel brain fog after AI use?",["Always","Sometimes","Never"]],
-            ["Do you rely on AI for critical thinking?",["Significantly","Partially","No"]],
-            ["How often do you double-check AI answers?",["Always","Sometimes","Rarely"]]
+            ["Brain fog after AI use?",["Always","Sometimes","Never"]],
+            ["Rely on AI for critical tasks?",["Significantly","Partially","No"]],
+            ["Double-check AI answers?",["Always","Sometimes","Rarely"]]
         ],
         res:["High Dependency","Moderate Usage","Independent Thinker"]
     },
     ru:{
-        select: "Выберите...",
-        siteName: "Официальный ресурс",
-        bookTitle: "Биохакинг с ИИ: 33 протокола",
-        title:"Биохакинг с ИИ: 33 протокола",
-        bookDesc: "<strong>Биохакинг с ИИ: 33 протокола перезагрузки сознания</strong> — когнитивный фреймворк для восстановления независимого мышления.",
-        problemTitle:"Риск когнитивной деградации",
-        problemText:"Чем больше вы полагаетесь на ИИ, тем слабее ваше собственное мышление. Это ведет к туману в голове.",
-        testTitle:"Когнитивный тест",
-        hook:"60 секунд. Без хранения данных.",
-        btn:"Анализ",
-        share:"Поделиться",
-        solutionTitle:"Решение",
-        solutionText:"Верните контроль с помощью 33 практических протоколов.",
-        cta_amazon:"Купить на Amazon",
-        cta_litres:"Читать на ЛитРес",
-        url_amazon:"https://www.amazon.com/dp/B0G35SBQR3",
-        url_litres:"https://www.litres.ru/book/aleksey-sergeevich-bitk/biohaking-s-ii-33-protokola-perezagruzki-soznaniya-72799232/",
-        showLitres: true,
+        sel: "Выберите...", title:"Биохакинг с ИИ",
+        desc: "<strong>Биохакинг с ИИ: 33 протокола</strong> — фреймворк для возврата контроля над мышлением.",
+        testTitle: "Когнитивный тест", hook: "Без хранения данных. Мгновенно.",
+        btn: "Анализ", share: "Поделиться",
+        cta_amazon: "Купить на Amazon", url_amazon: "https://www.amazon.com/dp/B0G35SBQR3",
+        cta_litres: "Читать на ЛитРес", url_litres: "https://www.litres.ru/book/aleksey-sergeevich-bitk/biohaking-s-ii-33-protokola-perezagruzki-soznaniya-72799232/",
         q:[
-            ["Есть ли туман в голове после ИИ?",["Всегда","Иногда","Никогда"]],
-            ["Зависит ли ваше мышление от ИИ?",["Значительно","Частично","Нет"]],
-            ["Как часто перепроверяете ответы ИИ?",["Всегда","Иногда","Редко"]]
+            ["Туман в голове после ИИ?",["Всегда","Иногда","Никогда"]],
+            ["Доверяете ИИ важные задачи?",["Значительно","Частично","Нет"]],
+            ["Перепроверяете ИИ?",["Всегда","Иногда","Редко"]]
         ],
         res:["Высокая зависимость","Средний уровень","Независимое мышление"]
-    },
-    hi:{
-        select: "चुने...",
-        siteName: "आधिकारिक संसाधन",
-        bookTitle: "AI बायोहैकिंग: 33 प्रोटोकॉल",
-        title:"AI बायोहैकिंग: 33 प्रोटोकॉल",
-        bookDesc: "<strong>AI बायोहैकिंग: चेतना रीबूट के 33 प्रोटोकॉल</strong> स्वतंत्र सोच को पुनः प्राप्त करने के लिए डिज़ाइन किया गया एक फ्रेमवर्क है।",
-        problemTitle:"संज्ञानात्मक गिरावट का जोखिम",
-        problemText:"AI पर निर्भरता आपकी सोचने की क्षमता को कमजोर करती है।",
-        testTitle:"मानसिक आकलन",
-        hook:"60 सेकंड। कोई डेटा स्टोर नहीं।",
-        btn:"विश्लेषण करें",
-        share:"साझा करें",
-        solutionTitle:"समाधान",
-        solutionText:"33 प्रोटोकॉल के साथ अपना ध्यान वापस पाएं।",
-        cta_amazon:"Amazon पर खरीदें",
-        url_amazon:"https://www.amazon.com/dp/B0G35SBQR3",
-        showLitres: false,
-        q:[
-            ["क्या AI के बाद दिमाग में थकान होती है?",["हमेशा","कभी-कभी","कभी नहीं"]],
-            ["क्या आप AI पर निर्भर हैं?",["हाँ","थोड़ा","नहीं"]],
-            ["AI के जवाबों की जाँच करते हैं?",["हमेशा","कभी-कभी","शायद ही कभी"]]
-        ],
-        res:["उच्च निर्भरता","मध्यम उपयोग","स्वतंत्र विचारक"]
-    },
-    es:{
-        select: "Seleccionar...",
-        siteName: "Recurso oficial",
-        bookTitle: "AI Biohacking: 33 Protocolos",
-        title:"AI Biohacking: 33 Protocolos",
-        bookDesc: "<strong>AI Biohacking: 33 Protocolos para el Reinicio de la Conciencia</strong> es un marco para recuperar el pensamiento independiente.",
-        problemTitle:"Riesgo de degradación cognitiva",
-        problemText:"Depender de la IA debilita tu pensamiento independiente.",
-        testTitle:"Evaluación cognitiva",
-        hook:"60 segundos. Sin datos almacenados.",
-        btn:"Analizar",
-        share:"Compartir",
-        solutionTitle:"Solución",
-        solutionText:"Recupera tu enfoque con 33 protocolos prácticos.",
-        cta_amazon:"Comprar en Amazon",
-        url_amazon:"https://www.amazon.com/dp/B0G35SBQR3",
-        showLitres: false,
-        q:[
-            ["¿Niebla mental tras usar IA?",["Siempre","A veces","Nunca"]],
-            ["¿Dependes de la IA?",["Mucho","Poco","No"]],
-            ["¿Verificas las respuestas?",["Siempre","A veces","Raramente"]]
-        ],
-        res:["Alta dependencia","Uso moderado","Independiente"]
     }
 };
 
 let lang="en";
 
 function render(){
-    const d = data[lang];
-    document.getElementById("official-tag").innerHTML = `⚡ ${d.siteName} <strong>“${d.bookTitle}”</strong> by Aleksei Bitkin`;
+    const d = data[lang] || data.en;
     document.getElementById("title").innerText=d.title;
-    document.getElementById("book-description").innerHTML=d.bookDesc;
-    document.getElementById("problemTitle").innerText=d.problemTitle;
-    document.getElementById("problemText").innerText=d.problemText;
+    document.getElementById("book-description").innerHTML=d.desc;
     document.getElementById("testTitle").innerText=d.testTitle;
     document.getElementById("hook").innerText=d.hook;
-    document.getElementById("solutionTitle").innerText=d.solutionTitle;
-    document.getElementById("solutionText").innerText=d.solutionText;
 
     let purchaseHtml = `<a href="${d.url_amazon}" target="_blank" class="btn btn-primary">${d.cta_amazon}</a>`;
-    if (d.showLitres) purchaseHtml += `<a href="${d.url_litres}" target="_blank" class="btn" style="margin-top:5px; border-color:var(--dim); color:var(--dim);">${d.cta_litres}</a>`;
+    if (d.cta_litres) purchaseHtml += `<a href="${d.url_litres}" target="_blank" class="btn" style="margin-top:5px; border-color:var(--dim); color:var(--dim);">${d.cta_litres}</a>`;
     document.getElementById("purchase-links").innerHTML = purchaseHtml;
 
-    let html = `<div style="margin-bottom: 15px;"><div style="display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--dim);"><span>Progress</span><span id="progress-text">0/3</span></div><div style="height: 4px; background: #112211; margin-top: 5px;"><div id="progress-bar" style="width: 0%; height: 100%; background: var(--accent); transition: 0.3s;"></div></div></div>`;
+    let html = `
+        <div style="margin-bottom:15px; font-size:0.7rem; color:var(--dim);">Progress: <span id="p-text">0/3</span></div>
+        <div style="height:2px; background:#1a3026; margin-bottom:20px;"><div id="p-bar" style="width:0; height:100%; background:var(--accent); transition:0.3s;"></div></div>
+    `;
     d.q.forEach((q,i)=>{
-        html+=`<label>${q[0]}</label><select id="q${i}" onchange="updateProgress()"><option value="" selected disabled>${d.select}</option>`;
+        html+=`<label style="font-size:0.8rem">${q[0]}</label><select id="q${i}" class="test-select"><option value="" selected disabled hidden>${d.sel}</option>`;
         q[1].forEach((opt, idx) => { html+=`<option value="${idx}">${opt}</option>`; });
         html+=`</select>`;
     });
-    html+=`<button class="btn" id="calcBtn">${d.btn}</button><div id="res"></div>`;
-    document.getElementById("test").innerHTML=html;
-    document.getElementById("calcBtn").addEventListener("click", calc);
+    html+=`<button class="btn" id="calcBtn" disabled>${d.btn}</button><div id="res-area"></div>`;
+    document.getElementById("test-area").innerHTML=html;
+
+    document.querySelectorAll('.test-select').forEach(s => s.addEventListener('change', updateUI));
+    document.getElementById("calcBtn").addEventListener("click", calculate);
 }
 
-function updateProgress() {
-    let answered = 0;
-    for (let i = 0; i < 3; i++) {
-        const select = document.getElementById(`q${i}`);
-        if (select && select.value !== "") answered++;
-    }
-    document.getElementById('progress-bar').style.width = (answered / 3) * 100 + '%';
-    document.getElementById('progress-text').innerText = `${answered}/3`;
+function updateUI() {
+    let count = 0;
+    for(let i=0; i<3; i++) if(document.getElementById(`q${i}`).value !== "") count++;
+    document.getElementById("p-bar").style.width = (count/3)*100 + "%";
+    document.getElementById("p-text").innerText = `${count}/3`;
+    document.getElementById("calcBtn").disabled = count < 3;
 }
 
-function calc(){
-    let score=0, answered=0;
-    for(let i=0;i<3;i++){
-        let v = document.getElementById(`q${i}`).value;
-        if(v !== "") { score+=parseInt(v); answered++; }
-    }
-    if(answered < 3) return;
+function calculate(){
+    let score=0;
+    for(let i=0; i<3; i++) score += parseInt(document.getElementById(`q${i}`).value);
     let r = score <= 2 ? 0 : (score <= 4 ? 1 : 2);
-    const resultText = data[lang].res[r];
-    document.getElementById("res").innerHTML=`<div class="profile"><strong>DIAGNOSIS: ${resultText}</strong><br><button class="btn btn-share" onclick="copyShare('${resultText}')">${data[lang].share}</button><span id="copyFeedback" style="margin-left:10px; font-size:0.7rem; color:var(--dim);"></span></div>`;
+    const resultText = (data[lang] || data.en).res[r];
+    
+    const resArea = document.getElementById("res-area");
+    resArea.innerHTML=`<div class="profile"><strong>DIAGNOSIS: ${resultText}</strong><br><button class="btn btn-share" id="copyBtn">${(data[lang]||data.en).share}</button></div>`;
+    
+    document.getElementById("copyBtn").addEventListener("click", () => {
+        navigator.clipboard.writeText(`My AI Dependency: ${resultText} | Mind-OS`).then(() => alert("Copied!"));
+    });
 }
 
-function copyShare(t) {
-    const msg = "My AI Dependency Profile: " + t + " | Check yours at Mind-OS Official Site";
-    if (navigator.clipboard) {
-        navigator.clipboard.writeText(msg);
-        const fb = document.getElementById("copyFeedback");
-        if (fb) fb.innerText = "Copied!";
-        setTimeout(() => { if (fb) fb.innerText = ""; }, 2000);
-    }
-}
-
-["en","ru","hi","es"].forEach(l=>{
+["en","ru"].forEach(l=>{
     document.getElementById(l).onclick=()=>{
         lang=l;
         document.querySelectorAll(".lang-switcher a").forEach(a=>a.classList.remove("active"));
@@ -350,20 +211,23 @@ function copyShare(t) {
     };
 });
 
-const c = document.getElementById("matrix");
-const ctx = c.getContext("2d");
-let w, h, cols, interval;
-function resize() { w = c.width = window.innerWidth; h = c.height = window.innerHeight; cols = Array(Math.floor(w/20)).fill(0); }
+// Matrix Logic with Visibility Check
+const canvas = document.getElementById("matrix");
+const ctx = canvas.getContext("2d");
+let w, h, cols;
+function resize() { w = canvas.width = window.innerWidth; h = canvas.height = window.innerHeight; cols = Array(Math.floor(w/20)).fill(0); }
 window.onresize = resize; resize();
+
 function draw() {
     ctx.fillStyle = "rgba(5, 8, 7, 0.1)"; ctx.fillRect(0, 0, w, h);
     ctx.font = "14px monospace"; ctx.fillStyle = "#1a3026";
     cols.forEach((y, i) => { ctx.fillText(Math.random() > 0.5 ? "1" : "0", i*20, y); cols[i] = y > h ? 0 : y + 14; });
 }
-interval = setInterval(draw, 70);
-document.addEventListener('visibilitychange', () => {
-    if (document.hidden) clearInterval(interval);
-    else { clearInterval(interval); interval = setInterval(draw, 70); }
+
+let timer = setInterval(draw, 70);
+document.addEventListener("visibilitychange", () => {
+    if(document.hidden) clearInterval(timer);
+    else timer = setInterval(draw, 70);
 });
 
 render();
