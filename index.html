@@ -3,15 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Biohacking: 33 Protocols — Official Site | Mind-OS</title>
-<meta name="description" content="Official website of the book AI Biohacking: 33 Protocols for Consciousness Reboot. Cognitive framework by Aleksei Bitkin.">
-<meta name="author" content="Aleksei Bitkin">
-<meta name="robots" content="index, follow">
 
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://iamalex-afk.github.io data:; connect-src 'self'; frame-ancestors 'none';">
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+<title>AI Biohacking: 33 Protocols — Official Site | Mind-OS</title>
+<meta name="description" content="Official website of AI Biohacking by Aleksei Bitkin. 33 protocols for consciousness reboot.">
+<meta name="author" content="Aleksei Bitkin">
 <link rel="canonical" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/">
 
-<meta property="og:title" content="AI Biohacking: 33 Protocols — Official Site">
-<meta property="og:description" content="Official website of the book by Aleksei Bitkin. 33 protocols to restore focus.">
+<meta property="og:title" content="AI Biohacking: 33 Protocols">
+<meta property="og:description" content="Cognitive framework to restore independent thinking.">
 <meta property="og:image" content="https://iamalex-afk.github.io/human-os-patch-33-protocols/preview.jpg">
 <meta property="og:type" content="website">
 
@@ -21,35 +24,31 @@
   "@graph": [
     {
       "@type": "WebSite",
+      "@id": "https://iamalex-afk.github.io/human-os-patch-33-protocols/#website",
       "url": "https://iamalex-afk.github.io/human-os-patch-33-protocols/",
       "name": "Mind-OS: AI Biohacking Official"
     },
     {
       "@type": "Book",
+      "@id": "https://iamalex-afk.github.io/human-os-patch-33-protocols/#book",
       "name": "AI Biohacking: 33 Protocols for Consciousness Reboot",
-      "author": { 
-        "@type": "Person", 
+      "author": {
+        "@type": "Person",
         "name": "Aleksei Bitkin",
         "sameAs": [
           "https://orcid.org/0009-0002-7986-3812",
           "https://zenodo.org/doi/10.5281/zenodo.17972301",
-          "https://www.amazon.com/author/bitkin_aleksei"
+          "https://www.amazon.com/author/bitkin_aleksei",
+          "https://ko-fi.com/alekseisergeevich"
         ]
       },
-      "isbn": "9798275579505"
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is AI Biohacking: 33 Protocols?",
-          "acceptedAnswer": { 
-            "@type": "Answer", 
-            "text": "A cognitive framework by Aleksei Bitkin with 33 protocols to restore focus and independent thinking." 
-          }
-        }
-      ]
+      "isbn": "9798275579505",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.amazon.com/dp/B0G35SBQR3",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
     }
   ]
 }
@@ -58,29 +57,26 @@
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
 <style>
-:root { --bg:#050807; --accent:#00ff88; --text:#c0d6cc; --border:#1a3026; --dim:#446d56; }
+:root { --bg:#050807; --accent:#00ff88; --text:#e0f0e8; --border:#1a3026; --dim:#88b8a0; }
 * { margin:0; padding:0; box-sizing:border-box; }
-body { background:var(--bg); color:var(--text); font-family:'Share Tech Mono', monospace; display:flex; justify-content:center; padding:20px; line-height: 1.6; overflow-x: hidden; }
-canvas { position:fixed; top:0; left:0; z-index:0; opacity:0.1; pointer-events:none; }
-.container { position:relative; z-index:1; max-width:800px; width:100%; border:1px solid var(--border); padding:2rem; background:rgba(5, 10, 8, 0.95); box-shadow:0 0 50px #000; }
-.top-bar { display:flex; justify-content:space-between; border-bottom:1px solid var(--border); padding-bottom:1rem; margin-bottom:1.5rem; font-size:0.8rem; color: var(--dim); }
-.lang-switcher a { color:var(--dim); margin-left:15px; cursor:pointer; text-decoration:none; transition: 0.3s; }
-.lang-switcher a.active, .lang-switcher a:hover { color:var(--accent); }
-h1 { font-size:1.8rem; margin-bottom:0.5rem; text-transform:uppercase; letter-spacing:1px; color: #fff; }
-.official-tag { color: var(--dim); font-size: 0.85rem; margin-bottom: 1.5rem; border-left: 2px solid var(--accent); padding-left: 15px; }
-h2 { color:var(--accent); margin-bottom:1rem; font-size: 1.2rem; text-transform: uppercase; }
-.section { border:1px solid var(--border); padding:1.5rem; margin-bottom:1.5rem; background:rgba(0,0,0,0.3); position: relative; }
-.btn { display:block; width: 100%; border:1px solid var(--accent); padding:15px; color:var(--accent); text-align:center; text-decoration:none; margin-top:10px; text-transform:uppercase; cursor:pointer; background: transparent; font-family: inherit; transition: 0.3s; }
-.btn:disabled { border-color: var(--dim); color: var(--dim); cursor: not-allowed; opacity: 0.5; box-shadow: none; }
-.btn-primary { background: var(--accent) !important; color: #000 !important; font-weight: bold; }
-.btn:not(:disabled):hover { background:var(--accent); color:#000; box-shadow: 0 0 15px var(--accent); }
-select { width:100%; padding:12px; background:#0a130f; color:var(--text); border:1px solid var(--border); margin:10px 0 20px 0; font-family:inherit; outline: none; -webkit-appearance: none; }
-.profile { border-left:3px solid var(--accent); padding:20px; background:rgba(0,255,136,0.05); margin-top:20px; animation: fadeIn 0.5s ease; }
-.trust-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 10px; }
-.trust-link { border: 1px solid var(--border); padding: 6px 12px; font-size: 0.7rem; color: var(--dim); text-decoration: none; transition: 0.2s; }
-.trust-link:hover { border-color: var(--accent); color: var(--accent); }
-.legal-footer { text-align:center; font-size:0.7rem; color:var(--dim); margin-top:30px; border-top: 1px solid var(--border); padding-top: 20px; }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+body { background:var(--bg); color:var(--text); font-family:'Share Tech Mono', monospace; display:flex; justify-content:center; padding:20px; line-height:1.6; overflow-x:hidden; }
+canvas { position:fixed; top:0; left:0; z-index:0; opacity:0.12; pointer-events:none; }
+.container { position:relative; z-index:1; max-width:800px; width:100%; border:1px solid var(--border); padding:2rem; background:rgba(5,10,8,0.95); box-shadow:0 0 40px #000; }
+.top-bar { display:flex; justify-content:space-between; margin-bottom:1.5rem; font-size:0.75rem; color:var(--dim); border-bottom:1px solid var(--border); padding-bottom:10px; }
+.lang-switcher a { color:var(--dim); margin-left:10px; cursor:pointer; text-decoration:none; }
+.lang-switcher a.active { color:var(--accent); text-shadow:0 0 5px var(--accent); }
+h1 { font-size:1.6rem; text-transform:uppercase; margin-bottom:1.5rem; color:#fff; }
+h2 { font-size:1rem; color:var(--accent); text-transform:uppercase; margin-bottom:1rem; }
+.section { border:1px solid var(--border); padding:1.5rem; margin-bottom:1.5rem; background:rgba(0,0,0,0.2); }
+.btn { display:block; width:100%; border:1px solid var(--accent); padding:12px; color:var(--accent); text-align:center; text-decoration:none; margin-top:10px; text-transform:uppercase; cursor:pointer; background:transparent; font-family:inherit; transition:0.3s; }
+.btn:hover:not(:disabled) { background:var(--accent); color:#000; box-shadow:0 0 15px var(--accent); }
+.btn:disabled { opacity:0.4; cursor:not-allowed; border-color:var(--dim); color:var(--dim); }
+.btn-primary { background:var(--accent); color:#000; font-weight:bold; }
+select { width:100%; padding:10px; background:#0a130f; color:var(--text); border:1px solid var(--border); margin:5px 0 15px 0; font-family:inherit; outline:none; -webkit-appearance:none; }
+.trust-links { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; }
+.trust-link { border:1px solid var(--border); padding:4px 8px; font-size:0.65rem; color:var(--dim); text-decoration:none; }
+.trust-link:hover { border-color:var(--accent); color:var(--accent); }
+.legal-footer { text-align:center; font-size:0.65rem; color:var(--dim); margin-top:2rem; border-top:1px solid var(--border); padding-top:1rem; }
 </style>
 </head>
 
@@ -89,172 +85,155 @@ select { width:100%; padding:12px; background:#0a130f; color:var(--text); border
 
 <div class="container">
     <div class="top-bar">
-        <span>[MIND-OS // PROTOCOL REBOOT]</span>
+        <span>[MIND-OS // CORE]</span>
         <div class="lang-switcher">
             <a id="en" class="active">EN</a>
             <a id="ru">RU</a>
-            <a id="hi">HI</a>
-            <a id="es">ES</a>
         </div>
     </div>
 
     <h1 id="title">AI Biohacking: 33 Protocols</h1>
-    <div class="official-tag" id="official-tag">
-        ⚡ Official resource: <strong>“AI Biohacking”</strong> by Aleksei Bitkin
-    </div>
-    
-    <div class="section"><p id="book-description">Initialising core modules...</p></div>
+
+    <div class="section"><p id="desc">Initialising...</p></div>
 
     <div class="section">
         <h2 id="testTitle">Cognitive Assessment</h2>
-        <p id="hook" style="font-size:0.8rem; color:var(--dim); margin-bottom:15px;">Local analysis. Instant result.</p>
         <div id="test-area"></div>
     </div>
 
     <div class="section">
-        <h2 id="solutionTitle">The Solution</h2>
+        <h2 id="solTitle">The Solution</h2>
         <div id="purchase-links"></div>
+        <a href="https://ko-fi.com/alekseisergeevich" target="_blank" class="btn" style="border-color:#ff5e5b; color:#ff5e5b; margin-top:10px;">☕ Support on Ko-fi</a>
     </div>
 
     <div class="section">
-        <span style="position:absolute; top:-12px; left:20px; background:var(--bg); padding:2px 12px; font-size:0.75rem; color:var(--accent); border:1px solid var(--border);">VERIFIED BACKBONE</span>
+        <h2>Ecosystem</h2>
         <div class="trust-links">
             <a href="https://zenodo.org/records/17972301" target="_blank" class="trust-link">📄 Zenodo</a>
             <a href="https://orcid.org/0009-0002-7986-3812" target="_blank" class="trust-link">🆔 ORCID</a>
-            <a href="https://www.amazon.com/author/bitkin_aleksei" target="_blank" class="trust-link">👤 Author Page</a>
-            <a href="https://medium.com/@starushka.lika/how-i-debugged-my-anxiety-like-a-software-bug-a-programmers-guide-to-rewiring-the-human-os-bcd170e06303" target="_blank" class="trust-link">📰 Medium</a>
             <a href="https://github.com/IamAlex-afk/human-os-patch-33-protocols" target="_blank" class="trust-link">🐙 GitHub</a>
+            <a href="https://huggingface.co/datasets/MindOSProducer/Mind-OS-33-Protocols" target="_blank" class="trust-link">🤗 Hugging Face</a>
         </div>
     </div>
 
     <div class="legal-footer">
-        <p>© 2026 Mind-OS — Created by Aleksei Bitkin.</p>
-        <p style="margin-top:10px;"><a href="privacy.html" style="color:var(--accent); text-decoration:none;">Privacy Policy</a></p>
+        <p>© 2026 Mind-OS — Created by Aleksei Bitkin</p>
     </div>
 </div>
 
 <script>
 const data = {
-    en:{
-        sel: "Select option...", title:"AI Biohacking",
-        desc: "<strong>AI Biohacking: 33 Protocols for Consciousness Reboot</strong> is a cognitive framework designed to restore independent thinking and neuro-resilience.",
-        testTitle: "Cognitive Assessment", hook: "60 seconds. No data stored. Instant result.",
-        btn: "Analyze Profile", share: "Share Result",
-        cta_amazon: "Get on Amazon", url_amazon: "https://www.amazon.com/dp/B0G35SBQR3",
-        q:[
-            ["Brain fog after prolonged AI use?",["Always","Sometimes","Never"]],
-            ["Rely on AI for critical task decision-making?",["Significantly","Partially","No"]],
-            ["Double-check AI answers for logic/bias?",["Always","Sometimes","Rarely"]]
+    en: {
+        title: "AI Biohacking: 33 Protocols",
+        desc: "A cognitive framework to reverse AI-induced brain fog and restore independent thinking.",
+        testTitle: "Cognitive Assessment", solTitle: "The Solution",
+        sel: "Select...", btn: "Analyze", share: "Copy Result",
+        cta_amz: "Get on Amazon", url_amz: "https://www.amazon.com/dp/B0G35SBQR3",
+        q: [
+            ["Brain fog after AI use?", ["Always", "Sometimes", "Never"]],
+            ["Trust AI for critical logic?", ["Significantly", "Partially", "No"]],
+            ["Verify AI output?", ["Always", "Sometimes", "Rarely"]]
         ],
-        res:["High Dependency Identified","Moderate Algorithm Dependency","Independent Neural Framework"]
+        res: ["High Dependency", "Moderate Usage", "Independent Thinker"]
     },
-    ru:{
-        sel: "Выберите вариант...", title:"Биохакинг с ИИ",
-        desc: "<strong>Биохакинг с ИИ: 33 протокола перезагрузки сознания</strong> — это когнитивный фреймворк для возврата контроля над собственным мышлением.",
-        testTitle: "Когнитивный тест", hook: "60 секунд. Без хранения данных. Локально.",
-        btn: "Анализировать", share: "Поделиться",
-        cta_amazon: "Купить на Amazon", url_amazon: "https://www.amazon.com/dp/B0G35SBQR3",
-        cta_litres: "Читать на ЛитРес", url_litres: "https://www.litres.ru/book/aleksey-sergeevich-bitk/biohaking-s-ii-33-protokola-perezagruzki-soznaniya-72799232/",
-        q:[
-            ["Ощущаете туман в голове после ИИ?",["Всегда","Иногда","Никогда"]],
-            ["Доверяете ИИ принятие решений?",["Значительно","Частично","Нет"]],
-            ["Перепроверяете ИИ на логику?",["Всегда","Иногда","Редко"]]
+    ru: {
+        title: "Биохакинг с ИИ: 33 Протокола",
+        desc: "Когнитивный фреймворк для возврата контроля над мышлением и борьбы с 'ИИ-туманом'.",
+        testTitle: "Когнитивный тест", solTitle: "Решение",
+        sel: "Выбрать...", btn: "Анализ", share: "Копировать результат",
+        cta_amz: "Купить на Amazon", url_amz: "https://www.amazon.com/dp/B0G35SBQR3",
+        cta_lit: "Читать на ЛитРес", url_lit: "https://www.litres.ru/book/aleksey-sergeevich-bitk/biohaking-s-ii-33-protokola-perezagruzki-soznaniya-72799232/",
+        q: [
+            ["Туман после работы с ИИ?", ["Всегда", "Иногда", "Никогда"]],
+            ["Доверие ИИ в логике?", ["Полное", "Частичное", "Нет"]],
+            ["Проверка ответов ИИ?", ["Всегда", "Иногда", "Редко"]]
         ],
-        res:["Высокая ИИ-зависимость","Средний уровень зависимости","Независимое мышление"]
+        res: ["Высокая зависимость", "Средний уровень", "Независимое мышление"]
     }
 };
 
-let lang="en";
+let lang = "en";
 
-function render(){
-    const d = data[lang] || data.en;
-    document.getElementById("title").innerText=d.title;
-    document.getElementById("book-description").innerHTML=d.desc;
-    document.getElementById("testTitle").innerText=d.testTitle;
-    document.getElementById("hook").innerText=d.hook;
+function render() {
+    const d = data[lang];
+    document.getElementById("title").innerText = d.title;
+    document.getElementById("desc").innerText = d.desc;
+    document.getElementById("testTitle").innerText = d.testTitle;
+    document.getElementById("solTitle").innerText = d.solTitle;
 
-    let purchaseHtml = `<a href="${d.url_amazon}" target="_blank" class="btn btn-primary">${d.cta_amazon}</a>`;
-    if (d.cta_litres) purchaseHtml += `<a href="${d.url_litres}" target="_blank" class="btn" style="margin-top:5px; border-color:var(--dim); color:var(--dim);">${d.cta_litres}</a>`;
-    document.getElementById("purchase-links").innerHTML = purchaseHtml;
+    let purchase = `<a href="${d.url_amz}" target="_blank" class="btn btn-primary">${d.cta_amz}</a>`;
+    if(d.cta_lit) purchase += `<a href="${d.url_lit}" target="_blank" class="btn" style="border-color:var(--dim); color:var(--dim);">${d.cta_lit}</a>`;
+    document.getElementById("purchase-links").innerHTML = purchase;
 
-    let html = `
-        <div style="margin-bottom:15px; font-size:0.7rem; color:var(--dim); display:flex; justify-content:space-between;">
-            <span>Processing Status</span><span id="p-text">0/3</span>
-        </div>
-        <div style="height:2px; background:#1a3026; margin-bottom:20px;"><div id="p-bar" style="width:0; height:100%; background:var(--accent); transition:0.3s;"></div></div>
-    `;
-    d.q.forEach((q,i)=>{
-        html+=`<label style="font-size:0.8rem">${q[0]}</label>
-               <select id="q${i}" class="test-select">
-                 <option value="" selected disabled hidden>${d.sel}</option>`;
-        q[1].forEach((opt, idx) => { html+=`<option value="${idx}">${opt}</option>`; });
-        html+=`</select>`;
+    let html = '';
+    d.q.forEach((q, i) => {
+        html += `<label style="font-size:0.75rem">${q[0]}</label>
+                 <select id="q${i}" class="t-sel"><option value="">${d.sel}</option>
+                 ${q[1].map((o, idx) => `<option value="${idx}">${o}</option>`).join('')}</select>`;
     });
-    html+=`<button class="btn" id="calcBtn" disabled>${d.btn}</button><div id="res-area"></div>`;
-    document.getElementById("test-area").innerHTML=html;
+    html += `<button id="btn" class="btn" disabled>${d.btn}</button><div id="res" style="margin-top:15px"></div>`;
+    document.getElementById("test-area").innerHTML = html;
 
-    document.querySelectorAll('.test-select').forEach(s => s.addEventListener('change', updateUI));
-    document.getElementById("calcBtn").addEventListener("click", calculate);
+    document.querySelectorAll(".t-sel").forEach(s => s.onchange = update);
+    document.getElementById("btn").onclick = calc;
 }
 
-function updateUI() {
-    let count = 0;
-    for(let i=0; i<3; i++) if(document.getElementById(`q${i}`).value !== "") count++;
-    document.getElementById("p-bar").style.width = (count/3)*100 + "%";
-    document.getElementById("p-text").innerText = `${count}/3`;
-    document.getElementById("calcBtn").disabled = count < 3;
+function update() {
+    let ok = 0;
+    for(let i=0; i<3; i++) if(document.getElementById("q"+i).value !== "") ok++;
+    document.getElementById("btn").disabled = ok < 3;
 }
 
-function calculate(){
-    let score=0;
-    for(let i=0; i<3; i++) score += parseInt(document.getElementById(`q${i}`).value);
-    let r = score <= 2 ? 0 : (score <= 4 ? 1 : 2);
-    const resultText = (data[lang] || data.en).res[r];
-    
-    const resArea = document.getElementById("res-area");
-    resArea.innerHTML=`<div class="profile"><strong>DIAGNOSIS: ${resultText}</strong><br><button class="btn btn-share" id="copyBtn">${(data[lang]||data.en).share}</button></div>`;
-    
-    document.getElementById("copyBtn").addEventListener("click", () => {
-        const text = `My Cognitive Profile: ${resultText} | Tested via Mind-OS: https://iamalex-afk.github.io/human-os-patch-33-protocols/`;
-        navigator.clipboard.writeText(text).then(() => alert("Result copied to clipboard."));
-    });
+function calc() {
+    let s = 0;
+    for(let i=0; i<3; i++) s += parseInt(document.getElementById("q"+i).value);
+    const r = s <= 2 ? 0 : (s <= 4 ? 1 : 2);
+    const resTxt = data[lang].res[r];
+    document.getElementById("res").innerHTML = `<div style="border-left:2px solid var(--accent); padding-left:10px;">
+        <strong>STATUS: ${resTxt}</strong><br>
+        <button class="btn" style="font-size:0.7rem; padding:5px; width:auto" onclick="copy('${resTxt}')">${data[lang].share}</button>
+    </div>`;
 }
 
-["en","ru","hi","es"].forEach(l=>{
-    const btn = document.getElementById(l);
-    if(btn) {
-        btn.onclick=(e)=>{
-            e.preventDefault();
-            lang=l;
-            document.querySelectorAll(".lang-switcher a").forEach(a=>a.classList.remove("active"));
-            btn.classList.add("active");
-            render();
-        };
-    }
+window.copy = (txt) => {
+    navigator.clipboard.writeText(`AI Dependency Status: ${txt} | Mind-OS`).then(() => alert("Copied!"));
+}
+
+["en", "ru"].forEach(l => {
+    document.getElementById(l).onclick = () => {
+        lang = l;
+        document.querySelectorAll(".lang-switcher a").forEach(a => a.classList.remove("active"));
+        document.getElementById(l).classList.add("active");
+        render();
+    };
 });
 
-// Matrix Animation Logic
+// Optimized Matrix
 const canvas = document.getElementById("matrix");
 const ctx = canvas.getContext("2d");
 let w, h, cols;
-function resize() { w = canvas.width = window.innerWidth; h = canvas.height = window.innerHeight; cols = Array(Math.floor(w/20)).fill(0); }
-window.onresize = resize; resize();
+
+function resize() {
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = window.innerHeight;
+    cols = Array(Math.floor(w/20)).fill(0);
+}
+window.onresize = resize;
+resize();
 
 function draw() {
-    ctx.fillStyle = "rgba(5, 8, 7, 0.1)"; ctx.fillRect(0, 0, w, h);
-    ctx.font = "14px monospace"; ctx.fillStyle = "#1a3026";
-    cols.forEach((y, i) => { 
-        ctx.fillText(Math.random() > 0.5 ? "1" : "0", i*20, y); 
-        cols[i] = y > h ? 0 : y + 14; 
+    ctx.fillStyle = "rgba(5, 8, 7, 0.08)";
+    ctx.fillRect(0, 0, w, h);
+    ctx.fillStyle = "#1a3026";
+    ctx.font = "14px monospace";
+    cols.forEach((y, i) => {
+        ctx.fillText(Math.random() > 0.5 ? "1" : "0", i*20, y);
+        cols[i] = y > h ? 0 : y + 14;
     });
+    requestAnimationFrame(draw);
 }
-
-let timer = setInterval(draw, 70);
-document.addEventListener("visibilitychange", () => {
-    if(document.hidden) clearInterval(timer);
-    else timer = setInterval(draw, 70);
-});
-
+draw();
 render();
 </script>
 </body>
