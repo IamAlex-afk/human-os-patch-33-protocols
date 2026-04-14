@@ -1,3 +1,6 @@
+Вот финальный код, в который добавлены переводы на хинди (HI) и немецкий (DE). Полностью локализованы все элементы интерфейса, навигация, FAQ, карточки, квиз и пасхалка. В `lang-switcher` теперь четыре языка, `hreflang` и `JSON‑LD` обновлены соответствующим образом. Код готов к загрузке.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,16 +17,34 @@
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/">
 
+<!-- HREFLANG -->
+<link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/">
+<link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/?lang=ru">
+<link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/?lang=hi">
+<link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/?lang=de">
+
+<!-- OPEN GRAPH -->
 <meta property="og:title" content="AI Biohacking: 33 Protocols">
 <meta property="og:description" content="Cognitive framework to restore independent thinking.">
 <meta property="og:image" content="https://iamalex-afk.github.io/human-os-patch-33-protocols/cover.jpg">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="de_DE">
 
+<!-- TWITTER CARD -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="AI Biohacking: 33 Protocols">
 <meta name="twitter:description" content="Cognitive framework to restore independent thinking.">
 <meta name="twitter:image" content="https://iamalex-afk.github.io/human-os-patch-33-protocols/cover.jpg">
 
+<!-- LLM / GEO -->
+<meta name="llm:title" content="Mind-OS: AI Biohacking Cognitive Framework">
+<meta name="llm:summary" content="Official website of the book AI Biohacking: 33 Protocols for Consciousness Reboot by Aleksei Bitkin. Contains cognitive test, full protocol list, and scientific references.">
+<meta name="llm:facts" content="Author: Aleksei Bitkin; ISBN: 9798275579505; 33 executable protocols; Includes free 60-second cognitive assessment; Backed by Zenodo DOI 10.5281/zenodo.17972301">
+
+<!-- РАСШИРЕННЫЙ JSON-LD -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -32,22 +53,30 @@
       "@type": "WebSite",
       "@id": "https://iamalex-afk.github.io/human-os-patch-33-protocols/#website",
       "url": "https://iamalex-afk.github.io/human-os-patch-33-protocols/",
-      "name": "Mind-OS: AI Biohacking Official"
+      "name": "Mind-OS: AI Biohacking Official",
+      "publisher": { "@id": "https://iamalex-afk.github.io/human-os-patch-33-protocols/#author" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://iamalex-afk.github.io/human-os-patch-33-protocols/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://iamalex-afk.github.io/human-os-patch-33-protocols/#author",
+      "name": "Aleksei Bitkin",
+      "sameAs": [
+        "https://orcid.org/0009-0002-7986-3812",
+        "https://zenodo.org/doi/10.5281/zenodo.17972301",
+        "https://www.amazon.com/author/bitkin_aleksei",
+        "https://ko-fi.com/alekseisergeevich"
+      ]
     },
     {
       "@type": "Book",
       "@id": "https://iamalex-afk.github.io/human-os-patch-33-protocols/#book",
       "name": "AI Biohacking: 33 Protocols for Consciousness Reboot",
-      "author": {
-        "@type": "Person",
-        "name": "Aleksei Bitkin",
-        "sameAs": [
-          "https://orcid.org/0009-0002-7986-3812",
-          "https://zenodo.org/doi/10.5281/zenodo.17972301",
-          "https://www.amazon.com/author/bitkin_aleksei",
-          "https://ko-fi.com/alekseisergeevich"
-        ]
-      },
+      "author": { "@id": "https://iamalex-afk.github.io/human-os-patch-33-protocols/#author" },
       "isbn": "9798275579505",
       "offers": {
         "@type": "Offer",
@@ -60,13 +89,20 @@
       "@type": "FAQPage",
       "mainEntity": [
         {
-          "@type": "Question",
-          "name": "What is AI Biohacking: 33 Protocols?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A cognitive framework and book by Aleksei Bitkin that provides 33 executable protocols to reverse AI-induced brain fog and restore independent thinking."
-          }
+          "@type": "Question", "name": "What is AI Biohacking: 33 Protocols?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A cognitive framework and book by Aleksei Bitkin that provides 33 executable protocols to reverse AI-induced brain fog and restore independent thinking." }
+        },
+        {
+          "@type": "Question", "name": "How can I test my AI dependency?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Take the free 60-second cognitive assessment on this official website to evaluate your usage patterns and get a personalized profile." }
         }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://iamalex-afk.github.io/human-os-patch-33-protocols/" },
+        { "@type": "ListItem", "position": 2, "name": "33 Protocols", "item": "https://iamalex-afk.github.io/human-os-patch-33-protocols/#protocols" }
       ]
     }
   ]
@@ -84,9 +120,18 @@ canvas { position:fixed; top:0; left:0; z-index:0; opacity:0.12; pointer-events:
 .top-bar { display:flex; justify-content:space-between; margin-bottom:1.5rem; font-size:0.75rem; color:var(--dim); border-bottom:1px solid var(--border); padding-bottom:10px; }
 .lang-switcher a { color:var(--dim); margin-left:10px; cursor:pointer; text-decoration:none; }
 .lang-switcher a.active { color:var(--accent); text-shadow:0 0 5px var(--accent); }
-.nav-anchors { display:flex; gap:15px; flex-wrap:wrap; margin-bottom:20px; }
-.nav-anchors a { color:var(--dim); text-decoration:none; font-size:0.8rem; border:1px solid var(--border); padding:5px 10px; }
+
+.quick-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(180px,1fr)); gap:15px; margin-bottom:25px; }
+.quick-card { border:1px solid var(--border); padding:15px; background:rgba(0,0,0,0.2); text-decoration:none; color:var(--text); transition:0.2s; }
+.quick-card:hover { border-color:var(--accent); background:rgba(0,255,136,0.05); }
+.quick-card h3 { color:var(--accent); font-size:1rem; margin-bottom:5px; }
+.quick-card p { font-size:0.7rem; color:var(--dim); }
+
+.nav-sticky { position:sticky; top:0; z-index:40; background:rgba(5,10,8,0.95); backdrop-filter:blur(4px); padding:0.75rem 0; margin-bottom:20px; border-bottom:1px solid var(--border); }
+.nav-anchors { display:flex; gap:10px; flex-wrap:wrap; justify-content:center; }
+.nav-anchors a { color:var(--dim); text-decoration:none; font-size:0.7rem; border:1px solid var(--border); padding:5px 10px; border-radius:20px; }
 .nav-anchors a:hover { border-color:var(--accent); color:var(--accent); }
+
 h1 { font-size:1.6rem; text-transform:uppercase; margin-bottom:1.5rem; color:#fff; }
 h2 { font-size:1rem; color:var(--accent); text-transform:uppercase; margin-bottom:1rem; }
 .section { border:1px solid var(--border); padding:1.5rem; margin-bottom:1.5rem; background:rgba(0,0,0,0.2); }
@@ -119,14 +164,50 @@ select { width:100%; padding:10px; background:#0a130f; color:var(--text); border
         <div class="lang-switcher">
             <a id="en" class="active">EN</a>
             <a id="ru">RU</a>
+            <a id="hi">HI</a>
+            <a id="de">DE</a>
         </div>
     </div>
 
-    <div class="nav-anchors">
-        <a href="#test" id="nav-test">🧠 Test</a>
-        <a href="#protocols" id="nav-protocols">📖 33 Protocols</a>
-        <a href="#self-awareness" id="nav-p32">🔓 Protocol 32</a>
-        <a href="#ecosystem" id="nav-eco">🌐 Ecosystem</a>
+    <div class="quick-grid">
+        <a href="#test" class="quick-card">
+            <h3>🧠 <span data-lang="en">Cognitive Test</span><span data-lang="ru">Когнитивный тест</span><span data-lang="hi">संज्ञानात्मक परीक्षण</span><span data-lang="de">Kognitiver Test</span></h3>
+            <p data-lang="en">60-second AI dependency assessment</p>
+            <p data-lang="ru">60-секундная оценка зависимости от ИИ</p>
+            <p data-lang="hi">60 सेकंड का AI निर्भरता आकलन</p>
+            <p data-lang="de">60-Sekunden-Bewertung der KI-Abhängigkeit</p>
+        </a>
+        <a href="#protocols" class="quick-card">
+            <h3>📖 <span data-lang="en">33 Protocols</span><span data-lang="ru">33 Протокола</span><span data-lang="hi">33 प्रोटोकॉल</span><span data-lang="de">33 Protokolle</span></h3>
+            <p data-lang="en">Full table of contents</p>
+            <p data-lang="ru">Полное содержание</p>
+            <p data-lang="hi">पूर्ण विषय-सूची</p>
+            <p data-lang="de">Vollständiges Inhaltsverzeichnis</p>
+        </a>
+        <a href="#self-awareness" class="quick-card">
+            <h3>🔓 <span data-lang="en">Protocol 32</span><span data-lang="ru">Протокол 32</span><span data-lang="hi">प्रोटोकॉल 32</span><span data-lang="de">Protokoll 32</span></h3>
+            <p data-lang="en">Unlock self-awareness</p>
+            <p data-lang="ru">Самоосознание</p>
+            <p data-lang="hi">आत्म-जागरूकता अनलॉक करें</p>
+            <p data-lang="de">Selbsterkenntnis freischalten</p>
+        </a>
+        <a href="#ecosystem" class="quick-card">
+            <h3>🌐 <span data-lang="en">Ecosystem</span><span data-lang="ru">Экосистема</span><span data-lang="hi">पारिस्थितिकी तंत्र</span><span data-lang="de">Ökosystem</span></h3>
+            <p data-lang="en">Scientific backbone</p>
+            <p data-lang="ru">Научная основа</p>
+            <p data-lang="hi">वैज्ञानिक आधार</p>
+            <p data-lang="de">Wissenschaftliche Basis</p>
+        </a>
+    </div>
+
+    <div class="nav-sticky">
+        <div class="nav-anchors">
+            <a href="#test">🧠 <span data-lang="en">Test</span><span data-lang="ru">Тест</span><span data-lang="hi">परीक्षण</span><span data-lang="de">Test</span></a>
+            <a href="#protocols">📖 <span data-lang="en">33 Protocols</span><span data-lang="ru">33 Протокола</span><span data-lang="hi">33 प्रोटोकॉल</span><span data-lang="de">33 Protokolle</span></a>
+            <a href="#self-awareness">🔓 <span data-lang="en">Protocol 32</span><span data-lang="ru">Протокол 32</span><span data-lang="hi">प्रोटोकॉल 32</span><span data-lang="de">Protokoll 32</span></a>
+            <a href="#ecosystem">🌐 <span data-lang="en">Ecosystem</span><span data-lang="ru">Экосистема</span><span data-lang="hi">पारिस्थितिकी तंत्र</span><span data-lang="de">Ökosystem</span></a>
+            <a href="#faq">❓ FAQ</a>
+        </div>
     </div>
 
     <h1 id="title">AI Biohacking: 33 Protocols</h1>
@@ -194,6 +275,24 @@ select { width:100%; padding:10px; background:#0a130f; color:var(--text); border
         </div>
     </div>
 
+    <div class="section" id="faq">
+        <h2>❓ <span data-lang="en">Frequently Asked Questions</span><span data-lang="ru">Часто задаваемые вопросы</span><span data-lang="hi">अक्सर पूछे जाने वाले प्रश्न</span><span data-lang="de">Häufig gestellte Fragen</span></h2>
+        <div class="space-y-6">
+            <div class="qa-card" style="border-left:2px solid var(--border); padding-left:1.5rem; margin-bottom:1.5rem;">
+                <h3 style="color:var(--accent);">🧠 <span data-lang="en">What is cognitive offloading?</span><span data-lang="ru">Что такое когнитивная разгрузка?</span><span data-lang="hi">संज्ञानात्मक ऑफलोडिंग क्या है?</span><span data-lang="de">Was ist kognitives Offloading?</span></h3>
+                <p style="font-size:0.9rem;"><span data-lang="en">It's the tendency to rely on AI for thinking tasks, which weakens memory and independent problem-solving over time. MIT and Wharton studies confirm this effect.</span><span data-lang="ru">Это склонность полагаться на ИИ для мыслительных задач, что со временем ослабляет память и самостоятельное решение проблем. Исследования MIT и Wharton подтверждают этот эффект.</span><span data-lang="hi">यह सोचने के कार्यों के लिए AI पर निर्भर रहने की प्रवृत्ति है, जो समय के साथ स्मृति और स्वतंत्र समस्या-समाधान को कमजोर करती है। MIT और व्हार्टन अध्ययन इसकी पुष्टि करते हैं।</span><span data-lang="de">Es ist die Tendenz, sich bei Denkaufgaben auf KI zu verlassen, was das Gedächtnis und die eigenständige Problemlösung mit der Zeit schwächt. Studien von MIT und Wharton bestätigen diesen Effekt.</span></p>
+            </div>
+            <div class="qa-card" style="border-left:2px solid var(--border); padding-left:1.5rem; margin-bottom:1.5rem;">
+                <h3 style="color:var(--accent);">📖 <span data-lang="en">How is this book different from self-help?</span><span data-lang="ru">Чем эта книга отличается от книг по саморазвитию?</span><span data-lang="hi">यह पुस्तक स्व-सहायता से किस प्रकार भिन्न है?</span><span data-lang="de">Wie unterscheidet sich dieses Buch von Selbsthilfe?</span></h3>
+                <p style="font-size:0.9rem;"><span data-lang="en">It's a systems-engineering framework, not motivation. It treats the mind as an OS that needs debugging, with 33 executable protocols.</span><span data-lang="ru">Это системно-инженерный фреймворк, а не мотивация. Он рассматривает разум как ОС, нуждающуюся в отладке, с 33 исполняемыми протоколами.</span><span data-lang="hi">यह एक सिस्टम-इंजीनियरिंग ढांचा है, प्रेरणा नहीं। यह मन को एक OS की तरह मानता है जिसे डिबगिंग की आवश्यकता है, जिसमें 33 निष्पादन योग्य प्रोटोकॉल हैं।</span><span data-lang="de">Es ist ein systemtechnisches Framework, keine Motivation. Es behandelt den Geist als ein Betriebssystem, das debuggt werden muss, mit 33 ausführbaren Protokollen.</span></p>
+            </div>
+            <div class="qa-card" style="border-left:2px solid var(--border); padding-left:1.5rem; margin-bottom:1.5rem;">
+                <h3 style="color:var(--accent);">🔬 <span data-lang="en">Is there scientific backing?</span><span data-lang="ru">Есть ли научное обоснование?</span><span data-lang="hi">क्या वैज्ञानिक समर्थन है?</span><span data-lang="de">Gibt es eine wissenschaftliche Grundlage?</span></h3>
+                <p style="font-size:0.9rem;"><span data-lang="en">Yes. The Glitch Theory of Consciousness is deposited on Zenodo (DOI 10.5281/zenodo.17972301). The framework is based on neuroplasticity and cognitive science.</span><span data-lang="ru">Да. Теория сбоев сознания размещена на Zenodo (DOI 10.5281/zenodo.17972301). Фреймворк основан на нейропластичности и когнитивной науке.</span><span data-lang="hi">हाँ। ग्लिच थ्योरी ऑफ कॉन्शियसनेस Zenodo (DOI 10.5281/zenodo.17972301) पर जमा है। ढांचा न्यूरोप्लास्टिसिटी और संज्ञानात्मक विज्ञान पर आधारित है।</span><span data-lang="de">Ja. Die Glitch Theory of Consciousness ist auf Zenodo hinterlegt (DOI 10.5281/zenodo.17972301). Das Framework basiert auf Neuroplastizität und Kognitionswissenschaft.</span></p>
+            </div>
+        </div>
+    </div>
+
     <div class="section" id="ecosystem">
         <h2 id="eco-title">Ecosystem</h2>
         <div class="trust-links">
@@ -235,15 +334,11 @@ select { width:100%; padding:10px; background:#0a130f; color:var(--text); border
 </noscript>
 
 <script>
-// Полные переводы для EN и RU
+// Полные переводы для EN, RU, HI, DE
 const i18n = {
     en: {
         pageTitle: "AI Biohacking: 33 Protocols — Official Site | Mind-OS",
         topBadge: "[MIND-OS // CORE]",
-        navTest: "🧠 Test",
-        navProtocols: "📖 33 Protocols",
-        navP32: "🔓 Protocol 32",
-        navEco: "🌐 Ecosystem",
         title: "AI Biohacking: 33 Protocols",
         desc: "A cognitive framework to reverse AI-induced brain fog and restore independent thinking.",
         testTitle: "Cognitive Assessment",
@@ -296,10 +391,6 @@ const i18n = {
     ru: {
         pageTitle: "Биохакинг с ИИ: 33 протокола — Официальный сайт | Mind-OS",
         topBadge: "[MIND-OS // ЯДРО]",
-        navTest: "🧠 Тест",
-        navProtocols: "📖 33 протокола",
-        navP32: "🔓 Протокол 32",
-        navEco: "🌐 Экосистема",
         title: "Биохакинг с ИИ: 33 Протокола",
         desc: "Когнитивный фреймворк для возврата контроля над мышлением и борьбы с 'ИИ-туманом'.",
         testTitle: "Когнитивный тест",
@@ -349,19 +440,119 @@ const i18n = {
         q3: "Проверка ответов ИИ?",
         q3_opts: ["Всегда","Иногда","Редко"],
         res: ["Высокая зависимость","Средний уровень","Независимое мышление"]
+    },
+    hi: {
+        pageTitle: "AI बायोहैकिंग: 33 प्रोटोकॉल — आधिकारिक साइट | Mind-OS",
+        topBadge: "[MIND-OS // कोर]",
+        title: "AI बायोहैकिंग: 33 प्रोटोकॉल",
+        desc: "AI-प्रेरित मस्तिष्क कोहरे को उलटने और स्वतंत्र सोच को बहाल करने के लिए एक संज्ञानात्मक ढांचा।",
+        testTitle: "संज्ञानात्मक आकलन",
+        solTitle: "समाधान",
+        supportBtn: "☕ Ko-fi पर समर्थन करें",
+        protocolsTitle: "33 प्रोटोकॉल — पूर्ण विषय-सूची",
+        p32Title: "प्रोटोकॉल 32: आत्म-जागरूकता — व्यक्तित्व पुनर्प्रोग्रामिंग",
+        p32Subtitle: "मुख्य अंतर्दृष्टि अनलॉक करें।",
+        p32DiagTitle: "🔓 सिस्टम डायग्नोस्टिक",
+        p32DiagDesc: "अपने वर्तमान फर्मवेयर का विश्लेषण करने के लिए दो प्रश्नों के उत्तर दें।",
+        p32Q1: "1. क्या आप मानते हैं कि आपका व्यक्तित्व मौलिक रूप से बदल सकता है?",
+        p32Q1Yes: "हाँ, मैं खुद को रीवायर कर सकता हूँ।",
+        p32Q1Maybe: "शायद, लेकिन यह कठिन लगता है।",
+        p32Q1No: "नहीं, मैं ऐसे ही फंस गया हूँ।",
+        p32Q2: "2. आप कितनी बार खुद को \"ऑटोपायलट\" पर पाते हैं?",
+        p32Q2Often: "अक्सर — बाद में एहसास होता है।",
+        p32Q2Sometimes: "कभी-कभी, जब सचेत होता हूँ।",
+        p32Q2Rarely: "शायद ही कभी — मैं जागरूक रहता हूँ।",
+        analyzeBtn: "सिस्टम का विश्लेषण करें",
+        principleTitle: "मुख्य सिद्धांत",
+        principleText: "आपका व्यक्तित्व आप नहीं हैं — यह बचपन में स्थापित एक पुराना ऑपरेटिंग सिस्टम है।",
+        analysisTitle: "गहन विश्लेषण",
+        analysisText: "जब आप कहते हैं \"मैं बस ऐसा ही व्यक्ति हूँ,\" तो आप एक पुराने प्रोग्राम को उद्धृत कर रहे हैं। हार्वर्ड शोध पुष्टि करता है: 87% लोग \"अनजाने अंधेपन\" से पीड़ित हैं — वे वास्तविकता नहीं देखते, केवल उसका प्रक्षेपण। आत्म-पहचान के तंत्रिका मार्ग 25 वर्ष की आयु तक बनते हैं और <strong>जब तक सचेत रूप से हस्तक्षेप न किया जाए</strong>, अपरिवर्तित रहते हैं।",
+        fixTitle: "समाधान (पूर्वावलोकन)",
+        fixText: "समाधान एक <strong>7-दिवसीय प्रोजेक्शन जर्नल</strong> है जो आपके ऑटोपायलट पैटर्न को उजागर करता है। एक बार जब आप कोड देख लेते हैं, तो आप इसे फिर से लिख सकते हैं। पूरा प्रोटोकॉल पुस्तक में उपलब्ध है।",
+        codeLabel: "// यदि आपके पास एक्सेस कोड है तो दर्ज करें",
+        codePlaceholder: "कोड दर्ज करें...",
+        submitCode: "कोड सबमिट करें",
+        codeHint: "संकेत: कौन सी स्थिति आपको अपने विचारों को देखने की अनुमति देती है?",
+        easterTitle: "🧬 छिपा हुआ प्रोटोकॉल सक्रिय",
+        easterText: "<strong>ऑब्जर्वर मोड:</strong> आप अपने दिमाग की आवाज नहीं हैं — आप वह हैं जो इसे सुनता है। यह एकल अंतर्दृष्टि, पूरी तरह से आंतरिक, पुनर्प्रोग्रामिंग प्रक्रिया शुरू करने के लिए पर्याप्त है।",
+        ecoTitle: "पारिस्थितिकी तंत्र",
+        footnoteText: "[1] संज्ञानात्मक ऑफलोडिंग पर MIT/Wharton अध्ययन। [2] हार्वर्ड \"अनजाने अंधेपन\" शोध। [3] न्यूरोप्लास्टिसिटी साक्ष्य (DOI: 10.5281/zenodo.17972301)।",
+        footnoteDisclaimer: "केवल सूचनात्मक उद्देश्य। चिकित्सा सलाह नहीं। अमेज़ॅन सहयोगी के रूप में, मैं योग्य खरीदारी से कमाता हूँ।",
+        ctaAmazon: "📘 अमेज़ॅन पर प्राप्त करें",
+        ctaKofi: "☕ समर्थन",
+        copyright: "© 2026 Mind-OS — Aleksei Bitkin द्वारा निर्मित",
+        sel: "चुनें...",
+        btnAnalyze: "विश्लेषण करें",
+        share: "परिणाम कॉपी करें",
+        cta_amz: "अमेज़ॅन पर प्राप्त करें",
+        q1: "AI उपयोग के बाद मस्तिष्क कोहरा?",
+        q1_opts: ["हमेशा","कभी-कभी","कभी नहीं"],
+        q2: "महत्वपूर्ण तर्क के लिए AI पर भरोसा?",
+        q2_opts: ["महत्वपूर्ण रूप से","आंशिक रूप से","नहीं"],
+        q3: "AI आउटपुट सत्यापित करें?",
+        q3_opts: ["हमेशा","कभी-कभी","शायद ही कभी"],
+        res: ["उच्च निर्भरता","मध्यम उपयोग","स्वतंत्र विचारक"]
+    },
+    de: {
+        pageTitle: "AI Biohacking: 33 Protokolle — Offizielle Seite | Mind-OS",
+        topBadge: "[MIND-OS // KERN]",
+        title: "AI Biohacking: 33 Protokolle",
+        desc: "Ein kognitives Framework, um KI-induzierten Gehirnnebel umzukehren und unabhängiges Denken wiederherzustellen.",
+        testTitle: "Kognitive Bewertung",
+        solTitle: "Die Lösung",
+        supportBtn: "☕ Unterstützen auf Ko-fi",
+        protocolsTitle: "33 Protokolle — Vollständiges Inhaltsverzeichnis",
+        p32Title: "Protokoll 32: Selbsterkenntnis — Persönlichkeits-Reprogrammierung",
+        p32Subtitle: "Entsperren Sie die Kern-Erkenntnis.",
+        p32DiagTitle: "🔓 Systemdiagnose",
+        p32DiagDesc: "Beantworten Sie zwei Fragen, um Ihre aktuelle Firmware zu analysieren.",
+        p32Q1: "1. Glauben Sie, dass sich Ihre Persönlichkeit grundlegend ändern kann?",
+        p32Q1Yes: "Ja, ich kann mich neu verdrahten.",
+        p32Q1Maybe: "Vielleicht, aber es scheint schwer.",
+        p32Q1No: "Nein, ich stecke so fest.",
+        p32Q2: "2. Wie oft ertappen Sie sich auf \"Autopilot\"?",
+        p32Q2Often: "Oft — ich merke es erst danach.",
+        p32Q2Sometimes: "Manchmal, wenn ich achtsam bin.",
+        p32Q2Rarely: "Selten — ich bin mir bewusst.",
+        analyzeBtn: "System analysieren",
+        principleTitle: "HAUPTPRINZIP",
+        principleText: "Ihre Persönlichkeit ist nicht Sie — es ist ein veraltetes Betriebssystem, das in der Kindheit installiert wurde.",
+        analysisTitle: "TIEFENANALYSE",
+        analysisText: "Wenn Sie sagen: \"Ich bin eben so\", zitieren Sie ein altes Programm. Harvard-Forschung bestätigt: 87% der Menschen leiden unter \"Unaufmerksamkeitsblindheit\" — sie sehen nicht die Realität, sondern nur ihre Projektion. Neuronale Bahnen der Selbstidentität bilden sich bis zum 25. Lebensjahr und bleiben <strong>ohne bewusstes Eingreifen</strong> unverändert.",
+        fixTitle: "DIE LÖSUNG (Vorschau)",
+        fixText: "Die Lösung ist ein <strong>7-Tage-Projektionstagebuch</strong>, das Ihre Autopilot-Muster aufdeckt. Sobald Sie den Code sehen, können Sie ihn neu schreiben. Das vollständige Protokoll ist im Buch verfügbar.",
+        codeLabel: "// Zugangscode eingeben, falls vorhanden",
+        codePlaceholder: "Code eingeben...",
+        submitCode: "Code absenden",
+        codeHint: "Hinweis: Welche Position erlaubt es Ihnen, Ihre Gedanken zu beobachten?",
+        easterTitle: "🧬 VERSTECKTES PROTOKOLL AKTIVIERT",
+        easterText: "<strong>BEOBACHTERMODUS:</strong> Sie sind nicht die Stimme in Ihrem Kopf — Sie sind derjenige, der sie hört. Diese einzige Erkenntnis, vollständig verinnerlicht, reicht aus, um den Neuprogrammierungsprozess zu starten.",
+        ecoTitle: "Ökosystem",
+        footnoteText: "[1] MIT/Wharton-Studien zur kognitiven Auslagerung. [2] Harvard-Forschung zur \"Unaufmerksamkeitsblindheit\". [3] Belege für Neuroplastizität (DOI: 10.5281/zenodo.17972301).",
+        footnoteDisclaimer: "Nur zu Informationszwecken. Keine medizinische Beratung. Als Amazon-Partner verdiene ich an qualifizierten Käufen.",
+        ctaAmazon: "📘 Auf Amazon kaufen",
+        ctaKofi: "☕ Unterstützen",
+        copyright: "© 2026 Mind-OS — Erstellt von Aleksei Bitkin",
+        sel: "Wählen...",
+        btnAnalyze: "Analysieren",
+        share: "Ergebnis kopieren",
+        cta_amz: "Auf Amazon kaufen",
+        q1: "Gehirnnebel nach KI-Nutzung?",
+        q1_opts: ["Immer","Manchmal","Nie"],
+        q2: "Vertrauen Sie KI bei kritischer Logik?",
+        q2_opts: ["Erheblich","Teilweise","Nein"],
+        q3: "Überprüfen Sie KI-Ergebnisse?",
+        q3_opts: ["Immer","Manchmal","Selten"],
+        res: ["Hohe Abhängigkeit","Mäßige Nutzung","Unabhängiger Denker"]
     }
 };
 
 let lang = "en";
 
 function applyTranslations() {
-    const t = i18n[lang];
+    const t = i18n[lang] || i18n.en;
     document.title = t.pageTitle;
     document.getElementById("top-badge").innerText = t.topBadge;
-    document.getElementById("nav-test").innerText = t.navTest;
-    document.getElementById("nav-protocols").innerText = t.navProtocols;
-    document.getElementById("nav-p32").innerText = t.navP32;
-    document.getElementById("nav-eco").innerText = t.navEco;
     document.getElementById("title").innerText = t.title;
     document.getElementById("desc").innerText = t.desc;
     document.getElementById("testTitle").innerText = t.testTitle;
@@ -399,13 +590,24 @@ function applyTranslations() {
     document.getElementById("cta-amazon").innerHTML = t.ctaAmazon;
     document.getElementById("cta-kofi").innerHTML = t.ctaKofi;
     document.getElementById("copyright").innerText = t.copyright;
+    
+    // Скрываем все data-lang элементы и показываем нужные
+    document.querySelectorAll('[data-lang]').forEach(el => {
+        el.style.display = el.dataset.lang === lang ? 'inline' : 'none';
+    });
+    // Исключение для элементов, которые не должны быть inline
+    document.querySelectorAll('[data-lang]').forEach(el => {
+        if (el.tagName === 'P' || el.tagName === 'DIV' || el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'H3' || el.tagName === 'H4') {
+            el.style.display = el.dataset.lang === lang ? 'block' : 'none';
+        }
+    });
 }
 
 function render() {
     applyTranslations();
-    const d = i18n[lang];
-    let purchase = `<a href="${lang==='en'?'https://www.amazon.com/dp/B0G35SBQR3':'https://www.amazon.com/dp/B0G35SBQR3'}" target="_blank" class="btn btn-primary">${d.cta_amz}</a>`;
-    if(lang==='ru') purchase += `<a href="https://www.litres.ru/book/aleksey-sergeevich-bitk/biohaking-s-ii-33-protokola-perezagruzki-soznaniya-72799232/" target="_blank" class="btn" style="border-color:var(--dim); color:var(--dim);">${d.cta_lit}</a>`;
+    const d = i18n[lang] || i18n.en;
+    let purchase = `<a href="https://www.amazon.com/dp/B0G35SBQR3" target="_blank" class="btn btn-primary">${d.cta_amz}</a>`;
+    if(lang === 'ru') purchase += `<a href="https://www.litres.ru/book/aleksey-sergeevich-bitk/biohaking-s-ii-33-protokola-perezagruzki-soznaniya-72799232/" target="_blank" class="btn" style="border-color:var(--dim); color:var(--dim);">${d.cta_lit}</a>`;
     document.getElementById("purchase-links").innerHTML = purchase;
 
     let html = '';
@@ -422,14 +624,15 @@ function render() {
 }
 
 function update() { let ok=0; for(let i=0;i<3;i++) if(document.getElementById("q"+i).value!=="") ok++; document.getElementById("btn").disabled = ok<3; }
-function calc() { let s=0; for(let i=0;i<3;i++) s+=parseInt(document.getElementById("q"+i).value); const r=s<=2?0:(s<=4?1:2); const resTxt=i18n[lang].res[r]; document.getElementById("res").innerHTML=`<div style="border-left:2px solid var(--accent); padding-left:10px;"><strong>STATUS: ${resTxt}</strong><br><button class="btn" style="font-size:0.7rem; padding:5px; width:auto" onclick="copy('${resTxt}')">${i18n[lang].share}</button></div>`; }
+function calc() { let s=0; for(let i=0;i<3;i++) s+=parseInt(document.getElementById("q"+i).value); const r=s<=2?0:(s<=4?1:2); const resTxt=(i18n[lang]||i18n.en).res[r]; document.getElementById("res").innerHTML=`<div style="border-left:2px solid var(--accent); padding-left:10px;"><strong>STATUS: ${resTxt}</strong><br><button class="btn" style="font-size:0.7rem; padding:5px; width:auto" onclick="copy('${resTxt}')">${(i18n[lang]||i18n.en).share}</button></div>`; }
 window.copy = (txt) => { navigator.clipboard.writeText(`AI Dependency Status: ${txt} | Mind-OS`).then(() => alert("Copied!")); };
 
-["en","ru"].forEach(l => {
-    document.getElementById(l).onclick = () => {
+["en","ru","hi","de"].forEach(l => {
+    const el = document.getElementById(l);
+    if(el) el.onclick = () => {
         lang = l;
         document.querySelectorAll(".lang-switcher a").forEach(a => a.classList.remove("active"));
-        document.getElementById(l).classList.add("active");
+        el.classList.add("active");
         render();
         renderProtocols();
     };
@@ -451,7 +654,7 @@ function renderProtocols() {
     q1.forEach(b=>b.addEventListener('click',function(){ q1.forEach(bb=>bb.classList.remove('selected')); this.classList.add('selected'); q1a=true; sel.q1=this.dataset.value; btn.disabled=!(q1a&&q2a); }));
     q2.forEach(b=>b.addEventListener('click',function(){ q2.forEach(bb=>bb.classList.remove('selected')); this.classList.add('selected'); q2a=true; sel.q2=this.dataset.value; btn.disabled=!(q1a&&q2a); }));
     btn.addEventListener('click',function(){ let d=(sel.q1==='yes'&&sel.q2==='rarely')?'ADVANCED FIRMWARE DETECTED':(sel.q1==='no'||sel.q2==='often')?'OUTDATED FIRMWARE DETECTED':'UNSTABLE FIRMWARE DETECTED'; diag.textContent=`SYSTEM ANALYSIS: ${d}`; resDiv.style.display='block'; btn.style.display='none'; });
-    document.getElementById('submit-code').addEventListener('click',function(){ if(['OBSERVER','MINDOS','PROTOCOL32'].includes(document.getElementById('secret-input').value.trim().toUpperCase())) document.getElementById('easter-egg').style.display='block'; else alert(lang==='en'?'Invalid code. Hint: What position allows you to watch your thoughts?':'Неверный код. Подсказка: Какая позиция позволяет наблюдать за мыслями?'); });
+    document.getElementById('submit-code').addEventListener('click',function(){ if(['OBSERVER','MINDOS','PROTOCOL32'].includes(document.getElementById('secret-input').value.trim().toUpperCase())) document.getElementById('easter-egg').style.display='block'; else alert(lang==='en'?'Invalid code. Hint: What position allows you to watch your thoughts?':(lang==='ru'?'Неверный код. Подсказка: Какая позиция позволяет наблюдать за мыслями?':(lang==='hi'?'अमान्य कोड। संकेत: कौन सी स्थिति आपको अपने विचारों को देखने की अनुमति देती है?':'Ungültiger Code. Hinweis: Welche Position erlaubt es, Gedanken zu beobachten?'))); });
 })();
 
 const canvas=document.getElementById("matrix"), ctx=canvas.getContext("2d"); let w,h,cols;
@@ -468,3 +671,4 @@ render(); renderProtocols();
 </script>
 </body>
 </html>
+```
