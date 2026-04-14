@@ -183,10 +183,10 @@ body[lang="de"] [data-lang]:not([data-lang="de"]) { display:none; }
             <span id="top-badge">[MIND-OS // CORE]</span>
         </div>
         <div class="lang-switcher">
-            <a id="en" class="active" aria-selected="true">EN</a>
-            <a id="ru" aria-selected="false">RU</a>
-            <a id="hi" aria-selected="false">HI</a>
-            <a id="de" aria-selected="false">DE</a>
+            <a id="en" class="active" href="#" role="button">EN</a>
+            <a id="ru" href="#" role="button">RU</a>
+            <a id="hi" href="#" role="button">HI</a>
+            <a id="de" href="#" role="button">DE</a>
         </div>
     </div>
 
@@ -645,7 +645,7 @@ window.copy = (txt) => { navigator.clipboard.writeText(`AI Dependency Status: ${
 
 ["en","ru","hi","de"].forEach(l => {
     const el = document.getElementById(l);
-    if(el) el.onclick = () => setLanguage(l);
+    if(el) el.onclick = (e) => { e.preventDefault(); setLanguage(l); };
 });
 
 const protocols = [
