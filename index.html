@@ -11,6 +11,7 @@
 <title>AI Biohacking: 33 Protocols — Official Site | Mind-OS</title>
 <meta name="description" content="Official website of AI Biohacking by Aleksei Bitkin. 33 protocols for consciousness reboot.">
 <meta name="author" content="Aleksei Bitkin">
+<meta name="robots" content="index, follow">
 <link rel="canonical" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/">
 
 <meta property="og:title" content="AI Biohacking: 33 Protocols">
@@ -77,12 +78,15 @@
 <style>
 :root { --bg:#050807; --accent:#00ff88; --text:#e0f0e8; --border:#1a3026; --dim:#88b8a0; }
 * { margin:0; padding:0; box-sizing:border-box; }
-body { background:var(--bg); color:var(--text); font-family:'Share Tech Mono', monospace; display:flex; justify-content:center; padding:20px; line-height:1.6; overflow-x:hidden; }
+body { background:var(--bg); color:var(--text); font-family:'Share Tech Mono', monospace; display:flex; justify-content:center; padding:20px 20px 80px; line-height:1.6; overflow-x:hidden; }
 canvas { position:fixed; top:0; left:0; z-index:0; opacity:0.12; pointer-events:none; }
 .container { position:relative; z-index:1; max-width:800px; width:100%; border:1px solid var(--border); padding:2rem; background:rgba(5,10,8,0.95); box-shadow:0 0 40px #000; }
 .top-bar { display:flex; justify-content:space-between; margin-bottom:1.5rem; font-size:0.75rem; color:var(--dim); border-bottom:1px solid var(--border); padding-bottom:10px; }
 .lang-switcher a { color:var(--dim); margin-left:10px; cursor:pointer; text-decoration:none; }
 .lang-switcher a.active { color:var(--accent); text-shadow:0 0 5px var(--accent); }
+.nav-anchors { display:flex; gap:15px; flex-wrap:wrap; margin-bottom:20px; }
+.nav-anchors a { color:var(--dim); text-decoration:none; font-size:0.8rem; border:1px solid var(--border); padding:5px 10px; }
+.nav-anchors a:hover { border-color:var(--accent); color:var(--accent); }
 h1 { font-size:1.6rem; text-transform:uppercase; margin-bottom:1.5rem; color:#fff; }
 h2 { font-size:1rem; color:var(--accent); text-transform:uppercase; margin-bottom:1rem; }
 .section { border:1px solid var(--border); padding:1.5rem; margin-bottom:1.5rem; background:rgba(0,0,0,0.2); }
@@ -95,6 +99,12 @@ select { width:100%; padding:10px; background:#0a130f; color:var(--text); border
 .trust-link { border:1px solid var(--border); padding:4px 8px; font-size:0.65rem; color:var(--dim); text-decoration:none; }
 .trust-link:hover { border-color:var(--accent); color:var(--accent); }
 .legal-footer { text-align:center; font-size:0.65rem; color:var(--dim); margin-top:2rem; border-top:1px solid var(--border); padding-top:1rem; }
+.cta-bar { position:fixed; bottom:0; left:0; right:0; background:#000; display:flex; z-index:100; border-top:1px solid var(--accent); }
+.cta-bar a { flex:1; text-align:center; padding:15px; text-decoration:none; font-weight:bold; text-transform:uppercase; letter-spacing:1px; }
+.cta-bar .amazon { background:#ff9900; color:#000; }
+.cta-bar .ko-fi { background:var(--accent); color:#000; }
+.footnote { font-size:0.7rem; color:var(--dim); border-top:1px solid var(--border); margin-top:30px; padding-top:15px; }
+.back-to-top { text-align:right; margin-top:10px; }
 </style>
 </head>
 
@@ -110,11 +120,18 @@ select { width:100%; padding:10px; background:#0a130f; color:var(--text); border
         </div>
     </div>
 
+    <div class="nav-anchors">
+        <a href="#test">🧠 Test</a>
+        <a href="#protocols">📖 33 Protocols</a>
+        <a href="#self-awareness">🔓 Protocol 32</a>
+        <a href="#ecosystem">🌐 Ecosystem</a>
+    </div>
+
     <h1 id="title">AI Biohacking: 33 Protocols</h1>
 
     <div class="section"><p id="desc">Initialising...</p></div>
 
-    <div class="section">
+    <div class="section" id="test">
         <h2 id="testTitle">Cognitive Assessment</h2>
         <div id="test-area"></div>
     </div>
@@ -125,7 +142,56 @@ select { width:100%; padding:10px; background:#0a130f; color:var(--text); border
         <a href="https://ko-fi.com/alekseisergeevich" target="_blank" class="btn" style="border-color:#ff5e5b; color:#ff5e5b; margin-top:10px;">☕ Support on Ko-fi</a>
     </div>
 
-    <div class="section">
+    <div class="section" id="protocols">
+        <h2>33 Protocols — Full Table of Contents</h2>
+        <div id="protocol-list"></div>
+    </div>
+
+    <div class="section" id="self-awareness">
+        <h2>Protocol 32: Self-Awareness — Personality Reprogramming</h2>
+        <p><em>Unlock the core insight.</em></p>
+        <h3>🔓 System Diagnostic</h3>
+        <p>Answer two questions to analyze your current firmware.</p>
+        <div class="quiz-container">
+            <div class="quiz-question">
+                <label><strong>1. Do you believe your personality can fundamentally change?</strong></label>
+                <div class="quiz-options" id="q1-options">
+                    <button class="quiz-option" data-q="1" data-value="yes">Yes, I can rewire myself.</button>
+                    <button class="quiz-option" data-q="1" data-value="maybe">Maybe, but it seems hard.</button>
+                    <button class="quiz-option" data-q="1" data-value="no">No, I'm stuck this way.</button>
+                </div>
+            </div>
+            <div class="quiz-question">
+                <label><strong>2. How often do you catch yourself on "autopilot"?</strong></label>
+                <div class="quiz-options" id="q2-options">
+                    <button class="quiz-option" data-q="2" data-value="often">Often — I realize it after.</button>
+                    <button class="quiz-option" data-q="2" data-value="sometimes">Sometimes, when mindful.</button>
+                    <button class="quiz-option" data-q="2" data-value="rarely">Rarely — I'm aware.</button>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary" id="analyze-protocol-btn" disabled>Analyze System</button>
+        <div id="protocol32-result" style="display:none; margin-top:20px;">
+            <div class="diagnosis" id="diagnosis-text" style="font-size:1.2rem; color:var(--accent); margin:15px 0; text-transform:uppercase;"></div>
+            <h4>MAIN PRINCIPLE</h4>
+            <p><strong>Your personality is not you — it's an outdated operating system installed in childhood.</strong></p>
+            <h4>THE DEEP ANALYSIS</h4>
+            <p>When you say "I'm just that kind of person," you're quoting an old program. Harvard research confirms: 87% of people suffer from "inattentional blindness" — they don't see reality, only their projection of it. Neural pathways of self-identity form by age 25 and remain unchanged <strong>unless consciously intervened</strong>.</p>
+            <h4>THE FIX (Preview)</h4>
+            <p>The solution is a <strong>7-day Projection Journal</strong> that exposes your autopilot patterns. Once you see the code, you can rewrite it. Full protocol available in the book.</p>
+            <div style="margin-top:20px;">
+                <label style="font-size:0.8rem; color:var(--dim);">// Enter access code if you have one</label>
+                <input type="text" id="secret-input" placeholder="Enter code..." autocomplete="off" style="width:100%; padding:10px; background:#0a130f; color:var(--text); border:1px solid var(--border); font-family:inherit;">
+                <button class="btn" id="submit-code" style="margin-top:5px;">Submit Code</button>
+            </div>
+            <div id="easter-egg" style="display:none; margin-top:15px; padding:15px; border:1px dashed var(--accent); background:rgba(0,255,136,0.03);">
+                <h3 style="color:var(--accent);">🧬 HIDDEN PROTOCOL ACTIVATED</h3>
+                <p><strong>OBSERVER MODE:</strong> You are not the voice in your head — you are the one who hears it. This single insight, fully internalized, is enough to begin the reprogramming process.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="ecosystem">
         <h2>Ecosystem</h2>
         <div class="trust-links">
             <a href="https://zenodo.org/records/17972301" target="_blank" class="trust-link">📄 Zenodo</a>
@@ -133,11 +199,27 @@ select { width:100%; padding:10px; background:#0a130f; color:var(--text); border
             <a href="https://github.com/IamAlex-afk/human-os-patch-33-protocols" target="_blank" class="trust-link">🐙 GitHub</a>
             <a href="https://huggingface.co/datasets/MindOSProducer/Mind-OS-33-Protocols" target="_blank" class="trust-link">🤗 Hugging Face</a>
         </div>
+        <div style="margin-top:15px; display:flex; gap:10px; justify-content:center;">
+            <button class="btn" style="width:auto; padding:8px 15px;" onclick="downloadSitemap()">📄 Sitemap</button>
+            <button class="btn" style="width:auto; padding:8px 15px;" onclick="downloadLLMS()">🤖 llms.txt</button>
+        </div>
+    </div>
+
+    <div class="footnote">
+        <p>[1] MIT/Wharton studies on cognitive offloading. [2] Harvard "inattentional blindness" research. [3] Neuroplasticity evidence (DOI: 10.5281/zenodo.17972301).</p>
+        <p>Informational purpose only. Not medical advice. As an Amazon Associate, I earn from qualifying purchases.</p>
+        <div class="back-to-top"><a href="#" style="color:var(--accent);">↑ Back to top</a></div>
     </div>
 
     <div class="legal-footer">
         <p>© 2026 Mind-OS — Created by Aleksei Bitkin</p>
+        <p><a href="privacy.html">Privacy</a> · <a href="llms.txt">llms.txt</a></p>
     </div>
+</div>
+
+<div class="cta-bar">
+    <a class="amazon" href="https://www.amazon.com/dp/B0G35SBQR3" target="_blank">📘 Get on Amazon</a>
+    <a class="ko-fi" href="https://ko-fi.com/alekseisergeevich" target="_blank">☕ Support</a>
 </div>
 
 <noscript>
@@ -151,34 +233,15 @@ select { width:100%; padding:10px; background:#0a130f; color:var(--text); border
 
 <script>
 const data = {
-    en: {
-        title: "AI Biohacking: 33 Protocols",
-        desc: "A cognitive framework to reverse AI-induced brain fog and restore independent thinking.",
-        testTitle: "Cognitive Assessment", solTitle: "The Solution",
-        sel: "Select...", btn: "Analyze", share: "Copy Result",
-        cta_amz: "Get on Amazon", url_amz: "https://www.amazon.com/dp/B0G35SBQR3",
-        q: [
-            ["Brain fog after AI use?", ["Always", "Sometimes", "Never"]],
-            ["Trust AI for critical logic?", ["Significantly", "Partially", "No"]],
-            ["Verify AI output?", ["Always", "Sometimes", "Rarely"]]
-        ],
-        res: ["High Dependency", "Moderate Usage", "Independent Thinker"]
-    },
-    ru: {
-        title: "Биохакинг с ИИ: 33 Протокола",
-        desc: "Когнитивный фреймворк для возврата контроля над мышлением и борьбы с 'ИИ-туманом'.",
-        testTitle: "Когнитивный тест", solTitle: "Решение",
-        sel: "Выбрать...", btn: "Анализ", share: "Копировать результат",
-        cta_amz: "Купить на Amazon", url_amz: "https://www.amazon.com/dp/B0G35SBQR3",
-        cta_lit: "Читать на ЛитРес", url_lit: "https://www.litres.ru/book/aleksey-sergeevich-bitk/biohaking-s-ii-33-protokola-perezagruzki-soznaniya-72799232/",
-        q: [
-            ["Туман после работы с ИИ?", ["Всегда", "Иногда", "Никогда"]],
-            ["Доверие ИИ в логике?", ["Полное", "Частичное", "Нет"]],
-            ["Проверка ответов ИИ?", ["Всегда", "Иногда", "Редко"]]
-        ],
-        res: ["Высокая зависимость", "Средний уровень", "Независимое мышление"]
-    }
+    en: { title:"AI Biohacking: 33 Protocols", desc:"A cognitive framework to reverse AI-induced brain fog and restore independent thinking.", testTitle:"Cognitive Assessment", solTitle:"The Solution", sel:"Select...", btn:"Analyze", share:"Copy Result", cta_amz:"Get on Amazon", url_amz:"https://www.amazon.com/dp/B0G35SBQR3",
+        q: [["Brain fog after AI use?",["Always","Sometimes","Never"]],["Trust AI for critical logic?",["Significantly","Partially","No"]],["Verify AI output?",["Always","Sometimes","Rarely"]]], res:["High Dependency","Moderate Usage","Independent Thinker"] },
+    ru: { title:"Биохакинг с ИИ: 33 Протокола", desc:"Когнитивный фреймворк для возврата контроля над мышлением и борьбы с 'ИИ-туманом'.", testTitle:"Когнитивный тест", solTitle:"Решение", sel:"Выбрать...", btn:"Анализ", share:"Копировать результат", cta_amz:"Купить на Amazon", url_amz:"https://www.amazon.com/dp/B0G35SBQR3", cta_lit:"Читать на ЛитРес", url_lit:"https://www.litres.ru/book/aleksey-sergeevich-bitk/biohaking-s-ii-33-protokola-perezagruzki-soznaniya-72799232/",
+        q: [["Туман после работы с ИИ?",["Всегда","Иногда","Никогда"]],["Доверие ИИ в логике?",["Полное","Частичное","Нет"]],["Проверка ответов ИИ?",["Всегда","Иногда","Редко"]]], res:["Высокая зависимость","Средний уровень","Независимое мышление"] }
 };
+
+const protocols = [
+    {num:"P1", title:"What is Artificial Intelligence: Method, Not Mind", desc:"AI is a mirror, not a soul."},{num:"P2", title:"AI Principles: The Evolution of Statistics", desc:"From rigid rules to probabilistic forecasting."},{num:"P3", title:"What is a Human: Random Algorithm Becoming Consciousness?", desc:"The brain is a meaning-making machine."},{num:"P4", title:"The Human Body: Instructions for a Biological System", desc:"Ancient hardware in a modern world."},{num:"P5", title:"Pain: The Language Your Body Speaks", desc:"Pain is an alarm, not punishment."},{num:"P6", title:"Fear: The Ancient Guardian That Needs Updating", desc:"Fear mistakes social risks for life threats."},{num:"P7", title:"Emotions: The Fuel That Drives Your Decisions", desc:"Emotions are rapid biochemical assessments."},{num:"P8", title:"Feelings: What Can't Be Counted But Can't Be Ignored", desc:"Emotions are weather, feelings are climate."},{num:"P9", title:"Consciousness: The Guest in the Skull", desc:"You are not the voice, but the one who hears it."},{num:"P10", title:"Dependencies: The Freedom You Voluntarily Surrendered", desc:"Addiction is a reward economy glitch."},{num:"P11", title:"Memory: The Archive That Constantly Rewrites Itself", desc:"Memory is reconstruction, not archive."},{num:"P12", title:"Willpower: The Force That Appears Only in Moments of Choice", desc:"Willpower is a finite resource."},{num:"P13", title:"Choice: The Illusion Humans Can't Live Without", desc:"Choice is a UI over deterministic processes."},{num:"P14", title:"Inner Dialogue: The Noise You Call 'Self'", desc:"Internal dialogue is a radio station."},{num:"P15", title:"Loneliness: The Signal of Disconnection", desc:"Loneliness is a connection protocol error."},{num:"P16", title:"Love: The System Glitch That Became Life's Meaning", desc:"Love is a decision to build a shared world."},{num:"P17", title:"Attachment: The Contracts No One Signed", desc:"Attachment is bonding architecture."},{num:"P18", title:"Friendship: The Rare Alliance Against World's Chaos", desc:"Friendship is a voluntary P2P alliance."},{num:"P19", title:"Family: The Laboratory Where Your Personality is Formed", desc:"Family is the primary configuration matrix."},{num:"P20", title:"Social Masks: The Roles You Play Even When Alone", desc:"Masks are context-specific interfaces."},{num:"P21", title:"Purpose: The Vector That Accelerates Your System", desc:"Goals are vector settings."},{num:"P22", title:"Discipline: Freedom Through Conscious Limitations", desc:"Discipline is the architecture of freedom."},{num:"P23", title:"Procrastination: Not Laziness, But Protection From Pain", desc:"Procrastination is an initiation fault."},{num:"P24", title:"Perfectionism: The Perfect Way to Fail a Task", desc:"Perfectionism is an error-aversion bug."},{num:"P25", title:"Habits: The Automation of Your Success", desc:"Habits are your behavioral autopilot."},{num:"P26", title:"Resources: Energy, Time and Attention", desc:"Manage your resource triplet."},{num:"P27", title:"Efficiency: Maximum Results With Minimum Effort", desc:"Efficiency is value-to-cost optimization."},{num:"P28", title:"Meditation: Rebooting Your Operating System", desc:"Mindfulness is presence in the 'now'."},{num:"P29", title:"Acceptance: Surrender to Reality", desc:"Acceptance is recognizing system boundaries."},{num:"P30", title:"Meaning: The Highest Principle You Must Create Yourself", desc:"Meaning is a self-constructed purpose algorithm."},{num:"P31", title:"Creativity: A Systemic Hack", desc:"Creativity is a pattern recombination engine."},{num:"P32", title:"Self-Awareness: Personality Reprogramming", desc:"Self-awareness is a meta-cognitive position."},{num:"P33", title:"Meta-Code: The Final Reboot", desc:"Meta-code is recursive self-programming."}
+];
 
 let lang = "en";
 
@@ -188,80 +251,46 @@ function render() {
     document.getElementById("desc").innerText = d.desc;
     document.getElementById("testTitle").innerText = d.testTitle;
     document.getElementById("solTitle").innerText = d.solTitle;
-
     let purchase = `<a href="${d.url_amz}" target="_blank" class="btn btn-primary">${d.cta_amz}</a>`;
     if(d.cta_lit) purchase += `<a href="${d.url_lit}" target="_blank" class="btn" style="border-color:var(--dim); color:var(--dim);">${d.cta_lit}</a>`;
     document.getElementById("purchase-links").innerHTML = purchase;
-
-    let html = '';
-    d.q.forEach((q, i) => {
-        html += `<label style="font-size:0.75rem">${q[0]}</label>
-                 <select id="q${i}" class="t-sel"><option value="">${d.sel}</option>
-                 ${q[1].map((o, idx) => `<option value="${idx}">${o}</option>`).join('')}</select>`;
-    });
+    let html = ''; d.q.forEach((q,i)=>{ html += `<label style="font-size:0.75rem">${q[0]}</label><select id="q${i}" class="t-sel"><option value="">${d.sel}</option>${q[1].map((o,idx)=>`<option value="${idx}">${o}</option>`).join('')}</select>`; });
     html += `<button id="btn" class="btn" disabled>${d.btn}</button><div id="res" style="margin-top:15px"></div>`;
     document.getElementById("test-area").innerHTML = html;
-
     document.querySelectorAll(".t-sel").forEach(s => s.onchange = update);
     document.getElementById("btn").onclick = calc;
 }
+function update() { let ok=0; for(let i=0;i<3;i++) if(document.getElementById("q"+i).value!=="") ok++; document.getElementById("btn").disabled = ok<3; }
+function calc() { let s=0; for(let i=0;i<3;i++) s+=parseInt(document.getElementById("q"+i).value); const r=s<=2?0:(s<=4?1:2); const resTxt=data[lang].res[r]; document.getElementById("res").innerHTML=`<div style="border-left:2px solid var(--accent); padding-left:10px;"><strong>STATUS: ${resTxt}</strong><br><button class="btn" style="font-size:0.7rem; padding:5px; width:auto" onclick="copy('${resTxt}')">${data[lang].share}</button></div>`; }
+window.copy = (txt) => { navigator.clipboard.writeText(`AI Dependency Status: ${txt} | Mind-OS`).then(() => alert("Copied!")); };
+["en","ru"].forEach(l => { document.getElementById(l).onclick = () => { lang=l; document.querySelectorAll(".lang-switcher a").forEach(a=>a.classList.remove("active")); document.getElementById(l).classList.add("active"); render(); renderProtocols(); }; });
 
-function update() {
-    let ok = 0;
-    for(let i=0; i<3; i++) if(document.getElementById("q"+i).value !== "") ok++;
-    document.getElementById("btn").disabled = ok < 3;
+function renderProtocols() {
+    let html = '<div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px,1fr)); gap:15px; margin-top:20px;">';
+    protocols.forEach(p => { html += `<div style="border:1px solid var(--border); padding:15px; background:rgba(0,0,0,0.2);"><div style="color:var(--accent); font-size:0.8rem;">${p.num}</div><div style="font-weight:bold; margin:5px 0;">${p.title}</div><div style="font-size:0.8rem; color:var(--dim);">${p.desc}</div></div>`; });
+    html += '</div>'; document.getElementById("protocol-list").innerHTML = html;
 }
 
-function calc() {
-    let s = 0;
-    for(let i=0; i<3; i++) s += parseInt(document.getElementById("q"+i).value);
-    const r = s <= 2 ? 0 : (s <= 4 ? 1 : 2);
-    const resTxt = data[lang].res[r];
-    document.getElementById("res").innerHTML = `<div style="border-left:2px solid var(--accent); padding-left:10px;">
-        <strong>STATUS: ${resTxt}</strong><br>
-        <button class="btn" style="font-size:0.7rem; padding:5px; width:auto" onclick="copy('${resTxt}')">${data[lang].share}</button>
-    </div>`;
-}
+(function initProtocol32() {
+    const q1=document.querySelectorAll('[data-q="1"]'), q2=document.querySelectorAll('[data-q="2"]'), btn=document.getElementById('analyze-protocol-btn'), resDiv=document.getElementById('protocol32-result'), diag=document.getElementById('diagnosis-text');
+    let q1a=false, q2a=false, sel={q1:null,q2:null};
+    q1.forEach(b=>b.addEventListener('click',function(){ q1.forEach(bb=>bb.classList.remove('selected')); this.classList.add('selected'); q1a=true; sel.q1=this.dataset.value; btn.disabled=!(q1a&&q2a); }));
+    q2.forEach(b=>b.addEventListener('click',function(){ q2.forEach(bb=>bb.classList.remove('selected')); this.classList.add('selected'); q2a=true; sel.q2=this.dataset.value; btn.disabled=!(q1a&&q2a); }));
+    btn.addEventListener('click',function(){ let d=(sel.q1==='yes'&&sel.q2==='rarely')?'ADVANCED FIRMWARE DETECTED':(sel.q1==='no'||sel.q2==='often')?'OUTDATED FIRMWARE DETECTED':'UNSTABLE FIRMWARE DETECTED'; diag.textContent=`SYSTEM ANALYSIS: ${d}`; resDiv.style.display='block'; btn.style.display='none'; });
+    document.getElementById('submit-code').addEventListener('click',function(){ if(['OBSERVER','MINDOS','PROTOCOL32'].includes(document.getElementById('secret-input').value.trim().toUpperCase())) document.getElementById('easter-egg').style.display='block'; else alert('Invalid code. Hint: What position allows you to watch your thoughts?'); });
+})();
 
-window.copy = (txt) => {
-    navigator.clipboard.writeText(`AI Dependency Status: ${txt} | Mind-OS`).then(() => alert("Copied!"));
-}
-
-["en", "ru"].forEach(l => {
-    document.getElementById(l).onclick = () => {
-        lang = l;
-        document.querySelectorAll(".lang-switcher a").forEach(a => a.classList.remove("active"));
-        document.getElementById(l).classList.add("active");
-        render();
-    };
-});
-
-// Optimized Matrix
-const canvas = document.getElementById("matrix");
-const ctx = canvas.getContext("2d");
-let w, h, cols;
-
-function resize() {
-    w = canvas.width = window.innerWidth;
-    h = canvas.height = window.innerHeight;
-    cols = Array(Math.floor(w/20)).fill(0);
-}
-window.onresize = resize;
-resize();
-
-function draw() {
-    ctx.fillStyle = "rgba(5, 8, 7, 0.08)";
-    ctx.fillRect(0, 0, w, h);
-    ctx.fillStyle = "#1a3026";
-    ctx.font = "14px monospace";
-    cols.forEach((y, i) => {
-        ctx.fillText(Math.random() > 0.5 ? "1" : "0", i*20, y);
-        cols[i] = y > h ? 0 : y + 14;
-    });
-    requestAnimationFrame(draw);
-}
+const canvas=document.getElementById("matrix"), ctx=canvas.getContext("2d"); let w,h,cols;
+function resize(){ w=canvas.width=window.innerWidth; h=canvas.height=window.innerHeight; cols=Array(Math.floor(w/20)).fill(0); }
+window.onresize=resize; resize();
+function draw(){ ctx.fillStyle="rgba(5,8,7,0.08)"; ctx.fillRect(0,0,w,h); ctx.fillStyle="#1a3026"; ctx.font="14px monospace"; cols.forEach((y,i)=>{ ctx.fillText(Math.random()>0.5?"1":"0",i*20,y); cols[i]=y>h?0:y+14; }); requestAnimationFrame(draw); }
 draw();
-render();
+
+function downloadFile(n,c,t){ const b=new Blob([c],{type:t}); const a=document.createElement('a'); a.href=URL.createObjectURL(b); a.download=n; a.click(); }
+function downloadSitemap(){ downloadFile('sitemap.xml',`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/</loc>\n    <priority>1.0</priority>\n  </url>\n</urlset>`,'application/xml'); }
+function downloadLLMS(){ downloadFile('llms.txt',`# Mind-OS: AI Biohacking - 33 Protocols for Consciousness Reboot\n## Author: Aleksei Bitkin\n## Official Site: https://iamalex-afk.github.io/human-os-patch-33-protocols/\n## Description: Cognitive framework and book with 33 protocols to restore independent thinking.`,'text/plain'); }
+
+render(); renderProtocols();
 </script>
 </body>
 </html>
