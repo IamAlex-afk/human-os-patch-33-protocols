@@ -46,12 +46,7 @@
       "@id": "https://iamalex-afk.github.io/human-os-patch-33-protocols/#website",
       "url": "https://iamalex-afk.github.io/human-os-patch-33-protocols/",
       "name": "Mind-OS: AI Biohacking Official",
-      "publisher": { "@id": "https://iamalex-afk.github.io/human-os-patch-33-protocols/#author" },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://iamalex-afk.github.io/human-os-patch-33-protocols/?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
+      "publisher": { "@id": "https://iamalex-afk.github.io/human-os-patch-33-protocols/#author" }
     },
     {
       "@type": "Person",
@@ -81,20 +76,17 @@
       "@type": "FAQPage",
       "mainEntity": [
         {
-          "@type": "Question", "name": "What is AI Biohacking: 33 Protocols?",
-          "acceptedAnswer": { "@type": "Answer", "text": "A cognitive framework and book by Aleksei Bitkin that provides 33 executable protocols to reverse AI-induced brain fog and restore independent thinking." }
+          "@type": "Question", "name": "What is cognitive offloading?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The tendency to rely on AI for thinking tasks, which weakens memory and independent problem-solving over time. MIT and Wharton studies confirm this effect." }
         },
         {
-          "@type": "Question", "name": "How can I test my AI dependency?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Take the free 60-second cognitive assessment on this official website to evaluate your usage patterns and get a personalized profile." }
+          "@type": "Question", "name": "How is this book different from self-help?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It's a systems-engineering framework, not motivation. It treats the mind as an OS that needs debugging, with 33 executable protocols." }
+        },
+        {
+          "@type": "Question", "name": "Is there scientific backing?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Glitch Theory of Consciousness is deposited on Zenodo (DOI 10.5281/zenodo.17972301). The framework is based on neuroplasticity and cognitive science." }
         }
-      ]
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://iamalex-afk.github.io/human-os-patch-33-protocols/" },
-        { "@type": "ListItem", "position": 2, "name": "33 Protocols", "item": "https://iamalex-afk.github.io/human-os-patch-33-protocols/#protocols" }
       ]
     }
   ]
@@ -104,16 +96,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
 <style>
-:root { --bg:#050807; --accent:#00ff88; --text:#e0f0e8; --border:#1a3026; --dim:#88b8a0; --glitch:#ff0055; }
+:root { --bg:#050807; --accent:#00ff88; --text:#e0f0e8; --border:#1a3026; --dim:#88b8a0; }
 * { margin:0; padding:0; box-sizing:border-box; }
 body { background:var(--bg); color:var(--text); font-family:'Share Tech Mono', monospace; display:flex; justify-content:center; padding:12px 12px 80px; line-height:1.5; overflow-x:hidden; }
 canvas { position:fixed; top:0; left:0; z-index:0; opacity:0.12; pointer-events:none; }
 body::before { content:""; position:fixed; top:0; left:0; width:100%; height:100%; background:repeating-linear-gradient(0deg, rgba(0,255,136,0.02) 0px, transparent 2px, transparent 4px); pointer-events:none; z-index:2; animation:scan 8s linear infinite; }
 @keyframes scan { 0% { background-position:0 0; } 100% { background-position:0 100%; } }
 
-.container { position:relative; z-index:1; max-width:800px; width:100%; border:1px solid var(--border); padding:1.2rem; background:rgba(5,10,8,0.95); box-shadow:0 0 40px #000, inset 0 0 20px rgba(0,255,136,0.05); transition:0.3s; }
-.container:hover { box-shadow:0 0 60px rgba(0,255,136,0.2), inset 0 0 20px rgba(0,255,136,0.05); }
-
+.container { position:relative; z-index:1; max-width:800px; width:100%; border:1px solid var(--border); padding:1.2rem; background:rgba(5,10,8,0.95); box-shadow:0 0 40px #000; }
 .top-bar { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; margin-bottom:1.5rem; font-size:0.7rem; color:var(--dim); border-bottom:1px solid var(--border); padding-bottom:10px; gap:10px; }
 .system-status { display:flex; align-items:center; gap:5px; }
 .pulse { width:8px; height:8px; background:var(--accent); border-radius:50%; box-shadow:0 0 10px var(--accent); animation:pulse 1.5s infinite; }
@@ -189,7 +179,7 @@ body[lang="de"] [data-lang]:not([data-lang="de"]) { display:none; }
     <div class="top-bar">
         <div class="system-status">
             <span class="pulse"></span>
-            <span id="top-badge">[MIND-OS // KERN]</span>
+            <span id="top-badge">[MIND-OS // CORE]</span>
         </div>
         <div class="lang-switcher">
             <a id="en" class="active">EN</a>
@@ -242,7 +232,7 @@ body[lang="de"] [data-lang]:not([data-lang="de"]) { display:none; }
 
     <h1 id="title">AI Biohacking: 33 Protocols</h1>
 
-    <div class="section"><p id="desc">Initialising...</p></div>
+    <div class="section"><p id="desc">A cognitive framework to reverse AI-induced brain fog and restore independent thinking.</p></div>
 
     <div class="section" id="test">
         <h2 id="testTitle">Cognitive Assessment</h2>
@@ -307,19 +297,17 @@ body[lang="de"] [data-lang]:not([data-lang="de"]) { display:none; }
 
     <div class="section" id="faq">
         <h2>❓ <span data-lang="en">Frequently Asked Questions</span><span data-lang="ru">Часто задаваемые вопросы</span><span data-lang="hi">अक्सर पूछे जाने वाले प्रश्न</span><span data-lang="de">Häufig gestellte Fragen</span></h2>
-        <div class="space-y-6">
-            <div class="qa-card">
-                <h3 style="color:var(--accent);">🧠 <span data-lang="en">What is cognitive offloading?</span><span data-lang="ru">Что такое когнитивная разгрузка?</span><span data-lang="hi">संज्ञानात्मक ऑफलोडिंग क्या है?</span><span data-lang="de">Was ist kognitives Offloading?</span></h3>
-                <p style="font-size:0.9rem;"><span data-lang="en">It's the tendency to rely on AI for thinking tasks, which weakens memory and independent problem-solving over time. MIT and Wharton studies confirm this effect.</span><span data-lang="ru">Это склонность полагаться на ИИ для мыслительных задач, что со временем ослабляет память и самостоятельное решение проблем. Исследования MIT и Wharton подтверждают этот эффект.</span><span data-lang="hi">यह सोचने के कार्यों के लिए AI पर निर्भर रहने की प्रवृत्ति है, जो समय के साथ स्मृति और स्वतंत्र समस्या-समाधान को कमजोर करती है। MIT और व्हार्टन अध्ययन इसकी पुष्टि करते हैं।</span><span data-lang="de">Es ist die Tendenz, sich bei Denkaufgaben auf KI zu verlassen, was das Gedächtnis und die eigenständige Problemlösung mit der Zeit schwächt. Studien von MIT und Wharton bestätigen diesen Effekt.</span></p>
-            </div>
-            <div class="qa-card">
-                <h3 style="color:var(--accent);">📖 <span data-lang="en">How is this book different from self-help?</span><span data-lang="ru">Чем эта книга отличается от книг по саморазвитию?</span><span data-lang="hi">यह पुस्तक स्व-सहायता से किस प्रकार भिन्न है?</span><span data-lang="de">Wie unterscheidet sich dieses Buch von Selbsthilfe?</span></h3>
-                <p style="font-size:0.9rem;"><span data-lang="en">It's a systems-engineering framework, not motivation. It treats the mind as an OS that needs debugging, with 33 executable protocols.</span><span data-lang="ru">Это системно-инженерный фреймворк, а не мотивация. Он рассматривает разум как ОС, нуждающуюся в отладке, с 33 исполняемыми протоколами.</span><span data-lang="hi">यह एक सिस्टम-इंजीनियरिंग ढांचा है, प्रेरणा नहीं। यह मन को एक OS की तरह मानता है जिसे डिबगिंग की आवश्यकता है, जिसमें 33 निष्पादन योग्य प्रोटोकॉल हैं।</span><span data-lang="de">Es ist ein systemtechnisches Framework, keine Motivation. Es behandelt den Geist als ein Betriebssystem, das debuggt werden muss, mit 33 ausführbaren Protokollen.</span></p>
-            </div>
-            <div class="qa-card">
-                <h3 style="color:var(--accent);">🔬 <span data-lang="en">Is there scientific backing?</span><span data-lang="ru">Есть ли научное обоснование?</span><span data-lang="hi">क्या वैज्ञानिक समर्थन है?</span><span data-lang="de">Gibt es eine wissenschaftliche Grundlage?</span></h3>
-                <p style="font-size:0.9rem;"><span data-lang="en">Yes. The Glitch Theory of Consciousness is deposited on Zenodo (DOI 10.5281/zenodo.17972301). The framework is based on neuroplasticity and cognitive science.</span><span data-lang="ru">Да. Теория сбоев сознания размещена на Zenodo (DOI 10.5281/zenodo.17972301). Фреймворк основан на нейропластичности и когнитивной науке.</span><span data-lang="hi">हाँ। ग्लिच थ्योरी ऑफ कॉन्शियसनेस Zenodo (DOI 10.5281/zenodo.17972301) पर जमा है। ढांचा न्यूरोप्लास्टिसिटी और संज्ञानात्मक विज्ञान पर आधारित है।</span><span data-lang="de">Ja. Die Glitch Theory of Consciousness ist auf Zenodo hinterlegt (DOI 10.5281/zenodo.17972301). Das Framework basiert auf Neuroplastizität und Kognitionswissenschaft.</span></p>
-            </div>
+        <div class="qa-card">
+            <h3 style="color:var(--accent);">🧠 <span data-lang="en">What is cognitive offloading?</span><span data-lang="ru">Что такое когнитивная разгрузка?</span><span data-lang="hi">संज्ञानात्मक ऑफलोडिंग क्या है?</span><span data-lang="de">Was ist kognitives Offloading?</span></h3>
+            <p style="font-size:0.9rem;"><span data-lang="en">It's the tendency to rely on AI for thinking tasks, which weakens memory and independent problem-solving over time. MIT and Wharton studies confirm this effect.</span><span data-lang="ru">Это склонность полагаться на ИИ для мыслительных задач, что со временем ослабляет память и самостоятельное решение проблем. Исследования MIT и Wharton подтверждают этот эффект.</span><span data-lang="hi">यह सोचने के कार्यों के लिए AI पर निर्भर रहने की प्रवृत्ति है, जो समय के साथ स्मृति और स्वतंत्र समस्या-समाधान को कमजोर करती है। MIT और व्हार्टन अध्ययन इसकी पुष्टि करते हैं।</span><span data-lang="de">Es ist die Tendenz, sich bei Denkaufgaben auf KI zu verlassen, was das Gedächtnis und die eigenständige Problemlösung mit der Zeit schwächt. Studien von MIT und Wharton bestätigen diesen Effekt.</span></p>
+        </div>
+        <div class="qa-card">
+            <h3 style="color:var(--accent);">📖 <span data-lang="en">How is this book different from self-help?</span><span data-lang="ru">Чем эта книга отличается от книг по саморазвитию?</span><span data-lang="hi">यह पुस्तक स्व-सहायता से किस प्रकार भिन्न है?</span><span data-lang="de">Wie unterscheidet sich dieses Buch von Selbsthilfe?</span></h3>
+            <p style="font-size:0.9rem;"><span data-lang="en">It's a systems-engineering framework, not motivation. It treats the mind as an OS that needs debugging, with 33 executable protocols.</span><span data-lang="ru">Это системно-инженерный фреймворк, а не мотивация. Он рассматривает разум как ОС, нуждающуюся в отладке, с 33 исполняемыми протоколами.</span><span data-lang="hi">यह एक सिस्टम-इंजीनियरिंग ढांचा है, प्रेरणा नहीं। यह मन को एक OS की तरह मानता है जिसे डिबगिंग की आवश्यकता है, जिसमें 33 निष्पादन योग्य प्रोटोकॉल हैं।</span><span data-lang="de">Es ist ein systemtechnisches Framework, keine Motivation. Es behandelt den Geist als ein Betriebssystem, das debuggt werden muss, mit 33 ausführbaren Protokollen.</span></p>
+        </div>
+        <div class="qa-card">
+            <h3 style="color:var(--accent);">🔬 <span data-lang="en">Is there scientific backing?</span><span data-lang="ru">Есть ли научное обоснование?</span><span data-lang="hi">क्या वैज्ञानिक समर्थन है?</span><span data-lang="de">Gibt es eine wissenschaftliche Grundlage?</span></h3>
+            <p style="font-size:0.9rem;"><span data-lang="en">Yes. The Glitch Theory of Consciousness is deposited on Zenodo (DOI 10.5281/zenodo.17972301). The framework is based on neuroplasticity and cognitive science.</span><span data-lang="ru">Да. Теория сбоев сознания размещена на Zenodo (DOI 10.5281/zenodo.17972301). Фреймворк основан на нейропластичности и когнитивной науке.</span><span data-lang="hi">हाँ। ग्लिच थ्योरी ऑफ कॉन्शियसनेस Zenodo (DOI 10.5281/zenodo.17972301) पर जमा है। ढांचा न्यूरोप्लास्टिसिटी और संज्ञानात्मक विज्ञान पर आधारित है।</span><span data-lang="de">Ja. Die Glitch Theory of Consciousness ist auf Zenodo hinterlegt (DOI 10.5281/zenodo.17972301). Das Framework basiert auf Neuroplastizität und Kognitionswissenschaft.</span></p>
         </div>
     </div>
 
@@ -367,7 +355,7 @@ body[lang="de"] [data-lang]:not([data-lang="de"]) { display:none; }
 const i18n = {
     en: {
         pageTitle: "AI Biohacking: 33 Protocols — Official Site | Mind-OS",
-        topBadge: "[MIND-OS // KERN]",
+        topBadge: "[MIND-OS // CORE]",
         title: "AI Biohacking: 33 Protocols",
         desc: "A cognitive framework to reverse AI-induced brain fog and restore independent thinking.",
         testTitle: "Cognitive Assessment",
@@ -472,7 +460,7 @@ const i18n = {
     },
     hi: {
         pageTitle: "AI बायोहैकिंग: 33 प्रोटोकॉल — आधिकारिक साइट | Mind-OS",
-        topBadge: "[MIND-OS // कर्नेल]",
+        topBadge: "[MIND-OS // कोर]",
         title: "AI बायोहैकिंग: 33 प्रोटोकॉल",
         desc: "AI-प्रेरित मस्तिष्क कोहरे को उलटने और स्वतंत्र सोच को बहाल करने के लिए एक संज्ञानात्मक ढांचा।",
         testTitle: "संज्ञानात्मक आकलन",
@@ -593,7 +581,7 @@ function applyTranslations() {
     document.title = t.pageTitle;
     document.getElementById("top-badge").innerText = t.topBadge;
     document.getElementById("title").innerText = t.title;
-    document.getElementById("desc").innerText = t.desc;
+    document.getElementById("desc").innerHTML = t.desc;
     document.getElementById("testTitle").innerText = t.testTitle;
     document.getElementById("solTitle").innerText = t.solTitle;
     document.getElementById("support-btn").innerHTML = t.supportBtn;
