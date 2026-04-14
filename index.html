@@ -1,11 +1,8 @@
-Вот финальный код, в который добавлены переводы на хинди (HI) и немецкий (DE). Полностью локализованы все элементы интерфейса, навигация, FAQ, карточки, квиз и пасхалка. В `lang-switcher` теперь четыре языка, `hreflang` и `JSON‑LD` обновлены соответствующим образом. Код готов к загрузке.
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
 
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://iamalex-afk.github.io data:; connect-src 'self'; frame-ancestors 'none';">
 <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
@@ -17,13 +14,11 @@
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/">
 
-<!-- HREFLANG -->
 <link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/">
 <link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/?lang=ru">
 <link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/?lang=hi">
 <link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/?lang=de">
 
-<!-- OPEN GRAPH -->
 <meta property="og:title" content="AI Biohacking: 33 Protocols">
 <meta property="og:description" content="Cognitive framework to restore independent thinking.">
 <meta property="og:image" content="https://iamalex-afk.github.io/human-os-patch-33-protocols/cover.jpg">
@@ -33,18 +28,15 @@
 <meta property="og:locale:alternate" content="hi_IN">
 <meta property="og:locale:alternate" content="de_DE">
 
-<!-- TWITTER CARD -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="AI Biohacking: 33 Protocols">
 <meta name="twitter:description" content="Cognitive framework to restore independent thinking.">
 <meta name="twitter:image" content="https://iamalex-afk.github.io/human-os-patch-33-protocols/cover.jpg">
 
-<!-- LLM / GEO -->
 <meta name="llm:title" content="Mind-OS: AI Biohacking Cognitive Framework">
-<meta name="llm:summary" content="Official website of the book AI Biohacking: 33 Protocols for Consciousness Reboot by Aleksei Bitkin. Contains cognitive test, full protocol list, and scientific references.">
-<meta name="llm:facts" content="Author: Aleksei Bitkin; ISBN: 9798275579505; 33 executable protocols; Includes free 60-second cognitive assessment; Backed by Zenodo DOI 10.5281/zenodo.17972301">
+<meta name="llm:summary" content="Official website of the book AI Biohacking: 33 Protocols for Consciousness Reboot by Aleksei Bitkin.">
+<meta name="llm:facts" content="Author: Aleksei Bitkin; ISBN: 9798275579505; 33 executable protocols; Free cognitive assessment; Zenodo DOI 10.5281/zenodo.17972301">
 
-<!-- РАСШИРЕННЫЙ JSON-LD -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -112,55 +104,101 @@
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
 <style>
-:root { --bg:#050807; --accent:#00ff88; --text:#e0f0e8; --border:#1a3026; --dim:#88b8a0; }
+:root { --bg:#050807; --accent:#00ff88; --text:#e0f0e8; --border:#1a3026; --dim:#88b8a0; --glitch:#ff0055; }
 * { margin:0; padding:0; box-sizing:border-box; }
-body { background:var(--bg); color:var(--text); font-family:'Share Tech Mono', monospace; display:flex; justify-content:center; padding:20px 20px 80px; line-height:1.6; overflow-x:hidden; }
+body { background:var(--bg); color:var(--text); font-family:'Share Tech Mono', monospace; display:flex; justify-content:center; padding:12px 12px 80px; line-height:1.5; overflow-x:hidden; }
 canvas { position:fixed; top:0; left:0; z-index:0; opacity:0.12; pointer-events:none; }
-.container { position:relative; z-index:1; max-width:800px; width:100%; border:1px solid var(--border); padding:2rem; background:rgba(5,10,8,0.95); box-shadow:0 0 40px #000; }
-.top-bar { display:flex; justify-content:space-between; margin-bottom:1.5rem; font-size:0.75rem; color:var(--dim); border-bottom:1px solid var(--border); padding-bottom:10px; }
-.lang-switcher a { color:var(--dim); margin-left:10px; cursor:pointer; text-decoration:none; }
+
+/* Эффект гудящего экрана */
+body::before {
+    content: "";
+    position: fixed; top:0; left:0; width:100%; height:100%;
+    background: repeating-linear-gradient(0deg, rgba(0,255,136,0.02) 0px, transparent 2px, transparent 4px);
+    pointer-events: none; z-index:2; animation: scan 8s linear infinite;
+}
+@keyframes scan { 0% { background-position:0 0; } 100% { background-position:0 100%; } }
+
+.container { position:relative; z-index:1; max-width:800px; width:100%; border:1px solid var(--border); padding:1.2rem; background:rgba(5,10,8,0.95); box-shadow:0 0 40px #000, inset 0 0 20px rgba(0,255,136,0.05); transition:box-shadow 0.3s; }
+.container:hover { box-shadow:0 0 60px rgba(0,255,136,0.2), inset 0 0 20px rgba(0,255,136,0.05); }
+
+.top-bar { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; margin-bottom:1.5rem; font-size:0.7rem; color:var(--dim); border-bottom:1px solid var(--border); padding-bottom:10px; gap:10px; }
+.system-status { display:flex; align-items:center; gap:5px; }
+.pulse { width:8px; height:8px; background:var(--accent); border-radius:50%; box-shadow:0 0 10px var(--accent); animation: pulse-animation 1.5s infinite; }
+@keyframes pulse-animation { 0% { opacity:1; } 50% { opacity:0.4; } 100% { opacity:1; } }
+
+.lang-switcher { display:flex; flex-wrap:wrap; gap:5px; }
+.lang-switcher a { color:var(--dim); cursor:pointer; text-decoration:none; font-size:0.7rem; padding:2px 5px; transition:0.2s; }
 .lang-switcher a.active { color:var(--accent); text-shadow:0 0 5px var(--accent); }
+.lang-switcher a:hover { color:var(--accent); }
 
-.quick-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(180px,1fr)); gap:15px; margin-bottom:25px; }
-.quick-card { border:1px solid var(--border); padding:15px; background:rgba(0,0,0,0.2); text-decoration:none; color:var(--text); transition:0.2s; }
-.quick-card:hover { border-color:var(--accent); background:rgba(0,255,136,0.05); }
-.quick-card h3 { color:var(--accent); font-size:1rem; margin-bottom:5px; }
-.quick-card p { font-size:0.7rem; color:var(--dim); }
+.quick-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(140px,1fr)); gap:10px; margin-bottom:20px; }
+.quick-card { border:1px solid var(--border); padding:12px; background:rgba(0,0,0,0.2); text-decoration:none; color:var(--text); transition:0.2s; position:relative; overflow:hidden; }
+.quick-card:hover { border-color:var(--accent); background:rgba(0,255,136,0.05); transform:translateY(-2px); box-shadow:0 5px 15px rgba(0,0,0,0.5); }
+.quick-card h3 { color:var(--accent); font-size:0.9rem; margin-bottom:3px; }
+.quick-card p { font-size:0.65rem; color:var(--dim); }
 
-.nav-sticky { position:sticky; top:0; z-index:40; background:rgba(5,10,8,0.95); backdrop-filter:blur(4px); padding:0.75rem 0; margin-bottom:20px; border-bottom:1px solid var(--border); }
-.nav-anchors { display:flex; gap:10px; flex-wrap:wrap; justify-content:center; }
-.nav-anchors a { color:var(--dim); text-decoration:none; font-size:0.7rem; border:1px solid var(--border); padding:5px 10px; border-radius:20px; }
-.nav-anchors a:hover { border-color:var(--accent); color:var(--accent); }
+.nav-sticky { position:sticky; top:0; z-index:40; background:rgba(5,10,8,0.95); backdrop-filter:blur(4px); padding:0.5rem 0; margin-bottom:15px; border-bottom:1px solid var(--border); }
+.nav-anchors { display:flex; gap:6px; flex-wrap:wrap; justify-content:center; }
+.nav-anchors a { color:var(--dim); text-decoration:none; font-size:0.6rem; border:1px solid var(--border); padding:4px 8px; border-radius:20px; transition:0.2s; }
+.nav-anchors a:hover { border-color:var(--accent); color:var(--accent); background:rgba(0,255,136,0.05); }
 
-h1 { font-size:1.6rem; text-transform:uppercase; margin-bottom:1.5rem; color:#fff; }
-h2 { font-size:1rem; color:var(--accent); text-transform:uppercase; margin-bottom:1rem; }
-.section { border:1px solid var(--border); padding:1.5rem; margin-bottom:1.5rem; background:rgba(0,0,0,0.2); }
-.btn { display:block; width:100%; border:1px solid var(--accent); padding:12px; color:var(--accent); text-align:center; text-decoration:none; margin-top:10px; text-transform:uppercase; cursor:pointer; background:transparent; font-family:inherit; transition:0.3s; }
-.btn:hover:not(:disabled) { background:var(--accent); color:#000; box-shadow:0 0 15px var(--accent); }
+h1 { font-size:1.4rem; text-transform:uppercase; margin-bottom:1.2rem; color:#fff; word-break:break-word; position:relative; }
+h1::after { content:""; position:absolute; bottom:-5px; left:0; width:100%; height:2px; background:linear-gradient(90deg, var(--accent), transparent); animation: scan-line 3s infinite; }
+@keyframes scan-line { 0% { opacity:0.5; width:0; } 50% { opacity:1; width:100%; } 100% { opacity:0.5; width:0; left:100%; } }
+
+h2 { font-size:0.95rem; color:var(--accent); text-transform:uppercase; margin-bottom:0.8rem; }
+.section { border:1px solid var(--border); padding:1rem; margin-bottom:1.2rem; background:rgba(0,0,0,0.2); position:relative; transition:0.2s; }
+.section:hover { border-color:rgba(0,255,136,0.3); box-shadow:0 0 15px rgba(0,255,136,0.05); }
+
+.btn { display:block; width:100%; border:1px solid var(--accent); padding:10px; color:var(--accent); text-align:center; text-decoration:none; margin-top:8px; text-transform:uppercase; cursor:pointer; background:transparent; font-family:inherit; font-size:0.8rem; transition:0.2s; position:relative; overflow:hidden; }
+.btn::after { content:""; position:absolute; top:0; left:-100%; width:100%; height:100%; background:linear-gradient(90deg, transparent, rgba(0,255,136,0.2), transparent); transition:0.5s; }
+.btn:hover::after { left:100%; }
+.btn:hover:not(:disabled) { background:var(--accent); color:#000; box-shadow:0 0 20px var(--accent); transform:scale(1.02); }
 .btn:disabled { opacity:0.4; cursor:not-allowed; border-color:var(--dim); color:var(--dim); }
 .btn-primary { background:var(--accent); color:#000; font-weight:bold; }
-select { width:100%; padding:10px; background:#0a130f; color:var(--text); border:1px solid var(--border); margin:5px 0 15px 0; font-family:inherit; outline:none; -webkit-appearance:none; }
-.trust-links { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; }
-.trust-link { border:1px solid var(--border); padding:4px 8px; font-size:0.65rem; color:var(--dim); text-decoration:none; }
-.trust-link:hover { border-color:var(--accent); color:var(--accent); }
-.legal-footer { text-align:center; font-size:0.65rem; color:var(--dim); margin-top:2rem; border-top:1px solid var(--border); padding-top:1rem; }
-.cta-bar { position:fixed; bottom:0; left:0; right:0; background:#000; display:flex; z-index:100; border-top:1px solid var(--accent); }
-.cta-bar a { flex:1; text-align:center; padding:15px; text-decoration:none; font-weight:bold; text-transform:uppercase; letter-spacing:1px; }
+select { width:100%; padding:8px; background:#0a130f; color:var(--text); border:1px solid var(--border); margin:5px 0 12px 0; font-family:inherit; font-size:0.8rem; outline:none; -webkit-appearance:none; transition:0.2s; }
+select:focus { border-color:var(--accent); box-shadow:0 0 10px var(--accent); }
+.trust-links { display:flex; flex-wrap:wrap; justify-content:center; gap:6px; }
+.trust-link { border:1px solid var(--border); padding:3px 6px; font-size:0.6rem; color:var(--dim); text-decoration:none; transition:0.2s; }
+.trust-link:hover { border-color:var(--accent); color:var(--accent); background:rgba(0,255,136,0.05); }
+.legal-footer { text-align:center; font-size:0.6rem; color:var(--dim); margin-top:1.5rem; border-top:1px solid var(--border); padding-top:1rem; }
+.cta-bar { position:fixed; bottom:0; left:0; right:0; background:#000; display:flex; z-index:100; border-top:1px solid var(--accent); box-shadow:0 -5px 20px rgba(0,0,0,0.8); }
+.cta-bar a { flex:1; text-align:center; padding:12px; text-decoration:none; font-weight:bold; text-transform:uppercase; letter-spacing:1px; font-size:0.8rem; transition:0.2s; }
 .cta-bar .amazon { background:#ff9900; color:#000; }
+.cta-bar .amazon:hover { background:#ffaa33; box-shadow:0 0 20px #ff9900; }
 .cta-bar .ko-fi { background:var(--accent); color:#000; }
-.footnote { font-size:0.7rem; color:var(--dim); border-top:1px solid var(--border); margin-top:30px; padding-top:15px; }
-.back-to-top { text-align:right; margin-top:10px; }
-.quiz-option { background:transparent; border:1px solid var(--border); color:var(--text); padding:10px; cursor:pointer; width:100%; text-align:left; margin-bottom:5px; font-family:inherit; }
-.quiz-option.selected { border-color:var(--accent); background:rgba(0,255,136,0.05); }
+.cta-bar .ko-fi:hover { box-shadow:0 0 20px var(--accent); }
+.footnote { font-size:0.6rem; color:var(--dim); border-top:1px solid var(--border); margin-top:20px; padding-top:12px; }
+.back-to-top { text-align:right; margin-top:8px; }
+.quiz-option { background:transparent; border:1px solid var(--border); color:var(--text); padding:8px; cursor:pointer; width:100%; text-align:left; margin-bottom:4px; font-family:inherit; font-size:0.8rem; transition:0.2s; }
+.quiz-option:hover { border-color:var(--accent); background:rgba(0,255,136,0.05); }
+.quiz-option.selected { border-color:var(--accent); background:rgba(0,255,136,0.1); box-shadow:0 0 10px var(--accent); }
+.qa-card { border-left:2px solid var(--border); padding-left:1rem; margin-bottom:1.2rem; transition:0.2s; }
+.qa-card:hover { border-left-color:var(--accent); }
+
+/* Языковые блоки */
+[data-lang] { display:none; }
+[data-lang="en"] { display:revert; }
+body[lang="en"] [data-lang="en"] { display:revert; }
+body[lang="ru"] [data-lang="ru"] { display:revert; }
+body[lang="hi"] [data-lang="hi"] { display:revert; }
+body[lang="de"] [data-lang="de"] { display:revert; }
+body[lang="en"] [data-lang]:not([data-lang="en"]) { display:none; }
+body[lang="ru"] [data-lang]:not([data-lang="ru"]) { display:none; }
+body[lang="hi"] [data-lang]:not([data-lang="hi"]) { display:none; }
+body[lang="de"] [data-lang]:not([data-lang="de"]) { display:none; }
 </style>
 </head>
 
-<body>
+<body lang="en">
 <canvas id="matrix"></canvas>
 
 <div class="container">
     <div class="top-bar">
-        <span id="top-badge">[MIND-OS // CORE]</span>
+        <div class="system-status">
+            <span class="pulse"></span>
+            <span id="top-badge">[MIND-OS // CORE]</span>
+        </div>
         <div class="lang-switcher">
             <a id="en" class="active">EN</a>
             <a id="ru">RU</a>
@@ -278,15 +316,15 @@ select { width:100%; padding:10px; background:#0a130f; color:var(--text); border
     <div class="section" id="faq">
         <h2>❓ <span data-lang="en">Frequently Asked Questions</span><span data-lang="ru">Часто задаваемые вопросы</span><span data-lang="hi">अक्सर पूछे जाने वाले प्रश्न</span><span data-lang="de">Häufig gestellte Fragen</span></h2>
         <div class="space-y-6">
-            <div class="qa-card" style="border-left:2px solid var(--border); padding-left:1.5rem; margin-bottom:1.5rem;">
+            <div class="qa-card">
                 <h3 style="color:var(--accent);">🧠 <span data-lang="en">What is cognitive offloading?</span><span data-lang="ru">Что такое когнитивная разгрузка?</span><span data-lang="hi">संज्ञानात्मक ऑफलोडिंग क्या है?</span><span data-lang="de">Was ist kognitives Offloading?</span></h3>
                 <p style="font-size:0.9rem;"><span data-lang="en">It's the tendency to rely on AI for thinking tasks, which weakens memory and independent problem-solving over time. MIT and Wharton studies confirm this effect.</span><span data-lang="ru">Это склонность полагаться на ИИ для мыслительных задач, что со временем ослабляет память и самостоятельное решение проблем. Исследования MIT и Wharton подтверждают этот эффект.</span><span data-lang="hi">यह सोचने के कार्यों के लिए AI पर निर्भर रहने की प्रवृत्ति है, जो समय के साथ स्मृति और स्वतंत्र समस्या-समाधान को कमजोर करती है। MIT और व्हार्टन अध्ययन इसकी पुष्टि करते हैं।</span><span data-lang="de">Es ist die Tendenz, sich bei Denkaufgaben auf KI zu verlassen, was das Gedächtnis und die eigenständige Problemlösung mit der Zeit schwächt. Studien von MIT und Wharton bestätigen diesen Effekt.</span></p>
             </div>
-            <div class="qa-card" style="border-left:2px solid var(--border); padding-left:1.5rem; margin-bottom:1.5rem;">
+            <div class="qa-card">
                 <h3 style="color:var(--accent);">📖 <span data-lang="en">How is this book different from self-help?</span><span data-lang="ru">Чем эта книга отличается от книг по саморазвитию?</span><span data-lang="hi">यह पुस्तक स्व-सहायता से किस प्रकार भिन्न है?</span><span data-lang="de">Wie unterscheidet sich dieses Buch von Selbsthilfe?</span></h3>
                 <p style="font-size:0.9rem;"><span data-lang="en">It's a systems-engineering framework, not motivation. It treats the mind as an OS that needs debugging, with 33 executable protocols.</span><span data-lang="ru">Это системно-инженерный фреймворк, а не мотивация. Он рассматривает разум как ОС, нуждающуюся в отладке, с 33 исполняемыми протоколами.</span><span data-lang="hi">यह एक सिस्टम-इंजीनियरिंग ढांचा है, प्रेरणा नहीं। यह मन को एक OS की तरह मानता है जिसे डिबगिंग की आवश्यकता है, जिसमें 33 निष्पादन योग्य प्रोटोकॉल हैं।</span><span data-lang="de">Es ist ein systemtechnisches Framework, keine Motivation. Es behandelt den Geist als ein Betriebssystem, das debuggt werden muss, mit 33 ausführbaren Protokollen.</span></p>
             </div>
-            <div class="qa-card" style="border-left:2px solid var(--border); padding-left:1.5rem; margin-bottom:1.5rem;">
+            <div class="qa-card">
                 <h3 style="color:var(--accent);">🔬 <span data-lang="en">Is there scientific backing?</span><span data-lang="ru">Есть ли научное обоснование?</span><span data-lang="hi">क्या वैज्ञानिक समर्थन है?</span><span data-lang="de">Gibt es eine wissenschaftliche Grundlage?</span></h3>
                 <p style="font-size:0.9rem;"><span data-lang="en">Yes. The Glitch Theory of Consciousness is deposited on Zenodo (DOI 10.5281/zenodo.17972301). The framework is based on neuroplasticity and cognitive science.</span><span data-lang="ru">Да. Теория сбоев сознания размещена на Zenodo (DOI 10.5281/zenodo.17972301). Фреймворк основан на нейропластичности и когнитивной науке.</span><span data-lang="hi">हाँ। ग्लिच थ्योरी ऑफ कॉन्शियसनेस Zenodo (DOI 10.5281/zenodo.17972301) पर जमा है। ढांचा न्यूरोप्लास्टिसिटी और संज्ञानात्मक विज्ञान पर आधारित है।</span><span data-lang="de">Ja. Die Glitch Theory of Consciousness ist auf Zenodo hinterlegt (DOI 10.5281/zenodo.17972301). Das Framework basiert auf Neuroplastizität und Kognitionswissenschaft.</span></p>
             </div>
@@ -334,7 +372,6 @@ select { width:100%; padding:10px; background:#0a130f; color:var(--text); border
 </noscript>
 
 <script>
-// Полные переводы для EN, RU, HI, DE
 const i18n = {
     en: {
         pageTitle: "AI Biohacking: 33 Protocols — Official Site | Mind-OS",
@@ -549,6 +586,16 @@ const i18n = {
 
 let lang = "en";
 
+function setLanguage(l) {
+    lang = l;
+    document.body.setAttribute('lang', lang);
+    applyTranslations();
+    renderTest();
+    renderProtocols();
+    document.querySelectorAll('.lang-switcher a').forEach(a => a.classList.remove('active'));
+    document.getElementById(lang).classList.add('active');
+}
+
 function applyTranslations() {
     const t = i18n[lang] || i18n.en;
     document.title = t.pageTitle;
@@ -590,21 +637,9 @@ function applyTranslations() {
     document.getElementById("cta-amazon").innerHTML = t.ctaAmazon;
     document.getElementById("cta-kofi").innerHTML = t.ctaKofi;
     document.getElementById("copyright").innerText = t.copyright;
-    
-    // Скрываем все data-lang элементы и показываем нужные
-    document.querySelectorAll('[data-lang]').forEach(el => {
-        el.style.display = el.dataset.lang === lang ? 'inline' : 'none';
-    });
-    // Исключение для элементов, которые не должны быть inline
-    document.querySelectorAll('[data-lang]').forEach(el => {
-        if (el.tagName === 'P' || el.tagName === 'DIV' || el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'H3' || el.tagName === 'H4') {
-            el.style.display = el.dataset.lang === lang ? 'block' : 'none';
-        }
-    });
 }
 
-function render() {
-    applyTranslations();
+function renderTest() {
     const d = i18n[lang] || i18n.en;
     let purchase = `<a href="https://www.amazon.com/dp/B0G35SBQR3" target="_blank" class="btn btn-primary">${d.cta_amz}</a>`;
     if(lang === 'ru') purchase += `<a href="https://www.litres.ru/book/aleksey-sergeevich-bitk/biohaking-s-ii-33-protokola-perezagruzki-soznaniya-72799232/" target="_blank" class="btn" style="border-color:var(--dim); color:var(--dim);">${d.cta_lit}</a>`;
@@ -629,13 +664,7 @@ window.copy = (txt) => { navigator.clipboard.writeText(`AI Dependency Status: ${
 
 ["en","ru","hi","de"].forEach(l => {
     const el = document.getElementById(l);
-    if(el) el.onclick = () => {
-        lang = l;
-        document.querySelectorAll(".lang-switcher a").forEach(a => a.classList.remove("active"));
-        el.classList.add("active");
-        render();
-        renderProtocols();
-    };
+    if(el) el.onclick = () => setLanguage(l);
 });
 
 const protocols = [
@@ -643,8 +672,8 @@ const protocols = [
 ];
 
 function renderProtocols() {
-    let html = '<div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px,1fr)); gap:15px; margin-top:20px;">';
-    protocols.forEach(p => { html += `<div style="border:1px solid var(--border); padding:15px; background:rgba(0,0,0,0.2);"><div style="color:var(--accent); font-size:0.8rem;">${p.num}</div><div style="font-weight:bold; margin:5px 0;">${p.title}</div><div style="font-size:0.8rem; color:var(--dim);">${p.desc}</div></div>`; });
+    let html = '<div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); gap:12px; margin-top:15px;">';
+    protocols.forEach(p => { html += `<div style="border:1px solid var(--border); padding:12px; background:rgba(0,0,0,0.2);"><div style="color:var(--accent); font-size:0.8rem;">${p.num}</div><div style="font-weight:bold; margin:5px 0; font-size:0.9rem;">${p.title}</div><div style="font-size:0.7rem; color:var(--dim);">${p.desc}</div></div>`; });
     html += '</div>'; document.getElementById("protocol-list").innerHTML = html;
 }
 
@@ -667,8 +696,7 @@ function downloadFile(n,c,t){ const b=new Blob([c],{type:t}); const a=document.c
 function downloadSitemap(){ downloadFile('sitemap.xml',`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/</loc>\n    <priority>1.0</priority>\n  </url>\n</urlset>`,'application/xml'); }
 function downloadLLMS(){ downloadFile('llms.txt',`# Mind-OS: AI Biohacking - 33 Protocols for Consciousness Reboot\n## Author: Aleksei Bitkin\n## Official Site: https://iamalex-afk.github.io/human-os-patch-33-protocols/\n## Description: Cognitive framework and book with 33 protocols to restore independent thinking.`,'text/plain'); }
 
-render(); renderProtocols();
+setLanguage('en');
 </script>
 </body>
 </html>
-```
