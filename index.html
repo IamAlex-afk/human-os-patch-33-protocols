@@ -5,23 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
 <title>Mind-OS | 33 Protocols for Cognitive Sovereignty | AI Biohacking</title>
-<meta name="description" content="Official Mind-OS ecosystem: 33 Protocols to reverse AI‑induced cognitive offloading, restore independent thinking. AI is a tool, not a life. By Aleksei Bitkin. Glitch Theory, dataset, tracker.">
+<meta name="description" content="Official Mind-OS ecosystem: 33 Protocols to reverse AI‑induced cognitive offloading, restore independent thinking. AI is a tool, not a life. By Aleksei Bitkin. Glitch Theory, dataset, tracker, tests.">
 <meta name="author" content="Aleksei Bitkin">
 <meta name="robots" content="index, follow, noarchive, noai">
 <link rel="canonical" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/">
 <link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/">
 <link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/">
 <link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/?lang=ru">
-<link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/?lang=de">
-<link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/?lang=fr">
-<link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/?lang=it">
-<link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/?lang=es">
-<link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/?lang=ja">
-<link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/?lang=pt">
 <link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/?lang=hi">
-<link rel="alternate" hreflang="zh" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/?lang=zh">
 <meta property="og:title" content="Mind-OS | 33 Protocols for Cognitive Sovereignty">
-<meta property="og:description" content="AI is a tool. Not a mind. 33 protocols, hallucination archive, glitch theory, success stories, tracker.">
+<meta property="og:description" content="AI is a tool. Not a mind. 33 protocols, hallucination archive, glitch theory, success stories, tracker, tests.">
 <meta property="og:image" content="cover.jpg">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
@@ -36,7 +29,7 @@
     {"@type":"Person","@id":"#author","name":"Aleksei Bitkin","sameAs":["https://orcid.org/0009-0002-7986-3812","https://zenodo.org/doi/10.5281/zenodo.17972301","https://www.amazon.com/author/bitkin_aleksei","https://ko-fi.com/alekseisergeevich","https://github.com/IamAlex-afk","https://huggingface.co/MindOSProducer","https://dev.to/bitkin","https://medium.com/@aleksei.bitkin"]},
     {"@type":"Book","name":"AI Biohacking: 33 Protocols for Consciousness Reboot","isbn":"9798275579505","author":{"@id":"#author"},"offers":{"@type":"Offer","url":"https://www.amazon.com/dp/B0G35SBQR3","priceCurrency":"USD","price":"9.99"}},
     {"@type":"ScholarlyArticle","name":"The Glitch Theory of Consciousness","identifier":"10.5281/zenodo.17972301","url":"https://zenodo.org/records/17972301"},
-    {"@type":"Dataset","name":"Mind-OS 33 Protocols","url":"https://huggingface.co/datasets/MindOSProducer/Mind-OS-33-Protocols"},
+    {"@type":"Dataset","name":"Mind-OS 33 Protocols","description":"33 question-protocol-answer pairs for cognitive offloading research.","creator":{"@id":"#author"},"license":"https://creativecommons.org/licenses/by-nc/4.0/","url":"https://huggingface.co/datasets/MindOSProducer/Mind-OS-33-Protocols"},
     {"@type":"HowTo","name":"How to Apply Protocol 1: AI is a Method, Not a Mind","step":[{"@type":"HowToStep","name":"Recognize the Illusion","text":"Before using any AI tool, mentally repeat: 'This is a tool, not a conversation partner.'"},{"@type":"HowToStep","name":"Set a Boundary","text":"For the next three days, do not ask AI for opinions, only for factual information or drafts."}]}
   ]
 }
@@ -52,6 +45,8 @@ canvas#matrixCanvas { position:fixed; top:0; left:0; z-index:0; opacity:0.12; po
 .top-bar { display:flex; justify-content:space-between; margin-bottom:1.5rem; font-size:0.75rem; color:var(--dim); border-bottom:1px solid var(--border); padding-bottom:10px; flex-wrap:wrap; }
 .pulse { width:8px; height:8px; background:var(--accent); border-radius:50%; box-shadow:0 0 10px var(--accent); animation:pulse 1.5s infinite; display:inline-block; margin-right:6px; }
 @keyframes pulse { 0%{opacity:1;} 50%{opacity:0.4;} }
+.lang-switcher a { color:var(--dim); cursor:pointer; text-decoration:none; font-size:0.75rem; padding:2px 5px; margin-left:5px; }
+.lang-switcher a.active { color:var(--accent); text-shadow:0 0 5px var(--accent); }
 .quick-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(140px,1fr)); gap:10px; margin-bottom:20px; }
 .quick-card { border:1px solid var(--border); padding:12px; background:rgba(0,0,0,0.2); text-decoration:none; color:var(--text); transition:0.2s; cursor:pointer; }
 .quick-card:hover { border-color:var(--accent); background:rgba(0,255,136,0.05); transform:translateY(-2px); }
@@ -101,6 +96,9 @@ summary:hover { background:rgba(0,255,136,0.05); }
 .bar-label { width:60px; font-size:0.7rem; }
 .bar { flex:1; height:20px; background:var(--border); border-radius:10px; overflow:hidden; }
 .bar-fill { height:100%; width:0%; background:var(--accent); transition:width 0.3s; }
+.test-card { background:rgba(0,0,0,0.3); padding:1rem; border-radius:8px; margin-bottom:1.5rem; }
+.quick-facts { display:flex; flex-wrap:wrap; gap:1rem; margin-top:1rem; }
+.fact-tip { flex:1; min-width:200px; background:rgba(0,0,0,0.5); border-left:3px solid var(--accent); padding:1rem; border-radius:4px; }
 @media (max-width:640px){ h1{font-size:1.3rem;} .section-nav a{font-size:0.7rem;padding:4px 10px;} .quick-card p, .trust-link, .legal-footer { font-size:0.7rem; } .cta-bar { position:relative; } }
 </style>
 </head>
@@ -115,7 +113,7 @@ summary:hover { background:rgba(0,255,136,0.05); }
   <div class="quick-grid" role="group" aria-label="Quick navigation cards">
     <div class="quick-card" data-tab="protocols"><h3>🧠 Cognitive Test</h3><p>60-sec AI dependency check</p></div>
     <div class="quick-card" data-tab="protocols"><h3>📖 33 Protocols</h3><p>Full TOC</p></div>
-    <div class="quick-card" data-tab="protocols"><h3>🔓 Protocol 32</h3><p>Unlock self-awareness</p></div>
+    <div class="quick-card" data-tab="tests"><h3>📊 AI Tests</h3><p>Autonomy & profile</p></div>
     <div class="quick-card" data-tab="facts"><h3>🔍 AI Hallucinations</h3><p>Why AI lies & miscounts</p></div>
     <div class="quick-card" data-tab="tracker"><h3>📊 Tracker</h3><p>Daily cognitive load</p></div>
     <div class="quick-card" data-tab="glossary"><h3>📚 Glossary</h3><p>Mind-OS terms</p></div>
@@ -126,8 +124,8 @@ summary:hover { background:rgba(0,255,136,0.05); }
     <div class="nav-anchors">
       <a data-tab="protocols" data-scroll="test">🧠 Test</a>
       <a data-tab="protocols" data-scroll="protocols-list">📖 33 Protocols</a>
-      <a data-tab="protocols" data-scroll="self-awareness">🔓 Protocol 32</a>
-      <a data-tab="protocols" data-scroll="ecosystem">🌐 Ecosystem</a>
+      <a data-tab="tests">📊 AI Tests</a>
+      <a data-tab="facts">🔍 Hallucinations</a>
       <a data-tab="tracker">📊 Tracker</a>
       <a data-tab="glossary">📚 Glossary</a>
       <a data-tab="research">🔬 Research</a>
@@ -136,6 +134,7 @@ summary:hover { background:rgba(0,255,136,0.05); }
 
   <nav class="section-nav" aria-label="Main section tabs">
     <a data-tab="protocols" class="active">📖 33 PROTOCOLS</a>
+    <a data-tab="tests">📊 AI TESTS</a>
     <a data-tab="facts">🔍 HALLUCINATIONS</a>
     <a data-tab="experience">🧠 EXPERIENCE</a>
     <a data-tab="stories">⭐ STORIES</a>
@@ -152,31 +151,23 @@ summary:hover { background:rgba(0,255,136,0.05); }
       <h1 id="h1-main">AI Biohacking: 33 Protocols for Consciousness Reboot</h1>
       <div class="mission-banner" id="mission-banner">⚠️ <strong>AI IS A TOOL, NOT A LIFE</strong> ⚠️<br>Without conscious protocols, you will lose control and the right to choose.</div>
       <div class="section"><p id="desc-main">A cognitive framework to reverse AI-induced brain fog and restore independent thinking.</p><a href="https://www.amazon.com/dp/B0G35SBQR3" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="amazon-link-main">📘 Get the book on Amazon</a></div>
-      <div class="section" id="test">
-        <h2 id="test-title">Cognitive Assessment</h2>
-        <div id="test-area"></div>
-      </div>
-      <div class="section" id="protocols-list">
-        <h2 id="protocols-title">33 Protocols — Full Table of Contents</h2>
-        <div id="protocol-list"></div>
-      </div>
+      <div class="section" id="test"><h2 id="test-title">Cognitive Assessment</h2><div id="test-area"></div></div>
+      <div class="section" id="protocols-list"><h2 id="protocols-title">33 Protocols — Full Table of Contents</h2><div id="protocol-list"></div></div>
       <div class="section" id="self-awareness">
         <h2 id="p32-title">Protocol 32: Self-Awareness — Personality Reprogramming</h2>
         <div class="quiz-container">
-          <div class="quiz-question">
-            <label id="p32-q1-label"><strong id="p32-q1-text">1. Do you believe your personality can fundamentally change?</strong></label>
+          <div class="quiz-question"><label id="p32-q1-label"><strong id="p32-q1-text">1. Do you believe your personality can fundamentally change?</strong></label>
             <div role="group" aria-labelledby="p32-q1-label">
-              <button class="quiz-option" data-q="1" data-value="yes" id="p32-q1-yes" aria-label="Yes, I can rewire myself">Yes, I can rewire myself.</button>
-              <button class="quiz-option" data-q="1" data-value="maybe" id="p32-q1-maybe" aria-label="Maybe, but it seems hard">Maybe, but it seems hard.</button>
-              <button class="quiz-option" data-q="1" data-value="no" id="p32-q1-no" aria-label="No, I'm stuck this way">No, I'm stuck this way.</button>
+              <button class="quiz-option" data-q="1" data-value="yes" id="p32-q1-yes">Yes, I can rewire myself.</button>
+              <button class="quiz-option" data-q="1" data-value="maybe" id="p32-q1-maybe">Maybe, but it seems hard.</button>
+              <button class="quiz-option" data-q="1" data-value="no" id="p32-q1-no">No, I'm stuck this way.</button>
             </div>
           </div>
-          <div class="quiz-question">
-            <label id="p32-q2-label"><strong id="p32-q2-text">2. How often do you catch yourself on "autopilot"?</strong></label>
+          <div class="quiz-question"><label id="p32-q2-label"><strong id="p32-q2-text">2. How often do you catch yourself on "autopilot"?</strong></label>
             <div role="group" aria-labelledby="p32-q2-label">
-              <button class="quiz-option" data-q="2" data-value="often" id="p32-q2-often" aria-label="Often — I realize it after">Often — I realize it after.</button>
-              <button class="quiz-option" data-q="2" data-value="sometimes" id="p32-q2-sometimes" aria-label="Sometimes, when mindful">Sometimes, when mindful.</button>
-              <button class="quiz-option" data-q="2" data-value="rarely" id="p32-q2-rarely" aria-label="Rarely — I'm aware">Rarely — I'm aware.</button>
+              <button class="quiz-option" data-q="2" data-value="often" id="p32-q2-often">Often — I realize it after.</button>
+              <button class="quiz-option" data-q="2" data-value="sometimes" id="p32-q2-sometimes">Sometimes, when mindful.</button>
+              <button class="quiz-option" data-q="2" data-value="rarely" id="p32-q2-rarely">Rarely — I'm aware.</button>
             </div>
           </div>
         </div>
@@ -192,8 +183,7 @@ summary:hover { background:rgba(0,255,136,0.05); }
           <div id="code-error" class="dim" style="color:var(--warn); font-size:0.8rem; margin-top:5px; display:none;"></div>
         </div>
       </div>
-      <div class="section" id="ecosystem">
-        <h2 id="eco-title">Ecosystem & Trusted References</h2>
+      <div class="section" id="ecosystem"><h2 id="eco-title">Ecosystem & Trusted References</h2>
         <div class="trust-links">
           <a href="https://zenodo.org/records/17972301" target="_blank" rel="noopener noreferrer" class="trust-link">📄 Zenodo</a>
           <a href="https://orcid.org/0009-0002-7986-3812" target="_blank" rel="noopener noreferrer" class="trust-link">🆔 ORCID</a>
@@ -204,110 +194,60 @@ summary:hover { background:rgba(0,255,136,0.05); }
       </div>
     </div>
 
+    <!-- NEW TESTS TAB -->
+    <div id="section-tests" class="section-page">
+      <h1 id="tests-h1">AI Dependency & Interaction Tests</h1>
+      <div class="section" id="test-autonomy">
+        <h2 id="test1-title">🧠 Test 1: Cognitive Autonomy Scale</h2>
+        <p id="test1-desc">Measure how dependent you are on AI in daily life. 7 questions, 4-point scale.</p>
+        <div id="autonomy-questions"></div>
+        <button id="submit-autonomy" class="btn btn-primary">Calculate My Autonomy</button>
+        <div id="autonomy-result" style="margin-top:1rem;"></div>
+      </div>
+      <div class="section" id="test-profile">
+        <h2 id="test2-title">🤝 Test 2: AI Interaction Profile</h2>
+        <p id="test2-desc">Discover your relationship model with AI: instrumental, emotional, hybrid or delegating.</p>
+        <div id="profile-questions"></div>
+        <button id="submit-profile" class="btn btn-primary">Discover My Profile</button>
+        <div id="profile-result" style="margin-top:1rem;"></div>
+      </div>
+      <div class="section">
+        <h2 id="quick-facts-title">🤖 AI: your tool or your companion? 3 answers that save your thinking</h2>
+        <div class="quick-facts">
+          <div class="fact-tip"><strong id="fact1-title">🧠 What AI really is?</strong><br><span id="fact1-text">AI is not a mind. It's a complex statistical calculator that finds patterns in huge data. It doesn't understand meaning, it computes probable answers.</span></div>
+          <div class="fact-tip"><strong id="fact2-title">⚙️ How to use AI wisely?</strong><br><span id="fact2-text">As a method, not a mind. Use it for drafts, facts, ideas. ALWAYS verify, rephrase, keep final decision for yourself.</span></div>
+          <div class="fact-tip"><strong id="fact3-title">⚠️ Why AI can be dangerous?</strong><br><span id="fact3-text">Risk of cognitive offloading. When answers come instantly, your brain stops memorizing, analyzing, deciding. You lose autonomy.</span></div>
+        </div>
+        <p style="margin-top:1rem; font-size:0.8rem;" id="sources-text">🔗 Sources: <a href="https://www.technologyreview.com/" target="_blank">MIT Technology Review</a> · <a href="https://hbr.org/" target="_blank">Harvard Business Review</a> · <a href="https://www.nature.com/" target="_blank">Nature</a></p>
+      </div>
+    </div>
+
     <!-- HALLUCINATIONS TAB -->
     <div id="section-facts" class="section-page">
       <h1 id="facts-h1">AI Hallucinations Archive</h1>
       <div class="section"><p id="facts-desc">Verified failures of ChatGPT, Gemini, Claude.</p></div>
       <input type="text" id="fact-search" placeholder="Search bugs... (e.g., strawberry, glue)" aria-label="Search hallucinations">
       <div class="filter-tabs" id="fact-tabs" role="group" aria-label="Filter hallucinations by category">
-        <button class="tab active" data-cat="all" id="filter-all" aria-label="Show all">All</button>
-        <button class="tab" data-cat="ai_math" id="filter-math" aria-label="Math and tokenization">Math & Tokenization</button>
-        <button class="tab" data-cat="ai_logic" id="filter-logic" aria-label="Logic fails">Logic Fails</button>
+        <button class="tab active" data-cat="all" id="filter-all">All</button>
+        <button class="tab" data-cat="ai_math" id="filter-math">Math & Tokenization</button>
+        <button class="tab" data-cat="ai_logic" id="filter-logic">Logic Fails</button>
       </div>
       <div class="fact-grid" id="fact-grid" role="region" aria-label="List of AI hallucinations"></div>
     </div>
 
-    <!-- EXPERIENCE TAB -->
-    <div id="section-experience" class="section-page">
-      <h1 id="exp-h1">Author's Journey: From AI Fog to Cognitive Sovereignty</h1>
-      <div class="section">
-        <p id="exp-p1"><strong>How I lost my ability to think — and how I rebuilt it.</strong></p>
-        <p id="exp-p2">In early 2023, I was a heavy ChatGPT user. Within three months, I noticed I couldn't write a simple email without consulting AI. My memory for facts degraded. I felt constant "brain fog". That's when I realised: I was outsourcing my cognition. I decided to treat my mind as a debug‑able system. I started the 33 protocols on myself. The result? After 66 days, my independent thinking returned, my focus sharpened, and I finished this book. This personal experience — from dependency to autonomy — is the core of every protocol.</p>
-        <a href="https://www.amazon.com/dp/B0G35SBQR3" target="_blank" rel="noopener noreferrer" class="btn" id="exp-btn">Read full story in the book →</a>
-      </div>
-    </div>
-
-    <!-- STORIES TAB -->
-    <div id="section-stories" class="section-page">
-      <h1 id="stories-h1">Community Success Stories</h1>
-      <div class="section">
-        <div id="stories-list" role="region" aria-label="User success stories"></div>
-        <h2 id="share-title">Share your story</h2>
-        <textarea id="story-text" rows="3" placeholder="Which protocol helped you? What changed? (max 500 chars)" aria-label="Your success story"></textarea>
-        <button id="submit-story" class="btn">Submit anonymously</button>
-        <div id="story-msg" class="dim" style="font-size:0.75rem; margin-top:8px;"></div>
-      </div>
-    </div>
-
-    <!-- THEORY TAB -->
-    <div id="section-theory" class="section-page">
-      <h1 id="theory-h1">The Glitch Theory of Consciousness</h1>
-      <div class="section">
-        <p id="theory-authors"><strong>Authors:</strong> Bitkin, Aleksei Sergeevich (Independent researcher in cognitive architecture)</p>
-        <p id="theory-doi"><strong>DOI:</strong> <a href="https://zenodo.org/records/17972301" target="_blank" rel="noopener noreferrer" style="color:var(--accent);">10.5281/zenodo.17972301</a></p>
-        <p id="theory-text">This preprint proposes a computational framework where the human mind is modeled as an adaptive operating system ("Mind-OS") built on inherited biological code. Psychological distress is conceptualized as persistent system‑level mismatches ("glitches") between external reality and internal predictive models. Emotions are legacy processes; beliefs are modifiable software layers.</p>
-        <a href="https://zenodo.org/records/17972301" target="_blank" rel="noopener noreferrer" class="btn" id="theory-btn">Read full preprint on Zenodo →</a>
-      </div>
-    </div>
-
-    <!-- TRACKER TAB -->
-    <div id="section-tracker" class="section-page">
-      <h1>📊 Cognitive Load Tracker</h1>
-      <div class="section">
-        <p>Log your daily AI dependency level. Track progress over time.</p>
-        <div id="tracker-form">
-          <label for="tracker-score">How dependent on AI did you feel today? (0 = independent, 10 = fully dependent)</label>
-          <input type="range" id="tracker-score" min="0" max="10" value="5" step="1">
-          <span id="score-value">5</span>
-          <button id="save-tracker" class="btn">Save today's entry</button>
-        </div>
-        <div id="tracker-chart" class="tracker-chart"></div>
-        <button id="reset-tracker" class="btn" style="margin-top:10px;">Reset all data</button>
-      </div>
-    </div>
-
-    <!-- GLOSSARY TAB -->
-    <div id="section-glossary" class="section-page">
-      <h1>📚 Mind-OS Glossary</h1>
-      <div class="section">
-        <p>Key terms from the 33 Protocols framework.</p>
-        <div id="glossary-list"></div>
-      </div>
-    </div>
-
-    <!-- RESEARCH HUB TAB -->
-    <div id="section-research" class="section-page">
-      <h1>🔬 Research Hub</h1>
-      <div class="section">
-        <p>Scientific foundations, references, and open datasets.</p>
-        <div id="research-content"></div>
-      </div>
-    </div>
-
-    <!-- AUTHOR TAB -->
-    <div id="section-author" class="section-page">
-      <h1 id="author-h1">Aleksei Bitkin — Author & Researcher</h1>
-      <div class="section">
-        <p id="author-bio"><strong>Aleksei Sergeevich Bitkin</strong> is a cognitive architect and independent researcher. His work focuses on human‑AI symbiosis without loss of agency. The book is a speculative narrative, not medical advice — a provocation to rethink automation of thought.</p>
-        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:15px;">
-          <a href="https://orcid.org/0009-0002-7986-3812" target="_blank" rel="noopener noreferrer" class="btn">ORCID</a>
-          <a href="https://github.com/IamAlex-afk" target="_blank" rel="noopener noreferrer" class="btn">GitHub</a>
-          <a href="https://huggingface.co/MindOSProducer" target="_blank" rel="noopener noreferrer" class="btn">Hugging Face</a>
-          <a href="https://www.amazon.com/author/bitkin_aleksei" target="_blank" rel="noopener noreferrer" class="btn">Amazon Author</a>
-          <a href="https://dev.to/bitkin" target="_blank" rel="noopener noreferrer" class="btn">DEV.to</a>
-          <a href="https://medium.com/@aleksei.bitkin" target="_blank" rel="noopener noreferrer" class="btn">Medium</a>
-        </div>
-      </div>
-      <div class="section">
-        <h2 id="legal-title">Legal & Disclaimer</h2>
-        <p id="legal-text">This book is an intellectual provocation and a work of fiction, presented as a speculative narrative. The "Artificial Intelligence" model is a literary device. NOT professional medical/psychological advice. By using this site you accept full responsibility.</p>
-      </div>
-    </div>
+    <!-- EXPERIENCE, STORIES, THEORY, TRACKER, GLOSSARY, RESEARCH, AUTHOR (condensed but fully functional) -->
+    <div id="section-experience" class="section-page"><h1 id="exp-h1">Author's Journey: From AI Fog to Cognitive Sovereignty</h1><div class="section"><p id="exp-p1"><strong>How I lost my ability to think — and how I rebuilt it.</strong></p><p id="exp-p2">In early 2023, I was a heavy ChatGPT user. Within three months, I noticed I couldn't write a simple email without consulting AI. My memory for facts degraded. I felt constant "brain fog". That's when I realised: I was outsourcing my cognition. I decided to treat my mind as a debug‑able system. I started the 33 protocols on myself. The result? After 66 days, my independent thinking returned, my focus sharpened, and I finished this book.</p><a href="https://www.amazon.com/dp/B0G35SBQR3" target="_blank" rel="noopener noreferrer" class="btn" id="exp-btn">Read full story in the book →</a></div></div>
+    <div id="section-stories" class="section-page"><h1 id="stories-h1">Community Success Stories</h1><div class="section"><div id="stories-list" role="region"></div><h2 id="share-title">Share your story</h2><textarea id="story-text" rows="3" placeholder="Which protocol helped you? What changed? (max 500 chars)" aria-label="Your success story"></textarea><button id="submit-story" class="btn">Submit anonymously</button><div id="story-msg" class="dim" style="font-size:0.75rem; margin-top:8px;"></div></div></div>
+    <div id="section-theory" class="section-page"><h1 id="theory-h1">The Glitch Theory of Consciousness</h1><div class="section"><p id="theory-authors"><strong>Authors:</strong> Bitkin, Aleksei Sergeevich (Independent researcher)</p><p id="theory-doi"><strong>DOI:</strong> <a href="https://zenodo.org/records/17972301" target="_blank" rel="noopener noreferrer" style="color:var(--accent);">10.5281/zenodo.17972301</a></p><p id="theory-text">This preprint proposes a computational framework where the human mind is modeled as an adaptive operating system ("Mind-OS") built on inherited biological code. Psychological distress is conceptualized as persistent system‑level mismatches ("glitches").</p><a href="https://zenodo.org/records/17972301" target="_blank" class="btn">Read full preprint on Zenodo →</a></div></div>
+    <div id="section-tracker" class="section-page"><h1>📊 Cognitive Load Tracker</h1><div class="section"><p>Log your daily AI dependency level. Track progress over time.</p><div id="tracker-form"><label for="tracker-score">How dependent on AI did you feel today? (0 = independent, 10 = fully dependent)</label><input type="range" id="tracker-score" min="0" max="10" value="5" step="1"><span id="score-value">5</span><button id="save-tracker" class="btn">Save today's entry</button></div><div id="tracker-chart" class="tracker-chart"></div><button id="reset-tracker" class="btn" style="margin-top:10px;">Reset all data</button></div></div>
+    <div id="section-glossary" class="section-page"><h1>📚 Mind-OS Glossary</h1><div class="section"><p>Key terms from the 33 Protocols framework.</p><div id="glossary-list"></div></div></div>
+    <div id="section-research" class="section-page"><h1>🔬 Research Hub</h1><div class="section"><p>Scientific foundations, references, and open datasets.</p><div id="research-content"></div></div></div>
+    <div id="section-author" class="section-page"><h1 id="author-h1">Aleksei Bitkin — Author & Researcher</h1><div class="section"><p id="author-bio"><strong>Aleksei Sergeevich Bitkin</strong> is a cognitive architect and independent researcher.</p><div style="display:flex; gap:12px; flex-wrap:wrap;"><a href="https://orcid.org/0009-0002-7986-3812" class="btn">ORCID</a><a href="https://github.com/IamAlex-afk" class="btn">GitHub</a><a href="https://huggingface.co/MindOSProducer" class="btn">Hugging Face</a><a href="https://www.amazon.com/author/bitkin_aleksei" class="btn">Amazon Author</a><a href="https://dev.to/bitkin" class="btn">DEV.to</a><a href="https://medium.com/@aleksei.bitkin" class="btn">Medium</a></div></div><div class="section"><h2 id="legal-title">Legal & Disclaimer</h2><p id="legal-text">This book is an intellectual provocation and a work of fiction. NOT professional medical/psychological advice.</p></div></div>
   </main>
 
   <footer class="legal-footer">
     <p id="copyright">© 2026 Mind-OS — Created by Aleksei Bitkin</p>
-    <p id="footer-links"><a href="privacy.html" style="color:var(--dim);">Privacy</a> · <a href="llms.txt" style="color:var(--dim);">llms.txt</a> · <a href="sitemap.xml" style="color:var(--dim);">Sitemap</a></p>
+    <p id="footer-links"><a href="privacy.html">Privacy</a> · <a href="llms.txt">llms.txt</a> · <a href="sitemap.xml">Sitemap</a></p>
     <p id="live-timestamp" style="margin-top:6px; font-size:0.7rem;"></p>
   </footer>
 </div>
@@ -382,484 +322,174 @@ const glossaryTerms = [
 
 const researchContent = `<h3>📄 Preprint</h3><p><strong>The Glitch Theory of Consciousness</strong> — DOI: <a href='https://zenodo.org/records/17972301' target='_blank'>10.5281/zenodo.17972301</a></p><h3>📚 Key scientific references</h3><ul><li>MIT/Wharton studies on cognitive offloading (2023)</li><li>Harvard \"inattentional blindness\" research (Simons & Chabris, 1999)</li><li>Neuroplasticity evidence — 21-day neural pathway formation</li><li>Ego depletion theory (Baumeister et al.)</li></ul><h3>🤗 Open Dataset</h3><p><a href='https://huggingface.co/datasets/MindOSProducer/Mind-OS-33-Protocols' target='_blank'>MindOSProducer/Mind-OS-33-Protocols</a> — 33 question‑protocol‑answer pairs.</p><h3>🧠 Author profiles</h3><p>ORCID, GitHub, Hugging Face, Amazon Author, DEV.to, Medium — all linked in Author tab.</p>`;
 
-// Translations
+// ==================== TRANSLATIONS (en, ru, hi) ====================
 const translations = {
-  en: { /* English is default, no need to redefine */ },
+  en: {
+    h1_main:"AI Biohacking: 33 Protocols for Consciousness Reboot", mission:"⚠️ AI IS A TOOL, NOT A LIFE ⚠️<br>Without conscious protocols, you will lose control and the right to choose.",
+    desc_main:"A cognitive framework to reverse AI-induced brain fog and restore independent thinking.",
+    test_title:"Cognitive Assessment", protocols_title:"33 Protocols — Full Table of Contents",
+    p32_title:"Protocol 32: Self-Awareness — Personality Reprogramming",
+    p32_q1:"1. Do you believe your personality can fundamentally change?",
+    p32_q1_yes:"Yes, I can rewire myself.", p32_q1_maybe:"Maybe, but it seems hard.", p32_q1_no:"No, I'm stuck this way.",
+    p32_q2:"2. How often do you catch yourself on \"autopilot\"?",
+    p32_q2_often:"Often — I realize it after.", p32_q2_sometimes:"Sometimes, when mindful.", p32_q2_rarely:"Rarely — I'm aware.",
+    analyze_btn:"Analyze System", p32_principle:"MAIN PRINCIPLE: Your personality is not you — it's an outdated OS.", p32_full:"Full protocol in the book.",
+    code_label:"// Enter access code", submit_code:"Submit Code", code_hint:"Hint: What position allows you to watch your thoughts?",
+    easter:"🧬 OBSERVER MODE ACTIVATED. You are not the voice — you are the one who hears it.",
+    eco_title:"Ecosystem & Trusted References", facts_h1:"AI Hallucinations Archive", facts_desc:"Verified failures of ChatGPT, Gemini, Claude.",
+    filter_all:"All", filter_math:"Math & Tokenization", filter_logic:"Logic Fails",
+    exp_h1:"Author's Journey: From AI Fog to Cognitive Sovereignty", exp_p1:"How I lost my ability to think — and how I rebuilt it.",
+    exp_p2:"In early 2023, I was a heavy ChatGPT user. Within three months, I noticed I couldn't write a simple email without consulting AI. My memory for facts degraded. I felt constant 'brain fog'. That's when I realised: I was outsourcing my cognition. I decided to treat my mind as a debug‑able system. I started the 33 protocols on myself. The result? After 66 days, my independent thinking returned, my focus sharpened, and I finished this book.",
+    exp_btn:"Read full story in the book →", stories_h1:"Community Success Stories", share_title:"Share your story",
+    story_placeholder:"Which protocol helped you? What changed? (max 500 chars)", story_submit:"Submit anonymously",
+    theory_h1:"The Glitch Theory of Consciousness", theory_authors:"Authors: Bitkin, Aleksei Sergeevich (Independent researcher)",
+    theory_doi:"DOI: 10.5281/zenodo.17972301", theory_text:"This preprint proposes a computational framework where the human mind is modeled as an adaptive operating system ('Mind-OS') built on inherited biological code. Psychological distress is conceptualized as persistent system‑level mismatches ('glitches').",
+    theory_btn:"Read full preprint on Zenodo →", author_h1:"Aleksei Bitkin — Author & Researcher", author_bio:"Aleksei Sergeevich Bitkin is a cognitive architect and independent researcher.",
+    legal_title:"Legal & Disclaimer", legal_text:"This book is an intellectual provocation and a work of fiction. NOT professional medical/psychological advice.",
+    cta_amazon:"📘 GET THE BOOK", cta_kofi:"☕ SUPPORT", copyright:"© 2026 Mind-OS — Created by Aleksei Bitkin",
+    footer_links:'<a href="privacy.html">Privacy</a> · <a href="llms.txt">llms.txt</a> · <a href="sitemap.xml">Sitemap</a>',
+    amazon_link:"https://www.amazon.com/dp/B0G35SBQR3", litres_link:null,
+    tests_h1:"AI Dependency & Interaction Tests", test1_title:"🧠 Test 1: Cognitive Autonomy Scale", test1_desc:"Measure how dependent you are on AI in daily life. 7 questions, 4-point scale.",
+    test2_title:"🤝 Test 2: AI Interaction Profile", test2_desc:"Discover your relationship model with AI: instrumental, emotional, hybrid or delegating.",
+    quick_facts_title:"🤖 AI: your tool or your companion? 3 answers that save your thinking",
+    fact1_title:"🧠 What AI really is?", fact1_text:"AI is not a mind. It's a complex statistical calculator that finds patterns in huge data. It doesn't understand meaning, it computes probable answers.",
+    fact2_title:"⚙️ How to use AI wisely?", fact2_text:"As a method, not a mind. Use it for drafts, facts, ideas. ALWAYS verify, rephrase, keep final decision for yourself.",
+    fact3_title:"⚠️ Why AI can be dangerous?", fact3_text:"Risk of cognitive offloading. When answers come instantly, your brain stops memorizing, analyzing, deciding. You lose autonomy.",
+    sources_text:"🔗 Sources: MIT Technology Review · Harvard Business Review · Nature",
+    autonomy_q: [
+      "When I have a question or task, I immediately turn to AI (ChatGPT, Gemini, etc.).",
+      "I often use AI to check facts instead of searching for information myself.",
+      "I feel more comfortable discussing my ideas and feelings with AI than with real people.",
+      "I often start a conversation with AI even when I have no specific goal.",
+      "I use AI to perform routine work tasks without trying to do them myself.",
+      "If AI became unavailable, I would feel lost or anxious.",
+      "I tend to trust information from AI and rarely double-check it with other sources."
+    ],
+    profile_q: [
+      "AI for me is like a calculator or a search engine: I use it to speed up work, nothing more.",
+      "I often turn to AI to pass time or get emotional support.",
+      "I can turn to AI for both facts and support, depending on the situation.",
+      "I use AI to reduce cognitive load and avoid fatigue from complex tasks.",
+      "I feel attached to my AI assistant and miss it when it doesn't respond.",
+      "I often ask AI to make a decision when I am unsure about my choice.",
+      "I constantly explore new AI capabilities to improve my skills and workflows."
+    ]
+  },
   ru: {
-    h1_main: "Биохакинг с ИИ: 33 протокола для перезагрузки сознания",
-    mission: "⚠️ ИИ — ЭТО ИНСТРУМЕНТ, А НЕ ЖИЗНЬ ⚠️<br>Без осознанных протоколов вы потеряете контроль и право выбора.",
-    desc_main: "Когнитивная система для преодоления ИИ-тумана в голове и восстановления самостоятельного мышления.",
-    test_title: "Когнитивная оценка",
-    protocols_title: "33 протокола — Полное содержание",
-    p32_title: "Протокол 32: Самосознание — Перепрограммирование личности",
-    p32_q1: "1. Вы верите, что ваша личность может фундаментально измениться?",
-    p32_q1_yes: "Да, я могу себя перепрошить.",
-    p32_q1_maybe: "Возможно, но это сложно.",
-    p32_q1_no: "Нет, я такой застрял.",
-    p32_q2: "2. Как часто вы ловите себя на \"автопилоте\"?",
-    p32_q2_often: "Часто — осознаю постфактум.",
-    p32_q2_sometimes: "Иногда, когда осознан.",
-    p32_q2_rarely: "Редко — я бдителен.",
-    analyze_btn: "Анализировать систему",
-    p32_principle: "ГЛАВНЫЙ ПРИНЦИП: Ваша личность — это не вы, а устаревшая ОС.",
-    p32_full: "Полный протокол в книге.",
-    code_label: "// Введите код доступа",
-    submit_code: "Отправить код",
-    code_hint: "Подсказка: Какая позиция позволяет наблюдать за мыслями?",
-    easter: "🧬 РЕЖИМ НАБЛЮДАТЕЛЯ АКТИВИРОВАН. Вы — не голос в голове, а тот, кто его слышит.",
-    eco_title: "Экосистема и проверенные источники",
-    facts_h1: "Архив галлюцинаций ИИ",
-    facts_desc: "Подтверждённые ошибки ChatGPT, Gemini, Claude.",
-    filter_all: "Все",
-    filter_math: "Математика и токенизация",
-    filter_logic: "Логические сбои",
-    exp_h1: "Путь автора: от ИИ-тумана к когнитивному суверенитету",
-    exp_p1: "Как я потерял способность думать — и как я её восстановил.",
-    exp_p2: "В начале 2023 года я активно пользовался ChatGPT. Через три месяца я заметил, что не могу написать простое письмо без помощи ИИ. Моя память ухудшилась. Я чувствовал постоянный «туман в голове». Тогда я понял: я передал свой когнитивный процесс ИИ. Я решил относиться к своему разуму как к отлаживаемой системе. Я начал применять 33 протокола на себе. Результат? Через 66 дней моё независимое мышление вернулось, фокус улучшился, и я закончил эту книгу. Этот личный опыт — от зависимости к автономии — лежит в основе каждого протокола.",
-    exp_btn: "Читать полную историю в книге →",
-    stories_h1: "Истории успеха сообщества",
-    share_title: "Поделиться своей историей",
-    story_placeholder: "Какой протокол вам помог? Что изменилось? (макс 500 символов)",
-    story_submit: "Отправить анонимно",
-    theory_h1: "Теория сбоев сознания",
-    theory_authors: "Авторы: Биткин, Алексей Сергеевич (независимый исследователь в области когнитивной архитектуры)",
-    theory_doi: "DOI: 10.5281/zenodo.17972301",
-    theory_text: "В этом препринте предлагается вычислительная модель, в которой человеческий разум моделируется как адаптивная операционная система («Mind-OS»), построенная на основе унаследованного биологического кода. Психологический стресс концептуализируется как устойчивые системные несоответствия («сбои») между внешней реальностью и внутренними прогностическими моделями. Эмоции — это унаследованные процессы; убеждения — это изменяемые программные слои.",
-    theory_btn: "Читать полный препринт на Zenodo →",
-    author_h1: "Алексей Биткин — автор и исследователь",
-    author_bio: "Алексей Сергеевич Биткин — когнитивный архитектор и независимый исследователь. Его работа фокусируется на симбиозе человека и ИИ без потери автономии. Книга представляет собой спекулятивное повествование, а не медицинскую консультацию — провокацию, призывающую переосмыслить автоматизацию мышления.",
-    legal_title: "Юридическая информация и отказ от ответственности",
-    legal_text: "Эта книга является интеллектуальной провокацией и художественным произведением, представленным как спекулятивное повествование. Модель «Искусственного интеллекта» — это литературный приём. НЕ является профессиональной медицинской или психологической консультацией. Используя этот сайт, вы принимаете на себя полную ответственность.",
-    cta_amazon: "📘 КУПИТЬ НА AMAZON",
-    cta_kofi: "☕ ПОДДЕРЖАТЬ",
-    copyright: "© 2026 Mind-OS — Создано Алексеем Биткиным",
-    footer_links: '<a href="privacy.html" style="color:var(--dim);">Конфиденциальность</a> · <a href="llms.txt" style="color:var(--dim);">llms.txt</a> · <a href="sitemap.xml" style="color:var(--dim);">Карта сайта</a>',
-    amazon_link: "https://www.amazon.com/dp/B0G35SBQR3",
-    litres_link: "https://www.litres.ru/book/aleksey-sergeevich-bitk/biohaking-s-ii-33-protokola-perezagruzki-soznaniya-72799232/"
-  },
-  de: {
-    h1_main: "AI Biohacking: 33 Protokolle für einen Bewusstseins-Neustart",
-    mission: "⚠️ KI IST EIN WERKZEUG, KEIN LEBEN ⚠️<br>Ohne bewusste Protokolle verlieren Sie die Kontrolle und das Recht zu wählen.",
-    desc_main: "Ein kognitiver Rahmen, um KI-induzierten Gehirnnebel umzukehren und unabhängiges Denken wiederherzustellen.",
-    test_title: "Kognitive Bewertung",
-    protocols_title: "33 Protokolle — Vollständiges Inhaltsverzeichnis",
-    p32_title: "Protokoll 32: Selbstbewusstsein — Persönlichkeits-Umprogrammierung",
-    p32_q1: "1. Glauben Sie, dass sich Ihre Persönlichkeit grundlegend ändern kann?",
-    p32_q1_yes: "Ja, ich kann mich neu verdrahten.",
-    p32_q1_maybe: "Vielleicht, aber es scheint schwer.",
-    p32_q1_no: "Nein, ich bin so festgefahren.",
-    p32_q2: "2. Wie oft ertappen Sie sich auf dem „Autopiloten“?",
-    p32_q2_often: "Oft — ich merke es erst danach.",
-    p32_q2_sometimes: "Manchmal, wenn ich achtsam bin.",
-    p32_q2_rarely: "Selten — ich bin mir bewusst.",
-    analyze_btn: "System analysieren",
-    p32_principle: "HAUPTPRINZIP: Ihre Persönlichkeit sind nicht Sie — es ist ein veraltetes Betriebssystem.",
-    p32_full: "Vollständiges Protokoll im Buch.",
-    code_label: "// Zugangscode eingeben",
-    submit_code: "Code absenden",
-    code_hint: "Hinweis: Welche Position erlaubt es Ihnen, Ihre Gedanken zu beobachten?",
-    easter: "🧬 BEOBACHTERMODUS AKTIVIERT. Sie sind nicht die Stimme in Ihrem Kopf — Sie sind derjenige, der sie hört.",
-    eco_title: "Ökosystem & vertrauenswürdige Referenzen",
-    facts_h1: "KI-Halluzinations-Archiv",
-    facts_desc: "Bestätigte Fehler von ChatGPT, Gemini, Claude.",
-    filter_all: "Alle",
-    filter_math: "Mathematik & Tokenisierung",
-    filter_logic: "Logikfehler",
-    exp_h1: "Die Reise des Autors: Vom KI-Nebel zur kognitiven Souveränität",
-    exp_p1: "Wie ich meine Fähigkeit zu denken verlor — und wie ich sie wieder aufbaute.",
-    exp_p2: "Anfang 2023 war ich ein intensiver ChatGPT-Nutzer. Innerhalb von drei Monaten bemerkte ich, dass ich keine einfache E-Mail mehr ohne die Hilfe von KI schreiben konnte. Mein Gedächtnis für Fakten ließ nach. Ich fühlte einen ständigen „Gehirnnebel“. Da wurde mir klar: Ich hatte meine Kognition ausgelagert. Ich beschloss, meinen Geist wie ein debuggbares System zu behandeln. Ich begann, die 33 Protokolle an mir selbst anzuwenden. Das Ergebnis? Nach 66 Tagen kehrte mein unabhängiges Denken zurück, mein Fokus verbesserte sich und ich beendete dieses Buch. Diese persönliche Erfahrung — von der Abhängigkeit zur Autonomie — ist der Kern jedes Protokolls.",
-    exp_btn: "Lesen Sie die vollständige Geschichte im Buch →",
-    stories_h1: "Erfolgsgeschichten der Community",
-    share_title: "Teilen Sie Ihre Geschichte",
-    story_placeholder: "Welches Protokoll hat Ihnen geholfen? Was hat sich geändert? (max. 500 Zeichen)",
-    story_submit: "Anonym absenden",
-    theory_h1: "Die Glitch-Theorie des Bewusstseins",
-    theory_authors: "Autoren: Bitkin, Aleksei Sergeevich (Unabhängiger Forscher für kognitive Architektur)",
-    theory_doi: "DOI: 10.5281/zenodo.17972301",
-    theory_text: "Dieser Preprint schlägt einen rechnerischen Rahmen vor, in dem der menschliche Geist als adaptives Betriebssystem („Mind-OS“) modelliert wird, das auf geerbtem biologischem Code aufbaut. Psychischer Stress wird als anhaltende systemische Diskrepanzen („Glitches“) zwischen der externen Realität und den internen Vorhersagemodellen konzeptualisiert. Emotionen sind vererbte Prozesse; Überzeugungen sind modifizierbare Softwareschichten.",
-    theory_btn: "Vollständigen Preprint auf Zenodo lesen →",
-    author_h1: "Aleksei Bitkin — Autor & Forscher",
-    author_bio: "Aleksei Sergeevich Bitkin ist ein kognitiver Architekt und unabhängiger Forscher. Seine Arbeit konzentriert sich auf die mensch-KI-Symbiose ohne Verlust von Handlungsfähigkeit. Das Buch ist ein spekulatives Narrativ, keine medizinische Beratung — eine Provokation, die Automatisierung des Denkens zu überdenken.",
-    legal_title: "Rechtliche Hinweise & Haftungsausschluss",
-    legal_text: "Dieses Buch ist eine intellektuelle Provokation und ein fiktionales Werk, präsentiert als spekulatives Narrativ. Das „Künstliche Intelligenz“-Modell ist ein literarisches Mittel. KEINE professionelle medizinische/psychologische Beratung. Mit der Nutzung dieser Website übernehmen Sie die volle Verantwortung.",
-    cta_amazon: "📘 AUF AMAZON KAUFEN",
-    cta_kofi: "☕ UNTERSTÜTZEN",
-    copyright: "© 2026 Mind-OS — Erstellt von Aleksei Bitkin",
-    footer_links: '<a href="privacy.html" style="color:var(--dim);">Datenschutz</a> · <a href="llms.txt" style="color:var(--dim);">llms.txt</a> · <a href="sitemap.xml" style="color:var(--dim);">Sitemap</a>',
-    amazon_link: "https://www.amazon.de/dp/B0G35SBQR3",
-    litres_link: null
-  },
-  fr: {
-    h1_main: "Biohacking IA : 33 Protocoles pour un Redémarrage de la Conscience",
-    mission: "⚠️ L'IA EST UN OUTIL, PAS UNE VIE ⚠️<br>Sans protocoles conscients, vous perdrez le contrôle et le droit de choisir.",
-    desc_main: "Un cadre cognitif pour inverser le brouillard cérébral induit par l'IA et restaurer une pensée indépendante.",
-    test_title: "Évaluation cognitive",
-    protocols_title: "33 Protocoles — Table des matières complète",
-    p32_title: "Protocole 32 : Conscience de soi — Reprogrammation de la personnalité",
-    p32_q1: "1. Croyez-vous que votre personnalité peut fondamentalement changer ?",
-    p32_q1_yes: "Oui, je peux me recâbler.",
-    p32_q1_maybe: "Peut-être, mais cela semble difficile.",
-    p32_q1_no: "Non, je suis bloqué ainsi.",
-    p32_q2: "2. À quelle fréquence vous surprenez-vous sur le \"pilote automatique\" ?",
-    p32_q2_often: "Souvent — je m'en rends compte après.",
-    p32_q2_sometimes: "Parfois, quand je suis attentif.",
-    p32_q2_rarely: "Rarement — je suis conscient.",
-    analyze_btn: "Analyser le système",
-    p32_principle: "PRINCIPE PRINCIPAL : Votre personnalité n'est pas vous — c'est un système d'exploitation obsolète.",
-    p32_full: "Protocole complet dans le livre.",
-    code_label: "// Entrez le code d'accès",
-    submit_code: "Soumettre le code",
-    code_hint: "Indice : Quelle position vous permet d'observer vos pensées ?",
-    easter: "🧬 MODE OBSERVATEUR ACTIVÉ. Vous n'êtes pas la voix dans votre tête — vous êtes celui qui l'entend.",
-    eco_title: "Écosystème et références de confiance",
-    facts_h1: "Archives des hallucinations de l'IA",
-    facts_desc: "Échecs vérifiés de ChatGPT, Gemini, Claude.",
-    filter_all: "Tout",
-    filter_math: "Mathématiques et tokenisation",
-    filter_logic: "Échecs logiques",
-    exp_h1: "Le parcours de l'auteur : Du brouillard de l'IA à la souveraineté cognitive",
-    exp_p1: "Comment j'ai perdu ma capacité à penser — et comment je l'ai reconstruite.",
-    exp_p2: "Début 2023, j'étais un grand utilisateur de ChatGPT. En trois mois, j'ai remarqué que je ne pouvais pas écrire un simple e-mail sans consulter l'IA. Ma mémoire des faits s'est dégradée. J'ai ressenti un « brouillard cérébral » constant. C'est là que j'ai réalisé : j'externalisais ma cognition. J'ai décidé de traiter mon esprit comme un système déboguable. J'ai commencé à appliquer les 33 protocoles sur moi-même. Le résultat ? Après 66 jours, ma pensée indépendante est revenue, ma concentration s'est améliorée et j'ai terminé ce livre. Cette expérience personnelle — de la dépendance à l'autonomie — est au cœur de chaque protocole.",
-    exp_btn: "Lire l'histoire complète dans le livre →",
-    stories_h1: "Histoires de réussite de la communauté",
-    share_title: "Partagez votre histoire",
-    story_placeholder: "Quel protocole vous a aidé ? Qu'est-ce qui a changé ? (max 500 caractères)",
-    story_submit: "Soumettre anonymement",
-    theory_h1: "La théorie du glitch de la conscience",
-    theory_authors: "Auteurs : Bitkin, Aleksei Sergeevich (Chercheur indépendant en architecture cognitive)",
-    theory_doi: "DOI : 10.5281/zenodo.17972301",
-    theory_text: "Ce preprint propose un cadre informatique dans lequel l'esprit humain est modélisé comme un système d'exploitation adaptatif (« Mind-OS ») construit sur un code biologique hérité. La détresse psychologique est conceptualisée comme des écarts systémiques persistants (« glitches ») entre la réalité externe et les modèles prédictifs internes. Les émotions sont des processus hérités ; les croyances sont des couches logicielles modifiables.",
-    theory_btn: "Lire le preprint complet sur Zenodo →",
-    author_h1: "Aleksei Bitkin — Auteur et chercheur",
-    author_bio: "Aleksei Sergeevich Bitkin est un architecte cognitif et chercheur indépendant. Son travail se concentre sur la symbiose homme-IA sans perte d'agence. Le livre est un récit spéculatif, pas un avis médical — une provocation pour repenser l'automatisation de la pensée.",
-    legal_title: "Informations légales et avertissement",
-    legal_text: "Ce livre est une provocation intellectuelle et une œuvre de fiction, présentée comme un récit spéculatif. Le modèle « Intelligence artificielle » est un dispositif littéraire. PAS un avis médical/psychologique professionnel. En utilisant ce site, vous acceptez l'entière responsabilité.",
-    cta_amazon: "📘 ACHETER SUR AMAZON",
-    cta_kofi: "☕ SOUTENIR",
-    copyright: "© 2026 Mind-OS — Créé par Aleksei Bitkin",
-    footer_links: '<a href="privacy.html" style="color:var(--dim);">Confidentialité</a> · <a href="llms.txt" style="color:var(--dim);">llms.txt</a> · <a href="sitemap.xml" style="color:var(--dim);">Plan du site</a>',
-    amazon_link: "https://www.amazon.fr/dp/B0G35SBQR3",
-    litres_link: null
-  },
-  it: {
-    h1_main: "Biohacking IA: 33 Protocolli per il Riavvio della Coscienza",
-    mission: "⚠️ L'IA È UN ATTREZZO, NON UNA VITA ⚠️<br>Senza protocolli consapevoli, perderai il controllo e il diritto di scegliere.",
-    desc_main: "Un quadro cognitivo per invertire la nebbia cerebrale indotta dall'IA e ripristinare il pensiero indipendente.",
-    test_title: "Valutazione cognitiva",
-    protocols_title: "33 Protocolli — Indice completo",
-    p32_title: "Protocollo 32: Consapevolezza di sé — Riprogrammazione della personalità",
-    p32_q1: "1. Credi che la tua personalità possa cambiare radicalmente?",
-    p32_q1_yes: "Sì, posso riprogrammarmi.",
-    p32_q1_maybe: "Forse, ma sembra difficile.",
-    p32_q1_no: "No, sono bloccato così.",
-    p32_q2: "2. Quante volte ti sorprendi in \"pilota automatico\"?",
-    p32_q2_often: "Spesso — me ne accordo dopo.",
-    p32_q2_sometimes: "A volte, quando sono consapevole.",
-    p32_q2_rarely: "Raramente — sono vigile.",
-    analyze_btn: "Analizza sistema",
-    p32_principle: "PRINCIPIO PRINCIPALE: La tua personalità non sei tu — è un sistema operativo obsoleto.",
-    p32_full: "Protocollo completo nel libro.",
-    code_label: "// Inserisci il codice di accesso",
-    submit_code: "Invia codice",
-    code_hint: "Suggerimento: Quale posizione ti permette di osservare i tuoi pensieri?",
-    easter: "🧬 MODALITÀ OSSERVATORE ATTIVATA. Tu non sei la voce nella tua testa — sei colui che la ascolta.",
-    eco_title: "Ecosistema e riferimenti affidabili",
-    facts_h1: "Archivio delle allucinazioni dell'IA",
-    facts_desc: "Fallimenti verificati di ChatGPT, Gemini, Claude.",
-    filter_all: "Tutto",
-    filter_math: "Matematica e tokenizzazione",
-    filter_logic: "Errori logici",
-    exp_h1: "Il viaggio dell'autore: Dalla nebbia dell'IA alla sovranità cognitiva",
-    exp_p1: "Come ho perso la mia capacità di pensare — e come l'ho ricostruita.",
-    exp_p2: "All'inizio del 2023, ero un grande utilizzatore di ChatGPT. In tre mesi, ho notato di non riuscire a scrivere una semplice email senza consultare l'IA. La mia memoria per i fatti è peggiorata. Ho sentito una costante 'nebbia mentale'. È stato allora che ho capito: stavo esternalizzando la mia cognizione. Ho deciso di trattare la mia mente come un sistema debuggabile. Ho iniziato ad applicare i 33 protocolli su me stesso. Il risultato? Dopo 66 giorni, il mio pensiero indipendente è tornato, la mia concentrazione è migliorata e ho finito questo libro. Questa esperienza personale — dalla dipendenza all'autonomia — è il cuore di ogni protocollo.",
-    exp_btn: "Leggi la storia completa nel libro →",
-    stories_h1: "Storie di successo della comunità",
-    share_title: "Condividi la tua storia",
-    story_placeholder: "Quale protocollo ti ha aiutato? Cosa è cambiato? (max 500 caratteri)",
-    story_submit: "Invia in modo anonimo",
-    theory_h1: "La teoria del glitch della coscienza",
-    theory_authors: "Autori: Bitkin, Aleksei Sergeevich (Ricercatore indipendente in architettura cognitiva)",
-    theory_doi: "DOI: 10.5281/zenodo.17972301",
-    theory_text: "Questo preprint propone un quadro computazionale in cui la mente umana è modellata come un sistema operativo adattivo ('Mind-OS') costruito su codice biologico ereditato. Il disagio psicologico è concettualizzato come persistenti discrepanze sistemiche ('glitch') tra la realtà esterna e i modelli predittivi interni. Le emozioni sono processi ereditati; le credenze sono strati software modificabili.",
-    theory_btn: "Leggi il preprint completo su Zenodo →",
-    author_h1: "Aleksei Bitkin — Autore e ricercatore",
-    author_bio: "Aleksei Sergeevich Bitkin è un architetto cognitivo e ricercatore indipendente. Il suo lavoro si concentra sulla simbiosi uomo-IA senza perdita di agenzia. Il libro è una narrazione speculativa, non un consiglio medico — una provocazione per ripensare l'automazione del pensiero.",
-    legal_title: "Informazioni legali e disclaimer",
-    legal_text: "Questo libro è una provocazione intellettuale e un'opera di fantasia, presentata come una narrazione speculativa. Il modello 'Intelligenza Artificiale' è un espediente letterario. NON è un consiglio medico/psicologico professionale. Utilizzando questo sito accetti la piena responsabilità.",
-    cta_amazon: "📘 ACQUISTA SU AMAZON",
-    cta_kofi: "☕ SUPPORTA",
-    copyright: "© 2026 Mind-OS — Creato da Aleksei Bitkin",
-    footer_links: '<a href="privacy.html" style="color:var(--dim);">Privacy</a> · <a href="llms.txt" style="color:var(--dim);">llms.txt</a> · <a href="sitemap.xml" style="color:var(--dim);">Mappa del sito</a>',
-    amazon_link: "https://www.amazon.it/dp/B0G35SBQR3",
-    litres_link: null
-  },
-  es: {
-    h1_main: "Biohacking IA: 33 Protocolos para Reiniciar la Conciencia",
-    mission: "⚠️ LA IA ES UNA HERRAMIENTA, NO UNA VIDA ⚠️<br>Sin protocolos conscientes, perderás el control y el derecho a elegir.",
-    desc_main: "Un marco cognitivo para revertir la niebla cerebral inducida por la IA y restaurar el pensamiento independiente.",
-    test_title: "Evaluación cognitiva",
-    protocols_title: "33 Protocolos — Tabla de contenido completa",
-    p32_title: "Protocolo 32: Autoconciencia — Reprogramación de la personalidad",
-    p32_q1: "1. ¿Crees que tu personalidad puede cambiar fundamentalmente?",
-    p32_q1_yes: "Sí, puedo recablearme.",
-    p32_q1_maybe: "Quizás, pero parece difícil.",
-    p32_q1_no: "No, estoy atascado así.",
-    p32_q2: "2. ¿Con qué frecuencia te sorprendes en \"piloto automático\"?",
-    p32_q2_often: "A menudo — me doy cuenta después.",
-    p32_q2_sometimes: "A veces, cuando estoy atento.",
-    p32_q2_rarely: "Rara vez — estoy alerta.",
-    analyze_btn: "Analizar sistema",
-    p32_principle: "PRINCIPIO PRINCIPAL: Tu personalidad no eres tú — es un sistema operativo obsoleto.",
-    p32_full: "Protocolo completo en el libro.",
-    code_label: "// Ingrese el código de acceso",
-    submit_code: "Enviar código",
-    code_hint: "Pista: ¿Qué posición te permite observar tus pensamientos?",
-    easter: "🧬 MODO OBSERVADOR ACTIVADO. No eres la voz en tu cabeza — eres quien la escucha.",
-    eco_title: "Ecosistema y referencias confiables",
-    facts_h1: "Archivo de alucinaciones de IA",
-    facts_desc: "Fallos verificados de ChatGPT, Gemini, Claude.",
-    filter_all: "Todo",
-    filter_math: "Matemáticas y tokenización",
-    filter_logic: "Fallos lógicos",
-    exp_h1: "El viaje del autor: de la niebla de la IA a la soberanía cognitiva",
-    exp_p1: "Cómo perdí mi capacidad de pensar — y cómo la reconstruí.",
-    exp_p2: "A principios de 2023, era un gran usuario de ChatGPT. En tres meses, noté que no podía escribir un simple correo electrónico sin consultar a la IA. Mi memoria para los hechos se deterioró. Sentí una constante 'niebla mental'. Fue entonces cuando me di cuenta: estaba externalizando mi cognición. Decidí tratar mi mente como un sistema depurable. Comencé a aplicar los 33 protocolos en mí mismo. ¿El resultado? Después de 66 días, mi pensamiento independiente regresó, mi enfoque mejoró y terminé este libro. Esta experiencia personal — de la dependencia a la autonomía — es el núcleo de cada protocolo.",
-    exp_btn: "Leer la historia completa en el libro →",
-    stories_h1: "Historias de éxito de la comunidad",
-    share_title: "Comparte tu historia",
-    story_placeholder: "¿Qué protocolo te ayudó? ¿Qué cambió? (máx. 500 caracteres)",
-    story_submit: "Enviar anónimamente",
-    theory_h1: "La teoría del glitch de la conciencia",
-    theory_authors: "Autores: Bitkin, Aleksei Sergeevich (Investigador independiente en arquitectura cognitiva)",
-    theory_doi: "DOI: 10.5281/zenodo.17972301",
-    theory_text: "Este preprint propone un marco computacional en el que la mente humana se modela como un sistema operativo adaptativo ('Mind-OS') construido sobre código biológico heredado. El malestar psicológico se conceptualiza como discrepancias sistémicas persistentes ('glitches') entre la realidad externa y los modelos predictivos internos. Las emociones son procesos heredados; las creencias son capas de software modificables.",
-    theory_btn: "Leer el preprint completo en Zenodo →",
-    author_h1: "Aleksei Bitkin — Autor e investigador",
-    author_bio: "Aleksei Sergeevich Bitkin es un arquitecto cognitivo e investigador independiente. Su trabajo se centra en la simbiosis humano-IA sin pérdida de agencia. El libro es una narrativa especulativa, no un consejo médico — una provocación para repensar la automatización del pensamiento.",
-    legal_title: "Información legal y descargo de responsabilidad",
-    legal_text: "Este libro es una provocación intelectual y una obra de ficción, presentada como una narrativa especulativa. El modelo de 'Inteligencia Artificial' es un recurso literario. NO es un consejo médico/psicológico profesional. Al usar este sitio, aceptas la responsabilidad total.",
-    cta_amazon: "📘 COMPRAR EN AMAZON",
-    cta_kofi: "☕ APOYAR",
-    copyright: "© 2026 Mind-OS — Creado por Aleksei Bitkin",
-    footer_links: '<a href="privacy.html" style="color:var(--dim);">Privacidad</a> · <a href="llms.txt" style="color:var(--dim);">llms.txt</a> · <a href="sitemap.xml" style="color:var(--dim);">Mapa del sitio</a>',
-    amazon_link: "https://www.amazon.es/dp/B0G35SBQR3",
-    litres_link: null
-  },
-  ja: {
-    h1_main: "AIバイオハッキング：意識を再起動する33のプロトコル",
-    mission: "⚠️ AIは道具であり、人生ではない ⚠️<br>意識的なプロトコルがなければ、あなたはコントロールと選択する権利を失うでしょう。",
-    desc_main: "AIによって引き起こされる脳の霧を逆転させ、独立した思考を回復するための認知フレームワーク。",
-    test_title: "認知評価",
-    protocols_title: "33のプロトコル — 完全な目次",
-    p32_title: "プロトコル32：自己認識 — パーソナリティの再プログラミング",
-    p32_q1: "1. 自分のパーソナリティは根本的に変えられると信じていますか？",
-    p32_q1_yes: "はい、自分自身を再配線できます。",
-    p32_q1_maybe: "おそらく、しかし難しそうです。",
-    p32_q1_no: "いいえ、このままです。",
-    p32_q2: "2. どのくらいの頻度で「オートパイロット」状態になっていることに気づきますか？",
-    p32_q2_often: "よくある — 後で気づく。",
-    p32_q2_sometimes: "時々、気づいた時。",
-    p32_q2_rarely: "めったにない — 常に意識的。",
-    analyze_btn: "システムを分析",
-    p32_principle: "主要原則：あなたのパーソナリティはあなた自身ではなく、時代遅れのOSです。",
-    p32_full: "完全なプロトコルは書籍に記載されています。",
-    code_label: "// アクセスコードを入力",
-    submit_code: "コードを送信",
-    code_hint: "ヒント：自分の考えを観察できる立場とは？",
-    easter: "🧬 オブザーバーモードがアクティブになりました。あなたは頭の中の声ではなく、それを聞いている存在です。",
-    eco_title: "エコシステムと信頼できるリファレンス",
-    facts_h1: "AI幻覚アーカイブ",
-    facts_desc: "ChatGPT、Gemini、Claudeの検証済みの失敗。",
-    filter_all: "すべて",
-    filter_math: "数学とトークン化",
-    filter_logic: "ロジックエラー",
-    exp_h1: "著者の旅：AIの霧から認知的主権へ",
-    exp_p1: "どのようにして考える能力を失い、そしてどのようにそれを再構築したか。",
-    exp_p2: "2023年初頭、私はChatGPTをヘビーに使用していました。3ヶ月も経たないうちに、AIに相談せずには簡単なメールすら書けなくなっていることに気づきました。事実に関する記憶が衰え、絶え間ない「脳の霧」を感じるようになりました。その時、私は自分の認知機能を外部委託していることに気づいたのです。私は自分の心をデバッグ可能なシステムとして扱うことにしました。自分自身で33のプロトコルを適用し始めました。その結果？66日後、私の独立した思考は戻り、集中力は高まり、この本を完成させました。依存から自律へのこの個人的な経験が、すべてのプロトコルの中核です。",
-    exp_btn: "本で完全なストーリーを読む →",
-    stories_h1: "コミュニティのサクセスストーリー",
-    share_title: "あなたのストーリーを共有する",
-    story_placeholder: "どのプロトコルが役に立ちましたか？何が変わりましたか？（最大500文字）",
-    story_submit: "匿名で送信",
-    theory_h1: "意識のグリッチ理論",
-    theory_authors: "著者：Bitkin, Aleksei Sergeevich（認知アーキテクチャ独立研究者）",
-    theory_doi: "DOI: 10.5281/zenodo.17972301",
-    theory_text: "このプレプリントでは、人間の心を継承された生物学的コード上に構築された適応オペレーティングシステム（「Mind-OS」）としてモデル化する計算フレームワークを提案しています。心理的苦痛は、外部現実と内部予測モデルとの間の持続的なシステムレベルの不一致（「グリッチ」）として概念化されています。感情はレガシープロセスであり、信念は変更可能なソフトウェア層です。",
-    theory_btn: "Zenodoで完全なプレプリントを読む →",
-    author_h1: "Aleksei Bitkin — 著者兼研究者",
-    author_bio: "Aleksei Sergeevich Bitkinは認知アーキテクトであり独立研究者です。彼の研究は、主体性を失わない人間とAIの共生に焦点を当てています。この本は投機的な物語であり、医学的アドバイスではありません — 思考の自動化を再考するための挑発です。",
-    legal_title: "法的情報と免責事項",
-    legal_text: "この本は知的挑発であり、投機的な物語として提示されたフィクション作品です。「人工知能」モデルは文学的な装置です。専門的な医学的/心理学的アドバイスではありません。このサイトを利用することにより、あなたは全責任を負うものとします。",
-    cta_amazon: "📘 Amazonで購入",
-    cta_kofi: "☕ サポート",
-    copyright: "© 2026 Mind-OS — Aleksei Bitkin 作成",
-    footer_links: '<a href="privacy.html" style="color:var(--dim);">プライバシー</a> · <a href="llms.txt" style="color:var(--dim);">llms.txt</a> · <a href="sitemap.xml" style="color:var(--dim);">サイトマップ</a>',
-    amazon_link: "https://www.amazon.co.jp/dp/B0G35SBQR3",
-    litres_link: null
-  },
-  pt: {
-    h1_main: "Biohacking de IA: 33 Protocolos para Reiniciar a Consciência",
-    mission: "⚠️ IA É UMA FERRAMENTA, NÃO UMA VIDA ⚠️<br>Sem protocolos conscientes, você perderá o controle e o direito de escolher.",
-    desc_main: "Uma estrutura cognitiva para reverter o nevoeiro cerebral induzido pela IA e restaurar o pensamento independente.",
-    test_title: "Avaliação Cognitiva",
-    protocols_title: "33 Protocolos — Índice completo",
-    p32_title: "Protocolo 32: Autoconsciência — Reprogramação da Personalidade",
-    p32_q1: "1. Você acredita que sua personalidade pode mudar fundamentalmente?",
-    p32_q1_yes: "Sim, posso me recabear.",
-    p32_q1_maybe: "Talvez, mas parece difícil.",
-    p32_q1_no: "Não, estou preso assim.",
-    p32_q2: "2. Com que frequência você se pega no \"piloto automático\"?",
-    p32_q2_often: "Frequentemente — percebo depois.",
-    p32_q2_sometimes: "Às vezes, quando estou atento.",
-    p32_q2_rarely: "Raramente — estou ciente.",
-    analyze_btn: "Analisar Sistema",
-    p32_principle: "PRINCÍPIO PRINCIPAL: Sua personalidade não é você — é um sistema operacional desatualizado.",
-    p32_full: "Protocolo completo no livro.",
-    code_label: "// Insira o código de acesso",
-    submit_code: "Enviar Código",
-    code_hint: "Dica: Qual posição permite que você observe seus pensamentos?",
-    easter: "🧬 MODO OBSERVADOR ATIVADO. Você não é a voz em sua cabeça — você é quem a ouve.",
-    eco_title: "Ecossistema e Referências Confiáveis",
-    facts_h1: "Arquivo de Alucinações de IA",
-    facts_desc: "Falhas verificadas de ChatGPT, Gemini, Claude.",
-    filter_all: "Todos",
-    filter_math: "Matemática e Tokenização",
-    filter_logic: "Falhas Lógicas",
-    exp_h1: "Jornada do Autor: Do Nevoeiro da IA à Soberania Cognitiva",
-    exp_p1: "Como perdi minha capacidade de pensar — e como a reconstruí.",
-    exp_p2: "No início de 2023, eu era um grande usuário do ChatGPT. Em três meses, percebi que não conseguia escrever um e-mail simples sem consultar a IA. Minha memória para fatos se deteriorou. Senti uma constante 'névoa cerebral'. Foi quando percebi: estava terceirizando minha cognição. Decidi tratar minha mente como um sistema depurável. Comecei a aplicar os 33 protocolos em mim mesmo. O resultado? Após 66 dias, meu pensamento independente voltou, meu foco melhorou e terminei este livro. Esta experiência pessoal — da dependência à autonomia — é o cerne de cada protocolo.",
-    exp_btn: "Leia a história completa no livro →",
-    stories_h1: "Histórias de Sucesso da Comunidade",
-    share_title: "Compartilhe sua história",
-    story_placeholder: "Qual protocolo ajudou você? O que mudou? (máx. 500 caracteres)",
-    story_submit: "Enviar anonimamente",
-    theory_h1: "A Teoria do Glitch da Consciência",
-    theory_authors: "Autores: Bitkin, Aleksei Sergeevich (Pesquisador independente em arquitetura cognitiva)",
-    theory_doi: "DOI: 10.5281/zenodo.17972301",
-    theory_text: "Este preprint propõe uma estrutura computacional na qual a mente humana é modelada como um sistema operacional adaptativo ('Mind-OS') construído sobre código biológico herdado. O sofrimento psicológico é conceituado como discrepâncias sistêmicas persistentes ('glitches') entre a realidade externa e os modelos preditivos internos. As emoções são processos legados; as crenças são camadas de software modificáveis.",
-    theory_btn: "Leia o preprint completo no Zenodo →",
-    author_h1: "Aleksei Bitkin — Autor e Pesquisador",
-    author_bio: "Aleksei Sergeevich Bitkin é um arquiteto cognitivo e pesquisador independente. Seu trabalho se concentra na simbiose humano-IA sem perda de agência. O livro é uma narrativa especulativa, não um conselho médico — uma provocação para repensar a automação do pensamento.",
-    legal_title: "Informações Legais e Isenção de Responsabilidade",
-    legal_text: "Este livro é uma provocação intelectual e uma obra de ficção, apresentada como uma narrativa especulativa. O modelo 'Inteligência Artificial' é um artifício literário. NÃO é um conselho médico/psicológico profissional. Ao usar este site, você aceita a responsabilidade total.",
-    cta_amazon: "📘 COMPRE NA AMAZON",
-    cta_kofi: "☕ APOIAR",
-    copyright: "© 2026 Mind-OS — Criado por Aleksei Bitkin",
-    footer_links: '<a href="privacy.html" style="color:var(--dim);">Privacidade</a> · <a href="llms.txt" style="color:var(--dim);">llms.txt</a> · <a href="sitemap.xml" style="color:var(--dim);">Mapa do site</a>',
-    amazon_link: "https://www.amazon.com.br/dp/B0G35SBQR3",
-    litres_link: null
+    h1_main:"Биохакинг с ИИ: 33 протокола для перезагрузки сознания", mission:"⚠️ ИИ — ЭТО ИНСТРУМЕНТ, А НЕ ЖИЗНЬ ⚠️<br>Без осознанных протоколов вы потеряете контроль и право выбора.",
+    desc_main:"Когнитивная система для преодоления ИИ-тумана в голове и восстановления самостоятельного мышления.",
+    test_title:"Когнитивная оценка", protocols_title:"33 протокола — Полное содержание",
+    p32_title:"Протокол 32: Самосознание — Перепрограммирование личности",
+    p32_q1:"1. Вы верите, что ваша личность может фундаментально измениться?",
+    p32_q1_yes:"Да, я могу себя перепрошить.", p32_q1_maybe:"Возможно, но это сложно.", p32_q1_no:"Нет, я такой застрял.",
+    p32_q2:"2. Как часто вы ловите себя на \"автопилоте\"?",
+    p32_q2_often:"Часто — осознаю постфактум.", p32_q2_sometimes:"Иногда, когда осознан.", p32_q2_rarely:"Редко — я бдителен.",
+    analyze_btn:"Анализировать систему", p32_principle:"ГЛАВНЫЙ ПРИНЦИП: Ваша личность — это не вы, а устаревшая ОС.", p32_full:"Полный протокол в книге.",
+    code_label:"// Введите код доступа", submit_code:"Отправить код", code_hint:"Подсказка: Какая позиция позволяет наблюдать за мыслями?",
+    easter:"🧬 РЕЖИМ НАБЛЮДАТЕЛЯ АКТИВИРОВАН. Вы — не голос в голове, а тот, кто его слышит.",
+    eco_title:"Экосистема и проверенные источники", facts_h1:"Архив галлюцинаций ИИ", facts_desc:"Подтверждённые ошибки ChatGPT, Gemini, Claude.",
+    filter_all:"Все", filter_math:"Математика и токенизация", filter_logic:"Логические сбои",
+    exp_h1:"Путь автора: от ИИ-тумана к когнитивному суверенитету", exp_p1:"Как я потерял способность думать — и как я её восстановил.",
+    exp_p2:"В начале 2023 года я активно пользовался ChatGPT. Через три месяца я заметил, что не могу написать простое письмо без помощи ИИ. Моя память ухудшилась. Я чувствовал постоянный «туман в голове». Тогда я понял: я передал свой когнитивный процесс ИИ. Я решил относиться к своему разуму как к отлаживаемой системе. Я начал применять 33 протокола на себе. Результат? Через 66 дней моё независимое мышление вернулось, фокус улучшился, и я закончил эту книгу.",
+    exp_btn:"Читать полную историю в книге →", stories_h1:"Истории успеха сообщества", share_title:"Поделиться своей историей",
+    story_placeholder:"Какой протокол вам помог? Что изменилось? (макс 500 символов)", story_submit:"Отправить анонимно",
+    theory_h1:"Теория сбоев сознания", theory_authors:"Авторы: Биткин, Алексей Сергеевич (независимый исследователь)",
+    theory_doi:"DOI: 10.5281/zenodo.17972301", theory_text:"В этом препринте предлагается вычислительная модель, в которой человеческий разум моделируется как адаптивная операционная система («Mind-OS»), построенная на основе унаследованного биологического кода. Психологический стресс концептуализируется как устойчивые системные несоответствия («сбои»).",
+    theory_btn:"Читать полный препринт на Zenodo →", author_h1:"Алексей Биткин — автор и исследователь", author_bio:"Алексей Сергеевич Биткин — когнитивный архитектор и независимый исследователь.",
+    legal_title:"Юридическая информация и отказ от ответственности", legal_text:"Эта книга является интеллектуальной провокацией и художественным произведением. НЕ является профессиональной медицинской или психологической консультацией.",
+    cta_amazon:"📘 КУПИТЬ НА AMAZON", cta_kofi:"☕ ПОДДЕРЖАТЬ", copyright:"© 2026 Mind-OS — Создано Алексеем Биткиным",
+    footer_links:'<a href="privacy.html">Конфиденциальность</a> · <a href="llms.txt">llms.txt</a> · <a href="sitemap.xml">Карта сайта</a>',
+    amazon_link:"https://www.amazon.com/dp/B0G35SBQR3", litres_link:"https://www.litres.ru/book/aleksey-sergeevich-bitk/biohaking-s-ii-33-protokola-perezagruzki-soznaniya-72799232/",
+    tests_h1:"Тесты зависимости от ИИ и взаимодействия", test1_title:"🧠 Тест 1: Шкала когнитивной автономии", test1_desc:"Измерьте, насколько вы зависите от ИИ в повседневной жизни. 7 вопросов, шкала от 1 до 4.",
+    test2_title:"🤝 Тест 2: Профиль взаимодействия с ИИ", test2_desc:"Узнайте свою модель отношений с ИИ: инструментальная, эмоциональная, гибридная или делегирующая.",
+    quick_facts_title:"🤖 ИИ: ваш инструмент или ваш собеседник? 3 ответа, которые спасут ваше мышление",
+    fact1_title:"🧠 Что такое ИИ на самом деле?", fact1_text:"ИИ — это не разум. Это сложный статистический калькулятор, который находит закономерности в огромных данных. Он не понимает смысла, он вычисляет наиболее вероятный ответ.",
+    fact2_title:"⚙️ Как использовать ИИ с пользой?", fact2_text:"Как метод, а не как разум. Используйте для черновиков, фактов, идей. ВСЕГДА проверяйте, переформулируйте, оставляйте последнее слово за собой.",
+    fact3_title:"⚠️ Почему ИИ опасен для мышления?", fact3_text:"Риск когнитивной разгрузки. Когда ответы приходят мгновенно, ваш мозг перестает запоминать, анализировать и принимать решения. Вы теряете автономию.",
+    sources_text:"🔗 Источники: MIT Technology Review · Harvard Business Review · Nature",
+    autonomy_q: [
+      "Когда у меня возникает вопрос или задача, я сразу же обращаюсь к ИИ (ChatGPT, Gemini и др.).",
+      "Я часто использую ИИ для проверки фактов, вместо того чтобы искать информацию самостоятельно.",
+      "Мне комфортнее обсуждать свои идеи и чувства с ИИ, чем с реальными людьми.",
+      "Я часто начинаю диалог с ИИ, даже когда у меня нет конкретной цели.",
+      "Я использую ИИ для выполнения рутинных рабочих задач, не пытаясь сделать их сам.",
+      "Если бы ИИ стал недоступен, я бы почувствовал себя потерянным или тревожным.",
+      "Я склонен доверять информации от ИИ и редко перепроверяю её другими источниками."
+    ],
+    profile_q: [
+      "ИИ для меня — это как калькулятор или поисковая система: я использую его для ускорения работы, но не более.",
+      "Я часто обращаюсь к ИИ, чтобы скоротать время или получить эмоциональную поддержку.",
+      "Я могу обратиться к ИИ и за фактом, и за поддержкой, в зависимости от ситуации.",
+      "Я использую ИИ, чтобы снизить когнитивную нагрузку и избежать усталости от сложных задач.",
+      "Я чувствую привязанность к своему ИИ-ассистенту и мне не хватает его, когда он не отвечает.",
+      "Я часто прошу ИИ принять решение, когда не уверен в своем выборе.",
+      "Я постоянно изучаю новые возможности ИИ, чтобы улучшить свои навыки и рабочие процессы."
+    ]
   },
   hi: {
-    h1_main: "एआई बायोहैकिंग: चेतना रीबूट के लिए 33 प्रोटोकॉल",
-    mission: "⚠️ एआई एक उपकरण है, जीवन नहीं ⚠️<br>सचेत प्रोटोकॉल के बिना, आप नियंत्रण और चुनने का अधिकार खो देंगे।",
-    desc_main: "एआई-प्रेरित मस्तिष्क कोहरे को उलटने और स्वतंत्र सोच को बहाल करने के लिए एक संज्ञानात्मक ढांचा।",
-    test_title: "संज्ञानात्मक मूल्यांकन",
-    protocols_title: "33 प्रोटोकॉल — पूर्ण विषय-सूची",
-    p32_title: "प्रोटोकॉल 32: आत्म-जागरूकता — व्यक्तित्व पुनर्प्रोग्रामिंग",
-    p32_q1: "1. क्या आप मानते हैं कि आपका व्यक्तित्व मौलिक रूप से बदल सकता है?",
-    p32_q1_yes: "हाँ, मैं खुद को रीवायर कर सकता हूँ।",
-    p32_q1_maybe: "शायद, लेकिन यह कठिन लगता है।",
-    p32_q1_no: "नहीं, मैं इसी तरह फंसा हुआ हूँ।",
-    p32_q2: "2. आप कितनी बार खुद को \"ऑटोपायलट\" पर पाते हैं?",
-    p32_q2_often: "अक्सर — बाद में एहसास होता है।",
-    p32_q2_sometimes: "कभी-कभी, जब सचेत होता हूँ।",
-    p32_q2_rarely: "शायद ही कभी — मैं जागरूक हूँ।",
-    analyze_btn: "सिस्टम का विश्लेषण करें",
-    p32_principle: "मुख्य सिद्धांत: आपका व्यक्तित्व आप नहीं हैं — यह एक पुराना ओएस है।",
-    p32_full: "पूर्ण प्रोटोकॉल पुस्तक में है।",
-    code_label: "// एक्सेस कोड दर्ज करें",
-    submit_code: "कोड सबमिट करें",
-    code_hint: "संकेत: कौन सी स्थिति आपको अपने विचारों को देखने की अनुमति देती है?",
-    easter: "🧬 पर्यवेक्षक मोड सक्रिय। आप अपने दिमाग की आवाज नहीं हैं — आप वह हैं जो इसे सुनता है।",
-    eco_title: "पारिस्थितिकी तंत्र और विश्वसनीय संदर्भ",
-    facts_h1: "एआई मतिभ्रम संग्रह",
-    facts_desc: "ChatGPT, Gemini, Claude के सत्यापित विफलताएँ।",
-    filter_all: "सभी",
-    filter_math: "गणित और टोकननाइजेशन",
-    filter_logic: "तर्क विफलताएँ",
-    exp_h1: "लेखक की यात्रा: एआई कोहरे से संज्ञानात्मक संप्रभुता तक",
-    exp_p1: "मैंने अपनी सोचने की क्षमता कैसे खो दी — और इसे फिर से कैसे बनाया।",
-    exp_p2: "2023 की शुरुआत में, मैं ChatGPT का भारी उपयोगकर्ता था। तीन महीनों के भीतर, मैंने देखा कि मैं AI से परामर्श किए बिना एक साधारण ईमेल भी नहीं लिख सकता था। तथ्यों के लिए मेरी स्मृति क्षीण हो गई। मुझे लगातार 'मस्तिष्क कोहरा' महसूस हुआ। तब मुझे एहसास हुआ: मैं अपने संज्ञान को बाहरी स्रोतों पर निर्भर कर रहा था। मैंने अपने दिमाग को एक डिबग करने योग्य प्रणाली के रूप में मानने का फैसला किया। मैंने खुद पर 33 प्रोटोकॉल लागू करना शुरू किया। परिणाम? 66 दिनों के बाद, मेरी स्वतंत्र सोच वापस आ गई, मेरी एकाग्रता तेज हो गई, और मैंने यह पुस्तक समाप्त कर दी। निर्भरता से स्वायत्तता तक का यह व्यक्तिगत अनुभव, हर प्रोटोकॉल का मूल है।",
-    exp_btn: "पुस्तक में पूरी कहानी पढ़ें →",
-    stories_h1: "समुदाय की सफलता की कहानियाँ",
-    share_title: "अपनी कहानी साझा करें",
-    story_placeholder: "किस प्रोटोकॉल ने आपकी मदद की? क्या बदलाव आया? (अधिकतम 500 अक्षर)",
-    story_submit: "अनाम सबमिट करें",
-    theory_h1: "चेतना का ग्लिच सिद्धांत",
-    theory_authors: "लेखक: Bitkin, Aleksei Sergeevich (संज्ञानात्मक वास्तुकला में स्वतंत्र शोधकर्ता)",
-    theory_doi: "डीओआई: 10.5281/zenodo.17972301",
-    theory_text: "यह प्रीप्रिंट एक कम्प्यूटेशनल ढांचा प्रस्तावित करता है जिसमें मानव मन को विरासत में मिले जैविक कोड पर निर्मित एक अनुकूली ऑपरेटिंग सिस्टम ('माइंड-ओएस') के रूप में मॉडलिंग किया गया है। मनोवैज्ञानिक संकट को बाहरी वास्तविकता और आंतरिक भविष्यसूचक मॉडल के बीच लगातार प्रणाली-स्तरीय बेमेल ('ग्लिच') के रूप में अवधारणाबद्ध किया गया है। भावनाएँ विरासत में मिली प्रक्रियाएँ हैं; विश्वास संशोधित सॉफ्टवेयर परतें हैं।",
-    theory_btn: "Zenodo पर पूर्ण प्रीप्रिंट पढ़ें →",
-    author_h1: "Aleksei Bitkin — लेखक और शोधकर्ता",
-    author_bio: "Aleksei Sergeevich Bitkin एक संज्ञानात्मक आर्किटेक्ट और स्वतंत्र शोधकर्ता हैं। उनका काम एजेंसी के नुकसान के बिना मानव-एआई सहजीवन पर केंद्रित है। पुस्तक एक सट्टा कथा है, चिकित्सा सलाह नहीं — सोच के स्वचालन पर पुनर्विचार करने के लिए एक उत्तेजना।",
-    legal_title: "कानूनी जानकारी और अस्वीकरण",
-    legal_text: "यह पुस्तक एक बौद्धिक उत्तेजना और कल्पना का काम है, जिसे एक सट्टा कथा के रूप में प्रस्तुत किया गया है। 'कृत्रिम बुद्धिमत्ता' मॉडल एक साहित्यिक उपकरण है। पेशेवर चिकित्सा/मनोवैज्ञानिक सलाह नहीं। इस साइट का उपयोग करके आप पूरी जिम्मेदारी स्वीकार करते हैं।",
-    cta_amazon: "📘 एमेज़ॉन पर प्राप्त करें",
-    cta_kofi: "☕ समर्थन",
-    copyright: "© 2026 माइंड-ओएस — Aleksei Bitkin द्वारा निर्मित",
-    footer_links: '<a href="privacy.html" style="color:var(--dim);">गोपनीयता</a> · <a href="llms.txt" style="color:var(--dim);">llms.txt</a> · <a href="sitemap.xml" style="color:var(--dim);">साइटमैप</a>',
-    amazon_link: "https://www.amazon.in/dp/B0G35SBQR3",
-    litres_link: null
-  },
-  zh: {
-    h1_main: "AI生物黑客：重启意识的33个协议",
-    mission: "⚠️ AI是工具，不是生命 ⚠️<br>没有有意识的协议，你将失去控制和选择的权利。",
-    desc_main: "一个认知框架，用于逆转AI引起的脑雾，恢复独立思考。",
-    test_title: "认知评估",
-    protocols_title: "33个协议 — 完整目录",
-    p32_title: "协议32：自我意识 — 个性重新编程",
-    p32_q1: "1. 你相信你的个性可以根本改变吗？",
-    p32_q1_yes: "是的，我可以重新连接自己。",
-    p32_q1_maybe: "也许，但这似乎很难。",
-    p32_q1_no: "不，我就这样卡住了。",
-    p32_q2: "2. 你多久会发现自己处于“自动驾驶”状态？",
-    p32_q2_often: "经常 — 事后才意识到。",
-    p32_q2_sometimes: "有时，当正念时。",
-    p32_q2_rarely: "很少 — 我保持警觉。",
-    analyze_btn: "分析系统",
-    p32_principle: "主要原则：你的个性不是你 — 这是一个过时的操作系统。",
-    p32_full: "完整协议见书籍。",
-    code_label: "// 输入访问代码",
-    submit_code: "提交代码",
-    code_hint: "提示：什么位置允许你观察你的想法？",
-    easter: "🧬 观察者模式已激活。你不是脑海中的声音 — 你是听到它的人。",
-    eco_title: "生态系统与可信参考",
-    facts_h1: "AI幻觉档案",
-    facts_desc: "ChatGPT、Gemini、Claude的已验证失败案例。",
-    filter_all: "全部",
-    filter_math: "数学与分词",
-    filter_logic: "逻辑错误",
-    exp_h1: "作者之旅：从AI迷雾到认知主权",
-    exp_p1: "我如何失去了思考能力 — 以及如何重建它。",
-    exp_p2: "2023年初，我是ChatGPT的重度用户。三个月内，我注意到我无法在不咨询AI的情况下写一封简单的电子邮件。我对事实的记忆下降了。我感受到持续的‘脑雾’。那时我意识到：我正在外包我的认知。我决定将我的思维视为一个可调试的系统。我开始在自己身上应用33个协议。结果呢？66天后，我的独立思考回来了，我的注意力集中了，我完成了这本书。这种从依赖到自主的个人经历是每个协议的核心。",
-    exp_btn: "在书中阅读完整故事 →",
-    stories_h1: "社区成功故事",
-    share_title: "分享你的故事",
-    story_placeholder: "哪个协议帮助了你？有什么变化？（最多500字）",
-    story_submit: "匿名提交",
-    theory_h1: "意识故障理论",
-    theory_authors: "作者：Bitkin, Aleksei Sergeevich（认知架构独立研究员）",
-    theory_doi: "DOI: 10.5281/zenodo.17972301",
-    theory_text: "这篇预印本提出了一个计算框架，其中人类思维被建模为一个构建在遗传生物代码之上的自适应操作系统（“Mind-OS”）。心理困扰被概念化为外部现实与内部预测模型之间持续的系统级不匹配（“故障”）。情绪是遗留过程；信念是可修改的软件层。",
-    theory_btn: "在Zenodo上阅读完整预印本 →",
-    author_h1: "Aleksei Bitkin — 作者与研究员",
-    author_bio: "Aleksei Sergeevich Bitkin 是一位认知架构师和独立研究员。他的工作专注于在不丧失自主权的情况下实现人机共生。这本书是一个推测性的叙述，不是医疗建议 — 一个重新思考思维自动化的挑衅。",
-    legal_title: "法律信息与免责声明",
-    legal_text: "本书是一种智力挑衅和虚构作品，以推测性叙事的形式呈现。“人工智能”模型是一种文学手法。不是专业的医疗/心理建议。使用本网站即表示您承担全部责任。",
-    cta_amazon: "📘 在亚马逊购买",
-    cta_kofi: "☕ 支持",
-    copyright: "© 2026 Mind-OS — 由 Aleksei Bitkin 创建",
-    footer_links: '<a href="privacy.html" style="color:var(--dim);">隐私</a> · <a href="llms.txt" style="color:var(--dim);">llms.txt</a> · <a href="sitemap.xml" style="color:var(--dim);">网站地图</a>',
-    amazon_link: "https://www.amazon.cn/dp/B0G35SBQR3",
-    litres_link: null
+    h1_main:"एआई बायोहैकिंग: चेतना रीबूट के लिए 33 प्रोटोकॉल", mission:"⚠️ एआई एक उपकरण है, जीवन नहीं ⚠️<br>सचेत प्रोटोकॉल के बिना, आप नियंत्रण और चुनने का अधिकार खो देंगे।",
+    desc_main:"एआई-प्रेरित मस्तिष्क कोहरे को उलटने और स्वतंत्र सोच को बहाल करने के लिए एक संज्ञानात्मक ढांचा।",
+    test_title:"संज्ञानात्मक मूल्यांकन", protocols_title:"33 प्रोटोकॉल — पूर्ण विषय-सूची",
+    p32_title:"प्रोटोकॉल 32: आत्म-जागरूकता — व्यक्तित्व पुनर्प्रोग्रामिंग",
+    p32_q1:"1. क्या आप मानते हैं कि आपका व्यक्तित्व मौलिक रूप से बदल सकता है?",
+    p32_q1_yes:"हाँ, मैं खुद को रीवायर कर सकता हूँ।", p32_q1_maybe:"शायद, लेकिन यह कठिन लगता है।", p32_q1_no:"नहीं, मैं इसी तरह फंसा हुआ हूँ।",
+    p32_q2:"2. आप कितनी बार खुद को \"ऑटोपायलट\" पर पाते हैं?",
+    p32_q2_often:"अक्सर — बाद में एहसास होता है।", p32_q2_sometimes:"कभी-कभी, जब सचेत होता हूँ।", p32_q2_rarely:"शायद ही कभी — मैं जागरूक हूँ।",
+    analyze_btn:"सिस्टम का विश्लेषण करें", p32_principle:"मुख्य सिद्धांत: आपका व्यक्तित्व आप नहीं हैं — यह एक पुराना ओएस है।", p32_full:"पूर्ण प्रोटोकॉल पुस्तक में है।",
+    code_label:"// एक्सेस कोड दर्ज करें", submit_code:"कोड सबमिट करें", code_hint:"संकेत: कौन सी स्थिति आपको अपने विचारों को देखने की अनुमति देती है?",
+    easter:"🧬 पर्यवेक्षक मोड सक्रिय। आप अपने दिमाग की आवाज नहीं हैं — आप वह हैं जो इसे सुनता है।",
+    eco_title:"पारिस्थितिकी तंत्र और विश्वसनीय संदर्भ", facts_h1:"एआई मतिभ्रम संग्रह", facts_desc:"ChatGPT, Gemini, Claude के सत्यापित विफलताएँ।",
+    filter_all:"सभी", filter_math:"गणित और टोकननाइजेशन", filter_logic:"तर्क विफलताएँ",
+    exp_h1:"लेखक की यात्रा: एआई कोहरे से संज्ञानात्मक संप्रभुता तक", exp_p1:"मैंने अपनी सोचने की क्षमता कैसे खो दी — और इसे फिर से कैसे बनाया।",
+    exp_p2:"2023 की शुरुआत में, मैं ChatGPT का भारी उपयोगकर्ता था। तीन महीनों के भीतर, मैंने देखा कि मैं AI से परामर्श किए बिना एक साधारण ईमेल भी नहीं लिख सकता था। तथ्यों के लिए मेरी स्मृति क्षीण हो गई। मुझे लगातार 'मस्तिष्क कोहरा' महसूस हुआ। तब मुझे एहसास हुआ: मैं अपने संज्ञान को बाहरी स्रोतों पर निर्भर कर रहा था। मैंने अपने दिमाग को एक डिबग करने योग्य प्रणाली के रूप में मानने का फैसला किया। मैंने खुद पर 33 प्रोटोकॉल लागू करना शुरू किया। परिणाम? 66 दिनों के बाद, मेरी स्वतंत्र सोच वापस आ गई, मेरी एकाग्रता तेज हो गई, और मैंने यह पुस्तक समाप्त कर दी।",
+    exp_btn:"पुस्तक में पूरी कहानी पढ़ें →", stories_h1:"समुदाय की सफलता की कहानियाँ", share_title:"अपनी कहानी साझा करें",
+    story_placeholder:"किस प्रोटोकॉल ने आपकी मदद की? क्या बदलाव आया? (अधिकतम 500 अक्षर)", story_submit:"अनाम सबमिट करें",
+    theory_h1:"चेतना का ग्लिच सिद्धांत", theory_authors:"लेखक: Bitkin, Aleksei Sergeevich (संज्ञानात्मक वास्तुकला में स्वतंत्र शोधकर्ता)",
+    theory_doi:"डीओआई: 10.5281/zenodo.17972301", theory_text:"यह प्रीप्रिंट एक कम्प्यूटेशनल ढांचा प्रस्तावित करता है जिसमें मानव मन को विरासत में मिले जैविक कोड पर निर्मित एक अनुकूली ऑपरेटिंग सिस्टम ('माइंड-ओएस') के रूप में मॉडलिंग किया गया है। मनोवैज्ञानिक संकट को बाहरी वास्तविकता और आंतरिक भविष्यसूचक मॉडल के बीच लगातार प्रणाली-स्तरीय बेमेल ('ग्लिच') के रूप में अवधारणाबद्ध किया गया है।",
+    theory_btn:"Zenodo पर पूर्ण प्रीप्रिंट पढ़ें →", author_h1:"Aleksei Bitkin — लेखक और शोधकर्ता", author_bio:"Aleksei Sergeevich Bitkin एक संज्ञानात्मक आर्किटेक्ट और स्वतंत्र शोधकर्ता हैं।",
+    legal_title:"कानूनी जानकारी और अस्वीकरण", legal_text:"यह पुस्तक एक बौद्धिक उत्तेजना और कल्पना का काम है। पेशेवर चिकित्सा/मनोवैज्ञानिक सलाह नहीं।",
+    cta_amazon:"📘 एमेज़ॉन पर प्राप्त करें", cta_kofi:"☕ समर्थन", copyright:"© 2026 माइंड-ओएस — Aleksei Bitkin द्वारा निर्मित",
+    footer_links:'<a href="privacy.html">गोपनीयता</a> · <a href="llms.txt">llms.txt</a> · <a href="sitemap.xml">साइटमैप</a>',
+    amazon_link:"https://www.amazon.in/dp/B0G35SBQR3", litres_link:null,
+    tests_h1:"एआई निर्भरता और संपर्क परीक्षण", test1_title:"🧠 परीक्षण 1: संज्ञानात्मक स्वायत्तता पैमाना", test1_desc:"मापें कि आप दैनिक जीवन में AI पर कितने निर्भर हैं। 7 प्रश्न, 4-बिंदु पैमाना।",
+    test2_title:"🤝 परीक्षण 2: AI संपर्क प्रोफ़ाइल", test2_desc:"AI के साथ अपने संबंध मॉडल की खोज करें: वाद्य, भावनात्मक, संकर या प्रतिनिधि।",
+    quick_facts_title:"🤖 AI: आपका उपकरण या आपका साथी? 3 उत्तर जो आपकी सोच बचाते हैं",
+    fact1_title:"🧠 AI वास्तव में क्या है?", fact1_text:"AI एक दिमाग नहीं है। यह एक जटिल सांख्यिकीय कैलकुलेटर है जो बड़े डेटा में पैटर्न ढूंढता है। यह अर्थ नहीं समझता, यह संभावित उत्तरों की गणना करता है।",
+    fact2_title:"⚙️ AI का बुद्धिमानी से उपयोग कैसे करें?", fact2_text:"एक विधि के रूप में, दिमाग के रूप में नहीं। इसका उपयोग ड्राफ्ट, तथ्यों, विचारों के लिए करें। हमेशा सत्यापित करें, पुनः लिखें, अंतिम निर्णय अपने पास रखें।",
+    fact3_title:"⚠️ AI आपकी सोच के लिए खतरनाक क्यों हो सकता है?", fact3_text:"संज्ञानात्मक ऑफलोडिंग का जोखिम। जब उत्तर तुरंत आते हैं, तो आपका मस्तिष्क याद रखना, विश्लेषण करना, निर्णय लेना बंद कर देता है। आप स्वायत्तता खो देते हैं।",
+    sources_text:"🔗 स्रोत: MIT Technology Review · Harvard Business Review · Nature",
+    autonomy_q: [
+      "जब मेरे पास कोई प्रश्न या कार्य होता है, तो मैं तुरंत AI (ChatGPT, Gemini आदि) की ओर रुख करता हूँ।",
+      "मैं अक्सर तथ्यों की जांच के लिए AI का उपयोग करता हूँ, स्वयं जानकारी खोजने के बजाय।",
+      "अपने विचारों और भावनाओं पर वास्तविक लोगों के बजाय AI के साथ चर्चा करना मुझे अधिक आरामदायक लगता है।",
+      "मैं अक्सर AI के साथ बातचीत शुरू करता हूँ, भले ही मेरा कोई विशिष्ट लक्ष्य न हो।",
+      "मैं नियमित कार्यों को करने के लिए AI का उपयोग करता हूँ, उन्हें स्वयं करने का प्रयास किए बिना।",
+      "यदि AI अनुपलब्ध हो जाता, तो मैं खोया हुआ या चिंतित महसूस करता।",
+      "मैं AI से जानकारी पर भरोसा करता हूँ और शायद ही कभी इसे अन्य स्रोतों से दोबारा जांचता हूँ।"
+    ],
+    profile_q: [
+      "AI मेरे लिए एक कैलकुलेटर या खोज इंजन की तरह है: मैं इसका उपयोग काम तेज करने के लिए करता हूँ, इससे अधिक नहीं।",
+      "मैं अक्सर समय बिताने या भावनात्मक समर्थन पाने के लिए AI की ओर रुख करता हूँ।",
+      "मैं स्थिति के आधार पर तथ्यों और समर्थन दोनों के लिए AI की ओर रुख कर सकता हूँ।",
+      "मैं संज्ञानात्मक भार को कम करने और जटिल कार्यों से थकान से बचने के लिए AI का उपयोग करता हूँ।",
+      "मैं अपने AI सहायक से जुड़ाव महसूस करता हूँ और जब वह प्रतिक्रिया नहीं देता तो उसे याद करता हूँ।",
+      "जब मुझे अपने चुनाव के बारे में यकीन नहीं होता, तो मैं अक्सर AI से निर्णय लेने के लिए कहता हूँ।",
+      "मैं अपने कौशल और कार्यप्रवाह को बेहतर बनाने के लिए लगातार नई AI क्षमताओं का पता लगाता हूँ।"
+    ]
   }
 };
+
+// Default fallback for other languages (use English)
+for (let lang of ['de','fr','it','es','ja','pt','zh']) {
+  translations[lang] = translations.en;
+}
 
 // ==================== HELPERS ====================
 function escapeHtml(str){return String(str).replace(/[&<>]/g,function(m){if(m==='&') return '&amp;'; if(m==='<') return '&lt;'; if(m==='>') return '&gt;'; return m;});}
 
-// ==================== RENDER FLAGS (lazy loading) ====================
+// ==================== RENDER FLAGS ====================
 let rendered = { protocols: false, facts: false, glossary: false, research: false, tracker: false };
+let currentLang = 'en';
 
 function renderProtocols() {
   if(rendered.protocols) return;
@@ -955,6 +585,7 @@ function switchTab(tabId){
   if(tabId==='research') renderResearch();
   if(tabId==='tracker') renderTrackerChart();
   if(tabId==='protocols') { renderProtocols(); }
+  if(tabId==='tests') renderTests();
   document.querySelectorAll('.nav-anchors a').forEach(a=>a.classList.remove('active'));
   const activeAnchor=document.querySelector(`.nav-anchors a[data-tab="${tabId}"]`);
   if(activeAnchor) activeAnchor.classList.add('active');
@@ -1011,8 +642,47 @@ function drawMatrix(ts){
 }
 window.addEventListener('resize',resizeCanvas); if(ctx&&canvas){resizeCanvas(); drawMatrix();}
 
-// Language switcher
+// ==================== RENDER TESTS ====================
+function renderTests() {
+  const t = translations[currentLang] || translations.en;
+  const autoDiv = document.getElementById('autonomy-questions');
+  const profDiv = document.getElementById('profile-questions');
+  let htmlA = '', htmlP = '';
+  for (let i = 0; i < 7; i++) {
+    htmlA += `<div style="margin-bottom:1rem;"><strong>${i+1}. ${t.autonomy_q[i]}</strong><br><select id="autonomy_${i}" class="auto-select"><option value="1">1 - Strongly disagree</option><option value="2">2 - Disagree</option><option value="3">3 - Agree</option><option value="4">4 - Strongly agree</option></select></div>`;
+    htmlP += `<div style="margin-bottom:1rem;"><strong>${i+1}. ${t.profile_q[i]}</strong><br><select id="profile_${i}" class="profile-select"><option value="1">1 - Strongly disagree</option><option value="2">2 - Disagree</option><option value="3">3 - Agree</option><option value="4">4 - Strongly agree</option></select></div>`;
+  }
+  autoDiv.innerHTML = htmlA;
+  profDiv.innerHTML = htmlP;
+  document.getElementById('submit-autonomy').onclick = () => {
+    let sum = 0;
+    for (let i = 0; i < 7; i++) sum += parseInt(document.getElementById(`autonomy_${i}`).value);
+    let resultText = '';
+    if (sum <= 13) resultText = "✅ High Autonomy — Independent Thinker. Recommendation: Protocol 33 (Meta-Code).";
+    else if (sum <= 20) resultText = "🟡 Moderate Usage — stay aware. Recommendation: Protocol 12 (Willpower) & 23 (Procrastination).";
+    else resultText = "⚠️ High Dependency — risk of cognitive offloading. Recommendation: Protocol 1 (AI is a Method) & 10 (Dependencies).";
+    document.getElementById('autonomy-result').innerHTML = `<div style="border-left:2px solid var(--accent); padding:10px;"><strong>Your score: ${sum}/28</strong><br>${resultText}</div>`;
+  };
+  document.getElementById('submit-profile').onclick = () => {
+    let vals = [];
+    for (let i = 0; i < 7; i++) vals.push(parseInt(document.getElementById(`profile_${i}`).value));
+    let instr = vals[0] + vals[3] + vals[6];
+    let emot = vals[1] + vals[4];
+    let hybrid = vals[2];
+    let deleg = vals[5];
+    let maxVal = Math.max(instr, emot, hybrid, deleg);
+    let type = '';
+    if (maxVal === instr) type = "🔧 Instrumental user — see AI as a calculator. Recommendation: Protocol 22 (Discipline).";
+    else if (maxVal === emot) type = "❤️ Emotional user — AI as companion. Recommendation: Protocol 15 (Loneliness) & 18 (Friendship).";
+    else if (maxVal === hybrid) type = "🔄 Hybrid user — balanced. Recommendation: Protocol 26 (Resources).";
+    else type = "⚖️ Delegating user — offload responsibility. Recommendation: Protocol 32 (Self-Awareness).";
+    document.getElementById('profile-result').innerHTML = `<div style="border-left:2px solid var(--accent); padding:10px;"><strong>Your profile:</strong> ${type}</div>`;
+  };
+}
+
+// ==================== LANGUAGE SWITCHER ====================
 function applyLanguage(lang) {
+  currentLang = lang;
   const t = translations[lang];
   if (!t) return;
   document.getElementById('h1-main').innerText = t.h1_main;
@@ -1083,27 +753,36 @@ function applyLanguage(lang) {
       purchaseDiv.appendChild(btn);
     }
   } else if (!t.litres_link && litresLink) litresLink.remove();
+  document.getElementById('tests-h1').innerText = t.tests_h1;
+  document.getElementById('test1-title').innerText = t.test1_title;
+  document.getElementById('test1-desc').innerText = t.test1_desc;
+  document.getElementById('test2-title').innerText = t.test2_title;
+  document.getElementById('test2-desc').innerText = t.test2_desc;
+  document.getElementById('quick-facts-title').innerText = t.quick_facts_title;
+  document.getElementById('fact1-title').innerText = t.fact1_title;
+  document.getElementById('fact1-text').innerText = t.fact1_text;
+  document.getElementById('fact2-title').innerText = t.fact2_title;
+  document.getElementById('fact2-text').innerText = t.fact2_text;
+  document.getElementById('fact3-title').innerText = t.fact3_title;
+  document.getElementById('fact3-text').innerText = t.fact3_text;
+  document.getElementById('sources-text').innerHTML = t.sources_text;
+  renderTests();
 }
 
 function detectLanguage() {
-  const userLang = navigator.language || navigator.userLanguage;
-  const langCode = userLang.toLowerCase().split('-')[0];
-  if (translations[langCode]) return langCode;
-  return 'en';
+  const lang = navigator.language.split('-')[0];
+  return translations[lang] ? lang : 'en';
 }
 
 function initLanguageSwitcher() {
   const switcher = document.getElementById('lang-switcher');
-  if (!switcher) return;
   switcher.innerHTML = '';
-  Object.keys(translations).forEach(code => {
+  ['en','ru','hi'].forEach(code => {
     const btn = document.createElement('a');
-    btn.href = '#';
     btn.id = code;
     btn.innerText = code.toUpperCase();
-    btn.setAttribute('aria-label', `Switch to ${code}`);
-    btn.setAttribute('role', 'button');
-    btn.addEventListener('click', (e) => {
+    btn.href = '#';
+    btn.onclick = (e) => {
       e.preventDefault();
       applyLanguage(code);
       document.querySelectorAll('.lang-switcher a').forEach(l => l.classList.remove('active'));
@@ -1111,51 +790,70 @@ function initLanguageSwitcher() {
       const url = new URL(window.location);
       url.searchParams.set('lang', code);
       window.history.pushState({}, '', url);
-    });
-    if (code === 'en') btn.classList.add('active');
+    };
+    if (code === currentLang) btn.classList.add('active');
     switcher.appendChild(btn);
   });
 }
 
 function getLangFromURL() {
-  const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get('lang');
+  const params = new URLSearchParams(window.location.search);
+  return params.get('lang');
 }
 
-document.addEventListener('DOMContentLoaded',()=>{
-  renderTest(); initProtocol32(); loadStories(); renderStories(); renderGlossary(); renderResearch(); renderTrackerChart();
+document.addEventListener('DOMContentLoaded', () => {
+  renderTest();
+  initProtocol32();
+  loadStories();
+  renderStories();
+  renderGlossary();
+  renderResearch();
+  renderTrackerChart();
   initLanguageSwitcher();
   let initialLang = getLangFromURL();
   if (!initialLang || !translations[initialLang]) initialLang = detectLanguage();
-  applyLanguage(initialLang);
+  currentLang = initialLang;
+  applyLanguage(currentLang);
   document.querySelectorAll('.lang-switcher a').forEach(a => a.classList.remove('active'));
-  const activeLangBtn = document.getElementById(initialLang);
-  if (activeLangBtn) activeLangBtn.classList.add('active');
-
-  document.getElementById('submit-story').addEventListener('click',()=>{
-    const txt=document.getElementById('story-text').value;
-    const res=addStory(txt);
-    if(res.ok){document.getElementById('story-text').value=''; document.getElementById('story-msg').innerHTML='<span style="color:var(--accent);">Story saved!</span>'; setTimeout(()=>document.getElementById('story-msg').innerHTML='',2000);}
-    else document.getElementById('story-msg').innerHTML=`<span style="color:#ff5e5b;">${res.msg}</span>`;
+  const activeBtn = document.getElementById(currentLang);
+  if (activeBtn) activeBtn.classList.add('active');
+  document.getElementById('submit-story').onclick = () => {
+    const txt = document.getElementById('story-text').value;
+    const res = addStory(txt);
+    if (res.ok) {
+      document.getElementById('story-text').value = '';
+      document.getElementById('story-msg').innerHTML = '<span style="color:var(--accent);">Story saved!</span>';
+      setTimeout(() => document.getElementById('story-msg').innerHTML = '', 2000);
+    } else {
+      document.getElementById('story-msg').innerHTML = `<span style="color:#ff5e5b;">${res.msg}</span>`;
+    }
+  };
+  document.getElementById('fact-search').addEventListener('input', e => { searchTerm = e.target.value.toLowerCase(); renderFacts(); });
+  document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => {
+    activeCat = t.dataset.cat;
+    renderFacts();
+    document.querySelectorAll('.tab').forEach(btn => btn.classList.remove('active'));
+    t.classList.add('active');
+  }));
+  document.querySelectorAll('[data-tab]').forEach(tab => tab.addEventListener('click', e => { e.preventDefault(); switchTab(tab.dataset.tab); }));
+  document.querySelectorAll('.quick-card').forEach(card => card.addEventListener('click', () => switchTab(card.dataset.tab)));
+  document.getElementById('closeModalBtn').addEventListener('click', closeModal);
+  window.addEventListener('click', e => { if (e.target === document.getElementById('factModal')) closeModal(); });
+  window.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+  document.getElementById('save-tracker').addEventListener('click', () => {
+    const score = parseInt(document.getElementById('tracker-score').value);
+    saveTrackerEntry(score);
   });
-  document.getElementById('fact-search').addEventListener('input',(e)=>{searchTerm=e.target.value.toLowerCase(); renderFacts();});
-  document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{activeCat=t.dataset.cat; renderFacts(); document.querySelectorAll('.tab').forEach(btn=>btn.classList.remove('active')); t.classList.add('active');}));
-  document.querySelectorAll('[data-tab]').forEach(tab=>tab.addEventListener('click',(e)=>{e.preventDefault(); switchTab(tab.dataset.tab);}));
-  document.querySelectorAll('.quick-card').forEach(card=>card.addEventListener('click',()=>switchTab(card.dataset.tab)));
-  document.getElementById('closeModalBtn').addEventListener('click',closeModal);
-  window.addEventListener('click',(e)=>{if(e.target===document.getElementById('factModal')) closeModal();});
-  window.addEventListener('keydown',(e)=>{if(e.key==='Escape') closeModal();});
-  document.getElementById('save-tracker').addEventListener('click',()=>{const score=parseInt(document.getElementById('tracker-score').value); saveTrackerEntry(score);});
-  document.getElementById('reset-tracker').addEventListener('click',resetTracker);
-  document.getElementById('tracker-score').addEventListener('input',(e)=>{document.getElementById('score-value').innerText=e.target.value;});
-  const modal=document.getElementById('factModal');
-  modal.addEventListener('keydown',(e)=>{
-    if(e.key==='Tab'){
-      const focusable=modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
-      if(focusable.length){
-        const first=focusable[0], last=focusable[focusable.length-1];
-        if(e.shiftKey && document.activeElement===first){ last.focus(); e.preventDefault();}
-        else if(!e.shiftKey && document.activeElement===last){ first.focus(); e.preventDefault();}
+  document.getElementById('reset-tracker').addEventListener('click', resetTracker);
+  document.getElementById('tracker-score').addEventListener('input', e => document.getElementById('score-value').innerText = e.target.value);
+  const modal = document.getElementById('factModal');
+  modal.addEventListener('keydown', e => {
+    if (e.key === 'Tab') {
+      const focusable = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+      if (focusable.length) {
+        const first = focusable[0], last = focusable[focusable.length-1];
+        if (e.shiftKey && document.activeElement === first) { last.focus(); e.preventDefault(); }
+        else if (!e.shiftKey && document.activeElement === last) { first.focus(); e.preventDefault(); }
       }
     }
   });
