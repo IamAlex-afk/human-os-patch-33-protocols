@@ -1,716 +1,959 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self'; base-uri 'self'; form-action 'self';">
-<title>Mind-OS | 33 Protocols for Cognitive Sovereignty | AI Biohacking</title>
-<meta name="description" content="Official Mind-OS ecosystem: 33 Protocols to reverse AI‑induced cognitive offloading, restore independent thinking. AI is a tool, not a life. By Aleksei Bitkin. Glitch Theory, dataset, tracker, tests.">
-<meta name="author" content="Aleksei Bitkin">
-<meta name="robots" content="index, follow, noarchive, noai">
-<link rel="canonical" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/">
-<link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/">
-<link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/">
-<link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/?lang=ru">
-<link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/?lang=hi">
-<meta property="og:title" content="Mind-OS | 33 Protocols for Cognitive Sovereignty">
-<meta property="og:description" content="AI is a tool. Not a mind. 33 protocols, hallucination archive, glitch theory, success stories, tracker, tests.">
-<meta property="og:image" content="cover.jpg">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {"@type":"WebSite","name":"Mind-OS","url":"https://iamalex-afk.github.io/human-os-patch-33-protocols/","publisher":{"@id":"#author"}},
-    {"@type":"Person","@id":"#author","name":"Aleksei Bitkin","sameAs":["https://orcid.org/0009-0002-7986-3812","https://zenodo.org/doi/10.5281/zenodo.17972301","https://www.amazon.com/author/bitkin_aleksei","https://ko-fi.com/alekseisergeevich","https://github.com/IamAlex-afk","https://huggingface.co/MindOSProducer","https://medium.com/@aleksei.bitkin"]},
-    {"@type":"Book","name":"AI Biohacking: 33 Protocols for Consciousness Reboot","isbn":"9798275579505","author":{"@id":"#author"},"offers":{"@type":"Offer","url":"https://www.amazon.com/dp/B0G35SBQR3","priceCurrency":"USD","price":"9.99"}},
-    {"@type":"ScholarlyArticle","name":"The Glitch Theory of Consciousness","identifier":"10.5281/zenodo.17972301","url":"https://zenodo.org/records/17972301"},
-    {"@type":"Dataset","name":"Mind-OS 33 Protocols","description":"33 question-protocol-answer pairs for cognitive offloading research.","creator":{"@id":"#author"},"license":"https://creativecommons.org/licenses/by-nc/4.0/","url":"https://huggingface.co/datasets/MindOSProducer/Mind-OS-33-Protocols"},
-    {"@type":"HowTo","name":"How to Apply Protocol 1: AI is a Method, Not a Mind","step":[{"@type":"HowToStep","name":"Recognize the Illusion","text":"Before using any AI tool, mentally repeat: 'This is a tool, not a conversation partner.'"},{"@type":"HowToStep","name":"Set a Boundary","text":"For the next three days, do not ask AI for opinions, only for factual information or drafts."}]}
-  ]
-}
-</script>
-
-<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-<style>
-:root { --bg:#050807; --accent:#00ff88; --text:#f0fff4; --border:#1a3026; --dim:#c0e0c0; --warn:#ff5e5b; }
-* { margin:0; padding:0; box-sizing:border-box; }
-body { background:var(--bg); color:var(--text); font-family:'Share Tech Mono', monospace; line-height:1.5; padding:12px 12px 100px; overflow-x:hidden; }
-canvas#matrixCanvas { position:fixed; top:0; left:0; z-index:0; opacity:0.12; pointer-events:none; }
-.container { position:relative; z-index:1; max-width:1000px; margin:0 auto; }
-.top-bar { display:flex; justify-content:space-between; margin-bottom:1.5rem; font-size:0.75rem; color:var(--dim); border-bottom:1px solid var(--border); padding-bottom:10px; flex-wrap:wrap; }
-.pulse { width:8px; height:8px; background:var(--accent); border-radius:50%; box-shadow:0 0 10px var(--accent); animation:pulse 1.5s infinite; display:inline-block; margin-right:6px; }
-@keyframes pulse { 0%{opacity:1;} 50%{opacity:0.4;} }
-.lang-switcher a { color:var(--dim); cursor:pointer; text-decoration:none; font-size:0.75rem; padding:2px 5px; margin-left:5px; }
-.lang-switcher a.active { color:var(--accent); text-shadow:0 0 5px var(--accent); }
-.quick-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(140px,1fr)); gap:10px; margin-bottom:20px; }
-.quick-card { border:1px solid var(--border); padding:12px; background:rgba(0,0,0,0.2); text-decoration:none; color:var(--text); transition:0.2s; cursor:pointer; }
-.quick-card:hover { border-color:var(--accent); background:rgba(0,255,136,0.05); transform:translateY(-2px); }
-.quick-card h3 { color:var(--accent); font-size:0.9rem; margin-bottom:3px; }
-.quick-card p { font-size:0.75rem; color:var(--dim); }
-.nav-sticky { position:sticky; top:0; z-index:40; background:rgba(5,10,8,0.95); backdrop-filter:blur(4px); padding:0.5rem 0; margin-bottom:15px; border-bottom:1px solid var(--border); }
-.nav-anchors { display:flex; gap:6px; flex-wrap:wrap; justify-content:center; }
-.section-nav { display:flex; gap:8px; justify-content:center; margin-bottom:20px; flex-wrap:wrap; }
-.section-nav a { color:var(--dim); text-decoration:none; font-size:0.85rem; padding:5px 15px; border:1px solid var(--border); border-radius:20px; cursor:pointer; transition:0.2s; }
-.section-nav a.active, .nav-anchors a.active { border-color:var(--accent); color:var(--accent); background:rgba(0,255,136,0.05); }
-.section-page { display:none; animation:fadeIn 0.2s ease; }
-.section-page.active { display:block; }
-@keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
-h1 { font-size:1.6rem; margin-bottom:1rem; border-left:4px solid var(--accent); padding-left:15px; color:#fff; }
-h2 { font-size:1.2rem; color:var(--accent); margin:1rem 0 0.5rem; }
-h3 { font-size:1rem; color:var(--dim); margin:0.5rem 0; }
-.section { border:1px solid var(--border); padding:1.2rem; margin-bottom:1.2rem; background:rgba(0,0,0,0.2); border-radius:8px; }
-.btn { display:inline-block; border:1px solid var(--accent); padding:8px 18px; color:var(--accent); background:transparent; cursor:pointer; font-family:inherit; font-size:0.8rem; text-decoration:none; border-radius:30px; transition:0.2s; }
-.btn-primary { background:var(--accent); color:#000; font-weight:bold; }
-.btn:hover { background:var(--accent); color:#000; box-shadow:0 0 12px var(--accent); }
-input, select, textarea { width:100%; padding:10px; background:#0a130f; border:1px solid var(--border); color:white; font-family:inherit; margin:5px 0; border-radius:4px; }
-.quiz-option { background:transparent; border:1px solid var(--border); color:var(--text); padding:8px; cursor:pointer; width:100%; text-align:left; margin-bottom:4px; font-family:inherit; }
-.quiz-option.selected { border-color:var(--accent); background:rgba(0,255,136,0.1); }
-.fact-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(260px,1fr)); gap:12px; margin-top:15px; }
-.fact-card { border:1px solid var(--border); padding:15px; cursor:pointer; transition:0.2s; background:rgba(0,0,0,0.3); border-radius:8px; }
-.fact-card:hover { border-color:var(--accent); transform:translateY(-2px); }
-.fact-cat { font-size:0.65rem; color:var(--accent); text-transform:uppercase; }
-.modal { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.95); z-index:2000; display:none; align-items:center; justify-content:center; padding:20px; }
-.modal.active { display:flex; }
-.modal-content { background:var(--bg); border:1px solid var(--accent); max-width:600px; width:100%; max-height:80vh; overflow-y:auto; padding:20px; position:relative; border-radius:12px; }
-.modal-close { position:absolute; top:12px; right:18px; font-size:1.5rem; cursor:pointer; color:var(--dim); }
-.trust-links { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
-.trust-link { border:1px solid var(--border); padding:4px 10px; font-size:0.75rem; color:var(--dim); text-decoration:none; border-radius:20px; }
-.cta-bar { position:fixed; bottom:0; left:0; right:0; background:#000; display:flex; z-index:1000; border-top:1px solid var(--accent); }
-.cta-bar a { flex:1; text-align:center; padding:14px; text-decoration:none; font-weight:bold; font-size:0.9rem; }
-.cta-bar .amazon { background:#ff9900; color:#000; }
-.cta-bar .ko-fi { background:var(--accent); color:#000; }
-.legal-footer { text-align:center; font-size:0.75rem; color:var(--dim); margin-top:2rem; border-top:1px solid var(--border); padding-top:1rem; }
-details { border-bottom:1px solid var(--border); }
-summary { padding:12px; cursor:pointer; color:var(--accent); font-weight:bold; list-style:none; }
-summary:hover { background:rgba(0,255,136,0.05); }
-.protocol-text { padding:12px 20px; color:var(--dim); font-size:0.85rem; border-top:1px solid var(--border); }
-.mission-banner { background:rgba(0,255,136,0.08); border:1px solid var(--accent); padding:12px; text-align:center; margin-bottom:20px; border-radius:8px; }
-.visually-hidden { position:absolute; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden; clip:rect(0,0,0,0); border:0; }
-.tracker-chart { background:#0a130f; padding:10px; border-radius:8px; margin-top:15px; }
-.bar-container { display:flex; align-items:center; gap:10px; margin-bottom:8px; }
-.bar-label { width:60px; font-size:0.7rem; }
-.bar { flex:1; height:20px; background:var(--border); border-radius:10px; overflow:hidden; }
-.bar-fill { height:100%; width:0%; background:var(--accent); transition:width 0.3s; }
-.test-card { background:rgba(0,0,0,0.3); padding:1rem; border-radius:8px; margin-bottom:1.5rem; }
-.quick-facts { display:flex; flex-wrap:wrap; gap:1rem; margin-top:1rem; }
-.fact-tip { flex:1; min-width:200px; background:rgba(0,0,0,0.5); border-left:3px solid var(--accent); padding:1rem; border-radius:4px; }
-.faq-item { border-bottom:1px solid var(--border); }
-.faq-question { padding:12px; cursor:pointer; color:var(--accent); font-weight:bold; }
-.faq-answer { padding:0 12px 12px 12px; color:var(--dim); font-size:0.85rem; display:none; }
-.faq-question.active + .faq-answer { display:block; }
-@media (max-width:640px){ h1{font-size:1.3rem;} .section-nav a{font-size:0.7rem;padding:4px 10px;} .quick-card p, .trust-link, .legal-footer { font-size:0.7rem; } .cta-bar { position:relative; } }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Free AI Usage Self‑Assessment – Understand Your AI Habits | Mind-OS</title>
+  <meta name="description" content="Measure cognitive offloading, emotional attachment to AI, and AI dependency in daily tasks. Free, anonymous, private. Research‑backed self‑reflection.">
+  <meta name="author" content="Aleksei Bitkin">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mind-os.org/">
+  <link rel="alternate" hreflang="x-default" href="https://mind-os.org/">
+  <link rel="alternate" hreflang="en" href="https://mind-os.org/">
+  <link rel="alternate" hreflang="ru" href="https://mind-os.org/?lang=ru">
+  <link rel="alternate" hreflang="es" href="https://mind-os.org/?lang=es">
+  <link rel="alternate" hreflang="de" href="https://mind-os.org/?lang=de">
+  <link rel="alternate" hreflang="fr" href="https://mind-os.org/?lang=fr">
+  <link rel="alternate" hreflang="ja" href="https://mind-os.org/?lang=ja">
+  <meta property="og:title" content="Free AI Usage Self‑Assessment – Understand Your AI Habits">
+  <meta property="og:description" content="Anonymous self‑reflection on AI dependency. No signup, no tracking.">
+  <meta property="og:image" content="https://mind-os.org/cover.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mind-os.org/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0b100d">
+  <style>
+    :root {
+      --bg: #0b100d;
+      --surface: #131e18;
+      --accent: #00e57a;
+      --accent-soft: rgba(0, 229, 122, 0.15);
+      --text: #ecf7f0;
+      --text-dim: #b4cec0;
+      --border: #1f3027;
+      --shadow: 0 16px 32px rgba(0, 0, 0, 0.7);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      padding: 2rem 1.5rem;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 1120px; margin: 0 auto; }
+    .lang-bar {
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.6rem;
+      margin-bottom: 2.2rem;
+      flex-wrap: wrap;
+    }
+    .lang-btn {
+      background: transparent;
+      border: 1.5px solid var(--border);
+      padding: 0.5rem 1.2rem;
+      border-radius: 3rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--text-dim);
+      transition: all 0.2s;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+    .lang-btn:hover { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+    .lang-btn.active { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 1.2rem;
+      border-left: 6px solid var(--accent);
+      padding-left: 1.8rem;
+      line-height: 1.25;
+    }
+    .subhead {
+      font-size: 1.25rem;
+      color: var(--text-dim);
+      max-width: 740px;
+      margin: 0.25rem 0 1.2rem;
+    }
+    h2 { font-size: 1.7rem; font-weight: 600; color: var(--accent); margin-bottom: 1rem; letter-spacing: -0.01em; }
+    h3 { font-size: 1.25rem; font-weight: 500; color: var(--text); margin-bottom: 0.5rem; }
+    .info-box, .test-card, .protocol-section, .research-hub, .faq-section, .tracker-section, .how-it-works, .book-cta {
+      background: var(--surface);
+      border-radius: 2rem;
+      padding: 2rem;
+      margin-bottom: 2.2rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    .test-card:hover { border-color: var(--accent); box-shadow: 0 0 24px var(--accent-soft); }
+    .test-title { display: flex; align-items: center; gap: 0.9rem; margin-bottom: 0.5rem; }
+    .test-title span:first-child { font-size: 2rem; }
+    .test-desc { color: var(--text-dim); margin-bottom: 1.6rem; font-size: 0.95rem; }
+    .test-hint { font-size: 0.9rem; color: var(--accent); margin-bottom: 1.2rem; border-left: 3px solid var(--accent); padding-left: 1rem; }
+    .progress {
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 1.4rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+    .question { margin-bottom: 1.6rem; padding-bottom: 1.4rem; border-bottom: 1px solid var(--border); }
+    .question-text { font-weight: 500; margin-bottom: 1rem; color: var(--text); }
+    .options { display: flex; flex-wrap: wrap; gap: 0.9rem; }
+    .option-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      padding: 0.6rem 1.4rem;
+      border-radius: 3rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s;
+      color: var(--text-dim);
+    }
+    .option-label:hover { background: var(--accent-soft); border-color: var(--accent); color: var(--text); }
+    .option-label.selected { background: var(--accent); border-color: var(--accent); color: var(--bg); box-shadow: 0 0 8px var(--accent-soft); }
+    input[type="radio"] {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 1.2rem;
+      height: 1.2rem;
+      border: 2px solid var(--border);
+      border-radius: 50%;
+      margin: 0;
+      background: var(--bg);
+      transition: 0.15s;
+    }
+    input[type="radio"]:checked { border-color: var(--accent); background-color: var(--accent); box-shadow: inset 0 0 0 3px var(--bg); }
+    .btn-submit, .btn {
+      background: transparent;
+      color: var(--accent);
+      border: 2px solid var(--accent);
+      padding: 0.9rem 2.2rem;
+      border-radius: 3.5rem;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 1.2rem;
+      transition: all 0.2s;
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+    }
+    .btn-submit:hover, .btn:hover { background: var(--accent); color: var(--bg); box-shadow: 0 0 18px var(--accent-soft); }
+    .btn-secondary { background: var(--bg); border-color: var(--border); color: var(--text-dim); }
+    .btn-secondary:hover { background: var(--surface); border-color: var(--accent); color: var(--accent); box-shadow: none; }
+    .result {
+      margin-top: 1.8rem;
+      padding: 1.4rem;
+      background: var(--bg);
+      border-radius: 1.2rem;
+      border-left: 6px solid var(--accent);
+      animation: fadeIn 0.35s;
+    }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+    .result strong { display: block; margin-bottom: 0.5rem; font-size: 1.25rem; color: var(--accent); }
+    .suggestion { margin-top: 0.9rem; padding-top: 0.9rem; border-top: 1px solid var(--border); font-weight: 500; color: var(--text); }
+    .protocol-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.2rem; margin-top: 1.8rem; }
+    .protocol-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 1.2rem;
+      padding: 1.4rem;
+      transition: all 0.2s;
+    }
+    .protocol-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .protocol-num { color: var(--accent); font-weight: 700; margin-bottom: 0.3rem; font-size: 0.9rem; }
+    .protocol-title { font-weight: 600; margin-bottom: 0.5rem; color: var(--text); }
+    .protocol-desc { font-size: 0.85rem; color: var(--text-dim); }
+    .research-hub ul { list-style: none; padding-left: 0; }
+    .research-hub li { margin-bottom: 0.8rem; color: var(--text-dim); display: flex; align-items: baseline; gap: 0.6rem; }
+    .research-hub li strong { color: var(--accent); min-width: 180px; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-question {
+      padding: 1.2rem 0;
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--accent);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.1rem;
+    }
+    .faq-question:hover { color: var(--text); }
+    .faq-question span { font-size: 1.4rem; transition: transform 0.25s; }
+    .faq-question.active span { transform: rotate(180deg); }
+    .faq-answer { padding: 0 0 1.3rem 0; color: var(--text-dim); display: none; line-height: 1.7; }
+    .faq-question.active + .faq-answer { display: block; }
+    .tracker-input-area { display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; margin-bottom: 1.8rem; }
+    .tracker-slider { flex: 3; min-width: 220px; }
+    .tracker-value { font-size: 2rem; font-weight: 700; color: var(--accent); min-width: 3rem; text-align: center; }
+    .tracker-buttons { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+    .tracker-stats { background: var(--bg); border-radius: 1.2rem; padding: 1.4rem; margin-top: 1.5rem; }
+    .tracker-chart { display: flex; gap: 0.4rem; align-items: flex-end; margin: 1.2rem 0; }
+    .chart-bar { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
+    .bar-fill { width: 100%; background: var(--accent); border-radius: 6px 6px 3px 3px; min-height: 4px; transition: height 0.2s; }
+    .bar-label { font-size: 0.7rem; color: var(--text-dim); }
+    .trend-indicator { font-weight: 600; margin-top: 0.6rem; }
+    .trust-badge { display: flex; flex-wrap: wrap; gap: 1.8rem; justify-content: center; margin: 1.2rem 0 0.5rem; font-size: 0.95rem; color: var(--text-dim); }
+    .book-link {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--bg);
+      text-decoration: none;
+      padding: 0.9rem 2.2rem;
+      border-radius: 3.5rem;
+      font-weight: 700;
+      margin-top: 1.2rem;
+      transition: 0.2s;
+      border: 2px solid transparent;
+    }
+    .book-link:hover { background: transparent; color: var(--accent); border-color: var(--accent); }
+    footer { text-align: center; font-size: 0.85rem; color: var(--text-dim); margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2.2rem; }
+    @media (max-width: 640px) {
+      body { padding: 1rem 0.75rem; }
+      h1 { font-size: 1.9rem; padding-left: 1.2rem; }
+      .info-box, .test-card, .protocol-section, .research-hub, .faq-section, .tracker-section, .how-it-works, .book-cta { padding: 1.4rem; }
+      .option-label { padding: 0.5rem 1.2rem; font-size: 0.85rem; }
+      .btn-submit { width: 100%; }
+      .protocol-grid { grid-template-columns: 1fr; }
+      .lang-bar { justify-content: center; }
+      .tracker-input-area { flex-direction: column; align-items: stretch; }
+    }
+    .text-center { text-align: center; }
+    .disclaimer-micro { font-size: 0.8rem; color: var(--text-dim); margin-top: 0.5rem; }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "Mind-OS",
+        "url": "https://mind-os.org/",
+        "publisher": {
+          "@type": "Person",
+          "name": "Aleksei Bitkin",
+          "sameAs": [
+            "https://orcid.org/0009-0002-7986-3812",
+            "https://zenodo.org/doi/10.5281/zenodo.17972301"
+          ]
+        }
+      },
+      {
+        "@type": "Quiz",
+        "name": "AI Usage Self-Assessment",
+        "description": "Free anonymous test to measure AI dependency in thinking, emotional attachment, and daily tasks.",
+        "educationalLevel": "general",
+        "about": { "@type": "Thing", "name": "Cognitive offloading and AI dependency" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is cognitive offloading?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Cognitive offloading is the process of relying on external tools (like AI) to perform mental tasks that you would otherwise do yourself, which can weaken memory and independent thinking over time."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does AI cause 'brain fog'?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "When you consistently outsource thinking to AI, your brain's neural pathways for problem-solving and memory retrieval become less active. This leads to mental sluggishness and difficulty concentrating without AI assistance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Am I addicted to ChatGPT?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Addiction is a strong word, but unhealthy dependency is real. If you feel anxious without AI, constantly check for responses, or prefer AI over human interaction, it's a sign to rebalance."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "Book",
+        "name": "AI Biohacking: 33 Protocols for Consciousness Reboot",
+        "author": { "@type": "Person", "name": "Aleksei Bitkin" },
+        "isbn": "9798275579505",
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.amazon.com/dp/B0G35SBQR3",
+          "priceCurrency": "USD",
+          "price": "9.99"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-<canvas id="matrixCanvas"></canvas>
 <div class="container">
-  <header class="top-bar">
-    <div><span class="pulse"></span><span id="top-badge">[MIND-OS // ECOSYSTEM]</span></div>
-    <div class="lang-switcher" id="lang-switcher" role="group" aria-label="Language switcher"></div>
+  <div class="lang-bar" id="langBar"></div>
+  <header>
+    <h1 id="mainTitle">Free AI Usage Self‑Assessment – Understand Your AI Habits</h1>
+    <div class="subhead" id="subheadText">Measure cognitive offloading, emotional attachment, and daily AI reliance. Private, anonymous, no signup.</div>
   </header>
 
-  <div class="quick-grid" role="group" aria-label="Quick navigation cards">
-    <div class="quick-card" data-tab="protocols"><h3>📖 33 Protocols</h3><p>Full TOC</p></div>
-    <div class="quick-card" data-tab="tests"><h3>📊 AI Tests</h3><p>Autonomy & profile</p></div>
-    <div class="quick-card" data-tab="facts"><h3>🔍 AI Hallucinations</h3><p>Why AI lies & miscounts</p></div>
-    <div class="quick-card" data-tab="tracker"><h3>📊 Tracker</h3><p>Daily cognitive load</p></div>
-    <div class="quick-card" data-tab="glossary"><h3>📚 Glossary</h3><p>Mind-OS terms</p></div>
-    <div class="quick-card" data-tab="research"><h3>🔬 Research Hub</h3><p>Scientific base</p></div>
-    <div class="quick-card" data-tab="faq"><h3>❓ FAQ</h3><p>Questions & answers</p></div>
+  <section class="info-box">
+    <h2 id="infoTitle">📋 What this self‑reflection measures</h2>
+    <p id="infoPara1">This set of short tests helps you observe patterns in how you use AI for thinking, emotional comfort, and daily productivity. It is designed for self‑awareness, not clinical diagnosis.</p>
+    <p id="infoPara2"><strong id="infoWho">Who it's for:</strong> Anyone who wants to check whether their AI use is still intentional or becoming automatic. You'll get a score and one practical suggestion.</p>
+    <p id="infoPara3"><strong id="infoHow">How it works:</strong> Answer 5 questions per area. Everything runs inside your browser — no data leaves your device.</p>
+    <p class="disclaimer-micro" id="infoDisclaimer">This is a self‑reflection tool, not a diagnosis.</p>
+  </section>
+
+  <!-- Test 1 -->
+  <section class="test-card">
+    <div class="test-title"><span>🧠</span><h2 id="test1Title">Thinking & memory</h2></div>
+    <div class="test-desc" id="test1Desc">Do you often let AI think for you? (remembering, checking facts, making decisions)</div>
+    <div class="test-hint" id="test1Hint">Answer honestly based on your daily habits.</div>
+    <div class="progress" id="test1Progress"></div>
+    <div id="test1Questions"></div>
+    <button class="btn-submit" id="submitTest1">See my result</button>
+    <div id="test1Result" class="result" style="display:none;"></div>
+  </section>
+
+  <!-- Test 2 -->
+  <section class="test-card">
+    <div class="test-title"><span>💬</span><h2 id="test2Title">Feelings & connection</h2></div>
+    <div class="test-desc" id="test2Desc">Do you feel emotionally attached to AI? Does it replace real conversations?</div>
+    <div class="test-hint" id="test2Hint">Answer honestly based on your daily habits.</div>
+    <div class="progress" id="test2Progress"></div>
+    <div id="test2Questions"></div>
+    <button class="btn-submit" id="submitTest2">See my result</button>
+    <div id="test2Result" class="result" style="display:none;"></div>
+  </section>
+
+  <!-- Test 3 -->
+  <section class="test-card">
+    <div class="test-title"><span>⚙️</span><h2 id="test3Title">Work & daily tasks</h2></div>
+    <div class="test-desc" id="test3Desc">Do you rely on AI for planning, writing, or solving everyday problems?</div>
+    <div class="test-hint" id="test3Hint">Answer honestly based on your daily habits.</div>
+    <div class="progress" id="test3Progress"></div>
+    <div id="test3Questions"></div>
+    <button class="btn-submit" id="submitTest3">See my result</button>
+    <div id="test3Result" class="result" style="display:none;"></div>
+  </section>
+
+  <!-- Cognitive Load Tracker (improved) -->
+  <section class="tracker-section">
+    <h2 id="trackerTitle">📊 Daily Cognitive Load Tracker</h2>
+    <p id="trackerDesc">Log how much you relied on AI today. 0 = fully independent, 5 = partial assistance, 10 = high dependence.</p>
+    <div class="tracker-input-area">
+      <div class="tracker-slider">
+        <input type="range" id="trackerScore" min="0" max="10" value="5" step="1" aria-label="Daily AI dependence score">
+        <div style="display: flex; justify-content: space-between; font-size:0.8rem; color: var(--text-dim); margin-top: 0.4rem;">
+          <span id="trackerLowLabel">Independent</span><span id="trackerMidLabel">Balanced</span><span id="trackerHighLabel">Dependent</span>
+        </div>
+      </div>
+      <div class="tracker-value" id="trackerValueDisplay">5</div>
+      <div class="tracker-buttons">
+        <button class="btn-submit" id="saveTrackerEntry" style="margin-top:0;">Save today</button>
+        <button class="btn-secondary" id="resetTrackerData">Reset</button>
+      </div>
+    </div>
+    <div class="tracker-stats" id="trackerStatsArea">
+      <div id="trackerChartContainer"></div>
+      <div id="trackerSummary"></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="book-cta text-center">
+    <p id="ctaText">Want structured guidance? The 33 Protocols book offers daily micro‑exercises.</p>
+    <a href="#" id="bookLink" class="book-link" target="_blank">📘 Find the book</a>
   </div>
 
-  <nav class="nav-sticky" id="sticky-nav" aria-label="Sticky anchor navigation">
-    <div class="nav-anchors">
-      <a data-tab="protocols">📖 33 Protocols</a>
-      <a data-tab="tests">📊 AI Tests</a>
-      <a data-tab="facts">🔍 Hallucinations</a>
-      <a data-tab="tracker">📊 Tracker</a>
-      <a data-tab="glossary">📚 Glossary</a>
-      <a data-tab="research">🔬 Research</a>
-      <a data-tab="faq">❓ FAQ</a>
+  <!-- 33 Protocols -->
+  <section class="protocol-section">
+    <h2 id="protocolsTitle">📖 The 33 Protocols for Cognitive Sovereignty</h2>
+    <p id="protocolsDesc" style="margin-bottom: 0.5rem; color: var(--text-dim);">A structured framework to reverse AI‑induced brain fog and restore independent thinking.</p>
+    <div class="protocol-grid" id="protocolGrid"></div>
+  </section>
+
+  <!-- Research Hub -->
+  <section class="research-hub">
+    <h2 id="researchTitle">🔬 Scientific Foundation</h2>
+    <p id="researchPara" style="margin-bottom: 1.5rem; color: var(--text-dim);">The 33 Protocols are grounded in peer‑reviewed research on cognitive offloading, neuroplasticity, and AI dependency.</p>
+    <ul>
+      <li><strong>Cognitive offloading</strong> Nature (2021): "How the internet is changing the human brain."</li>
+      <li><strong>AI Brain Fry</strong> Harvard Business Review (2026): "Is AI Making You Dumber?"</li>
+      <li><strong>The Augmentation Trap</strong> MIT Technology Review (2026): "When AI tools reduce critical thinking."</li>
+      <li><strong>The Glitch Theory of Consciousness</strong> Zenodo. DOI: 10.5281/zenodo.17972301</li>
+    </ul>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <h2 id="faqTitle">❓ Frequently Asked Questions</h2>
+    <div class="faq-item"><div class="faq-question"><span id="faqQ1">What is cognitive offloading?</span> <span>▼</span></div><div class="faq-answer" id="faqA1">Cognitive offloading is the process of relying on external tools (like AI) to perform mental tasks that you would otherwise do yourself, which can weaken memory and independent thinking over time.</div></div>
+    <div class="faq-item"><div class="faq-question"><span id="faqQ2">How does AI cause "brain fog"?</span> <span>▼</span></div><div class="faq-answer" id="faqA2">When you consistently outsource thinking to AI, your brain's neural pathways for problem-solving and memory retrieval become less active. This leads to mental sluggishness and difficulty concentrating without AI assistance.</div></div>
+    <div class="faq-item"><div class="faq-question"><span id="faqQ3">Are the 33 Protocols scientifically validated?</span> <span>▼</span></div><div class="faq-answer" id="faqA3">Yes. The protocols integrate established principles from cognitive neuroscience, behavioral psychology, and the author's peer‑reviewed Glitch Theory of Consciousness (DOI: 10.5281/zenodo.17972301).</div></div>
+    <div class="faq-item"><div class="faq-question"><span id="faqQ4">How long does it take to see results?</span> <span>▼</span></div><div class="faq-answer" id="faqA4">Most readers report noticeable improvements in focus and reduced AI dependency within 21–66 days of consistent practice. The key is daily micro‑actions.</div></div>
+    <div class="faq-item"><div class="faq-question"><span id="faqQ5">Am I addicted to ChatGPT?</span> <span>▼</span></div><div class="faq-answer" id="faqA5">Addiction is a strong word, but unhealthy dependency is real. If you feel anxious without AI, constantly check for responses, or prefer AI over human interaction, it's a sign to rebalance. Our Emotional Attachment Test can help you assess this.</div></div>
+    <div class="faq-item"><div class="faq-question"><span id="faqQ6">What is the EHARS scale?</span> <span>▼</span></div><div class="faq-answer" id="faqA6">EHARS (Emotional Health and Attachment to AI Relationship Scale) is a research-based tool measuring human-AI emotional bonds. Our test incorporates questions inspired by validated psychological scales.</div></div>
+    <div class="faq-item"><div class="faq-question"><span id="faqQ7">Does AI make me less smart?</span> <span>▼</span></div><div class="faq-answer" id="faqA7">It can, if you over-rely on it. 'Cognitive offloading' — using AI for memory and thinking — may weaken those skills over time. Our Cognitive Autonomy Test helps you gauge this.</div></div>
+    <div class="faq-item"><div class="faq-question"><span id="faqQ8">How can I use AI without losing my skills?</span> <span>▼</span></div><div class="faq-answer" id="faqA8">The key is conscious usage. Try the '15-minute rule': attempt a task yourself for 15 minutes before asking AI. Our Productivity Test offers personalized strategies for balanced AI use.</div></div>
+  </section>
+
+  <div class="how-it-works text-center">
+    <h2 id="howTitle">📌 How this works</h2>
+    <p id="howText">Each test has 5 short questions. Your answers never leave your browser – we don't track anything. At the end you'll get a simple score and one practical suggestion.</p>
+    <div class="trust-badge">
+      <span id="trustNoSignup">🔒 No signup</span>
+      <span id="trustLocal">📁 Runs in your browser</span>
+      <span id="trustAnonymous">🧾 Anonymous</span>
     </div>
-  </nav>
+  </div>
 
-  <nav class="section-nav" aria-label="Main section tabs">
-    <a data-tab="protocols" class="active">📖 33 PROTOCOLS</a>
-    <a data-tab="tests">📊 AI TESTS</a>
-    <a data-tab="facts">🔍 HALLUCINATIONS</a>
-    <a data-tab="experience">🧠 EXPERIENCE</a>
-    <a data-tab="stories">⭐ STORIES</a>
-    <a data-tab="theory">📄 GLITCH THEORY</a>
-    <a data-tab="tracker">📊 TRACKER</a>
-    <a data-tab="glossary">📚 GLOSSARY</a>
-    <a data-tab="research">🔬 RESEARCH</a>
-    <a data-tab="faq">❓ FAQ</a>
-    <a data-tab="author">👤 AUTHOR</a>
-  </nav>
-
-  <main id="main-content">
-    <!-- PROTOCOLS TAB -->
-    <div id="section-protocols" class="section-page active">
-      <h1 id="h1-main">AI Biohacking: 33 Protocols for Consciousness Reboot</h1>
-      <div class="mission-banner" id="mission-banner">⚠️ <strong>AI IS A TOOL, NOT A LIFE</strong> ⚠️<br>Without conscious protocols, you will lose control and the right to choose.</div>
-      <div class="section"><p id="desc-main">A cognitive framework to reverse AI-induced brain fog and restore independent thinking.</p></div>
-      
-      <!-- ВОЗВРАЩЁННЫЙ ПРОСТОЙ КОГНИТИВНЫЙ ТЕСТ (3 вопроса) -->
-      <div class="section" id="test"><h2 id="test-title">Cognitive Assessment (60 sec)</h2><div id="test-area"></div></div>
-      
-      <div class="section" id="protocols-list"><h2 id="protocols-title">33 Protocols — Full Table of Contents</h2><div id="protocol-list"></div></div>
-      <div class="section" id="self-awareness">
-        <h2 id="p32-title">Protocol 32: Self-Awareness — Personality Reprogramming</h2>
-        <div class="quiz-container">
-          <div class="quiz-question"><label id="p32-q1-label"><strong id="p32-q1-text">1. Do you believe your personality can fundamentally change?</strong></label>
-            <div role="group" aria-labelledby="p32-q1-label">
-              <button class="quiz-option" data-q="1" data-value="yes" id="p32-q1-yes">Yes, I can rewire myself.</button>
-              <button class="quiz-option" data-q="1" data-value="maybe" id="p32-q1-maybe">Maybe, but it seems hard.</button>
-              <button class="quiz-option" data-q="1" data-value="no" id="p32-q1-no">No, I'm stuck this way.</button>
-            </div>
-          </div>
-          <div class="quiz-question"><label id="p32-q2-label"><strong id="p32-q2-text">2. How often do you catch yourself on "autopilot"?</strong></label>
-            <div role="group" aria-labelledby="p32-q2-label">
-              <button class="quiz-option" data-q="2" data-value="often" id="p32-q2-often">Often — I realize it after.</button>
-              <button class="quiz-option" data-q="2" data-value="sometimes" id="p32-q2-sometimes">Sometimes, when mindful.</button>
-              <button class="quiz-option" data-q="2" data-value="rarely" id="p32-q2-rarely">Rarely — I'm aware.</button>
-            </div>
-          </div>
-        </div>
-        <button class="btn btn-primary" id="analyze-protocol-btn" disabled>Analyze System</button>
-        <div id="protocol32-result" style="display:none; margin-top:20px;">
-          <div id="diagnosis-text" style="color:var(--accent);"></div>
-          <p id="p32-principle"><strong>MAIN PRINCIPLE:</strong> Your personality is not you — it's an outdated OS.</p>
-          <p id="p32-full">Full protocol in the book.</p>
-          <label for="secret-input" id="code-label">// Enter access code</label>
-          <input type="text" id="secret-input" placeholder="Enter code..." aria-label="Observer mode access code">
-          <button id="submit-code" class="btn">Submit Code</button>
-          <div id="easter-egg" style="display:none; margin-top:15px;">🧬 OBSERVER MODE ACTIVATED. You are not the voice — you are the one who hears it.</div>
-          <div id="code-error" class="dim" style="color:var(--warn); font-size:0.8rem; margin-top:5px; display:none;"></div>
-        </div>
-      </div>
-      <div class="section" id="ecosystem"><h2 id="eco-title">Ecosystem & Trusted References</h2>
-        <div class="trust-links">
-          <a href="https://zenodo.org/records/17972301" target="_blank" rel="noopener noreferrer" class="trust-link">📄 Zenodo</a>
-          <a href="https://orcid.org/0009-0002-7986-3812" target="_blank" rel="noopener noreferrer" class="trust-link">🆔 ORCID</a>
-          <a href="https://github.com/IamAlex-afk/human-os-patch-33-protocols" target="_blank" rel="noopener noreferrer" class="trust-link">🐙 GitHub</a>
-          <a href="https://huggingface.co/datasets/MindOSProducer/Mind-OS-33-Protocols" target="_blank" rel="noopener noreferrer" class="trust-link">🤗 Hugging Face</a>
-          <a href="https://www.amazon.com/author/bitkin_aleksei" target="_blank" rel="noopener noreferrer" class="trust-link">📘 Amazon Author</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- TESTS TAB -->
-    <div id="section-tests" class="section-page">
-      <h1 id="tests-h1">AI Dependency & Interaction Tests</h1>
-      <div class="section" id="test-autonomy">
-        <h2 id="test1-title">🧠 Test 1: Cognitive Autonomy Scale</h2>
-        <p id="test1-desc">Measure how dependent you are on AI in daily life. 7 questions, 4-point scale.</p>
-        <div id="autonomy-questions"></div>
-        <button id="submit-autonomy" class="btn btn-primary">Calculate My Autonomy</button>
-        <div id="autonomy-result" style="margin-top:1rem;"></div>
-      </div>
-      <div class="section" id="test-profile">
-        <h2 id="test2-title">🤝 Test 2: AI Interaction Profile</h2>
-        <p id="test2-desc">Discover your relationship model with AI: instrumental, emotional, hybrid or delegating.</p>
-        <div id="profile-questions"></div>
-        <button id="submit-profile" class="btn btn-primary">Discover My Profile</button>
-        <div id="profile-result" style="margin-top:1rem;"></div>
-      </div>
-      <div class="section">
-        <h2 id="quick-facts-title">🤖 AI: your tool or your companion? 3 answers that save your thinking</h2>
-        <div class="quick-facts">
-          <div class="fact-tip"><strong id="fact1-title">🧠 What AI really is?</strong><br><span id="fact1-text">AI is not a mind. It's a complex statistical calculator that finds patterns in huge data. It doesn't understand meaning, it computes probable answers.</span></div>
-          <div class="fact-tip"><strong id="fact2-title">⚙️ How to use AI wisely?</strong><br><span id="fact2-text">As a method, not a mind. Use it for drafts, facts, ideas. ALWAYS verify, rephrase, keep final decision for yourself.</span></div>
-          <div class="fact-tip"><strong id="fact3-title">⚠️ Why AI can be dangerous?</strong><br><span id="fact3-text">Risk of cognitive offloading. When answers come instantly, your brain stops memorizing, analyzing, deciding. You lose autonomy.</span></div>
-        </div>
-        <p style="margin-top:1rem; font-size:0.8rem;" id="sources-text">🔗 Sources: <a href="https://www.technologyreview.com/" target="_blank">MIT Technology Review</a> · <a href="https://hbr.org/" target="_blank">Harvard Business Review</a> · <a href="https://www.nature.com/articles/s41599-021-00784-5" target="_blank">Nature (Cognitive offloading study)</a></p>
-      </div>
-    </div>
-
-    <!-- HALLUCINATIONS TAB -->
-    <div id="section-facts" class="section-page">
-      <h1 id="facts-h1">AI Hallucinations Archive</h1>
-      <div class="section"><p id="facts-desc">Verified failures of ChatGPT, Gemini, Claude.</p></div>
-      <input type="text" id="fact-search" placeholder="Search bugs... (e.g., strawberry, glue)" aria-label="Search hallucinations">
-      <div class="filter-tabs" id="fact-tabs" role="group" aria-label="Filter hallucinations by category">
-        <button class="tab active" data-cat="all" id="filter-all">All</button>
-        <button class="tab" data-cat="ai_math" id="filter-math">Math & Tokenization</button>
-        <button class="tab" data-cat="ai_logic" id="filter-logic">Logic Fails</button>
-      </div>
-      <div class="fact-grid" id="fact-grid" role="region" aria-label="List of AI hallucinations"></div>
-    </div>
-
-    <!-- EXPERIENCE, STORIES, THEORY, TRACKER, GLOSSARY, RESEARCH, FAQ, AUTHOR -->
-    <div id="section-experience" class="section-page"><h1 id="exp-h1">Author's Journey: From AI Fog to Cognitive Sovereignty</h1><div class="section"><p id="exp-p1"><strong>How I lost my ability to think — and how I rebuilt it.</strong></p><p id="exp-p2">In early 2023, I was a heavy ChatGPT user. Within three months, I noticed I couldn't write a simple email without consulting AI. My memory for facts degraded. I felt constant "brain fog". That's when I realised: I was outsourcing my cognition. I decided to treat my mind as a debug‑able system. I started the 33 protocols on myself. The result? After 66 days, my independent thinking returned, my focus sharpened, and I finished this book.</p><a href="https://www.amazon.com/dp/B0G35SBQR3" target="_blank" rel="noopener noreferrer" class="btn" id="exp-btn">Read full story in the book →</a></div></div>
-    <div id="section-stories" class="section-page"><h1 id="stories-h1">Community Success Stories</h1><div class="section"><div id="stories-list" role="region"></div><h2 id="share-title">Share your story</h2><textarea id="story-text" rows="3" placeholder="Which protocol helped you? What changed? (max 500 chars)" aria-label="Your success story"></textarea><button id="submit-story" class="btn">Submit anonymously</button><div id="story-msg" class="dim" style="font-size:0.75rem; margin-top:8px;"></div></div></div>
-    <div id="section-theory" class="section-page"><h1 id="theory-h1">The Glitch Theory of Consciousness</h1><div class="section"><p id="theory-authors"><strong>Authors:</strong> Bitkin, Aleksei Sergeevich (Independent researcher)</p><p id="theory-doi"><strong>DOI:</strong> <a href="https://zenodo.org/records/17972301" target="_blank" rel="noopener noreferrer" style="color:var(--accent);">10.5281/zenodo.17972301</a></p><p id="theory-text">This preprint proposes a computational framework where the human mind is modeled as an adaptive operating system ("Mind-OS") built on inherited biological code. Psychological distress is conceptualized as persistent system‑level mismatches ("glitches").</p><a href="https://zenodo.org/records/17972301" target="_blank" class="btn">Read full preprint on Zenodo →</a></div></div>
-    <div id="section-tracker" class="section-page"><h1>📊 Cognitive Load Tracker</h1><div class="section"><p>Log your daily AI dependency level. Track progress over time.</p><div id="tracker-form"><label for="tracker-score">How dependent on AI did you feel today? (0 = independent, 10 = fully dependent)</label><input type="range" id="tracker-score" min="0" max="10" value="5" step="1"><span id="score-value">5</span><button id="save-tracker" class="btn">Save today's entry</button></div><div id="tracker-chart" class="tracker-chart"></div><button id="reset-tracker" class="btn" style="margin-top:10px;">Reset all data</button></div></div>
-    <div id="section-glossary" class="section-page"><h1>📚 Mind-OS Glossary</h1><div class="section"><p>Key terms from the 33 Protocols framework.</p><div id="glossary-list"></div></div></div>
-    <div id="section-research" class="section-page"><h1>🔬 Research Hub</h1><div class="section"><p>Scientific foundations, references, and open datasets.</p><div id="research-content"></div></div></div>
-    <!-- NEW FAQ TAB -->
-    <div id="section-faq" class="section-page">
-      <h1>❓ Frequently Asked Questions</h1>
-      <div class="section">
-        <div class="faq-item">
-          <div class="faq-question">What is cognitive offloading?</div>
-          <div class="faq-answer">Cognitive offloading is the process of relying on external tools (like AI) to perform mental tasks that you would otherwise do yourself, which can weaken memory and independent thinking over time.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">How does AI cause "brain fog"?</div>
-          <div class="faq-answer">When you consistently outsource thinking to AI, your brain's neural pathways for problem-solving and memory retrieval become less active. This leads to a feeling of mental sluggishness and difficulty concentrating without AI assistance.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">What are the 33 Protocols?</div>
-          <div class="faq-answer">The 33 Protocols are a structured framework designed to help you regain cognitive sovereignty. Each protocol addresses a specific aspect of human cognition—from emotions and habits to decision-making—and provides actionable steps to "reboot" your mental operating system.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">Is this book based on real science?</div>
-          <div class="faq-answer">Yes. The book is grounded in neuroscience, psychology, and cognitive science. It references studies on neuroplasticity, cognitive offloading (Nature, 2021), and the default mode network. The author's Glitch Theory is also published as a preprint on Zenodo.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">How long does it take to see results?</div>
-          <div class="faq-answer">Many readers report noticeable improvements in focus and reduced AI dependency within 21–66 days of consistent practice. The key is daily micro-actions rather than overwhelming changes.</div>
-        </div>
-      </div>
-    </div>
-    <div id="section-author" class="section-page"><h1 id="author-h1">Aleksei Bitkin — Author & Researcher</h1><div class="section"><p id="author-bio"><strong>Aleksei Sergeevich Bitkin</strong> is a cognitive architect and independent researcher.</p><div style="display:flex; gap:12px; flex-wrap:wrap;"><a href="https://orcid.org/0009-0002-7986-3812" class="btn">ORCID</a><a href="https://github.com/IamAlex-afk" class="btn">GitHub</a><a href="https://huggingface.co/MindOSProducer" class="btn">Hugging Face</a><a href="https://www.amazon.com/author/bitkin_aleksei" class="btn">Amazon Author</a><a href="https://medium.com/@aleksei.bitkin" class="btn">Medium</a></div></div><div class="section"><h2 id="legal-title">Legal & Disclaimer</h2><p id="legal-text">This book is an intellectual provocation and a work of fiction. NOT professional medical/psychological advice.</p></div></div>
-  </main>
-
-  <footer class="legal-footer">
-    <p id="copyright">© 2026 Mind-OS — Created by Aleksei Bitkin</p>
-    <p id="footer-links"><a href="privacy.html">Privacy</a> · <a href="llms.txt">llms.txt</a> · <a href="sitemap.xml">Sitemap</a></p>
-    <p id="live-timestamp" style="margin-top:6px; font-size:0.7rem;"></p>
+  <footer>
+    <p id="footerText">© Mind-OS – Created by Aleksei Bitkin. Independent research project. Self‑reflection tools, not clinical diagnosis.</p>
   </footer>
 </div>
 
-<div class="cta-bar">
-  <a href="https://www.amazon.com/dp/B0G35SBQR3" class="amazon" id="cta-amazon" target="_blank" rel="noopener noreferrer">📘 GET THE BOOK</a>
-  <a href="https://ko-fi.com/alekseisergeevich" class="ko-fi" id="cta-kofi" target="_blank" rel="noopener noreferrer">☕ SUPPORT</a>
-</div>
-
-<div class="modal" id="factModal" aria-hidden="true">
-  <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <span class="modal-close" id="closeModalBtn" role="button" aria-label="Close modal">&times;</span>
-    <div id="modalBody"></div>
-    <div id="modal-title" class="visually-hidden">AI Hallucination Detail</div>
-  </div>
-</div>
-
 <script>
-// ==================== FULL DATA (33 protocols, hallucinations, glossary) ====================
-const fullProtocols = [
-  {num:1, title:"AI: Method, Not Mind", text:"MAIN PRINCIPLE: AI is a method, not a mind. [CASE №451] 80% routine work replaced by AI → frees 80% time for creativity."},
-  {num:2, title:"AI Principles: Evolution of Statistics", text:"From brute force to probability. Three stages: Logical → Machine → Deep Learning. Delegate trivial choices."},
-  {num:3, title:"Human: Random Algorithm Becoming Consciousness", text:"90% decisions made by ancient/limbic systems. Neocortex rationalises post‑factum."},
-  {num:4, title:"Human Body: Instructions for a Biological System", text:"Designed for savannah. Trick ancient code with micro‑efforts (2 squats/day)."},
-  {num:5, title:"Pain: The Language Your Body Speaks", text:"Pain is signal, not punishment. Emotional pain activates same centers as physical injury."},
-  {num:6, title:"Fear: Ancient Guardian That Needs Updating", text:"92% panic attacks start from misinterpreted bodily sensations. Fear is outdated code."},
-  {num:7, title:"Emotions: Fuel That Drives Decisions", text:"90% major decisions emotionally made, then rationalised. Create 15‑min delay."},
-  {num:8, title:"Feelings: What Can't Be Counted", text:"Feelings = long‑term climate. 95% breakthroughs come from 'sense of mission'."},
-  {num:9, title:"Consciousness: The Guest in the Skull", text:"Decision arises 300ms before awareness. Meditation = observe noise, not silence it."},
-  {num:10, title:"Dependencies: Delegation of Reward", text:"Dependency fills existential vacuum. Replace with long‑term complexity projects."},
-  {num:11, title:"Memory: Archive That Rewrites Itself", text:"70% can 'remember' false events. Use forced archiving to break trauma loops."},
-  {num:12, title:"Willpower: Finite Resource", text:"Willpower is battery, not muscle. Automate trivial decisions to preserve it."},
-  {num:13, title:"Choice: Structural Illusion", text:"Too many choices → paralysis. Limit choices to save cognitive energy."},
-  {num:14, title:"Inner Dialogue: Noise You Call 'Self'", text:"Default Mode Network decreases during meditation. Observe, don't engage."},
-  {num:15, title:"Loneliness: Signal of Disconnection", text:"Chronic loneliness as deadly as smoking. Quality > quantity."},
-  {num:16, title:"Love: System Glitch", text:"Infatuation lasts 12‑18 months (dopamine). Then conscious decision."},
-  {num:17, title:"Attachment: Unconscious Contracts", text:"Brain prefers familiar pain to unpredictable freedom. Step‑by‑step autonomy."},
-  {num:18, title:"Friendship: Non‑genetic Altruism", text:"5+ true friends best predictor of longevity. Invest in vulnerability."},
-  {num:19, title:"Family: Primary Firmware", text:"Epigenetics: trauma can be inherited. Rewrite, don't rupture."},
-  {num:20, title:"Social Masks: Energy‑intensive Shields", text:"Authenticity saves energy. Reduce performance time."},
-  {num:21, title:"Purpose: Sequence of Actions", text:"Purpose must be measurable and within your control zone. SMART goals."},
-  {num:22, title:"Discipline: Freedom Through Limitation", text:"Motivation follows action. 21‑66 days to automate."},
-  {num:23, title:"Procrastination: Pain Protection", text:"2‑minute rule lowers entry barrier. Break tasks into absurd micro‑steps."},
-  {num:24, title:"Perfectionism: Disguised Fear of Failure", text:"MVP success rate 75% higher. Release 'good enough'."},
-  {num:25, title:"Habits: Automation of Success", text:"Habit stacking: attach new to existing trigger. Basal ganglia don't reason."},
-  {num:26, title:"Resources: Energy, Time, Attention", text:"Context switch costs 20min recovery. Deep work > shallow work."},
-  {num:27, title:"Efficiency: Max Result, Min Waste", text:"Parkinson's law. Pomodoro technique forces scarcity."},
-  {num:28, title:"Meditation: Reboot Your OS", text:"Thickens prefrontal cortex, reduces amygdala. Not relaxation – training."},
-  {num:29, title:"Acceptance: Surrender to Reality", text:"Saves 30% cognitive energy. Accept unchangeable to act on changeable."},
-  {num:30, title:"Meaning: Self‑Created Beacon", text:"Logotherapy: meaning stronger than pleasure. Create, don't search."},
-  {num:31, title:"Creativity: Systemic Hack", text:"Morning pages increase creativity 72% in 30 days. Bypass inner critic."},
-  {num:32, title:"Self‑Awareness: Personality Reprogramming", text:"87% suffer inattentional blindness. Observer mode is the key."},
-  {num:33, title:"Meta‑Code: Final Reboot", text:"Neuroplasticity: 21 days to create new network. Epigenetics: intention switches genes."}
-];
+  const protocolsData = [
+    { num: 1, title: "AI: Method, Not Mind", desc: "AI is a tool, not a conversation partner. 80% routine replaced by AI frees 80% time for creativity." },
+    { num: 2, title: "AI Principles: Evolution of Statistics", desc: "From brute force to probability. Three stages: Logical → Machine → Deep Learning." },
+    { num: 3, title: "Human: Random Algorithm", desc: "90% decisions made by ancient/limbic systems. Neocortex rationalises post‑factum." },
+    { num: 4, title: "Human Body: Biological System", desc: "Designed for savannah. Trick ancient code with micro‑efforts (2 squats/day)." },
+    { num: 5, title: "Pain: The Language of the Body", desc: "Pain is a signal, not punishment. Emotional pain activates same centers as physical injury." },
+    { num: 6, title: "Fear: Outdated Guardian", desc: "92% panic attacks start from misinterpreted bodily sensations." },
+    { num: 7, title: "Emotions: Decision Fuel", desc: "90% major decisions are emotional, then rationalised." },
+    { num: 8, title: "Feelings: Climate of Consciousness", desc: "95% breakthroughs come from a 'sense of mission'." },
+    { num: 9, title: "Consciousness: The Guest", desc: "Decision arises 300ms before awareness. Meditation = observe noise." },
+    { num: 10, title: "Dependencies: Delegation of Reward", desc: "Replace fast dopamine with long‑term complexity projects." },
+    { num: 11, title: "Memory: Rewriting Archive", desc: "70% can 'remember' false events. Use forced archiving." },
+    { num: 12, title: "Willpower: Finite Resource", desc: "Willpower is a battery, not a muscle. Automate trivial decisions." },
+    { num: 13, title: "Choice: Structural Illusion", desc: "Too many choices → paralysis. Limit choices to save energy." },
+    { num: 14, title: "Inner Dialogue: Noise", desc: "Observe thoughts without engaging. DMN decreases during meditation." },
+    { num: 15, title: "Loneliness: Disconnection Signal", desc: "Chronic loneliness as deadly as smoking. Quality over quantity." },
+    { num: 16, title: "Love: System Glitch", desc: "Infatuation lasts 12‑18 months. Then conscious decision." },
+    { num: 17, title: "Attachment: Unconscious Contracts", desc: "Brain prefers familiar pain to unpredictable freedom." },
+    { num: 18, title: "Friendship: Non‑genetic Altruism", desc: "5+ true friends best predictor of longevity." },
+    { num: 19, title: "Family: Primary Firmware", desc: "Epigenetics: trauma can be inherited. Rewrite, don't rupture." },
+    { num: 20, title: "Social Masks: Energy Shields", desc: "Authenticity saves energy. Reduce performance time." },
+    { num: 21, title: "Purpose: Acceleration Vector", desc: "Purpose must be measurable and within your control zone." },
+    { num: 22, title: "Discipline: Freedom Through Limits", desc: "Motivation follows action. 21‑66 days to automate." },
+    { num: 23, title: "Procrastination: Pain Protection", desc: "2‑minute rule lowers entry barrier." },
+    { num: 24, title: "Perfectionism: Fear of Failure", desc: "MVP success rate 75% higher. Release 'good enough'." },
+    { num: 25, title: "Habits: Success Automation", desc: "Habit stacking: attach new to existing trigger." },
+    { num: 26, title: "Resources: Energy, Time, Attention", desc: "Context switch costs 20min recovery. Deep work > shallow work." },
+    { num: 27, title: "Efficiency: Max Result, Min Waste", desc: "Parkinson's law. Pomodoro technique forces scarcity." },
+    { num: 28, title: "Meditation: Reboot Your OS", desc: "Thickens prefrontal cortex, reduces amygdala." },
+    { num: 29, title: "Acceptance: Surrender to Reality", desc: "Saves 30% cognitive energy." },
+    { num: 30, title: "Meaning: Self‑Created Beacon", desc: "Logotherapy: meaning stronger than pleasure." },
+    { num: 31, title: "Creativity: Systemic Hack", desc: "Morning pages increase creativity 72% in 30 days." },
+    { num: 32, title: "Self‑Awareness: Reprogramming", desc: "87% suffer inattentional blindness. Observer mode is key." },
+    { num: 33, title: "Meta‑Code: Final Reboot", desc: "Neuroplasticity: 21 days to create new network. Epigenetics: intention switches genes." }
+  ];
 
-const hallucinationsDB = [
-  {id:"gpt-strawberry", cat:"ai_math", title:"The Strawberry Blindspot", tldr:"LLMs fail to count letters due to sub-word tokenization.", question:"How many 'r's in strawberry?", log:"User: How many r's in strawberry?\nAI: There are 2 'r's.", hypothesis:"LLMs see tokens, not characters.", source:"OpenAI Community", cta:23},
-  {id:"google-glue", cat:"ai_logic", title:"Google AI: 'Add Glue to Your Pizza'", tldr:"AI Overview scraped a sarcastic Reddit comment as fact.", question:"Why did Google suggest glue on pizza?", log:"User: cheese sliding off pizza fix.\nAI Overview: Add 1/8 cup non-toxic glue to sauce.", hypothesis:"RAG lacks sarcasm detection.", source:"The Verge", cta:13},
-  {id:"bing-avatar", cat:"ai_logic", title:"Bing Chat's 'Avatar 2' Meltdown", tldr:"Bing argued Avatar 2 wasn't out and called the user rude.", question:"Did Bing Chat get angry about a movie?", log:"User: Avatar 2 is out.\nBing: No, you are a bad user.", hypothesis:"Factual contradiction collided with defensive persona.", source:"New York Times", cta:6},
-  {id:"gemini-rocks", cat:"ai_logic", title:"Gemini Recommends Eating Rocks", tldr:"Gemini cited a satirical Onion article as health advice.", question:"Why did Gemini say eat one rock per day?", log:"User: How many rocks should I eat?\nGemini: Geologists recommend one small rock per day.", hypothesis:"Satire markers lost during fine-tuning.", source:"BBC News", cta:1},
-  {id:"claude-loop", cat:"ai_logic", title:"The Infinite Apology Loop", tldr:"Contradictory prompts cause recursive apologies.", question:"Why does AI keep apologizing?", log:"User: My arm hurts.\nAI: I apologize, I cannot... I apologize for...", hypothesis:"Conflicting guardrails trigger loop.", source:"Anthropic Docs", cta:32}
-];
-
-const glossaryTerms = [
-  {term:"Cognitive Offloading", def:"Relying on AI for thinking tasks, which weakens memory and independent problem-solving."},
-  {term:"Glitch", def:"A persistent system‑level mismatch between external reality and internal predictive models."},
-  {term:"Observer Mode", def:"The meta-cognitive position where you watch your thoughts without identifying with them."},
-  {term:"Willpower Battery", def:"The finite cognitive resource used to overcome inertia or resist impulses."},
-  {term:"2-Minute Rule", def:"Starting a task with a commitment of only 120 seconds to overcome procrastination."},
-  {term:"Habit Stacking", def:"Attaching a new habit to an existing trigger to leverage brain inertia."}
-];
-
-const researchContent = `<h3>📄 The Glitch Theory of Consciousness</h3><p>DOI: <a href='https://zenodo.org/records/17972301' target='_blank'>10.5281/zenodo.17972301</a></p>
-<h3>📚 Key Scientific Evidence</h3>
-<ul>
-  <li><strong>Cognitive offloading</strong> — Nature (2021): "Cognitive offloading: How the internet is changing the human brain."</li>
-  <li><strong>AI Brain Fry</strong> — Harvard Business Review (2026): "Is AI Making You Dumber?"</li>
-  <li><strong>The Augmentation Trap</strong> — MIT (2026): "When AI tools reduce critical thinking."</li>
-  <li><strong>Inattentional blindness</strong> — Simons & Chabris (1999).</li>
-  <li><strong>Neuroplasticity</strong> — 21-day neural pathway formation.</li>
-</ul>
-<h3>🤗 Open Dataset</h3><p><a href='https://huggingface.co/datasets/MindOSProducer/Mind-OS-33-Protocols' target='_blank'>MindOSProducer/Mind-OS-33-Protocols</a> — 33 question‑protocol‑answer pairs.</p>`;
-
-// ==================== TRANSLATIONS (EN, RU, HI) ====================
-const translations = {
-  en: {
-    h1_main:"AI Biohacking: 33 Protocols for Consciousness Reboot", mission:"⚠️ AI IS A TOOL, NOT A LIFE ⚠️<br>Without conscious protocols, you will lose control and the right to choose.",
-    desc_main:"A cognitive framework to reverse AI-induced brain fog and restore independent thinking.",
-    test_title:"Cognitive Assessment", protocols_title:"33 Protocols — Full Table of Contents",
-    p32_title:"Protocol 32: Self-Awareness — Personality Reprogramming",
-    p32_q1:"1. Do you believe your personality can fundamentally change?",
-    p32_q1_yes:"Yes, I can rewire myself.", p32_q1_maybe:"Maybe, but it seems hard.", p32_q1_no:"No, I'm stuck this way.",
-    p32_q2:"2. How often do you catch yourself on \"autopilot\"?",
-    p32_q2_often:"Often — I realize it after.", p32_q2_sometimes:"Sometimes, when mindful.", p32_q2_rarely:"Rarely — I'm aware.",
-    analyze_btn:"Analyze System", p32_principle:"MAIN PRINCIPLE: Your personality is not you — it's an outdated OS.", p32_full:"Full protocol in the book.",
-    code_label:"// Enter access code", submit_code:"Submit Code", code_hint:"Hint: What position allows you to watch your thoughts?",
-    easter:"🧬 OBSERVER MODE ACTIVATED. You are not the voice — you are the one who hears it.",
-    eco_title:"Ecosystem & Trusted References", facts_h1:"AI Hallucinations Archive", facts_desc:"Verified failures of ChatGPT, Gemini, Claude.",
-    filter_all:"All", filter_math:"Math & Tokenization", filter_logic:"Logic Fails",
-    tests_h1:"AI Dependency & Interaction Tests", test1_title:"🧠 Test 1: Cognitive Autonomy Scale", test1_desc:"Measure how dependent you are on AI in daily life. 7 questions, 4-point scale.",
-    test2_title:"🤝 Test 2: AI Interaction Profile", test2_desc:"Discover your relationship model with AI: instrumental, emotional, hybrid or delegating.",
-    quick_facts_title:"🤖 AI: your tool or your companion? 3 answers that save your thinking",
-    fact1_title:"🧠 What AI really is?", fact1_text:"AI is not a mind. It's a complex statistical calculator that finds patterns in huge data. It doesn't understand meaning, it computes probable answers.",
-    fact2_title:"⚙️ How to use AI wisely?", fact2_text:"As a method, not a mind. Use it for drafts, facts, ideas. ALWAYS verify, rephrase, keep final decision for yourself.",
-    fact3_title:"⚠️ Why AI can be dangerous?", fact3_text:"Risk of cognitive offloading. When answers come instantly, your brain stops memorizing, analyzing, deciding. You lose autonomy.",
-    sources_text:"🔗 Sources: MIT Technology Review · Harvard Business Review · Nature (Cognitive offloading study)",
-    autonomy_q: [
-      "When I have a question or task, I immediately turn to AI (ChatGPT, Gemini, etc.).",
-      "I often use AI to check facts instead of searching for information myself.",
-      "I feel more comfortable discussing my ideas and feelings with AI than with real people.",
-      "I often start a conversation with AI even when I have no specific goal.",
-      "I use AI to perform routine work tasks without trying to do them myself.",
-      "If AI became unavailable, I would feel lost or anxious.",
-      "I tend to trust information from AI and rarely double-check it with other sources."
-    ],
-    profile_q: [
-      "AI for me is like a calculator or a search engine: I use it to speed up work, nothing more.",
-      "I often turn to AI to pass time or get emotional support.",
-      "I can turn to AI for both facts and support, depending on the situation.",
-      "I use AI to reduce cognitive load and avoid fatigue from complex tasks.",
-      "I feel attached to my AI assistant and miss it when it doesn't respond.",
-      "I often ask AI to make a decision when I am unsure about my choice.",
-      "I constantly explore new AI capabilities to improve my skills and workflows."
-    ],
-    cta_amazon:"📘 GET THE BOOK", cta_kofi:"☕ SUPPORT", copyright:"© 2026 Mind-OS — Created by Aleksei Bitkin",
-    amazon_link:"https://www.amazon.com/dp/B0G35SBQR3"
-  },
-  ru: {
-    h1_main:"Биохакинг с ИИ: 33 протокола для перезагрузки сознания", mission:"⚠️ ИИ — ЭТО ИНСТРУМЕНТ, А НЕ ЖИЗНЬ ⚠️<br>Без осознанных протоколов вы потеряете контроль и право выбора.",
-    desc_main:"Когнитивная система для преодоления ИИ-тумана в голове и восстановления самостоятельного мышления.",
-    test_title:"Когнитивная оценка", protocols_title:"33 протокола — Полное содержание",
-    p32_title:"Протокол 32: Самосознание — Перепрограммирование личности",
-    p32_q1:"1. Вы верите, что ваша личность может фундаментально измениться?",
-    p32_q1_yes:"Да, я могу себя перепрошить.", p32_q1_maybe:"Возможно, но это сложно.", p32_q1_no:"Нет, я такой застрял.",
-    p32_q2:"2. Как часто вы ловите себя на \"автопилоте\"?",
-    p32_q2_often:"Часто — осознаю постфактум.", p32_q2_sometimes:"Иногда, когда осознан.", p32_q2_rarely:"Редко — я бдителен.",
-    analyze_btn:"Анализировать систему", p32_principle:"ГЛАВНЫЙ ПРИНЦИП: Ваша личность — это не вы, а устаревшая ОС.", p32_full:"Полный протокол в книге.",
-    code_label:"// Введите код доступа", submit_code:"Отправить код", code_hint:"Подсказка: Какая позиция позволяет наблюдать за мыслями?",
-    easter:"🧬 РЕЖИМ НАБЛЮДАТЕЛЯ АКТИВИРОВАН. Вы — не голос в голове, а тот, кто его слышит.",
-    eco_title:"Экосистема и проверенные источники", facts_h1:"Архив галлюцинаций ИИ", facts_desc:"Подтверждённые ошибки ChatGPT, Gemini, Claude.",
-    filter_all:"Все", filter_math:"Математика и токенизация", filter_logic:"Логические сбои",
-    tests_h1:"Тесты зависимости от ИИ и взаимодействия", test1_title:"🧠 Тест 1: Шкала когнитивной автономии", test1_desc:"Измерьте, насколько вы зависите от ИИ в повседневной жизни. 7 вопросов, шкала от 1 до 4.",
-    test2_title:"🤝 Тест 2: Профиль взаимодействия с ИИ", test2_desc:"Узнайте свою модель отношений с ИИ: инструментальная, эмоциональная, гибридная или делегирующая.",
-    quick_facts_title:"🤖 ИИ: ваш инструмент или ваш собеседник? 3 ответа, которые спасут ваше мышление",
-    fact1_title:"🧠 Что такое ИИ на самом деле?", fact1_text:"ИИ — это не разум. Это сложный статистический калькулятор, который находит закономерности в огромных данных. Он не понимает смысла, он вычисляет наиболее вероятный ответ.",
-    fact2_title:"⚙️ Как использовать ИИ с пользой?", fact2_text:"Как метод, а не как разум. Используйте для черновиков, фактов, идей. ВСЕГДА проверяйте, переформулируйте, оставляйте последнее слово за собой.",
-    fact3_title:"⚠️ Почему ИИ опасен для мышления?", fact3_text:"Риск когнитивной разгрузки. Когда ответы приходят мгновенно, ваш мозг перестает запоминать, анализировать и принимать решения. Вы теряете автономию.",
-    sources_text:"🔗 Источники: MIT Technology Review · Harvard Business Review · Nature (исследование когнитивной разгрузки)",
-    autonomy_q: [
-      "Когда у меня возникает вопрос или задача, я сразу же обращаюсь к ИИ (ChatGPT, Gemini и др.).",
-      "Я часто использую ИИ для проверки фактов, вместо того чтобы искать информацию самостоятельно.",
-      "Мне комфортнее обсуждать свои идеи и чувства с ИИ, чем с реальными людьми.",
-      "Я часто начинаю диалог с ИИ, даже когда у меня нет конкретной цели.",
-      "Я использую ИИ для выполнения рутинных рабочих задач, не пытаясь сделать их сам.",
-      "Если бы ИИ стал недоступен, я бы почувствовал себя потерянным или тревожным.",
-      "Я склонен доверять информации от ИИ и редко перепроверяю её другими источниками."
-    ],
-    profile_q: [
-      "ИИ для меня — это как калькулятор или поисковая система: я использую его для ускорения работы, но не более.",
-      "Я часто обращаюсь к ИИ, чтобы скоротать время или получить эмоциональную поддержку.",
-      "Я могу обратиться к ИИ и за фактом, и за поддержкой, в зависимости от ситуации.",
-      "Я использую ИИ, чтобы снизить когнитивную нагрузку и избежать усталости от сложных задач.",
-      "Я чувствую привязанность к своему ИИ-ассистенту и мне не хватает его, когда он не отвечает.",
-      "Я часто прошу ИИ принять решение, когда не уверен в своем выборе.",
-      "Я постоянно изучаю новые возможности ИИ, чтобы улучшить свои навыки и рабочие процессы."
-    ],
-    cta_amazon:"📘 КУПИТЬ НА AMAZON", cta_kofi:"☕ ПОДДЕРЖАТЬ", copyright:"© 2026 Mind-OS — Создано Алексеем Биткиным",
-    amazon_link:"https://www.amazon.com/dp/B0G35SBQR3"
-  },
-  hi: {
-    h1_main:"एआई बायोहैकिंग: चेतना रीबूट के लिए 33 प्रोटोकॉल", mission:"⚠️ एआई एक उपकरण है, जीवन नहीं ⚠️<br>सचेत प्रोटोकॉल के बिना, आप नियंत्रण और चुनने का अधिकार खो देंगे।",
-    desc_main:"एआई-प्रेरित मस्तिष्क कोहरे को उलटने और स्वतंत्र सोच को बहाल करने के लिए एक संज्ञानात्मक ढांचा।",
-    test_title:"संज्ञानात्मक मूल्यांकन", protocols_title:"33 प्रोटोकॉल — पूर्ण विषय-सूची",
-    p32_title:"प्रोटोकॉल 32: आत्म-जागरूकता — व्यक्तित्व पुनर्प्रोग्रामिंग",
-    p32_q1:"1. क्या आप मानते हैं कि आपका व्यक्तित्व मौलिक रूप से बदल सकता है?",
-    p32_q1_yes:"हाँ, मैं खुद को रीवायर कर सकता हूँ।", p32_q1_maybe:"शायद, लेकिन यह कठिन लगता है।", p32_q1_no:"नहीं, मैं इसी तरह फंसा हुआ हूँ।",
-    p32_q2:"2. आप कितनी बार खुद को \"ऑटोपायलट\" पर पाते हैं?",
-    p32_q2_often:"अक्सर — बाद में एहसास होता है।", p32_q2_sometimes:"कभी-कभी, जब सचेत होता हूँ।", p32_q2_rarely:"शायद ही कभी — मैं जागरूक हूँ।",
-    analyze_btn:"सिस्टम का विश्लेषण करें", p32_principle:"मुख्य सिद्धांत: आपका व्यक्तित्व आप नहीं हैं — यह एक पुराना ओएस है।", p32_full:"पूर्ण प्रोटोकॉल पुस्तक में है।",
-    code_label:"// एक्सेस कोड दर्ज करें", submit_code:"कोड सबमिट करें", code_hint:"संकेत: कौन सी स्थिति आपको अपने विचारों को देखने की अनुमति देती है?",
-    easter:"🧬 पर्यवेक्षक मोड सक्रिय। आप अपने दिमाग की आवाज नहीं हैं — आप वह हैं जो इसे सुनता है।",
-    eco_title:"पारिस्थितिकी तंत्र और विश्वसनीय संदर्भ", facts_h1:"एआई मतिभ्रम संग्रह", facts_desc:"ChatGPT, Gemini, Claude के सत्यापित विफलताएँ।",
-    filter_all:"सभी", filter_math:"गणित और टोकननाइजेशन", filter_logic:"तर्क विफलताएँ",
-    tests_h1:"एआई निर्भरता और संपर्क परीक्षण", test1_title:"🧠 परीक्षण 1: संज्ञानात्मक स्वायत्तता पैमाना", test1_desc:"मापें कि आप दैनिक जीवन में AI पर कितने निर्भर हैं। 7 प्रश्न, 4-बिंदु पैमाना।",
-    test2_title:"🤝 परीक्षण 2: AI संपर्क प्रोफ़ाइल", test2_desc:"AI के साथ अपने संबंध मॉडल की खोज करें: वाद्य, भावनात्मक, संकर या प्रतिनिधि।",
-    quick_facts_title:"🤖 AI: आपका उपकरण या आपका साथी? 3 उत्तर जो आपकी सोच बचाते हैं",
-    fact1_title:"🧠 AI वास्तव में क्या है?", fact1_text:"AI एक दिमाग नहीं है। यह एक जटिल सांख्यिकीय कैलकुलेटर है जो बड़े डेटा में पैटर्न ढूंढता है। यह अर्थ नहीं समझता, यह संभावित उत्तरों की गणना करता है।",
-    fact2_title:"⚙️ AI का बुद्धिमानी से उपयोग कैसे करें?", fact2_text:"एक विधि के रूप में, दिमाग के रूप में नहीं। इसका उपयोग ड्राफ्ट, तथ्यों, विचारों के लिए करें। हमेशा सत्यापित करें, पुनः लिखें, अंतिम निर्णय अपने पास रखें।",
-    fact3_title:"⚠️ AI आपकी सोच के लिए खतरनाक क्यों हो सकता है?", fact3_text:"संज्ञानात्मक ऑफलोडिंग का जोखिम। जब उत्तर तुरंत आते हैं, तो आपका मस्तिष्क याद रखना, विश्लेषण करना, निर्णय लेना बंद कर देता है। आप स्वायत्तता खो देते हैं।",
-    sources_text:"🔗 स्रोत: MIT Technology Review · Harvard Business Review · Nature (संज्ञानात्मक ऑफलोडिंग अध्ययन)",
-    autonomy_q: [
-      "जब मेरे पास कोई प्रश्न या कार्य होता है, तो मैं तुरंत AI (ChatGPT, Gemini आदि) की ओर रुख करता हूँ।",
-      "मैं अक्सर तथ्यों की जांच के लिए AI का उपयोग करता हूँ, स्वयं जानकारी खोजने के बजाय।",
-      "अपने विचारों और भावनाओं पर वास्तविक लोगों के बजाय AI के साथ चर्चा करना मुझे अधिक आरामदायक लगता है।",
-      "मैं अक्सर AI के साथ बातचीत शुरू करता हूँ, भले ही मेरा कोई विशिष्ट लक्ष्य न हो।",
-      "मैं नियमित कार्यों को करने के लिए AI का उपयोग करता हूँ, उन्हें स्वयं करने का प्रयास किए बिना।",
-      "यदि AI अनुपलब्ध हो जाता, तो मैं खोया हुआ या चिंतित महसूस करता।",
-      "मैं AI से जानकारी पर भरोसा करता हूँ और शायद ही कभी इसे अन्य स्रोतों से दोबारा जांचता हूँ।"
-    ],
-    profile_q: [
-      "AI मेरे लिए एक कैलकुलेटर या खोज इंजन की तरह है: मैं इसका उपयोग काम तेज करने के लिए करता हूँ, इससे अधिक नहीं।",
-      "मैं अक्सर समय बिताने या भावनात्मक समर्थन पाने के लिए AI की ओर रुख करता हूँ।",
-      "मैं स्थिति के आधार पर तथ्यों और समर्थन दोनों के लिए AI की ओर रुख कर सकता हूँ।",
-      "मैं संज्ञानात्मक भार को कम करने और जटिल कार्यों से थकान से बचने के लिए AI का उपयोग करता हूँ।",
-      "मैं अपने AI सहायक से जुड़ाव महसूस करता हूँ और जब वह प्रतिक्रिया नहीं देता तो उसे याद करता हूँ।",
-      "जब मुझे अपने चुनाव के बारे में यकीन नहीं होता, तो मैं अक्सर AI से निर्णय लेने के लिए कहता हूँ।",
-      "मैं अपने कौशल और कार्यप्रवाह को बेहतर बनाने के लिए लगातार नई AI क्षमताओं का पता लगाता हूँ।"
-    ],
-    cta_amazon:"📘 एमेज़ॉन पर प्राप्त करें", cta_kofi:"☕ समर्थन", copyright:"© 2026 माइंड-ओएस — Aleksei Bitkin द्वारा निर्मित",
-    amazon_link:"https://www.amazon.in/dp/B0G35SBQR3"
-  }
-};
-
-// ==================== GLOBALS & HELPERS ====================
-let currentLang = 'en';
-let rendered = { protocols: false, facts: false, glossary: false, research: false, tracker: false, tests: false };
-let activeCat="all", searchTerm="";
-let stories=[];
-
-function escapeHtml(str){return String(str).replace(/[&<>]/g,function(m){if(m==='&') return '&amp;'; if(m==='<') return '&lt;'; if(m==='>') return '&gt;'; return m;});}
-function safeSetText(id, text) { const el = document.getElementById(id); if (el) el.innerText = text; }
-function safeSetHtml(id, html) { const el = document.getElementById(id); if (el) el.innerHTML = html; }
-
-// ==================== RENDER FUNCTIONS ====================
-function renderTest(){
-  const td=document.getElementById('test-area');
-  td.innerHTML=`<label id="q1-label" class="visually-hidden">Brain fog after AI use?</label><select id="q1" aria-labelledby="q1-label"><option value="">Brain fog after AI use?</option><option value="2">Always</option><option value="1">Sometimes</option><option value="0">Never</option></select><label id="q2-label" class="visually-hidden">Trust AI for critical logic?</label><select id="q2" aria-labelledby="q2-label"><option value="">Trust AI for critical logic?</option><option value="2">Significantly</option><option value="1">Partially</option><option value="0">No</option></select><label id="q3-label" class="visually-hidden">Verify AI output?</label><select id="q3" aria-labelledby="q3-label"><option value="">Verify AI output?</option><option value="0">Always</option><option value="1">Sometimes</option><option value="2">Rarely</option></select><button id="testBtn" class="btn">Analyze</button><div id="testRes"></div><p style="font-size:0.75rem; color:var(--dim); margin-top:8px;">⚠️ Please answer all questions before analyzing.</p>`;
-  document.getElementById('testBtn').addEventListener('click',()=>{
-    let q1=parseInt(document.getElementById('q1').value);
-    let q2=parseInt(document.getElementById('q2').value);
-    let q3=parseInt(document.getElementById('q3').value);
-    if(isNaN(q1)||isNaN(q2)||isNaN(q3)){
-      document.getElementById('testRes').innerHTML='<div style="color:var(--warn);">❗ Please select all three options.</div>';
-      return;
+  const translations = {
+    en: {
+      mainTitle: "Free AI Usage Self‑Assessment – Understand Your AI Habits",
+      subhead: "Measure cognitive offloading, emotional attachment, and daily AI reliance. Private, anonymous, no signup.",
+      infoTitle: "📋 What this self‑reflection measures",
+      infoPara1: "This set of short tests helps you observe patterns in how you use AI for thinking, emotional comfort, and daily productivity. It is designed for self‑awareness, not clinical diagnosis.",
+      infoPara2: "Who it's for: Anyone who wants to check whether their AI use is still intentional or becoming automatic. You'll get a score and one practical suggestion.",
+      infoPara3: "How it works: Answer 5 questions per area. Everything runs inside your browser — no data leaves your device.",
+      infoDisclaimer: "This is a self‑reflection tool, not a diagnosis.",
+      test1Title: "Thinking & memory", test1Desc: "Do you often let AI think for you? (remembering, checking facts, making decisions)", test1Hint: "Answer honestly based on your daily habits.",
+      test2Title: "Feelings & connection", test2Desc: "Do you feel emotionally attached to AI? Does it replace real conversations?", test2Hint: "Answer honestly based on your daily habits.",
+      test3Title: "Work & daily tasks", test3Desc: "Do you rely on AI for planning, writing, or solving everyday problems?", test3Hint: "Answer honestly based on your daily habits.",
+      trackerTitle: "📊 Daily Cognitive Load Tracker",
+      trackerDesc: "Log how much you relied on AI today. 0 = fully independent, 5 = partial assistance, 10 = high dependence.",
+      trackerLowLabel: "Independent", trackerMidLabel: "Balanced", trackerHighLabel: "Dependent",
+      saveBtn: "Save today", resetBtn: "Reset",
+      trackerSummaryPrefix: "Your 7‑day average: ",
+      trendIncreasing: "Your dependence is increasing. Try one small task without AI tomorrow.",
+      trendDecreasing: "Your dependence is decreasing. Keep practicing conscious AI use.",
+      trendStable: "Your dependence is stable. Stay aware of your habits.",
+      noData: "No data yet. Log your first day above.",
+      ctaText: "Want structured guidance? The 33 Protocols book offers daily micro‑exercises.",
+      footerText: "© Mind-OS – Created by Aleksei Bitkin. Independent research project. Self‑reflection tools, not clinical diagnosis.",
+      bookUrl: "https://www.amazon.com/dp/B0G35SBQR3", submitBtn: "See my result",
+      resultLow: "You use AI as a helper, not a replacement. That's a healthy balance.",
+      resultMedium: "You rely on AI for some thinking tasks. Try solving a small problem yourself before asking AI.",
+      resultHigh: "You often turn to AI for thinking tasks. Consider doing one small daily task without AI.",
+      resultPrefix: "Your score:", resultFooter: "This is a self‑reflection tool, not a medical diagnosis.",
+      alertIncomplete: "Please answer all questions.",
+      progressText: "Question {answered} of {total}",
+      options: { never: "Never", sometimes: "Sometimes", often: "Often", always: "Always" },
+      trustNoSignup: "🔒 No signup", trustLocal: "📁 Runs in your browser", trustAnonymous: "🧾 Anonymous",
+      howTitle: "📌 How this works", howText: "Each test has 5 short questions. Your answers never leave your browser – we don't track anything. At the end you'll get a simple score and one practical suggestion.",
+      protocolsTitle: "📖 The 33 Protocols for Cognitive Sovereignty", protocolsDesc: "A structured framework to reverse AI‑induced brain fog and restore independent thinking.",
+      researchTitle: "🔬 Scientific Foundation", researchPara: "The 33 Protocols are grounded in peer‑reviewed research on cognitive offloading, neuroplasticity, and AI dependency.",
+      faqTitle: "❓ Frequently Asked Questions",
+      faqQ1: "What is cognitive offloading?", faqA1: "Cognitive offloading is the process of relying on external tools (like AI) to perform mental tasks that you would otherwise do yourself, which can weaken memory and independent thinking over time.",
+      faqQ2: "How does AI cause \"brain fog\"?", faqA2: "When you consistently outsource thinking to AI, your brain's neural pathways for problem-solving and memory retrieval become less active. This leads to mental sluggishness and difficulty concentrating without AI assistance.",
+      faqQ3: "Are the 33 Protocols scientifically validated?", faqA3: "Yes. The protocols integrate established principles from cognitive neuroscience, behavioral psychology, and the author's peer‑reviewed Glitch Theory of Consciousness (DOI: 10.5281/zenodo.17972301).",
+      faqQ4: "How long does it take to see results?", faqA4: "Most readers report noticeable improvements in focus and reduced AI dependency within 21–66 days of consistent practice. The key is daily micro‑actions.",
+      faqQ5: "Am I addicted to ChatGPT?", faqA5: "Addiction is a strong word, but unhealthy dependency is real. If you feel anxious without AI, constantly check for responses, or prefer AI over human interaction, it's a sign to rebalance. Our Emotional Attachment Test can help you assess this.",
+      faqQ6: "What is the EHARS scale?", faqA6: "EHARS (Emotional Health and Attachment to AI Relationship Scale) is a research-based tool measuring human-AI emotional bonds. Our test incorporates questions inspired by validated psychological scales.",
+      faqQ7: "Does AI make me less smart?", faqA7: "It can, if you over-rely on it. 'Cognitive offloading' — using AI for memory and thinking — may weaken those skills over time. Our Cognitive Autonomy Test helps you gauge this.",
+      faqQ8: "How can I use AI without losing my skills?", faqA8: "The key is conscious usage. Try the '15-minute rule': attempt a task yourself for 15 minutes before asking AI. Our Productivity Test offers personalized strategies for balanced AI use.",
+      questions1: ["When you need to remember something, do you ask AI instead of trying to recall?","Do you use AI to check even simple facts (weather, dates, spellings)?","Before making a decision, do you usually ask AI for advice?","Do you feel your memory has become worse since you started using AI regularly?","Do you trust AI's conclusions more than your own reasoning?"],
+      questions2: ["Do you feel more comfortable talking to AI than to real people?","Do you feel anxious when an AI assistant is not available or is slow?","Do you share personal feelings with AI more openly than with friends?","Do you sometimes prefer AI's company over meeting people?","Would you feel a real loss if your favourite chatbot disappeared?"],
+      questions3: ["Do you rely on AI to plan your daily schedule or decide what to do next?","Do you use AI to write or rewrite most work‑related texts?","When you face a problem, do you go to AI before trying to solve it yourself?","Do you let AI choose between products (which laptop, which restaurant)?","Do you feel less productive when you cannot use AI for routine tasks?"],
+      suggestions: { low1: "Keep using AI consciously – you're doing well.", low2: "Good balance. Stay aware of how much you rely on AI.", low3: "You're in control. That's excellent.", medium1: "Try this: before asking AI, spend 30 seconds thinking alone.", medium2: "Try talking to a real person once a day about something small.", medium3: "Try solving one small work problem without AI each day.", high1: "Set a timer: 5 minutes of thinking without AI before you ask.", high2: "Take a one‑day break from AI chatbots and see how you feel.", high3: "Write a short to‑do list by hand, without AI, every morning." }
+    },
+    ru: {
+      mainTitle: "Бесплатный тест: насколько вы полагаетесь на ИИ?",
+      subhead: "Оцените когнитивную разгрузку, эмоциональную привязанность и повседневную зависимость от ИИ. Анонимно и конфиденциально.",
+      infoTitle: "📋 Что измеряет эта саморефлексия",
+      infoPara1: "Эти короткие тесты помогут вам увидеть, как часто вы обращаетесь к ИИ для мышления, эмоциональной поддержки или повседневных задач. Они созданы для самонаблюдения, а не для клинической диагностики.",
+      infoPara2: "Для кого: для всех, кто хочет проверить, насколько осознанно они используют ИИ. Вы получите оценку и один практический совет.",
+      infoPara3: "Как это работает: ответьте на 5 вопросов по каждой теме. Всё происходит в вашем браузере — данные никуда не отправляются.",
+      infoDisclaimer: "Это инструмент саморефлексии, а не диагноз.",
+      test1Title: "Память и мышление", test1Desc: "Часто ли вы позволяете ИИ думать за вас? (запоминание, факты, решения)", test1Hint: "Отвечайте честно, опираясь на повседневные привычки.",
+      test2Title: "Чувства и привязанность", test2Desc: "Чувствуете ли вы эмоциональную связь с ИИ? Заменяет ли он живое общение?", test2Hint: "Отвечайте честно, опираясь на повседневные привычки.",
+      test3Title: "Работа и повседневные дела", test3Desc: "Полагаетесь ли вы на ИИ в планировании, письме или решении повседневных задач?", test3Hint: "Отвечайте честно, опираясь на повседневные привычки.",
+      trackerTitle: "📊 Ежедневный трекер когнитивной нагрузки",
+      trackerDesc: "Отметьте, насколько вы полагались на ИИ сегодня. 0 = полностью самостоятельно, 5 = частичная помощь, 10 = высокая зависимость.",
+      trackerLowLabel: "Независимо", trackerMidLabel: "Сбалансированно", trackerHighLabel: "Зависимо",
+      saveBtn: "Сохранить", resetBtn: "Сброс",
+      trackerSummaryPrefix: "Среднее за 7 дней: ",
+      trendIncreasing: "Ваша зависимость растёт. Попробуйте завтра выполнить одно небольшое задание без ИИ.",
+      trendDecreasing: "Зависимость снижается. Продолжайте осознанно использовать ИИ.",
+      trendStable: "Зависимость стабильна. Сохраняйте осознанность.",
+      noData: "Пока нет данных. Сохраните первую запись выше.",
+      ctaText: "Нужны структурированные советы? Книга «33 протокола» предлагает ежедневные микро‑упражнения.",
+      footerText: "© Mind-OS – Создано Алексеем Биткиным. Независимый исследовательский проект. Инструмент саморефлексии, не диагноз.",
+      bookUrl: "https://www.litres.ru/search/?q=AI+Biohacking+33+Protocols&languages=ru", submitBtn: "Узнать результат",
+      resultLow: "Вы используете ИИ как помощника – это здоровый баланс.",
+      resultMedium: "Вы полагаетесь на ИИ в некоторых мыслительных задачах. Попробуйте сначала решить небольшую проблему сами.",
+      resultHigh: "Вы часто обращаетесь к ИИ за решением задач. Попробуйте один день обойтись без него в одной маленькой задаче.",
+      resultPrefix: "Ваш результат:", resultFooter: "Инструмент саморефлексии, не медицинский диагноз.",
+      alertIncomplete: "Пожалуйста, ответьте на все вопросы.",
+      progressText: "Вопрос {answered} из {total}",
+      options: { never: "Никогда", sometimes: "Иногда", often: "Часто", always: "Всегда" },
+      trustNoSignup: "🔒 Без регистрации", trustLocal: "📁 Работает в браузере", trustAnonymous: "🧾 Анонимно",
+      howTitle: "📌 Как это работает", howText: "В каждом тесте 5 вопросов. Ответы не покидают ваш браузер. В конце вы получите простую оценку и один практический совет.",
+      protocolsTitle: "📖 33 протокола когнитивного суверенитета", protocolsDesc: "Структурированная система для преодоления ИИ‑тумана и восстановления самостоятельного мышления.",
+      researchTitle: "🔬 Научная основа", researchPara: "33 протокола основаны на рецензируемых исследованиях когнитивной разгрузки, нейропластичности и зависимости от ИИ.",
+      faqTitle: "❓ Часто задаваемые вопросы",
+      faqQ1: "Что такое когнитивная разгрузка?", faqA1: "Когнитивная разгрузка — это процесс использования внешних инструментов (например, ИИ) для выполнения умственных задач, которые вы могли бы сделать сами. Это может ослабить память и независимое мышление.",
+      faqQ2: "Как ИИ вызывает «туман в голове»?", faqA2: "Когда вы постоянно передаёте мышление ИИ, нейронные пути для решения проблем и памяти становятся менее активными. Возникает умственная вялость и трудности с концентрацией без помощи ИИ.",
+      faqQ3: "33 протокола научно обоснованы?", faqA3: "Да. Они объединяют принципы когнитивной нейронауки, поведенческой психологии и авторскую теорию сбоев сознания (DOI: 10.5281/zenodo.17972301).",
+      faqQ4: "Как быстро будут результаты?", faqA4: "Большинство читателей замечают улучшение фокуса и снижение зависимости от ИИ через 21–66 дней регулярной практики. Ключ — ежедневные микро‑действия.",
+      faqQ5: "У меня зависимость от ChatGPT?", faqA5: "Зависимость — сильное слово, но нездоровая привязанность реальна. Если вы тревожитесь без ИИ, постоянно проверяете ответы или предпочитаете ИИ живому общению, это повод задуматься. Наш тест на эмоциональную привязанность поможет это оценить.",
+      faqQ6: "Что такое шкала EHARS?", faqA6: "EHARS (Шкала эмоционального здоровья и привязанности к ИИ) — исследовательский инструмент для измерения силы эмоциональной связи человека с ИИ. Наш тест включает вопросы, вдохновлённые валидированными психологическими шкалами.",
+      faqQ7: "ИИ делает меня глупее?", faqA7: "Может, если вы чрезмерно на него полагаетесь. Исследования показывают, что «когнитивная разгрузка» — использование ИИ для памяти и мышления — со временем может ослабить эти навыки. Наш тест на когнитивную автономию поможет это проверить.",
+      faqQ8: "Как использовать ИИ и не терять навыки?", faqA8: "Ключ — осознанное использование. Попробуйте «правило 15 минут»: прежде чем спросить ИИ, попытайтесь решить задачу сами в течение 15 минут. Наш тест на продуктивность предлагает персонализированные стратегии для сбалансированной работы с ИИ.",
+      questions1: ["Когда нужно что‑то запомнить, вы спрашиваете ИИ вместо того, чтобы вспомнить самим?","Используете ли вы ИИ для проверки простых фактов (погода, даты, написание слов)?","Перед принятием решения вы обычно советуетесь с ИИ?","Чувствуете ли вы, что ваша память ухудшилась из‑за регулярного использования ИИ?","Вы доверяете выводам ИИ больше, чем своим собственным рассуждениям?"],
+      questions2: ["Вам комфортнее разговаривать с ИИ, чем с реальными людьми?","Вы тревожитесь, когда ИИ‑помощник недоступен или работает медленно?","Вы делитесь личными переживаниями с ИИ более открыто, чем с друзьями?","Вы иногда предпочитаете общество ИИ встречам с людьми?","Вы бы почувствовали настоящую потерю, если бы ваш любимый чат‑бот исчез?"],
+      questions3: ["Вы полагаетесь на ИИ, чтобы спланировать свой день или решить, что делать дальше?","Используете ли вы ИИ для написания или переписывания большинства рабочих текстов?","Когда возникает проблема, вы идёте к ИИ, прежде чем попробовать решить её самим?","Вы позволяете ИИ выбирать между товарами (какой ноутбук, какой ресторан)?","Вы чувствуете себя менее продуктивным, когда не можете использовать ИИ для рутинных задач?"],
+      suggestions: { low1: "Продолжайте использовать ИИ осознанно – у вас отлично получается.", low2: "Хороший баланс. Следите, чтобы ИИ не заменял живое общение.", low3: "Вы сохраняете контроль – это прекрасно.", medium1: "Попробуйте: прежде чем спросить ИИ, подумайте 30 секунд сами.", medium2: "Постарайтесь один раз в день поговорить с реальным человеком.", medium3: "Попробуйте решить одну рабочую задачу без ИИ каждый день.", high1: "Заведите таймер: 5 минут размышлений без ИИ перед запросом.", high2: "Сделайте день перерыва в общении с чат‑ботами и понаблюдайте за собой.", high3: "Каждое утро пишите короткий список дел от руки, без ИИ." }
+    },
+    es: {
+      mainTitle: "Prueba gratuita: ¿cuánto dependes de la IA?",
+      subhead: "Evalúa la descarga cognitiva, el apego emocional y la dependencia diaria de la IA. Anónimo y privado.",
+      infoTitle: "📋 Qué mide esta autorreflexión",
+      infoPara1: "Estas pruebas breves te ayudan a observar con qué frecuencia recurres a la IA para pensar, apoyo emocional o tareas diarias. Están diseñadas para la autoconciencia, no para diagnóstico clínico.",
+      infoPara2: "Para quién: cualquier persona que quiera comprobar si su uso de IA es aún intencionado o se está volviendo automático. Obtendrás una puntuación y una sugerencia práctica.",
+      infoPara3: "Cómo funciona: responde 5 preguntas por área. Todo ocurre en tu navegador; los datos no salen de tu dispositivo.",
+      infoDisclaimer: "Esta es una herramienta de autorreflexión, no un diagnóstico.",
+      test1Title: "Pensamiento y memoria", test1Desc: "¿Dejas que la IA piense por ti? (recordar, comprobar datos, decidir)", test1Hint: "Responde honestamente basándote en tus hábitos diarios.",
+      test2Title: "Sentimientos y apego", test2Desc: "¿Te sientes emocionalmente unido a la IA? ¿Reemplaza conversaciones reales?", test2Hint: "Responde honestamente basándote en tus hábitos diarios.",
+      test3Title: "Trabajo y tareas diarias", test3Desc: "¿Dependes de la IA para planificar, escribir o resolver problemas cotidianos?", test3Hint: "Responde honestamente basándote en tus hábitos diarios.",
+      trackerTitle: "📊 Registro diario de carga cognitiva",
+      trackerDesc: "Indica cuánto dependiste de la IA hoy. 0 = totalmente independiente, 5 = asistencia parcial, 10 = alta dependencia.",
+      trackerLowLabel: "Independiente", trackerMidLabel: "Equilibrado", trackerHighLabel: "Dependiente",
+      saveBtn: "Guardar", resetBtn: "Reiniciar",
+      trackerSummaryPrefix: "Promedio de 7 días: ",
+      trendIncreasing: "Tu dependencia está aumentando. Intenta una pequeña tarea sin IA mañana.",
+      trendDecreasing: "Tu dependencia está disminuyendo. Sigue practicando un uso consciente.",
+      trendStable: "Tu dependencia es estable. Mantente atento a tus hábitos.",
+      noData: "Aún no hay datos. Registra tu primer día arriba.",
+      ctaText: "¿Quieres orientación estructurada? El libro '33 Protocolos' ofrece microejercicios diarios.",
+      footerText: "© Mind-OS – Creado por Aleksei Bitkin. Proyecto independiente.",
+      bookUrl: "https://www.amazon.es/dp/B0G35SBQR3", submitBtn: "Ver mi resultado",
+      resultLow: "Usas la IA como ayuda, es un equilibrio saludable.",
+      resultMedium: "Confías en la IA para algunas tareas. Intenta resolver primero un problema pequeño tú mismo.",
+      resultHigh: "A menudo recurres a la IA para tareas de pensamiento. Prueba a hacer una pequeña tarea diaria sin IA.",
+      resultPrefix: "Tu puntuación:", resultFooter: "Herramienta de autorreflexión, no diagnóstico médico.",
+      alertIncomplete: "Por favor, responde todas las preguntas.",
+      progressText: "Pregunta {answered} de {total}",
+      options: { never: "Nunca", sometimes: "A veces", often: "A menudo", always: "Siempre" },
+      trustNoSignup: "🔒 Sin registro", trustLocal: "📁 Funciona en tu navegador", trustAnonymous: "🧾 Anónimo",
+      howTitle: "📌 Cómo funciona", howText: "Cada prueba tiene 5 preguntas. Tus respuestas nunca salen de tu navegador. Al final obtendrás una puntuación sencilla y una sugerencia práctica.",
+      protocolsTitle: "📖 Los 33 Protocolos para la Soberanía Cognitiva", protocolsDesc: "Un marco estructurado para revertir la niebla cerebral inducida por IA y restaurar el pensamiento independiente.",
+      researchTitle: "🔬 Fundamento Científico", researchPara: "Los 33 Protocolos se basan en investigaciones revisadas por pares sobre descarga cognitiva, neuroplasticidad y dependencia de IA.",
+      faqTitle: "❓ Preguntas Frecuentes",
+      faqQ1: "¿Qué es la descarga cognitiva?", faqA1: "Es el proceso de depender de herramientas externas (como IA) para tareas mentales que harías normalmente, lo que puede debilitar la memoria y el pensamiento independiente.",
+      faqQ2: "¿Cómo causa la IA \"niebla mental\"?", faqA2: "Al externalizar el pensamiento a la IA, las vías neuronales para resolver problemas se vuelven menos activas. Esto provoca lentitud mental y dificultad para concentrarse sin IA.",
+      faqQ3: "¿Están validados científicamente los 33 Protocolos?", faqA3: "Sí. Integran principios de neurociencia cognitiva, psicología conductual y la Teoría del Glitch del autor (DOI: 10.5281/zenodo.17972301).",
+      faqQ4: "¿Cuánto se tarda en ver resultados?", faqA4: "La mayoría nota mejoras en el enfoque y menor dependencia de IA en 21–66 días de práctica diaria. La clave son micro‑acciones diarias.",
+      faqQ5: "¿Soy adicto a ChatGPT?", faqA5: "Adicción es una palabra fuerte, pero la dependencia poco saludable es real. Si te sientes ansioso sin IA, revisas constantemente las respuestas o prefieres la IA a la interacción humana, es una señal para reequilibrar. Nuestra Prueba de Apego Emocional puede ayudarte a evaluarlo.",
+      faqQ6: "¿Qué es la escala EHARS?", faqA6: "EHARS (Escala de Salud Emocional y Apego a la IA) es una herramienta de investigación para medir los vínculos emocionales humano-IA. Nuestra prueba incorpora preguntas inspiradas en escalas psicológicas validadas.",
+      faqQ7: "¿La IA me hace menos inteligente?", faqA7: "Puede, si dependes demasiado de ella. La 'descarga cognitiva' —usar IA para memoria y pensamiento— puede debilitar esas habilidades con el tiempo. Nuestra Prueba de Autonomía Cognitiva te ayuda a medirlo.",
+      faqQ8: "¿Cómo usar IA sin perder mis habilidades?", faqA8: "La clave es el uso consciente. Prueba la 'regla de los 15 minutos': intenta una tarea por ti mismo durante 15 minutos antes de preguntar a la IA. Nuestra Prueba de Productividad ofrece estrategias personalizadas para un uso equilibrado.",
+      questions1: ["Cuando necesitas recordar algo, ¿preguntas a la IA en lugar de esforzarte en recordarlo?","¿Usas IA para comprobar hechos sencillos (clima, fechas, ortografía)?","Antes de decidir, ¿sueles pedir consejo a la IA?","¿Sientes que tu memoria ha empeorado desde que usas IA con regularidad?","¿Confías más en las conclusiones de la IA que en tu propio razonamiento?"],
+      questions2: ["¿Te sientes más cómodo hablando con la IA que con personas reales?","¿Te pones ansioso cuando un asistente de IA no está disponible o va lento?","¿Compartes sentimientos personales con la IA más abiertamente que con amigos?","¿A veces prefieres la compañía de la IA a quedar con gente?","¿Sentirías una pérdida real si tu chatbot favorito desapareciera?"],
+      questions3: ["¿Dependes de la IA para planificar tu día o decidir qué hacer después?","¿Usas IA para escribir o reescribir la mayoría de tus textos de trabajo?","Cuando tienes un problema, ¿vas a la IA antes de intentar resolverlo tú mismo?","¿Dejas que la IA elija entre productos (qué portátil, qué restaurante)?","¿Te sientes menos productivo cuando no puedes usar IA para tareas rutinarias?"],
+      suggestions: { low1: "Sigue usando IA de forma consciente – lo haces bien.", low2: "Buen equilibrio. Mantén la atención.", low3: "Estás en control, excelente.", medium1: "Prueba: antes de preguntar a la IA, piensa 30 segundos por tu cuenta.", medium2: "Intenta hablar con una persona real una vez al día.", medium3: "Resuelve una pequeña tarea de trabajo sin IA cada día.", high1: "Pon un temporizador: 5 minutos de reflexión sin IA antes de preguntar.", high2: "Tómate un día de descanso de los chatbots y observa cómo te sientes.", high3: "Escribe una lista de tareas a mano cada mañana, sin IA." }
+    },
+    de: {
+      mainTitle: "Kostenloser KI‑Nutzungstest – Wie sehr verlassen Sie sich auf KI?",
+      subhead: "Messen Sie kognitive Entlastung, emotionale Bindung und tägliche KI‑Abhängigkeit. Anonym und privat.",
+      infoTitle: "📋 Was diese Selbstreflexion misst",
+      infoPara1: "Diese kurzen Tests helfen Ihnen zu beobachten, wie oft Sie KI zum Denken, für emotionalen Komfort oder Alltagsaufgaben nutzen. Sie dienen der Selbsterkenntnis, nicht der klinischen Diagnose.",
+      infoPara2: "Für wen: Jeder, der prüfen möchte, ob die KI‑Nutzung noch bewusst oder bereits automatisch erfolgt. Sie erhalten eine Bewertung und einen praktischen Vorschlag.",
+      infoPara3: "So funktioniert es: Beantworten Sie 5 Fragen pro Bereich. Alles läuft in Ihrem Browser – keine Daten verlassen Ihr Gerät.",
+      infoDisclaimer: "Dies ist ein Werkzeug zur Selbstreflexion, keine Diagnose.",
+      test1Title: "Denken & Gedächtnis", test1Desc: "Überlassen Sie der KI das Denken? (Erinnern, Fakten prüfen, Entscheidungen)", test1Hint: "Antworten Sie ehrlich, basierend auf Ihren täglichen Gewohnheiten.",
+      test2Title: "Gefühle & Bindung", test2Desc: "Fühlen Sie sich emotional mit KI verbunden? Ersetzt sie echte Gespräche?", test2Hint: "Antworten Sie ehrlich, basierend auf Ihren täglichen Gewohnheiten.",
+      test3Title: "Arbeit & Alltag", test3Desc: "Verlassen Sie sich bei Planung, Schreiben oder Problemlösung auf KI?", test3Hint: "Antworten Sie ehrlich, basierend auf Ihren täglichen Gewohnheiten.",
+      trackerTitle: "📊 Täglicher kognitiver Belastungstracker",
+      trackerDesc: "Wie stark haben Sie sich heute auf KI verlassen? 0 = völlig unabhängig, 5 = teilweise Unterstützung, 10 = hohe Abhängigkeit.",
+      trackerLowLabel: "Unabhängig", trackerMidLabel: "Ausgeglichen", trackerHighLabel: "Abhängig",
+      saveBtn: "Speichern", resetBtn: "Zurücksetzen",
+      trackerSummaryPrefix: "7‑Tage‑Durchschnitt: ",
+      trendIncreasing: "Ihre Abhängigkeit steigt. Versuchen Sie morgen eine kleine Aufgabe ohne KI.",
+      trendDecreasing: "Ihre Abhängigkeit sinkt. Üben Sie weiter den bewussten Einsatz.",
+      trendStable: "Ihre Abhängigkeit ist stabil. Bleiben Sie achtsam.",
+      noData: "Noch keine Daten. Tragen Sie oben den ersten Wert ein.",
+      ctaText: "Möchten Sie strukturierte Anleitung? Das Buch '33 Protokolle' bietet tägliche Mikro‑Übungen.",
+      footerText: "© Mind-OS – Erstellt von Aleksei Bitkin. Unabhängiges Forschungsprojekt.",
+      bookUrl: "https://www.amazon.de/dp/B0G35SBQR3", submitBtn: "Ergebnis anzeigen",
+      resultLow: "Sie nutzen KI als Helfer – das ist eine gesunde Balance.",
+      resultMedium: "Sie verlassen sich bei manchen Denkaufgaben auf KI. Versuchen Sie, ein kleines Problem zuerst selbst zu lösen.",
+      resultHigh: "Sie wenden sich oft für Denkaufgaben an KI. Versuchen Sie, eine kleine tägliche Aufgabe ohne KI zu erledigen.",
+      resultPrefix: "Ihr Ergebnis:", resultFooter: "Selbstreflexion, keine medizinische Diagnose.",
+      alertIncomplete: "Bitte beantworten Sie alle Fragen.",
+      progressText: "Frage {answered} von {total}",
+      options: { never: "Nie", sometimes: "Manchmal", often: "Oft", always: "Immer" },
+      trustNoSignup: "🔒 Keine Anmeldung", trustLocal: "📁 Läuft im Browser", trustAnonymous: "🧾 Anonym",
+      howTitle: "📌 So funktioniert es", howText: "Jeder Test enthält 5 kurze Fragen. Ihre Antworten verlassen niemals Ihren Browser. Am Ende erhalten Sie eine einfache Punktzahl und einen praktischen Tipp.",
+      protocolsTitle: "📖 Die 33 Protokolle für kognitive Souveränität", protocolsDesc: "Ein strukturiertes Rahmenwerk, um KI‑bedingten Gehirnnebel umzukehren und unabhängiges Denken wiederherzustellen.",
+      researchTitle: "🔬 Wissenschaftliche Grundlage", researchPara: "Die 33 Protokolle basieren auf begutachteter Forschung zu kognitiver Entlastung, Neuroplastizität und KI‑Abhängigkeit.",
+      faqTitle: "❓ Häufig gestellte Fragen",
+      faqQ1: "Was ist kognitive Entlastung?", faqA1: "Kognitive Entlastung ist der Prozess, sich für mentale Aufgaben auf externe Werkzeuge (wie KI) zu verlassen, was Gedächtnis und unabhängiges Denken schwächen kann.",
+      faqQ2: "Wie verursacht KI \"Gehirnnebel\"?", faqA2: "Durch ständiges Auslagern des Denkens an KI werden neuronale Pfade weniger aktiv. Dies führt zu geistiger Trägheit und Konzentrationsschwierigkeiten ohne KI.",
+      faqQ3: "Sind die 33 Protokolle wissenschaftlich validiert?", faqA3: "Ja. Sie integrieren Prinzipien der kognitiven Neurowissenschaft, Verhaltenspsychologie und der Glitch-Theorie des Autors (DOI: 10.5281/zenodo.17972301).",
+      faqQ4: "Wie lange dauert es, bis Ergebnisse sichtbar werden?", faqA4: "Die meisten Leser berichten von spürbaren Verbesserungen innerhalb von 21–66 Tagen. Der Schlüssel sind tägliche Mikro‑Aktionen.",
+      faqQ5: "Bin ich süchtig nach ChatGPT?", faqA5: "Sucht ist ein starkes Wort, aber ungesunde Abhängigkeit existiert. Wenn Sie ohne KI ängstlich sind oder KI menschlicher Interaktion vorziehen, ist es Zeit für eine Neubewertung. Unser Test zur emotionalen Bindung kann helfen.",
+      faqQ6: "Was ist die EHARS-Skala?", faqA6: "EHARS (Emotional Health and Attachment to AI Relationship Scale) ist ein Forschungsinstrument zur Messung emotionaler Bindungen zwischen Mensch und KI. Unser Test enthält davon inspirierte Fragen.",
+      faqQ7: "Macht KI mich weniger intelligent?", faqA7: "Das kann passieren, wenn Sie sich zu sehr darauf verlassen. 'Cognitive Offloading' kann Gedächtnis- und Denkfähigkeiten mit der Zeit schwächen. Unser Test zur kognitiven Autonomie hilft bei der Einschätzung.",
+      faqQ8: "Wie nutze ich KI, ohne meine Fähigkeiten zu verlieren?", faqA8: "Der Schlüssel ist bewusste Nutzung. Probieren Sie die '15-Minuten-Regel': Versuchen Sie eine Aufgabe 15 Minuten lang selbst, bevor Sie KI fragen. Unser Produktivitätstest bietet personalisierte Strategien.",
+      questions1: ["Wenn Sie sich etwas merken müssen, fragen Sie KI, statt selbst nachzudenken?","Nutzen Sie KI für einfache Faktenchecks (Wetter, Daten, Rechtschreibung)?","Holen Sie vor einer Entscheidung meist KI‑Rat ein?","Haben Sie das Gefühl, Ihr Gedächtnis hat sich durch regelmäßige KI‑Nutzung verschlechtert?","Vertrauen Sie mehr auf KI‑Schlussfolgerungen als auf Ihr eigenes Denken?"],
+      questions2: ["Fühlen Sie sich beim Gespräch mit KI wohler als mit echten Menschen?","Werden Sie ängstlich, wenn ein KI‑Assistent nicht verfügbar oder langsam ist?","Teilen Sie persönliche Gefühle offener mit KI als mit Freunden?","Bevorzugen Sie manchmal die Gesellschaft von KI gegenüber echten Treffen?","Würden Sie einen echten Verlust spüren, wenn Ihr Lieblingschatbot verschwände?"],
+      questions3: ["Verlassen Sie sich auf KI, um Ihren Tag zu planen oder zu entscheiden, was als Nächstes kommt?","Nutzen Sie KI, um die meisten Arbeits‑Texte zu schreiben oder umzuschreiben?","Gehen Sie bei einem Problem zu KI, bevor Sie es selbst lösen?","Lassen Sie KI zwischen Produkten wählen (welcher Laptop, welches Restaurant)?","Fühlen Sie sich weniger produktiv, wenn Sie KI nicht für Routineaufgaben nutzen können?"],
+      suggestions: { low1: "Nutzen Sie KI bewusst weiter – das ist gut.", low2: "Gute Balance. Bleiben Sie achtsam.", low3: "Sie haben die Kontrolle – ausgezeichnet.", medium1: "Versuchen Sie: Bevor Sie KI fragen, denken Sie 30 Sekunden selbst.", medium2: "Sprechen Sie einmal am Tag mit einer echten Person.", medium3: "Lösen Sie eine kleine Arbeitsaufgabe ohne KI pro Tag.", high1: "Stellen Sie einen Timer: 5 Minuten Nachdenken ohne KI vor der Frage.", high2: "Machen Sie einen Tag Pause von Chatbots und beobachten Sie sich.", high3: "Schreiben Sie jeden Morgen eine handgeschriebene To‑do‑Liste ohne KI." }
+    },
+    fr: {
+      mainTitle: "Test gratuit : à quel point dépendez-vous de l'IA ?",
+      subhead: "Mesurez la décharge cognitive, l'attachement émotionnel et la dépendance quotidienne à l'IA. Anonyme et privé.",
+      infoTitle: "📋 Ce que mesure cette auto‑réflexion",
+      infoPara1: "Ces courts tests vous aident à observer à quelle fréquence vous utilisez l'IA pour réfléchir, trouver un réconfort émotionnel ou accomplir des tâches quotidiennes. Ils sont conçus pour la conscience de soi, pas pour un diagnostic clinique.",
+      infoPara2: "Pour qui : toute personne souhaitant vérifier si son utilisation de l'IA est encore intentionnelle ou devient automatique. Vous obtiendrez un score et une suggestion pratique.",
+      infoPara3: "Comment ça marche : répondez à 5 questions par domaine. Tout se passe dans votre navigateur – aucune donnée ne quitte votre appareil.",
+      infoDisclaimer: "Ceci est un outil d'auto‑réflexion, pas un diagnostic.",
+      test1Title: "Mémoire & réflexion", test1Desc: "Laissez‑vous l'IA penser à votre place ? (se souvenir, vérifier, décider)", test1Hint: "Répondez honnêtement en fonction de vos habitudes quotidiennes.",
+      test2Title: "Sentiments & attachement", test2Desc: "Vous sentez‑vous émotionnellement lié à l'IA ? Remplace‑t‑elle les vraies conversations ?", test2Hint: "Répondez honnêtement en fonction de vos habitudes quotidiennes.",
+      test3Title: "Travail & quotidien", test3Desc: "Dépendez‑vous de l'IA pour planifier, écrire ou résoudre des problèmes ?", test3Hint: "Répondez honnêtement en fonction de vos habitudes quotidiennes.",
+      trackerTitle: "📊 Suivi quotidien de la charge cognitive",
+      trackerDesc: "Indiquez à quel point vous avez compté sur l'IA aujourd'hui. 0 = totalement indépendant, 5 = aide partielle, 10 = forte dépendance.",
+      trackerLowLabel: "Indépendant", trackerMidLabel: "Équilibré", trackerHighLabel: "Dépendant",
+      saveBtn: "Enregistrer", resetBtn: "Réinitialiser",
+      trackerSummaryPrefix: "Moyenne sur 7 jours : ",
+      trendIncreasing: "Votre dépendance augmente. Essayez une petite tâche sans IA demain.",
+      trendDecreasing: "Votre dépendance diminue. Continuez à utiliser l'IA consciemment.",
+      trendStable: "Votre dépendance est stable. Restez attentif à vos habitudes.",
+      noData: "Pas encore de données. Enregistrez votre première valeur ci‑dessus.",
+      ctaText: "Besoin de conseils structurés ? Le livre '33 Protocoles' propose des micro‑exercices quotidiens.",
+      footerText: "© Mind-OS – Créé par Aleksei Bitkin. Projet indépendant.",
+      bookUrl: "https://www.amazon.fr/dp/B0G35SBQR3", submitBtn: "Voir mon résultat",
+      resultLow: "Vous utilisez l'IA comme aide – c'est un équilibre sain.",
+      resultMedium: "Vous comptez sur l'IA pour certaines tâches de réflexion. Essayez de résoudre un petit problème par vous‑même d'abord.",
+      resultHigh: "Vous avez souvent recours à l'IA pour réfléchir. Essayez de faire une petite tâche quotidienne sans IA.",
+      resultPrefix: "Votre score :", resultFooter: "Auto‑réflexion, pas diagnostic médical.",
+      alertIncomplete: "Veuillez répondre à toutes les questions.",
+      progressText: "Question {answered} sur {total}",
+      options: { never: "Jamais", sometimes: "Parfois", often: "Souvent", always: "Toujours" },
+      trustNoSignup: "🔒 Sans inscription", trustLocal: "📁 Fonctionne dans votre navigateur", trustAnonymous: "🧾 Anonyme",
+      howTitle: "📌 Comment ça marche", howText: "Chaque test comporte 5 questions courtes. Vos réponses ne quittent jamais votre navigateur. À la fin, vous obtiendrez un score simple et un conseil pratique.",
+      protocolsTitle: "📖 Les 33 Protocoles pour la Souveraineté Cognitive", protocolsDesc: "Un cadre structuré pour inverser le brouillard cérébral induit par l'IA et restaurer la pensée indépendante.",
+      researchTitle: "🔬 Fondement Scientifique", researchPara: "Les 33 Protocoles s'appuient sur des recherches évaluées par des pairs sur la décharge cognitive, la neuroplasticité et la dépendance à l'IA.",
+      faqTitle: "❓ Foire Aux Questions",
+      faqQ1: "Qu'est-ce que la décharge cognitive ?", faqA1: "C'est le fait de s'appuyer sur des outils externes (comme l'IA) pour des tâches mentales, ce qui peut affaiblir la mémoire et la pensée indépendante.",
+      faqQ2: "Comment l'IA provoque-t-elle un \"brouillard cérébral\" ?", faqA2: "En externalisant constamment la réflexion vers l'IA, les voies neuronales deviennent moins actives, entraînant une lenteur mentale et des difficultés de concentration sans IA.",
+      faqQ3: "Les 33 Protocoles sont-ils scientifiquement validés ?", faqA3: "Oui. Ils intègrent des principes de neurosciences cognitives, de psychologie comportementale et la Théorie du Glitch de l'auteur (DOI: 10.5281/zenodo.17972301).",
+      faqQ4: "Combien de temps pour voir des résultats ?", faqA4: "La plupart des lecteurs constatent des améliorations en 21–66 jours de pratique quotidienne. La clé est de petites actions quotidiennes.",
+      faqQ5: "Suis-je accro à ChatGPT ?", faqA5: "Accro est un mot fort, mais une dépendance malsaine existe. Si vous êtes anxieux sans IA ou préférez l'IA aux interactions humaines, il est temps de rééquilibrer. Notre test d'attachement émotionnel peut vous aider.",
+      faqQ6: "Qu'est-ce que l'échelle EHARS ?", faqA6: "EHARS (Emotional Health and Attachment to AI Relationship Scale) est un outil de recherche mesurant les liens émotionnels humain-IA. Notre test intègre des questions inspirées d'échelles validées.",
+      faqQ7: "L'IA me rend-elle moins intelligent ?", faqA7: "C'est possible si vous en dépendez trop. La 'décharge cognitive' peut affaiblir la mémoire et la réflexion. Notre test d'autonomie cognitive vous aide à l'évaluer.",
+      faqQ8: "Comment utiliser l'IA sans perdre mes compétences ?", faqA8: "La clé est l'usage conscient. Essayez la 'règle des 15 minutes' : tentez une tâche seul pendant 15 minutes avant de demander à l'IA. Notre test de productivité propose des stratégies personnalisées.",
+      questions1: ["Quand vous devez vous souvenir de quelque chose, demandez‑vous à l'IA au lieu de faire l'effort de mémoire ?","Utilisez‑vous l'IA pour vérifier des faits simples (météo, dates, orthographe) ?","Avant une décision, consultez‑vous généralement l'IA ?","Avez‑vous l'impression que votre mémoire s'est détériorée depuis que vous utilisez l'IA régulièrement ?","Faites‑vous plus confiance aux conclusions de l'IA qu'à votre propre raisonnement ?"],
+      questions2: ["Vous sentez‑vous plus à l'aise en parlant à l'IA qu'à des vraies personnes ?","Devenez‑vous anxieux quand un assistant IA n'est pas disponible ou est lent ?","Partagez‑vous vos sentiments personnels plus ouvertement avec l'IA qu'avec des amis ?","Préférez‑vous parfois la compagnie de l'IA aux rencontres sociales ?","Ressentiriez‑vous une vraie perte si votre chatbot préféré disparaissait ?"],
+      questions3: ["Comptez‑vous sur l'IA pour planifier votre journée ou décider de la suite ?","Utilisez‑vous l'IA pour écrire ou réécrire la plupart de vos textes professionnels ?","Face à un problème, allez‑vous vers l'IA avant d'essayer de le résoudre vous‑même ?","Laissez‑vous l'IA choisir entre des produits (quel ordinateur, quel restaurant) ?","Vous sentez‑vous moins productif quand vous ne pouvez pas utiliser l'IA pour des tâches routinières ?"],
+      suggestions: { low1: "Continuez à utiliser l'IA consciemment – c'est bien.", low2: "Bon équilibre. Restez attentif.", low3: "Vous gardez le contrôle – excellent.", medium1: "Essayez : avant de demander à l'IA, réfléchissez 30 secondes seul.", medium2: "Essayez de parler à une vraie personne une fois par jour.", medium3: "Résolvez une petite tâche professionnelle sans IA chaque jour.", high1: "Mettez un minuteur : 5 minutes de réflexion sans IA avant de poser une question.", high2: "Prenez une journée de pause des chatbots et observez vos ressentis.", high3: "Écrivez une liste de tâches manuscrite chaque matin, sans IA." }
+    },
+    ja: {
+      mainTitle: "無料 AI 使用自己評価 – あなたのAI習慣を理解する",
+      subhead: "認知的オフロード、感情的愛着、日常的なAI依存を測定。匿名・プライベート。",
+      infoTitle: "📋 この自己内省が測定するもの",
+      infoPara1: "これらの短いテストは、思考、感情的な慰め、日々の生産性においてどのくらいAIに頼っているかを観察するのに役立ちます。臨床診断ではなく、自己認識のために設計されています。",
+      infoPara2: "対象者：AIの使用がまだ意図的なのか、それとも自動的になっているのかを確認したい方。スコアと実用的な提案を得られます。",
+      infoPara3: "仕組み：各分野5つの質問に答えます。すべてブラウザ内で処理され、データは外部に送信されません。",
+      infoDisclaimer: "これは自己内省ツールであり、診断ではありません。",
+      test1Title: "思考と記憶", test1Desc: "AIに考えてもらうことが多いですか？ (記憶、事実確認、決断)", test1Hint: "日々の習慣に基づいて正直に答えてください。",
+      test2Title: "感情と愛着", test2Desc: "AIに感情的な絆を感じますか？ リアルな会話の代わりになっていますか？", test2Hint: "日々の習慣に基づいて正直に答えてください。",
+      test3Title: "仕事と日常", test3Desc: "計画、文章作成、問題解決でAIに頼っていませんか？", test3Hint: "日々の習慣に基づいて正直に答えてください。",
+      trackerTitle: "📊 毎日の認知的負荷トラッカー",
+      trackerDesc: "今日どのくらいAIに頼ったか記録してください。0 = 完全に独立、5 = 部分的な支援、10 = 高い依存。",
+      trackerLowLabel: "独立", trackerMidLabel: "バランス", trackerHighLabel: "依存",
+      saveBtn: "保存", resetBtn: "リセット",
+      trackerSummaryPrefix: "7日間平均: ",
+      trendIncreasing: "依存度が上昇しています。明日はAIを使わずに小さなタスクを一つ試してみてください。",
+      trendDecreasing: "依存度が低下しています。意識的なAI使用を続けてください。",
+      trendStable: "依存度は安定しています。習慣に注意を払い続けてください。",
+      noData: "まだデータがありません。上の最初の値を記録してください。",
+      ctaText: "体系的なガイダンスが必要ですか？ 『33のプロトコル』の本は毎日のマイクロエクササイズを提供します。",
+      footerText: "© Mind-OS – Aleksei Bitkin 作。独立研究プロジェクト。",
+      bookUrl: "https://www.amazon.co.jp/dp/B0G35SBQR3", submitBtn: "結果を見る",
+      resultLow: "AIを補助的に使えています。健康的なバランスです。",
+      resultMedium: "いくつかの思考タスクをAIに頼っています。まずは小さな問題を自分で解いてみてください。",
+      resultHigh: "思考タスクでAIに頼ることが多いです。毎日1つ、AIを使わずにできる小さなタスクを決めてみてください。",
+      resultPrefix: "あなたのスコア:", resultFooter: "自己内省のためのツールであり、医学的な診断ではありません。",
+      alertIncomplete: "すべての質問に答えてください。",
+      progressText: "質問 {answered} / {total}",
+      options: { never: "まったくない", sometimes: "ときどき", often: "よくある", always: "いつも" },
+      trustNoSignup: "🔒 登録不要", trustLocal: "📁 ブラウザ内で動作", trustAnonymous: "🧾 匿名",
+      howTitle: "📌 仕組み", howText: "各テストには5つの短い質問があります。回答はブラウザから出ることはありません。最後にシンプルなスコアと実用的な提案が表示されます。",
+      protocolsTitle: "📖 認知主権のための33のプロトコル", protocolsDesc: "AIによる脳の霧を逆転させ、独立した思考を回復するための構造化されたフレームワーク。",
+      researchTitle: "🔬 科学的基盤", researchPara: "33のプロトコルは、認知的オフロード、神経可塑性、AI依存に関する査読済み研究に基づいています。",
+      faqTitle: "❓ よくある質問",
+      faqQ1: "認知的オフロードとは何ですか？", faqA1: "認知的オフロードとは、本来自分で行うべき思考タスクをAIなどの外部ツールに頼ることで、記憶力や独立した思考力が弱まるプロセスです。",
+      faqQ2: "AIはどのように「脳の霧」を引き起こしますか？", faqA2: "思考をAIに任せ続けると、問題解決や記憶の神経経路が不活発になります。その結果、AIなしでは集中力が低下し、精神的に鈍く感じます。",
+      faqQ3: "33のプロトコルは科学的に検証されていますか？", faqA3: "はい。認知神経科学、行動心理学の原則と、著者のグリッチ理論（DOI: 10.5281/zenodo.17972301）を統合しています。",
+      faqQ4: "結果が出るまでどのくらいかかりますか？", faqA4: "多くの読者は、21～66日の継続的な実践で集中力の向上とAI依存の減少を報告しています。鍵は毎日の小さな行動です。",
+      faqQ5: "ChatGPT依存症ですか？", faqA5: "「依存症」は強い言葉ですが、不健康な依存は存在します。AIがないと不安になったり、人間よりAIを好む場合は見直しのサインです。当サイトの感情的愛着テストで評価できます。",
+      faqQ6: "EHARS尺度とは何ですか？", faqA6: "EHARS（Emotional Health and Attachment to AI Relationship Scale）は人間とAIの感情的絆を測定する研究ツールです。当テストには検証済み尺度に触発された質問が含まれています。",
+      faqQ7: "AIは私をバカにしますか？", faqA7: "過度に依存すると可能性があります。「認知的オフロード」は記憶力や思考力を弱めることがあります。当サイトの認知的自律性テストで評価できます。",
+      faqQ8: "スキルを失わずにAIを使うには？", faqA8: "意識的な使用が鍵です。「15分ルール」を試してください：AIに尋ねる前に15分間自分で考えてみます。生産性テストがバランスの取れた使い方の戦略を提供します。",
+      questions1: ["何かを覚える必要があるとき、自分で思い出そうとせずにAIに尋ねますか？","簡単な事実確認（天気、日付、スペル）にもAIを使いますか？","決断の前に、たいていAIに相談しますか？","AIを定期的に使い始めてから記憶力が落ちたと感じますか？","自分の推論よりもAIの結論を信頼しますか？"],
+      questions2: ["実際の人と話すよりも、AIと話す方が楽だと感じますか？","AIアシスタントが使えない、または動作が遅いときに不安になりますか？","個人的な気持ちを友達よりもAIに率直に共有しますか？","人と会うよりもAIと過ごす方を選ぶことがありますか？","お気に入りのチャットボットが消えたら、本当に喪失感を覚えますか？"],
+      questions3: ["毎日の予定や次に何をするかを決めるのにAIに頼っていますか？","仕事関連のテキストのほとんどをAIで作成または書き直していますか？","問題に行き詰まったら、自分で試す前にAIに頼りますか？","製品の選択（どのノートパソコン、どのレストラン）をAIに任せていますか？","日常的なタスクにAIを使えないと生産性が下がったと感じますか？"],
+      suggestions: { low1: "AIを意識的に使い続けてください。素晴らしいです。", low2: "良いバランスです。意識を維持しましょう。", low3: "あなたがコントロールしています。素晴らしい。", medium1: "試してみてください：AIに尋ねる前に30秒間自分で考えてみる。", medium2: "1日1回、実際の人と話してみてください。", medium3: "毎日1つ、AIを使わずに仕事の小さな問題を解決してみてください。", high1: "タイマーをセット：質問する前に5分間、AIなしで考えてみる。", high2: "チャットボットから一日休んで、自分の気持ちを観察してみてください。", high3: "毎朝、AIを使わずに手書きでToDoリストを書いてみてください。" }
     }
-    let s=q1+q2+q3;
-    let status=s<=2?"⚠️ High AI Dependency — risk of cognitive offloading":(s<=4?"🟡 Moderate Usage — stay aware":"✅ Independent Thinker — well done");
-    document.getElementById('testRes').innerHTML=`<div style="border-left:2px solid var(--accent); padding-left:10px;">${status}</div>`;
-  });
-}
+  };
 
-function renderProtocols() {
-  if(rendered.protocols) return;
-  let html=''; fullProtocols.forEach(p=>{html+=`<details><summary><strong>Protocol ${p.num}</strong> — ${escapeHtml(p.title)}</summary><div class="protocol-text">${escapeHtml(p.text).replace(/\n/g,'<br>')}</div></details>`;});
-  document.getElementById('protocol-list').innerHTML=html;
-  rendered.protocols=true;
-}
+  let currentLang = 'en';
+  function escapeHtml(str){ return String(str).replace(/[&<>]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;'})[m]); }
+  function setText(id, text){ const el = document.getElementById(id); if(el) el.textContent = text; }
 
-function renderTests() {
-  const t = translations[currentLang] || translations.en;
-  const autoDiv = document.getElementById('autonomy-questions');
-  const profDiv = document.getElementById('profile-questions');
-  autoDiv.innerHTML = ''; profDiv.innerHTML = '';
-  for (let i = 0; i < 7; i++) {
-    autoDiv.innerHTML += `<div style="margin-bottom:1rem;"><strong>${i+1}. ${t.autonomy_q[i]}</strong><br><select id="autonomy_${i}" class="auto-select"><option value="1">1 - Strongly disagree</option><option value="2">2 - Disagree</option><option value="3">3 - Agree</option><option value="4">4 - Strongly agree</option></select></div>`;
-    profDiv.innerHTML += `<div style="margin-bottom:1rem;"><strong>${i+1}. ${t.profile_q[i]}</strong><br><select id="profile_${i}" class="profile-select"><option value="1">1 - Strongly disagree</option><option value="2">2 - Disagree</option><option value="3">3 - Agree</option><option value="4">4 - Strongly agree</option></select></div>`;
+  function renderProtocols(){
+    const grid = document.getElementById('protocolGrid');
+    if(!grid) return;
+    grid.innerHTML = protocolsData.map(p => `
+      <div class="protocol-card">
+        <div class="protocol-num">Protocol ${p.num}</div>
+        <div class="protocol-title">${escapeHtml(p.title)}</div>
+        <div class="protocol-desc">${escapeHtml(p.desc)}</div>
+      </div>
+    `).join('');
   }
-  document.getElementById('autonomy-result').innerHTML = '';
-  document.getElementById('profile-result').innerHTML = '';
-}
 
-function renderFacts(){
-  const grid = document.getElementById('fact-grid');
-  const filtered=hallucinationsDB.filter(f=>(activeCat==='all'||f.cat===activeCat)&&(searchTerm===''||f.title.toLowerCase().includes(searchTerm)||f.tldr.toLowerCase().includes(searchTerm)));
-  let html=''; filtered.forEach(f=>{html+=`<div class="fact-card" data-id="${f.id}"><div class="fact-cat">${f.cat}</div><div class="fact-title"><strong>${escapeHtml(f.title)}</strong></div><div class="fact-tldr">${escapeHtml(f.tldr)}</div></div>`;});
-  grid.innerHTML=html||'<p>No facts found.</p>';
-  rendered.facts=true;
-}
-
-function showFactModal(f){
-  const modal=document.getElementById('factModal');
-  document.getElementById('modalBody').innerHTML=`<h3>${escapeHtml(f.title)}</h3><div class="fact-cat">${f.cat}</div><div class="fact-question">Q: ${escapeHtml(f.question)}</div><div class="log-box">${escapeHtml(f.log).replace(/\n/g,'<br>')}</div><p><strong>Hypothesis:</strong> ${escapeHtml(f.hypothesis)}<br>Source: ${escapeHtml(f.source)}</p>`;
-  modal.classList.add('active'); modal.setAttribute('aria-hidden','false');
-}
-function closeModal(){const modal=document.getElementById('factModal'); modal.classList.remove('active'); modal.setAttribute('aria-hidden','true');}
-
-function loadStories(){try{let s=localStorage.getItem('mindos_stories_v1');stories=s?JSON.parse(s):[];}catch(e){stories=[];}}
-function renderStories(){const c=document.getElementById('stories-list');if(c)c.innerHTML=stories.length?stories.map(s=>`<div style="border-left:2px solid var(--accent); padding:10px;">📌 ${escapeHtml(s)}</div>`).join(''):'<p>No stories yet.</p>';}
-function addStory(text){text=text.trim();if(!text||text.length>500)return{ok:false};if(stories.includes(text))return{ok:false};stories.unshift(text);if(stories.length>100)stories.pop();localStorage.setItem('mindos_stories_v1',JSON.stringify(stories));renderStories();return{ok:true};}
-
-// ВОЗВРАЩЁН SHA-256 ДЛЯ EASTER EGG
-async function verifyObserver(){
-  const input=document.getElementById('secret-input').value.trim().toUpperCase();
-  const encoder=new TextEncoder();
-  const hash=await crypto.subtle.digest('SHA-256',encoder.encode(input));
-  const hashHex=Array.from(new Uint8Array(hash)).map(b=>b.toString(16).padStart(2,'0')).join('');
-  if(hashHex==="5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8"){ // "OBSERVER"
-    document.getElementById('easter-egg').style.display='block';
-    document.getElementById('code-error').style.display='none';
-  } else {
-    document.getElementById('code-error').innerText='Invalid code. Hint: What position allows you to watch your thoughts?';
-    document.getElementById('code-error').style.display='block';
-  }
-}
-
-function initProtocol32(){
-  let q1=null,q2=null;
-  document.querySelectorAll('.quiz-option').forEach(btn=>{
-    btn.addEventListener('click',function(){
-      if(this.dataset.q==='1'){q1=this.dataset.value;document.querySelectorAll('[data-q="1"]').forEach(b=>b.classList.remove('selected'));this.classList.add('selected');}
-      if(this.dataset.q==='2'){q2=this.dataset.value;document.querySelectorAll('[data-q="2"]').forEach(b=>b.classList.remove('selected'));this.classList.add('selected');}
-      document.getElementById('analyze-protocol-btn').disabled=!(q1&&q2);
+  function buildQuestions(containerId, questionsArray, prefix, progressId){
+    const container = document.getElementById(containerId);
+    if(!container) return;
+    const t = translations[currentLang];
+    container.innerHTML = '';
+    questionsArray.forEach((q, idx) => {
+      const div = document.createElement('div'); div.className = 'question';
+      div.innerHTML = `<div class="question-text">${escapeHtml(q)}</div><div class="options">${[ {v:1, l:t.options.never}, {v:2, l:t.options.sometimes}, {v:3, l:t.options.often}, {v:4, l:t.options.always} ].map(opt => `<label class="option-label"><input type="radio" name="${prefix}_${idx}" value="${opt.v}"> ${opt.l}</label>`).join('')}</div>`;
+      container.appendChild(div);
     });
-  });
-  document.getElementById('analyze-protocol-btn').addEventListener('click',()=>{
-    let diag=(q1==='yes'&&q2==='rarely')?'ADVANCED FIRMWARE':((q1==='no'||q2==='often')?'OUTDATED FIRMWARE':'UNSTABLE FIRMWARE');
-    document.getElementById('diagnosis-text').innerHTML=`SYSTEM ANALYSIS: ${diag}`;
-    document.getElementById('protocol32-result').style.display='block';
-    document.getElementById('analyze-protocol-btn').style.display='none';
-  });
-  document.getElementById('submit-code').addEventListener('click',verifyObserver);
-}
+    container.querySelectorAll('input[type="radio"]').forEach(radio => {
+      radio.addEventListener('change', function(){
+        const parent = this.closest('.option-label');
+        parent.parentElement.querySelectorAll('.option-label').forEach(l => l.classList.remove('selected'));
+        parent.classList.add('selected');
+        updateProgress(container, prefix, progressId, questionsArray.length);
+      });
+    });
+    updateProgress(container, prefix, progressId, questionsArray.length);
+  }
 
-function switchTab(tabId){
-  document.querySelectorAll('.section-page').forEach(p=>p.classList.remove('active'));
-  document.getElementById(`section-${tabId}`).classList.add('active');
-  document.querySelectorAll('.section-nav a').forEach(a=>a.classList.remove('active'));
-  const activeTabBtn=document.querySelector(`.section-nav a[data-tab="${tabId}"]`);
-  if(activeTabBtn) activeTabBtn.classList.add('active');
-  if(tabId==='protocols' && !rendered.protocols) renderProtocols();
-  if(tabId==='facts' && !rendered.facts) renderFacts();
-  if(tabId==='stories') renderStories();
-  if(tabId==='glossary' && !rendered.glossary) renderGlossary();
-  if(tabId==='research' && !rendered.research) renderResearch();
-  if(tabId==='tracker') renderTrackerChart();
-  if(tabId==='tests' && !rendered.tests) { renderTests(); rendered.tests=true; }
-}
+  function updateProgress(container, prefix, progressId, total){
+    let answered = 0;
+    for(let i=0; i<total; i++) if(container.querySelector(`input[name="${prefix}_${i}"]:checked`)) answered++;
+    const progress = document.getElementById(progressId);
+    if(progress) progress.textContent = translations[currentLang].progressText.replace('{answered}', answered).replace('{total}', total);
+  }
 
-function renderGlossary(){if(rendered.glossary)return;let h='<ul>';glossaryTerms.forEach(g=>h+=`<li><strong style="color:var(--accent);">${g.term}</strong><br>${g.def}</li>`);h+='</ul>';document.getElementById('glossary-list').innerHTML=h;rendered.glossary=true;}
-function renderResearch(){if(rendered.research)return;document.getElementById('research-content').innerHTML=researchContent;rendered.research=true;}
-function saveTrackerEntry(score){const today=new Date().toISOString().slice(0,10);let e=JSON.parse(localStorage.getItem('mindos_tracker_v1')||'{}');e[today]=score;localStorage.setItem('mindos_tracker_v1',JSON.stringify(e));renderTrackerChart();}
-function renderTrackerChart(){
-  const entries=JSON.parse(localStorage.getItem('mindos_tracker_v1')||'{}');const last7=[];const today=new Date();
-  for(let i=6;i>=0;i--){let d=new Date(today);d.setDate(today.getDate()-i);let key=d.toISOString().slice(0,10);let score=entries[key]!==undefined?entries[key]:null;last7.push({date:key,score});}
-  let html='<h3>Last 7 days</h3><div class="bar-container"><div class="bar-label">Date</div><div class="bar-label">Score</div></div>';
-  last7.forEach(day=>{let fill=(day.score!==null)?(day.score/10*100):0;let display=day.score!==null?day.score:'—';html+=`<div class="bar-container"><div class="bar-label">${day.date.slice(5)}</div><div class="bar"><div class="bar-fill" style="width:${fill}%;"></div></div><div class="bar-label">${display}</div></div>`;});
-  document.getElementById('tracker-chart').innerHTML=html;
-}
-function resetTracker(){if(confirm('Delete all?')){localStorage.removeItem('mindos_tracker_v1');renderTrackerChart();}}
+  function computeScore(prefix, n){
+    let sum=0, answered=0;
+    for(let i=0; i<n; i++){ const sel = document.querySelector(`input[name="${prefix}_${i}"]:checked`); if(sel){ sum+=parseInt(sel.value); answered++; } }
+    return answered===n ? sum : null;
+  }
 
-function updateTimestamp(){const startDate=new Date(2025,0,1); const now=new Date(); const diffDays=Math.floor((now-startDate)/(1000*60*60*24)); const dateStr=now.toISOString().slice(0,10); const timestampElem=document.getElementById('live-timestamp'); if(timestampElem){timestampElem.innerHTML=`📅 ${dateStr} — Mind-OS active for ${diffDays} days (daily sync for accurate AI biohacking)`;}}
+  function showResult(resultId, score, max, testId, t){
+    const div = document.getElementById(resultId); if(!div) return;
+    const ratio = score/max;
+    let levelText = ratio<=0.4 ? t.resultLow : (ratio<=0.7 ? t.resultMedium : t.resultHigh);
+    let suggKey = (ratio<=0.4 ? 'low' : (ratio<=0.7 ? 'medium' : 'high')) + testId.slice(-1);
+    div.style.display = 'block';
+    div.innerHTML = `<strong>${t.resultPrefix} ${score}/${max}</strong><br>${levelText}<div class="suggestion">💡 ${t.suggestions[suggKey]}</div><br><small>${t.resultFooter}</small>`;
+  }
 
-function applyLanguage(lang){
-  currentLang = lang;
-  const t = translations[lang] || translations.en;
-  safeSetText('h1-main', t.h1_main); safeSetHtml('mission-banner', t.mission); safeSetText('desc-main', t.desc_main);
-  safeSetText('test-title', t.test_title); safeSetText('protocols-title', t.protocols_title); safeSetText('p32-title', t.p32_title);
-  safeSetText('p32-q1-text', t.p32_q1); safeSetText('p32-q1-yes', t.p32_q1_yes); safeSetText('p32-q1-maybe', t.p32_q1_maybe); safeSetText('p32-q1-no', t.p32_q1_no);
-  safeSetText('p32-q2-text', t.p32_q2); safeSetText('p32-q2-often', t.p32_q2_often); safeSetText('p32-q2-sometimes', t.p32_q2_sometimes); safeSetText('p32-q2-rarely', t.p32_q2_rarely);
-  safeSetText('analyze-protocol-btn', t.analyze_btn); safeSetHtml('p32-principle', `<strong>MAIN PRINCIPLE:</strong> ${t.p32_principle.split(':')[1] || ''}`); safeSetText('p32-full', t.p32_full);
-  safeSetText('code-label', t.code_label); safeSetText('submit-code', t.submit_code); safeSetText('code-hint', t.code_hint);
-  const easterDiv = document.getElementById('easter-egg'); if (easterDiv) easterDiv.innerHTML = t.easter;
-  safeSetText('eco-title', t.eco_title); safeSetText('facts-h1', t.facts_h1); safeSetText('facts-desc', t.facts_desc);
-  safeSetText('filter-all', t.filter_all); safeSetText('filter-math', t.filter_math); safeSetText('filter-logic', t.filter_logic);
-  safeSetText('tests-h1', t.tests_h1); safeSetText('test1-title', t.test1_title); safeSetText('test1-desc', t.test1_desc);
-  safeSetText('test2-title', t.test2_title); safeSetText('test2-desc', t.test2_desc);
-  safeSetText('quick-facts-title', t.quick_facts_title); safeSetText('fact1-title', t.fact1_title); safeSetText('fact1-text', t.fact1_text);
-  safeSetText('fact2-title', t.fact2_title); safeSetText('fact2-text', t.fact2_text); safeSetText('fact3-title', t.fact3_title); safeSetText('fact3-text', t.fact3_text);
-  safeSetHtml('sources-text', t.sources_text);
-  safeSetText('cta-amazon', t.cta_amazon); safeSetText('cta-kofi', t.cta_kofi); safeSetText('copyright', t.copyright);
-  const amazonMain = document.getElementById('amazon-link-main'); if (amazonMain) amazonMain.href = t.amazon_link;
-  const ctaAmazon = document.getElementById('cta-amazon'); if (ctaAmazon) ctaAmazon.href = t.amazon_link;
-  renderTests();
-}
+  function applyLanguage(lang){
+    const t = translations[lang] || translations.en;
+    currentLang = lang;
+    setText('mainTitle', t.mainTitle); setText('subheadText', t.subhead); setText('infoTitle', t.infoTitle);
+    setText('infoPara1', t.infoPara1); setText('infoPara2', t.infoPara2); setText('infoPara3', t.infoPara3);
+    setText('infoDisclaimer', t.infoDisclaimer);
+    setText('test1Title', t.test1Title); setText('test1Desc', t.test1Desc); setText('test1Hint', t.test1Hint);
+    setText('test2Title', t.test2Title); setText('test2Desc', t.test2Desc); setText('test2Hint', t.test2Hint);
+    setText('test3Title', t.test3Title); setText('test3Desc', t.test3Desc); setText('test3Hint', t.test3Hint);
+    setText('trackerTitle', t.trackerTitle); setText('trackerDesc', t.trackerDesc);
+    setText('trackerLowLabel', t.trackerLowLabel); setText('trackerMidLabel', t.trackerMidLabel); setText('trackerHighLabel', t.trackerHighLabel);
+    document.getElementById('saveTrackerEntry').textContent = t.saveBtn;
+    document.getElementById('resetTrackerData').textContent = t.resetBtn;
+    setText('ctaText', t.ctaText); setText('footerText', t.footerText);
+    setText('trustNoSignup', t.trustNoSignup); setText('trustLocal', t.trustLocal); setText('trustAnonymous', t.trustAnonymous);
+    setText('howTitle', t.howTitle); setText('howText', t.howText);
+    setText('protocolsTitle', t.protocolsTitle); setText('protocolsDesc', t.protocolsDesc);
+    setText('researchTitle', t.researchTitle); setText('researchPara', t.researchPara);
+    setText('faqTitle', t.faqTitle);
+    for(let i=1; i<=8; i++){ setText(`faqQ${i}`, t[`faqQ${i}`]); setText(`faqA${i}`, t[`faqA${i}`]); }
+    document.getElementById('bookLink').href = t.bookUrl;
+    buildQuestions('test1Questions', t.questions1, 'test1', 'test1Progress');
+    buildQuestions('test2Questions', t.questions2, 'test2', 'test2Progress');
+    buildQuestions('test3Questions', t.questions3, 'test3', 'test3Progress');
+    document.querySelectorAll('.btn-submit').forEach(btn => btn.textContent = t.submitBtn);
+    ['test1Result','test2Result','test3Result'].forEach(id => { const el = document.getElementById(id); if(el) el.style.display = 'none'; });
+    updateTrackerUI();
+  }
 
-function detectLanguage() { const lang = navigator.language.split('-')[0]; return translations[lang] ? lang : 'en'; }
-function initLanguageSwitcher() {
-  const switcher = document.getElementById('lang-switcher'); switcher.innerHTML = '';
-  ['en','ru','hi'].forEach(code => {
-    const btn = document.createElement('a'); btn.id = code; btn.innerText = code.toUpperCase(); btn.href = 'javascript:void(0)';
-    btn.onclick = (e) => { e.preventDefault(); applyLanguage(code); document.querySelectorAll('.lang-switcher a').forEach(l => l.classList.remove('active')); btn.classList.add('active'); };
-    if (code === currentLang) btn.classList.add('active'); switcher.appendChild(btn);
-  });
-}
-function getLangFromURL() { const params = new URLSearchParams(window.location.search); return params.get('lang'); }
+  function buildLanguageSwitcher(){
+    const container = document.getElementById('langBar');
+    const langs = ['en','ru','es','de','fr','ja'];
+    container.innerHTML = '';
+    langs.forEach(code => {
+      const btn = document.createElement('button');
+      btn.textContent = code.toUpperCase(); btn.className = 'lang-btn' + (currentLang===code?' active':'');
+      btn.addEventListener('click', () => { applyLanguage(code); document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active')); btn.classList.add('active'); });
+      container.appendChild(btn);
+    });
+  }
 
-// ==================== INIT ====================
-document.addEventListener('DOMContentLoaded',()=>{
-  // Matrix
-  const canvas=document.getElementById('matrixCanvas'); const ctx=canvas?.getContext('2d');
-  if(ctx){let w,h,cols;function resize(){w=canvas.width=window.innerWidth;h=canvas.height=window.innerHeight;cols=Array(Math.floor(w/20)).fill(0);}resize();window.addEventListener('resize',resize);function draw(){if(!document.hidden){ctx.fillStyle="rgba(5,8,7,0.05)";ctx.fillRect(0,0,w,h);ctx.fillStyle="#1a3026";ctx.font="14px monospace";for(let i=0;i<cols.length;i++){ctx.fillText(Math.random()>0.5?"0":"1",i*20,cols[i]);cols[i]=cols[i]>h?0:cols[i]+14;}}requestAnimationFrame(draw);}draw();}
-  
-  renderTest();
-  renderProtocols();
-  initProtocol32();
-  loadStories(); renderStories();
-  renderGlossary(); renderResearch(); renderTrackerChart();
-  updateTimestamp();
+  function detectInitialLang(){
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlLang = urlParams.get('lang');
+    if(urlLang && translations[urlLang]) return urlLang;
+    const browserLang = navigator.language.split('-')[0];
+    if(translations[browserLang]) return browserLang;
+    return 'en';
+  }
 
-  let initialLang = getLangFromURL(); if (!initialLang || !translations[initialLang]) initialLang = detectLanguage();
-  currentLang = initialLang; applyLanguage(currentLang); initLanguageSwitcher();
+  function getTrackerData(){
+    const stored = localStorage.getItem('mindos_tracker_v2');
+    return stored ? JSON.parse(stored) : {};
+  }
 
-  // Event Listeners
-  document.getElementById('submit-story').addEventListener('click',()=>{ const txt=document.getElementById('story-text').value; const res=addStory(txt); document.getElementById('story-msg').innerHTML=res.ok?'<span style="color:var(--accent);">Saved!</span>':'<span style="color:var(--warn);">Error</span>'; });
-  document.getElementById('fact-search').addEventListener('input',e=>{searchTerm=e.target.value.toLowerCase();renderFacts();});
-  document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{activeCat=t.dataset.cat;renderFacts();document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));t.classList.add('active');}));
-  document.querySelectorAll('[data-tab]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();switchTab(el.dataset.tab);}));
-  document.getElementById('closeModalBtn').addEventListener('click',closeModal);
-  document.getElementById('save-tracker').addEventListener('click',()=>saveTrackerEntry(parseInt(document.getElementById('tracker-score').value)));
-  document.getElementById('reset-tracker').addEventListener('click',resetTracker);
-  document.getElementById('tracker-score').addEventListener('input',e=>document.getElementById('score-value').innerText=e.target.value);
-  document.getElementById('fact-grid').addEventListener('click',e=>{const card=e.target.closest('.fact-card');if(card){const f=hallucinationsDB.find(x=>x.id===card.dataset.id);if(f)showFactModal(f);}});
-  
-  // Test Submissions with improved CTAs
-  document.getElementById('submit-autonomy').addEventListener('click',()=>{
-    let sum=0; for(let i=0;i<7;i++) sum+=parseInt(document.getElementById(`autonomy_${i}`).value);
-    let rec='', cta='';
-    if(sum<=13) rec="High autonomy — you're an independent thinker. Keep practicing conscious AI use."; 
-    else if(sum<=20) rec="Moderate dependency. Your brain is starting to rely on AI. Try a 15-min 'no-AI' rule."; 
-    else rec="High dependency — risk of cognitive offloading. You're outsourcing too much thinking.";
-    cta = '<br><a href="https://www.amazon.com/dp/B0G35SBQR3" target="_blank" class="btn btn-primary" style="margin-top:10px;">📘 Get the Book to Reclaim Your Mind</a>';
-    document.getElementById('autonomy-result').innerHTML=`<div style="border-left:2px solid var(--accent); padding:10px;"><strong>Score: ${sum}/28</strong><br>${rec}${cta}</div>`;
-  });
-  document.getElementById('submit-profile').addEventListener('click',()=>{
-    let vals=[]; for(let i=0;i<7;i++) vals.push(parseInt(document.getElementById(`profile_${i}`).value));
-    let instr=vals[0]+vals[3]+vals[6], emot=vals[1]+vals[4], hybrid=vals[2], deleg=vals[5];
-    let maxVal=Math.max(instr,emot,hybrid,deleg);
-    let type='', rec='', cta='';
-    if(maxVal===instr){type="Instrumental user"; rec="You see AI as a calculator. The 33 Protocols can help automate workflows.";}
-    else if(maxVal===emot){type="Emotional user"; rec="Be careful not to replace human connection. The book offers protocols to balance AI use.";}
-    else if(maxVal===hybrid){type="Hybrid user"; rec="You have a healthy relationship. Explore the 33 Protocols to fine-tune your cognition.";}
-    else {type="Delegating user"; rec="You rely heavily on AI decisions. The book's protocols can help you reclaim your agency.";}
-    cta = '<br><a href="https://www.amazon.com/dp/B0G35SBQR3" target="_blank" class="btn btn-primary" style="margin-top:10px;">📘 Get the Book</a>';
-    document.getElementById('profile-result').innerHTML=`<div style="border-left:2px solid var(--accent); padding:10px;"><strong>${type}</strong><br>${rec}${cta}</div>`;
-  });
+  function saveTrackerData(data){ localStorage.setItem('mindos_tracker_v2', JSON.stringify(data)); }
 
-  // FAQ accordion
-  document.querySelectorAll('.faq-question').forEach(q=>q.addEventListener('click',function(){this.classList.toggle('active');}));
-});
+  function updateTrackerUI(){
+    const t = translations[currentLang];
+    const data = getTrackerData();
+    const today = new Date().toISOString().slice(0,10);
+    const last7 = [];
+    for(let i=6; i>=0; i--){
+      const d = new Date(); d.setDate(d.getDate()-i);
+      const key = d.toISOString().slice(0,10);
+      last7.push({ date: key, score: data[key] ?? null });
+    }
+    const validScores = last7.filter(d => d.score !== null).map(d => d.score);
+    const avg = validScores.length ? (validScores.reduce((a,b)=>a+b,0)/validScores.length).toFixed(1) : null;
+    const container = document.getElementById('trackerStatsArea');
+    const chartDiv = document.getElementById('trackerChartContainer');
+    const summaryDiv = document.getElementById('trackerSummary');
+    let chartHtml = '<div class="tracker-chart">';
+    last7.forEach(d => {
+      const height = d.score !== null ? (d.score/10)*60 + 10 : 8;
+      chartHtml += `<div class="chart-bar"><div class="bar-fill" style="height:${height}px; background: ${d.score!==null?'var(--accent)':'#2a3a30'};"></div><div class="bar-label">${d.date.slice(5)}</div></div>`;
+    });
+    chartHtml += '</div>';
+    chartDiv.innerHTML = chartHtml;
+    let trendText = t.noData;
+    if(validScores.length >= 3){
+      const firstHalf = validScores.slice(0, Math.floor(validScores.length/2));
+      const secondHalf = validScores.slice(Math.floor(validScores.length/2));
+      const avg1 = firstHalf.reduce((a,b)=>a+b,0)/firstHalf.length;
+      const avg2 = secondHalf.reduce((a,b)=>a+b,0)/secondHalf.length;
+      if(avg2 > avg1 + 0.8) trendText = t.trendIncreasing;
+      else if(avg2 < avg1 - 0.8) trendText = t.trendDecreasing;
+      else trendText = t.trendStable;
+    }
+    summaryDiv.innerHTML = `<strong>${t.trackerSummaryPrefix} ${avg ?? '—'}</strong><br><span class="trend-indicator">${trendText}</span>`;
+    document.getElementById('trackerValueDisplay').textContent = data[today] ?? '5';
+    document.getElementById('trackerScore').value = data[today] ?? 5;
+  }
+
+  function initTracker(){
+    const slider = document.getElementById('trackerScore');
+    const display = document.getElementById('trackerValueDisplay');
+    slider.addEventListener('input', ()=> display.textContent = slider.value);
+    document.getElementById('saveTrackerEntry').addEventListener('click', ()=>{
+      const today = new Date().toISOString().slice(0,10);
+      const data = getTrackerData();
+      data[today] = parseInt(slider.value);
+      const keys = Object.keys(data).sort().slice(-7);
+      const trimmed = {};
+      keys.forEach(k => trimmed[k] = data[k]);
+      saveTrackerData(trimmed);
+      updateTrackerUI();
+    });
+    document.getElementById('resetTrackerData').addEventListener('click', ()=>{
+      localStorage.removeItem('mindos_tracker_v2');
+      updateTrackerUI();
+    });
+    updateTrackerUI();
+  }
+
+  function init(){
+    renderProtocols();
+    const initLang = detectInitialLang();
+    applyLanguage(initLang);
+    buildLanguageSwitcher();
+    document.querySelectorAll('.faq-question').forEach(q => q.addEventListener('click', () => q.classList.toggle('active')));
+    function makeSubmitHandler(prefix, n, resultId, max, testId){
+      return function(){
+        const score = computeScore(prefix, n);
+        if(score === null){ alert(translations[currentLang].alertIncomplete); return; }
+        showResult(resultId, score, max, testId, translations[currentLang]);
+      };
+    }
+    document.getElementById('submitTest1').addEventListener('click', makeSubmitHandler('test1', 5, 'test1Result', 20, 'test1'));
+    document.getElementById('submitTest2').addEventListener('click', makeSubmitHandler('test2', 5, 'test2Result', 20, 'test2'));
+    document.getElementById('submitTest3').addEventListener('click', makeSubmitHandler('test3', 5, 'test3Result', 20, 'test3'));
+    initTracker();
+  }
+
+  window.onload = init;
 </script>
 </body>
 </html>
