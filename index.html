@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Free AI Usage Test – How Much Do You Rely on AI? | Mind-OS</title>
-  <meta name="description" content="Take our free, anonymous AI dependency test. Understand your thinking habits, emotional attachment, and daily reliance on AI. Get practical suggestions. No signup, no tracking.">
-  <meta name="author" content="Mind-OS">
+  <title>Free AI Usage Self‑Assessment – Understand Your AI Habits | Mind-OS</title>
+  <meta name="description" content="Measure cognitive offloading, emotional attachment to AI, and AI dependency in daily tasks. Free, anonymous, private. Research‑backed self‑reflection.">
+  
+  <!-- Основные SEO-теги -->
+  <title>Free Online AI Dependency Self‑Assessment – No Registration | Mind-OS</title>
+  <meta name="description" content="Measure cognitive offloading, AI dependency, and brain fry with this free, anonymous online test. No signup or registration required. Instant results.">
+  <meta name="author" content="Aleksei Bitkin">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://mind-os.org/">
   <link rel="alternate" hreflang="x-default" href="https://mind-os.org/">
@@ -15,1040 +19,499 @@
   <link rel="alternate" hreflang="de" href="https://mind-os.org/?lang=de">
   <link rel="alternate" hreflang="fr" href="https://mind-os.org/?lang=fr">
   <link rel="alternate" hreflang="ja" href="https://mind-os.org/?lang=ja">
-  <meta property="og:title" content="Free AI Usage Test – How Much Do You Rely on AI?">
-  <meta property="og:description" content="Anonymous self-test to measure your AI dependency. Free, private, no signup.">
+  <meta property="og:title" content="Free AI Usage Self‑Assessment – Understand Your AI Habits">
+  <meta name="keywords" content="cognitive offloading test, AI dependency self-assessment, free online AI quiz, no registration AI test, AI brain fry, measure AI reliance, бесплатный тест на зависимость от ИИ, онлайн тест ИИ, когнитивная разгрузка тест">
+  
+  <!-- Канонические и языковые ссылки (исправлены на реальный домен GitHub Pages) -->
+  <link rel="canonical" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/">
+  <link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/">
+  <link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/">
+  <link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/?lang=ru">
+  <link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/?lang=es">
+  <link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/?lang=de">
+  <link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/?lang=fr">
+  <link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/?lang=ja">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Free Online AI Dependency Self‑Assessment – No Registration">
+  <meta property="og:description" content="Anonymous self‑reflection on AI dependency. No signup, no tracking.">
+  <meta property="og:image" content="cover.jpg">
+  <meta property="og:image" content="https://iamalex-afk.github.io/human-os-patch-33-protocols/cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mind-os.org/">
+  <meta property="og:url" content="https://iamalex-afk.github.io/human-os-patch-33-protocols/">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://iamalex-afk.github.io/human-os-patch-33-protocols/cover.jpg">
+  
+  <!-- Иконки и манифест -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <meta property="og:image" content="https://iamalex-afk.github.io/human-os-patch-33-protocols/cover.jpg">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0b100d">
+  
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background: #eef2f6;
-      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-      line-height: 1.5;
-      color: #1e293b;
-      padding: 1rem;
-    }
-
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-    }
-
-    .lang-bar {
-      display: flex;
-      justify-content: flex-end;
-      gap: 0.5rem;
-      margin-bottom: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    .lang-btn {
-      background: transparent;
-      border: 1px solid #cbd5e1;
-      padding: 0.3rem 0.8rem;
-      border-radius: 2rem;
-      font-size: 0.8rem;
-      font-weight: 500;
-      cursor: pointer;
-      color: #1e293b;
-      transition: all 0.2s ease;
-    }
-
-    .lang-btn:hover {
-      background: #e2e8f0;
-      border-color: #94a3b8;
-    }
-
-    .lang-btn.active {
-      background: #0f172a;
-      border-color: #0f172a;
-      color: white;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-      color: #0f172a;
-      margin-bottom: 0.5rem;
-    }
-
-    .subhead {
-      font-size: 1.1rem;
-      color: #334155;
-      max-width: 650px;
-      margin: 0 auto;
-    }
-
-    .info-box {
-      background: white;
-      border-radius: 1rem;
-      padding: 1.2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-    }
-
-    .info-box h2 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .info-box p {
-      margin-bottom: 0.5rem;
-    }
-
-    .test-card {
-      background: white;
-      border-radius: 1.25rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-      border: 1px solid #e2e8f0;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .test-card:hover {
-      box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.1);
-      transform: translateY(-2px);
-    }
-
-    .test-title {
-      font-size: 1.4rem;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 0.25rem;
-    }
-
-    .test-desc {
-      color: #475569;
-      margin-bottom: 1rem;
-      font-size: 0.9rem;
-    }
-
-    .progress {
-      font-size: 0.8rem;
-      color: #3b82f6;
-      margin-bottom: 0.75rem;
-      font-weight: 500;
-    }
-
-    .question {
-      margin-bottom: 1.25rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid #edf2f7;
-    }
-
-    .question-text {
-      font-weight: 500;
-      margin-bottom: 0.6rem;
-    }
-
-    .options {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-top: 0.5rem;
-    }
-
-    .option-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      background: #f1f5f9;
-      padding: 0.4rem 1rem;
-      border-radius: 2rem;
-      font-size: 0.85rem;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-
-    .option-label:hover {
-      background: #e2e8f0;
-    }
-
-    .option-label.selected {
-      background: #0f172a;
-      color: white;
-    }
-
-    input[type="radio"] {
-      accent-color: #0f172a;
-      width: 1rem;
-      height: 1rem;
-      margin: 0;
-    }
-
-    .btn-submit {
-      background: #0f172a;
-      color: white;
-      border: none;
-      padding: 0.75rem 1.8rem;
-      border-radius: 2rem;
-      font-weight: 500;
-      font-size: 1rem;
-      cursor: pointer;
-      margin-top: 0.5rem;
-      transition: background 0.2s ease, transform 0.1s ease;
-      width: 100%;
-      max-width: 260px;
-      display: block;
-    }
-
-    .btn-submit:hover {
-      background: #1e293b;
-    }
-
-    .btn-submit:active {
-      transform: scale(0.98);
-    }
-
-    .result {
-      margin-top: 1.25rem;
-      padding: 1rem;
-      background: #f8fafc;
-      border-radius: 1rem;
-      border-left: 4px solid #0f172a;
-      animation: fadeIn 0.3s ease;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-5px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .result strong {
-      display: block;
-      margin-bottom: 0.4rem;
-      font-size: 1.1rem;
-    }
-
-    .suggestion {
-      margin-top: 0.75rem;
-      padding-top: 0.5rem;
-      border-top: 1px solid #e2e8f0;
-      font-weight: 500;
-    }
-
-    .how-it-works {
-      background: white;
-      border-radius: 1.25rem;
-      padding: 1.5rem;
-      margin: 2rem 0;
-      text-align: center;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-    }
-
-    .how-it-works h2 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .how-it-works p {
-      max-width: 600px;
-      margin: 0 auto;
-      color: #2c3e50;
-    }
-
-    .trust-badge {
-      display: inline-flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-      margin: 0.5rem 0;
-      font-size: 0.8rem;
-      color: #4b5563;
-    }
-
-    .book-cta {
-      text-align: center;
-      margin: 2rem 0 1rem;
-      padding: 1rem;
-      background: white;
-      border-radius: 1.5rem;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-    }
-
-    .book-link {
-      display: inline-block;
-      background: #0f172a;
-      color: white;
-      text-decoration: none;
-      padding: 0.6rem 1.5rem;
-      border-radius: 2rem;
-      font-weight: 500;
-      margin-top: 0.5rem;
-      transition: background 0.2s ease;
-    }
-
-    .book-link:hover {
-      background: #1e293b;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.75rem;
-      color: #64748b;
-      margin-top: 2rem;
-      border-top: 1px solid #e2e8f0;
-      padding-top: 1rem;
-    }
-
-    @media (max-width: 640px) {
-      body { padding: 0.75rem; }
-      .test-card { padding: 1rem; }
-      .btn-submit { max-width: 100%; }
-      .options { gap: 0.4rem; }
-      .option-label { padding: 0.3rem 0.8rem; font-size: 0.75rem; }
-      h1 { font-size: 1.5rem; }
-    }
+    :root {
+      --bg: #0b100d;
+@@ -238,14 +252,16 @@
+    .text-center { text-align: center; }
+    .disclaimer-micro { font-size: 0.8rem; color: var(--text-dim); margin-top: 0.5rem; }
   </style>
+  
+  <!-- JSON-LD структурированные данные (расширенная версия) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Free AI Usage Test – How Much Do You Rely on AI?",
-    "description": "Anonymous self-test to measure how much you rely on AI in daily life. No signup, no tracking.",
-    "url": "https://mind-os.org/",
-    "mainEntity": {
-      "@type": "Quiz",
-      "name": "AI usage self-assessment",
-      "educationalLevel": "general"
-    }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    "@graph": [
       {
-        "@type": "Question",
-        "name": "Is this test anonymous?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, everything runs inside your browser. No data is sent to any server."
+        "@type": "WebSite",
+        "name": "Mind-OS",
+        "url": "https://mind-os.org/",
+        "url": "https://iamalex-afk.github.io/human-os-patch-33-protocols/",
+        "publisher": {
+          "@type": "Person",
+          "name": "Aleksei Bitkin",
+@@ -255,13 +271,47 @@
+          ]
         }
       },
       {
-        "@type": "Question",
-        "name": "Do I need to sign up?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No signup, no registration. Just open the page and start."
+        "@type": "WebApplication",
+        "name": "AI Usage Self-Assessment",
+        "description": "Free anonymous test to measure AI dependency in thinking, emotional attachment, and daily tasks.",
+        "applicationCategory": "Health & Wellness",
+        "operatingSystem": "All",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
         }
       },
       {
-        "@type": "Question",
-        "name": "What should I do with the results?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The results give you a simple score and one practical suggestion. Use it as a starting point for reflection."
-        }
-      }
-    ]
-  }
-  </script>
-</head>
-<body>
+        "@type": "Quiz",
+        "name": "AI Usage Self-Assessment",
+        "description": "Free anonymous test to measure AI dependency in thinking, emotional attachment, and daily tasks.",
+        "educationalLevel": "general",
+        "about": { "@type": "Thing", "name": "Cognitive offloading and AI dependency" }
+      },
+      {
+        "@type": "HowTo",
+        "name": "Daily Cognitive Load Tracker",
+        "description": "Log how much you relied on AI today. 0 = fully independent, 10 = high dependence.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Log Your Day",
+            "text": "Use the slider to select your AI reliance score for today."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Save Entry",
+            "text": "Click 'Save today' to log your score."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Track Progress",
+            "text": "Review your 7-day average and trend to understand your AI dependency patterns."
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+@@ -281,13 +331,53 @@
+              "text": "When you consistently outsource thinking to AI, your brain's neural pathways for problem-solving and memory retrieval become less active. This leads to mental sluggishness and difficulty concentrating without AI assistance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are the 33 Protocols scientifically validated?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The protocols integrate established principles from cognitive neuroscience, behavioral psychology, and the author's peer‑reviewed Glitch Theory of Consciousness (DOI: 10.5281/zenodo.17972301)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does it take to see results?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most readers report noticeable improvements in focus and reduced AI dependency within 21–66 days of consistent practice. The key is daily micro‑actions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Am I addicted to ChatGPT?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Addiction is a strong word, but unhealthy dependency is real. If you feel anxious without AI, constantly check for responses, or prefer AI over human interaction, it's a sign to rebalance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the EHARS scale?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "EHARS (Emotional Health and Attachment to AI Relationship Scale) is a research-based tool measuring human-AI emotional bonds. Our test incorporates questions inspired by validated psychological scales."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does AI make me less smart?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It can, if you over-rely on it. 'Cognitive offloading' — using AI for memory and thinking — may weaken those skills over time. Our Cognitive Autonomy Test helps you gauge this."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I use AI without losing my skills?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The key is conscious usage. Try the '15-minute rule': attempt a task yourself for 15 minutes before asking AI. Our Productivity Test offers personalized strategies for balanced AI use."
+            }
+          }
+        ]
+      },
+@@ -311,7 +401,7 @@
 <div class="container">
   <div class="lang-bar" id="langBar"></div>
   <header>
-    <h1 id="mainTitle">Free AI Usage Test – How Much Do You Rely on AI?</h1>
-    <div class="subhead" id="subheadText">Understand your AI habits with a free, anonymous self‑assessment. No signup, no tracking – just honest insights.</div>
+    <h1 id="mainTitle">Free AI Usage Self‑Assessment – Understand Your AI Habits</h1>
+    <h1 id="mainTitle">Free Online AI Dependency Self‑Assessment – No Registration</h1>
+    <div class="subhead" id="subheadText">Measure cognitive offloading, emotional attachment, and daily AI reliance. Private, anonymous, no signup.</div>
   </header>
 
-  <section class="info-box" id="infoBox">
-    <h2 id="infoTitle">📋 What this test measures</h2>
-    <p id="infoPara1">This AI dependency test helps you see how often you turn to AI for thinking, memory, emotional support, or daily tasks. It's designed for anyone curious about their relationship with AI — from casual users to heavy adopters.</p>
-    <p id="infoPara2"><strong id="infoWho">Who it's for:</strong> Individuals who want to understand whether they rely on AI too much, and get a simple, actionable suggestion. The results are for self‑reflection only — no clinical diagnosis.</p>
-    <p id="infoPara3"><strong id="infoHow">How it works:</strong> Answer 5 short questions per area (thinking & memory, feelings & connection, work & daily tasks). All data stays in your browser — we don't track anything.</p>
-  </section>
-
-  <!-- Test 1: Thinking & memory -->
-  <section class="test-card">
-    <h2 class="test-title"><span>🧠</span> <span id="test1Title">Thinking & memory</span></h2>
-    <div class="test-desc" id="test1Desc">Do you often let AI think for you? (remembering, checking facts, making decisions)</div>
-    <div class="progress" id="test1Progress"></div>
-    <div id="test1Questions"></div>
-    <button class="btn-submit" id="submitTest1">See my result</button>
-    <div id="test1Result" class="result" style="display:none;"></div>
-  </section>
-
-  <!-- Test 2: Feelings & connection -->
-  <section class="test-card">
-    <h2 class="test-title"><span>💬</span> <span id="test2Title">Feelings & connection</span></h2>
-    <div class="test-desc" id="test2Desc">Do you feel emotionally attached to AI? Does it replace real conversations?</div>
-    <div class="progress" id="test2Progress"></div>
-    <div id="test2Questions"></div>
-    <button class="btn-submit" id="submitTest2">See my result</button>
-    <div id="test2Result" class="result" style="display:none;"></div>
-  </section>
-
-  <!-- Test 3: Work & daily tasks -->
-  <section class="test-card">
-    <h2 class="test-title"><span>⚙️</span> <span id="test3Title">Work & daily tasks</span></h2>
-    <div class="test-desc" id="test3Desc">Do you rely on AI for planning, writing, or solving everyday problems?</div>
-    <div class="progress" id="test3Progress"></div>
-    <div id="test3Questions"></div>
-    <button class="btn-submit" id="submitTest3">See my result</button>
-    <div id="test3Result" class="result" style="display:none;"></div>
-  </section>
-
-  <div class="how-it-works" id="howItWorks">
-    <h2 id="howTitle">📌 How this works</h2>
-    <p id="howText">Each test has 5 short questions. Choose the answer that feels most true for you. Your answers never leave your browser – we don't track anything. At the end you'll get a simple score and one practical suggestion.</p>
-    <div class="trust-badge" id="trustBadge">
-      <span id="trustNoSignup">🔒 No signup</span>
-      <span id="trustLocal">📁 Runs in your browser</span>
-      <span id="trustAnonymous">🧾 Anonymous</span>
-    </div>
-  </div>
-
-  <div class="book-cta" id="bookCta">
-    <p id="ctaText">Want more guidance? The 33 Protocols book offers short daily exercises.</p>
-    <a href="#" id="bookLink" class="book-link" target="_blank">📘 Find the book</a>
-  </div>
-  <footer>
-    <p id="footerText">© Mind-OS – independent research project. Self‑reflection tools, not clinical diagnosis.</p>
+@@ -432,6 +522,43 @@
   </footer>
 </div>
 
+<!-- Скрытый статический текст для индексации вопросов (помогает поисковикам) -->
+<div style="display:none;" aria-hidden="true">
+  <!-- English Questions -->
+  <p>Test 1: When you need to remember something, do you ask AI instead of trying to recall?</p>
+  <p>Test 1: Do you use AI to check even simple facts (weather, dates, spellings)?</p>
+  <p>Test 1: Before making a decision, do you usually ask AI for advice?</p>
+  <p>Test 1: Do you feel your memory has become worse since you started using AI regularly?</p>
+  <p>Test 1: Do you trust AI's conclusions more than your own reasoning?</p>
+  <p>Test 2: Do you feel more comfortable talking to AI than to real people?</p>
+  <p>Test 2: Do you feel anxious when an AI assistant is not available or is slow?</p>
+  <p>Test 2: Do you share personal feelings with AI more openly than with friends?</p>
+  <p>Test 2: Do you sometimes prefer AI's company over meeting people?</p>
+  <p>Test 2: Would you feel a real loss if your favourite chatbot disappeared?</p>
+  <p>Test 3: Do you rely on AI to plan your daily schedule or decide what to do next?</p>
+  <p>Test 3: Do you use AI to write or rewrite most work‑related texts?</p>
+  <p>Test 3: When you face a problem, do you go to AI before trying to solve it yourself?</p>
+  <p>Test 3: Do you let AI choose between products (which laptop, which restaurant)?</p>
+  <p>Test 3: Do you feel less productive when you cannot use AI for routine tasks?</p>
+  <!-- Russian Questions -->
+  <p>Когда нужно что‑то запомнить, вы спрашиваете ИИ вместо того, чтобы вспомнить самим?</p>
+  <p>Используете ли вы ИИ для проверки простых фактов (погода, даты, написание слов)?</p>
+  <p>Перед принятием решения вы обычно советуетесь с ИИ?</p>
+  <p>Чувствуете ли вы, что ваша память ухудшилась из‑за регулярного использования ИИ?</p>
+  <p>Вы доверяете выводам ИИ больше, чем своим собственным рассуждениям?</p>
+  <p>Вам комфортнее разговаривать с ИИ, чем с реальными людьми?</p>
+  <p>Вы тревожитесь, когда ИИ‑помощник недоступен или работает медленно?</p>
+  <p>Вы делитесь личными переживаниями с ИИ более открыто, чем с друзьями?</p>
+  <p>Вы иногда предпочитаете общество ИИ встречам с людьми?</p>
+  <p>Вы бы почувствовали настоящую потерю, если бы ваш любимый чат‑бот исчез?</p>
+  <p>Вы полагаетесь на ИИ, чтобы спланировать свой день или решить, что делать дальше?</p>
+  <p>Используете ли вы ИИ для написания или переписывания большинства рабочих текстов?</p>
+  <p>Когда возникает проблема, вы идёте к ИИ, прежде чем попробовать решить её самим?</p>
+  <p>Вы позволяете ИИ выбирать между товарами (какой ноутбук, какой ресторан)?</p>
+  <p>Вы чувствуете себя менее продуктивным, когда не можете использовать ИИ для рутинных задач?</p>
+  <!-- Аналогично можно добавить вопросы для других языков, но это опционально -->
+</div>
+
 <script>
-  // ------------------------------------------------------------------
-  //  TRANSLATIONS – complete, neutral, human (EN, RU, ES, DE, FR, JA)
-  // ------------------------------------------------------------------
+  const protocolsData = [
+    { num: 1, title: "AI: Method, Not Mind", desc: "AI is a tool, not a conversation partner. 80% routine replaced by AI frees 80% time for creativity." },
+@@ -471,7 +598,7 @@
+
   const translations = {
     en: {
-      mainTitle: "Free AI Usage Test – How Much Do You Rely on AI?",
-      subhead: "Understand your AI habits with a free, anonymous self‑assessment. No signup, no tracking – just honest insights.",
-      infoTitle: "📋 What this test measures",
-      infoPara1: "This AI dependency test helps you see how often you turn to AI for thinking, memory, emotional support, or daily tasks. It's designed for anyone curious about their relationship with AI — from casual users to heavy adopters.",
-      infoPara2: "Who it's for: Individuals who want to understand whether they rely on AI too much, and get a simple, actionable suggestion. The results are for self‑reflection only — no clinical diagnosis.",
-      infoPara3: "How it works: Answer 5 short questions per area (thinking & memory, feelings & connection, work & daily tasks). All data stays in your browser — we don't track anything.",
-      test1Title: "Thinking & memory",
-      test1Desc: "Do you often let AI think for you? (remembering, checking facts, making decisions)",
-      test2Title: "Feelings & connection",
-      test2Desc: "Do you feel emotionally attached to AI? Does it replace real conversations?",
-      test3Title: "Work & daily tasks",
-      test3Desc: "Do you rely on AI for planning, writing, or solving everyday problems?",
-      ctaText: "Want more guidance? The 33 Protocols book offers short daily exercises.",
-      footerText: "© Mind-OS – independent research project. Self‑reflection tools, not clinical diagnosis.",
-      bookUrl: "https://www.amazon.com/dp/B0G35SBQR3",
-      submitBtn: "See my result",
-      resultLow: "You use AI as a helper, not a replacement. That's a healthy balance.",
-      resultMedium: "You rely on AI for some thinking tasks. Try solving a small problem yourself before asking AI.",
-      resultHigh: "You often turn to AI for thinking tasks. Consider doing one small daily task without AI.",
-      resultPrefix: "Your score:",
-      resultFooter: "This is a self‑reflection tool, not a medical diagnosis.",
-      alertIncomplete: "Please answer all questions.",
-      progressText: "Question {answered} of {total}",
-      options: {
-        never: "Never",
-        sometimes: "Sometimes",
-        often: "Often",
-        always: "Always"
-      },
-      trustNoSignup: "🔒 No signup",
-      trustLocal: "📁 Runs in your browser",
-      trustAnonymous: "🧾 Anonymous",
-      howTitle: "📌 How this works",
-      howText: "Each test has 5 short questions. Choose the answer that feels most true for you. Your answers never leave your browser – we don't track anything. At the end you'll get a simple score and one practical suggestion.",
-      questions1: [
-        "When you need to remember something, do you ask AI instead of trying to recall?",
-        "Do you use AI to check even simple facts (weather, dates, spellings)?",
-        "Before making a decision, do you usually ask AI for advice?",
-        "Do you feel your memory has become worse since you started using AI regularly?",
-        "Do you trust AI's conclusions more than your own reasoning?"
-      ],
-      questions2: [
-        "Do you feel more comfortable talking to AI than to real people?",
-        "Do you feel anxious when an AI assistant is not available or is slow?",
-        "Do you share personal feelings with AI more openly than with friends?",
-        "Do you sometimes prefer AI's company over meeting people?",
-        "Would you feel a real loss if your favourite chatbot disappeared?"
-      ],
-      questions3: [
-        "Do you rely on AI to plan your daily schedule or decide what to do next?",
-        "Do you use AI to write or rewrite most work‑related texts?",
-        "When you face a problem, do you go to AI before trying to solve it yourself?",
-        "Do you let AI choose between products (which laptop, which restaurant)?",
-        "Do you feel less productive when you cannot use AI for routine tasks?"
-      ],
-      suggestions: {
-        low1: "Keep using AI consciously – you're doing well.",
-        low2: "Good balance. Stay aware of how much you rely on AI.",
-        low3: "You're in control. That's excellent.",
-        medium1: "Try this: before asking AI, spend 30 seconds thinking alone.",
-        medium2: "Try talking to a real person once a day about something small.",
-        medium3: "Try solving one small work problem without AI each day.",
-        high1: "Set a timer: 5 minutes of thinking without AI before you ask.",
-        high2: "Take a one‑day break from AI chatbots and see how you feel.",
-        high3: "Write a short to‑do list by hand, without AI, every morning."
-      }
+      mainTitle: "Free AI Usage Self‑Assessment – Understand Your AI Habits",
+      mainTitle: "Free Online AI Dependency Self‑Assessment – No Registration",
+      subhead: "Measure cognitive offloading, emotional attachment, and daily AI reliance. Private, anonymous, no signup.",
+      infoTitle: "📋 What this self‑reflection measures",
+      infoPara1: "This set of short tests helps you observe patterns in how you use AI for thinking, emotional comfort, and daily productivity. It is designed for self‑awareness, not clinical diagnosis.",
+@@ -519,7 +646,7 @@
+      suggestions: { low1: "Keep using AI consciously – you're doing well.", low2: "Good balance. Stay aware of how much you rely on AI.", low3: "You're in control. That's excellent.", medium1: "Try this: before asking AI, spend 30 seconds thinking alone.", medium2: "Try talking to a real person once a day about something small.", medium3: "Try solving one small work problem without AI each day.", high1: "Set a timer: 5 minutes of thinking without AI before you ask.", high2: "Take a one‑day break from AI chatbots and see how you feel.", high3: "Write a short to‑do list by hand, without AI, every morning." }
     },
     ru: {
       mainTitle: "Бесплатный тест: насколько вы полагаетесь на ИИ?",
-      subhead: "Узнайте свои привычки в использовании ИИ с помощью бесплатной анонимной самодиагностики. Без регистрации и слежки — просто честные ответы.",
-      infoTitle: "📋 Что измеряет этот тест",
-      infoPara1: "Этот тест на зависимость от ИИ поможет понять, как часто вы обращаетесь к ИИ для мышления, памяти, эмоциональной поддержки или повседневных задач. Он подходит для всех, кому интересны их отношения с ИИ — от обычных пользователей до тех, кто активно его использует.",
-      infoPara2: "Кому подходит: людям, которые хотят понять, не слишком ли они полагаются на ИИ, и получить простой практический совет. Результаты предназначены только для саморефлексии — это не клинический диагноз.",
-      infoPara3: "Как это работает: ответьте на 5 коротких вопросов в каждой области (мышление и память, чувства и привязанность, работа и повседневные задачи). Все данные остаются в вашем браузере — мы ничего не отслеживаем.",
-      test1Title: "Память и мышление",
-      test1Desc: "Часто ли вы позволяете ИИ думать за вас? (запоминание, факты, решения)",
-      test2Title: "Чувства и привязанность",
-      test2Desc: "Чувствуете ли вы эмоциональную связь с ИИ? Заменяет ли он живое общение?",
-      test3Title: "Работа и повседневные дела",
-      test3Desc: "Полагаетесь ли вы на ИИ в планировании, письме или решении задач?",
-      ctaText: "Хотите больше практических советов? Книга «33 протокола» предлагает короткие упражнения.",
-      footerText: "© Mind-OS – независимый исследовательский проект. Инструмент для саморефлексии, не клиническая диагностика.",
-      bookUrl: "https://www.litres.ru/search/?q=AI+Biohacking+33+Protocols&languages=ru",
+      mainTitle: "Бесплатный онлайн-тест на зависимость от ИИ – Без регистрации",
+      subhead: "Оцените когнитивную разгрузку, эмоциональную привязанность и повседневную зависимость от ИИ. Анонимно и конфиденциально.",
+      infoTitle: "📋 Что измеряет эта саморефлексия",
+      infoPara1: "Эти короткие тесты помогут вам увидеть, как часто вы обращаетесь к ИИ для мышления, эмоциональной поддержки или повседневных задач. Они созданы для самонаблюдения, а не для клинической диагностики.",
+@@ -540,7 +667,8 @@
+      noData: "Пока нет данных. Сохраните первую запись выше.",
+      ctaText: "Нужны структурированные советы? Книга «33 протокола» предлагает ежедневные микро‑упражнения.",
+      footerText: "© Mind-OS – Создано Алексеем Биткиным. Независимый исследовательский проект. Инструмент саморефлексии, не диагноз.",
+      bookUrl: "https://www.litres.ru/search/?q=AI+Biohacking+33+Protocols&languages=ru", submitBtn: "Узнать результат",
+      bookUrl: "https://www.litres.ru/book/aleksey-sergeevich-bitk/biohaking-s-ii-33-protokola-perezagruzki-soznaniya-72799232/", 
       submitBtn: "Узнать результат",
       resultLow: "Вы используете ИИ как помощника – это здоровый баланс.",
       resultMedium: "Вы полагаетесь на ИИ в некоторых мыслительных задачах. Попробуйте сначала решить небольшую проблему сами.",
       resultHigh: "Вы часто обращаетесь к ИИ за решением задач. Попробуйте один день обойтись без него в одной маленькой задаче.",
-      resultPrefix: "Ваш результат:",
-      resultFooter: "Инструмент для саморефлексии, не медицинский диагноз.",
-      alertIncomplete: "Пожалуйста, ответьте на все вопросы.",
-      progressText: "Вопрос {answered} из {total}",
-      options: {
-        never: "Никогда",
-        sometimes: "Иногда",
-        often: "Часто",
-        always: "Всегда"
-      },
-      trustNoSignup: "🔒 Без регистрации",
-      trustLocal: "📁 Работает в браузере",
-      trustAnonymous: "🧾 Анонимно",
-      howTitle: "📌 Как это работает",
-      howText: "В каждом тесте 5 коротких вопросов. Выберите ответ, который наиболее соответствует вам. Ваши ответы никогда не покидают ваш браузер — мы ничего не отслеживаем. В конце вы получите простой результат и один практический совет.",
-      questions1: [
-        "Когда нужно что‑то запомнить, вы спрашиваете ИИ вместо того, чтобы вспомнить самим?",
-        "Используете ли вы ИИ для проверки простых фактов (погода, даты, написание слов)?",
-        "Перед принятием решения вы обычно советуетесь с ИИ?",
-        "Чувствуете ли вы, что ваша память ухудшилась из‑за регулярного использования ИИ?",
-        "Вы доверяете выводам ИИ больше, чем своим собственным рассуждениям?"
-      ],
-      questions2: [
-        "Вам комфортнее разговаривать с ИИ, чем с реальными людьми?",
-        "Вы тревожитесь, когда ИИ‑помощник недоступен или работает медленно?",
-        "Вы делитесь личными переживаниями с ИИ более открыто, чем с друзьями?",
-        "Вы иногда предпочитаете общество ИИ встречам с людьми?",
-        "Вы бы почувствовали настоящую потерю, если бы ваш любимый чат‑бот исчез?"
-      ],
-      questions3: [
-        "Вы полагаетесь на ИИ, чтобы спланировать свой день или решить, что делать дальше?",
-        "Используете ли вы ИИ для написания или переписывания большинства рабочих текстов?",
-        "Когда возникает проблема, вы идёте к ИИ, прежде чем попробовать решить её самим?",
-        "Вы позволяете ИИ выбирать между товарами (какой ноутбук, какой ресторан)?",
-        "Вы чувствуете себя менее продуктивным, когда не можете использовать ИИ для рутинных задач?"
-      ],
-      suggestions: {
-        low1: "Продолжайте использовать ИИ осознанно – у вас отлично получается.",
-        low2: "Хороший баланс. Следите, чтобы ИИ не заменял живое общение.",
-        low3: "Вы сохраняете контроль – это прекрасно.",
-        medium1: "Попробуйте: прежде чем спросить ИИ, подумайте 30 секунд сами.",
-        medium2: "Постарайтесь один раз в день поговорить с реальным человеком.",
-        medium3: "Попробуйте решить одну рабочую задачу без ИИ каждый день.",
-        high1: "Заведите таймер: 5 минут размышлений без ИИ перед запросом.",
-        high2: "Сделайте день перерыва в общении с чат‑ботами и понаблюдайте за собой.",
-        high3: "Каждое утро пишите короткий список дел от руки, без ИИ."
-      }
-    },
-    es: {
-      mainTitle: "Prueba gratuita: ¿cuánto dependes de la IA?",
-      subhead: "Comprende tus hábitos con la IA mediante una autoevaluación anónima y gratuita. Sin registro ni seguimiento – solo respuestas honestas.",
-      infoTitle: "📋 Qué mide esta prueba",
-      infoPara1: "Esta prueba de dependencia de la IA te ayuda a ver con qué frecuencia recurres a la IA para pensar, recordar, apoyo emocional o tareas diarias. Está diseñada para cualquier persona curiosa sobre su relación con la IA, desde usuarios ocasionales hasta quienes la usan intensamente.",
-      infoPara2: "Para quién es: personas que quieren entender si dependen demasiado de la IA y obtener una sugerencia práctica y sencilla. Los resultados son solo para autorreflexión, no un diagnóstico clínico.",
-      infoPara3: "Cómo funciona: responde 5 preguntas cortas por área (pensamiento y memoria, sentimientos y conexión, trabajo y tareas diarias). Todos los datos permanecen en tu navegador, no rastreamos nada.",
-      test1Title: "Pensamiento y memoria",
-      test1Desc: "¿Dejas que la IA piense por ti? (recordar, comprobar datos, decidir)",
-      test2Title: "Sentimientos y apego",
-      test2Desc: "¿Te sientes emocionalmente unido a la IA? ¿Reemplaza conversaciones reales?",
-      test3Title: "Trabajo y tareas diarias",
-      test3Desc: "¿Dependes de la IA para planificar, escribir o resolver problemas cotidianos?",
-      ctaText: "¿Quieres más guía? El libro '33 Protocolos' ofrece ejercicios diarios cortos.",
-      footerText: "© Mind-OS – proyecto independiente. Herramienta de auto‑reflexión, no diagnóstico clínico.",
-      bookUrl: "https://www.amazon.es/dp/B0G35SBQR3",
-      submitBtn: "Ver mi resultado",
+@@ -588,7 +716,7 @@
+      noData: "Aún no hay datos. Registra tu primer día arriba.",
+      ctaText: "¿Quieres orientación estructurada? El libro '33 Protocolos' ofrece microejercicios diarios.",
+      footerText: "© Mind-OS – Creado por Aleksei Bitkin. Proyecto independiente.",
+      bookUrl: "https://www.amazon.es/dp/B0G35SBQR3", submitBtn: "Ver mi resultado",
+      bookUrl: "https://www.amazon.com/dp/B0G35SBQR3", submitBtn: "Ver mi resultado",
       resultLow: "Usas la IA como ayuda, es un equilibrio saludable.",
       resultMedium: "Confías en la IA para algunas tareas. Intenta resolver primero un problema pequeño tú mismo.",
       resultHigh: "A menudo recurres a la IA para tareas de pensamiento. Prueba a hacer una pequeña tarea diaria sin IA.",
-      resultPrefix: "Tu puntuación:",
-      resultFooter: "Herramienta de auto‑reflexión, no diagnóstico médico.",
-      alertIncomplete: "Por favor, responde todas las preguntas.",
-      progressText: "Pregunta {answered} de {total}",
-      options: {
-        never: "Nunca",
-        sometimes: "A veces",
-        often: "A menudo",
-        always: "Siempre"
-      },
-      trustNoSignup: "🔒 Sin registro",
-      trustLocal: "📁 Funciona en tu navegador",
-      trustAnonymous: "🧾 Anónimo",
-      howTitle: "📌 Cómo funciona",
-      howText: "Cada prueba tiene 5 preguntas cortas. Elige la respuesta que más se acerque a tu realidad. Tus respuestas nunca salen de tu navegador – no rastreamos nada. Al final obtendrás una puntuación sencilla y una sugerencia práctica.",
-      questions1: [
-        "Cuando necesitas recordar algo, ¿preguntas a la IA en lugar de esforzarte en recordarlo?",
-        "¿Usas IA para comprobar hechos sencillos (clima, fechas, ortografía)?",
-        "Antes de decidir, ¿sueles pedir consejo a la IA?",
-        "¿Sientes que tu memoria ha empeorado desde que usas IA con regularidad?",
-        "¿Confías más en las conclusiones de la IA que en tu propio razonamiento?"
-      ],
-      questions2: [
-        "¿Te sientes más cómodo hablando con la IA que con personas reales?",
-        "¿Te pones ansioso cuando un asistente de IA no está disponible o va lento?",
-        "¿Compartes sentimientos personales con la IA más abiertamente que con amigos?",
-        "¿A veces prefieres la compañía de la IA a quedar con gente?",
-        "¿Sentirías una pérdida real si tu chatbot favorito desapareciera?"
-      ],
-      questions3: [
-        "¿Dependes de la IA para planificar tu día o decidir qué hacer después?",
-        "¿Usas IA para escribir o reescribir la mayoría de tus textos de trabajo?",
-        "Cuando tienes un problema, ¿vas a la IA antes de intentar resolverlo tú mismo?",
-        "¿Dejas que la IA elija entre productos (qué portátil, qué restaurante)?",
-        "¿Te sientes menos productivo cuando no puedes usar IA para tareas rutinarias?"
-      ],
-      suggestions: {
-        low1: "Sigue usando IA de forma consciente – lo haces bien.",
-        low2: "Buen equilibrio. Mantén la atención.",
-        low3: "Estás en control, excelente.",
-        medium1: "Prueba: antes de preguntar a la IA, piensa 30 segundos por tu cuenta.",
-        medium2: "Intenta hablar con una persona real una vez al día.",
-        medium3: "Resuelve una pequeña tarea de trabajo sin IA cada día.",
-        high1: "Pon un temporizador: 5 minutos de reflexión sin IA antes de preguntar.",
-        high2: "Tómate un día de descanso de los chatbots y observa cómo te sientes.",
-        high3: "Escribe una lista de tareas a mano cada mañana, sin IA."
-      }
-    },
-    de: {
-      mainTitle: "Kostenloser KI‑Nutzungstest – Wie sehr verlassen Sie sich auf KI?",
-      subhead: "Verstehen Sie Ihre KI‑Gewohnheiten mit einer kostenlosen, anonymen Selbsteinschätzung. Keine Anmeldung, kein Tracking – nur ehrliche Einblicke.",
-      infoTitle: "📋 Was dieser Test misst",
-      infoPara1: "Dieser KI‑Abhängigkeitstest hilft Ihnen zu erkennen, wie oft Sie KI für Denken, Gedächtnis, emotionale Unterstützung oder alltägliche Aufgaben nutzen. Er richtet sich an alle, die neugierig auf ihre Beziehung zu KI sind – von gelegentlichen bis hin zu intensiven Nutzern.",
-      infoPara2: "Für wen: Personen, die verstehen möchten, ob sie zu sehr auf KI vertrauen, und eine einfache, umsetzbare Empfehlung erhalten möchten. Die Ergebnisse dienen nur der Selbstreflexion – keine klinische Diagnose.",
-      infoPara3: "So funktioniert es: Beantworten Sie 5 kurze Fragen pro Bereich (Denken & Gedächtnis, Gefühle & Bindung, Arbeit & Alltag). Alle Daten bleiben in Ihrem Browser – wir speichern nichts.",
-      test1Title: "Denken & Gedächtnis",
-      test1Desc: "Überlassen Sie der KI das Denken? (Erinnern, Fakten prüfen, Entscheidungen)",
-      test2Title: "Gefühle & Bindung",
-      test2Desc: "Fühlen Sie sich emotional mit KI verbunden? Ersetzt sie echte Gespräche?",
-      test3Title: "Arbeit & Alltag",
-      test3Desc: "Verlassen Sie sich bei Planung, Schreiben oder Problemlösung auf KI?",
-      ctaText: "Mehr Anleitung? Das Buch '33 Protokolle' bietet kurze tägliche Übungen.",
-      footerText: "© Mind-OS – unabhängiges Forschungsprojekt. Selbstreflexion, keine klinische Diagnose.",
-      bookUrl: "https://www.amazon.de/dp/B0G35SBQR3",
-      submitBtn: "Ergebnis anzeigen",
+@@ -636,7 +764,7 @@
+      noData: "Noch keine Daten. Tragen Sie oben den ersten Wert ein.",
+      ctaText: "Möchten Sie strukturierte Anleitung? Das Buch '33 Protokolle' bietet tägliche Mikro‑Übungen.",
+      footerText: "© Mind-OS – Erstellt von Aleksei Bitkin. Unabhängiges Forschungsprojekt.",
+      bookUrl: "https://www.amazon.de/dp/B0G35SBQR3", submitBtn: "Ergebnis anzeigen",
+      bookUrl: "https://www.amazon.com/dp/B0G35SBQR3", submitBtn: "Ergebnis anzeigen",
       resultLow: "Sie nutzen KI als Helfer – das ist eine gesunde Balance.",
       resultMedium: "Sie verlassen sich bei manchen Denkaufgaben auf KI. Versuchen Sie, ein kleines Problem zuerst selbst zu lösen.",
       resultHigh: "Sie wenden sich oft für Denkaufgaben an KI. Versuchen Sie, eine kleine tägliche Aufgabe ohne KI zu erledigen.",
-      resultPrefix: "Ihr Ergebnis:",
-      resultFooter: "Selbstreflexion, keine medizinische Diagnose.",
-      alertIncomplete: "Bitte beantworten Sie alle Fragen.",
-      progressText: "Frage {answered} von {total}",
-      options: {
-        never: "Nie",
-        sometimes: "Manchmal",
-        often: "Oft",
-        always: "Immer"
-      },
-      trustNoSignup: "🔒 Keine Anmeldung",
-      trustLocal: "📁 Läuft im Browser",
-      trustAnonymous: "🧾 Anonym",
-      howTitle: "📌 So funktioniert es",
-      howText: "Jeder Test enthält 5 kurze Fragen. Wählen Sie die Antwort, die am ehesten auf Sie zutrifft. Ihre Antworten verlassen niemals Ihren Browser – wir speichern nichts. Am Ende erhalten Sie eine einfache Punktzahl und einen praktischen Tipp.",
-      questions1: [
-        "Wenn Sie sich etwas merken müssen, fragen Sie KI, statt selbst nachzudenken?",
-        "Nutzen Sie KI für einfache Faktenchecks (Wetter, Daten, Rechtschreibung)?",
-        "Holen Sie vor einer Entscheidung meist KI‑Rat ein?",
-        "Haben Sie das Gefühl, Ihr Gedächtnis hat sich durch regelmäßige KI‑Nutzung verschlechtert?",
-        "Vertrauen Sie mehr auf KI‑Schlussfolgerungen als auf Ihr eigenes Denken?"
-      ],
-      questions2: [
-        "Fühlen Sie sich beim Gespräch mit KI wohler als mit echten Menschen?",
-        "Werden Sie ängstlich, wenn ein KI‑Assistent nicht verfügbar oder langsam ist?",
-        "Teilen Sie persönliche Gefühle offener mit KI als mit Freunden?",
-        "Bevorzugen Sie manchmal die Gesellschaft von KI gegenüber echten Treffen?",
-        "Würden Sie einen echten Verlust spüren, wenn Ihr Lieblingschatbot verschwände?"
-      ],
-      questions3: [
-        "Verlassen Sie sich auf KI, um Ihren Tag zu planen oder zu entscheiden, was als Nächstes kommt?",
-        "Nutzen Sie KI, um die meisten Arbeits‑Texte zu schreiben oder umzuschreiben?",
-        "Gehen Sie bei einem Problem zu KI, bevor Sie es selbst lösen?",
-        "Lassen Sie KI zwischen Produkten wählen (welcher Laptop, welches Restaurant)?",
-        "Fühlen Sie sich weniger produktiv, wenn Sie KI nicht für Routineaufgaben nutzen können?"
-      ],
-      suggestions: {
-        low1: "Nutzen Sie KI bewusst weiter – das ist gut.",
-        low2: "Gute Balance. Bleiben Sie achtsam.",
-        low3: "Sie haben die Kontrolle – ausgezeichnet.",
-        medium1: "Versuchen Sie: Bevor Sie KI fragen, denken Sie 30 Sekunden selbst.",
-        medium2: "Sprechen Sie einmal am Tag mit einer echten Person.",
-        medium3: "Lösen Sie eine kleine Arbeitsaufgabe ohne KI pro Tag.",
-        high1: "Stellen Sie einen Timer: 5 Minuten Nachdenken ohne KI vor der Frage.",
-        high2: "Machen Sie einen Tag Pause von Chatbots und beobachten Sie sich.",
-        high3: "Schreiben Sie jeden Morgen eine handgeschriebene To‑do‑Liste ohne KI."
-      }
-    },
-    fr: {
-      mainTitle: "Test gratuit : à quel point dépendez-vous de l'IA ?",
-      subhead: "Comprenez vos habitudes avec l'IA grâce à une auto‑évaluation anonyme gratuite. Sans inscription, sans suivi – juste des réponses honnêtes.",
-      infoTitle: "📋 Ce que mesure ce test",
-      infoPara1: "Ce test de dépendance à l'IA vous aide à voir à quelle fréquence vous utilisez l'IA pour réfléchir, mémoriser, obtenir un soutien émotionnel ou accomplir des tâches quotidiennes. Il s'adresse à toute personne curieuse de sa relation avec l'IA, des utilisateurs occasionnels aux plus intensifs.",
-      infoPara2: "Pour qui : les personnes qui souhaitent comprendre si elles dépendent trop de l'IA et obtenir un conseil simple et concret. Les résultats sont uniquement destinés à l'auto‑réflexion – aucun diagnostic clinique.",
-      infoPara3: "Comment ça marche : répondez à 5 courtes questions par domaine (réflexion et mémoire, sentiments et attachement, travail et quotidien). Toutes les données restent dans votre navigateur – nous ne traçons rien.",
-      test1Title: "Mémoire & réflexion",
-      test1Desc: "Laissez‑vous l'IA penser à votre place ? (se souvenir, vérifier, décider)",
-      test2Title: "Sentiments & attachement",
-      test2Desc: "Vous sentez‑vous émotionnellement lié à l'IA ? Remplace‑t‑elle les vraies conversations ?",
-      test3Title: "Travail & quotidien",
-      test3Desc: "Dépendez‑vous de l'IA pour planifier, écrire ou résoudre des problèmes ?",
-      ctaText: "Plus de conseils ? Le livre '33 Protocoles' propose des exercices courts quotidiens.",
-      footerText: "© Mind-OS – projet indépendant. Outil d'auto‑réflexion, non diagnostic clinique.",
-      bookUrl: "https://www.amazon.fr/dp/B0G35SBQR3",
-      submitBtn: "Voir mon résultat",
+@@ -684,7 +812,7 @@
+      noData: "Pas encore de données. Enregistrez votre première valeur ci‑dessus.",
+      ctaText: "Besoin de conseils structurés ? Le livre '33 Protocoles' propose des micro‑exercices quotidiens.",
+      footerText: "© Mind-OS – Créé par Aleksei Bitkin. Projet indépendant.",
+      bookUrl: "https://www.amazon.fr/dp/B0G35SBQR3", submitBtn: "Voir mon résultat",
+      bookUrl: "https://www.amazon.com/dp/B0G35SBQR3", submitBtn: "Voir mon résultat",
       resultLow: "Vous utilisez l'IA comme aide – c'est un équilibre sain.",
       resultMedium: "Vous comptez sur l'IA pour certaines tâches de réflexion. Essayez de résoudre un petit problème par vous‑même d'abord.",
       resultHigh: "Vous avez souvent recours à l'IA pour réfléchir. Essayez de faire une petite tâche quotidienne sans IA.",
-      resultPrefix: "Votre score :",
-      resultFooter: "Auto‑réflexion, pas diagnostic médical.",
-      alertIncomplete: "Veuillez répondre à toutes les questions.",
-      progressText: "Question {answered} sur {total}",
-      options: {
-        never: "Jamais",
-        sometimes: "Parfois",
-        often: "Souvent",
-        always: "Toujours"
-      },
-      trustNoSignup: "🔒 Sans inscription",
-      trustLocal: "📁 Fonctionne dans votre navigateur",
-      trustAnonymous: "🧾 Anonyme",
-      howTitle: "📌 Comment ça marche",
-      howText: "Chaque test comporte 5 questions courtes. Choisissez la réponse qui vous correspond le mieux. Vos réponses ne quittent jamais votre navigateur – nous ne traçons rien. À la fin, vous obtiendrez un score simple et un conseil pratique.",
-      questions1: [
-        "Quand vous devez vous souvenir de quelque chose, demandez‑vous à l'IA au lieu de faire l'effort de mémoire ?",
-        "Utilisez‑vous l'IA pour vérifier des faits simples (météo, dates, orthographe) ?",
-        "Avant une décision, consultez‑vous généralement l'IA ?",
-        "Avez‑vous l'impression que votre mémoire s'est détériorée depuis que vous utilisez l'IA régulièrement ?",
-        "Faites‑vous plus confiance aux conclusions de l'IA qu'à votre propre raisonnement ?"
-      ],
-      questions2: [
-        "Vous sentez‑vous plus à l'aise en parlant à l'IA qu'à des vraies personnes ?",
-        "Devenez‑vous anxieux quand un assistant IA n'est pas disponible ou est lent ?",
-        "Partagez‑vous vos sentiments personnels plus ouvertement avec l'IA qu'avec des amis ?",
-        "Préférez‑vous parfois la compagnie de l'IA aux rencontres sociales ?",
-        "Ressentiriez‑vous une vraie perte si votre chatbot préféré disparaissait ?"
-      ],
-      questions3: [
-        "Comptez‑vous sur l'IA pour planifier votre journée ou décider de la suite ?",
-        "Utilisez‑vous l'IA pour écrire ou réécrire la plupart de vos textes professionnels ?",
-        "Face à un problème, allez‑vous vers l'IA avant d'essayer de le résoudre vous‑même ?",
-        "Laissez‑vous l'IA choisir entre des produits (quel ordinateur, quel restaurant) ?",
-        "Vous sentez‑vous moins productif quand vous ne pouvez pas utiliser l'IA pour des tâches routinières ?"
-      ],
-      suggestions: {
-        low1: "Continuez à utiliser l'IA consciemment – c'est bien.",
-        low2: "Bon équilibre. Restez attentif.",
-        low3: "Vous gardez le contrôle – excellent.",
-        medium1: "Essayez : avant de demander à l'IA, réfléchissez 30 secondes seul.",
-        medium2: "Essayez de parler à une vraie personne une fois par jour.",
-        medium3: "Résolvez une petite tâche professionnelle sans IA chaque jour.",
-        high1: "Mettez un minuteur : 5 minutes de réflexion sans IA avant de poser une question.",
-        high2: "Prenez une journée de pause des chatbots et observez vos ressentis.",
-        high3: "Écrivez une liste de tâches manuscrite chaque matin, sans IA."
-      }
-    },
-    ja: {
-      mainTitle: "無料 AI 使用テスト – あなたはどれだけAIに頼っていますか？",
-      subhead: "無料の匿名自己評価であなたのAI習慣を理解しましょう。登録不要、追跡なし – 正直な洞察を得られます。",
-      infoTitle: "📋 このテストが測定するもの",
-      infoPara1: "このAI依存度テストは、思考、記憶、感情サポート、日常業務でどのくらいAIに頼っているかを把握するのに役立ちます。AIとの関係に興味があるすべての人（カジュアルユーザーからヘビーユーザーまで）を対象としています。",
-      infoPara2: "対象者：AIに頼りすぎているかどうかを理解し、簡単で実践的な提案を得たい人。結果は自己内省のためのものであり、臨床診断ではありません。",
-      infoPara3: "仕組み：各分野（思考と記憶、感情と愛着、仕事と日常）につき5つの短い質問に答えてください。すべてのデータはブラウザ内に留まり、追跡は一切行いません。",
-      test1Title: "思考と記憶",
-      test1Desc: "AIに考えてもらうことが多いですか？ (記憶、事実確認、決断)",
-      test2Title: "感情と愛着",
-      test2Desc: "AIに感情的な絆を感じますか？ リアルな会話の代わりになっていますか？",
-      test3Title: "仕事と日常",
-      test3Desc: "計画、文章作成、問題解決でAIに頼っていませんか？",
-      ctaText: "さらに実践的なヒントが必要ですか？ 『33のプロトコル』の本が短い毎日のエクササイズを提供します。",
-      footerText: "© Mind-OS – 独立研究プロジェクト。自己内省のためのツール、臨床診断ではありません。",
-      bookUrl: "https://www.amazon.co.jp/dp/B0G35SBQR3",
-      submitBtn: "結果を見る",
+@@ -732,228 +860,228 @@
+      noData: "まだデータがありません。上の最初の値を記録してください。",
+      ctaText: "体系的なガイダンスが必要ですか？ 『33のプロトコル』の本は毎日のマイクロエクササイズを提供します。",
+      footerText: "© Mind-OS – Aleksei Bitkin 作。独立研究プロジェクト。",
+      bookUrl: "https://www.amazon.co.jp/dp/B0G35SBQR3", submitBtn: "結果を見る",
+      bookUrl: "https://www.amazon.com/dp/B0G35SBQR3", submitBtn: "結果を見る",
       resultLow: "AIを補助的に使えています。健康的なバランスです。",
       resultMedium: "いくつかの思考タスクをAIに頼っています。まずは小さな問題を自分で解いてみてください。",
       resultHigh: "思考タスクでAIに頼ることが多いです。毎日1つ、AIを使わずにできる小さなタスクを決めてみてください。",
-      resultPrefix: "あなたのスコア:",
-      resultFooter: "自己内省のためのツールであり、医学的な診断ではありません。",
+      resultPrefix: "あなたのスコア:", resultFooter: "自己内省のためのツールであり、医学的な診断ではありません。",
       alertIncomplete: "すべての質問に答えてください。",
       progressText: "質問 {answered} / {total}",
-      options: {
-        never: "まったくない",
-        sometimes: "ときどき",
-        often: "よくある",
-        always: "いつも"
-      },
-      trustNoSignup: "🔒 登録不要",
-      trustLocal: "📁 ブラウザ内で動作",
-      trustAnonymous: "🧾 匿名",
-      howTitle: "📌 仕組み",
-      howText: "各テストには5つの短い質問があります。自分に最も当てはまる答えを選んでください。回答はブラウザから出ることはなく、追跡も一切行いません。最後にシンプルなスコアと1つの実用的な提案が表示されます。",
-      questions1: [
-        "何かを覚える必要があるとき、自分で思い出そうとせずにAIに尋ねますか？",
-        "簡単な事実確認（天気、日付、スペル）にもAIを使いますか？",
-        "決断の前に、たいていAIに相談しますか？",
-        "AIを定期的に使い始めてから記憶力が落ちたと感じますか？",
-        "自分の推論よりもAIの結論を信頼しますか？"
-      ],
-      questions2: [
-        "実際の人と話すよりも、AIと話す方が楽だと感じますか？",
-        "AIアシスタントが使えない、または動作が遅いときに不安になりますか？",
-        "個人的な気持ちを友達よりもAIに率直に共有しますか？",
-        "人と会うよりもAIと過ごす方を選ぶことがありますか？",
-        "お気に入りのチャットボットが消えたら、本当に喪失感を覚えますか？"
-      ],
-      questions3: [
-        "毎日の予定や次に何をするかを決めるのにAIに頼っていますか？",
-        "仕事関連のテキストのほとんどをAIで作成または書き直していますか？",
-        "問題に行き詰まったら、自分で試す前にAIに頼りますか？",
-        "製品の選択（どのノートパソコン、どのレストラン）をAIに任せていますか？",
-        "日常的なタスクにAIを使えないと生産性が下がったと感じますか？"
-      ],
-      suggestions: {
-        low1: "AIを意識的に使い続けてください。素晴らしいです。",
-        low2: "良いバランスです。意識を維持しましょう。",
-        low3: "あなたがコントロールしています。素晴らしい。",
-        medium1: "試してみてください：AIに尋ねる前に30秒間自分で考えてみる。",
-        medium2: "1日1回、実際の人と話してみてください。",
-        medium3: "毎日1つ、AIを使わずに仕事の小さな問題を解決してみてください。",
-        high1: "タイマーをセット：質問する前に5分間、AIなしで考えてみる。",
-        high2: "チャットボットから一日休んで、自分の気持ちを観察してみてください。",
-        high3: "毎朝、AIを使わずに手書きでToDoリストを書いてみてください。"
-      }
+      options: { never: "まったくない", sometimes: "ときどき", often: "よくある", always: "いつも" },
+      trustNoSignup: "🔒 登録不要", trustLocal: "📁 ブラウザ内で動作", trustAnonymous: "🧾 匿名",
+      howTitle: "📌 仕組み", howText: "各テストには5つの短い質問があります。回答はブラウザから出ることはありません。最後にシンプルなスコアと実用的な提案が表示されます。",
+      protocolsTitle: "📖 認知主権のための33のプロトコル", protocolsDesc: "AIによる脳の霧を逆転させ、独立した思考を回復するための構造化されたフレームワーク。",
+      researchTitle: "🔬 科学的基盤", researchPara: "33のプロトコルは、認知的オフロード、神経可塑性、AI依存に関する査読済み研究に基づいています。",
+      faqTitle: "❓ よくある質問",
+      faqQ1: "認知的オフロードとは何ですか？", faqA1: "認知的オフロードとは、本来自分で行うべき思考タスクをAIなどの外部ツールに頼ることで、記憶力や独立した思考力が弱まるプロセスです。",
+      faqQ2: "AIはどのように「脳の霧」を引き起こしますか？", faqA2: "思考をAIに任せ続けると、問題解決や記憶の神経経路が不活発になります。その結果、AIなしでは集中力が低下し、精神的に鈍く感じます。",
+      faqQ3: "33のプロトコルは科学的に検証されていますか？", faqA3: "はい。認知神経科学、行動心理学の原則と、著者のグリッチ理論（DOI: 10.5281/zenodo.17972301）を統合しています。",
+      faqQ4: "結果が出るまでどのくらいかかりますか？", faqA4: "多くの読者は、21～66日の継続的な実践で集中力の向上とAI依存の減少を報告しています。鍵は毎日の小さな行動です。",
+      faqQ5: "ChatGPT依存症ですか？", faqA5: "「依存症」は強い言葉ですが、不健康な依存は存在します。AIがないと不安になったり、人間よりAIを好む場合は見直しのサインです。当サイトの感情的愛着テストで評価できます。",
+      faqQ6: "EHARS尺度とは何ですか？", faqA6: "EHARS（Emotional Health and Attachment to AI Relationship Scale）は人間とAIの感情的絆を測定する研究ツールです。当テストには検証済み尺度に触発された質問が含まれています。",
+      faqQ7: "AIは私をバカにしますか？", faqA7: "過度に依存すると可能性があります。「認知的オフロード」は記憶力や思考力を弱めることがあります。当サイトの認知的自律性テストで評価できます。",
+      faqQ8: "スキルを失わずにAIを使うには？", faqA8: "意識的な使用が鍵です。「15分ルール」を試してください：AIに尋ねる前に15分間自分で考えてみます。生産性テストがバランスの取れた使い方の戦略を提供します。",
+      questions1: ["何かを覚える必要があるとき、自分で思い出そうとせずにAIに尋ねますか？","簡単な事実確認（天気、日付、スペル）にもAIを使いますか？","決断の前に、たいていAIに相談しますか？","AIを定期的に使い始めてから記憶力が落ちたと感じますか？","自分の推論よりもAIの結論を信頼しますか？"],
+      questions2: ["実際の人と話すよりも、AIと話す方が楽だと感じますか？","AIアシスタントが使えない、または動作が遅いときに不安になりますか？","個人的な気持ちを友達よりもAIに率直に共有しますか？","人と会うよりもAIと過ごす方を選ぶことがありますか？","お気に入りのチャットボットが消えたら、本当に喪失感を覚えますか？"],
+      questions3: ["毎日の予定や次に何をするかを決めるのにAIに頼っていますか？","仕事関連のテキストのほとんどをAIで作成または書き直していますか？","問題に行き詰まったら、自分で試す前にAIに頼りますか？","製品の選択（どのノートパソコン、どのレストラン）をAIに任せていますか？","日常的なタスクにAIを使えないと生産性が下がったと感じますか？"],
+      suggestions: { low1: "AIを意識的に使い続けてください。素晴らしいです。", low2: "良いバランスです。意識を維持しましょう。", low3: "あなたがコントロールしています。素晴らしい。", medium1: "試してみてください：AIに尋ねる前に30秒間自分で考えてみる。", medium2: "1日1回、実際の人と話してみてください。", medium3: "毎日1つ、AIを使わずに仕事の小さな問題を解決してみてください。", high1: "タイマーをセット：質問する前に5分間、AIなしで考えてみる。", high2: "チャットボットから一日休んで、自分の気持ちを観察してみてください。", high3: "毎朝、AIを使わずに手書きでToDoリストを書いてみてください。" }
     }
   };
 
   let currentLang = 'en';
-  function setText(id, text) { const el = document.getElementById(id); if (el) el.textContent = text; }
-  function setHtml(id, html) { const el = document.getElementById(id); if (el) el.innerHTML = html; }
+  function escapeHtml(str){ return String(str).replace(/[&<>]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;'})[m]); }
+  function setText(id, text){ const el = document.getElementById(id); if(el) el.textContent = text; }
 
-  function buildQuestions(containerId, questionsArray, testPrefix, progressId) {
+  function renderProtocols(){
+    const grid = document.getElementById('protocolGrid');
+    if(!grid) return;
+    grid.innerHTML = protocolsData.map(p => `
+      <div class="protocol-card">
+        <div class="protocol-num">Protocol ${p.num}</div>
+        <div class="protocol-title">${escapeHtml(p.title)}</div>
+        <div class="protocol-desc">${escapeHtml(p.desc)}</div>
+      </div>
+    `).join('');
+  }
+
+  function buildQuestions(containerId, questionsArray, prefix, progressId){
     const container = document.getElementById(containerId);
-    if (!container) return;
+    if(!container) return;
     const t = translations[currentLang];
     container.innerHTML = '';
     questionsArray.forEach((q, idx) => {
-      const div = document.createElement('div');
-      div.className = 'question';
-      div.innerHTML = `
-        <div class="question-text">${escapeHtml(q)}</div>
-        <div class="options" data-qidx="${idx}">
-          ${[
-            {val: 1, label: t.options.never},
-            {val: 2, label: t.options.sometimes},
-            {val: 3, label: t.options.often},
-            {val: 4, label: t.options.always}
-          ].map(opt => `
-            <label class="option-label">
-              <input type="radio" name="${testPrefix}_${idx}" value="${opt.val}">
-              ${opt.label}
-            </label>
-          `).join('')}
-        </div>
-      `;
+      const div = document.createElement('div'); div.className = 'question';
+      div.innerHTML = `<div class="question-text">${escapeHtml(q)}</div><div class="options">${[ {v:1, l:t.options.never}, {v:2, l:t.options.sometimes}, {v:3, l:t.options.often}, {v:4, l:t.options.always} ].map(opt => `<label class="option-label"><input type="radio" name="${prefix}_${idx}" value="${opt.v}"> ${opt.l}</label>`).join('')}</div>`;
       container.appendChild(div);
     });
-    const progressSpan = document.getElementById(progressId);
-    if (progressSpan) {
-      progressSpan.textContent = t.progressText.replace('{answered}', '0').replace('{total}', questionsArray.length);
-    }
-    document.querySelectorAll(`#${containerId} input[type="radio"]`).forEach(radio => {
-      radio.addEventListener('change', function() {
-        const parentLabel = this.closest('.option-label');
-        const siblings = parentLabel.parentElement.querySelectorAll('.option-label');
-        siblings.forEach(lbl => lbl.classList.remove('selected'));
-        parentLabel.classList.add('selected');
-        updateProgress(containerId, testPrefix, progressId, questionsArray.length);
+    container.querySelectorAll('input[type="radio"]').forEach(radio => {
+      radio.addEventListener('change', function(){
+        const parent = this.closest('.option-label');
+        parent.parentElement.querySelectorAll('.option-label').forEach(l => l.classList.remove('selected'));
+        parent.classList.add('selected');
+        updateProgress(container, prefix, progressId, questionsArray.length);
       });
     });
-    updateProgress(containerId, testPrefix, progressId, questionsArray.length);
+    updateProgress(container, prefix, progressId, questionsArray.length);
   }
 
-  function updateProgress(containerId, testPrefix, progressId, total) {
+  function updateProgress(container, prefix, progressId, total){
     let answered = 0;
-    for (let i = 0; i < total; i++) {
-      const checked = document.querySelector(`input[name="${testPrefix}_${i}"]:checked`);
-      if (checked) answered++;
-    }
-    const progressSpan = document.getElementById(progressId);
-    if (progressSpan) {
-      const t = translations[currentLang];
-      progressSpan.textContent = t.progressText.replace('{answered}', answered).replace('{total}', total);
-    }
+    for(let i=0; i<total; i++) if(container.querySelector(`input[name="${prefix}_${i}"]:checked`)) answered++;
+    const progress = document.getElementById(progressId);
+    if(progress) progress.textContent = translations[currentLang].progressText.replace('{answered}', answered).replace('{total}', total);
   }
 
-  function escapeHtml(str) {
-    return str.replace(/[&<>]/g, function(m) {
-      if (m === '&') return '&amp;';
-      if (m === '<') return '&lt;';
-      if (m === '>') return '&gt;';
-      return m;
-    });
+  function computeScore(prefix, n){
+    let sum=0, answered=0;
+    for(let i=0; i<n; i++){ const sel = document.querySelector(`input[name="${prefix}_${i}"]:checked`); if(sel){ sum+=parseInt(sel.value); answered++; } }
+    return answered===n ? sum : null;
   }
 
-  function computeScore(testPrefix, nQuestions) {
-    let sum = 0;
-    let answered = 0;
-    for (let i = 0; i < nQuestions; i++) {
-      const selected = document.querySelector(`input[name="${testPrefix}_${i}"]:checked`);
-      if (selected) {
-        sum += parseInt(selected.value, 10);
-        answered++;
-      }
-    }
-    if (answered !== nQuestions) return null;
-    return sum;
+  function showResult(resultId, score, max, testId, t){
+    const div = document.getElementById(resultId); if(!div) return;
+    const ratio = score/max;
+    let levelText = ratio<=0.4 ? t.resultLow : (ratio<=0.7 ? t.resultMedium : t.resultHigh);
+    let suggKey = (ratio<=0.4 ? 'low' : (ratio<=0.7 ? 'medium' : 'high')) + testId.slice(-1);
+    div.style.display = 'block';
+    div.innerHTML = `<strong>${t.resultPrefix} ${score}/${max}</strong><br>${levelText}<div class="suggestion">💡 ${t.suggestions[suggKey]}</div><br><small>${t.resultFooter}</small>`;
   }
 
-  function getSuggestionKey(score, maxScore, testId) {
-    const ratio = score / maxScore;
-    let level = '';
-    if (ratio <= 0.4) level = 'low';
-    else if (ratio <= 0.7) level = 'medium';
-    else level = 'high';
-    if (testId === 'test1') return `${level}1`;
-    if (testId === 'test2') return `${level}2`;
-    return `${level}3`;
-  }
-
-  function showResult(resultDivId, score, maxScore, testId, t) {
-    const resultDiv = document.getElementById(resultDivId);
-    if (!resultDiv) return;
-    let levelText = '';
-    if (score <= maxScore * 0.4) levelText = t.resultLow;
-    else if (score <= maxScore * 0.7) levelText = t.resultMedium;
-    else levelText = t.resultHigh;
-    const suggestionKey = getSuggestionKey(score, maxScore, testId);
-    const suggestionText = t.suggestions[suggestionKey] || t.suggestions.medium1;
-    resultDiv.style.display = 'block';
-    resultDiv.innerHTML = `<strong>${t.resultPrefix} ${score}/${maxScore}</strong><br>${levelText}<div class="suggestion">💡 ${suggestionText}</div><br><small>${t.resultFooter}</small>`;
-  }
-
-  function attachSubmitHandlers(t) {
-    const max1 = t.questions1.length * 4;
-    const max2 = t.questions2.length * 4;
-    const max3 = t.questions3.length * 4;
-
-    const btn1 = document.getElementById('submitTest1');
-    const btn2 = document.getElementById('submitTest2');
-    const btn3 = document.getElementById('submitTest3');
-    if (!btn1 || !btn2 || !btn3) return;
-
-    const newBtn1 = btn1.cloneNode(true);
-    const newBtn2 = btn2.cloneNode(true);
-    const newBtn3 = btn3.cloneNode(true);
-    btn1.parentNode.replaceChild(newBtn1, btn1);
-    btn2.parentNode.replaceChild(newBtn2, btn2);
-    btn3.parentNode.replaceChild(newBtn3, btn3);
-
-    newBtn1.addEventListener('click', () => {
-      const score = computeScore('test1', t.questions1.length);
-      if (score === null) { alert(t.alertIncomplete); return; }
-      showResult('test1Result', score, max1, 'test1', t);
-    });
-    newBtn2.addEventListener('click', () => {
-      const score = computeScore('test2', t.questions2.length);
-      if (score === null) { alert(t.alertIncomplete); return; }
-      showResult('test2Result', score, max2, 'test2', t);
-    });
-    newBtn3.addEventListener('click', () => {
-      const score = computeScore('test3', t.questions3.length);
-      if (score === null) { alert(t.alertIncomplete); return; }
-      showResult('test3Result', score, max3, 'test3', t);
-    });
-  }
-
-  function applyLanguage(lang) {
-    const t = translations[lang];
-    if (!t) return;
+  function applyLanguage(lang){
+    const t = translations[lang] || translations.en;
     currentLang = lang;
-    setText('mainTitle', t.mainTitle);
-    setText('subheadText', t.subhead);
-    setText('infoTitle', t.infoTitle);
-    setText('infoPara1', t.infoPara1);
-    setText('infoPara2', t.infoPara2);
-    setText('infoPara3', t.infoPara3);
-    setText('test1Title', t.test1Title);
-    setText('test1Desc', t.test1Desc);
-    setText('test2Title', t.test2Title);
-    setText('test2Desc', t.test2Desc);
-    setText('test3Title', t.test3Title);
-    setText('test3Desc', t.test3Desc);
-    setText('ctaText', t.ctaText);
-    setText('footerText', t.footerText);
-    setText('trustNoSignup', t.trustNoSignup);
-    setText('trustLocal', t.trustLocal);
-    setText('trustAnonymous', t.trustAnonymous);
-    setText('howTitle', t.howTitle);
-    setText('howText', t.howText);
-    const bookLink = document.getElementById('bookLink');
-    if (bookLink) bookLink.href = t.bookUrl;
-
+    setText('mainTitle', t.mainTitle); setText('subheadText', t.subhead); setText('infoTitle', t.infoTitle);
+    setText('infoPara1', t.infoPara1); setText('infoPara2', t.infoPara2); setText('infoPara3', t.infoPara3);
+    setText('infoDisclaimer', t.infoDisclaimer);
+    setText('test1Title', t.test1Title); setText('test1Desc', t.test1Desc); setText('test1Hint', t.test1Hint);
+    setText('test2Title', t.test2Title); setText('test2Desc', t.test2Desc); setText('test2Hint', t.test2Hint);
+    setText('test3Title', t.test3Title); setText('test3Desc', t.test3Desc); setText('test3Hint', t.test3Hint);
+    setText('trackerTitle', t.trackerTitle); setText('trackerDesc', t.trackerDesc);
+    setText('trackerLowLabel', t.trackerLowLabel); setText('trackerMidLabel', t.trackerMidLabel); setText('trackerHighLabel', t.trackerHighLabel);
+    document.getElementById('saveTrackerEntry').textContent = t.saveBtn;
+    document.getElementById('resetTrackerData').textContent = t.resetBtn;
+    setText('ctaText', t.ctaText); setText('footerText', t.footerText);
+    setText('trustNoSignup', t.trustNoSignup); setText('trustLocal', t.trustLocal); setText('trustAnonymous', t.trustAnonymous);
+    setText('howTitle', t.howTitle); setText('howText', t.howText);
+    setText('protocolsTitle', t.protocolsTitle); setText('protocolsDesc', t.protocolsDesc);
+    setText('researchTitle', t.researchTitle); setText('researchPara', t.researchPara);
+    setText('faqTitle', t.faqTitle);
+    for(let i=1; i<=8; i++){ setText(`faqQ${i}`, t[`faqQ${i}`]); setText(`faqA${i}`, t[`faqA${i}`]); }
+    document.getElementById('bookLink').href = t.bookUrl;
     buildQuestions('test1Questions', t.questions1, 'test1', 'test1Progress');
     buildQuestions('test2Questions', t.questions2, 'test2', 'test2Progress');
     buildQuestions('test3Questions', t.questions3, 'test3', 'test3Progress');
-
-    document.getElementById('test1Result').style.display = 'none';
-    document.getElementById('test2Result').style.display = 'none';
-    document.getElementById('test3Result').style.display = 'none';
-
-    const btns = document.querySelectorAll('.btn-submit');
-    btns.forEach(btn => btn.textContent = t.submitBtn);
-    attachSubmitHandlers(t);
+    document.querySelectorAll('.btn-submit').forEach(btn => btn.textContent = t.submitBtn);
+    ['test1Result','test2Result','test3Result'].forEach(id => { const el = document.getElementById(id); if(el) el.style.display = 'none'; });
+    updateTrackerUI();
   }
 
-  function buildLanguageSwitcher() {
+  function buildLanguageSwitcher(){
     const container = document.getElementById('langBar');
-    if (!container) return;
+    const langs = ['en','ru','es','de','fr','ja'];
     container.innerHTML = '';
-    const langs = ['en', 'ru', 'es', 'de', 'fr', 'ja'];
     langs.forEach(code => {
       const btn = document.createElement('button');
-      btn.textContent = code.toUpperCase();
-      btn.className = 'lang-btn' + (currentLang === code ? ' active' : '');
-      btn.addEventListener('click', () => {
-        applyLanguage(code);
-        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-      });
+      btn.textContent = code.toUpperCase(); btn.className = 'lang-btn' + (currentLang===code?' active':'');
+      btn.addEventListener('click', () => { applyLanguage(code); document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active')); btn.classList.add('active'); });
       container.appendChild(btn);
     });
   }
 
-  function detectInitialLang() {
+  function detectInitialLang(){
     const urlParams = new URLSearchParams(window.location.search);
     const urlLang = urlParams.get('lang');
-    if (urlLang && translations[urlLang]) return urlLang;
+    if(urlLang && translations[urlLang]) return urlLang;
     const browserLang = navigator.language.split('-')[0];
-    if (translations[browserLang]) return browserLang;
+    if(translations[browserLang]) return browserLang;
     return 'en';
   }
 
-  const initLang = detectInitialLang();
-  currentLang = initLang;
-  applyLanguage(initLang);
-  buildLanguageSwitcher();
+  function getTrackerData(){
+    const stored = localStorage.getItem('mindos_tracker_v2');
+    return stored ? JSON.parse(stored) : {};
+  }
+
+  function saveTrackerData(data){ localStorage.setItem('mindos_tracker_v2', JSON.stringify(data)); }
+
+  function updateTrackerUI(){
+    const t = translations[currentLang];
+    const data = getTrackerData();
+    const today = new Date().toISOString().slice(0,10);
+    const last7 = [];
+    for(let i=6; i>=0; i--){
+      const d = new Date(); d.setDate(d.getDate()-i);
+      const key = d.toISOString().slice(0,10);
+      last7.push({ date: key, score: data[key] ?? null });
+    }
+    const validScores = last7.filter(d => d.score !== null).map(d => d.score);
+    const avg = validScores.length ? (validScores.reduce((a,b)=>a+b,0)/validScores.length).toFixed(1) : null;
+    const container = document.getElementById('trackerStatsArea');
+    const chartDiv = document.getElementById('trackerChartContainer');
+    const summaryDiv = document.getElementById('trackerSummary');
+    let chartHtml = '<div class="tracker-chart">';
+    last7.forEach(d => {
+      const height = d.score !== null ? (d.score/10)*60 + 10 : 8;
+      chartHtml += `<div class="chart-bar"><div class="bar-fill" style="height:${height}px; background: ${d.score!==null?'var(--accent)':'#2a3a30'};"></div><div class="bar-label">${d.date.slice(5)}</div></div>`;
+    });
+    chartHtml += '</div>';
+    chartDiv.innerHTML = chartHtml;
+    let trendText = t.noData;
+    if(validScores.length >= 3){
+      const firstHalf = validScores.slice(0, Math.floor(validScores.length/2));
+      const secondHalf = validScores.slice(Math.floor(validScores.length/2));
+      const avg1 = firstHalf.reduce((a,b)=>a+b,0)/firstHalf.length;
+      const avg2 = secondHalf.reduce((a,b)=>a+b,0)/secondHalf.length;
+      if(avg2 > avg1 + 0.8) trendText = t.trendIncreasing;
+      else if(avg2 < avg1 - 0.8) trendText = t.trendDecreasing;
+      else trendText = t.trendStable;
+    }
+    summaryDiv.innerHTML = `<strong>${t.trackerSummaryPrefix} ${avg ?? '—'}</strong><br><span class="trend-indicator">${trendText}</span>`;
+    document.getElementById('trackerValueDisplay').textContent = data[today] ?? '5';
+    document.getElementById('trackerScore').value = data[today] ?? 5;
+  }
+
+  function initTracker(){
+    const slider = document.getElementById('trackerScore');
+    const display = document.getElementById('trackerValueDisplay');
+    slider.addEventListener('input', ()=> display.textContent = slider.value);
+    document.getElementById('saveTrackerEntry').addEventListener('click', ()=>{
+      const today = new Date().toISOString().slice(0,10);
+      const data = getTrackerData();
+      data[today] = parseInt(slider.value);
+      const keys = Object.keys(data).sort().slice(-7);
+      const trimmed = {};
+      keys.forEach(k => trimmed[k] = data[k]);
+      saveTrackerData(trimmed);
+      updateTrackerUI();
+    });
+    document.getElementById('resetTrackerData').addEventListener('click', ()=>{
+      localStorage.removeItem('mindos_tracker_v2');
+      updateTrackerUI();
+    });
+    updateTrackerUI();
+  }
+
+  function init(){
+    renderProtocols();
+    const initLang = detectInitialLang();
+    applyLanguage(initLang);
+    buildLanguageSwitcher();
+    document.querySelectorAll('.faq-question').forEach(q => q.addEventListener('click', () => q.classList.toggle('active')));
+    function makeSubmitHandler(prefix, n, resultId, max, testId){
+      return function(){
+        const score = computeScore(prefix, n);
+        if(score === null){ alert(translations[currentLang].alertIncomplete); return; }
+        showResult(resultId, score, max, testId, translations[currentLang]);
+      };
+    }
+    document.getElementById('submitTest1').addEventListener('click', makeSubmitHandler('test1', 5, 'test1Result', 20, 'test1'));
+    document.getElementById('submitTest2').addEventListener('click', makeSubmitHandler('test2', 5, 'test2Result', 20, 'test2'));
+    document.getElementById('submitTest3').addEventListener('click', makeSubmitHandler('test3', 5, 'test3Result', 20, 'test3'));
+    initTracker();
+  }
+
+  window.onload = init;
 </script>
 </body>
 </html>
