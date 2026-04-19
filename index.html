@@ -17,7 +17,8 @@
   <link rel="alternate" hreflang="ja" href="https://mind-os.org/?lang=ja">
   <meta property="og:title" content="Free AI Usage Self‑Assessment – Understand Your AI Habits">
   <meta property="og:description" content="Anonymous self‑reflection on AI dependency. No signup, no tracking.">
-  <meta property="og:image" content="cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mind-os.org/">
   <meta name="twitter:card" content="summary_large_image">
@@ -355,10 +356,12 @@
     <div class="test-hint" id="test3Hint">Answer honestly based on your daily habits.</div>
     <div class="progress" id="test3Progress"></div>
     <div id="test3Questions"></div>
-    <button class="btn-submit" id="submitTest3">See my result</button>
+    <button class=" btn-submit" id="submitTest3">See my result</button>
     <div id="test3Result" class="result" style="display:none;"></div>
   </section>
-
+  <div class="text-center" style="margin: 1rem 0 2rem;">
+    <button id="shareButton" class="btn-submit">📤 Поделиться результатом</button>
+  </div>
   <!-- Cognitive Load Tracker (improved) -->
   <section class="tracker-section">
     <h2 id="trackerTitle">📊 Daily Cognitive Load Tracker</h2>
@@ -956,7 +959,26 @@
     initTracker();
   }
 
+      // Кнопка "Поделиться"
+  const shareBtn = document.getElementById('shareButton');
+  if (shareBtn) {
+    shareBtn.addEventListener('click', () => {
+      const url = window.location.href;
+      const title = document.querySelector('meta[property="og:title"]')?.getAttribute('content') || 'Mind-OS AI Assessment';
+      const text = document.querySelector('meta[property="og:description"]')?.getAttribute('content') || 'Check your AI dependency level.';
+      if (navigator.share) {
+        navigator.share({ title, text, url });
+      } else {
+        navigator.clipboard.writeText(url);
+        alert('Ссылка скопирована! Поделитесь в соцсетях.');
+      }
+    });
+  }
+
   window.onload = init;
 </script>
 </body>
-</html>
+
+  
+
+    
