@@ -636,7 +636,7 @@
     },
     es: {
       mainTitle: "Prueba gratuita: ¿cuánto dependes de la IA?",
-      subhead: "Evalúa la descarga cognitiva, el apego emocional y la dependencia diaria de la IA. Anónimo y privado.",
+      subhead: "Test gratuito de dependencia de IA. Evalúa la descarga cognitiva, el apego emocional y la dependencia diaria de ChatGPT y otras herramientas de IA. Anónimo y privado.",
       infoTitle: "📋 Qué mide esta autorreflexión",
       infoPara1: "Estas pruebas breves te ayudan a observar con qué frecuencia recurres a la IA para pensar, apoyo emocional o tareas diarias. Están diseñadas para la autoconciencia, no para diagnóstico clínico.",
       infoPara2: "Para quién: cualquier persona que quiera comprobar si su uso de IA es aún intencionado o se está volviendo automático. Obtendrás una puntuación y una sugerencia práctica.",
@@ -684,7 +684,7 @@
     },
     de: {
       mainTitle: "Kostenloser KI‑Nutzungstest – Wie sehr verlassen Sie sich auf KI?",
-      subhead: "Messen Sie kognitive Entlastung, emotionale Bindung und tägliche KI‑Abhängigkeit. Anonym und privat.",
+      subhead: "Kostenloser KI-Abhängigkeitstest. Messen Sie kognitive Entlastung, emotionale Bindung und tägliche Abhängigkeit von ChatGPT und anderen KI-Tools. Anonym und privat.",
       infoTitle: "📋 Was diese Selbstreflexion misst",
       infoPara1: "Diese kurzen Tests helfen Ihnen zu beobachten, wie oft Sie KI zum Denken, für emotionalen Komfort oder Alltagsaufgaben nutzen. Sie dienen der Selbsterkenntnis, nicht der klinischen Diagnose.",
       infoPara2: "Für wen: Jeder, der prüfen möchte, ob die KI‑Nutzung noch bewusst oder bereits automatisch erfolgt. Sie erhalten eine Bewertung und einen praktischen Vorschlag.",
@@ -732,7 +732,7 @@
     },
     fr: {
       mainTitle: "Test gratuit : à quel point dépendez-vous de l'IA ?",
-      subhead: "Mesurez la décharge cognitive, l'attachement émotionnel et la dépendance quotidienne à l'IA. Anonyme et privé.",
+      subhead: "Test gratuit de dépendance à l'IA. Mesurez la décharge cognitive, l'attachement émotionnel et la dépendance quotidienne à ChatGPT et autres outils d'IA. Anonyme et privé.",
       infoTitle: "📋 Ce que mesure cette auto‑réflexion",
       infoPara1: "Ces courts tests vous aident à observer à quelle fréquence vous utilisez l'IA pour réfléchir, trouver un réconfort émotionnel ou accomplir des tâches quotidiennes. Ils sont conçus pour la conscience de soi, pas pour un diagnostic clinique.",
       infoPara2: "Pour qui : toute personne souhaitant vérifier si son utilisation de l'IA est encore intentionnelle ou devient automatique. Vous obtiendrez un score et une suggestion pratique.",
@@ -780,7 +780,7 @@
     },
     ja: {
       mainTitle: "無料 AI 使用自己評価 – あなたのAI習慣を理解する",
-      subhead: "認知的オフロード、感情的愛着、日常的なAI依存を測定。匿名・プライベート。",
+      subhead: "無料AI依存度テスト。ChatGPTや他のAIツールへの認知的オフロード、感情的愛着、日常的な依存を測定します。匿名・プライベート。",
       infoTitle: "📋 この自己内省が測定するもの",
       infoPara1: "これらの短いテストは、思考、感情的な慰め、日々の生産性においてどのくらいAIに頼っているかを観察するのに役立ちます。臨床診断ではなく、自己認識のために設計されています。",
       infoPara2: "対象者：AIの使用がまだ意図的なのか、それとも自動的になっているのかを確認したい方。スコアと実用的な提案を得られます。",
@@ -938,9 +938,15 @@
   }
 
   function getTrackerData(){
+  try {
     const stored = localStorage.getItem('mindos_tracker_v2');
     return stored ? JSON.parse(stored) : {};
+  } catch(e) {
+    console.warn('Tracker data corrupted, resetting.');
+    localStorage.removeItem('mindos_tracker_v2');
+    return {};
   }
+}
 
   function saveTrackerData(data){ localStorage.setItem('mindos_tracker_v2', JSON.stringify(data)); }
 
