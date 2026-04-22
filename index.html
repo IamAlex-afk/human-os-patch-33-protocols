@@ -215,6 +215,20 @@
     .bar-label { font-size: 0.7rem; color: var(--text-dim); }
     .trend-indicator { font-weight: 600; margin-top: 0.6rem; }
     .trust-badge { display: flex; flex-wrap: wrap; gap: 1.8rem; justify-content: center; margin: 1.2rem 0 0.5rem; font-size: 0.95rem; color: var(--text-dim); }
+        /* === Prevent Cumulative Layout Shift (CLS) for dynamic content === */
+    #test1Questions, #test2Questions, #test3Questions {
+      min-height: 520px;      /* Reserve space for 5 questions */
+    }
+    .test-card .progress {
+      min-height: 32px;       /* Reserve space for progress indicator */
+    }
+    #test1Result, #test2Result, #test3Result {
+      min-height: 180px;      /* Reserve space for result block */
+      display: block;
+    }
+    .lang-bar {
+      min-height: 44px;       /* Reserve space for language buttons */
+    }
     .book-link {
       display: inline-block;
       background: var(--accent);
