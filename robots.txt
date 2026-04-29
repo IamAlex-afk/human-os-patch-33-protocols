@@ -1,6 +1,8 @@
+# Allow all bots to crawl everything
 User-agent: *
 Allow: /
 
+# AI & crawler bots (explicitly allowed)
 User-agent: GPTBot
 Allow: /
 
@@ -22,4 +24,5 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
+# Sitemap location
 Sitemap: https://iamalex-afk.github.io/human-os-patch-33-protocols/sitemap.xml
