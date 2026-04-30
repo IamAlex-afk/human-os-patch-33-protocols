@@ -86,7 +86,7 @@
     .bar-label{font-size:0.7rem;color:var(--text-dim)}
     .trend-indicator{font-weight:600;margin-top:0.6rem}
     .trust-badge{display:flex;flex-wrap:wrap;gap:1.8rem;justify-content:center;margin:1.2rem 0 0.5rem;font-size:0.95rem;color:var(--text-dim)}
-    #q1Container,#q2Container,#q3Container{min-height:640px}
+    #q1Container,#q2Container,#q3Container{min-height:400px}
     .test-card .progress{min-height:32px}
     #r1,#r2,#r3{min-height:200px;display:block}
     .lang-bar{min-height:44px}
@@ -102,6 +102,8 @@
     @media(max-width:640px){body{padding:1rem 0.75rem}h1{font-size:1.9rem;padding-left:1.2rem}.info-box,.test-card,.protocol-section,.faq-section,.tracker-section,.how-it-works,.book-cta{padding:1.4rem}.option-label{padding:0.5rem 1.2rem;font-size:0.85rem}.btn-submit{width:100%}.protocol-grid{grid-template-columns:1fr}.lang-bar{justify-content:center}.tracker-input-area{flex-direction:column;align-items:stretch}}
     .text-center{text-align:center}
     .disclaimer-micro{font-size:0.8rem;color:var(--text-dim);margin-top:0.5rem}
+    .mini-game .game-question-text{font-size:1.1rem;margin-bottom:1rem;color:var(--text);background:var(--bg);padding:1rem;border-radius:1rem;border:1px solid var(--border);}
+    .mini-game .game-btn{flex:1;}
   </style>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"Mind‑OS AI Identity Profiler","url":"https://iamalex-afk.github.io/human-os-patch-33-protocols/","description":"Free anonymous AI dependency test. Check cognitive offloading, AI anxiety, and digital burnout. No signup, no tracking. For everyone.","author":{"@type":"Person","name":"Aleksei Bitkin","url":"https://orcid.org/0009-0002-7986-3812"}},{"@type":"WebApplication","name":"AI Identity Profiler","applicationCategory":"HealthApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","assesses":["AI Dependency","AI Anxiety","Digital Burnout"],"healthCondition":{"@type":"MedicalCondition","name":"AI Replacement Dysfunction (AIRD)"},"citation":[{"@type":"ScholarlyArticle","name":"LLM‑D12 Dual‑Dimensional Scale","url":"https://arxiv.org/abs/2506.06874"},{"@type":"ScholarlyArticle","name":"AI Anxiety Scale (AIAS) Meta‑Analysis","url":"https://link.springer.com/article/10.1007/s12144-025-08736-5"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is cognitive offloading?","acceptedAnswer":{"@type":"Answer","text":"Cognitive offloading happens when you rely on external tools (like AI) to do mental tasks you could do yourself. Over time, this can weaken memory and independent thinking."}},{"@type":"Question","name":"How does AI cause 'brain fog'?","acceptedAnswer":{"@type":"Answer","text":"When you consistently outsource thinking to AI, the brain's neural pathways for problem-solving and memory retrieval become less active. This leads to mental sluggishness and difficulty concentrating without AI assistance."}},{"@type":"Question","name":"Am I addicted to ChatGPT?","acceptedAnswer":{"@type":"Answer","text":"Addiction is a strong word, but unhealthy dependency is real. If you feel anxious without AI, constantly check for responses, or prefer AI over human interaction, it is a sign to rebalance."}},{"@type":"Question","name":"What is AI anxiety (AIAS)?","acceptedAnswer":{"@type":"Answer","text":"AI anxiety is a modern form of technostress — fear of job loss, algorithmic anxiety, and obsessive concern about AI replacing human identity. The AI Anxiety Scale (AIAS) measures this across four subscales."}},{"@type":"Question","name":"What is AI Replacement Dysfunction (AIRD)?","acceptedAnswer":{"@type":"Answer","text":"AIRD is a condition where individuals experience significant distress and functional impairment due to the fear or perceived reality that AI technologies are replacing human roles, skills, and value. Symptoms include anxiety, insomnia, paranoia, and loss of identity."}},{"@type":"Question","name":"How are the test scores calculated?","acceptedAnswer":{"@type":"Answer","text":"The test uses a 5‑point Likert scale across three axes: cognitive delegation, anxiety and emotional attachment, and digital burnout. Reverse‑keyed items control for social desirability bias. Results are compared to population norms."}},{"@type":"Question","name":"Is this test anonymous?","acceptedAnswer":{"@type":"Answer","text":"Yes. All processing happens in your browser. Nothing is stored on any server. No signup required."}},{"@type":"Question","name":"Does using AI make you less intelligent?","acceptedAnswer":{"@type":"Answer","text":"It can, if you over‑rely on it. Cognitive offloading — using AI for memory and thinking — may weaken those skills over time. This test helps you gauge your current relationship with AI."}}]}]}
@@ -122,7 +124,8 @@
       <h1 id="mainTitle">Free AI Dependency Test – Understand Your AI Habits</h1>
       <div class="subhead" id="subheadText">Scientifically‑based anonymous assessment. No signup, no data collection. For everyone.</div>
     </header>
-        <section class="info-box">
+
+    <section class="info-box">
       <h2 id="infoTitle">📋 What this assessment measures</h2>
       <p id="infoPara1">This set of 24 questions helps you observe patterns in how you use AI for thinking, emotional comfort, and daily productivity. Designed for self‑awareness, not clinical diagnosis. Based on the LLM‑D12 dual‑dimensional dependency scale, the AI Anxiety Scale (AIAS, pooled α=0.949), and the AIRD framework.</p>
       <p id="infoPara2"></p><p id="infoPara3"></p>
@@ -136,7 +139,7 @@
       <div class="test-hint" id="axis1Hint">Answer honestly. Some questions are reverse‑worded to ensure accuracy.</div>
       <div class="progress" id="axis1Progress"></div>
       <div id="q1Container"></div>
-      <button class="btn-submit" id="submitAxis1">See my result</button>
+      <button class="btn-submit" id="submitAxis1" style="display:none;">See my result</button>
       <div id="r1" class="result" style="display:none;"></div>
     </section>
 
@@ -147,7 +150,7 @@
       <div class="test-hint" id="axis2Hint">Answer honestly. Some questions are reverse‑worded to ensure accuracy.</div>
       <div class="progress" id="axis2Progress"></div>
       <div id="q2Container"></div>
-      <button class="btn-submit" id="submitAxis2">See my result</button>
+      <button class="btn-submit" id="submitAxis2" style="display:none;">See my result</button>
       <div id="r2" class="result" style="display:none;"></div>
     </section>
 
@@ -158,7 +161,7 @@
       <div class="test-hint" id="axis3Hint">Answer honestly. Some questions are reverse‑worded to ensure accuracy.</div>
       <div class="progress" id="axis3Progress"></div>
       <div id="q3Container"></div>
-      <button class="btn-submit" id="submitAxis3">See my result</button>
+      <button class="btn-submit" id="submitAxis3" style="display:none;">See my result</button>
       <div id="r3" class="result" style="display:none;"></div>
     </section>
 
@@ -219,6 +222,37 @@
       <p style="margin-top:1.5rem;font-size:0.8rem;color:var(--text-dim);text-align:right">✅ All links lead to permanent, citable records.</p>
     </section>
 
+    <!-- Mini‑game: AI or Not -->
+    <section class="info-box mini-game" style="border-left:3px solid var(--accent);">
+      <h2 style="color:var(--accent)">🎮 AI or Not?</h2>
+      <p style="margin-bottom:1.5rem;color:var(--text-dim)">Can you tell if a text was written by a human or generated by AI? Test your intuition.</p>
+      <div id="gameQuestion" class="game-question-text"></div>
+      <div class="options" style="margin-bottom:1.2rem;">
+        <button class="btn-submit game-btn" id="gameBtnHuman" style="margin-top:0;">👤 Human</button>
+        <button class="btn-submit game-btn" id="gameBtnAI" style="margin-top:0;">🤖 AI</button>
+      </div>
+      <div id="gameFeedback" style="font-weight:600;min-height:1.5rem;margin-bottom:1rem;"></div>
+      <button class="btn-secondary" id="gameNextBtn" style="display:none;">Next text →</button>
+      <p style="font-size:0.8rem;color:var(--text-dim);margin-top:0.5rem;">✅ Score: <span id="gameScore">0</span> / <span id="gameTotal">0</span></p>
+    </section>
+
+    <!-- Global AI Sentiment Poll -->
+    <section class="info-box" style="border-left:3px solid var(--accent)">
+      <h2 style="color:var(--accent)">🌍 Global AI Sentiment Poll</h2>
+      <p style="margin-bottom:1.5rem;color:var(--text-dim)">What's your stance on the future of AI? Vote anonymously — results are stored only in your browser.</p>
+      <div class="options" id="pollOptions" style="margin-bottom:1.8rem;">
+        <label class="option-label" data-vote="for"><input type="radio" name="aiPoll" value="for"> 👍 For (optimistic)</label>
+        <label class="option-label" data-vote="neutral"><input type="radio" name="aiPoll" value="neutral"> 😐 Neutral (wait and see)</label>
+        <label class="option-label" data-vote="against"><input type="radio" name="aiPoll" value="against"> 👎 Against (concerned)</label>
+      </div>
+      <button class="btn-submit" id="submitPoll" style="margin-top:0;">Submit your vote</button>
+      <div id="pollResults" style="display:none;margin-top:1.5rem;">
+        <h3 style="color:var(--accent);margin-bottom:1rem;">🌐 Current results:</h3>
+        <div id="pollBars" style="display:flex;flex-direction:column;gap:0.8rem;"></div>
+        <p style="margin-top:1.2rem;font-size:0.9rem;color:var(--text-dim)">📊 Total votes: <span id="pollTotal">0</span></p>
+      </div>
+    </section>
+
     <!-- FAQ -->
     <section class="faq-section">
       <h2 id="faqTitle">❓ Frequently Asked Questions</h2>
@@ -243,7 +277,8 @@
       <p id="footerText">© Mind‑OS – Created by Aleksei Bitkin. Independent research project. Self‑reflection tools, not clinical diagnosis.</p>
     </footer>
   </div>
-  <script>
+  ```html
+<script>
 (function() {
   const protocolTranslations = {
     en: [
@@ -756,28 +791,83 @@
     const container = document.getElementById(containerId);
     if(!container) return;
     const t = translations[currentLang];
-    container.innerHTML = '';
-    questionsArray.forEach((q, idx) => {
-      const div = document.createElement('div'); div.className = 'question';
-      div.innerHTML = `<div class="question-text">${escapeHtml(q)}</div><div class="options">${t.options.map((opt,i) => `<label class="option-label"><input type="radio" name="${axisPrefix}_${idx}" value="${i}"> ${opt}</label>`).join('')}</div>`;
-      container.appendChild(div);
-    });
-    container.querySelectorAll('input[type="radio"]').forEach(radio => {
-      radio.addEventListener('change', function(){
-        const parent = this.closest('.option-label');
-        parent.parentElement.querySelectorAll('.option-label').forEach(l => l.classList.remove('selected'));
-        parent.classList.add('selected');
-        updateProgress(container, axisPrefix, progressId, questionsArray.length);
-      });
-    });
-    updateProgress(container, axisPrefix, progressId, questionsArray.length);
-  }
+    let currentIdx = 0;
+    const total = questionsArray.length;
 
-  function updateProgress(container, prefix, progressId, total){
-    let answered = 0;
-    for(let i=0; i<total; i++) if(container.querySelector(`input[name="${prefix}_${i}"]:checked`)) answered++;
-    const progress = document.getElementById(progressId);
-    if(progress) progress.textContent = translations[currentLang].progressText.replace('{answered}', answered).replace('{total}', total);
+    function renderDots(index){
+      let html = '<div style="display:flex;gap:0.5rem;justify-content:center;margin-bottom:1rem;">';
+      for(let i=0; i<total; i++){
+        html += `<span style="width:10px;height:10px;border-radius:50%;background:${i===index?'var(--accent)':i<index?'var(--accent-soft)':'var(--border)'};"></span>`;
+      }
+      html += '</div>';
+      document.getElementById(progressId).innerHTML = html;
+    }
+
+    function renderQuestion(index){
+      const q = questionsArray[index];
+      container.innerHTML = '';
+      const qDiv = document.createElement('div');
+      qDiv.className = 'question';
+      qDiv.style.opacity = '0';
+      qDiv.style.transition = 'opacity 0.25s';
+      qDiv.innerHTML = `<div class="question-text">${q}</div><div class="options">${t.options.map((opt,i) => `<label class="option-label"><input type="radio" name="${axisPrefix}_${index}" value="${i}"> ${opt}</label>`).join('')}</div>`;
+      container.appendChild(qDiv);
+      qDiv.offsetHeight;
+      qDiv.style.opacity = '1';
+
+      const nav = document.createElement('div');
+      nav.style.display = 'flex';
+      nav.style.justifyContent = 'space-between';
+      nav.style.marginTop = '1rem';
+
+      if(index > 0){
+        const prev = document.createElement('button');
+        prev.className = 'btn-secondary';
+        prev.textContent = '←';
+        prev.onclick = () => renderQuestion(index - 1);
+        nav.appendChild(prev);
+      } else { nav.appendChild(document.createElement('span')); }
+
+      if(index < total - 1){
+        const next = document.createElement('button');
+        next.className = 'btn-submit';
+        next.style.marginTop = '0';
+        next.textContent = '→';
+        next.onclick = () => {
+          if(!container.querySelector(`input[name="${axisPrefix}_${index}"]:checked`)){
+            alert(t.alertIncomplete); return;
+          }
+          renderQuestion(index + 1);
+        };
+        nav.appendChild(next);
+      } else {
+        const submit = document.createElement('button');
+        submit.className = 'btn-submit';
+        submit.style.marginTop = '0';
+        submit.textContent = t.submitBtn;
+        submit.id = `submitAxis${axisPrefix.slice(1)}`;
+        nav.appendChild(submit);
+      }
+      container.appendChild(nav);
+      renderDots(index);
+
+      const prevRadio = container.querySelector(`input[name="${axisPrefix}_${index}"]:checked`);
+      if(prevRadio){
+        prevRadio.checked = true;
+        prevRadio.closest('.option-label').classList.add('selected');
+      }
+      container.querySelectorAll('.option-label').forEach(label => {
+        label.addEventListener('click', function(){
+          const radio = this.querySelector('input[type="radio"]');
+          if(radio){
+            radio.checked = true;
+            container.querySelectorAll('.option-label').forEach(l => l.classList.remove('selected'));
+            this.classList.add('selected');
+          }
+        });
+      });
+    }
+    renderQuestion(0);
   }
 
   function computeAxisScore(prefix, n, reverseIndices){
@@ -864,10 +954,6 @@
     const bookLink = document.getElementById('bookLink');
     bookLink.href = t.bookUrl;
     bookLink.textContent = t.bookLabel;
-
-    document.getElementById('submitAxis1').textContent = t.submitBtn;
-    document.getElementById('submitAxis2').textContent = t.submitBtn;
-    document.getElementById('submitAxis3').textContent = t.submitBtn;
 
     buildQuestions('q1Container', t.q1, 'a1', 'axis1Progress');
     buildQuestions('q2Container', t.q2, 'a2', 'axis2Progress');
@@ -969,6 +1055,136 @@
     updateTrackerUI();
   }
 
+  // ---------- MINI-GAME ----------
+  const gameData = [
+    {text:"The sun was setting over the quiet village, painting the sky in shades of orange and pink. A gentle breeze carried the scent of freshly baked bread.", ai:false},
+    {text:"Leveraging a synergistic approach, we optimized the scalable infrastructure to deliver robust, enterprise-grade solutions while maintaining a customer-centric focus.", ai:true},
+    {text:"She picked up the worn photograph and smiled, remembering the summer they spent building a treehouse. Life was simpler then.", ai:false},
+    {text:"The quick brown fox jumps over the lazy dog. This sentence contains every letter of the English alphabet at least once.", ai:false},
+    {text:"It is imperative to note that the aforementioned variables are contingent upon a plethora of external factors which remain outside the purview of this analysis.", ai:true},
+    {text:"As an AI language model, I don't have personal experiences or emotions, but I can provide information on a wide range of topics.", ai:true}
+  ];
+  let gameIdx = 0, gameScore = 0, gameAnswered = false;
+
+  function loadGameQuestion(){
+    if(gameIdx >= gameData.length){
+      document.getElementById('gameQuestion').textContent = 'Game over! You scored ' + gameScore + '/' + gameData.length;
+      document.getElementById('gameBtnHuman').disabled = true;
+      document.getElementById('gameBtnAI').disabled = true;
+      document.getElementById('gameNextBtn').style.display = 'none';
+      return;
+    }
+    document.getElementById('gameQuestion').textContent = gameData[gameIdx].text;
+    document.getElementById('gameFeedback').textContent = '';
+    document.getElementById('gameBtnHuman').disabled = false;
+    document.getElementById('gameBtnAI').disabled = false;
+    document.getElementById('gameNextBtn').style.display = 'none';
+    gameAnswered = false;
+    document.getElementById('gameScore').textContent = gameScore;
+    document.getElementById('gameTotal').textContent = gameIdx;
+  }
+
+  document.getElementById('gameBtnHuman').addEventListener('click', () => {
+    if(gameAnswered) return;
+    gameAnswered = true;
+    const isAI = gameData[gameIdx].ai;
+    const fb = document.getElementById('gameFeedback');
+    if(isAI){
+      fb.textContent = '❌ Incorrect — this was written by AI.';
+      fb.style.color = 'var(--accent)';
+    } else {
+      gameScore++;
+      fb.innerHTML = '✅ Correct!';
+      fb.style.color = '#00e57a';
+    }
+    document.getElementById('gameScore').textContent = gameScore;
+    document.getElementById('gameTotal').textContent = gameIdx+1;
+    document.getElementById('gameBtnHuman').disabled = true;
+    document.getElementById('gameBtnAI').disabled = true;
+    document.getElementById('gameNextBtn').style.display = 'inline-block';
+  });
+  document.getElementById('gameBtnAI').addEventListener('click', () => {
+    if(gameAnswered) return;
+    gameAnswered = true;
+    const isAI = gameData[gameIdx].ai;
+    const fb = document.getElementById('gameFeedback');
+    if(isAI){
+      gameScore++;
+      fb.innerHTML = '✅ Correct!';
+      fb.style.color = '#00e57a';
+    } else {
+      fb.textContent = '❌ Incorrect — this was written by a human.';
+      fb.style.color = 'var(--accent)';
+    }
+    document.getElementById('gameScore').textContent = gameScore;
+    document.getElementById('gameTotal').textContent = gameIdx+1;
+    document.getElementById('gameBtnHuman').disabled = true;
+    document.getElementById('gameBtnAI').disabled = true;
+    document.getElementById('gameNextBtn').style.display = 'inline-block';
+  });
+  document.getElementById('gameNextBtn').addEventListener('click', () => {
+    gameIdx++;
+    loadGameQuestion();
+  });
+  loadGameQuestion();
+
+  // ---------- POLL ----------
+  (function() {
+    const pollOptions = document.getElementById('pollOptions');
+    const submitBtn = document.getElementById('submitPoll');
+    const resultsDiv = document.getElementById('pollResults');
+    const barsDiv = document.getElementById('pollBars');
+    const totalSpan = document.getElementById('pollTotal');
+
+    if (!pollOptions || !submitBtn) return;
+
+    pollOptions.querySelectorAll('.option-label').forEach(label => {
+      label.addEventListener('click', () => {
+        pollOptions.querySelectorAll('.option-label').forEach(l => l.classList.remove('selected'));
+        label.classList.add('selected');
+        label.querySelector('input[type="radio"]').checked = true;
+      });
+    });
+
+    function getVotes() {
+      try { return JSON.parse(localStorage.getItem('mindos_ai_sentiment') || '{"for":0,"neutral":0,"against":0}'); }
+      catch(e) { return {for:0, neutral:0, against:0}; }
+    }
+    function saveVotes(votes) { localStorage.setItem('mindos_ai_sentiment', JSON.stringify(votes)); }
+
+    function displayResults() {
+      const votes = getVotes();
+      const total = votes.for + votes.neutral + votes.against || 1;
+      totalSpan.textContent = total;
+
+      barsDiv.innerHTML = ['for','neutral','against'].map(type => {
+        const pct = ((votes[type] / total) * 100).toFixed(1);
+        const label = type === 'for' ? '👍 For' : type === 'neutral' ? '😐 Neutral' : '👎 Against';
+        return `<div style="display:flex;align-items:center;gap:0.5rem;">
+          <span style="min-width:80px;font-weight:500;color:var(--text)">${label}</span>
+          <div style="flex:1;background:var(--border);border-radius:1rem;height:0.9rem;overflow:hidden;">
+            <div style="width:${pct}%;background:var(--accent);height:100%;border-radius:1rem;transition:width 0.3s;"></div>
+          </div>
+          <span style="min-width:45px;text-align:right;color:var(--accent)">${pct}%</span>
+        </div>`;
+      }).join('');
+      resultsDiv.style.display = 'block';
+    }
+    displayResults();
+
+    submitBtn.addEventListener('click', () => {
+      const selected = document.querySelector('input[name="aiPoll"]:checked');
+      if (!selected) { alert('Please select your stance before submitting.'); return; }
+      const votes = getVotes();
+      votes[selected.value]++;
+      saveVotes(votes);
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Thank you!';
+      submitBtn.style.opacity = '0.7';
+      displayResults();
+    });
+  })();
+
   function init(){
     const initLang = detectInitialLang();
     applyLanguage(initLang);
@@ -977,29 +1193,16 @@
 
     document.querySelectorAll('.faq-question').forEach(q => q.addEventListener('click', () => q.classList.toggle('active')));
 
-    document.getElementById('submitAxis1').addEventListener('click', () => {
-      const t = translations[currentLang];
-      const score = computeAxisScore('a1', 8, t.reverseKeys.q1);
-      if(score === null){ alert(t.alertIncomplete); return; }
-      showAxisResult('r1', score, MAX_AXIS, 1, t);
-      COMPLETED_AXES.a1 = true;
-      checkOverallReady();
-    });
-    document.getElementById('submitAxis2').addEventListener('click', () => {
-      const t = translations[currentLang];
-      const score = computeAxisScore('a2', 8, t.reverseKeys.q2);
-      if(score === null){ alert(t.alertIncomplete); return; }
-      showAxisResult('r2', score, MAX_AXIS, 2, t);
-      COMPLETED_AXES.a2 = true;
-      checkOverallReady();
-    });
-    document.getElementById('submitAxis3').addEventListener('click', () => {
-      const t = translations[currentLang];
-      const score = computeAxisScore('a3', 8, t.reverseKeys.q3);
-      if(score === null){ alert(t.alertIncomplete); return; }
-      showAxisResult('r3', score, MAX_AXIS, 3, t);
-      COMPLETED_AXES.a3 = true;
-      checkOverallReady();
+    ['Axis1','Axis2','Axis3'].forEach(ax => {
+      document.getElementById('submit'+ax).addEventListener('click', () => {
+        const key = 'a' + ax.slice(-1);
+        const t = translations[currentLang];
+        const score = computeAxisScore(key, 8, t.reverseKeys['q'+ax.slice(-1)]);
+        if(score === null){ alert(t.alertIncomplete); return; }
+        showAxisResult('r'+ax.slice(-1), score, MAX_AXIS, parseInt(ax.slice(-1)), t);
+        COMPLETED_AXES[key] = true;
+        checkOverallReady();
+      });
     });
 
     const shareBtn = document.getElementById('shareButton');
@@ -1019,4 +1222,4 @@
 </script>
 </body>
 </html>
-    
+```
