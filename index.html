@@ -8,7 +8,7 @@
   <meta name="author" content="Aleksei Sergeevich Bitkin">
   <meta name="robots" content="index, follow">
   <meta name="yandex-verification" content="5356814ecf72e704">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-ancestors 'self';">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://script.google.com https://script.googleusercontent.com; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-ancestors 'self'; connect-src 'self' https://script.google.com https://script.googleusercontent.com;">
   
   <link rel="canonical" id="dynamicCanonical" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/">
   <link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/">
@@ -39,6 +39,7 @@
     :root {
       --bg: #0b100d;
       --surface: #131e18;
+      --surface-hover: #1a2920;
       --accent: #00e57a;
       --accent-soft: rgba(0, 229, 122, 0.15);
       --text: #ecf7f0;
@@ -49,26 +50,21 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { background: var(--bg); font-family: 'Inter', system-ui, -apple-system, sans-serif; line-height: 1.6; color: var(--text); padding: 2rem 1.5rem; -webkit-font-smoothing: antialiased; }
     .container { max-width: 1120px; margin: 0 auto; }
-    
     .lang-bar { display: flex; justify-content: flex-end; gap: 0.6rem; margin-bottom: 2.2rem; flex-wrap: wrap; min-height: 44px; }
     .lang-btn { background: transparent; border: 1.5px solid var(--border); padding: 0.5rem 1.2rem; border-radius: 3rem; font-size: 0.8rem; font-weight: 600; cursor: pointer; color: var(--text-dim); transition: all .2s; text-transform: uppercase; letter-spacing: 0.4px; }
-    .lang-btn:hover { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+    .lang-btn:hover, .lang-btn:focus-visible { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); outline: none; }
     .lang-btn.active { background: var(--accent); border-color: var(--accent); color: var(--bg); }
-    
     h1 { font-size: 2.4rem; font-weight: 700; letter-spacing: -0.02em; color: var(--text); margin-bottom: 1.2rem; border-left: 6px solid var(--accent); padding-left: 1.8rem; line-height: 1.25; }
     .subhead { font-size: 1.25rem; color: var(--text-dim); max-width: 740px; margin: 0.25rem 0 1.2rem; }
     h2 { font-size: 1.7rem; font-weight: 600; color: var(--accent); margin-bottom: 1rem; letter-spacing: -0.01em; }
     h3 { font-size: 1.25rem; font-weight: 500; color: var(--text); margin-bottom: 0.5rem; }
-    
     .info-box, .test-card, .protocol-section, .faq-section, .ai-faq-section, .tracker-section, .how-it-works, .book-cta, .game-block, .poll-block, .fear-test-card { background: var(--surface); border-radius: 2rem; padding: 2.5rem; margin-bottom: 2.2rem; border: 1px solid var(--border); box-shadow: var(--shadow); transition: box-shadow .2s, border-color .2s; }
     .test-card:hover, .fear-test-card:hover { border-color: var(--accent); box-shadow: 0 0 24px var(--accent-soft); }
-    
     .test-title { display: flex; align-items: center; gap: 0.9rem; margin-bottom: 0.5rem; }
     .test-title span:first-child { font-size: 2rem; }
     .test-desc { color: var(--text-dim); margin-bottom: 1.6rem; font-size: 0.95rem; }
     .test-hint { font-size: 0.9rem; color: var(--accent); margin-bottom: 1.2rem; border-left: 3px solid var(--accent); padding-left: 1rem; }
     .progress { font-size: 0.85rem; color: var(--accent); margin-bottom: 1.4rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.6px; min-height: 32px; }
-    
     .question-step { padding: 1.5rem 0; display: none; animation: fIn 0.4s ease forwards; }
     .question-step.active { display: block; }
     .question-text { font-weight: 500; margin-bottom: 1.5rem; font-size: 1.15rem; color: var(--text); line-height: 1.5; }
@@ -76,42 +72,37 @@
     .option-label { display: flex; align-items: center; gap: 1rem; background: var(--bg); border: 1.5px solid var(--border); padding: 1rem 1.5rem; border-radius: 1rem; font-size: 1rem; cursor: pointer; transition: all .15s; color: var(--text-dim); }
     .option-label:hover { background: var(--surface-hover); border-color: var(--accent-soft); }
     .option-label.selected { background: var(--accent); border-color: var(--accent); color: var(--bg); font-weight: 600; }
-    
-    input[type="radio"] { appearance: none; width: 1.2rem; height: 1.2rem; border: 2px solid var(--border); border-radius: 50%; background: var(--bg); flex-shrink: 0; display: none; }
-    
-    .btn-submit, .btn-nav, .book-link { background: transparent; color: var(--accent); border: 2px solid var(--accent); padding: 0.8rem 2rem; border-radius: 3.5rem; font-weight: 700; cursor: pointer; margin-top: 1.5rem; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: .2s; }
-    .btn-submit:hover, .btn-nav:hover { background: var(--accent); color: var(--bg); box-shadow: 0 0 20px var(--accent-soft); transform: translateY(-2px); }
+    input[type="radio"] { appearance: none; width: 1.4rem; height: 1.4rem; border: 2px solid var(--border); border-radius: 50%; background: var(--bg); flex-shrink: 0; outline: none; transition: all .2s ease; cursor: pointer; }
+    input[type="radio"]:checked { border-color: var(--accent); background-color: var(--accent); box-shadow: inset 0 0 0 4px var(--surface); }
+    input[type="radio"]:focus-visible { box-shadow: 0 0 0 3px var(--accent-soft), 0 0 0 1px var(--accent); border-color: var(--accent); }
+    .btn-submit, .btn-nav, .book-link { background: transparent; color: var(--accent); border: 2px solid var(--accent); padding: 0.8rem 2rem; border-radius: 3.5rem; font-weight: 700; cursor: pointer; margin-top: 1.5rem; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: .2s; outline: none; }
+    .btn-submit:hover, .btn-nav:hover, .btn-submit:focus-visible, .btn-nav:focus-visible { background: var(--accent); color: var(--bg); box-shadow: 0 0 20px var(--accent-soft); transform: translateY(-2px); }
     .book-link { background: var(--accent); color: var(--bg); border: none; }
-    .book-link:hover { background: #00ff88; color: var(--bg); box-shadow: 0 0 25px var(--accent-soft); transform: translateY(-2px); }
-    .btn-nav:disabled { opacity: 0.4; cursor: default; background: transparent; color: var(--text-dim); border-color: var(--border); box-shadow: none; transform: none; }
-    
+    .book-link:hover, .book-link:focus-visible { background: #00ff88; color: var(--bg); box-shadow: 0 0 25px var(--accent-soft); transform: translateY(-2px); }
+    .btn-nav:disabled { opacity: 0.4; cursor: not-allowed; background: transparent; color: var(--text-dim); border-color: var(--border); box-shadow: none; transform: none; }
     .result { margin-top: 2rem; padding: 1.8rem; background: var(--bg); border-radius: 1.2rem; border-left: 6px solid var(--accent); display: none; animation: fIn .4s; }
     @keyframes fIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
     .result strong { display: block; margin-bottom: 0.5rem; font-size: 1.25rem; color: var(--accent); }
     .result-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
     .result-badge { background: var(--accent-soft); color: var(--accent); padding: 0.4rem 1.2rem; border-radius: 2rem; font-size: 0.9rem; font-weight: 700; }
     .result-advice { font-size: 0.95rem; color: var(--text-dim); line-height: 1.5; margin-top: 1rem; }
-    
     .overall-result { background: radial-gradient(circle at center, #1a2a21 0%, var(--surface) 100%); border-radius: 2rem; padding: 2.5rem; margin-bottom: 2.2rem; border: 2px solid var(--accent); box-shadow: 0 0 32px var(--accent-soft); text-align: center; display: none; }
     .overall-result h2 { font-size: 2.2rem; margin-bottom: 0.5rem; text-transform: uppercase; }
     .overall-archetype { font-size: 1.6rem; color: var(--accent); margin-bottom: 1rem; font-weight: 700; }
     .overall-percentile { font-size: 1.1rem; color: var(--text-dim); margin-bottom: 1.5rem; }
-    
     .protocol-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
     .protocol-card { background: var(--bg); border: 1px solid var(--border); border-radius: 1.2rem; padding: 1.5rem; transition: all .3s ease; }
     .protocol-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0, 229, 122, 0.1); }
     .protocol-num { color: var(--accent); font-weight: 700; margin-bottom: 0.4rem; font-size: 0.85rem; text-transform: uppercase; }
     .protocol-title { font-weight: 600; margin-bottom: 0.8rem; color: var(--text); font-size: 1.1rem; }
     .protocol-desc { font-size: 0.9rem; color: var(--text-dim); line-height: 1.5; }
-    
     .faq-item { border-bottom: 1px solid var(--border); }
-    .faq-question { padding: 1.4rem 0; cursor: pointer; font-weight: 600; color: var(--accent); display: flex; justify-content: space-between; align-items: center; font-size: 1.15rem; transition: color .2s; }
-    .faq-question:hover { color: var(--text); }
+    .faq-question { padding: 1.4rem 0; cursor: pointer; font-weight: 600; color: var(--accent); display: flex; justify-content: space-between; align-items: center; font-size: 1.15rem; transition: color .2s; outline: none; }
+    .faq-question:hover, .faq-question:focus-visible { color: var(--text); }
     .faq-question span { font-size: 1.2rem; transition: transform .3s; }
     .faq-question.active span { transform: rotate(180deg); }
     .faq-answer { padding: 0 0 1.5rem 0; color: var(--text-dim); display: none; line-height: 1.7; }
     .faq-question.active + .faq-answer { display: block; animation: fIn .3s; }
-    
     .tracker-input-area { display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; background: var(--bg); padding: 1.5rem; border-radius: 1rem; border: 1px solid var(--border); }
     .tracker-slider { flex: 3; min-width: 220px; }
     .tracker-slider input[type="range"] { width: 100%; cursor: pointer; accent-color: var(--accent); }
@@ -120,23 +111,19 @@
     .tracker-stats { background: var(--bg); border-radius: 1.2rem; padding: 1.5rem; margin-top: 1.5rem; border: 1px solid var(--border); }
     .tracker-chart { display: flex; gap: 0.5rem; align-items: flex-end; height: 100px; margin: 1.5rem 0; }
     .chart-bar { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 0.4rem; }
-    .bar-fill { width: 100%; border-radius: 4px 4px 0 0; min-height: 4px; transition: height .4s; }
+    .bar-fill { width: 100%; background: var(--accent); border-radius: 4px 4px 0 0; min-height: 4px; transition: height .4s; }
     .bar-label { font-size: 0.75rem; color: var(--text-dim); }
-    
+    .trend-indicator { display: inline-block; padding: 0.4rem 1rem; background: var(--surface); border-radius: 2rem; border: 1px solid var(--border); font-weight: 600; margin-top: 0.5rem; }
     .trust-badge { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin: 1.5rem 0 0.5rem; font-size: 0.95rem; color: var(--text-dim); }
     .donate-link { display: inline-flex; align-items: center; gap: 0.6rem; background: #1f3027; color: var(--text); text-decoration: none; padding: 0.8rem 1.6rem; border-radius: 3rem; font-size: 0.95rem; border: 1px solid var(--border); transition: all .2s; font-weight: 600; }
-    .donate-link:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
-    
+    .donate-link:hover, .donate-link:focus-visible { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); outline: none; }
     .poll-bar-container { margin-bottom: 1rem; }
     .poll-bar-label { display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text); font-weight: 500; margin-bottom: 0.4rem; }
     .poll-bar-track { width: 100%; background: var(--bg); border-radius: 6px; height: 12px; overflow: hidden; }
     .poll-bar-fill { height: 100%; border-radius: 6px; transition: width 1s cubic-bezier(0.4, 0, 0.2, 1); }
-    
     .cta-bar { position: fixed; bottom: 0; left: 0; right: 0; background: var(--surface); border-top: 1px solid var(--accent); display: none; z-index: 100; padding: 1rem; text-align: center; box-shadow: 0 -10px 30px rgba(0,0,0,0.5); }
     .cta-bar.visible { display: block; animation: fIn 0.5s; }
-    
     .wizard-nav { display: flex; justify-content: space-between; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
-    
     @media(max-width: 768px) {
       body { padding: 1rem; }
       h1 { font-size: 2rem; padding-left: 1.2rem; }
@@ -150,39 +137,6 @@
     .text-center { text-align: center; }
     .disclaimer-micro { font-size: 0.85rem; color: var(--accent); opacity: 0.8; margin-top: 0.5rem; }
   </style>
-
-  <script type="application/ld+json" id="dynamicJSONLD">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "name": "Mind-OS",
-        "url": "https://iamalex-afk.github.io/human-os-patch-33-protocols/",
-        "author": { "@type": "Person", "name": "Aleksei Sergeevich Bitkin", "sameAs": "https://orcid.org/0009-0002-7986-3812" }
-      },
-      {
-        "@type": "WebApplication",
-        "name": "AI Dependency Test & Fear of AI Assessment",
-        "applicationCategory": "HealthApplication",
-        "operatingSystem": "Any",
-        "assesses": ["AI Dependency", "AI Anxiety", "Digital Burnout", "Fear of AI"],
-        "healthCondition": { "@type": "MedicalCondition", "name": "AI Replacement Dysfunction (AIRD)" },
-        "citation": [
-          { "@type": "ScholarlyArticle", "name": "LLM-D12 Dual-Dimensional Scale", "url": "https://arxiv.org/abs/2506.06874" },
-          { "@type": "ScholarlyArticle", "name": "AI Anxiety Scale (AIAS) Meta-Analysis", "url": "https://link.springer.com/article/10.1007/s12144-025-08736-5" }
-        ]
-      },
-      {
-        "@type": "Book",
-        "name": "AI Biohacking: 33 Protocols for Consciousness Reboot",
-        "author": { "@type": "Person", "name": "Aleksei Sergeevich Bitkin" },
-        "isbn": "9798275579505",
-        "offers": { "@type": "Offer", "url": "https://www.amazon.com/dp/B0G35SBQR3", "priceCurrency": "USD", "price": "9.99" }
-      }
-    ]
-  }
-  </script>
 </head>
 <body>
 <noscript>
@@ -191,15 +145,12 @@
     <p>This interactive assessment runs entirely in your browser to protect your privacy. JavaScript is required.</p>
   </div>
 </noscript>
-
 <main class="container">
   <div class="lang-bar" id="langBar"></div>
-  
   <header>
     <h1 id="mainTitle"></h1>
     <div class="subhead" id="subheadText"></div>
   </header>
-  
   <nav aria-label="Table of Contents" style="background:var(--surface);border-radius:1.5rem;padding:1rem 2rem;margin-bottom:2.2rem;border:1px solid var(--border);">
     <ul style="list-style:none;display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;padding:0;font-weight:600;">
       <li><a href="#test-section" style="color:var(--accent);text-decoration:none;">📋 Assessment</a></li>
@@ -212,6 +163,7 @@
   </nav>
 
   <section class="info-box">
+      
     <h2 id="infoTitle"></h2>
     <p id="infoPara1" style="margin-bottom:1rem;"></p>
     <p id="infoPara2" style="margin-bottom:1rem;"></p>
@@ -306,21 +258,22 @@
   <section class="poll-block" id="poll-section" style="border-left: 3px solid var(--accent);">
     <h2 id="pollTitle"></h2>
     <p id="pollDesc" style="margin-bottom:1.5rem;"></p>
-    
     <div id="pollOptions" style="display:flex; flex-wrap:wrap; gap:1rem; margin-bottom:1.5rem;">
       <label class="option-label" style="border-radius:3rem;"><input type="radio" name="aiPoll" value="for"> <span id="pollFor"></span></label>
       <label class="option-label" style="border-radius:3rem;"><input type="radio" name="aiPoll" value="neutral"> <span id="pollNeutral"></span></label>
       <label class="option-label" style="border-radius:3rem;"><input type="radio" name="aiPoll" value="against"> <span id="pollAgainst"></span></label>
     </div>
     <button class="btn-submit" id="submitPoll" style="margin-top:0;"></button>
-    
     <div id="pollResults" style="display:none; margin-top:2rem;">
       <h3 id="pollResultsTitle" style="color:var(--accent); margin-bottom:1.5rem; font-size:1.4rem;"></h3>
       <div id="pollBars"></div>
-      
       <div style="margin-top:2.5rem; padding:1.5rem; background:var(--bg); border-radius:1rem; border:1px solid var(--accent-soft);">
         <p id="pollBridge" style="color:var(--text); font-size:1.1rem; line-height:1.6; margin-bottom:1rem;"></p>
         <p id="ctaFirstReview" style="color:var(--accent); font-weight:600; margin-bottom:1.5rem;"></p>
+        <div class="poll-bar-track" style="margin-bottom:1rem;">
+          <div id="reviewProgressBar" class="poll-bar-fill" style="width: 5%; background: var(--accent); height: 10px; border-radius: 4px;"></div>
+        </div>
+        <p style="font-size:0.8rem; color:var(--text-dim); margin-bottom:1.5rem;">🗺️ <span id="reviewProgressText"></span></p>
         <div style="text-align:center;">
           <a href="#" id="bookLink" class="book-link" target="_blank" rel="noopener"></a>
         </div>
@@ -342,6 +295,8 @@
       <li style="background:var(--bg); border:1px solid var(--border); border-radius:0.75rem; padding:1.2rem;"><strong>💡 Harvard Business Review</strong><br><span style="font-size:0.85rem;opacity:0.9">When Using AI Leads to Brain Fry</span><br><a href="https://hbr.org/2026/03/when-using-ai-leads-to-brain-fry" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;font-weight:600;display:inline-block;margin-top:0.5rem;">Read on HBR</a></li>
       <li style="background:var(--bg); border:1px solid var(--border); border-radius:0.75rem; padding:1.2rem;"><strong>📚 Acta Psychologica</strong><br><span style="font-size:0.85rem;opacity:0.9">AI dependence & critical thinking</span><br><a href="https://doi.org/10.1016/j.actpsy.2025.105725" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;font-weight:600;display:inline-block;margin-top:0.5rem;">DOI Reference</a></li>
       <li style="background:var(--bg); border:1px solid var(--border); border-radius:0.75rem; padding:1.2rem;"><strong>📄 Scientific Preprint</strong><br><span style="font-size:0.85rem;opacity:0.9">The Glitch Theory of Consciousness</span><br><a href="https://doi.org/10.5281/zenodo.17972301" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;font-weight:600;display:inline-block;margin-top:0.5rem;">Read on Zenodo</a></li>
+      <li style="background:var(--bg); border:1px solid var(--border); border-radius:0.75rem; padding:1.2rem;"><strong>🤗 Open Dataset</strong><br><span style="font-size:0.85rem;opacity:0.9">33 Protocols</span><br><a href="https://huggingface.co/datasets/MindOSProducer/Mind-OS-33-Protocols" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;font-weight:600;display:inline-block;margin-top:0.5rem;">Hugging Face</a></li>
+      <li style="background:var(--bg); border:1px solid var(--border); border-radius:0.75rem; padding:1.2rem;"><strong>✍️ Technical Profile</strong><br><a href="https://dev.to/bitkin_aleksei_sergeevich" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;font-weight:600;display:inline-block;margin-top:0.5rem;">DEV Community</a></li>
       <li style="background:var(--bg); border:1px solid var(--border); border-radius:0.75rem; padding:1.2rem;"><strong>👤 Author Profile</strong><br><span style="font-size:0.85rem;opacity:0.9">Aleksei Sergeevich Bitkin</span><br><a href="https://orcid.org/0009-0002-7986-3812" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;font-weight:600;display:inline-block;margin-top:0.5rem;">ORCID Record</a></li>
     </ul>
   </section>
@@ -388,9 +343,9 @@
 <div class="cta-bar" id="globalCTABar">
   <a href="#" id="ctaBarLink" class="book-link" target="_blank" rel="noopener" style="display:inline-block; width:100%; max-width:400px; text-align:center; font-size:1.1rem; padding:1rem;">⚡ <span id="ctaBarText"></span></a>
 </div>
+
 <script>
 (function() {
-  // === БАЗОВЫЕ НАСТРОЙКИ И ПАМЯТЬ ===
   const storage = {
     set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} },
     get(k) { try { return JSON.parse(localStorage.getItem(k)); } catch(e){ return null; } },
@@ -407,12 +362,10 @@
   let gameIndex = 0;
   let gameScore = 0;
 
-  // Безопасный рендеринг текста
-  function escapeHtml(str) { 
-    return String(str).replace(/[&<>]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;'})[m]); 
-  }
+function escapeHtml(str) { 
+  return String(str).replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[m]); 
+} 
 
-  // === ГЛОБАЛЬНАЯ БАЗА ДАННЫХ ПЕРЕВОДОВ ===
   const translations = {
     en: {
       langName: "English",
@@ -423,23 +376,18 @@
       infoPara2: "<strong>Who it's for:</strong> Anyone who wants to check whether their AI use is still intentional or becoming automatic. You'll get your personal AI Identity Profile with an archetype and percentile comparison.",
       infoPara3: "<strong>How it works:</strong> Answer 8 questions per axis plus a Fear assessment. Everything runs inside your browser — no data leaves your device.",
       infoDisclaimer: "This is a self-reflection tool, not a medical diagnosis. 100% anonymous.",
-      
       axis1Title: "Thinking & Memory",
       axis1Desc: "Do you delegate thinking to AI? Measures cognitive offloading, memory outsourcing, and trust in AI over own reasoning.",
       axis1Hint: "Answer honestly. Some questions are reverse-worded to ensure accuracy.",
-      
       axis2Title: "Anxiety & Emotional Attachment",
       axis2Desc: "Do you feel threatened by AI or emotionally connected to chatbots? Measures AI anxiety, fear of replacement, and attachment.",
       axis2Hint: "Answer honestly. Some questions are reverse-worded.",
-      
       axis3Title: "Digital Burnout & Procrastination",
       axis3Desc: "Do you feel exhausted by AI, or do you postpone tasks waiting for AI help? Measures digital fatigue and loss of autonomy.",
       axis3Hint: "Answer honestly. Some questions are reverse-worded.",
-      
       fearTitle: "Fear of AI",
       fearDesc: "How much does the thought of AI scare you? Measures your emotional response to AI development.",
       fearHint: "Answer instinctively. There are no right or wrong answers.",
-      
       trackerTitle: "📊 Daily Cognitive Load Tracker",
       trackerDesc: "Log how much you relied on AI today. 0 = fully independent, 5 = partial assistance, 10 = high dependence.",
       trackerLowLabel: "Independent",
@@ -452,7 +400,6 @@
       trendDecreasing: "Your dependence is decreasing. Keep practicing conscious AI use.",
       trendStable: "Your dependence is stable. Stay aware of your habits.",
       noData: "No data yet. Log your first day above.",
-      
       gameTitle: "🎮 AI or Not?",
       gameDesc: "Can you tell if a text was written by a human or generated by AI?",
       gameBtnHuman: "👤 Human",
@@ -464,7 +411,6 @@
       gameFeedbackWrong: "❌ Incorrect.",
       gameFeedbackAI: "It was AI.",
       gameFeedbackHuman: "It was Human.",
-      
       pollTitle: "🌍 Global AI Sentiment Poll",
       pollDesc: "Vote anonymously. This is your personal stance.",
       pollFor: "👍 For (optimistic)",
@@ -472,9 +418,7 @@
       pollAgainst: "👎 Against (concerned)",
       submitPoll: "Submit your vote",
       pollResultsTitle: "🌐 Current results:",
-      pollTotalLabel: "📊 Total votes:",
       pollBridge: "Want to see how your city or country voted? Grab the book on Amazon and leave a public review specifying your <strong>Name and City</strong> — it's the only way to make your voice permanently visible globally.",
-      
       ctaText: "Want structured guidance? The 33 Protocols book offers daily micro-exercises to restore cognitive sovereignty.",
       ctaFirstReview: "Be the first in your city to leave a review and make your stance permanent.",
       ctaBarText: "Explore the 33 Protocols",
@@ -488,16 +432,13 @@
       alertIncomplete: "Please answer the current question.",
       progressText: "Question {answered} of {total}",
       options: ["Never", "Rarely", "Sometimes", "Often", "Constantly"],
-      
       trustNoSignup: "🔒 No signup",
       trustLocal: "📁 Runs locally",
       trustAnonymous: "🧾 100% Anonymous",
       howTitle: "📌 How this works",
       howText: "Each axis has short questions. Your answers are processed in real-time within your browser. At the end, you'll receive your personal AI Identity Profile.",
-      
       protocolsTitle: "📖 The 33 Protocols for Cognitive Sovereignty",
       protocolsDesc: "A structured framework to reverse AI-induced brain fog and restore independent thinking.",
-      
       faqTitle: "❓ Frequently Asked Questions",
       faqQ1: "What is cognitive offloading?",
       faqA1: "Cognitive offloading is the process of relying on external tools (like AI) to perform mental tasks that you would otherwise do yourself, which can weaken memory and independent thinking over time.",
@@ -516,7 +457,6 @@
       faqQ8: "Does using AI make me less intelligent?",
       faqA8: "It can, if you over-rely on it. Cognitive offloading may weaken memory and thinking skills over time.",
       donateText: "Support this project on Ko-fi",
-      
       overallTitle: "Your AI Identity Profile",
       overallPercentileLabel: "Better than {percentile}% of users",
       archetypes: {
@@ -524,13 +464,11 @@
         medium: { name: "Balanced Navigator", percentile: 50, advice: "You lean on AI without losing yourself. Small habits reinforce autonomy." },
         high: { name: "AI-Dependent Delegate", percentile: 85, advice: "You outsource much thinking to AI. Try a digital detox to sharpen your focus." }
       },
-      
       q1: ["Ask AI instead of trying to recall?","Use AI to check simple facts?","Ask AI for advice before deciding?","Memory worse since using AI?","Trust AI's conclusions over your own?","I double-check AI output because I don't trust it.","Capable of solving problems without AI.","Regularly practice remembering without AI."],
       q2: ["Feel threatened by AI's development?","Anxious when AI is unavailable?","Share feelings with AI more than friends?","Prefer AI's company over people?","Loss if favourite chatbot disappeared?","Not worried about AI taking jobs.","Talking to people feels more rewarding.","AI is just a tool, not a friend."],
       q3: ["Rely on AI to plan daily schedule?","Use AI to write most texts?","Go to AI before trying yourself?","Mentally drained after AI-assisted work?","Postpone tasks until AI is available?","Have clear boundaries for AI use.","Complete tasks on my own.","Day off from AI leaves me refreshed."],
       fearQ: ["Does the thought of AI becoming more powerful scare you?","Do you avoid reading AI news because it makes you uncomfortable?","Do you feel a knot in your stomach when you hear about new AI breakthroughs?","Would you say AI is one of your biggest worries about the future?"],
       reverseKeys: { q1:[5,6,7], q2:[5,6,7], q3:[5,6,7], fearQ:[] },
-      
       gameTexts: [
         {text:"The sun dipped below the horizon, painting the sky in shades of orange.", isAI:true},
         {text:"I couldn't believe my eyes. We had actually won after brutal practice.", isAI:false},
@@ -538,7 +476,6 @@
         {text:"Made the best lasagna. Secret ingredient? Way too much garlic.", isAI:false},
         {text:"As an AI, I don't have feelings, but I understand context.", isAI:true}
       ],
-      
       protocols: [
         {num:1,title:"AI: Method, Not Mind",desc:"AI is a tool, not a conversation partner. 80% routine replaced by AI frees 80% time for creativity."},
         {num:2,title:"AI Principles: Evolution of Statistics",desc:"From brute force to probability. Three stages: Logical → Machine → Deep Learning."},
@@ -574,7 +511,6 @@
         {num:32,title:"Self-Awareness: Reprogramming",desc:"87% suffer inattentional blindness. Observer mode is key."},
         {num:33,title:"Meta-Code: Final Reboot",desc:"Neuroplasticity: 21 days to create new network. Epigenetics: intention switches genes."}
       ],
-      
       aiFaqTitle: "🧠 What is AI? Simple answers",
       faqAiWhatQ: "What is artificial intelligence?",
       faqAiWhatA: "Artificial intelligence (AI) is a computer system that can do tasks that normally require human intelligence — like understanding language, recognizing images, making decisions, and learning from experience. Modern AI learns from large amounts of data. <br><small style='opacity:0.7'>Source: <a href='https://en.wikipedia.org/wiki/Artificial_intelligence' target='_blank' rel='noopener' style='color:var(--accent)'>Wikipedia</a></small>",
@@ -585,9 +521,17 @@
       faqAiTypesQ: "What are the types of AI?",
       faqAiTypesA: "Three levels are usually cited: Narrow AI (solves one task, like ChatGPT), General AI (AGI — hypothetical, human-level), and Super AI (exceeds humans, doesn't exist yet). <br><small style='opacity:0.7'>Source: <a href='https://en.wikipedia.org/wiki/Artificial_general_intelligence' target='_blank' rel='noopener' style='color:var(--accent)'>Wikipedia</a></small>",
       faqAiDangerQ: "Is AI dangerous?",
-      faqAiDangerA: "Like any technology, AI brings risks: uncontrolled use, spreading misinformation, job losses. But with responsible approach, AI remains a powerful tool that helps people. <br><small style='opacity:0.7'>Source: <a href='https://futureoflife.org/ai/' target='_blank' rel='noopener' style='color:var(--accent)'>Future of Life Institute</a></small>"
+      faqAiDangerA: "Like any technology, AI brings risks: uncontrolled use, spreading misinformation, job losses. But with responsible approach, AI remains a powerful tool that helps people. <br><small style='opacity:0.7'>Source: <a href='https://futureoflife.org/ai/' target='_blank' rel='noopener' style='color:var(--accent)'>Future of Life Institute</a></small>",
+      fearResultTitle: "Fear Index",
+      scoreLabel: "Score",
+      reviewProgressText: "Reader opinions forming...",
+      fearLevels: {
+        low: { name: "Low Fear", advice: "You seem calm about AI. Stay informed, but don't worry unduly." },
+        medium: { name: "Moderate Fear", advice: "Some concerns are normal. Learn more about AI to ease your mind." },
+        high: { name: "High Fear", advice: "AI worries you significantly. Consider talking to someone or educating yourself about AI safety." },
+        veryHigh: { name: "Very High Fear", advice: "This level of anxiety may need attention. Knowledge is power — start with reliable sources." }
+      }
     },
-
     ru: {
       langName: "Русский",
       mainTitle: "Бесплатный тест на зависимость от ИИ",
@@ -597,23 +541,18 @@
       infoPara2: "<strong>Для кого:</strong> Для всех, кто хочет проверить, осознанно ли они используют ИИ. Вы получите персональный профиль с архетипом.",
       infoPara3: "<strong>Как это работает:</strong> Ответьте на 8 вопросов по каждой оси и тест на страх. Всё происходит локально в браузере.",
       infoDisclaimer: "Это инструмент саморефлексии, а не медицинский диагноз. 100% анонимно.",
-      
       axis1Title: "Мышление и память",
       axis1Desc: "Делегируете ли вы мышление ИИ? Измеряет когнитивную разгрузку и передачу памяти алгоритмам.",
       axis1Hint: "Отвечайте честно. Некоторые вопросы обратные — для точности.",
-      
       axis2Title: "Тревога и эмоциональная привязанность",
       axis2Desc: "Чувствуете ли вы угрозу от ИИ или эмоциональную привязанность к чат-ботам? Измеряет ИИ-тревожность.",
       axis2Hint: "Отвечайте честно. Некоторые вопросы обратные.",
-      
       axis3Title: "Цифровое выгорание и прокрастинация",
       axis3Desc: "Чувствуете ли вы усталость от ИИ или откладываете задачи в ожидании помощи алгоритма?",
       axis3Hint: "Отвечайте честно. Некоторые вопросы обратные.",
-      
       fearTitle: "Страх перед ИИ",
       fearDesc: "Насколько сильно вас пугает мысль об ИИ? Измеряет эмоциональную реакцию на технологии.",
       fearHint: "Отвечайте инстинктивно. Здесь нет правильных ответов.",
-      
       trackerTitle: "📊 Трекер когнитивной нагрузки",
       trackerDesc: "Отметьте, насколько вы полагались на ИИ сегодня. 0 = самостоятельно, 5 = частичная помощь, 10 = полная зависимость.",
       trackerLowLabel: "Независимо",
@@ -626,7 +565,6 @@
       trendDecreasing: "Зависимость снижается. Продолжайте осознанно использовать ИИ.",
       trendStable: "Зависимость стабильна. Сохраняйте осознанность.",
       noData: "Пока нет данных. Сохраните первую запись выше.",
-      
       gameTitle: "🎮 ИИ или человек?",
       gameDesc: "Сможете ли вы отличить текст, написанный человеком, от сгенерированного ИИ?",
       gameBtnHuman: "👤 Человек",
@@ -638,7 +576,6 @@
       gameFeedbackWrong: "❌ Неверно.",
       gameFeedbackAI: "Это был ИИ.",
       gameFeedbackHuman: "Это был человек.",
-      
       pollTitle: "🌍 Глобальный опрос об ИИ",
       pollDesc: "Проголосуйте анонимно. Это ваша личная позиция.",
       pollFor: "👍 За (оптимистично)",
@@ -646,9 +583,7 @@
       pollAgainst: "👎 Против (обеспокоен)",
       submitPoll: "Проголосовать",
       pollResultsTitle: "🌐 Текущие результаты:",
-      pollTotalLabel: "📊 Всего голосов:",
       pollBridge: "Хотите узнать, как проголосовал ваш город или страна? Купите книгу на Литрес и оставьте публичный отзыв с указанием <strong>Вашего Имени и Города</strong> — это единственный способ сделать ваш голос видимым навсегда.",
-      
       ctaText: "Нужны структурированные советы? Книга «33 протокола» предлагает ежедневные микро-упражнения для восстановления контроля.",
       ctaFirstReview: "Будьте первым в своём городе, кто оставит отзыв и сделает свою позицию постоянной.",
       ctaBarText: "Изучить 33 протокола",
@@ -662,16 +597,13 @@
       alertIncomplete: "Пожалуйста, ответьте на текущий вопрос.",
       progressText: "Вопрос {answered} из {total}",
       options: ["Никогда", "Редко", "Иногда", "Часто", "Постоянно"],
-      
       trustNoSignup: "🔒 Без регистрации",
       trustLocal: "📁 Работает в браузере",
       trustAnonymous: "🧾 100% Анонимно",
       howTitle: "📌 Как это работает",
       howText: "В каждой оси короткие вопросы. Ответы обрабатываются мгновенно в браузере и никуда не отправляются. В конце вы получите персональный профиль.",
-      
       protocolsTitle: "📖 33 протокола когнитивного суверенитета",
       protocolsDesc: "Структурированная система для преодоления ИИ-тумана и восстановления самостоятельного мышления.",
-      
       faqTitle: "❓ Часто задаваемые вопросы",
       faqQ1: "Что такое когнитивная разгрузка?",
       faqA1: "Это процесс использования внешних инструментов (например, ИИ) для выполнения умственных задач. Чрезмерная разгрузка отучает мозг запоминать и анализировать информацию.",
@@ -684,13 +616,12 @@
       faqQ5: "Я зависим от ChatGPT?",
       faqA5: "Если вы паникуете, когда серверы недоступны, или не можете начать работу без подсказки бота — это явные признаки зависимости.",
       faqQ6: "Как считаются баллы?",
-      faqA6: "Используется 5-балльная шкала Лайкерта с инвертированными вопросами (защита от слепого кликанья). Максимум 32 балла за ось.",
+      faqA6: "Используется 5-балльная шкала Лайкерта с инвертированными вопросами. Максимум 32 балла за ось.",
       faqQ7: "Это анонимно?",
-      faqA7: "Да. Все вычисления происходят локально. Ваши ответы не передаются на сервер. Трекер использует локальную память вашего устройства.",
+      faqA7: "Да. Все вычисления происходят локально. Ваши ответы не передаются на сервер.",
       faqQ8: "ИИ делает меня глупее?",
       faqA8: "Сам по себе — нет. Но если использовать его как костыль, навыки критического мышления могут атрофироваться.",
       donateText: "Поддержать проект на Ko-fi",
-      
       overallTitle: "Ваш профиль ИИ-зависимости",
       overallPercentileLabel: "Лучше, чем у {percentile}% пользователей",
       archetypes: {
@@ -698,13 +629,11 @@
         medium: { name: "Сбалансированный навигатор", percentile: 50, advice: "Вы полагаетесь на ИИ, не теряя себя. Мелкие привычки (например, пауза перед запросом) укрепят вашу автономность." },
         high: { name: "ИИ-зависимый делегат", percentile: 85, advice: "Вы передаете ИИ слишком много мышления. Попробуйте цифровой детокс и правило 'сначала реши сам'." }
       },
-      
       q1: ["Спрашиваете ИИ вместо того чтобы вспомнить?","Используете ИИ для проверки простых фактов?","Советуетесь перед решением?","Память стала хуже из-за ИИ?","Доверяете ИИ больше чем себе?","Я критически проверяю ответы ИИ.","Без ИИ легко решаю проблемы.","Тренирую память без участия ИИ."],
       q2: ["Чувствуете угрозу от ИИ?","Тревожно если ИИ недоступен?","Делитесь переживаниями с ИИ больше чем с друзьями?","Предпочтете общение с ИИ живому человеку?","Будет больно если любимый бот исчезнет?","Не боюсь потери работы из-за ИИ.","Живое общение важнее ИИ.","ИИ - просто софт, а не друг."],
       q3: ["ИИ планирует ваш распорядок дня?","Пишете рабочие тексты через ИИ?","Идете к ИИ до попытки решить самому?","Чувствуете истощение после работы с ИИ?","Откладываете дела если ИИ недоступен?","У меня есть четкие границы использования ИИ.","Делаю задачи сам даже если ИИ быстрее.","День без ИИ приносит отдых."],
       fearQ: ["Пугает ли вас мысль о том, что ИИ станет могущественнее человека?","Избегаете ли вы новостей об ИИ, потому что вам не по себе?","Чувствуете ли ком в горле от новых прорывов ИИ?","ИИ — одна из главных вещей, тревожащих вас в будущем?"],
       reverseKeys: { q1:[5,6,7], q2:[5,6,7], q3:[5,6,7], fearQ:[] },
-      
       gameTexts: [
         {text:"Солнце опустилось за горизонт, окрасив небо в оттенки оранжевого.", isAI:true},
         {text:"Я не поверил своим глазам. Мы действительно выиграли после изнурительных тренировок.", isAI:false},
@@ -712,7 +641,6 @@
         {text:"Сделал лучшую лазанью. Секретный ингредиент? Слишком много чеснока.", isAI:false},
         {text:"Как ИИ, у меня нет чувств, но я понимаю контекст.", isAI:true}
       ],
-      
       protocols: [
         {num:1,title:"ИИ: Метод, а не разум",desc:"ИИ — это инструмент, а не собеседник. 80% рутины, переданной ИИ, освобождает 80% времени для творчества."},
         {num:2,title:"Принципы ИИ: эволюция статистики",desc:"От грубой силы — к вероятности. Три этапа: логический → машинное обучение → глубокое обучение."},
@@ -733,11 +661,11 @@
         {num:17,title:"Привязанность: неосознанные контракты",desc:"Мозг предпочитает знакомую боль непредсказуемой свободе."},
         {num:18,title:"Дружба: негенетический альтруизм",desc:"5+ настоящих друзей — лучший предиктор долголетия."},
         {num:19,title:"Семья: первичная прошивка",desc:"Эпигенетика: травма может наследоваться. Перепишите, не разрывая."},
-        {num:20,title:"Социальные маски: энергетические щиты",desc:"Подлинность экономит энергию. Сократите время 'выступлений'."},
+        {num:20,title:"Социальные маски: энергетические щиты",desc:"Подлинность экономит энергию. Сократите время выступлений."},
         {num:21,title:"Цель: вектор ускорения",desc:"Цель должна быть измеримой и в вашей зоне контроля."},
         {num:22,title:"Дисциплина: свобода через ограничения",desc:"Мотивация следует за действием. 21–66 дней до автоматизации."},
         {num:23,title:"Прокрастинация: защита от боли",desc:"Правило 2 минут снижает барьер входа."},
-        {num:24,title:"Перфекционизм: страх неудачи",desc:"Успех MVP на 75% выше. Выпускайте 'достаточно хорошее'."},
+        {num:24,title:"Перфекционизм: страх неудачи",desc:"Успех MVP на 75% выше. Выпускайте достаточно хорошее."},
         {num:25,title:"Привычки: автоматизация успеха",desc:"Стекинг привычек: прикрепите новую к существующему триггеру."},
         {num:26,title:"Ресурсы: энергия, время, внимание",desc:"Переключение контекста стоит 20 мин восстановления. Глубокая работа > поверхностной."},
         {num:27,title:"Эффективность: макс. результат, мин. затрат",desc:"Закон Паркинсона. Техника помидора создаёт дефицит."},
@@ -748,7 +676,6 @@
         {num:32,title:"Самоосознание: перепрошивка",desc:"87% страдают слепотой невнимания. Режим наблюдателя — ключ."},
         {num:33,title:"Мета-код: финальная перезагрузка",desc:"Нейропластичность: 21 день на создание новой сети. Эпигенетика: намерение переключает гены."}
       ],
-      
       aiFaqTitle: "🧠 Что такое ИИ? Простые ответы",
       faqAiWhatQ: "Что такое искусственный интеллект?",
       faqAiWhatA: "Искусственный интеллект (ИИ) — это компьютерная система, способная выполнять задачи, требующие человеческого ума: понимать речь, распознавать образы, принимать решения и учиться. <br><small style='opacity:0.7'>Источник: <a href='https://ru.wikipedia.org/wiki/Искусственный_интеллект' target='_blank' rel='noopener' style='color:var(--accent)'>Википедия</a></small>",
@@ -759,9 +686,19 @@
       faqAiTypesQ: "Какие бывают виды ИИ?",
       faqAiTypesA: "Узкий ИИ (как ChatGPT), Общий ИИ (AGI, гипотетический) и Супер-ИИ (не существует). <br><small style='opacity:0.7'>Источник: <a href='https://ru.wikipedia.org/wiki/Сильный_искусственный_интеллект' target='_blank' rel='noopener' style='color:var(--accent)'>Википедия</a></small>",
       faqAiDangerQ: "Опасен ли ИИ?",
-      faqAiDangerA: "Он несёт риски (дезинформация, потеря рабочих мест). Но при ответственном подходе остаётся мощным инструментом. <br><small style='opacity:0.7'>Источник: <a href='https://futureoflife.org/ai/' target='_blank' rel='noopener' style='color:var(--accent)'>Future of Life Institute</a></small>"
-    },
-es: {
+      faqAiDangerA: "Он несёт риски (дезинформация, потеря рабочих мест). Но при ответственном подходе остаётся мощным инструментом. <br><small style='opacity:0.7'>Источник: <a href='https://futureoflife.org/ai/' target='_blank' rel='noopener' style='color:var(--accent)'>Future of Life Institute</a></small>",
+      fearResultTitle: "Индекс страха",
+      scoreLabel: "Счет",
+      reviewProgressText: "Формирование читательских мнений...",
+      fearLevels: {
+        low: { name: "Низкий страх", advice: "Вы спокойны по отношению к ИИ. Оставайтесь информированным." },
+        medium: { name: "Умеренный страх", advice: "Нормально иметь некоторые опасения. Узнайте больше об ИИ, чтобы снизить тревогу." },
+        high: { name: "Высокий страх", advice: "ИИ существенно вас беспокоит. Подумайте о беседе с экспертами или изучении вопросов безопасности ИИ." },
+        veryHigh: { name: "Очень высокий страх", advice: "Такой уровень тревоги требует внимания. Знания — сила: начните с авторитетных источников." }
+      }
+    }
+  },
+    es: {
       langName: "Español",
       mainTitle: "Test gratuito de dependencia de IA – Comprende tus hábitos",
       subhead: "Evaluación anónima de la descarga cognitiva, ansiedad por IA y agotamiento digital. Sin registro, sin recopilación de datos.",
@@ -770,23 +707,18 @@ es: {
       infoPara2: "<strong>Para quién:</strong> Cualquiera que quiera comprobar si su uso de IA es aún intencionado. Obtendrás tu Perfil de Identidad de IA con arquetipo y percentil.",
       infoPara3: "<strong>Cómo funciona:</strong> Responde 8 preguntas por eje y un test de miedo. Todo ocurre en tu navegador.",
       infoDisclaimer: "Herramienta de autorreflexión, no un diagnóstico médico. 100% anónimo.",
-      
       axis1Title: "Pensamiento y memoria",
       axis1Desc: "¿Delegas tu pensamiento a la IA? Mide la descarga cognitiva y la externalización de la memoria.",
       axis1Hint: "Responde con honestidad. Algunas preguntas están invertidas.",
-      
       axis2Title: "Ansiedad y apego emocional",
       axis2Desc: "¿Te sientes amenazado por la IA o apegado a los chatbots? Mide la ansiedad por IA.",
       axis2Hint: "Responde con honestidad. Algunas preguntas están invertidas.",
-      
       axis3Title: "Agotamiento digital y procrastinación",
       axis3Desc: "¿Te sientes agotado por la IA o pospones tareas esperando su ayuda?",
       axis3Hint: "Responde con honestidad. Algunas preguntas están invertidas.",
-      
       fearTitle: "Miedo a la IA",
       fearDesc: "¿Cuánto te asusta la idea de la IA? Mide tu respuesta emocional.",
       fearHint: "Responde instintivamente. No hay respuestas correctas o incorrectas.",
-      
       trackerTitle: "📊 Registro diario de carga cognitiva",
       trackerDesc: "Registra cuánto dependiste de la IA hoy. 0 = totalmente independiente, 5 = ayuda parcial, 10 = alta dependencia.",
       trackerLowLabel: "Independiente",
@@ -799,7 +731,6 @@ es: {
       trendDecreasing: "Tu dependencia está disminuyendo. Sigue practicando el uso consciente.",
       trendStable: "Tu dependencia es estable. Mantente atento.",
       noData: "Aún no hay datos. Registra tu primer día arriba.",
-      
       gameTitle: "🎮 ¿IA o Humano?",
       gameDesc: "¿Puedes distinguir si un texto fue escrito por un humano o generado por IA?",
       gameBtnHuman: "👤 Humano",
@@ -811,7 +742,6 @@ es: {
       gameFeedbackWrong: "❌ Incorrecto.",
       gameFeedbackAI: "Era IA.",
       gameFeedbackHuman: "Era Humano.",
-      
       pollTitle: "🌍 Encuesta Global sobre IA",
       pollDesc: "Vota anónimamente. Esta es tu postura personal.",
       pollFor: "👍 A favor (optimista)",
@@ -819,9 +749,7 @@ es: {
       pollAgainst: "👎 En contra (preocupado)",
       submitPoll: "Enviar voto",
       pollResultsTitle: "🌐 Resultados actuales:",
-      pollTotalLabel: "📊 Votos totales:",
       pollBridge: "¿Quieres ver cómo votó tu ciudad o país? Compra el libro en Amazon y deja una reseña pública indicando tu <strong>Nombre y Ciudad</strong> — es la única forma de hacer que tu voz sea permanentemente visible a nivel mundial.",
-      
       ctaText: "¿Quieres orientación estructurada? El libro de los 33 Protocolos ofrece microejercicios diarios para recuperar el control.",
       ctaFirstReview: "Sé el primero en tu ciudad en dejar una reseña y hacer que tu postura sea permanente.",
       ctaBarText: "Explorar los 33 Protocolos",
@@ -835,16 +763,13 @@ es: {
       alertIncomplete: "Por favor, responde la pregunta actual.",
       progressText: "Pregunta {answered} de {total}",
       options: ["Nunca", "Raramente", "A veces", "A menudo", "Constantemente"],
-      
       trustNoSignup: "🔒 Sin registro",
       trustLocal: "📁 Funciona en tu navegador",
       trustAnonymous: "🧾 100% Anónimo",
       howTitle: "📌 Cómo funciona",
       howText: "Cada eje tiene preguntas cortas. Tus respuestas se procesan en tiempo real en tu navegador. Al final obtendrás tu Perfil de Identidad de IA.",
-      
       protocolsTitle: "📖 Los 33 Protocolos para la Soberanía Cognitiva",
       protocolsDesc: "Un marco estructurado para revertir la niebla mental inducida por IA.",
-      
       faqTitle: "❓ Preguntas Frecuentes",
       faqQ1: "¿Qué es la descarga cognitiva?",
       faqA1: "Es el proceso de depender de herramientas externas (como la IA) para tareas mentales que podrías hacer tú mismo, lo que debilita la memoria a largo plazo.",
@@ -863,7 +788,6 @@ es: {
       faqQ8: "¿Usar IA me hace menos inteligente?",
       faqA8: "Puede, si dependes demasiado de ella. La descarga cognitiva puede debilitar la memoria con el tiempo.",
       donateText: "Apoya este proyecto en Ko-fi",
-      
       overallTitle: "Tu Perfil de Identidad de IA",
       overallPercentileLabel: "Mejor que el {percentile}% de los usuarios",
       archetypes: {
@@ -871,13 +795,11 @@ es: {
         medium: { name: "Navegante Equilibrado", percentile: 50, advice: "Te apoyas en la IA sin perderte. Pequeños hábitos refuerzan tu autonomía." },
         high: { name: "Delegador Dependiente de IA", percentile: 85, advice: "Externalizas gran parte de tu pensamiento. Considera una desintoxicación digital." }
       },
-      
       q1: ["¿Preguntas a la IA en lugar de intentar recordar?","¿Usas IA para datos sencillos?","¿Pides consejo a la IA antes de decidir?","¿Tu memoria ha empeorado desde que usas IA?","¿Confías más en la IA que en tu razonamiento?","Reviso las respuestas de la IA porque no confío plenamente.","Sin IA, puedo resolver problemas por mi cuenta.","Practico recordar cosas sin IA."],
       q2: ["¿Te asusta el rápido desarrollo de la IA?","¿Sientes ansiedad si la IA no está disponible?","¿Compartes sentimientos con la IA más que con amigos?","¿Prefieres la compañía de la IA a las personas?","¿Sufrirías si tu chatbot desapareciera?","No temo que la IA me quite el trabajo.","Hablar con humanos es más gratificante.","La IA es solo una herramienta, no un amigo."],
       q3: ["¿Dependes de la IA para planificar tu día?","¿Usas IA para escribir la mayoría de tus textos?","¿Vas a la IA antes de intentar resolver un problema?","¿Te agotas mentalmente tras usar IA?","¿Pospónes tareas si no tienes acceso a la IA?","Tengo límites claros para el uso de la IA.","A menudo completo tareas por mi cuenta.","Un día sin IA me deja renovado."],
       fearQ: ["¿Te asusta la idea de que la IA se vuelva más poderosa que los humanos?","¿Evitas leer noticias sobre IA porque te incomodan?","¿Sientes un nudo en el estómago con los nuevos avances en IA?","¿Dirías que la IA es una de tus mayores preocupaciones futuras?"],
       reverseKeys: { q1:[5,6,7], q2:[5,6,7], q3:[5,6,7], fearQ:[] },
-      
       gameTexts: [
         {text:"El sol se ocultó tras el horizonte, pintando el cielo de naranja.", isAI:true},
         {text:"No podía creer lo que veían mis ojos. Habíamos ganado de verdad.", isAI:false},
@@ -885,13 +807,12 @@ es: {
         {text:"Hice la mejor lasaña. ¿El ingrediente secreto? Demasiado ajo.", isAI:false},
         {text:"Como IA, no tengo sentimientos, pero entiendo el contexto.", isAI:true}
       ],
-      
       protocols: [
         {num:1,title:"IA: Método, No Mente",desc:"La IA es una herramienta, no un compañero. El 80% de la rutina reemplazada por IA libera 80% de tiempo para la creatividad."},
         {num:2,title:"Principios de IA",desc:"La IA procesa probabilidades, no verdades absolutas."},
         {num:3,title:"Humano: Algoritmo Aleatorio",desc:"El 90% de las decisiones las toman sistemas límbicos antiguos. El neocórtex racionaliza post-factum."},
         {num:4,title:"Cuerpo Humano",desc:"Diseñado para la sabana. Engaña al código antiguo con microesfuerzos (2 sentadillas/día)."},
-        {num:5,title:"Dolor",desc:"El lenguaje del cuerpo; una señal, no un castigo."},
+        {num:5,title:"Dolor",desc:"El lenguaje del cuerpo; una señal, no un castigo. El emocional activa los mismos centros que la física."},
         {num:6,title:"Miedo",desc:"Guardián obsoleto. La mayoría del pánico moderno se malinterpreta."},
         {num:7,title:"Emociones",desc:"Combustible de decisión. El 90% de los avances son emocionales."},
         {num:8,title:"Sentimientos",desc:"Clima de la conciencia. Los objetivos con misión surgen de aquí."},
@@ -921,20 +842,27 @@ es: {
         {num:32,title:"Autoconciencia",desc:"Modo observador. El seguimiento estratégico es el núcleo del cambio."},
         {num:33,title:"Meta-Código",desc:"Reinicio final. La intención consciente cambia la expresión biológica."}
       ],
-      
       aiFaqTitle: "🧠 ¿Qué es la IA? Respuestas sencillas",
       faqAiWhatQ: "¿Qué es la inteligencia artificial?",
-      faqAiWhatA: "La Inteligencia Artificial (IA) es un sistema informático que realiza tareas que normalmente requieren inteligencia humana: entender lenguaje, reconocer imágenes, tomar decisiones y aprender. <br><small style='opacity:0.7'>Fuente: <a href='https://es.wikipedia.org/wiki/Inteligencia_artificial' target='_blank' rel='noopener' style='color:var(--accent)'>Wikipedia</a></small>",
+      faqAiWhatA: "La Inteligencia Artificial (IA) es un sistema informático que realiza tareas que normalmente requieren inteligencia humana. <br><small style='opacity:0.7'>Fuente: <a href='https://es.wikipedia.org/wiki/Inteligencia_artificial' target='_blank' rel='noopener' style='color:var(--accent)'>Wikipedia</a></small>",
       faqAiHistoryQ: "¿Cuándo apareció la IA?",
-      faqAiHistoryA: "El término se acuñó en 1956, pero el desarrollo masivo comenzó en la década de 2010 con más potencia de cálculo. <br><small style='opacity:0.7'>Fuente: <a href='https://plato.stanford.edu/entries/artificial-intelligence/' target='_blank' rel='noopener' style='color:var(--accent)'>Stanford Encyclopedia</a></small>",
+      faqAiHistoryA: "El término se acuñó en 1956, pero el desarrollo masivo comenzó en la década de 2010. <br><small style='opacity:0.7'>Fuente: <a href='https://plato.stanford.edu/entries/artificial-intelligence/' target='_blank' rel='noopener' style='color:var(--accent)'>Stanford Encyclopedia</a></small>",
       faqAiHowWorkQ: "¿Cómo funciona la IA?",
-      faqAiHowWorkA: "Utiliza aprendizaje automático: analiza millones de ejemplos, encuentra patrones y construye modelos matemáticos. <br><small style='opacity:0.7'>Fuente: <a href='https://www.technologyreview.com/2018/11/17/103924/how-does-ai-work/' target='_blank' rel='noopener' style='color:var(--accent)'>MIT Tech Review</a></small>",
+      faqAiHowWorkA: "Utiliza aprendizaje automático: analiza millones de ejemplos y construye modelos matemáticos. <br><small style='opacity:0.7'>Fuente: MIT Tech Review</small>",
       faqAiTypesQ: "¿Qué tipos de IA existen?",
-      faqAiTypesA: "IA Estrecha (resuelve una tarea, como ChatGPT), IA General (AGI — hipotética, nivel humano) y Súper IA (aún no existe). <br><small style='opacity:0.7'>Fuente: <a href='https://es.wikipedia.org/wiki/Inteligencia_artificial_general' target='_blank' rel='noopener' style='color:var(--accent)'>Wikipedia</a></small>",
+      faqAiTypesA: "IA Estrecha (como ChatGPT), IA General (AGI — hipotética, nivel humano) y Súper IA. <br><small style='opacity:0.7'>Fuente: Wikipedia</small>",
       faqAiDangerQ: "¿Es peligrosa la IA?",
-      faqAiDangerA: "Conlleva riesgos como cualquier tecnología, pero con un enfoque responsable, sigue siendo una herramienta poderosa. <br><small style='opacity:0.7'>Fuente: <a href='https://futureoflife.org/ai/' target='_blank' rel='noopener' style='color:var(--accent)'>Future of Life Institute</a></small>"
+      faqAiDangerA: "Conlleva riesgos como cualquier tecnología, pero con un enfoque responsable, sigue siendo una herramienta poderosa. <br><small style='opacity:0.7'>Fuente: Future of Life Institute</small>",
+      fearResultTitle: "Índice de Miedo",
+      scoreLabel: "Puntuación",
+      reviewProgressText: "Opiniones de lectores en formación...",
+      fearLevels: {
+        low: { name: "Miedo bajo", advice: "Pareces tranquilo con respecto a la IA. Mantente informado, pero no te preocupes en exceso." },
+        medium: { name: "Miedo moderado", advice: "Cierta preocupación es normal. Aprende más sobre IA para despejar dudas." },
+        high: { name: "Miedo alto", advice: "La IA te preocupa significativamente. Considera informarte sobre seguridad en IA o hablar con alguien." },
+        veryHigh: { name: "Miedo muy alto", advice: "Este nivel de ansiedad puede requerir atención. El conocimiento es poder: comienza con fuentes fiables." }
+      }
     },
-
     de: {
       langName: "Deutsch",
       mainTitle: "Kostenloser KI-Abhängigkeitstest – Verstehen Sie Ihre Gewohnheiten",
@@ -944,23 +872,18 @@ es: {
       infoPara2: "<strong>Für wen:</strong> Jeder, der prüfen möchte, ob die KI-Nutzung noch bewusst ist. Sie erhalten Ihr persönliches KI-Profil.",
       infoPara3: "<strong>Wie es funktioniert:</strong> Beantworten Sie 8 Fragen pro Achse. Alles läuft lokal in Ihrem Browser.",
       infoDisclaimer: "Dies ist ein Werkzeug zur Selbstreflexion, keine medizinische Diagnose. 100% anonym.",
-      
       axis1Title: "Denken & Gedächtnis",
       axis1Desc: "Delegieren Sie Ihr Denken an KI? Misst kognitive Entlastung.",
       axis1Hint: "Antworten Sie ehrlich. Einige Fragen sind invertiert.",
-      
       axis2Title: "Angst & emotionale Bindung",
       axis2Desc: "Fühlen Sie sich von KI bedroht oder verbunden?",
       axis2Hint: "Antworten Sie ehrlich. Einige Fragen sind invertiert.",
-      
-      axis3Title: "Digitales Burnout & Prokrastination",
+      axis3Title: "Digitales Burnout & Procrastination",
       axis3Desc: "Erschöpft Sie die KI oder schieben Sie Aufgaben auf?",
       axis3Hint: "Antworten Sie ehrlich. Einige Fragen sind invertiert.",
-      
       fearTitle: "Angst vor KI",
       fearDesc: "Wie sehr ängstigt Sie der Gedanke an KI?",
       fearHint: "Antworten Sie instinktiv. Keine richtigen oder falschen Antworten.",
-      
       trackerTitle: "📊 Täglicher kognitiver Belastungstracker",
       trackerDesc: "Wie stark haben Sie sich heute auf KI verlassen? 0 = unabhängig, 10 = hohe Abhängigkeit.",
       trackerLowLabel: "Unabhängig",
@@ -973,7 +896,6 @@ es: {
       trendDecreasing: "Ihre Abhängigkeit sinkt. Weiter so.",
       trendStable: "Ihre Abhängigkeit ist stabil. Bleiben Sie achtsam.",
       noData: "Noch keine Daten. Speichern Sie oben den ersten Wert.",
-      
       gameTitle: "🎮 KI oder Mensch?",
       gameDesc: "Können Sie erkennen, ob ein Text von einem Menschen oder einer KI geschrieben wurde?",
       gameBtnHuman: "👤 Mensch",
@@ -985,7 +907,6 @@ es: {
       gameFeedbackWrong: "❌ Falsch.",
       gameFeedbackAI: "Es war KI.",
       gameFeedbackHuman: "Es war ein Mensch.",
-      
       pollTitle: "🌍 Globale KI-Umfrage",
       pollDesc: "Stimmen Sie anonym ab. Dies ist Ihre persönliche Haltung.",
       pollFor: "👍 Dafür (optimistisch)",
@@ -993,9 +914,7 @@ es: {
       pollAgainst: "👎 Dagegen (besorgt)",
       submitPoll: "Stimme abgeben",
       pollResultsTitle: "🌐 Aktuelle Ergebnisse:",
-      pollTotalLabel: "📊 Gesamtstimmen:",
       pollBridge: "Möchten Sie sehen, wie Ihre Stadt oder Ihr Land abgestimmt hat? Kaufen Sie das Buch auf Amazon und hinterlassen Sie eine öffentliche Rezension mit Ihrem <strong>Namen und Ihrer Stadt</strong> — nur so wird Ihre Stimme weltweit dauerhaft sichtbar.",
-      
       ctaText: "Möchten Sie strukturierte Anleitung? Das 33-Protokolle-Buch bietet tägliche Mikro-Übungen.",
       ctaFirstReview: "Seien Sie der Erste in Ihrer Stadt, der eine Rezension hinterlässt.",
       ctaBarText: "Die 33 Protokolle entdecken",
@@ -1009,16 +928,13 @@ es: {
       alertIncomplete: "Bitte beantworten Sie die aktuelle Frage.",
       progressText: "Frage {answered} von {total}",
       options: ["Nie", "Selten", "Manchmal", "Oft", "Ständig"],
-      
       trustNoSignup: "🔒 Keine Anmeldung",
       trustLocal: "📁 Läuft lokal",
       trustAnonymous: "🧾 100% Anonym",
       howTitle: "📌 So funktioniert es",
       howText: "Jede Achse hat kurze Fragen. Ihre Antworten werden in Echtzeit in Ihrem Browser verarbeitet. Am Ende erhalten Sie Ihr KI-Profil.",
-      
       protocolsTitle: "📖 Die 33 Protokolle für kognitive Souveränität",
       protocolsDesc: "Ein strukturiertes Rahmenwerk, um KI-bedingten Gehirnnebel umzukehren.",
-      
       faqTitle: "❓ Häufig gestellte Fragen",
       faqQ1: "Was ist kognitive Entlastung?",
       faqA1: "Sich auf externe Werkzeuge (wie KI) zu verlassen, um mentale Aufgaben auszuführen, was das unabhängige Denken schwächen kann.",
@@ -1033,11 +949,10 @@ es: {
       faqQ6: "Wie werden die Punktzahlen berechnet?",
       faqA6: "Mit einer 5-Punkte-Likert-Skala und invertierten Items. Maximal 32 pro Achse und 96 insgesamt.",
       faqQ7: "Ist dieser Test anonym?",
-      faqA7: "Ja. Die gesamte Verarbeitung findet in Ihrem Browser statt. Nichts wird an Server gesendet.",
+      faqA7: "Ja. Die gesamte Verarbeitung findet in Ihrem Browser statt.",
       faqQ8: "Macht KI mich weniger intelligent?",
-      faqA8: "Es kann, wenn Sie sich zu sehr darauf verlassen. Kognitive Entlastung kann das Gedächtnis schwächen.",
+      faqA8: "Es kann, wenn Sie sich zu sehr darauf verlassen.",
       donateText: "Unterstützen Sie uns auf Ko-fi",
-      
       overallTitle: "Ihr KI-Identitätsprofil",
       overallPercentileLabel: "Besser als {percentile}% der Nutzer",
       archetypes: {
@@ -1045,13 +960,11 @@ es: {
         medium: { name: "Ausgeglichener Navigator", percentile: 50, advice: "Sie stützen sich auf KI, ohne sich zu verlieren. Kleine Gewohnheiten stärken Ihre Autonomie." },
         high: { name: "KI-abhängiger Delegierer", percentile: 85, advice: "Sie lagern viel Denken an KI aus. Ziehen Sie einen digitalen Entzugstag in Betracht." }
       },
-      
       q1: ["Fragen Sie KI, statt sich selbst zu erinnern?","Nutzen Sie KI für simple Fakten?","Holen Sie vor einer Entscheidung KI-Rat ein?","Gedächtnis schlechter durch KI-Nutzung?","Vertrauen Sie KI mehr als sich selbst?","Ich überprüfe KI-Antworten oft doppelt.","Ohne KI kann ich Probleme selbst lösen.","Ich übe, mir Dinge ohne KI zu merken."],
       q2: ["Bedroht durch die schnelle KI-Entwicklung?","Ängstlich, wenn KI nicht verfügbar ist?","Gefühle eher mit KI teilen als mit Freunden?","Gesellschaft von KI gegenüber Menschen bevorzugt?","Verlustgefühl, wenn der Chatbot verschwände?","Keine Angst, dass KI meinen Job übernimmt.","Echte Menschen sind erfüllender.","KI ist nur ein Werkzeug, kein Freund."],
       q3: ["Verlassen Sie sich auf KI für die Tagesplanung?","Schreiben Sie die meisten Texte mit KI?","Bei Problemen erst zur KI gehen?","Geistig erschöpft nach KI-gestützter Arbeit?","Aufgaben aufschieben, bis KI verfügbar ist?","Klare Grenzen für die KI-Nutzung.","Aufgaben oft komplett selbst erledigen.","Tag ohne KI hinterlässt ein erfrischtes Gefühl."],
       fearQ: ["Macht Ihnen der Gedanke Angst, dass KI mächtiger wird?","Vermeiden Sie KI-Nachrichten, weil sie unangenehm sind?","Mulmiges Gefühl bei neuen KI-Durchbrüchen?","Ist KI eine Ihrer größten Sorgen für die Zukunft?"],
       reverseKeys: { q1:[5,6,7], q2:[5,6,7], q3:[5,6,7], fearQ:[] },
-      
       gameTexts: [
         {text:"Die Sonne versank hinter dem Horizont und malte den Himmel orange.", isAI:true},
         {text:"Ich traute meinen Augen nicht. Wir hatten nach hartem Training gewonnen.", isAI:false},
@@ -1059,7 +972,6 @@ es: {
         {text:"Die beste Lasagne gemacht. Geheimzutat? Viel zu viel Knoblauch.", isAI:false},
         {text:"Als KI habe ich keine Gefühle, aber ich verstehe den Kontext.", isAI:true}
       ],
-      
       protocols: [
         {num:1,title:"KI: Methode, nicht Verstand",desc:"KI ist ein Werkzeug. 80% delegierte Routine setzt 80% Zeit für Kreativität frei."},
         {num:2,title:"KI-Prinzipien",desc:"KI berechnet Wahrscheinlichkeiten, keine absoluten Wahrheiten."},
@@ -1095,7 +1007,6 @@ es: {
         {num:32,title:"Selbstbewusstsein",desc:"Beobachtermodus. Strategische Verfolgung ist der Kern des Wandels."},
         {num:33,title:"Meta-Code",desc:"Finaler Reboot. Bewusste Absicht verändert die biologische Expression."}
       ],
-      
       aiFaqTitle: "🧠 Was ist KI? Einfache Antworten",
       faqAiWhatQ: "Was ist künstliche Intelligenz?",
       faqAiWhatA: "KI ist ein Computersystem, das Aufgaben ausführt, die normalerweise menschliche Intelligenz erfordern: Sprache verstehen, Bilder erkennen, lernen. <br><small style='opacity:0.7'>Quelle: <a href='https://de.wikipedia.org/wiki/K%C3%BCnstliche_Intelligenz' target='_blank' rel='noopener' style='color:var(--accent)'>Wikipedia</a></small>",
@@ -1106,9 +1017,18 @@ es: {
       faqAiTypesQ: "Welche Arten von KI gibt es?",
       faqAiTypesA: "Schwache KI (löst eine Aufgabe, wie ChatGPT), Allgemeine KI (AGI — hypothetisch) und Super-KI. <br><small style='opacity:0.7'>Quelle: <a href='https://de.wikipedia.org/wiki/Starke_K%C3%BCnstliche_Intelligenz' target='_blank' rel='noopener' style='color:var(--accent)'>Wikipedia</a></small>",
       faqAiDangerQ: "Ist KI gefährlich?",
-      faqAiDangerA: "Wie jede Technologie birgt KI Risiken. Aber mit verantwortungsvollem Ansatz bleibt sie ein mächtiges Werkzeug. <br><small style='opacity:0.7'>Quelle: <a href='https://futureoflife.org/ai/' target='_blank' rel='noopener' style='color:var(--accent)'>Future of Life Institute</a></small>"
+      faqAiDangerA: "Wie jede Technologie birgt KI Risiken. Aber mit verantwortungsvollem Ansatz bleibt sie ein mächtiges Werkzeug. <br><small style='opacity:0.7'>Quelle: <a href='https://futureoflife.org/ai/' target='_blank' rel='noopener' style='color:var(--accent)'>Future of Life Institute</a></small>",
+      fearResultTitle: "Angstindex",
+      scoreLabel: "Punkte",
+      reviewProgressText: "Lesermeinungen bilden sich...",
+      fearLevels: {
+        low: { name: "Niedrige Angst", advice: "Sie scheinen gelassen gegenüber KI. Bleiben Sie informiert, aber sorgen Sie sich nicht übermäßig." },
+        medium: { name: "Mäßige Angst", advice: "Einige Bedenken sind normal. Erfahren Sie mehr über KI, um Ihren Geist zu beruhigen." },
+        high: { name: "Hohe Angst", advice: "KI beunruhigt Sie erheblich. Ziehen Sie in Betracht, sich über KI-Sicherheit zu informieren oder mit jemandem zu sprechen." },
+        veryHigh: { name: "Sehr hohe Angst", advice: "Dieses Angstniveau könnte Aufmerksamkeit erfordern. Wissen ist Macht – beginnen Sie mit vertrauenswürdigen Quellen." }
+      }
     },
-fr: {
+    fr: {
       langName: "Français",
       mainTitle: "Test gratuit de dépendance à l'IA – Comprenez vos habitudes",
       subhead: "Évaluation anonyme basée sur la science de la décharge cognitive, de l'anxiété liée à l'IA et de l'épuisement numérique. Sans inscription, sans collecte de données.",
@@ -1117,23 +1037,18 @@ fr: {
       infoPara2: "<strong>Pour qui :</strong> Toute personne souhaitant vérifier si son utilisation de l'IA est toujours intentionnelle. Vous obtiendrez votre Profil d'Identité IA.",
       infoPara3: "<strong>Comment ça marche :</strong> Répondez à 8 questions par axe plus un test sur la peur. Tout s'exécute dans votre navigateur.",
       infoDisclaimer: "Ceci est un outil d'auto-réflexion, pas un diagnostic médical. 100% anonyme.",
-      
       axis1Title: "Pensée et Mémoire",
       axis1Desc: "Déléguez-vous votre pensée à l'IA ? Mesure la décharge cognitive et l'externalisation de la mémoire.",
       axis1Hint: "Répondez honnêtement. Certaines questions sont inversées.",
-      
       axis2Title: "Anxiété et Attachement émotionnel",
       axis2Desc: "Vous sentez-vous menacé par l'IA ou attaché aux chatbots ? Mesure l'anxiété liée à l'IA.",
       axis2Hint: "Répondez honnêtement. Certaines questions sont inversées.",
-      
       axis3Title: "Épuisement numérique et Procrastination",
       axis3Desc: "L'IA vous épuise-t-elle ou reportez-vous vos tâches en attendant son aide ?",
       axis3Hint: "Répondez honnêtement. Certaines questions sont inversées.",
-      
       fearTitle: "Peur de l'IA",
       fearDesc: "À quel point l'idée de l'IA vous effraie-t-elle ? Mesure votre réponse émotionnelle.",
       fearHint: "Répondez instinctivement. Il n'y a pas de bonnes ou mauvaises réponses.",
-      
       trackerTitle: "📊 Suivi quotidien de la charge cognitive",
       trackerDesc: "Notez à quel point vous avez compté sur l'IA aujourd'hui. 0 = totalement indépendant, 5 = aide partielle, 10 = forte dépendance.",
       trackerLowLabel: "Indépendant",
@@ -1146,7 +1061,6 @@ fr: {
       trendDecreasing: "Votre dépendance diminue. Continuez à pratiquer une utilisation consciente.",
       trendStable: "Votre dépendance est stable. Restez conscient de vos habitudes.",
       noData: "Pas encore de données. Enregistrez votre premier jour ci-dessus.",
-      
       gameTitle: "🎮 IA ou Humain ?",
       gameDesc: "Pouvez-vous dire si un texte a été écrit par un humain ou généré par une IA ?",
       gameBtnHuman: "👤 Humain",
@@ -1158,7 +1072,6 @@ fr: {
       gameFeedbackWrong: "❌ Incorrect.",
       gameFeedbackAI: "C'était l'IA.",
       gameFeedbackHuman: "C'était un Humain.",
-      
       pollTitle: "🌍 Sondage mondial sur l'IA",
       pollDesc: "Votez anonymement. Il s'agit de votre position personnelle.",
       pollFor: "👍 Pour (optimiste)",
@@ -1166,12 +1079,10 @@ fr: {
       pollAgainst: "👎 Contre (inquiet)",
       submitPoll: "Soumettre votre vote",
       pollResultsTitle: "🌐 Résultats actuels :",
-      pollTotalLabel: "📊 Votes totaux :",
       pollBridge: "Vous voulez voir comment votre ville ou votre pays a voté ? Achetez le livre sur Amazon et laissez un commentaire public en précisant votre <strong>Nom et Ville</strong> — c'est le seul moyen de rendre votre voix visible de manière permanente au niveau mondial.",
-      
       ctaText: "Besoin de conseils structurés ? Le livre des 33 Protocoles propose des micro-exercices quotidiens pour retrouver sa souveraineté.",
       ctaFirstReview: "Soyez le premier de votre ville à laisser un avis et à rendre votre position permanente.",
-      ctaBarText: "Explorer les 33 Protocolos",
+      ctaBarText: "Explorer les 33 Protocoles",
       footerText: "© Mind-OS – Créé par Aleksei Sergeevich Bitkin. Projet de recherche indépendant.",
       bookUrl: "https://www.amazon.fr/dp/B0G35SBQR3",
       bookLabel: "📘 Trouver le livre sur Amazon",
@@ -1182,16 +1093,13 @@ fr: {
       alertIncomplete: "Veuillez répondre à la question en cours.",
       progressText: "Question {answered} sur {total}",
       options: ["Jamais", "Rarement", "Parfois", "Souvent", "Constamment"],
-      
       trustNoSignup: "🔒 Sans inscription",
       trustLocal: "📁 S'exécute localement",
       trustAnonymous: "🧾 100% Anonyme",
       howTitle: "📌 Comment ça marche",
       howText: "Chaque axe comporte de courtes questions. Vos réponses sont traitées en temps réel dans votre navigateur. À la fin, vous recevrez votre Profil d'Identité IA.",
-      
       protocolsTitle: "📖 Les 33 Protocoles pour la Souveraineté Cognitive",
       protocolsDesc: "Un cadre structuré pour inverser le brouillard mental induit par l'IA.",
-      
       faqTitle: "❓ Questions Fréquemment Posées",
       faqQ1: "Qu'est-ce que la décharge cognitive ?",
       faqA1: "C'est le processus consistant à s'appuyer sur des outils externes (comme l'IA) pour effectuer des tâches mentales, ce qui peut affaiblir la mémoire à long terme.",
@@ -1210,7 +1118,6 @@ fr: {
       faqQ8: "Utiliser l'IA me rend-il moins intelligent ?",
       faqA8: "C'est possible, si vous en dépendez trop. La décharge cognitive peut affaiblir la mémoire avec le temps.",
       donateText: "Soutenez ce projet sur Ko-fi",
-      
       overallTitle: "Votre Profil d'Identité IA",
       overallPercentileLabel: "Moins dépendant que {percentile}% des utilisateurs",
       archetypes: {
@@ -1218,13 +1125,11 @@ fr: {
         medium: { name: "Navigateur Équilibré", percentile: 50, advice: "Vous vous appuyez sur l'IA sans vous perdre. De petites habitudes renforcent votre autonomie." },
         high: { name: "Délégué Dépendant de l'IA", percentile: 85, advice: "Vous externalisez une grande partie de votre réflexion. Envisagez une détox numérique." }
       },
-      
       q1: ["Demandez-vous à l'IA au lieu d'essayer de vous souvenir ?","Utilisez-vous l'IA pour des faits simples ?","Demandez-vous conseil à l'IA avant de décider ?","Votre mémoire a-t-elle empiré depuis que vous utilisez l'IA ?","Faites-vous plus confiance aux conclusions de l'IA qu'à votre propre raisonnement ?","Je vérifie souvent les réponses de l'IA car je ne m'y fie pas totalement.","Sans IA, je peux résoudre les problèmes par moi-même.","Je m'entraîne régulièrement à me souvenir sans IA."],
       q2: ["Vous sentez-vous menacé par le développement rapide de l'IA ?","Êtes-vous anxieux lorsque l'IA n'est pas disponible ?","Partagez-vous vos sentiments avec l'IA plus qu'avec vos amis ?","Préférez-vous la compagnie de l'IA à celle des gens ?","Ressentiriez-vous une véritable perte si votre chatbot disparaissait ?","Je ne crains pas que l'IA prenne le travail des humains.","Parler à de vraies personnes est plus gratifiant.","L'IA n'est qu'un outil, pas un ami."],
       q3: ["Comptez-vous sur l'IA pour planifier votre journée ?","Utilisez-vous l'IA pour écrire la plupart de vos textes ?","Allez-vous vers l'IA avant d'essayer de résoudre un problème par vous-même ?","Vous sentez-vous mentalement épuisé après un travail assisté par l'IA ?","Reportez-vous des tâches jusqu'à ce que vous ayez accès à l'IA ?","J'ai des limites claires quant à mon utilisation de l'IA.","J'accomplis souvent des tâches entièrement par moi-même.","Un jour sans IA me laisse un sentiment de fraîcheur."],
       fearQ: ["L'idée que l'IA devienne plus puissante que les humains vous effraie-t-elle ?","Évitez-vous de lire des nouvelles sur l'IA parce que cela vous met mal à l'aise ?","Ressentez-vous une boule au ventre lorsque vous entendez parler de nouvelles percées en IA ?","Diriez-vous que l'IA est l'une de vos plus grandes inquiétudes pour l'avenir ?"],
       reverseKeys: { q1:[5,6,7], q2:[5,6,7], q3:[5,6,7], fearQ:[] },
-      
       gameTexts: [
         {text:"Le soleil a plongé sous l'horizon, peignant le ciel dans des tons orangés.", isAI:true},
         {text:"Je n'en croyais pas mes yeux. Nous avions vraiment gagné après un entraînement brutal.", isAI:false},
@@ -1232,7 +1137,6 @@ fr: {
         {text:"J'ai fait les meilleures lasagnes. L'ingrédient secret ? Beaucoup trop d'ail.", isAI:false},
         {text:"En tant qu'IA, je n'ai pas de sentiments, mais je comprends le contexte.", isAI:true}
       ],
-      
       protocols: [
         {num:1,title:"IA : Méthode, pas Esprit",desc:"L'IA est un outil, pas un partenaire. 80% de routine remplacée = 80% de temps pour la créativité."},
         {num:2,title:"Principes de l'IA",desc:"Comprendre que l'IA traite des probabilités, pas des vérités absolues."},
@@ -1268,7 +1172,6 @@ fr: {
         {num:32,title:"Conscience de soi",desc:"Mode observateur. Le suivi stratégique est le cœur du changement dynamique."},
         {num:33,title:"Méta-Code",desc:"Reboot final. L'intention consciente modifie l'expression biologique."}
       ],
-      
       aiFaqTitle: "🧠 Qu'est-ce que l'IA ? Réponses simples",
       faqAiWhatQ: "Qu'est-ce que l'intelligence artificielle ?",
       faqAiWhatA: "L'intelligence artificielle (IA) est un système informatique qui accomplit des tâches nécessitant normalement l'intelligence humaine : comprendre le langage, reconnaître des images, prendre des décisions. <br><small style='opacity:0.7'>Source: <a href='https://fr.wikipedia.org/wiki/Intelligence_artificielle' target='_blank' rel='noopener' style='color:var(--accent)'>Wikipedia</a></small>",
@@ -1279,9 +1182,17 @@ fr: {
       faqAiTypesQ: "Quels sont les types d'IA ?",
       faqAiTypesA: "L'IA étroite (résout une tâche, comme ChatGPT), l'IA générale (AGI — hypothétique, niveau humain) et la Super IA (n'existe pas encore). <br><small style='opacity:0.7'>Source: <a href='https://fr.wikipedia.org/wiki/Intelligence_artificielle_g%C3%A9n%C3%A9rale' target='_blank' rel='noopener' style='color:var(--accent)'>Wikipedia</a></small>",
       faqAiDangerQ: "L'IA est-elle dangereuse ?",
-      faqAiDangerA: "Comme toute technologie, l'IA comporte des risques. Mais avec une approche responsable, elle reste un outil puissant. <br><small style='opacity:0.7'>Source: <a href='https://futureoflife.org/ai/' target='_blank' rel='noopener' style='color:var(--accent)'>Future of Life Institute</a></small>"
+      faqAiDangerA: "Comme toute technologie, l'IA comporte des risques. Mais avec une approche responsable, elle reste un outil puissant. <br><small style='opacity:0.7'>Source: <a href='https://futureoflife.org/ai/' target='_blank' rel='noopener' style='color:var(--accent)'>Future of Life Institute</a></small>",
+      fearResultTitle: "Indice de Peur",
+      scoreLabel: "Score",
+      reviewProgressText: "Formation des opinions des lecteurs...",
+      fearLevels: {
+        low: { name: "Peur faible", advice: "Vous semblez serein face à l'IA. Restez informé, mais ne vous inquiétez pas outre mesure." },
+        medium: { name: "Peur modérée", advice: "Certaines inquiétudes sont normales. Apprenez-en plus sur l'IA pour apaiser votre esprit." },
+        high: { name: "Peur élevée", advice: "L'IA vous préoccupe beaucoup. Envisagez de vous renseigner sur la sécurité de l'IA ou d'en parler." },
+        veryHigh: { name: "Peur très élevée", advice: "Ce niveau d'anxiété peut nécessiter de l'attention. Le savoir est une force – commencez par des sources fiables." }
+      }
     },
-
     ja: {
       langName: "日本語",
       mainTitle: "無料AI依存度テスト – あなたの習慣を理解する",
@@ -1291,23 +1202,18 @@ fr: {
       infoPara2: "<strong>対象者：</strong> 自分のAI利用が意図的なものか確認したいすべての人。結果として、あなたのAIアイデンティティプロファイルが得られます。",
       infoPara3: "<strong>仕組み：</strong> 各軸で8つの質問と、恐怖に関するテストに答えます。すべてお使いのブラウザ内で完結します。",
       infoDisclaimer: "これは自己内省のためのツールであり、医学的診断ではありません。100%匿名です。",
-      
       axis1Title: "思考と記憶",
       axis1Desc: "AIに思考を委ねていませんか？認知的オフロードと、自分自身の推論よりもAIを信頼する度合いを測定します。",
       axis1Hint: "正直に答えてください。正確性を期すため、一部の質問は逆の意味で書かれています。",
-      
       axis2Title: "不安と感情的愛着",
       axis2Desc: "AIに脅威を感じたり、チャットボットに感情的なつながりを感じたりしますか？AI不安を測定します。",
       axis2Hint: "正直に答えてください。一部の質問は逆の意味で書かれています。",
-      
       axis3Title: "デジタル燃え尽き症候群と先延ばし",
       axis3Desc: "AIによって疲弊したり、AIの助けを待ってタスクを先延ばしにしたりしていませんか？",
       axis3Hint: "正直に答えてください。一部の質問は逆の意味で書かれています。",
-      
       fearTitle: "AIへの恐怖",
       fearDesc: "AIが進化することに対して、どの程度恐怖を感じますか？感情的な反応を測定します。",
       fearHint: "直感で答えてください。正解や間違いはありません。",
-      
       trackerTitle: "📊 毎日の認知負荷トラッカー",
       trackerDesc: "今日、どれくらいAIに依存したかを記録しましょう。0 = 完全に独立、5 = 部分的な支援、10 = 高い依存度。",
       trackerLowLabel: "自立",
@@ -1320,7 +1226,6 @@ fr: {
       trendDecreasing: "依存度が下がっています。意識的なAI利用を続けてください。",
       trendStable: "依存度は安定しています。自分の習慣を意識し続けてください。",
       noData: "まだデータがありません。上のスライダーで記録してください。",
-      
       gameTitle: "🎮 AIか人間か？",
       gameDesc: "テキストが人間によって書かれたものか、AIによって生成されたものかを見分けることができますか？",
       gameBtnHuman: "👤 人間",
@@ -1332,7 +1237,6 @@ fr: {
       gameFeedbackWrong: "❌ 不正解。",
       gameFeedbackAI: "AIでした。",
       gameFeedbackHuman: "人間でした。",
-      
       pollTitle: "🌍 グローバルAI意識調査",
       pollDesc: "匿名で投票してください。これはあなた個人のスタンスです。",
       pollFor: "👍 賛成（楽観的）",
@@ -1340,9 +1244,7 @@ fr: {
       pollAgainst: "👎 反対（懸念している）",
       submitPoll: "投票する",
       pollResultsTitle: "🌐 現在の投票結果:",
-      pollTotalLabel: "📊 総投票数:",
       pollBridge: "あなたの都市や国がどのように投票したか知りたいですか？Amazonで本を購入し、<strong>名前と都市名</strong>を明記して公開レビューを残してください — それがあなたの声を世界レベルで永続的に見える形にする唯一の方法です。",
-      
       ctaText: "構造化されたガイダンスが必要ですか？「33プロトコル」の本には、主権を取り戻すための毎日のマイクロエクササイズが用意されています。",
       ctaFirstReview: "あなたの都市で最初にレビューを残し、あなたのスタンスを永続的なものにしてください。",
       ctaBarText: "33のプロトコルを探求する",
@@ -1356,16 +1258,13 @@ fr: {
       alertIncomplete: "現在の質問に答えてください。",
       progressText: "質問 {answered} / {total}",
       options: ["全くない", "めったにない", "時々", "よくある", "常にある"],
-      
       trustNoSignup: "🔒 登録不要",
       trustLocal: "📁 ブラウザ内で完結",
       trustAnonymous: "🧾 100%匿名",
       howTitle: "📌 仕組み",
       howText: "各軸には短い質問があります。回答はブラウザ内でリアルタイムに処理されます。最後にあなたのAIアイデンティティプロファイルを受け取ります。",
-      
       protocolsTitle: "📖 認知的完全性のための33のプロトコル",
       protocolsDesc: "AIによって引き起こされた脳の霧を晴らし、自立した思考を取り戻すための構造化されたフレームワーク。",
-      
       faqTitle: "❓ よくある質問",
       faqQ1: "認知的オフロードとは何ですか？",
       faqA1: "本来自分で行うべき精神的作業を外部ツール（AIなど）に頼ることであり、長期的には記憶力や独立した思考力を弱める可能性があります。",
@@ -1384,7 +1283,6 @@ fr: {
       faqQ8: "AIを使うと知能は下がりますか？",
       faqA8: "過度に依存すればその可能性があります。認知的オフロードは時間とともに思考スキルを弱める可能性があります。",
       donateText: "Ko-fiでプロジェクトを支援する",
-      
       overallTitle: "あなたのAIアイデンティティプロファイル",
       overallPercentileLabel: "ユーザーの{percentile}%よりも自立しています",
       archetypes: {
@@ -1392,13 +1290,11 @@ fr: {
         medium: { name: "バランスナビゲーター", percentile: 50, advice: "自分を見失うことなくAIを活用できています。小さな習慣があなたの自律性を強化します。" },
         high: { name: "AI依存型デリゲート", percentile: 85, advice: "思考の大部分をAIに外部委託しています。デジタルデトックスを検討してください。" }
       },
-      
       q1: ["思い出す努力をする代わりにAIに聞きますか？","簡単な事実確認にAIを使いますか？","決断を下す前にAIに助言を求めますか？","AIを定期的に使い始めてから記憶力が落ちたと感じますか？","自分自身の推論よりもAIの結論を信頼しますか？","AIを完全に信用していないので、よく回答をダブルチェックする。","AIが使えなくても、自分で問題を解決できる自信がある。","頭を鋭く保つために、AIなしで物事を思い出す練習をしている。"],
       q2: ["AIの急速な発展に脅威を感じますか？","AIが利用できないと不安になりますか？","友人よりもAIに個人的な感情をオープンに話しますか？","人に会うよりもAIと過ごす時間を好むことがありますか？","お気に入りのチャットボットが消えたら喪失感を感じますか？","AIが人間の仕事を奪うことについて心配していない。","AIと話すよりも、実際の人と話す方が充実感がある。","AIはただの道具であり、友人ではないと考えている。"],
       q3: ["一日の予定を立てるのにAIに頼っていますか？","仕事の文章のほとんどをAIで書いていますか？","問題に直面したとき、自分で解決する前にAIに頼りますか？","AIを使った作業の後、精神的に疲弊したと感じますか？","AIが使えるようになるまでタスクを先延ばしにしますか？","AIの利用には明確な境界線があり、疲弊することはめったにない。","AIを使えば早くなる場合でも、タスクを自分自身で完了させることが多い。","AIから離れる日を作ると、不安になるよりもリフレッシュできる。"],
       fearQ: ["AIが人間よりも強力になるという考えに恐怖を感じますか？","不快になるため、AIに関するニュースを読むのを避けますか？","AIの新たなブレイクスルーについて聞くと、胃が縮むような感覚になりますか？","将来についての最大の懸念事項の1つはAIだと言えますか？"],
       reverseKeys: { q1:[5,6,7], q2:[5,6,7], q3:[5,6,7], fearQ:[] },
-      
       gameTexts: [
         {text:"太陽は地平線の下に沈み、空をオレンジ色の濃淡で染め上げた。", isAI:true},
         {text:"自分の目が信じられなかった。過酷な練習の末、私たちは本当に勝ったのだ。", isAI:false},
@@ -1406,12 +1302,11 @@ fr: {
         {text:"最高のラザニアを作った。隠し味？間違いなくニンニクの入れすぎ。", isAI:false},
         {text:"AIとして、私には感情はありませんが、文脈は理解しています。", isAI:true}
       ],
-      
       protocols: [
         {num:1,title:"AI：手段であり、心ではない",desc:"AIは道具であり、対話相手ではない。"},
         {num:2,title:"AIの原則：統計の進化",desc:"AIは絶対的な真実ではなく、確率を処理していることを理解せよ。"},
         {num:3,title:"人間：ランダムアルゴリズム",desc:"決定の90%は古代の辺縁系システムによって行われる。"},
-        {num:4,title:"人体：生物学的システム",desc:"サバンナのために設計された。小さな努力で古代のコードを騙せ。"},
+        {num:4,title:"人体：生物学的システム",desc:"サバンナのために設計された。"},
         {num:5,title:"痛み：身体の言語",desc:"痛みはシグナルであり、罰ではない。"},
         {num:6,title:"恐怖：時代遅れの守護者",desc:"現代のパニックのほとんどは誤って解釈された身体感覚である。"},
         {num:7,title:"感情：決断の燃料",desc:"ブレイクスルーの90%は感情的なものである。"},
@@ -1442,7 +1337,6 @@ fr: {
         {num:32,title:"自己認識：観察者モード",desc:"戦略的追跡が変化の核心である。"},
         {num:33,title:"メタコード：最終再起動",desc:"意識的な意図が生物学的発現を変化させる。"}
       ],
-      
       aiFaqTitle: "🧠 AIとは？ 簡単な答え",
       faqAiWhatQ: "人工知能とは何ですか？",
       faqAiWhatA: "人工知能（AI）は、言語の理解、画像の認識、意思決定など、通常人間の知能を必要とするタスクを実行するコンピュータシステムです。 <br><small style='opacity:0.7'>Source: <a href='https://ja.wikipedia.org/wiki/%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD' target='_blank' rel='noopener' style='color:var(--accent)'>Wikipedia</a></small>",
@@ -1453,27 +1347,37 @@ fr: {
       faqAiTypesQ: "AIにはどのような種類がありますか？",
       faqAiTypesA: "特化型AI（ChatGPTなど）、汎用AI（AGI — 仮説上の人間レベル）、そしてスーパーAI（まだ存在しない）があります。 <br><small style='opacity:0.7'>Source: <a href='https://ja.wikipedia.org/wiki/%E6%B1%8E%E7%94%A8%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD' target='_blank' rel='noopener' style='color:var(--accent)'>Wikipedia</a></small>",
       faqAiDangerQ: "AIは危険ですか？",
-      faqAiDangerA: "他の技術と同様にリスクを伴いますが、責任あるアプローチをとれば、強力なツールであり続けます。 <br><small style='opacity:0.7'>Source: <a href='https://futureoflife.org/ai/' target='_blank' rel='noopener' style='color:var(--accent)'>Future of Life Institute</a></small>"
+      faqAiDangerA: "他の技術と同様にリスクを伴いますが、責任あるアプローチをとれば、強力なツールであり続けます。 <br><small style='opacity:0.7'>Source: <a href='https://futureoflife.org/ai/' target='_blank' rel='noopener' style='color:var(--accent)'>Future of Life Institute</a></small>",
+      fearResultTitle: "恐怖指数",
+      scoreLabel: "スコア",
+      reviewProgressText: "読者の意見が形成されています...",
+      fearLevels: {
+        low: { name: "低い恐怖", advice: "AIに対して落ち着いているようです。情報を得つつ、過度に心配しないでください。" },
+        medium: { name: "中程度の恐怖", advice: "ある程度の懸念は正常です。AIについてさらに学んで心を落ち着かせてください。" },
+        high: { name: "高い恐怖", advice: "AIがかなり心配なようです。AIの安全性について学んだり、誰かに話したりすることを検討してください。" },
+        veryHigh: { name: "非常に高い恐怖", advice: "このレベルの不安には注意が必要かもしれません。知識は力です――信頼できる情報源から始めましょう。" }
+      }
     }
   };
-function getT(lang) { return translations[lang] || translations.en; }
-
-  function escapeHtml(str) {
-    return String(str).replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[m]);
+  function getT(lang) {
+    return new Proxy(translations[lang] || translations.en, {
+      get: function(target, prop) {
+        if (prop in target) return target[prop];
+        return translations.en[prop];
+      }
+    });
   }
 
   function renderProtocols(list) {
     const grid = document.getElementById('protocolGrid');
     if (!grid) return;
     grid.innerHTML = '';
-    const fragment = document.createDocumentFragment();
     list.forEach(p => {
       const card = document.createElement('div');
       card.className = 'protocol-card';
       card.innerHTML = `<div class="protocol-num">Protocol ${p.num}</div><div class="protocol-title">${escapeHtml(p.title)}</div><div class="protocol-desc">${escapeHtml(p.desc)}</div>`;
-      fragment.appendChild(card);
+      grid.appendChild(card);
     });
-    grid.appendChild(fragment);
   }
 
   function initLangBar() {
@@ -1493,20 +1397,15 @@ function getT(lang) { return translations[lang] || translations.en; }
     const t = getT(lang);
     currentLang = lang;
     document.documentElement.lang = lang;
-
     const url = new URL(window.location);
     if (lang === 'en') url.searchParams.delete('lang');
     else url.searchParams.set('lang', lang);
     window.history.replaceState(null, '', url);
-
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.classList.toggle('active', btn.textContent === t.langName);
     });
-
     const ut = (id, val) => { const el = document.getElementById(id); if (el && val) el.textContent = val; };
     const uh = (id, val) => { const el = document.getElementById(id); if (el && val) el.innerHTML = val; };
-
-    // SEO Meta
     document.title = `${t.mainTitle} | Mind-OS`;
     const descMeta = document.getElementById('dynamicDescription');
     if (descMeta) descMeta.content = t.subhead;
@@ -1514,8 +1413,6 @@ function getT(lang) { return translations[lang] || translations.en; }
     if (ogTitle) ogTitle.content = t.mainTitle;
     const ogDesc = document.getElementById('dynamicOgDescription');
     if (ogDesc) ogDesc.content = t.subhead;
-
-    // Header & Info
     ut('mainTitle', t.mainTitle);
     ut('subheadText', t.subhead);
     ut('infoTitle', t.infoTitle);
@@ -1523,8 +1420,6 @@ function getT(lang) { return translations[lang] || translations.en; }
     uh('infoPara2', t.infoPara2);
     uh('infoPara3', t.infoPara3);
     ut('infoDisclaimer', t.infoDisclaimer);
-
-    // Axes & Fear
     ['1', '2', '3'].forEach(i => {
       ut(`axis${i}Title`, t[`axis${i}Title`]);
       ut(`axis${i}Desc`, t[`axis${i}Desc`]);
@@ -1533,8 +1428,6 @@ function getT(lang) { return translations[lang] || translations.en; }
     ut('fearTitle', t.fearTitle);
     ut('fearDesc', t.fearDesc);
     ut('fearHint', t.fearHint);
-
-    // Tracker
     ut('trackerTitle', t.trackerTitle);
     ut('trackerDesc', t.trackerDesc);
     ut('trackerLowLabel', t.trackerLowLabel);
@@ -1542,8 +1435,6 @@ function getT(lang) { return translations[lang] || translations.en; }
     ut('trackerHighLabel', t.trackerHighLabel);
     ut('saveTrackerEntry', t.saveBtn);
     ut('resetTrackerData', t.resetBtn);
-
-    // Game
     ut('gameTitle', t.gameTitle);
     ut('gameDesc', t.gameDesc);
     ut('gameBtnHuman', t.gameBtnHuman);
@@ -1551,8 +1442,6 @@ function getT(lang) { return translations[lang] || translations.en; }
     ut('gameNextBtn', t.gameNextBtn);
     ut('gameRestartBtn', t.gameRestartBtn);
     ut('gameScoreLabel', t.gameScoreLabel);
-
-    // Poll
     ut('pollTitle', t.pollTitle);
     ut('pollDesc', t.pollDesc);
     ut('pollFor', t.pollFor);
@@ -1560,10 +1449,7 @@ function getT(lang) { return translations[lang] || translations.en; }
     ut('pollAgainst', t.pollAgainst);
     ut('submitPoll', t.submitPoll);
     ut('pollResultsTitle', t.pollResultsTitle);
-    ut('pollTotalLabel', t.pollTotalLabel);
     uh('pollBridge', t.pollBridge);
-
-    // CTA & Footer
     ut('ctaText', t.ctaText);
     ut('ctaFirstReview', t.ctaFirstReview);
     ut('ctaBarText', t.ctaBarText);
@@ -1578,13 +1464,11 @@ function getT(lang) { return translations[lang] || translations.en; }
     ut('trustLocal', t.trustLocal);
     ut('trustAnonymous', t.trustAnonymous);
     ut('overallTitle', t.overallTitle);
-
+    ut('reviewProgressText', t.reviewProgressText);
     const bLink = document.getElementById('bookLink');
     if (bLink) { bLink.href = t.bookUrl || "#"; bLink.textContent = t.bookLabel; }
     const cLink = document.getElementById('ctaBarLink');
     if (cLink) { cLink.href = t.bookUrl || "#"; }
-
-    // FAQs
     ut('faqTitle', t.faqTitle);
     for (let i = 1; i <= 8; i++) {
       ut(`faqQ${i}`, t[`faqQ${i}`] || "");
@@ -1596,8 +1480,6 @@ function getT(lang) { return translations[lang] || translations.en; }
     ut('faqAiHowWorkQ', t.faqAiHowWorkQ); uh('faqAiHowWorkA', t.faqAiHowWorkA);
     ut('faqAiTypesQ', t.faqAiTypesQ); uh('faqAiTypesA', t.faqAiTypesA);
     ut('faqAiDangerQ', t.faqAiDangerQ); uh('faqAiDangerA', t.faqAiDangerA);
-
-    // Renders
     renderWizard('q1Container', t.q1, 'a1', t);
     renderWizard('q2Container', t.q2, 'a2', t);
     renderWizard('q3Container', t.q3, 'a3', t);
@@ -1608,66 +1490,52 @@ function getT(lang) { return translations[lang] || translations.en; }
     if (typeof syncPollUI === 'function') syncPollUI();
   }
 
-  // === ДВИЖОК ТЕСТОВ (WIZARD) ===
   function renderWizard(containerId, questions, prefix, t) {
     const container = document.getElementById(containerId);
     if (!container) return;
-
     const currentIndex = wizardState[prefix];
     const total = questions.length;
     container.innerHTML = '';
-
     const stepDiv = document.createElement('div');
     stepDiv.className = 'question-step active';
-
     const qText = document.createElement('div');
     qText.className = 'question-text';
     qText.textContent = `${currentIndex + 1}. ${questions[currentIndex]}`;
     stepDiv.appendChild(qText);
-
     const optsDiv = document.createElement('div');
     optsDiv.className = 'options';
-    
     t.options.forEach((optText, i) => {
       const label = document.createElement('label');
       label.className = 'option-label';
       const currentVal = userAnswers[prefix][currentIndex];
       if (currentVal === i.toString()) label.classList.add('selected');
-
       const input = document.createElement('input');
       input.type = 'radio';
       input.name = `${prefix}_${currentIndex}`;
       input.value = i;
       if (currentVal === i.toString()) input.checked = true;
-
       input.onchange = (e) => {
         userAnswers[prefix][currentIndex] = e.target.value;
         label.parentElement.querySelectorAll('.option-label').forEach(l => l.classList.remove('selected'));
         label.classList.add('selected');
-        
         if (currentIndex < total - 1) {
           setTimeout(() => { navigateWizard(prefix, 1, containerId, questions, t); }, 300);
         } else {
           renderWizard(containerId, questions, prefix, t);
         }
       };
-
       label.appendChild(input);
       label.appendChild(document.createTextNode(optText));
       optsDiv.appendChild(label);
     });
-    
     stepDiv.appendChild(optsDiv);
-
     const navDiv = document.createElement('div');
     navDiv.className = 'wizard-nav';
-
     const btnPrev = document.createElement('button');
     btnPrev.className = 'btn-nav';
     btnPrev.textContent = t.prevBtn;
     btnPrev.disabled = currentIndex === 0;
     btnPrev.onclick = () => navigateWizard(prefix, -1, containerId, questions, t);
-
     let btnNext;
     if (currentIndex < total - 1) {
       btnNext = document.createElement('button');
@@ -1685,12 +1553,10 @@ function getT(lang) { return translations[lang] || translations.en; }
         else finishAxis(prefix, total, t);
       };
     }
-
     navDiv.appendChild(btnPrev);
     navDiv.appendChild(btnNext);
     stepDiv.appendChild(navDiv);
     container.appendChild(stepDiv);
-
     const pText = document.getElementById(`${prefix}Progress`);
     if (pText) pText.textContent = t.progressText.replace('{answered}', currentIndex + 1).replace('{total}', total);
   }
@@ -1716,12 +1582,10 @@ function getT(lang) { return translations[lang] || translations.en; }
     const reverseKeys = t.reverseKeys[prefix] || [];
     const score = computeAxisScore(prefix, total, reverseKeys);
     if (score === null) { alert(t.alertIncomplete); return; }
-
     const containerId = prefix === 'a1' ? 'q1Container' : (prefix === 'a2' ? 'q2Container' : 'q3Container');
     const resId = prefix === 'a1' ? 'r1' : (prefix === 'a2' ? 'r2' : 'r3');
     const container = document.getElementById(containerId);
     if (container) container.style.display = 'none';
-
     const div = document.getElementById(resId);
     if (div) {
       div.style.display = 'block';
@@ -1729,11 +1593,7 @@ function getT(lang) { return translations[lang] || translations.en; }
       let arch = t.archetypes.low;
       if (ratio > 0.4 && ratio <= 0.7) arch = t.archetypes.medium;
       if (ratio > 0.7) arch = t.archetypes.high;
-      
-      div.innerHTML = `
-        <div class="result-header"><strong>Score: ${score}/${MAX_AXIS}</strong><span class="result-badge">${arch.name}</span></div>
-        <div class="result-advice">${arch.advice}</div>
-      `;
+      div.innerHTML = `<div class="result-header"><strong>${t.scoreLabel}: ${score}/${MAX_AXIS}</strong><span class="result-badge">${arch.name}</span></div><div class="result-advice">${arch.advice}</div>`;
       div.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
     COMPLETED_AXES[prefix] = true;
@@ -1745,20 +1605,19 @@ function getT(lang) { return translations[lang] || translations.en; }
     if (score === null) { alert(t.alertIncomplete); return; }
     const container = document.getElementById('qFearContainer');
     if (container) container.style.display = 'none';
-
     const div = document.getElementById('fearResult');
     if (div) {
       div.style.display = 'block';
       const pct = Math.round((score / FEAR_MAX) * 100);
-      div.innerHTML = `
-        <div class="result-header"><strong>Fear Index: ${pct}%</strong></div>
-        <div class="fear-meter"><div class="fear-indicator" style="left: ${pct}%"></div></div>
-        <div class="result-advice">A high fear index usually stems from uncertainty. Knowledge is the antidote.</div>
-      `;
+      let level = t.fearLevels.low;
+      if (score <= 4) level = t.fearLevels.low;
+      else if (score <= 8) level = t.fearLevels.medium;
+      else if (score <= 12) level = t.fearLevels.high;
+      else level = t.fearLevels.veryHigh;
+      div.innerHTML = `<div class="result-header"><strong>${t.fearResultTitle}: ${pct}% (${level.name})</strong></div><div class="poll-bar-track" style="margin: 1rem 0;"><div class="poll-bar-fill" style="width: ${pct}%; background: var(--accent);"></div></div><div class="result-advice">${level.advice}</div>`;
       div.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   }
-
   function checkOverallReady() {
     if (COMPLETED_AXES.a1 && COMPLETED_AXES.a2 && COMPLETED_AXES.a3) {
       const t = getT(currentLang);
@@ -1766,23 +1625,18 @@ function getT(lang) { return translations[lang] || translations.en; }
       const s2 = computeAxisScore('a2', 8, t.reverseKeys.q2);
       const s3 = computeAxisScore('a3', 8, t.reverseKeys.q3);
       const totalScore = s1 + s2 + s3;
-      
       const ratio = totalScore / TOTAL_MAX;
       let arch = t.archetypes.low;
       if (ratio > 0.4 && ratio <= 0.7) arch = t.archetypes.medium;
       if (ratio > 0.7) arch = t.archetypes.high;
-
       const block = document.getElementById('overallBlock');
       block.style.display = 'block';
       document.getElementById('overallArchetype').textContent = arch.name;
       document.getElementById('overallPercentile').textContent = t.overallPercentileLabel.replace('{percentile}', arch.percentile);
       document.getElementById('overallAdvice').textContent = arch.advice;
-      
       setTimeout(() => { block.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 500);
     }
   }
-
-  // === ТРЕКЕР ===
   function updateTrackerUI() {
     const t = getT(currentLang);
     const data = storage.get('mindos_tracker_v3') || {};
@@ -1793,16 +1647,14 @@ function getT(lang) { return translations[lang] || translations.en; }
       const key = d.toISOString().slice(0, 10);
       last7.push({ date: key, score: data[key] ?? null });
     }
-
-    const validScores = last7.filter(d => d.score !== null).map(d => d.score);
+const validScores = last7.filter(d => d.score !== null).map(d => d.score);
     const avg = validScores.length ? (validScores.reduce((a, b) => a + b, 0) / validScores.length).toFixed(1) : null;
-    
     const chartDiv = document.getElementById('trackerChartContainer');
     let chartHtml = '<div class="tracker-chart">';
     last7.forEach(d => {
       const height = d.score !== null ? (d.score / 10) * 80 + 10 : 8;
       const opacity = d.score !== null ? '1' : '0.2';
-      chartHtml += `<div class="chart-bar"><div class="bar-fill" style="height:${height}px; opacity:${opacity};"></div><div class="bar-label">${d.date.slice(5)}</div></div>`;
+      chartHtml += `<div class="chart-bar"><div class="bar-fill" style="height:${height}px; opacity:${opacity}; background: var(--accent);"></div><div class="bar-label">${d.date.slice(5)}</div></div>`;
     });
     chartHtml += '</div>';
     if (chartDiv) chartDiv.innerHTML = chartHtml;
@@ -1816,26 +1668,21 @@ function getT(lang) { return translations[lang] || translations.en; }
       else if (avg2 < avg1 - 0.5) trendText = t.trendDecreasing;
       else trendText = t.trendStable;
     }
-
     const summaryDiv = document.getElementById('trackerSummary');
     if (summaryDiv) summaryDiv.innerHTML = `<div style="margin-top:1rem;"><strong>${t.trackerSummaryPrefix} ${avg ?? '—'}</strong><br><span style="font-size:0.9rem;color:var(--text-dim);">${trendText}</span></div>`;
-
     const disp = document.getElementById('trackerValueDisplay');
     const scoreInp = document.getElementById('trackerScore');
     if (disp) disp.textContent = data[today] ?? scoreInp.value;
   }
 
-  // === ИГРА ===
   function loadGameQuestion() {
     const t = getT(currentLang);
     const qEl = document.getElementById('gameQuestion');
     const feedbackEl = document.getElementById('gameFeedback');
     if (!qEl) return;
-
     const q = t.gameTexts[gameIndex];
     qEl.textContent = q.text;
     feedbackEl.textContent = '';
-    
     document.getElementById('gameBtnHuman').style.display = 'inline-flex';
     document.getElementById('gameBtnAI').style.display = 'inline-flex';
     document.getElementById('gameNextBtn').style.display = 'none';
@@ -1849,56 +1696,48 @@ function getT(lang) { return translations[lang] || translations.en; }
     const q = t.gameTexts[gameIndex];
     const isCorrect = isAIGuess === q.isAI;
     if (isCorrect) gameScore++;
-
     const fb = document.getElementById('gameFeedback');
     fb.textContent = (isCorrect ? t.gameFeedbackCorrect : t.gameFeedbackWrong) + " " + (q.isAI ? t.gameFeedbackAI : t.gameFeedbackHuman);
     fb.style.color = isCorrect ? 'var(--accent)' : '#ff5555';
-
     document.getElementById('gameBtnHuman').style.display = 'none';
     document.getElementById('gameBtnAI').style.display = 'none';
     document.getElementById('gameScore').textContent = gameScore;
-
     if (gameIndex < t.gameTexts.length - 1) document.getElementById('gameNextBtn').style.display = 'inline-flex';
     else document.getElementById('gameRestartBtn').style.display = 'inline-flex';
   }
 
-  // === ОПРОС ===
-  function syncPollUI() {
-    const data = storage.get('mindos_poll_v3');
-    if (!data) return;
+  const POLL_API_URL = "https://script.google.com/macros/s/AKfycbxCL8wxUhHPGLQyhAhT7B5rBCSjKnRLq2oO7TApvFJlaYC8oVOwTNcrwR3wa5JeYmv18A/exec";
 
-    const total = data.for + data.neutral + data.against;
-    if (total > 0) {
-      document.getElementById('pollOptions').style.display = 'none';
-      document.getElementById('submitPoll').style.display = 'none';
-      document.getElementById('pollResults').style.display = 'block';
-
-      const t = getT(currentLang);
-      const getPct = (val) => Math.round((val / total) * 100);
-      const items = [
-        { label: t.pollFor, val: data.for, color: 'var(--accent)' },
-        { label: t.pollNeutral, val: data.neutral, color: '#b4cec0' },
-        { label: t.pollAgainst, val: data.against, color: '#ff5555' }
-      ];
-
-      document.getElementById('pollBars').innerHTML = items.map(item => `
-        <div class="poll-bar-container">
-          <div class="poll-bar-label"><span>${item.label}</span><span>${getPct(item.val)}%</span></div>
-          <div class="poll-bar-track"><div class="poll-bar-fill" style="width:${getPct(item.val)}%; background:${item.color};"></div></div>
-        </div>
-      `).join('');
-      document.getElementById('pollTotal').textContent = total;
-    }
+  async function syncPollUI() {
+    const hasVoted = storage.get('mindos_poll_v3_voted');
+    try {
+      const response = await fetch(POLL_API_URL);
+      const data = await response.json();
+      if (hasVoted) {
+        document.getElementById('pollOptions').style.display = 'none';
+        document.getElementById('submitPoll').style.display = 'none';
+        document.getElementById('pollResults').style.display = 'block';
+        const t = getT(currentLang);
+        const items = [
+          { label: t.pollFor, val: data.for, color: 'var(--accent)' },
+          { label: t.pollNeutral, val: data.neutral, color: '#b4cec0' },
+          { label: t.pollAgainst, val: data.against, color: '#ff5555' }
+        ];
+        document.getElementById('pollBars').innerHTML = items.map(item => `
+          <div class="poll-bar-container">
+            <div class="poll-bar-label"><span>${item.label}</span><span>${item.val}%</span></div>
+            <div class="poll-bar-track"><div class="poll-bar-fill" style="width:${item.val}%; background:${item.color};"></div></div>
+          </div>
+        `).join('');
+      }
+    } catch(e) {}
   }
 
-  // === ИНИЦИАЛИЗАЦИЯ И СЛУШАТЕЛИ ===
   document.addEventListener('DOMContentLoaded', () => {
     initLangBar();
     const urlParams = new URLSearchParams(window.location.search);
     const lang = urlParams.get('lang') || 'en';
     applyLanguage(lang);
-
-    // Tracker Events
     const tSlider = document.getElementById('trackerScore');
     if (tSlider) tSlider.addEventListener('input', (e) => document.getElementById('trackerValueDisplay').textContent = e.target.value);
     document.getElementById('saveTrackerEntry')?.addEventListener('click', () => {
@@ -1911,26 +1750,27 @@ function getT(lang) { return translations[lang] || translations.en; }
       updateTrackerUI();
     });
     document.getElementById('resetTrackerData')?.addEventListener('click', () => {
-      storage.remove('mindos_tracker_v3'); updateTrackerUI();
+      storage.remove('mindos_tracker_v3');
+      updateTrackerUI();
     });
-
-    // Game Events
     document.getElementById('gameBtnHuman')?.addEventListener('click', () => handleGameGuess(false));
     document.getElementById('gameBtnAI')?.addEventListener('click', () => handleGameGuess(true));
     document.getElementById('gameNextBtn')?.addEventListener('click', () => { gameIndex++; loadGameQuestion(); });
     document.getElementById('gameRestartBtn')?.addEventListener('click', () => { gameIndex = 0; gameScore = 0; loadGameQuestion(); });
-
-    // Poll Events
-    document.getElementById('submitPoll')?.addEventListener('click', () => {
+    document.getElementById('submitPoll')?.addEventListener('click', async () => {
       const sel = document.querySelector('input[name="aiPoll"]:checked');
       if (!sel) return;
-      const data = storage.get('mindos_poll_v3') || { for: 0, neutral: 0, against: 0 };
-      data[sel.value]++;
-      storage.set('mindos_poll_v3', data);
-      syncPollUI();
+      const btn = document.getElementById('submitPoll');
+      btn.textContent = "...";
+      btn.disabled = true;
+      storage.set('mindos_poll_v3_voted', true);
+      try {
+        await fetch(POLL_API_URL + "?vote=" + sel.value);
+        syncPollUI();
+      } catch(e) {
+        syncPollUI();
+      }
     });
-
-    // FAQ Accordion
     document.querySelectorAll('.faq-question').forEach(q => {
       q.addEventListener('click', () => {
         const active = q.classList.contains('active');
@@ -1938,15 +1778,11 @@ function getT(lang) { return translations[lang] || translations.en; }
         if (!active) q.classList.add('active');
       });
     });
-
-    // Share Button
     document.getElementById('shareButton')?.addEventListener('click', () => {
       const t = getT(currentLang);
       if (navigator.share) navigator.share({ title: document.title, text: t.subhead, url: window.location.href }).catch(()=>{});
       else { navigator.clipboard.writeText(window.location.href); alert("URL copied!"); }
     });
-
-    // CTA Bar Scroll
     window.addEventListener('scroll', () => {
       const bar = document.getElementById('globalCTABar');
       if (window.scrollY > 800) bar.classList.add('visible');
