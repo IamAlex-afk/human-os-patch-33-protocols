@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,12 +9,8 @@
   <meta name="author" content="Aleksei Sergeevich Bitkin">
   <meta name="robots" content="index, follow">
   <meta name="yandex-verification" content="5356814ecf72e704">
-
-  <!-- Исправленная CSP: удалено frame-ancestors для устранения ошибки в консоли (Best Practices 100/100) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://script.google.com https://script.googleusercontent.com; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://script.google.com https://script.googleusercontent.com;">
-
   <link rel="canonical" id="dynamicCanonical" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/">
-  
   <link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/">
   <link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/">
   <link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/?lang=ru">
@@ -21,7 +18,6 @@
   <link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/?lang=de">
   <link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/?lang=fr">
   <link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/?lang=ja">
-
   <meta property="og:url" id="dynamicOgUrl" content="https://iamalex-afk.github.io/human-os-patch-33-protocols/">
   <meta property="og:title" id="dynamicOgTitle" content="Free AI Dependency Test – Global Voting | Mind-OS">
   <meta property="og:description" id="dynamicOgDescription" content="Anonymous self-assessment based on LLM-D12, AIAS and AIRD scales. No signup, no tracking.">
@@ -30,19 +26,37 @@
   <meta property="og:image:height" content="630">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <meta name="theme-color" content="#0b100d">
-
-  <!-- Preconnect и Preload для максимальной скорости (исправление блокировки отрисовки) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" as="style">
-  <link rel="preload" href="css/style.css" as="style">
-  
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Free AI Dependency Test | Mind-OS",
+    "url": "https://iamalex-afk.github.io/human-os-patch-33-protocols/",
+    "description": "Scientifically-based anonymous self-assessment of AI dependency, fear of AI, and digital burnout.",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Any",
+    "author": {
+      "@type": "Person",
+      "name": "Aleksei Sergeevich Bitkin",
+      "url": "https://orcid.org/0009-0002-7986-3812"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
 </head>
 <body>
 <noscript>
@@ -51,18 +65,12 @@
     <p>This interactive assessment runs entirely in your browser to protect your privacy. JavaScript is required.</p>
   </div>
 </noscript>
-
 <main class="container">
-  <!-- Резервируем 40px под переключатель языков -->
   <div class="lang-bar" id="langBar" style="min-height: 40px;"></div>
-
-  <!-- ФИКС CLS: Жестко резервируем высоту шапки, чтобы она не прыгала при вставке текста скриптом -->
   <header style="min-height: 150px; display: flex; flex-direction: column; justify-content: center;">
     <h1 id="mainTitle" style="min-height: 45px; margin-bottom: 0.5rem;"></h1>
     <div class="subhead" id="subheadText" style="min-height: 50px;"></div>
   </header>
-
-  <!-- ФИКС CLS: Забронировано 120px высоты для навигации -->
   <nav aria-label="Table of Contents" class="info-box" style="padding:1rem 2rem;margin-bottom:2.2rem; min-height: 120px;">
     <ul style="list-style:none;display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;padding:0;font-weight:600;">
       <li><a href="#test-section" class="book-link" style="text-decoration:none;">📋 Assessment</a></li>
@@ -73,8 +81,6 @@
       <li><a href="#faq-section" class="book-link" style="text-decoration:none;">❓ FAQ</a></li>
     </ul>
   </nav>
-
-  <!-- ФИКС CLS: Бронируем 250px для вводного текста -->
   <section class="info-box" style="min-height: 250px;">
     <h2 id="infoTitle" style="min-height: 30px;"></h2>
     <p id="infoPara1" style="margin-bottom:1rem; min-height: 45px;"></p>
@@ -82,7 +88,6 @@
     <p id="infoPara3" style="margin-bottom:1.5rem; min-height: 45px;"></p>
     <p class="disclaimer-micro" id="infoDisclaimer" style="min-height: 20px;"></p>
   </section>
-
   <div class="overall-progress" id="overallProgress">
     <div class="overall-progress-track">
       <div class="overall-progress-fill" id="overallProgressFill" style="width: 0%;"></div>
@@ -92,7 +97,6 @@
       <span id="overallProgressCount"></span>
     </div>
   </div>
-
   <section class="test-card" id="test-section">
     <div class="test-title"><span>🧠</span><h2 id="axis1Title" style="margin:0;"></h2></div>
     <div class="test-desc" id="axis1Desc"></div>
@@ -101,7 +105,6 @@
     <div id="q1Container"></div>
     <div id="r1" class="result"></div>
   </section>
-
   <section class="test-card">
     <div class="test-title"><span>💬</span><h2 id="axis2Title" style="margin:0;"></h2></div>
     <div class="test-desc" id="axis2Desc"></div>
@@ -110,7 +113,6 @@
     <div id="q2Container"></div>
     <div id="r2" class="result"></div>
   </section>
-
   <section class="test-card">
     <div class="test-title"><span>⚙️</span><h2 id="axis3Title" style="margin:0;"></h2></div>
     <div class="test-desc" id="axis3Desc"></div>
@@ -119,7 +121,6 @@
     <div id="q3Container"></div>
     <div id="r3" class="result"></div>
   </section>
-
   <section class="fear-test-card">
     <div class="test-title"><span>😨</span><h2 id="fearTitle" style="margin:0;"></h2></div>
     <div class="test-desc" id="fearDesc"></div>
@@ -128,7 +129,6 @@
     <div id="qFearContainer"></div>
     <div id="fearResult" class="result"></div>
   </section>
-
   <div class="overall-result" id="overallBlock">
     <h2 id="overallTitle"></h2>
     <div class="overall-archetype" id="overallArchetype"></div>
@@ -139,7 +139,6 @@
       <button id="resetTestButton" class="btn-nav" style="display:none;margin:0;">↺ <span id="resetBtnText">Restart</span></button>
     </div>
   </div>
-
   <section class="tracker-section" id="tracker-section">
     <h2 id="trackerTitle"></h2>
     <p id="trackerDesc" style="margin-bottom:1.5rem;"></p>
@@ -161,7 +160,6 @@
       <div id="trackerSummary"></div>
     </div>
   </section>
-
   <section class="game-block" id="game-section">
     <h2 id="gameTitle"></h2>
     <p id="gameDesc" style="margin-bottom:1.5rem;"></p>
@@ -177,7 +175,6 @@
     </div>
     <p style="font-size:0.9rem; color:var(--text-dim); margin-top:1rem; font-weight:600;">✅ <span id="gameScoreLabel"></span> <span id="gameScore">0</span> / <span id="gameTotal">0</span></p>
   </section>
-
   <section class="poll-block" id="poll-section" style="border-left: 3px solid var(--accent);">
     <h2 id="pollTitle"></h2>
     <p id="pollDesc" style="margin-bottom:1.5rem;"></p>
@@ -203,13 +200,11 @@
       </div>
     </div>
   </section>
-
   <section class="protocol-section" id="protocols-section">
     <h2 id="protocolsTitle"></h2>
     <p id="protocolsDesc"></p>
     <div class="protocol-grid" id="protocolGrid"></div>
   </section>
-
   <section class="info-box" style="border-left:3px solid var(--accent)">
     <h2 style="color:var(--accent)">🔗 Mind-OS Ecosystem (Verified Nodes)</h2>
     <p style="margin-bottom:1.5rem;color:var(--text-dim)">Every link is a permanent, citable record.</p>
@@ -223,7 +218,6 @@
       <li style="background:var(--bg); border:1px solid var(--border); border-radius:0.75rem; padding:1.2rem;"><strong>👤 Author Profile</strong><br><span style="font-size:0.85rem;opacity:0.9">Aleksei Sergeevich Bitkin</span><br><a href="https://orcid.org/0009-0002-7986-3812" target="_blank" rel="noopener" class="book-link">ORCID Record</a></li>
     </ul>
   </section>
-
   <section class="ai-faq-section" id="ai-faq-section">
     <h2 id="aiFaqTitle"></h2>
     <div class="faq-item">
@@ -247,7 +241,6 @@
       <div class="faq-answer" id="faqAiDangerA"></div>
     </div>
   </section>
-
   <section class="faq-section" id="faq-section">
     <h2 id="faqTitle"></h2>
     <div class="faq-item">
@@ -283,7 +276,6 @@
       <div class="faq-answer" id="faqA8"></div>
     </div>
   </section>
-
   <div class="how-it-works text-center">
     <h2 id="howTitle"></h2>
     <p id="howText" style="margin-bottom:1.5rem;"></p>
@@ -293,7 +285,6 @@
       <span id="trustAnonymous">🧾</span>
     </div>
   </div>
-
   <footer>
     <div class="text-center" style="margin-bottom:2rem;">
       <a href="https://ko-fi.com/alekseisergeevich" target="_blank" rel="noopener" class="donate-link" id="donateLink">☕ <span id="donateText"></span></a>
@@ -301,12 +292,9 @@
     <p id="footerText" style="font-size:0.9rem; opacity:0.8;"></p>
   </footer>
 </main>
-
 <div class="cta-bar" id="globalCTABar">
   <a href="#" id="ctaBarLink" class="book-link" target="_blank" rel="noopener" style="display:inline-block; width:100%; max-width:400px; text-align:center; font-size:1.1rem; padding:1rem;">⚡ <span id="ctaBarText"></span></a>
 </div>
-
-<!-- Скрипты загружаются в фоне, не блокируя макет -->
 <script src="js/config.js" defer></script>
 <script src="js/storage.js" defer></script>
 <script src="js/translations.js" defer></script>
@@ -317,3 +305,4 @@
 <script src="js/main.js" defer></script>
 </body>
 </html>
+```
