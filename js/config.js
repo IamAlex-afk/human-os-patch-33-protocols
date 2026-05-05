@@ -4,7 +4,7 @@ const CONFIG = {
   MAX_AXIS: 32,
   TOTAL_MAX: 96,
   FEAR_MAX: 16,
-  // ОБНОВЛЕННАЯ ССЫЛКА (Версия 3)
+  // Твоя проверенная ссылка (Версия 3)
   POLL_API_URL: "https://script.google.com/macros/s/AKfycbxze15u0M-8LrpJuwSVMAIbAGovp_cB9auqW6rsDY_lr_ZM5iiMjSr2__7RzJcD3p6S7A/exec",
   STORAGE_KEYS: {
     TRACKER: 'mindos_tracker_v3',
