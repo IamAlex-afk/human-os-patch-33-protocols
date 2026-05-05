@@ -1,0 +1,21 @@
+{
+  "name": "Mind-OS AI Dependency Self-Assessment",
+  "short_name": "Mind-OS",
+  "description": "Free anonymous test to measure AI dependency and cognitive offloading",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0b100d",
+  "theme_color": "#00e57a",
+  "icons": [
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    }
+  ]
+}
