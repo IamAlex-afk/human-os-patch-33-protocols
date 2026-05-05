@@ -755,10 +755,23 @@ input[type="radio"]:focus-visible {
     justify-content: center;
   }
 }
-/* Резервируем место под контент, чтобы избежать прыжков (CLS) */
+/* Фикс CLS: Резервируем место под динамический контент */
 #q1Container, #q2Container, #q3Container, #qFearContainer {
-  min-height: 350px;
+  min-height: 380px;
+  content-visibility: auto;
+  contain-intrinsic-size: 380px;
 }
+
 .protocol-grid {
-  min-height: 800px; /* Для 33 протоколов */
+  min-height: 1000px; /* Резерв под список протоколов */
+}
+
+.poll-block {
+  min-height: 250px; /* Место под опрос */
+}
+
+/* Улучшаем контрастность для Accessibility 100/100 */
+section.info-box a, .book-link {
+  font-weight: 700;
+  text-decoration: underline;
 }
