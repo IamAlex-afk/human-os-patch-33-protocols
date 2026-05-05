@@ -755,3 +755,10 @@ input[type="radio"]:focus-visible {
     justify-content: center;
   }
 }
+/* Резервируем место под контент, чтобы избежать прыжков (CLS) */
+#q1Container, #q2Container, #q3Container, #qFearContainer {
+  min-height: 350px;
+}
+.protocol-grid {
+  min-height: 800px; /* Для 33 протоколов */
+}
