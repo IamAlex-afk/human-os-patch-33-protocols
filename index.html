@@ -297,14 +297,12 @@
   <a href="#" id="ctaBarLink" class="book-link" target="_blank" rel="noopener" style="display:inline-block; width:100%; max-width:400px; text-align:center; font-size:1.1rem; padding:1rem;">⚡ <span id="ctaBarText"></span></a>
 </div>
 
-<!-- Scripts -->
-<script src="js/config.js"></script>
-<script src="js/storage.js"></script>
-<script src="js/translations.js"></script>
-<script src="js/quiz.js"></script>
-<script src="js/tracker.js"></script>
-<script src="js/game.js"></script>
-<script src="js/poll.js"></script>
-<script src="js/main.js"></script>
-</body>
-</html>
+<!-- Scripts с атрибутом defer загружаются в фоне, не тормозя отрисовку текста -->
+<script src="js/config.js" defer></script>
+<script src="js/storage.js" defer></script>
+<script src="js/translations.js" defer></script>
+<script src="js/quiz.js" defer></script>
+<script src="js/tracker.js" defer></script>
+<script src="js/game.js" defer></script>
+<script src="js/poll.js" defer></script>
+<script src="js/main.js" defer></script>
