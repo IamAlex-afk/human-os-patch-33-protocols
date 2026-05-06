@@ -43,7 +43,7 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <meta name="theme-color" content="#0b100d">
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="site.webmanifest">
 
   <!-- Быстрая загрузка шрифтов и стилей без блокировки -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -345,5 +345,14 @@
 <script src="js/game.js" defer></script>
 <script src="js/poll.js" defer></script>
 <script src="js/main.js" defer></script>
+  <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./sw.js')
+        .then(reg => console.log('Mind-OS: Engine Online'))
+        .catch(err => console.log('Mind-OS: Engine Offline', err));
+    });
+  }
+</script>
 </body>
 </html>
