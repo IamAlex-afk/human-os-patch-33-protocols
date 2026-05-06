@@ -332,28 +332,34 @@
     <p id="footerText" style="font-size:0.9rem; opacity:0.8;"></p>
   </footer>
 </main>
-
+<!-- Кнопка для удаления локальных данных -->
+<div style="text-align: center; margin-bottom: 1.5rem;">
+  <button onclick="PrivacyShield.clearAll()" style="background: none; border: 1px solid #ff4444; color: #ff4444; padding: 8px 16px; border-radius: 20px; cursor: pointer; font-family: inherit; font-size: 0.9rem; transition: 0.3s;">
+    🗑️ Стереть мои данные
+  </button>
+  
+</div>
 <div class="cta-bar" id="globalCTABar">
   <a href="#" id="ctaBarLink" class="book-link" target="_blank" rel="noopener" style="display:inline-block; width:100%; max-width:400px; text-align:center; font-size:1.1rem; padding:1rem;">⚡ <span id="ctaBarText"></span></a>
 </div>
 
 <script src="js/config.js" defer></script>
-<script src="js/storage.js" defer></script>
-<script src="js/translations.js" defer></script>
-<script src="js/quiz.js" defer></script>
-<script src="js/tracker.js" defer></script>
-<script src="js/game.js" defer></script>
-<script src="js/poll.js" defer></script>
-  <script src="js/privacy.js" defer></script>
-<script src="js/main.js" defer></script>
-  <script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('./sw.js')
-        .then(reg => console.log('Mind-OS: Engine Online'))
-        .catch(err => console.log('Mind-OS: Engine Offline', err));
-    });
-  }
-</script>
-</body>
+    <script src="js/storage.js" defer></script>
+    <script src="js/translations.js" defer></script>
+    <script src="js/quiz.js" defer></script>
+    <script src="js/tracker.js" defer></script>
+    <script src="js/game.js" defer></script>
+    <script src="js/poll.js" defer></script>
+    <script src="js/privacy.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js')
+            .then(reg => console.log('Mind-OS: Engine Online'))
+            .catch(err => console.log('Mind-OS: Engine Offline', err));
+        });
+      }
+    </script>
+  </body>
 </html>
