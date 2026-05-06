@@ -1,21 +1,26 @@
 {
-  "name": "Mind-OS AI Dependency Self-Assessment",
+  "name": "Mind-OS: 33 Protocols for Cognitive Sovereignty",
   "short_name": "Mind-OS",
-  "description": "Free anonymous test to measure AI dependency and cognitive offloading",
-  "start_url": "./",
+  "description": "Privacy-first AI dependency assessment & cognitive debugging. No data leaves your device.",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#0b100d",
   "theme_color": "#00e57a",
+  "orientation": "portrait-primary",
+  "scope": "./",
   "icons": [
-    {
-      "src": "apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png"
-    },
     {
       "src": "favicon.ico",
       "sizes": "32x32",
-      "type": "image/x-icon"
+      "type": "image/x-icon",
+      "purpose": "any"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
-  ]
+  ],
+  "categories": ["health", "education", "productivity"]
 }
