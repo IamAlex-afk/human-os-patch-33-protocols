@@ -1,71 +1,130 @@
-/* ====== Mind-OS Cognitive Load Tracker ====== */
+/* ====== Mind-OS Tracker Module v3.0 ====== */
+/* UTF-8. Daily cognitive load logging with 7-day chart. i18n-aware. */
 
 const Tracker = (function() {
-  const { STORAGE_KEYS } = CONFIG;
-  let currentLang = CONFIG.DEFAULT_LANG;
+  'use strict';
 
-  function setLang(lang) { currentLang = lang; }
+  const { STORAGE_KEYS } = window.CONFIG || {};
 
-  function updateUI() {
-    const t = getT(currentLang);
-    const data = storage.get(STORAGE_KEYS.TRACKER) || {};
-    const today = new Date().toISOString().slice(0, 10);
-    const last7 = [];
-    for (let i = 6; i >= 0; i--) {
-      const d = new Date();
-      d.setDate(d.getDate() - i);
-      const key = d.toISOString().slice(0, 10);
-      last7.push({ date: key, score: data[key] ?? null });
+  function getData() {
+    return window.Storage ? (Storage.get(STORAGE_KEYS.TRACKER) || []) : [];
+  }
+
+  function saveData(data) {
+    if (window.Storage) Storage.set(STORAGE_KEYS.TRACKER, data);
+  }
+
+  function todayStr() {
+    var d = new Date();
+    return d.toISOString().split('T')[0];
+  }
+
+  function formatDate(s) {
+    var parts = s.split('-');
+    return parts[2] + '.' + parts[1];
+  }
+
+  function addEntry(score) {
+    var data = getData();
+    var today = todayStr();
+    var found = false;
+    for (var i = 0; i < data.length; i++) {
+      if (data[i].date === today) {
+        data[i].score = score;
+        found = true;
+        break;
+      }
+    }
+    if (!found) data.push({ date: today, score: score });
+    if (data.length > 30) data = data.slice(-30);
+    saveData(data);
+    render();
+  }
+
+  function clearData() {
+    if (window.Storage) Storage.remove(STORAGE_KEYS.TRACKER);
+    render();
+  }
+
+  function render() {
+    var data = getData();
+    var container = document.getElementById('trackerChartContainer');
+    var summary = document.getElementById('trackerSummary');
+    var t = window.I18n ? I18n.t : function(k, v) { return k; };
+
+    if (!data || data.length === 0) {
+      if (container) container.innerHTML = '<p class="no-data">' + t('noData') + '</p>';
+      if (summary) summary.innerHTML = '';
+      return;
     }
 
-    const validScores = last7.filter(d => d.score !== null).map(d => d.score);
-    const avg = validScores.length ? (validScores.reduce((a, b) => a + b, 0) / validScores.length).toFixed(1) : null;
+    var last7 = data.slice(-7);
+    var avg = last7.reduce(function(s, e) { return s + e.score; }, 0) / last7.length;
 
-    const chartDiv = document.getElementById('trackerChartContainer');
-    let chartHtml = '<div class="tracker-chart">';
-    last7.forEach(d => {
-      const height = d.score !== null ? (d.score / 10) * 80 + 10 : 8;
-      const opacity = d.score !== null ? '1' : '0.2';
-      chartHtml += `<div class="chart-bar"><div class="bar-fill" style="height:${height}px; opacity:${opacity};"></div><div class="bar-label">${d.date.slice(5)}</div></div>`;
-    });
-    chartHtml += '</div>';
-    if (chartDiv) chartDiv.innerHTML = chartHtml;
-
-    let trendText = t.noData;
-    if (validScores.length >= 3) {
-      const mid = Math.floor(validScores.length / 2);
-      const avg1 = validScores.slice(0, mid).reduce((a, b) => a + b, 0) / mid;
-      const avg2 = validScores.slice(mid).reduce((a, b) => a + b, 0) / (validScores.length - mid);
-      if (avg2 > avg1 + 0.5) trendText = t.trendIncreasing;
-      else if (avg2 < avg1 - 0.5) trendText = t.trendDecreasing;
-      else trendText = t.trendStable;
+    var trendMsg = '';
+    if (last7.length >= 3) {
+      var half = Math.floor(last7.length / 2);
+      var fAvg = last7.slice(0, half).reduce(function(s, e) { return s + e.score; }, 0) / half;
+      var sAvg = last7.slice(half).reduce(function(s, e) { return s + e.score; }, 0) / (last7.length - half);
+      if (sAvg > fAvg + 0.5) trendMsg = t('trendIncreasing');
+      else if (sAvg < fAvg - 0.5) trendMsg = t('trendDecreasing');
+      else trendMsg = t('trendStable');
     }
 
-    const summaryDiv = document.getElementById('trackerSummary');
-    if (summaryDiv) summaryDiv.innerHTML = `<div style="margin-top:1rem;"><strong>${t.trackerSummaryPrefix} ${avg ?? '—'}</strong><br><span style="font-size:0.9rem;color:var(--text-dim);">${trendText}</span></div>`;
+    if (container) {
+      var html = '<div class="chart-wrapper">';
+      html += '<div class="chart-row"><span class="chart-label">10</span>';
+      for (var i = 0; i < last7.length; i++) {
+        html += '<span class="chart-bar ' + (last7[i].score >= 10 ? 'filled' : 'empty') + '"></span>';
+      }
+      html += '</div>';
+      for (var row = 8; row >= 0; row -= 2) {
+        html += '<div class="chart-row"><span class="chart-label">' + row + '</span>';
+        for (var i = 0; i < last7.length; i++) {
+          html += '<span class="chart-bar ' + (last7[i].score >= row ? 'filled' : 'empty') + '"></span>';
+        }
+        html += '</div>';
+      }
+      html += '<div class="chart-row"><span class="chart-label"></span>';
+      for (var i = 0; i < last7.length; i++) {
+        html += '<span class="chart-date">' + formatDate(last7[i].date) + '</span>';
+      }
+      html += '</div></div>';
+      container.innerHTML = html;
+    }
 
-    const disp = document.getElementById('trackerValueDisplay');
-    const scoreInp = document.getElementById('trackerScore');
-    if (disp) disp.textContent = data[today] ?? scoreInp.value;
+    if (summary) {
+      summary.innerHTML = '<p><strong>' + t('trackerSummaryPrefix') + '</strong>' + avg.toFixed(1) + '/10</p>' +
+        (trendMsg ? '<p class="trend">' + trendMsg + '</p>' : '');
+    }
   }
 
-  function saveEntry() {
-    const tSlider = document.getElementById('trackerScore');
-    const today = new Date().toISOString().slice(0, 10);
-    const data = storage.get(STORAGE_KEYS.TRACKER) || {};
-    data[today] = parseInt(tSlider.value);
-    const keys = Object.keys(data).sort().slice(-30);
-    const trimmed = {}; keys.forEach(k => trimmed[k] = data[k]);
-    storage.set(STORAGE_KEYS.TRACKER, trimmed);
-    updateUI();
+  function init() {
+    var slider = document.getElementById('trackerScore');
+    var display = document.getElementById('trackerValueDisplay');
+    var saveBtn = document.getElementById('saveTrackerEntry');
+    var resetBtn = document.getElementById('resetTrackerData');
+
+    if (slider && display) {
+      slider.addEventListener('input', function() { display.textContent = this.value; });
+    }
+    if (saveBtn) {
+      saveBtn.addEventListener('click', function() {
+        var score = slider ? parseInt(slider.value, 10) : 5;
+        addEntry(score);
+      });
+    }
+    if (resetBtn) {
+      resetBtn.addEventListener('click', function() {
+        if (confirm(window.I18n ? I18n.t('resetBtn') + '?' : 'Reset all data?')) {
+          clearData();
+        }
+      });
+    }
+    render();
   }
 
-  function resetData() {
-    storage.remove(STORAGE_KEYS.TRACKER);
-    updateUI();
-  }
-
-  return { setLang, updateUI, saveEntry, resetData };
+  return { init, addEntry, clearData, render };
 })();
 
 window.Tracker = Tracker;
