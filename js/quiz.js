@@ -1,299 +1,376 @@
-/* ====== Mind-OS Quiz Engine v3.1 ====== */
-/* Safely handles missing CONFIG, Storage, I18n. */
+/* ====== Mind-OS Quiz Engine v3.0 ====== */
 
 const Quiz = (function() {
-'use strict';
+  'use strict';
 
-const CONFIG = window.CONFIG || {};
-const STORAGE_KEYS = CONFIG.STORAGE_KEYS || {
-TEST_ANSWERS: 'mindos_answers',
-TEST_COMPLETED: 'mindos_completed'
-};
-const MAX_AXIS = CONFIG.MAX_AXIS || 32;
-const FEAR_MAX = CONFIG.FEAR_MAX || 32;
+  const { MAX_AXIS, TOTAL_MAX, FEAR_MAX, STORAGE_KEYS } = CONFIG;
 
-const Store = {
-_ok: !!(window.Storage && window.Storage.get && window.Storage.set),
-get(key) { return this._ok ? window.Storage.get(key) || [] : []; },
-set(key, val) { if (this._ok) window.Storage.set(key, val); },
-remove(key) { if (this._ok) window.Storage.remove(key); }
-};
+  let currentLang = CONFIG.DEFAULT_LANG;
+  const COMPLETED_AXES = { a1: false, a2: false, a3: false };
+  const userAnswers = { a1: {}, a2: {}, a3: {}, fear: {} };
+  const wizardState = { a1: 0, a2: 0, a3: 0, fear: 0 };
 
-const I18N = {
-_ok: !!(window.I18n),
-t(key, params) { return this._ok ? window.I18n.t(key, params) : key; },
-raw(key) { return this._ok ? window.I18n.raw(key) || {} : {}; },
-getQuestions(axis) {
-if (this._ok) return window.I18n.getQuestions(axis) || [];
-if (axis === 'q1') return [
-'I rely on AI for memory recall',
-'I let AI complete my sentences',
-'I feel uneasy without AI access',
-'AI organises my schedule',
-'I trust AI suggestions blindly',
-'I prefer AI over human advice',
-'I check facts after AI gives answer',
-'I outsource thinking to AI'
-];
-if (axis === 'fearQ') return [
-'I worry AI will replace me',
-'I fear AI surpassing humans',
-'AI makes me anxious',
-'I feel threatened by AI progress',
-'I am concerned about AI ethics',
-'I believe AI should be restricted'
-];
-return ['Question 1','Question 2','Question 3','Question 4','Question 5','Question 6','Question 7','Question 8'];
-},
-getReverseKeys(axis) {
-if (this._ok && typeof window.I18n.getReverseKeys === 'function')
-return window.I18n.getReverseKeys(axis) || [];
-return [];
-},
-getOptions() {
-if (this._ok && typeof window.I18n.getOptions === 'function')
-return window.I18n.getOptions();
-return ['Never', 'Rarely', 'Sometimes', 'Often', 'Always'];
-}
-};
+  function getT() {
+    return window.I18n ? (I18n._cache()[currentLang] || {}) : {};
+  }
 
-let state = {};
+  function loadPersisted() {
+    const saved = Storage.get(STORAGE_KEYS.TEST_ANSWERS);
+    const savedWiz = Storage.get(STORAGE_KEYS.TEST_WIZARD);
+    const savedComp = Storage.get(STORAGE_KEYS.TEST_COMPLETED);
+    if (saved) Object.assign(userAnswers, saved);
+    if (savedWiz) Object.assign(wizardState, savedWiz);
+    if (savedComp) Object.assign(COMPLETED_AXES, savedComp);
+  }
 
-function getAnswers(axis) {
-return Store.get(STORAGE_KEYS.TEST_ANSWERS + '_' + axis);
-}
+  function persist() {
+    Storage.set(STORAGE_KEYS.TEST_ANSWERS, userAnswers);
+    Storage.set(STORAGE_KEYS.TEST_WIZARD, wizardState);
+    Storage.set(STORAGE_KEYS.TEST_COMPLETED, COMPLETED_AXES);
+  }
 
-function saveAnswers(axis, arr) {
-Store.set(STORAGE_KEYS.TEST_ANSWERS + '_' + axis, arr);
-}
+  function clearAll() {
+    Storage.remove(STORAGE_KEYS.TEST_ANSWERS);
+    Storage.remove(STORAGE_KEYS.TEST_WIZARD);
+    Storage.remove(STORAGE_KEYS.TEST_COMPLETED);
+    Object.keys(userAnswers).forEach(k => userAnswers[k] = {});
+    Object.keys(wizardState).forEach(k => wizardState[k] = 0);
+    Object.keys(COMPLETED_AXES).forEach(k => COMPLETED_AXES[k] = false);
+  }
 
-function clearAll() {
-['q1', 'q2', 'q3', 'fearQ'].forEach(function(axis) {
-Store.remove(STORAGE_KEYS.TEST_ANSWERS + '_' + axis);
-});
-state = {};
-}
+  function escapeHtml(str) {
+    return String(str).replace(/[&<>"']/g, m => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' })[m]);
+  }
 
-function build(axis, containerId, progressId, resultId, maxScore) {
-const container = document.getElementById(containerId);
-if (!container) return;
+  function setLang(lang) { currentLang = lang; }
 
-const questions = I18N.getQuestions(axis);
-const reverseKeys = I18N.getReverseKeys(axis);
-const options = I18N.getOptions();
-const isFear = (axis === 'fearQ');
-const max = maxScore || (isFear ? FEAR_MAX : MAX_AXIS);
+  function getQuestions(axisPrefix) {
+    const t = getT();
+    return t[axisPrefix] || [];
+  }
 
-let answers = getAnswers(axis);
-let step = answers.length;
+  function getOptions() {
+    const t = getT();
+    return t.options || ['Never', 'Rarely', 'Sometimes', 'Often', 'Always'];
+  }
 
-function render() {
-container.innerHTML = '';
+  function renderWizard(containerId, questions, prefix) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    const currentIndex = wizardState[prefix];
+    const total = questions.length;
+    container.innerHTML = '';
 
-if (step < questions.length) {
-const qText = questions[step];
-const qDiv = document.createElement('div');
-qDiv.className = 'question';
+    if (prefix !== 'fear' && COMPLETED_AXES[prefix]) return;
 
-const qNum = document.createElement('p');
-qNum.className = 'progress-text';
-qNum.textContent = I18N.t('progressText', { answered: step+1, total: questions.length });
-qDiv.appendChild(qNum);
+    const t = getT();
+    const opts = getOptions();
+    const stepDiv = document.createElement('div');
+    stepDiv.className = 'question-step active';
 
-const qTextEl = document.createElement('h4');
-qTextEl.textContent = qText;
-qDiv.appendChild(qTextEl);
+    const qText = document.createElement('div');
+    qText.className = 'question-text';
+    qText.textContent = (currentIndex + 1) + '. ' + questions[currentIndex];
+    stepDiv.appendChild(qText);
 
-const optsDiv = document.createElement('div');
-optsDiv.className = 'options';
-options.forEach(function(opt, idx) {
-const label = document.createElement('label');
-label.className = 'option-label';
-const input = document.createElement('input');
-input.type = 'radio';
-input.name = axis + '_q' + step;
-input.value = idx;
-input.checked = (answers[step] !== undefined && answers[step] === idx);
-input.addEventListener('change', function() {
-answers[step] = idx;
-saveAnswers(axis, answers);
-});
-label.appendChild(input);
-label.appendChild(document.createTextNode(' ' + opt));
-optsDiv.appendChild(label);
-});
-qDiv.appendChild(optsDiv);
+    const optsDiv = document.createElement('div');
+    optsDiv.className = 'options';
 
-const btnDiv = document.createElement('div');
-btnDiv.style.marginTop = '1.5rem';
-btnDiv.style.display = 'flex';
-btnDiv.style.gap = '1rem';
-btnDiv.style.flexWrap = 'wrap';
+    opts.forEach(function(optText, i) {
+      const label = document.createElement('label');
+      label.className = 'option-label';
+      const currentVal = userAnswers[prefix][currentIndex];
+      if (currentVal === i.toString()) label.classList.add('selected');
 
-if (step > 0) {
-const prevBtn = document.createElement('button');
-prevBtn.className = 'btn-nav';
-prevBtn.textContent = I18N.t('prevBtn') || '← Back';
-prevBtn.addEventListener('click', function() {
-step--;
-render();
-});
-btnDiv.appendChild(prevBtn);
-}
+      const input = document.createElement('input');
+      input.type = 'radio';
+      input.name = prefix + '_' + currentIndex;
+      input.value = i;
+      if (currentVal === i.toString()) input.checked = true;
+      input.onchange = function(e) {
+        userAnswers[prefix][currentIndex] = e.target.value;
+        label.parentElement.querySelectorAll('.option-label').forEach(function(l) { l.classList.remove('selected'); });
+        label.classList.add('selected');
+        persist();
+        updateOverallProgress();
+        if (currentIndex < total - 1) {
+          setTimeout(function() { navigateWizard(prefix, 1, containerId, questions); }, 300);
+        } else {
+          renderWizard(containerId, questions, prefix);
+        }
+      };
 
-const nextBtn = document.createElement('button');
-nextBtn.className = 'btn-submit';
-if (step === questions.length - 1) {
-nextBtn.textContent = I18N.t('submitBtn') || 'Get Result';
-} else {
-nextBtn.textContent = I18N.t('nextBtn') || 'Next →';
-}
-nextBtn.addEventListener('click', function() {
-if (answers[step] === undefined) {
-alert(I18N.t('alertIncomplete') || 'Please answer the current question.');
-return;
-}
-step++;
-if (step >= questions.length) {
-saveAnswers(axis, answers);
-showResult();
-} else {
-render();
-}
-});
-btnDiv.appendChild(nextBtn);
-qDiv.appendChild(btnDiv);
-container.appendChild(qDiv);
+      label.appendChild(input);
+      label.appendChild(document.createTextNode(optText));
+      optsDiv.appendChild(label);
+    });
 
-const progressEl = document.getElementById(progressId);
-if (progressEl) {
-const pct = Math.round((step / questions.length) * 100);
-progressEl.innerHTML = '<div class="progress-track"><div class="progress-fill" style="width:' + pct + '%"></div></div>';
-}
-updateOverallProgress();
-} else {
-showResult();
-}
-}
+    stepDiv.appendChild(optsDiv);
 
-function showResult() {
-const score = computeScore(answers, reverseKeys);
-const pct = Math.round((score / max) * 100);
+    const navDiv = document.createElement('div');
+    navDiv.className = 'wizard-nav';
 
-const resultEl = document.getElementById(resultId);
-if (resultEl) {
-const level = getLevel(pct);
-const levelData = I18N.raw('fearLevels');
-let label = '', advice = '';
-if (isFear && levelData[level]) {
-label = levelData[level].name || '';
-advice = levelData[level].advice || '';
-} else {
-label = (I18N.t('scoreLabel') || 'Score') + ': ' + score + '/' + max;
-}
-const headingText = isFear ? (I18N.t('fearResultTitle') || 'Fear Index') : (I18N.t('scoreLabel') || 'Score');
-resultEl.innerHTML = '<div class="result-card">' +
-'<h3>' + headingText + ': ' + score + '/' + max + '</h3>' +
-'<p>' + (isFear ? label : pct + '%') + '</p>' +
-(advice ? '<p class="advice">' + advice + '</p>' : '') +
-'</div>';
-resultEl.style.display = 'block';
-}
+    const btnPrev = document.createElement('button');
+    btnPrev.className = 'btn-nav';
+    btnPrev.textContent = t.prevBtn || '← Back';
+    btnPrev.disabled = currentIndex === 0;
+    btnPrev.onclick = function() { navigateWizard(prefix, -1, containerId, questions); };
 
-Store.set(STORAGE_KEYS.TEST_COMPLETED + '_' + axis, true);
-container.innerHTML = '<p class="completed-msg">' + I18N.t('overallProgressText', { answered: questions.length, total: questions.length }) + '</p>';
-updateOverallProgress();
-}
+    let btnNext;
+    if (currentIndex < total - 1) {
+      btnNext = document.createElement('button');
+      btnNext.className = 'btn-nav';
+      btnNext.textContent = t.nextBtn || 'Next →';
+      btnNext.disabled = userAnswers[prefix][currentIndex] === undefined;
+      btnNext.onclick = function() { navigateWizard(prefix, 1, containerId, questions); };
+    } else {
+      btnNext = document.createElement('button');
+      btnNext.className = 'btn-submit';
+      btnNext.textContent = t.submitBtn || 'Get Result';
+      btnNext.disabled = userAnswers[prefix][currentIndex] === undefined;
+      btnNext.onclick = function() {
+        if (prefix === 'fear') finishFear(total);
+        else finishAxis(prefix, total);
+      };
+    }
 
-function getLevel(pct) {
-if (pct < 25) return 'low';
-if (pct < 50) return 'medium';
-if (pct < 75) return 'high';
-return 'veryHigh';
-}
+    navDiv.appendChild(btnPrev);
+    navDiv.appendChild(btnNext);
+    stepDiv.appendChild(navDiv);
+    container.appendChild(stepDiv);
 
-if (step >= questions.length && answers.length >= questions.length) {
-showResult();
-} else {
-render();
-}
-}
+    const pText = document.getElementById(prefix + 'Progress');
+    if (pText) {
+      const pt = t.progressText || 'Question {answered}/{total}';
+      pText.textContent = pt.replace('{answered}', currentIndex + 1).replace('{total}', total);
+    }
+  }
 
-function computeScore(answers, reverseKeys) {
-let total = 0;
-for (let i = 0; i < answers.length; i++) {
-if (answers[i] === undefined) continue;
-let val = Number(answers[i]);
-if (reverseKeys.includes(i)) val = 4 - val;
-total += val;
-}
-return total;
-}
+  function navigateWizard(prefix, direction, containerId, questions) {
+    wizardState[prefix] += direction;
+    persist();
+    renderWizard(containerId, questions, prefix);
+  }
 
-function getOverallScore() {
-const axes = ['q1', 'q2', 'q3'];
-let grandTotal = 0, grandMax = 0;
-axes.forEach(function(axis) {
-const questions = I18N.getQuestions(axis);
-const reverseKeys = I18N.getReverseKeys(axis);
-const answers = getAnswers(axis);
-const max = questions.length * 4;
-const score = computeScore(answers, reverseKeys);
-grandTotal += score;
-grandMax += max;
-});
-return { total: grandTotal, max: grandMax, pct: grandMax > 0 ? Math.round((grandTotal / grandMax) * 100) : 0 };
-}
+  function computeAxisScore(prefix, n) {
+    const t = getT();
+    const reverseIndices = (t.reverseKeys && t.reverseKeys[prefix]) || [];
+    let sum = 0;
+    for (let i = 0; i < n; i++) {
+      const val = userAnswers[prefix][i];
+      if (val === undefined) return null;
+      let score = parseInt(val);
+      if (reverseIndices.indexOf(i) !== -1) score = 4 - score;
+      sum += score;
+    }
+    return sum;
+  }
 
-function getFearScore() {
-const questions = I18N.getQuestions('fearQ');
-const answers = getAnswers('fearQ');
-let total = 0;
-for (let i = 0; i < answers.length; i++) {
-if (answers[i] !== undefined) total += Number(answers[i]);
-}
-const max = questions.length * 4;
-return { total, max, pct: max > 0 ? Math.round((total / max) * 100) : 0 };
-}
+  function finishAxis(prefix, total) {
+    const score = computeAxisScore(prefix, total);
+    if (score === null) {
+      const t = getT();
+      alert(t.alertIncomplete || 'Please answer the current question.');
+      return;
+    }
 
-function updateOverallProgress() {
-const axes = ['q1', 'q2', 'q3', 'fearQ'];
-let totalAnswered = 0, totalQuestions = 0;
-axes.forEach(function(axis) {
-const questions = I18N.getQuestions(axis);
-const answers = getAnswers(axis);
-totalQuestions += questions.length;
-for (let i = 0; i < questions.length; i++) {
-if (answers[i] !== undefined) totalAnswered++;
-}
-});
-const fill = document.getElementById('overallProgressFill');
-const label = document.getElementById('overallProgressLabel');
-const count = document.getElementById('overallProgressCount');
-if (fill) fill.style.width = (totalQuestions > 0 ? Math.round((totalAnswered / totalQuestions) * 100) : 0) + '%';
-if (label) label.textContent = I18N.t('overallProgressLabel') || 'Assessment Progress';
-if (count) count.textContent = totalAnswered + ' / ' + totalQuestions;
-}
+    const containerId = prefix === 'a1' ? 'q1Container' : (prefix === 'a2' ? 'q2Container' : 'q3Container');
+    const resId = prefix === 'a1' ? 'r1' : (prefix === 'a2' ? 'r2' : 'r3');
 
-function isComplete() {
-const axes = ['q1', 'q2', 'q3'];
-return axes.every(function(axis) {
-const questions = I18N.getQuestions(axis);
-const answers = getAnswers(axis);
-return answers.length >= questions.length && answers.every(function(a) { return a !== undefined; });
-});
-}
+    const container = document.getElementById(containerId);
+    if (container) container.style.display = 'none';
+    const progressEl = document.getElementById(prefix + 'Progress');
+    if (progressEl) progressEl.style.display = 'none';
 
-function getArchetype(pct) {
-const archetypes = I18N.raw('archetypes');
-if (pct < 33) return archetypes.low || { name: 'Digital Zen Master', advice: 'You maintain cognitive sovereignty.' };
-if (pct < 66) return archetypes.medium || { name: 'Balanced Navigator', advice: 'You lean on AI without losing yourself.' };
-return archetypes.high || { name: 'AI-Dependent Delegate', advice: 'You outsource much thinking to AI. Try a digital detox.' };
-}
+    const t = getT();
+    const ratio = score / MAX_AXIS;
+    let arch = t.archetypes.low;
+    if (ratio > 0.4 && ratio <= 0.7) arch = t.archetypes.medium;
+    if (ratio > 0.7) arch = t.archetypes.high;
 
-return {
-build, clearAll, getOverallScore, getFearScore, isComplete, getArchetype, updateOverallProgress
-};
+    const div = document.getElementById(resId);
+    if (div) {
+      div.style.display = 'block';
+      div.innerHTML = '<h3>' + escapeHtml(arch.name) + '</h3><p>' + escapeHtml(arch.advice) + '</p>';
+      div.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    COMPLETED_AXES[prefix] = true;
+    persist();
+    updateOverallProgress();
+    checkOverallReady();
+  }
+
+  function finishFear(total) {
+    const score = computeAxisScore('fear', total);
+    if (score === null) {
+      const t = getT();
+      alert(t.alertIncomplete || 'Please answer the current question.');
+      return;
+    }
+
+    const container = document.getElementById('qFearContainer');
+    if (container) container.style.display = 'none';
+    const progressEl = document.getElementById('fearProgress');
+    if (progressEl) progressEl.style.display = 'none';
+
+    const t = getT();
+    const div = document.getElementById('fearResult');
+    if (div) {
+      div.style.display = 'block';
+      let level = t.fearLevels.low;
+      if (score <= 4) level = t.fearLevels.low;
+      else if (score <= 8) level = t.fearLevels.medium;
+      else if (score <= 12) level = t.fearLevels.high;
+      else level = t.fearLevels.veryHigh;
+      div.innerHTML = '<h3>' + escapeHtml(t.fearResultTitle || 'Fear Index') + ': ' + escapeHtml(level.name) + '</h3><p>' + escapeHtml(level.advice) + '</p>';
+      div.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  function checkOverallReady() {
+    if (COMPLETED_AXES.a1 && COMPLETED_AXES.a2 && COMPLETED_AXES.a3) {
+      const t = getT();
+      const s1 = computeAxisScore('a1', 8);
+      const s2 = computeAxisScore('a2', 8);
+      const s3 = computeAxisScore('a3', 8);
+      if (s1 === null || s2 === null || s3 === null) return;
+
+      const totalScore = s1 + s2 + s3;
+      const ratio = totalScore / TOTAL_MAX;
+
+      let arch = t.archetypes.low;
+      if (ratio > 0.4 && ratio <= 0.7) arch = t.archetypes.medium;
+      if (ratio > 0.7) arch = t.archetypes.high;
+
+      const block = document.getElementById('overallBlock');
+      if (block) {
+        block.style.display = 'block';
+        const archEl = document.getElementById('overallArchetype');
+        const pctEl = document.getElementById('overallPercentile');
+        const adviceEl = document.getElementById('overallAdvice');
+        if (archEl) archEl.textContent = arch.name;
+        if (pctEl) pctEl.textContent = (t.overallPercentileLabel || 'Better than {percentile}%').replace('{percentile}', arch.percentile || Math.round((1-ratio)*100));
+        if (adviceEl) adviceEl.textContent = arch.advice;
+      }
+
+      const resetBtn = document.getElementById('resetTestButton');
+      if (resetBtn) resetBtn.style.display = 'inline-flex';
+
+      setTimeout(function() {
+        const ob = document.getElementById('overallBlock');
+        if (ob) ob.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 500);
+    }
+  }
+
+  function updateOverallProgress() {
+    const t = getT();
+    const totalQuestions = 28;
+    let answered = 0;
+    ['a1', 'a2', 'a3', 'fear'].forEach(function(axis) {
+      answered += Object.keys(userAnswers[axis]).length;
+    });
+
+    const progressEl = document.getElementById('overallProgress');
+    const progressFill = document.getElementById('overallProgressFill');
+    const progressLabel = document.getElementById('overallProgressLabel');
+    const progressCount = document.getElementById('overallProgressCount');
+
+    if (progressEl && answered > 0) {
+      progressEl.classList.add('visible');
+      const pct = (answered / totalQuestions) * 100;
+      if (progressFill) progressFill.style.width = pct + '%';
+      if (progressLabel) progressLabel.textContent = t.overallProgressLabel || 'Assessment Progress';
+      if (progressCount) {
+        const pt = t.overallProgressText || '{answered} of {total} answered';
+        progressCount.textContent = pt.replace('{answered}', answered).replace('{total}', totalQuestions);
+      }
+    }
+  }
+
+  function resetTest() {
+    clearAll();
+    ['q1Container', 'q2Container', 'q3Container', 'qFearContainer'].forEach(function(id) {
+      const el = document.getElementById(id);
+      if (el) el.style.display = 'block';
+    });
+    ['r1', 'r2', 'r3', 'fearResult', 'overallBlock'].forEach(function(id) {
+      const el = document.getElementById(id);
+      if (el) el.style.display = 'none';
+    });
+    ['a1Progress', 'a2Progress', 'a3Progress', 'fearProgress'].forEach(function(id) {
+      const el = document.getElementById(id);
+      if (el) el.style.display = 'block';
+    });
+    const resetBtn = document.getElementById('resetTestButton');
+    if (resetBtn) resetBtn.style.display = 'none';
+    const progressEl = document.getElementById('overallProgress');
+    if (progressEl) progressEl.classList.remove('visible');
+
+    build('q1', 'q1Container', 'a1Progress', 'r1', MAX_AXIS);
+    build('q2', 'q2Container', 'a2Progress', 'r2', MAX_AXIS);
+    build('q3', 'q3Container', 'a3Progress', 'r3', MAX_AXIS);
+    build('fearQ', 'qFearContainer', 'fearProgress', 'fearResult', FEAR_MAX);
+  }
+
+  function build(axisPrefix, containerId, progressId, resultId, maxScore) {
+    const questions = getQuestions(axisPrefix);
+    if (questions.length === 0) {
+      console.warn('[Quiz] No questions found for ' + axisPrefix);
+      return;
+    }
+    const prefix = axisPrefix === 'fearQ' ? 'fear' : (axisPrefix === 'q1' ? 'a1' : (axisPrefix === 'q2' ? 'a2' : 'a3'));
+    renderWizard(containerId, questions, prefix);
+  }
+
+  function isComplete() {
+    return COMPLETED_AXES.a1 && COMPLETED_AXES.a2 && COMPLETED_AXES.a3;
+  }
+
+  function getOverallScore() {
+    const s1 = computeAxisScore('a1', 8);
+    const s2 = computeAxisScore('a2', 8);
+    const s3 = computeAxisScore('a3', 8);
+    if (s1 === null || s2 === null || s3 === null) return { total: 0, max: TOTAL_MAX, pct: 0 };
+    const total = s1 + s2 + s3;
+    return { total: total, max: TOTAL_MAX, pct: Math.round((total / TOTAL_MAX) * 100) };
+  }
+
+  function getArchetype(pct) {
+    const t = getT();
+    const ratio = pct / 100;
+    let arch = t.archetypes.low;
+    if (ratio > 0.4 && ratio <= 0.7) arch = t.archetypes.medium;
+    if (ratio > 0.7) arch = t.archetypes.high;
+    return arch;
+  }
+
+  function getFearScore() {
+    const score = computeAxisScore('fear', 4);
+    if (score === null) return { total: 0, max: FEAR_MAX, pct: 0 };
+    return { total: score, max: FEAR_MAX, pct: Math.round((score / FEAR_MAX) * 100) };
+  }
+
+  return {
+    loadPersisted: loadPersisted,
+    setLang: setLang,
+    renderWizard: renderWizard,
+    finishAxis: finishAxis,
+    finishFear: finishFear,
+    checkOverallReady: checkOverallReady,
+    updateOverallProgress: updateOverallProgress,
+    resetTest: resetTest,
+    clearAll: clearAll,
+    build: build,
+    isComplete: isComplete,
+    getOverallScore: getOverallScore,
+    getArchetype: getArchetype,
+    getFearScore: getFearScore,
+    COMPLETED_AXES: COMPLETED_AXES,
+    userAnswers: userAnswers,
+    wizardState: wizardState
+  };
 })();
 
 window.Quiz = Quiz;
