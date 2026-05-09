@@ -152,6 +152,12 @@ const I18n = (function() {
     loadAll().then(function() { if (callback) callback(true); })
              .catch(function(err) { console.warn('[I18n] Load failed:', err); if (callback) callback(false); });
   }
+
+  return {
+    init, setLang, getLang, t, raw, getQuestions, getReverseKeys, getOptions, isRTL, prefersReducedMotion,
+    load, loadAll,
+    _cache: () => translationCache
+  };
 })();
 
 window.I18n = I18n;
