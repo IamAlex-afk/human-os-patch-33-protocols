@@ -36,7 +36,7 @@ const CONFIG = {
     { code: 'he', name: 'עברית',      flag: '🇮🇱', amazon: 'https://www.amazon.com/dp/B0G35SBQR3' },
     { code: 'ko', name: '한국어',      flag: '🇰🇷', amazon: 'https://www.amazon.co.kr/dp/B0G35SBQR3' },
     { code: 'tr', name: 'Türkçe',     flag: '🇹🇷', amazon: 'https://www.amazon.com.tr/dp/B0G35SBQR3' },
-    { code: 'ru', name: 'Русский',    flag: '🇷🇺', amazon: 'https://www.amazon.com/dp/B0G35SBQR3' }
+    { code: 'ru', name: 'Русский',    flag: '🇷🇺', amazon: 'https://www.litres.ru/author/aleksei-bitkin/' }
   ],
 
   getAmazonUrl(lang) {
