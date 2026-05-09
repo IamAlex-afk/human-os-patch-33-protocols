@@ -172,9 +172,9 @@
     }
 
     var dynTitle = document.getElementById("dynamicTitle");
-    if (dynTitle) document.title = t("dynamicTitle") || document.title;
+    if (dynTitle) document.title = t("mainTitle") || document.title;
     var dynDesc = document.getElementById("dynamicDescription");
-    if (dynDesc) dynDesc.content = t("dynamicDescription") || dynDesc.content;
+    if (dynDesc) dynDesc.content = t("subhead") || dynDesc.content;
 
     if (window.MindOSSeo && CONFIG.DEFAULT_LANG) {
       MindOSSeo.updateLang(CONFIG.DEFAULT_LANG);
