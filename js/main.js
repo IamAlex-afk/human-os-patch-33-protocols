@@ -1,279 +1,277 @@
-/* ====== Mind-OS Main Controller v3.0 ====== */
+/* ====== Mind-OS Main Application ====== */
 
 (function() {
-  "use strict";
+  const { DEFAULT_LANG, STORAGE_KEYS } = CONFIG;
+  let currentLang = DEFAULT_LANG;
 
-  /* ---------- Language handling ---------- */
-  function getUrlLang() {
-    var params = new URLSearchParams(window.location.search);
-    return params.get("lang");
+  function escapeHtml(str) {
+    return String(str).replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[m]);
   }
 
-  function setLang(lang) {
-    if (!lang) return;
-    CONFIG.DEFAULT_LANG = lang;
-    if (window.I18n) I18n.setLang(lang);
-    if (window.Quiz) Quiz.setLang(lang);
-    document.documentElement.lang = lang;
-    try { localStorage.setItem("mindos_lang", lang); } catch (e) {}
+  function renderProtocols(list) {
+    const grid = document.getElementById('protocolGrid');
+    if (!grid) return;
+    grid.innerHTML = '';
+    list.forEach(p => {
+      const card = document.createElement('div');
+      card.className = 'protocol-card';
+      card.innerHTML = `<div class="protocol-num">Protocol ${p.num}</div><div class="protocol-title">${escapeHtml(p.title)}</div><div class="protocol-desc">${escapeHtml(p.desc)}</div>`;
+      grid.appendChild(card);
+    });
   }
 
-  function detectLang() {
-    var urlLang = getUrlLang();
-    if (urlLang && CONFIG.SUPPORTED_LANGS.indexOf(urlLang) !== -1) return urlLang;
-    try {
-      var saved = localStorage.getItem("mindos_lang");
-      if (saved && CONFIG.SUPPORTED_LANGS.indexOf(saved) !== -1) return saved;
-    } catch (e) {}
-    var browser = (navigator.language || navigator.userLanguage || "en").slice(0, 2);
-    if (CONFIG.SUPPORTED_LANGS.indexOf(browser) !== -1) return browser;
-    return "en";
+  function initLangBar() {
+    const bar = document.getElementById('langBar');
+    if (!bar) return;
+    bar.innerHTML = '';
+    Object.keys(translations).forEach(l => {
+      const btn = document.createElement('button');
+      btn.className = `lang-btn ${l === currentLang ? 'active' : ''}`;
+      btn.textContent = translations[l].langName;
+      btn.onclick = () => applyLanguage(l);
+      bar.appendChild(btn);
+    });
   }
 
-  /* ---------- Text updates ---------- */
-  function updateAllText() {
-    var t = I18n.t;
-    var idMap = {
-      "mainTitle": "mainTitle",
-      "subheadText": "subhead",
-      "infoTitle": "infoTitle",
-      "infoPara1": "infoPara1",
-      "infoPara2": "infoPara2",
-      "infoPara3": "infoPara3",
-      "infoDisclaimer": "infoDisclaimer",
-      "axis1Title": "axis1Title",
-      "axis1Desc": "axis1Desc",
-      "axis1Hint": "axis1Hint",
-      "axis2Title": "axis2Title",
-      "axis2Desc": "axis2Desc",
-      "axis2Hint": "axis2Hint",
-      "axis3Title": "axis3Title",
-      "axis3Desc": "axis3Desc",
-      "axis3Hint": "axis3Hint",
-      "fearTitle": "fearTitle",
-      "fearDesc": "fearDesc",
-      "fearHint": "fearHint",
-      "trackerTitle": "trackerTitle",
-      "trackerDesc": "trackerDesc",
-      "trackerLowLabel": "trackerLowLabel",
-      "trackerMidLabel": "trackerMidLabel",
-      "trackerHighLabel": "trackerHighLabel",
-      "saveBtn": "saveBtn",
-      "resetBtn": "resetBtn",
-      "gameTitle": "gameTitle",
-      "gameDesc": "gameDesc",
-      "gameBtnHuman": "gameBtnHuman",
-      "gameBtnAI": "gameBtnAI",
-      "gameNextBtn": "gameNextBtn",
-      "gameRestartBtn": "gameRestartBtn",
-      "gameScoreLabel": "gameScoreLabel",
-      "gameFeedbackCorrect": "gameFeedbackCorrect",
-      "gameFeedbackWrong": "gameFeedbackWrong",
-      "gameFeedbackAI": "gameFeedbackAI",
-      "gameFeedbackHuman": "gameFeedbackHuman",
-      "pollTitle": "pollTitle",
-      "pollDesc": "pollDesc",
-      "pollFor": "pollFor",
-      "pollNeutral": "pollNeutral",
-      "pollAgainst": "pollAgainst",
-      "submitPoll": "submitPoll",
-      "pollResultsTitle": "pollResultsTitle",
-      "pollBridge": "pollBridge",
-      "ctaFirstReview": "ctaFirstReview",
-      "ctaBarText": "ctaBarText",
-      "footerText": "footerText",
-      "bookLabel": "bookLabel",
-      "submitBtn": "submitBtn",
-      "shareBtn": "shareBtn",
-      "resetTestBtn": "resetTestBtn",
-      "prevBtn": "prevBtn",
-      "nextBtn": "nextBtn",
-      "alertIncomplete": "alertIncomplete",
-      "progressText": "progressText",
-      "overallProgressLabel": "overallProgressLabel",
-      "overallProgressText": "overallProgressText",
-      "trustNoSignup": "trustNoSignup",
-      "trustLocal": "trustLocal",
-      "trustAnonymous": "trustAnonymous",
-      "howTitle": "howTitle",
-      "howText": "howText",
-      "protocolsTitle": "protocolsTitle",
-      "protocolsDesc": "protocolsDesc",
-      "faqTitle": "faqTitle",
-      "faqQ1": "faqQ1",
-      "faqA1": "faqA1",
-      "faqQ2": "faqQ2",
-      "faqA2": "faqA2",
-      "faqQ3": "faqQ3",
-      "faqA3": "faqA3",
-      "faqQ4": "faqQ4",
-      "faqA4": "faqA4",
-      "faqQ5": "faqQ5",
-      "faqA5": "faqA5",
-      "faqQ6": "faqQ6",
-      "faqA6": "faqA6",
-      "faqQ7": "faqQ7",
-      "faqA7": "faqA7",
-      "faqQ8": "faqQ8",
-      "faqA8": "faqA8",
-      "donateText": "donateText",
-      "overallTitle": "overallTitle",
-      "overallPercentileLabel": "overallPercentileLabel",
-      "aiFaqTitle": "aiFaqTitle",
-      "faqAiWhatQ": "faqAiWhatQ",
-      "faqAiWhatA": "faqAiWhatA",
-      "faqAiHistoryQ": "faqAiHistoryQ",
-      "faqAiHistoryA": "faqAiHistoryA",
-      "faqAiHowWorkQ": "faqAiHowWorkQ",
-      "faqAiHowWorkA": "faqAiHowWorkA",
-      "faqAiTypesQ": "faqAiTypesQ",
-      "faqAiTypesA": "faqAiTypesA",
-      "faqAiDangerQ": "faqAiDangerQ",
-      "faqAiDangerA": "faqAiDangerA",
-      "fearResultTitle": "fearResultTitle",
-      "scoreLabel": "scoreLabel",
-      "reviewProgressText": "reviewProgressText",
-      "noData": "noData",
-      "trackerSummaryPrefix": "trackerSummaryPrefix",
-      "trendIncreasing": "trendIncreasing",
-      "trendDecreasing": "trendDecreasing",
-      "trendStable": "trendStable"
-    };
+  function applyLanguage(lang) {
+    const t = getT(lang);
+    currentLang = lang;
 
-    var htmlIds = ["subheadText", "infoPara1", "infoPara2", "infoPara3", "infoDisclaimer", 
-                   "axis1Desc", "axis1Hint", "axis2Desc", "axis2Hint", "axis3Desc", "axis3Hint",
-                   "fearDesc", "fearHint", "trackerDesc", "gameDesc", "pollDesc", "pollBridge",
-                   "ctaFirstReview", "howText", "protocolsDesc", "faqA1", "faqA2", "faqA3", "faqA4",
-                   "faqA5", "faqA6", "faqA7", "faqA8", "donateText", "overallPercentileLabel",
-                   "faqAiWhatA", "faqAiHistoryA", "faqAiHowWorkA", "faqAiTypesA", "faqAiDangerA",
-                   "reviewProgressText", "trendIncreasing", "trendDecreasing", "trendStable"];
+    // Persist language preference
+    storage.set(STORAGE_KEYS.LANG, lang);
 
-    for (var id in idMap) {
-      var el = document.getElementById(id);
-      if (!el) continue;
-      var val = t(idMap[id]);
-      if (val === undefined) continue;
-      if (htmlIds.indexOf(id) !== -1) {
-        el.innerHTML = val;
-      } else {
-        el.textContent = val;
-      }
-    }
+    // Update URL
+    const url = new URL(window.location);
+    if (lang === 'en') url.searchParams.delete('lang');
+    else url.searchParams.set('lang', lang);
+    window.history.replaceState(null, '', url);
 
-    var bookLink = document.getElementById("bookLink");
-    if (bookLink) {
-      var url = t("bookUrl");
-      if (url) bookLink.href = url;
-    }
-    var ctaBarLink = document.getElementById("ctaBarLink");
-    if (ctaBarLink) {
-      var url2 = t("bookUrl");
-      if (url2) ctaBarLink.href = url2;
-    }
-
-    var dynTitle = document.getElementById("dynamicTitle");
-    if (dynTitle) document.title = t("mainTitle") || document.title;
-    var dynDesc = document.getElementById("dynamicDescription");
-    if (dynDesc) dynDesc.content = t("subhead") || dynDesc.content;
-
-    if (window.MindOSSeo && CONFIG.DEFAULT_LANG) {
-      MindOSSeo.updateLang(CONFIG.DEFAULT_LANG);
-    }
-  }
-
-  /* ---------- Dynamic rebuild ---------- */
-  function rebuildDynamicContent() {
-    updateAllText();
-
-    if (window.Tracker) Tracker.render();
-    if (window.Game) Game.init && Game.init();
-    if (window.Poll) Poll.render && Poll.render();
-
-    if (window.Quiz) {
-      Quiz.build("q1", "q1Container", "a1Progress", "r1", CONFIG.MAX_AXIS);
-      Quiz.build("q2", "q2Container", "a2Progress", "r2", CONFIG.MAX_AXIS);
-      Quiz.build("q3", "q3Container", "a3Progress", "r3", CONFIG.MAX_AXIS);
-      Quiz.build("fearQ", "qFearContainer", "fearProgress", "fearResult", CONFIG.FEAR_MAX);
-      Quiz.updateOverallProgress();
-    }
-
-    if (Quiz && Quiz.isComplete && Quiz.isComplete()) {
-      showOverallResults();
-    }
-  }
-
-  function showOverallResults() {
-    if (!Quiz || !Quiz.isComplete || !Quiz.isComplete()) return;
-    var score = Quiz.getOverallScore();
-    var arch = Quiz.getArchetype(score.pct);
-    var block = document.getElementById("overallBlock");
-    if (block) {
-      block.style.display = "block";
-      var archEl = document.getElementById("overallArchetype");
-      var pctEl = document.getElementById("overallPercentile");
-      var adviceEl = document.getElementById("overallAdvice");
-      if (archEl) archEl.textContent = arch.name;
-      if (pctEl) {
-        var label = I18n.t("overallPercentileLabel") || "Better than {percentile}%";
-        pctEl.textContent = label.replace("{percentile}", arch.percentile || 50);
-      }
-      if (adviceEl) adviceEl.textContent = arch.advice;
-    }
-    var resetBtn = document.getElementById("resetTestButton");
-    if (resetBtn) resetBtn.style.display = "inline-flex";
-  }
-
-  /* ---------- Init ---------- */
-  function init() {
-    var lang = detectLang();
-    setLang(lang);
-
-    I18n.load(function(ok) {
-      if (!ok) console.warn("[Mind-OS] i18n load failed");
-      rebuildDynamicContent();
+    // Update lang buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.textContent === t.langName);
     });
 
-    if (Quiz && Quiz.loadPersisted) Quiz.loadPersisted();
+    // Update document lang
+    document.documentElement.lang = lang;
 
-    var langSelect = document.getElementById("langSelect");
-    if (langSelect) {
-      langSelect.value = lang;
-      langSelect.addEventListener("change", function(e) {
-        var newLang = e.target.value;
-        setLang(newLang);
-        rebuildDynamicContent();
-        var params = new URLSearchParams(window.location.search);
-        params.set("lang", newLang);
-        window.history.replaceState({}, "", "?" + params.toString());
-      });
+    // Helper functions
+    const ut = (id, val) => { const el = document.getElementById(id); if (el && val) el.textContent = val; };
+    const uh = (id, val) => { const el = document.getElementById(id); if (el && val) el.innerHTML = val; };
+
+    // Meta
+    document.title = `${t.mainTitle} | Mind-OS`;
+    const descMeta = document.getElementById('dynamicDescription');
+    if (descMeta) descMeta.content = t.subhead;
+    const ogTitle = document.getElementById('dynamicOgTitle');
+    if (ogTitle) ogTitle.content = t.mainTitle;
+    const ogDesc = document.getElementById('dynamicOgDescription');
+    if (ogDesc) ogDesc.content = t.subhead;
+
+    // Header & Info
+    ut('mainTitle', t.mainTitle);
+    ut('subheadText', t.subhead);
+    ut('infoTitle', t.infoTitle);
+    ut('infoPara1', t.infoPara1);
+    uh('infoPara2', t.infoPara2);
+    uh('infoPara3', t.infoPara3);
+    ut('infoDisclaimer', t.infoDisclaimer);
+
+    // Axis titles
+    ['1', '2', '3'].forEach(i => {
+      ut(`axis${i}Title`, t[`axis${i}Title`]);
+      ut(`axis${i}Desc`, t[`axis${i}Desc`]);
+      ut(`axis${i}Hint`, t[`axis${i}Hint`]);
+    });
+
+    // Fear
+    ut('fearTitle', t.fearTitle);
+    ut('fearDesc', t.fearDesc);
+    ut('fearHint', t.fearHint);
+
+    // Tracker
+    ut('trackerTitle', t.trackerTitle);
+    ut('trackerDesc', t.trackerDesc);
+    ut('trackerLowLabel', t.trackerLowLabel);
+    ut('trackerMidLabel', t.trackerMidLabel);
+    ut('trackerHighLabel', t.trackerHighLabel);
+    ut('saveTrackerEntry', t.saveBtn);
+    ut('resetTrackerData', t.resetBtn);
+
+    // Game
+    ut('gameTitle', t.gameTitle);
+    ut('gameDesc', t.gameDesc);
+    ut('gameBtnHuman', t.gameBtnHuman);
+    ut('gameBtnAI', t.gameBtnAI);
+    ut('gameNextBtn', t.gameNextBtn);
+    ut('gameRestartBtn', t.gameRestartBtn);
+    ut('gameScoreLabel', t.gameScoreLabel);
+
+    // Poll
+    ut('pollTitle', t.pollTitle);
+    ut('pollDesc', t.pollDesc);
+    ut('pollFor', t.pollFor);
+    ut('pollNeutral', t.pollNeutral);
+    ut('pollAgainst', t.pollAgainst);
+    ut('submitPoll', t.submitPoll);
+    ut('pollResultsTitle', t.pollResultsTitle);
+    uh('pollBridge', t.pollBridge);
+
+    // CTA & Footer
+    ut('ctaText', t.ctaText);
+    ut('ctaFirstReview', t.ctaFirstReview);
+    ut('ctaBarText', t.ctaBarText);
+    ut('footerText', t.footerText);
+    ut('protocolsTitle', t.protocolsTitle);
+    ut('protocolsDesc', t.protocolsDesc);
+    ut('donateText', t.donateText);
+    ut('shareBtnText', t.shareBtn);
+    ut('howTitle', t.howTitle);
+    ut('howText', t.howText);
+    ut('trustNoSignup', t.trustNoSignup);
+    ut('trustLocal', t.trustLocal);
+    ut('trustAnonymous', t.trustAnonymous);
+    ut('overallTitle', t.overallTitle);
+    ut('reviewProgressText', t.reviewProgressText);
+
+    // Book links
+    const bLink = document.getElementById('bookLink');
+    if (bLink) { bLink.href = t.bookUrl || "#"; bLink.textContent = t.bookLabel; }
+    const cLink = document.getElementById('ctaBarLink');
+    if (cLink) { cLink.href = t.bookUrl || "#"; }
+
+    // FAQ
+    ut('faqTitle', t.faqTitle);
+    for (let i = 1; i <= 8; i++) {
+      ut(`faqQ${i}`, t[`faqQ${i}`] || "");
+      uh(`faqA${i}`, t[`faqA${i}`] || "");
     }
 
-    var resetBtn = document.getElementById("resetTestButton");
-    if (resetBtn) {
-      resetBtn.addEventListener("click", function() {
-        if (Quiz && Quiz.resetTest) Quiz.resetTest();
-      });
+    // AI FAQ
+    ut('aiFaqTitle', t.aiFaqTitle);
+    ut('faqAiWhatQ', t.faqAiWhatQ); uh('faqAiWhatA', t.faqAiWhatA);
+    ut('faqAiHistoryQ', t.faqAiHistoryQ); uh('faqAiHistoryA', t.faqAiHistoryA);
+    ut('faqAiHowWorkQ', t.faqAiHowWorkQ); uh('faqAiHowWorkA', t.faqAiHowWorkA);
+    ut('faqAiTypesQ', t.faqAiTypesQ); uh('faqAiTypesA', t.faqAiTypesA);
+    ut('faqAiDangerQ', t.faqAiDangerQ); uh('faqAiDangerA', t.faqAiDangerA);
+
+    // Sub-modules
+    Quiz.setLang(lang);
+    Tracker.setLang(lang);
+    Game.setLang(lang);
+    Poll.setLang(lang);
+
+    // Render wizards (only if not completed)
+    if (!Quiz.COMPLETED_AXES.a1) Quiz.renderWizard('q1Container', t.q1, 'a1', t);
+    if (!Quiz.COMPLETED_AXES.a2) Quiz.renderWizard('q2Container', t.q2, 'a2', t);
+    if (!Quiz.COMPLETED_AXES.a3) Quiz.renderWizard('q3Container', t.q3, 'a3', t);
+    Quiz.renderWizard('qFearContainer', t.fearQ, 'fear', t);
+
+    // Already completed axes - show results
+    if (Quiz.COMPLETED_AXES.a1) {
+      const r1 = document.getElementById('r1');
+      if (r1) { r1.style.display = 'block'; document.getElementById('q1Container').style.display = 'none'; }
+    }
+    if (Quiz.COMPLETED_AXES.a2) {
+      const r2 = document.getElementById('r2');
+      if (r2) { r2.style.display = 'block'; document.getElementById('q2Container').style.display = 'none'; }
+    }
+    if (Quiz.COMPLETED_AXES.a3) {
+      const r3 = document.getElementById('r3');
+      if (r3) { r3.style.display = 'block'; document.getElementById('q3Container').style.display = 'none'; }
     }
 
-    var shareBtn = document.getElementById("shareButton");
-    if (shareBtn) {
-      shareBtn.addEventListener("click", function() {
-        if (navigator.share) {
-          navigator.share({
-            title: document.title,
-            text: I18n.t("shareBtn") || "My Mind-OS result",
-            url: window.location.href
-          }).catch(function(){});
-        } else {
-          alert("Share API not supported");
+    renderProtocols(t.protocols);
+    Tracker.updateUI();
+    Game.loadQuestion();
+    Poll.syncUI();
+    Quiz.updateOverallProgress();
+  }
+
+  // FAQ accessibility
+  function initFAQ() {
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        const active = q.getAttribute('aria-expanded') === 'true';
+        // Close all
+        document.querySelectorAll('.faq-question').forEach(el => {
+          el.setAttribute('aria-expanded', 'false');
+          el.classList.remove('active');
+        });
+        // Open clicked if wasn't active
+        if (!active) {
+          q.setAttribute('aria-expanded', 'true');
+          q.classList.add('active');
         }
       });
-    }
+
+      q.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          q.click();
+        }
+      });
+    });
   }
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", init);
-  } else {
-    init();
-  }
+  // DOM Ready
+  document.addEventListener('DOMContentLoaded', () => {
+    Quiz.loadPersisted();
+    initLangBar();
+
+    // Restore saved language
+    const savedLang = storage.get(STORAGE_KEYS.LANG);
+    const urlParams = new URLSearchParams(window.location.search);
+    const lang = urlParams.get('lang') || savedLang || DEFAULT_LANG;
+    applyLanguage(lang);
+
+    // Tracker slider
+    const tSlider = document.getElementById('trackerScore');
+    if (tSlider) {
+      tSlider.addEventListener('input', (e) => {
+        document.getElementById('trackerValueDisplay').textContent = e.target.value;
+      });
+    }
+
+    // Tracker buttons
+    document.getElementById('saveTrackerEntry')?.addEventListener('click', Tracker.saveEntry);
+    document.getElementById('resetTrackerData')?.addEventListener('click', Tracker.resetData);
+
+    // Game buttons
+    document.getElementById('gameBtnHuman')?.addEventListener('click', () => Game.handleGuess(false));
+    document.getElementById('gameBtnAI')?.addEventListener('click', () => Game.handleGuess(true));
+    document.getElementById('gameNextBtn')?.addEventListener('click', () => Game.next());
+    document.getElementById('gameRestartBtn')?.addEventListener('click', () => Game.restart());
+
+    // Poll
+    document.getElementById('submitPoll')?.addEventListener('click', () => Poll.submit());
+
+    // FAQ
+    initFAQ();
+
+    // Share
+    document.getElementById('shareButton')?.addEventListener('click', () => {
+      const t = getT(currentLang);
+      if (navigator.share) {
+        navigator.share({ title: document.title, text: t.subhead, url: window.location.href }).catch(() => {});
+      } else {
+        navigator.clipboard.writeText(window.location.href);
+        alert("URL copied!");
+      }
+    });
+
+    // Reset test button
+    document.getElementById('resetTestButton')?.addEventListener('click', () => {
+      const t = getT(currentLang);
+      if (confirm(t.resetTestBtn + "?")) {
+        Quiz.resetTest();
+      }
+    });
+
+    // CTA bar visibility on scroll
+    window.addEventListener('scroll', () => {
+      const bar = document.getElementById('globalCTABar');
+      if (window.scrollY > 800) bar.classList.add('visible');
+      else bar.classList.remove('visible');
+    });
+  });
 })();

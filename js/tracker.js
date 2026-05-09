@@ -1,122 +1,71 @@
-/* ====== Mind-OS Tracker Module v3.0 ====== */
+/* ====== Mind-OS Cognitive Load Tracker ====== */
 
 const Tracker = (function() {
-  'use strict';
+  const { STORAGE_KEYS } = CONFIG;
+  let currentLang = CONFIG.DEFAULT_LANG;
 
-  const STORAGE_KEY = 'mindos_tracker_v3';
+  function setLang(lang) { currentLang = lang; }
 
-  function getData() {
-    try {
-      var raw = localStorage.getItem(STORAGE_KEY);
-      return raw ? JSON.parse(raw) : [];
-    } catch (e) {
-      return [];
-    }
-  }
-
-  function saveData(data) {
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-    } catch (e) {}
-  }
-
-  function formatDate(dateStr) {
-    var d = new Date(dateStr);
-    return d.toLocaleDateString();
-  }
-
-  function render() {
-    var t = window.I18n ? I18n.t : function(k) { return k; };
-    var container = document.getElementById('trackerContainer');
-    if (!container) return;
-
-    var data = getData();
-    var last7 = data.slice(-7);
-
-    var html = '<div class="tracker-chart">';
-    if (last7.length === 0) {
-      html += '<p class="no-data">' + (t('noData') || 'No data yet.') + '</p>';
-    } else {
-      var maxVal = 10;
-      html += '<div class="tracker-bars">';
-      last7.forEach(function(entry) {
-        var pct = (entry.value / maxVal) * 100;
-        var barClass = 'tracker-bar';
-        if (entry.value <= 3) barClass += ' low';
-        else if (entry.value <= 6) barClass += ' mid';
-        else barClass += ' high';
-
-        html += '<div class="tracker-entry">' +
-          '<div class="tracker-bar-wrap"><div class="' + barClass + '" style="height:' + pct + '%"></div></div>' +
-          '<div class="tracker-date">' + formatDate(entry.date) + '</div>' +
-          '<div class="tracker-val">' + entry.value + '</div>' +
-          '</div>';
-      });
-      html += '</div>';
-
-      var avg = (last7.reduce(function(a, b) { return a + b.value; }, 0) / last7.length).toFixed(1);
-      html += '<p class="tracker-summary">' + (t('trackerSummaryPrefix') || '7-day average: ') + avg + '</p>';
-
-      if (last7.length >= 2) {
-        var first = last7[0].value;
-        var last = last7[last7.length - 1].value;
-        if (last > first + 0.5) html += '<p class="tracker-trend trend-up">' + (t('trendIncreasing') || 'Trending up') + '</p>';
-        else if (last < first - 0.5) html += '<p class="tracker-trend trend-down">' + (t('trendDecreasing') || 'Trending down') + '</p>';
-        else html += '<p class="tracker-trend trend-stable">' + (t('trendStable') || 'Stable') + '</p>';
-      }
-    }
-    html += '</div>';
-    container.innerHTML = html;
-  }
-
-  function init() {
-    var t = window.I18n ? I18n.t : function(k) { return k; };
-    var slider = document.getElementById('trackerSlider');
-    var saveBtn = document.getElementById('saveTrackerEntry');
-    var resetBtn = document.getElementById('resetTrackerData');
-    var valueDisplay = document.getElementById('trackerValueDisplay');
-
-    if (slider && valueDisplay) {
-      slider.addEventListener('input', function() {
-        valueDisplay.textContent = slider.value;
-      });
-      valueDisplay.textContent = slider.value;
+  function updateUI() {
+    const t = getT(currentLang);
+    const data = storage.get(STORAGE_KEYS.TRACKER) || {};
+    const today = new Date().toISOString().slice(0, 10);
+    const last7 = [];
+    for (let i = 6; i >= 0; i--) {
+      const d = new Date();
+      d.setDate(d.getDate() - i);
+      const key = d.toISOString().slice(0, 10);
+      last7.push({ date: key, score: data[key] ?? null });
     }
 
-    if (saveBtn) {
-      saveBtn.addEventListener('click', function() {
-        if (!slider) return;
-        var val = parseInt(slider.value);
-        var data = getData();
-        var today = new Date().toISOString().split('T')[0];
+    const validScores = last7.filter(d => d.score !== null).map(d => d.score);
+    const avg = validScores.length ? (validScores.reduce((a, b) => a + b, 0) / validScores.length).toFixed(1) : null;
 
-        var existing = null;
-        for (var i = 0; i < data.length; i++) {
-          if (data[i].date === today) { existing = data[i]; break; }
-        }
-        if (existing) {
-          existing.value = val;
-        } else {
-          data.push({ date: today, value: val });
-        }
-        saveData(data);
-        render();
-      });
+    const chartDiv = document.getElementById('trackerChartContainer');
+    let chartHtml = '<div class="tracker-chart">';
+    last7.forEach(d => {
+      const height = d.score !== null ? (d.score / 10) * 80 + 10 : 8;
+      const opacity = d.score !== null ? '1' : '0.2';
+      chartHtml += `<div class="chart-bar"><div class="bar-fill" style="height:${height}px; opacity:${opacity};"></div><div class="bar-label">${d.date.slice(5)}</div></div>`;
+    });
+    chartHtml += '</div>';
+    if (chartDiv) chartDiv.innerHTML = chartHtml;
+
+    let trendText = t.noData;
+    if (validScores.length >= 3) {
+      const mid = Math.floor(validScores.length / 2);
+      const avg1 = validScores.slice(0, mid).reduce((a, b) => a + b, 0) / mid;
+      const avg2 = validScores.slice(mid).reduce((a, b) => a + b, 0) / (validScores.length - mid);
+      if (avg2 > avg1 + 0.5) trendText = t.trendIncreasing;
+      else if (avg2 < avg1 - 0.5) trendText = t.trendDecreasing;
+      else trendText = t.trendStable;
     }
 
-    if (resetBtn) {
-      resetBtn.addEventListener('click', function() {
-        if (confirm('Clear all tracker data?')) {
-          localStorage.removeItem(STORAGE_KEY);
-          render();
-        }
-      });
-    }
+    const summaryDiv = document.getElementById('trackerSummary');
+    if (summaryDiv) summaryDiv.innerHTML = `<div style="margin-top:1rem;"><strong>${t.trackerSummaryPrefix} ${avg ?? '—'}</strong><br><span style="font-size:0.9rem;color:var(--text-dim);">${trendText}</span></div>`;
 
-    render();
+    const disp = document.getElementById('trackerValueDisplay');
+    const scoreInp = document.getElementById('trackerScore');
+    if (disp) disp.textContent = data[today] ?? scoreInp.value;
   }
 
-  return { init: init, render: render };
+  function saveEntry() {
+    const tSlider = document.getElementById('trackerScore');
+    const today = new Date().toISOString().slice(0, 10);
+    const data = storage.get(STORAGE_KEYS.TRACKER) || {};
+    data[today] = parseInt(tSlider.value);
+    const keys = Object.keys(data).sort().slice(-30);
+    const trimmed = {}; keys.forEach(k => trimmed[k] = data[k]);
+    storage.set(STORAGE_KEYS.TRACKER, trimmed);
+    updateUI();
+  }
+
+  function resetData() {
+    storage.remove(STORAGE_KEYS.TRACKER);
+    updateUI();
+  }
+
+  return { setLang, updateUI, saveEntry, resetData };
 })();
 
 window.Tracker = Tracker;
