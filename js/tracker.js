@@ -1,5 +1,4 @@
 /* ====== Mind-OS Tracker Module v3.0 ====== */
-/* UTF-8. Daily cognitive load tracker. i18n-aware. */
 
 const Tracker = (function() {
   'use strict';
