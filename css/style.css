@@ -1,4 +1,12 @@
-/* ====== Mind-OS: 33 Protocols - Global Styles ====== */
+/* ====== Mind-OS: 33 Protocols - Global Styles v3.0 ====== */
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Inter Regular');
+}
 
 :root {
   --bg: #0b100d;
@@ -29,8 +37,7 @@ body {
   color: var(--text);
   padding: 2rem 1.5rem;
   -webkit-font-smoothing: antialiased;
-  scroll-behavior: smooth;
-  /* padding for fixed CTA bar on mobile */
+  text-rendering: optimizeLegibility;
   padding-bottom: calc(2rem + 80px);
 }
 
@@ -490,7 +497,8 @@ input[type="radio"]:focus-visible {
   margin-left: 1rem;
 }
 
-.faq-question.active .faq-arrow {
+.faq-question.active .faq-arrow,
+.faq-question[aria-expanded="true"] .faq-arrow {
   transform: rotate(180deg);
 }
 
@@ -501,6 +509,8 @@ input[type="radio"]:focus-visible {
   line-height: 1.7;
 }
 
+/* Совместимость: JS добавляет класс active, атрибут aria-expanded на будущее */
+.faq-question.active + .faq-answer,
 .faq-question[aria-expanded="true"] + .faq-answer {
   display: block;
   animation: fIn .3s;
@@ -755,6 +765,7 @@ input[type="radio"]:focus-visible {
     justify-content: center;
   }
 }
+
 /* Фикс CLS: Резервируем место под динамический контент */
 #q1Container, #q2Container, #q3Container, #qFearContainer {
   min-height: 380px;
@@ -763,15 +774,22 @@ input[type="radio"]:focus-visible {
 }
 
 .protocol-grid {
-  min-height: 1000px; /* Резерв под список протоколов */
+  min-height: 1000px;
 }
 
 .poll-block {
-  min-height: 250px; /* Место под опрос */
+  min-height: 250px;
 }
 
 /* Улучшаем контрастность для Accessibility 100/100 */
 section.info-box a, .book-link {
   font-weight: 700;
   text-decoration: underline;
+}
+
+/* Гарантируем, что изображения не вызывают CLS */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
