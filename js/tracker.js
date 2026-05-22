@@ -6,15 +6,24 @@ const Tracker = (function() {
 
   function setLang(lang) { currentLang = lang; }
 
+  // Вспомогательная функция для получения локальной даты в формате YYYY-MM-DD
+  function getLocalDateString(dateObj) {
+    const year = dateObj.getFullYear();
+    const month = String(dateObj.getMonth() + 1).padStart(2, '0');
+    const day = String(dateObj.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  }
+
   function updateUI() {
     const t = getT(currentLang);
     const data = storage.get(STORAGE_KEYS.TRACKER) || {};
-    const today = new Date().toISOString().slice(0, 10);
+    const today = getLocalDateString(new Date());
     const last7 = [];
+    
     for (let i = 6; i >= 0; i--) {
       const d = new Date();
       d.setDate(d.getDate() - i);
-      const key = d.toISOString().slice(0, 10);
+      const key = getLocalDateString(d);
       last7.push({ date: key, score: data[key] ?? null });
     }
 
@@ -47,6 +56,12 @@ const Tracker = (function() {
     const disp = document.getElementById('trackerValueDisplay');
     const scoreInp = document.getElementById('trackerScore');
     if (disp) disp.textContent = data[today] ?? scoreInp.value;
+
+    // ✅ Синхронизация ползунка с сохранённым значением
+    if (scoreInp) {
+      const storedToday = data[today];
+      scoreInp.value = (storedToday !== undefined && storedToday !== null) ? storedToday : 5;
+    }
   }
 
   function saveEntry() {
@@ -59,7 +74,7 @@ const Tracker = (function() {
       return false;
     }
 
-    const today = new Date().toISOString().slice(0, 10);
+    const today = getLocalDateString(new Date());
     const data = storage.get(STORAGE_KEYS.TRACKER) || {};
     data[today] = val;
     const keys = Object.keys(data).sort().slice(-30);
@@ -70,6 +85,9 @@ const Tracker = (function() {
 
   function resetData() {
     storage.remove(STORAGE_KEYS.TRACKER);
+    // ✅ Сброс ползунка к значению по умолчанию после очистки
+    const scoreInp = document.getElementById('trackerScore');
+    if (scoreInp) scoreInp.value = 5;
     updateUI();
   }
 
