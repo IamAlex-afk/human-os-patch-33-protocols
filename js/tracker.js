@@ -53,6 +53,7 @@ const Tracker = (function() {
     const tSlider = document.getElementById('trackerScore');
     const val = parseInt(tSlider.value);
 
+    // БЛОК ВАЛИДАЦИИ: Защита от кривых данных и XSS/DOM-манипуляций
     if (isNaN(val) || typeof val !== 'number' || val < 0 || val > 10) {
       console.error("Validation Guard: Rejected. Value must be between 0 and 10.");
       return false;
