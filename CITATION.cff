@@ -3,8 +3,8 @@ message: "If you use this framework or theory, please cite it as below."
 authors:
   - family-names: Bitkin
     given-names: Aleksei Sergeevich
-title: "Mind-OS: 33 Protocols for Human Debugging"
-version: 1.0.0
+title: "Mind-OS: 33 Protocols for Cognitive Sovereignty"
+version: 3.0.0
 doi: 10.5281/zenodo.17972301
-date-released: 2026-02-01
+date-released: 2026-05-22
 url: "https://github.com/IamAlex-afk/human-os-patch-33-protocols"
