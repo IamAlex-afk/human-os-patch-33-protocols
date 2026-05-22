@@ -9,6 +9,19 @@ const storage = {
   },
   remove(k) {
     try { localStorage.removeItem(k); } catch(e) {}
+  },
+  // БЛОК ЗАЩИТЫ ОТ XSS: Фильтр опасных символов
+  escape(str) {
+    if (typeof str !== 'string') return str;
+    return str.replace(/[&<>'"]/g, 
+      tag => ({
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          "'": '&#39;',
+          '"': '&quot;'
+        }[tag] || tag)
+    );
   }
 };
 
