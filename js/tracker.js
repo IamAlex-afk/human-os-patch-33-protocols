@@ -51,9 +51,16 @@ const Tracker = (function() {
 
   function saveEntry() {
     const tSlider = document.getElementById('trackerScore');
+    const val = parseInt(tSlider.value);
+
+    if (isNaN(val) || typeof val !== 'number' || val < 0 || val > 10) {
+      console.error("Validation Guard: Rejected. Value must be between 0 and 10.");
+      return false;
+    }
+
     const today = new Date().toISOString().slice(0, 10);
     const data = storage.get(STORAGE_KEYS.TRACKER) || {};
-    data[today] = parseInt(tSlider.value);
+    data[today] = val;
     const keys = Object.keys(data).sort().slice(-30);
     const trimmed = {}; keys.forEach(k => trimmed[k] = data[k]);
     storage.set(STORAGE_KEYS.TRACKER, trimmed);
