@@ -51,8 +51,8 @@
       btn.classList.toggle('active', btn.textContent === t.langName);
     });
 
-    // Update document lang
-    document.documentElement.lang = lang;
+    // ПАТЧ SEO/A11Y: Жесткое обновление атрибута lang на уровне корневого HTML
+    document.documentElement.setAttribute('lang', lang);
 
     // Helper functions
     const ut = (id, val) => { const el = document.getElementById(id); if (el && val) el.textContent = val; };
@@ -116,6 +116,10 @@
     ut('pollResultsTitle', t.pollResultsTitle);
     uh('pollBridge', t.pollBridge);
 
+    // Внедрение переводов для новых ключей из poll.js
+    const pollPrivacy = document.querySelector('[data-i18n="pollPrivacy"]');
+    if (pollPrivacy) pollPrivacy.textContent = t.pollPrivacy || (lang === 'ru' ? 'Данные хранятся только в вашем браузере и никуда не передаются.' : 'Data is stored locally in your browser and is not transmitted anywhere.');
+
     // CTA & Footer
     ut('ctaText', t.ctaText);
     ut('ctaFirstReview', t.ctaFirstReview);
@@ -155,36 +159,38 @@
     ut('faqAiDangerQ', t.faqAiDangerQ); uh('faqAiDangerA', t.faqAiDangerA);
 
     // Sub-modules
-    Quiz.setLang(lang);
-    Tracker.setLang(lang);
-    Game.setLang(lang);
-    Poll.setLang(lang);
+    if (window.Quiz) Quiz.setLang(lang);
+    if (window.Tracker) Tracker.setLang(lang);
+    if (window.Game) Game.setLang(lang);
+    if (window.Poll) Poll.setLang(lang);
 
     // Render wizards (only if not completed)
-    if (!Quiz.COMPLETED_AXES.a1) Quiz.renderWizard('q1Container', t.q1, 'a1', t);
-    if (!Quiz.COMPLETED_AXES.a2) Quiz.renderWizard('q2Container', t.q2, 'a2', t);
-    if (!Quiz.COMPLETED_AXES.a3) Quiz.renderWizard('q3Container', t.q3, 'a3', t);
-    Quiz.renderWizard('qFearContainer', t.fearQ, 'fear', t);
+    if (window.Quiz) {
+      if (!Quiz.COMPLETED_AXES.a1) Quiz.renderWizard('q1Container', t.q1, 'a1', t);
+      if (!Quiz.COMPLETED_AXES.a2) Quiz.renderWizard('q2Container', t.q2, 'a2', t);
+      if (!Quiz.COMPLETED_AXES.a3) Quiz.renderWizard('q3Container', t.q3, 'a3', t);
+      Quiz.renderWizard('qFearContainer', t.fearQ, 'fear', t);
 
-    // Already completed axes - show results
-    if (Quiz.COMPLETED_AXES.a1) {
-      const r1 = document.getElementById('r1');
-      if (r1) { r1.style.display = 'block'; document.getElementById('q1Container').style.display = 'none'; }
-    }
-    if (Quiz.COMPLETED_AXES.a2) {
-      const r2 = document.getElementById('r2');
-      if (r2) { r2.style.display = 'block'; document.getElementById('q2Container').style.display = 'none'; }
-    }
-    if (Quiz.COMPLETED_AXES.a3) {
-      const r3 = document.getElementById('r3');
-      if (r3) { r3.style.display = 'block'; document.getElementById('q3Container').style.display = 'none'; }
+      // Already completed axes - show results
+      if (Quiz.COMPLETED_AXES.a1) {
+        const r1 = document.getElementById('r1');
+        if (r1) { r1.style.display = 'block'; document.getElementById('q1Container').style.display = 'none'; }
+      }
+      if (Quiz.COMPLETED_AXES.a2) {
+        const r2 = document.getElementById('r2');
+        if (r2) { r2.style.display = 'block'; document.getElementById('q2Container').style.display = 'none'; }
+      }
+      if (Quiz.COMPLETED_AXES.a3) {
+        const r3 = document.getElementById('r3');
+        if (r3) { r3.style.display = 'block'; document.getElementById('q3Container').style.display = 'none'; }
+      }
     }
 
     renderProtocols(t.protocols);
-    Tracker.updateUI();
-    Game.loadQuestion();
-    Poll.syncUI();
-    Quiz.updateOverallProgress();
+    if (window.Tracker) Tracker.updateUI();
+    if (window.Game) Game.loadQuestion();
+    if (window.Poll) Poll.syncUI();
+    if (window.Quiz) Quiz.updateOverallProgress();
   }
 
   // FAQ accessibility
@@ -215,7 +221,7 @@
 
   // DOM Ready
   document.addEventListener('DOMContentLoaded', () => {
-    Quiz.loadPersisted();
+    if (window.Quiz) Quiz.loadPersisted();
     initLangBar();
 
     // Restore saved language
@@ -233,17 +239,23 @@
     }
 
     // Tracker buttons
-    document.getElementById('saveTrackerEntry')?.addEventListener('click', Tracker.saveEntry);
-    document.getElementById('resetTrackerData')?.addEventListener('click', Tracker.resetData);
+    if (window.Tracker) {
+      document.getElementById('saveTrackerEntry')?.addEventListener('click', Tracker.saveEntry);
+      document.getElementById('resetTrackerData')?.addEventListener('click', Tracker.resetData);
+    }
 
     // Game buttons
-    document.getElementById('gameBtnHuman')?.addEventListener('click', () => Game.handleGuess(false));
-    document.getElementById('gameBtnAI')?.addEventListener('click', () => Game.handleGuess(true));
-    document.getElementById('gameNextBtn')?.addEventListener('click', () => Game.next());
-    document.getElementById('gameRestartBtn')?.addEventListener('click', () => Game.restart());
+    if (window.Game) {
+      document.getElementById('gameBtnHuman')?.addEventListener('click', () => Game.handleGuess(false));
+      document.getElementById('gameBtnAI')?.addEventListener('click', () => Game.handleGuess(true));
+      document.getElementById('gameNextBtn')?.addEventListener('click', () => Game.next());
+      document.getElementById('gameRestartBtn')?.addEventListener('click', () => Game.restart());
+    }
 
     // Poll
-    document.getElementById('submitPoll')?.addEventListener('click', () => Poll.submit());
+    if (window.Poll) {
+      document.getElementById('submitPoll')?.addEventListener('click', () => Poll.submit());
+    }
 
     // FAQ
     initFAQ();
@@ -263,15 +275,17 @@
     document.getElementById('resetTestButton')?.addEventListener('click', () => {
       const t = getT(currentLang);
       if (confirm(t.resetTestBtn + "?")) {
-        Quiz.resetTest();
+        if (window.Quiz) Quiz.resetTest();
       }
     });
 
     // CTA bar visibility on scroll
     window.addEventListener('scroll', () => {
       const bar = document.getElementById('globalCTABar');
-      if (window.scrollY > 800) bar.classList.add('visible');
-      else bar.classList.remove('visible');
+      if (bar) {
+        if (window.scrollY > 800) bar.classList.add('visible');
+        else bar.classList.remove('visible');
+      }
     });
   });
 })();
