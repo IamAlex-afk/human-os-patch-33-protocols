@@ -1,4 +1,8 @@
 /* ====== Mind-OS Main Application ====== */
+/* PATCH 2026-06-06:
+   1. confirm() теперь использует t.resetTestConfirm вместо лейбла кнопки
+   2. ctaText и pollPrivacy теперь создаются в DOM если не найдены в HTML
+*/
 
 (function() {
   const { DEFAULT_LANG, STORAGE_KEYS } = CONFIG;
@@ -33,32 +37,50 @@
     });
   }
 
+  /* ПАТЧ: гарантируем существование ctaText и pollPrivacy в DOM */
+  function ensureDynamicElements() {
+    /* ctaText — вставляем в .poll-block если нет */
+    if (!document.getElementById('ctaText')) {
+      const pollBlock = document.querySelector('.poll-block');
+      if (pollBlock) {
+        const el = document.createElement('p');
+        el.id = 'ctaText';
+        el.style.cssText = 'font-size:0.95rem;color:var(--text-dim);margin-top:1rem;';
+        pollBlock.appendChild(el);
+      }
+    }
+    /* pollPrivacy — вставляем в pollResults если нет */
+    if (!document.querySelector('[data-i18n="pollPrivacy"]')) {
+      const pollResults = document.getElementById('pollResults');
+      if (pollResults) {
+        const el = document.createElement('p');
+        el.setAttribute('data-i18n', 'pollPrivacy');
+        el.style.cssText = 'font-size:0.8rem;color:var(--text-dim);margin-top:0.8rem;opacity:0.75;';
+        pollResults.appendChild(el);
+      }
+    }
+  }
+
   function applyLanguage(lang) {
     const t = getT(lang);
     currentLang = lang;
 
-    // Persist language preference
     storage.set(STORAGE_KEYS.LANG, lang);
 
-    // Update URL
     const url = new URL(window.location);
     if (lang === 'en') url.searchParams.delete('lang');
     else url.searchParams.set('lang', lang);
     window.history.replaceState(null, '', url);
 
-    // Update lang buttons
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.classList.toggle('active', btn.textContent === t.langName);
     });
 
-    // ПАТЧ SEO/A11Y: Жесткое обновление атрибута lang на уровне корневого HTML
     document.documentElement.setAttribute('lang', lang);
 
-    // Helper functions
-    const ut = (id, val) => { const el = document.getElementById(id); if (el && val) el.textContent = val; };
-    const uh = (id, val) => { const el = document.getElementById(id); if (el && val) el.innerHTML = val; };
+    const ut = (id, val) => { const el = document.getElementById(id); if (el && val !== undefined) el.textContent = val; };
+    const uh = (id, val) => { const el = document.getElementById(id); if (el && val !== undefined) el.innerHTML = val; };
 
-    // Meta
     document.title = `${t.mainTitle} | Mind-OS`;
     const descMeta = document.getElementById('dynamicDescription');
     if (descMeta) descMeta.content = t.subhead;
@@ -67,7 +89,6 @@
     const ogDesc = document.getElementById('dynamicOgDescription');
     if (ogDesc) ogDesc.content = t.subhead;
 
-    // Header & Info
     ut('mainTitle', t.mainTitle);
     ut('subheadText', t.subhead);
     ut('infoTitle', t.infoTitle);
@@ -76,19 +97,16 @@
     uh('infoPara3', t.infoPara3);
     ut('infoDisclaimer', t.infoDisclaimer);
 
-    // Axis titles
     ['1', '2', '3'].forEach(i => {
       ut(`axis${i}Title`, t[`axis${i}Title`]);
       ut(`axis${i}Desc`, t[`axis${i}Desc`]);
       ut(`axis${i}Hint`, t[`axis${i}Hint`]);
     });
 
-    // Fear
     ut('fearTitle', t.fearTitle);
     ut('fearDesc', t.fearDesc);
     ut('fearHint', t.fearHint);
 
-    // Tracker
     ut('trackerTitle', t.trackerTitle);
     ut('trackerDesc', t.trackerDesc);
     ut('trackerLowLabel', t.trackerLowLabel);
@@ -97,7 +115,6 @@
     ut('saveTrackerEntry', t.saveBtn);
     ut('resetTrackerData', t.resetBtn);
 
-    // Game
     ut('gameTitle', t.gameTitle);
     ut('gameDesc', t.gameDesc);
     ut('gameBtnHuman', t.gameBtnHuman);
@@ -106,7 +123,6 @@
     ut('gameRestartBtn', t.gameRestartBtn);
     ut('gameScoreLabel', t.gameScoreLabel);
 
-    // Poll
     ut('pollTitle', t.pollTitle);
     ut('pollDesc', t.pollDesc);
     ut('pollFor', t.pollFor);
@@ -116,11 +132,16 @@
     ut('pollResultsTitle', t.pollResultsTitle);
     uh('pollBridge', t.pollBridge);
 
-    // Внедрение переводов для новых ключей из poll.js
-    const pollPrivacy = document.querySelector('[data-i18n="pollPrivacy"]');
-    if (pollPrivacy) pollPrivacy.textContent = t.pollPrivacy || (lang === 'ru' ? 'Данные хранятся только в вашем браузере и никуда не передаются.' : 'Data is stored locally in your browser and is not transmitted anywhere.');
+    /* ПАТЧ: ctaText и pollPrivacy — гарантированно обновляются */
+    ut('ctaText', t.ctaText);
+    const pollPrivacyEl = document.querySelector('[data-i18n="pollPrivacy"]');
+    if (pollPrivacyEl) {
+      const fallback = lang === 'ru'
+        ? 'Данные хранятся только в вашем браузере и никуда не передаются.'
+        : 'Data is stored locally in your browser and is not transmitted anywhere.';
+      pollPrivacyEl.textContent = t.pollPrivacy || fallback;
+    }
 
-    // CTA & Footer
     ut('ctaText', t.ctaText);
     ut('ctaFirstReview', t.ctaFirstReview);
     ut('ctaBarText', t.ctaBarText);
@@ -137,41 +158,35 @@
     ut('overallTitle', t.overallTitle);
     ut('reviewProgressText', t.reviewProgressText);
 
-    // Book links
     const bLink = document.getElementById('bookLink');
-    if (bLink) { bLink.href = t.bookUrl || "#"; bLink.textContent = t.bookLabel; }
+    if (bLink) { bLink.href = t.bookUrl || '#'; bLink.textContent = t.bookLabel; }
     const cLink = document.getElementById('ctaBarLink');
-    if (cLink) { cLink.href = t.bookUrl || "#"; }
+    if (cLink) { cLink.href = t.bookUrl || '#'; }
 
-    // FAQ
     ut('faqTitle', t.faqTitle);
     for (let i = 1; i <= 8; i++) {
-      ut(`faqQ${i}`, t[`faqQ${i}`] || "");
-      uh(`faqA${i}`, t[`faqA${i}`] || "");
+      ut(`faqQ${i}`, t[`faqQ${i}`] || '');
+      uh(`faqA${i}`, t[`faqA${i}`] || '');
     }
 
-    // AI FAQ
     ut('aiFaqTitle', t.aiFaqTitle);
-    ut('faqAiWhatQ', t.faqAiWhatQ); uh('faqAiWhatA', t.faqAiWhatA);
+    ut('faqAiWhatQ', t.faqAiWhatQ);    uh('faqAiWhatA', t.faqAiWhatA);
     ut('faqAiHistoryQ', t.faqAiHistoryQ); uh('faqAiHistoryA', t.faqAiHistoryA);
     ut('faqAiHowWorkQ', t.faqAiHowWorkQ); uh('faqAiHowWorkA', t.faqAiHowWorkA);
-    ut('faqAiTypesQ', t.faqAiTypesQ); uh('faqAiTypesA', t.faqAiTypesA);
-    ut('faqAiDangerQ', t.faqAiDangerQ); uh('faqAiDangerA', t.faqAiDangerA);
+    ut('faqAiTypesQ', t.faqAiTypesQ);    uh('faqAiTypesA', t.faqAiTypesA);
+    ut('faqAiDangerQ', t.faqAiDangerQ);  uh('faqAiDangerA', t.faqAiDangerA);
 
-    // Sub-modules
     if (window.Quiz) Quiz.setLang(lang);
     if (window.Tracker) Tracker.setLang(lang);
     if (window.Game) Game.setLang(lang);
     if (window.Poll) Poll.setLang(lang);
 
-    // Render wizards (only if not completed)
     if (window.Quiz) {
       if (!Quiz.COMPLETED_AXES.a1) Quiz.renderWizard('q1Container', t.q1, 'a1', t);
       if (!Quiz.COMPLETED_AXES.a2) Quiz.renderWizard('q2Container', t.q2, 'a2', t);
       if (!Quiz.COMPLETED_AXES.a3) Quiz.renderWizard('q3Container', t.q3, 'a3', t);
       Quiz.renderWizard('qFearContainer', t.fearQ, 'fear', t);
 
-      // Already completed axes - show results
       if (Quiz.COMPLETED_AXES.a1) {
         const r1 = document.getElementById('r1');
         if (r1) { r1.style.display = 'block'; document.getElementById('q1Container').style.display = 'none'; }
@@ -193,44 +208,38 @@
     if (window.Quiz) Quiz.updateOverallProgress();
   }
 
-  // FAQ accessibility
   function initFAQ() {
     document.querySelectorAll('.faq-question').forEach(q => {
       q.addEventListener('click', () => {
         const active = q.getAttribute('aria-expanded') === 'true';
-        // Close all
         document.querySelectorAll('.faq-question').forEach(el => {
           el.setAttribute('aria-expanded', 'false');
           el.classList.remove('active');
         });
-        // Open clicked if wasn't active
         if (!active) {
           q.setAttribute('aria-expanded', 'true');
           q.classList.add('active');
         }
       });
-
       q.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          q.click();
-        }
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); q.click(); }
       });
     });
   }
 
-  // DOM Ready
   document.addEventListener('DOMContentLoaded', () => {
     if (window.Quiz) Quiz.loadPersisted();
+
+    /* ПАТЧ: создаём динамические элементы до applyLanguage */
+    ensureDynamicElements();
+
     initLangBar();
 
-    // Restore saved language
     const savedLang = storage.get(STORAGE_KEYS.LANG);
     const urlParams = new URLSearchParams(window.location.search);
     const lang = urlParams.get('lang') || savedLang || DEFAULT_LANG;
     applyLanguage(lang);
 
-    // Tracker slider
     const tSlider = document.getElementById('trackerScore');
     if (tSlider) {
       tSlider.addEventListener('input', (e) => {
@@ -238,13 +247,11 @@
       });
     }
 
-    // Tracker buttons
     if (window.Tracker) {
       document.getElementById('saveTrackerEntry')?.addEventListener('click', Tracker.saveEntry);
       document.getElementById('resetTrackerData')?.addEventListener('click', Tracker.resetData);
     }
 
-    // Game buttons
     if (window.Game) {
       document.getElementById('gameBtnHuman')?.addEventListener('click', () => Game.handleGuess(false));
       document.getElementById('gameBtnAI')?.addEventListener('click', () => Game.handleGuess(true));
@@ -252,34 +259,31 @@
       document.getElementById('gameRestartBtn')?.addEventListener('click', () => Game.restart());
     }
 
-    // Poll
     if (window.Poll) {
       document.getElementById('submitPoll')?.addEventListener('click', () => Poll.submit());
     }
 
-    // FAQ
     initFAQ();
 
-    // Share
     document.getElementById('shareButton')?.addEventListener('click', () => {
       const t = getT(currentLang);
       if (navigator.share) {
         navigator.share({ title: document.title, text: t.subhead, url: window.location.href }).catch(() => {});
       } else {
         navigator.clipboard.writeText(window.location.href);
-        alert("URL copied!");
+        alert('URL copied!');
       }
     });
 
-    // Reset test button
+    /* ПАТЧ: исправлен диалог сброса — использует корректный вопрос, не лейбл кнопки */
     document.getElementById('resetTestButton')?.addEventListener('click', () => {
       const t = getT(currentLang);
-      if (confirm(t.resetTestBtn + "?")) {
+      const msg = t.resetTestConfirm || 'Are you sure you want to restart the assessment?';
+      if (confirm(msg)) {
         if (window.Quiz) Quiz.resetTest();
       }
     });
 
-    // CTA bar visibility on scroll
     window.addEventListener('scroll', () => {
       const bar = document.getElementById('globalCTABar');
       if (bar) {
