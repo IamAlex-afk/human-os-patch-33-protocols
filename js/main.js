@@ -142,7 +142,6 @@
       pollPrivacyEl.textContent = t.pollPrivacy || fallback;
     }
 
-    ut('ctaText', t.ctaText);
     ut('ctaFirstReview', t.ctaFirstReview);
     ut('ctaBarText', t.ctaBarText);
     ut('footerText', t.footerText);
