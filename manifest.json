@@ -1,21 +1,34 @@
 {
-  "name": "Mind-OS AI Dependency Self-Assessment",
+  "name": "Mind-OS: AI Dependency Self-Assessment",
   "short_name": "Mind-OS",
-  "description": "Free anonymous test to measure AI dependency and cognitive offloading",
-  "start_url": "./",
+  "description": "Free anonymous test to measure AI dependency, cognitive offloading and digital burnout. 28 questions, 6 languages, no signup.",
+  "lang": "en",
+  "dir": "ltr",
+  "start_url": "/human-os-patch-33-protocols/",
+  "scope": "/human-os-patch-33-protocols/",
   "display": "standalone",
+  "orientation": "portrait-primary",
   "background_color": "#0b100d",
   "theme_color": "#00e57a",
+  "categories": ["health", "education", "lifestyle"],
   "icons": [
     {
       "src": "apple-touch-icon.png",
       "sizes": "180x180",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "favicon.ico",
       "sizes": "32x32",
-      "type": "image/x-icon"
+      "type": "image/x-icon",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
     }
   ]
 }
