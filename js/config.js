@@ -1,3 +1,4 @@
+/* ====== Mind-OS Configuration ====== */
 const CONFIG = {
   MAX_AXIS: 32,
   TOTAL_MAX: 96,
@@ -8,8 +9,8 @@ const CONFIG = {
   STORAGE_KEYS: {
     TRACKER:        'mindos_tracker_v3',
     POLL_VOTED:     'mindos_poll_v3_voted',
-    POLL_BASE:      'mindos_poll_v3_base',   /* ДОБАВЛЕНО: было undefined → ломало хранение базы опроса */
-    POLL_VOTE:      'mindos_poll_v3_vote',   /* ДОБАВЛЕНО: было undefined → голос терялся */
+    POLL_BASE:      'mindos_poll_v3_base',
+    POLL_VOTE:      'mindos_poll_v3_vote',
     TEST_ANSWERS:   'mindos_test_answers',
     TEST_WIZARD:    'mindos_test_wizard',
     TEST_COMPLETED: 'mindos_test_completed',
