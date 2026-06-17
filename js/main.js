@@ -230,6 +230,7 @@
     ut('submitPoll', t.submitPoll);
     ut('pollResultsTitle', t.pollResultsTitle);
     uh('pollBridge', t.pollBridge);
+    ut('pollInviteText', t.pollInviteText);
 
     /* ПАТЧ: ctaText и pollPrivacy — гарантированно обновляются */
     ut('ctaText', t.ctaText);
@@ -403,6 +404,19 @@
 
     if (window.Poll) {
       document.getElementById('submitPoll')?.addEventListener('click', () => Poll.submit());
+      document.getElementById('pollInviteBtn')?.addEventListener('click', () => {
+        const t = getT(currentLang);
+        const base = window.location.origin + window.location.pathname.replace(/\/(ru|es|de|fr|ja)\/?$/, '/');
+        const pollUrl = base + '#poll-section';
+        const text = (t.pollInviteShareText || 'How do you feel about AI? Vote anonymously in the global Mind-OS poll:');
+        if (navigator.share) {
+          navigator.share({ title: 'Mind-OS Global AI Poll', text, url: pollUrl }).catch(() => {});
+        } else if (navigator.clipboard) {
+          navigator.clipboard.writeText(text + ' ' + pollUrl).then(() => {
+            alert(t.urlCopied || 'Link copied!');
+          }).catch(() => {});
+        }
+      });
     }
 
     initFAQ();
