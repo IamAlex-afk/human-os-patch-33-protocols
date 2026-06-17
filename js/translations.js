@@ -77,6 +77,7 @@ const translations = {
     spectrumMid: "Balanced",
     spectrumHigh: "High",
     downloadCardText: "Save image card",
+    installApp: "📲 Install app",
     answerQualityWarning: "Note: you selected the same answer for most questions. For a more accurate profile, consider retaking the test and answering each item honestly and individually.",
     resultDisclaimer: "This is a self-assessment for reflection, not a medical or psychological diagnosis. Thresholds are based on the response-scale distribution, not on validated population norms.",
 
@@ -298,6 +299,7 @@ const translations = {
     spectrumMid: "Баланс",
     spectrumHigh: "Высокая",
     downloadCardText: "Скачать картинку",
+    installApp: "📲 Установить приложение",
     answerQualityWarning: "Примечание: вы выбрали одинаковый ответ почти на все вопросы. Для более точного профиля пройдите тест заново, отвечая на каждый пункт честно и по отдельности.",
     resultDisclaimer: "Это самооценка для размышления, а не медицинский или психологический диагноз. Пороги основаны на распределении ответов по шкале, а не на валидированных популяционных нормах.",
 
@@ -519,6 +521,7 @@ const translations = {
     spectrumMid: "Equilibrada",
     spectrumHigh: "Alta",
     downloadCardText: "Guardar imagen",
+    installApp: "📲 Instalar app",
     answerQualityWarning: "Nota: seleccionaste la misma respuesta en casi todas las preguntas. Para un perfil más preciso, considera repetir el test respondiendo cada ítem de forma honesta e individual.",
     resultDisclaimer: "Esta es una autoevaluación para reflexionar, no un diagnóstico médico o psicológico. Los umbrales se basan en la distribución de la escala de respuestas, no en normas poblacionales validadas.",
 
@@ -740,6 +743,7 @@ const translations = {
     spectrumMid: "Ausgewogen",
     spectrumHigh: "Hoch",
     downloadCardText: "Bild speichern",
+    installApp: "📲 App installieren",
     answerQualityWarning: "Hinweis: Du hast bei fast allen Fragen dieselbe Antwort gewählt. Für ein genaueres Profil wiederhole den Test und beantworte jede Frage ehrlich und einzeln.",
     resultDisclaimer: "Dies ist eine Selbsteinschätzung zur Reflexion, keine medizinische oder psychologische Diagnose. Die Schwellenwerte basieren auf der Verteilung der Antwortskala, nicht auf validierten Bevölkerungsnormen.",
 
@@ -961,6 +965,7 @@ const translations = {
     spectrumMid: "Équilibré",
     spectrumHigh: "Élevé",
     downloadCardText: "Enregistrer l'image",
+    installApp: "📲 Installer l'app",
     answerQualityWarning: "Remarque : vous avez choisi la même réponse pour presque toutes les questions. Pour un profil plus précis, refaites le test en répondant honnêtement et individuellement à chaque item.",
     resultDisclaimer: "Il s'agit d'une auto-évaluation à des fins de réflexion, et non d'un diagnostic médical ou psychologique. Les seuils sont basés sur la distribution de l'échelle de réponses, et non sur des normes de population validées.",
 
@@ -1182,6 +1187,7 @@ const translations = {
     spectrumMid: "バランス",
     spectrumHigh: "高い",
     downloadCardText: "画像を保存",
+    installApp: "📲 アプリをインストール",
     answerQualityWarning: "注意：ほとんどの質問で同じ回答を選択しました。より正確なプロフィールのために、各項目に正直かつ個別に答えてテストを再受験することを検討してください。",
     resultDisclaimer: "これは振り返りのための自己評価であり、医学的・心理学的診断ではありません。閾値は回答尺度の分布に基づいており、検証された母集団規範に基づくものではありません。",
 
