@@ -4,70 +4,92 @@
 
 ## Как работать (правила, согласованные с владельцем)
 - ТОЛЬКО проверенные факты. Ноль догадок и предположений.
-- Проверять в песочнице (node -c, прогон логики) ДО заявления «работает», не после.
-- Если не можешь подтвердить — скажи прямо «не смог подтвердить, проверь сам». Не выдумывай.
 - Не поддакивать. Прав — объясни почему. Не прав — скажи прямо.
-- Не собирать ZIP, пока владелец хочет обсуждать. Действие — только по «делай».
-- Не тратить токены на повторные сборки.
+- НЕ делать git push без явного "пуш делай" от владельца.
+- НЕ добавлять новые языки (pt/ko/it и т.д.) без явного запроса.
+- НЕ использовать New-Object в PowerShell (ConstrainedLanguage mode).
+- Только улучшать и добавлять — никогда не удалять существующий функционал.
+- Если владелец говорит "стоп" — немедленно остановиться.
+- Общаться ТОЛЬКО на русском языке.
 
 ## Что это за проект
 Mind-OS — бесплатный анонимный браузерный тест на зависимость от ИИ.
 Vanilla HTML/CSS/JS, без фреймворков, localStorage, PWA, 6 языков (en/ru/es/de/fr/ja).
-- Живой сайт: https://iamalex-afk.github.io/human-os-patch-33-protocols/
+- Живой сайт: https://iamalex-afk.github.io/human-os-patch-33-protocols/ (деплоится из main)
 - Репозиторий: github.com/IamAlex-afk/human-os-patch-33-protocols
 - Автор: Aleksei Sergeevich Bitkin, ORCID 0009-0002-7986-3812, Zenodo DOI 10.5281/zenodo.17972301
 
+## Текущее состояние git (по состоянию на 2026-06-17)
+**Ветка:** test-final (НЕ задеплоена — GitHub Pages деплоит только из main)
+
+**Коммиты в test-final:**
+1. `2b94057` — chore: update .gitignore (исключён LICENSE-CC-BY-NC-ND-alternative.txt)
+2. `35cf8a8` — chore: production readiness, PWA, AI discoverability
+3. `d857dbc` — fix: charset UTF-8, translation errors DE/FR/ES
+4. `9a41ea6` — feat: static multilingual SEO pages (ru/ es/ de/ fr/ ja/)
+5. `24256d3` — audit: sync 28q, remove Amazon CTA, dual-license, SEO/GEO fixes
+
+**Staged (не закоммичено):** удаление site.webmanifest (дубликат, устаревший)
+
 ## Структура теста (ФАКТ, проверено по коду)
-- 3 оси зависимости, по 8 вопросов = 24 вопроса (q1=мышление, q2=эмоции, q3=продуктивность)
-- Отдельный тест «страх ИИ» = 4 вопроса (fearQ)
-- Итого 28 вопросов, если считать вместе. config: MAX_AXIS=32, TOTAL_MAX=96, FEAR_MAX=16.
+- 3 оси зависимости × 8 вопросов = 24 вопроса (q1=мышление, q2=эмоции, q3=продуктивность)
+- Тест «страх ИИ» = 4 вопроса (fearQ)
+- Итого 28 вопросов. config: MAX_AXIS=32, TOTAL_MAX=96, FEAR_MAX=16.
 
-## Что уже сделано в этой версии (всё проверено в песочнице, НЕ в живом браузере)
-Базой был оригинальный репозиторий владельца. Добавлено, ничего не вырезано:
-- Исправлен баг quiz.js reverseKeys (давал 24 вместо 18 баллов; axisKeyMap a1→q1 и т.д.)
-- storage.js: защита от undefined-ключа
-- main.js: passive scroll; canonical при смене языка; перевод навигации; кнопка перезапуска
-- Селектор языка 🌐 (планета + дропдаун с флагами) вместо плоского списка
-- Радар-график результата (SVG, 3 оси)
-- Спектр зависимости (градиентная полоса)
-- Блок «что делать» по самой высокой оси (6 языков)
-- Матрица 2×2 Зависимость×Страх (4 квадранта, 6 языков)
-- Shareable URL: результат кодируется в #r=... (ноль данных на сервер), баннер общего результата
-- Дисклеймер про пороги (самооценка, не диагноз)
-- Careless-detection (прямые ответы → предупреждение)
-- Аккордеон для 33 протоколов (свёрнуты, клик раскрывает)
-- Анимированный счётчик %, scroll-spy, кнопка наверх, индикатор чтения, Noto Sans JP, prefers-reduced-motion
-- Canvas-карточка результата PNG (js/card.js), кнопка «скачать картинку»
-- privacy.html, sw.js (PWA офлайн+установка), 404.html, humans.txt, ai.txt, .well-known/security.txt, .nojekyll, .github/workflows/pages.yml
-- llms.txt усилен (почему безопасно рекомендовать + список нишевых вопросов)
-- robots.txt: разрешены все AI-боты (OpenAI, Gemini, Claude, Perplexity, DeepSeek, Mistral, Yandex)
-- Schema.org: WebPage + FAQPage(13) + SoftwareApplication + BreadcrumbList + sameAs
-- 138 ключей переводов × 6 языков (идентичны)
+## Что сделано (всё проверено, кроме реального браузера у владельца)
 
-## ОТКРЫТЫЕ РЕШЕНИЯ (за владельцем, не решать самому)
-1. LICENSE: в ZIP лежит ОРИГИНАЛЬНЫЙ GPL v3. Но README заявляет CC BY-NC-ND 4.0 — это
-   КОНФЛИКТ. CC-версия лежит рядом как LICENSE-CC-BY-NC-ND-alternative.txt. Владелец
-   решает: оставить GPL или заменить на CC.
-2. «24 vs 28 вопросов»: текст infoPara1 говорит «24 questions» (описывает основной
-   тест). llms.txt говорит 28 (всё вместе). Обе цифры защитимы. Владелец решает.
-3. Опрос (poll): просит оставлять отзыв на Amazon с именем/городом за «голос». Это риск
-   нарушения правил Amazon (накрутка отзывов). Стоит пересмотреть.
+### SEO и AI-совместимость
+- Static multilingual pages: ru/, es/, de/, fr/, ja/ — генерируются через .\build.ps1
+- sitemap.xml: 6 URL со статическими путями + полный bidirectional hreflang
+- Schema.org: WebPage + FAQPage(13) + SoftwareApplication + BreadcrumbList + Quiz schema
+- Person sameAs: ORCID + Zenodo DOI + GitHub в author блоке
+- llms.txt, ai.txt, robots.txt — все AI-боты разрешены (OpenAI, Gemini, Claude, Perplexity, DeepSeek, Mistral, Yandex)
+- hreflang: на всех 6 страницах, самореферентные ссылки
 
-## ИЗВЕСТНОЕ ОГРАНИЧЕНИЕ
-Вся логика проверена в Node-песочнице. Отрисовка в РЕАЛЬНОМ браузере НЕ проверялась —
-это видит только владелец. Перед заменой рабочего сайта: залить в тестовую ветку,
-прокликать вживую (тест, матрица, радар, смена языка, шеринг, аккордеон), потом в основную.
+### Технические исправления
+- charset UTF-8 добавлен первым в <head> (без него Кириллица/Японский/эмодзи отображались кракозябрами)
+- SW registration path: './sw.js' → '../sw.js' в языковых подпапках (через build.ps1)
+- Переводы: DE prokrastination, FR protocoles/contrats, ES ¿Vas a la IA?
 
-## Проблема индексации Google (диагноз)
-Сайт проиндексирован, но кэш старый → низкий приоритет сканирования. Причина скорее
-всего: новый сайт без внешнего авторитета + фактически одна HTML-страница (языки на JS).
-Лечение: (1) Google Search Console → отправить sitemap.xml → отчёт «Страницы» даст точную
-причину; (2) посев (внешние упоминания) — главный фактор; (3) опционально build.js со
-статическими подпапками /ru/ /es/ (создаст 6 реальных страниц).
+### PWA
+- sw.js: Service Worker v2026.1, прекэширует основные ассеты
+- manifest.json: полный PWA манифест (категории, shortcuts, icons)
+- site.webmanifest: УДАЛЁН (старый дубликат, конфликтовал с manifest.json по start_url)
 
-## Что дальше (не начато)
-- build.js: генерация статических языковых подпапок (из MIND-OS-IMPROVEMENT-GUIDE.md)
-- terms.html, affiliate-disclosure (из гайда)
-- Посев по SEEDING-KIT.md (Show HN, Reddit, dev.to, Habr, Qiita, Product Hunt, Wikidata)
-- Google Search Console: подтвердить владение (googled8a35f2a8c073799.html уже в репо),
-  отправить sitemap.xml (просто вписать имя файла), запросить индексацию.
+## Что нужно сделать (в порядке приоритета)
+
+### 1. Закоммитить удаление site.webmanifest (staging уже готов)
+```powershell
+git commit -m "chore: remove obsolete site.webmanifest, manifest.json is canonical"
+```
+
+### 2. Дождаться "пуш делай" от владельца
+```powershell
+git push origin test-final
+```
+
+### 3. После push — создать PR и смержить в main
+GitHub Actions задеплоит автоматически (~2 мин).
+
+### 4. После деплоя
+- Google Search Console → Submit sitemap: https://iamalex-afk.github.io/human-os-patch-33-protocols/sitemap.xml
+- Lighthouse/F12 проверка (владелец сам, в браузере)
+
+## Открытые вопросы (НЕ решать без явного запроса)
+1. **Twitter/X handle** — неизвестен. twitter:creator не добавлен. Спросить у владельца.
+2. **512px иконка PWA** — используется тот же файл что 192px (размытие). Нужна реальная 512px PNG.
+3. **sw.js** — не кэширует языковые страницы /ru/, /es/ и т.д. PWA работает только для EN.
+4. **LICENSE конфликт** — README говорит CC BY-NC-ND, файл LICENSE — GPL v3. Владелец решает.
+
+## Как запустить build.ps1 (генерация языковых страниц)
+```powershell
+cd C:\Users\79643\human-os-patch-33-protocols
+.\build.ps1
+```
+Создаёт/перезаписывает: ru/index.html, es/index.html, de/index.html, fr/index.html, ja/index.html
+
+## Как проверить локально (HTTP-сервер)
+```powershell
+python -m http.server 8000
+# затем открыть http://localhost:8000
+```
