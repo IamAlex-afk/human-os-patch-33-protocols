@@ -2,20 +2,25 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+| Version  | Supported |
+| -------- | --------- |
+| 2026.1.0 | Yes       |
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+## Architecture
+
+Mind-OS is a browser-only static site on GitHub Pages.
+
+- No server — no backend to attack
+- No database — no data to steal
+- No user accounts — no credentials to compromise
+- No cookies — no session hijacking
+- All data stored in the user's own browser (localStorage)
+- Content Security Policy active
+- XSS protection via escapeHtml() in all scripts
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+Report security issues via GitHub Issues:
+https://github.com/IamAlex-afk/human-os-patch-33-protocols/issues
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+Expected response time: within 7 days.

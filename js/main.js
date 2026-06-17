@@ -8,6 +8,16 @@
   const { DEFAULT_LANG, STORAGE_KEYS } = CONFIG;
   let currentLang = DEFAULT_LANG;
 
+  // Флаг + название + код для каждого языка
+  const LANG_META = {
+    en: { flag: '🇬🇧', name: 'English',  code: 'EN' },
+    ru: { flag: '🇷🇺', name: 'Русский',  code: 'RU' },
+    es: { flag: '🇪🇸', name: 'Español',  code: 'ES' },
+    de: { flag: '🇩🇪', name: 'Deutsch',  code: 'DE' },
+    fr: { flag: '🇫🇷', name: 'Français', code: 'FR' },
+    ja: { flag: '🇯🇵', name: '日本語',    code: 'JA' }
+  };
+
   function escapeHtml(str) {
     return String(str).replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[m]);
   }
@@ -16,24 +26,90 @@
     const grid = document.getElementById('protocolGrid');
     if (!grid) return;
     grid.innerHTML = '';
+    const t = getT(currentLang);
+    const word = (t.protocolWord || 'Protocol');
     list.forEach(p => {
-      const card = document.createElement('div');
-      card.className = 'protocol-card';
-      card.innerHTML = `<div class="protocol-num">Protocol ${p.num}</div><div class="protocol-title">${escapeHtml(p.title)}</div><div class="protocol-desc">${escapeHtml(p.desc)}</div>`;
-      grid.appendChild(card);
+      const item = document.createElement('div');
+      item.className = 'protocol-item';
+      const btn = document.createElement('button');
+      btn.className = 'protocol-toggle';
+      btn.setAttribute('aria-expanded', 'false');
+      btn.innerHTML = `<span class="protocol-num">${word} ${p.num}</span><span class="protocol-title">${escapeHtml(p.title)}</span><span class="protocol-arrow" aria-hidden="true">▼</span>`;
+      const body = document.createElement('div');
+      body.className = 'protocol-body';
+      body.innerHTML = `<p>${escapeHtml(p.desc)}</p>`;
+      btn.addEventListener('click', () => {
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+        btn.classList.toggle('active', !open);
+      });
+      btn.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); btn.click(); }
+      });
+      item.appendChild(btn);
+      item.appendChild(body);
+      grid.appendChild(item);
     });
   }
 
+  function openLangDropdown() {
+    const dd = document.getElementById('langDropdown');
+    const tg = document.getElementById('langToggle');
+    const sel = document.getElementById('langSelector');
+    if (dd) dd.removeAttribute('hidden');
+    if (tg) tg.setAttribute('aria-expanded', 'true');
+    if (sel) sel.classList.add('open');
+  }
+
+  function closeLangDropdown() {
+    const dd = document.getElementById('langDropdown');
+    const tg = document.getElementById('langToggle');
+    const sel = document.getElementById('langSelector');
+    if (dd) dd.setAttribute('hidden', '');
+    if (tg) tg.setAttribute('aria-expanded', 'false');
+    if (sel) sel.classList.remove('open');
+  }
+
   function initLangBar() {
-    const bar = document.getElementById('langBar');
-    if (!bar) return;
-    bar.innerHTML = '';
+    const toggle = document.getElementById('langToggle');
+    const dropdown = document.getElementById('langDropdown');
+    if (!toggle || !dropdown) return;
+
+    dropdown.innerHTML = '';
     Object.keys(translations).forEach(l => {
-      const btn = document.createElement('button');
-      btn.className = `lang-btn ${l === currentLang ? 'active' : ''}`;
-      btn.textContent = translations[l].langName;
-      btn.onclick = () => applyLanguage(l);
-      bar.appendChild(btn);
+      const meta = LANG_META[l] || { flag: '', name: translations[l].langName, code: l.toUpperCase() };
+      const item = document.createElement('button');
+      item.className = `lang-option lang-btn ${l === currentLang ? 'active' : ''}`;
+      item.setAttribute('role', 'option');
+      item.setAttribute('data-lang', l);
+      item.setAttribute('aria-selected', l === currentLang ? 'true' : 'false');
+      item.innerHTML = `<span class="lang-flag" aria-hidden="true">${meta.flag}</span><span class="lang-name">${meta.name}</span>`;
+      item.onclick = () => {
+        if (window.SITE_LANG) {
+          window.location.href = l === 'en' ? '../' : '../' + l + '/';
+        } else {
+          applyLanguage(l);
+          closeLangDropdown();
+        }
+      };
+      dropdown.appendChild(item);
+    });
+
+    toggle.onclick = (e) => {
+      e.stopPropagation();
+      if (dropdown.hasAttribute('hidden')) openLangDropdown();
+      else closeLangDropdown();
+    };
+
+    // Закрытие по клику вне окна
+    document.addEventListener('click', (e) => {
+      const sel = document.getElementById('langSelector');
+      if (sel && !sel.contains(e.target)) closeLangDropdown();
+    });
+
+    // Закрытие по Esc
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLangDropdown();
     });
   }
 
@@ -67,14 +143,26 @@
 
     storage.set(STORAGE_KEYS.LANG, lang);
 
-    const url = new URL(window.location);
-    if (lang === 'en') url.searchParams.delete('lang');
-    else url.searchParams.set('lang', lang);
-    window.history.replaceState(null, '', url);
+    if (!window.SITE_LANG) {
+      const url = new URL(window.location);
+      if (lang === 'en') url.searchParams.delete('lang');
+      else url.searchParams.set('lang', lang);
+      window.history.replaceState(null, '', url);
+      const _canon = document.getElementById('dynamicCanonical');
+      if (_canon) {
+        const _base = 'https://iamalex-afk.github.io/human-os-patch-33-protocols/';
+        _canon.href = lang === 'en' ? _base : _base + lang + '/';
+      }
+    }
 
     document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.textContent === t.langName);
+      const isActive = btn.getAttribute('data-lang') === lang;
+      btn.classList.toggle('active', isActive);
+      if (btn.hasAttribute('aria-selected')) btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
     });
+    // Обновляем код языка на кнопке-планете
+    const _code = document.getElementById('langCurrentCode');
+    if (_code) _code.textContent = (LANG_META[lang] || { code: lang.toUpperCase() }).code;
 
     document.documentElement.setAttribute('lang', lang);
 
@@ -88,7 +176,17 @@
     if (ogTitle) ogTitle.content = t.mainTitle;
     const ogDesc = document.getElementById('dynamicOgDescription');
     if (ogDesc) ogDesc.content = t.subhead;
+    const ogUrl = document.getElementById('dynamicOgUrl');
+    if (ogUrl && !window.SITE_LANG) ogUrl.content = lang === 'en'
+      ? 'https://iamalex-afk.github.io/human-os-patch-33-protocols/'
+      : `https://iamalex-afk.github.io/human-os-patch-33-protocols/${lang}/`;
 
+    ut('navAssessment', t.navAssessment);
+    ut('navTracker', t.navTracker);
+    ut('navGame', t.navGame);
+    ut('navPoll', t.navPoll);
+    ut('navProtocols', t.navProtocols);
+    ut('navFaq', t.navFaq);
     ut('mainTitle', t.mainTitle);
     ut('subheadText', t.subhead);
     ut('infoTitle', t.infoTitle);
@@ -149,12 +247,19 @@
     ut('protocolsDesc', t.protocolsDesc);
     ut('donateText', t.donateText);
     ut('shareBtnText', t.shareBtn);
+    ut('downloadCardText', t.downloadCardText);
+    ut('resetBtnText', t.resetTestBtn);  // FIX: кнопка перезапуска была всегда на английском
     ut('howTitle', t.howTitle);
     ut('howText', t.howText);
     ut('trustNoSignup', t.trustNoSignup);
     ut('trustLocal', t.trustLocal);
     ut('trustAnonymous', t.trustAnonymous);
     ut('overallTitle', t.overallTitle);
+    ut('spectrumLow', t.spectrumLow);
+    ut('spectrumMid', t.spectrumMid);
+    ut('spectrumHigh', t.spectrumHigh);
+    ut('resultDisclaimer', t.resultDisclaimer);
+    ut('sharedBanner', t.sharedBannerText);
     ut('reviewProgressText', t.reviewProgressText);
 
     const bLink = document.getElementById('bookLink');
@@ -234,9 +339,32 @@
 
     initLangBar();
 
+    // Открыт по ссылке с результатом? Показываем его
+    if (window.Quiz && Quiz.checkSharedResult) { try { Quiz.checkSharedResult(); } catch(e) {} }
+
+    // Клавиши 1-5 для ответа на текущий вопрос теста
+    document.addEventListener('keydown', (e) => {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+      const k = parseInt(e.key, 10);
+      if (k >= 1 && k <= 5) {
+        // Находим видимый активный шаг теста
+        const steps = document.querySelectorAll('.question-step.active');
+        for (const step of steps) {
+          if (step.offsetParent === null) continue; // невидим
+          const inputs = step.querySelectorAll('input[type="radio"]');
+          if (inputs[k-1]) {
+            inputs[k-1].checked = true;
+            inputs[k-1].dispatchEvent(new Event('change', { bubbles: true }));
+            e.preventDefault();
+            break;
+          }
+        }
+      }
+    });
+
     const savedLang = storage.get(STORAGE_KEYS.LANG);
     const urlParams = new URLSearchParams(window.location.search);
-    const lang = urlParams.get('lang') || savedLang || DEFAULT_LANG;
+    const lang = window.SITE_LANG || urlParams.get('lang') || savedLang || DEFAULT_LANG;
     applyLanguage(lang);
 
     const tSlider = document.getElementById('trackerScore');
@@ -266,11 +394,20 @@
 
     document.getElementById('shareButton')?.addEventListener('click', () => {
       const t = getT(currentLang);
+      const archEl = document.getElementById('overallArchetype');
+      const archetype = archEl && archEl.textContent ? archEl.textContent.trim() : '';
+      let shareText = t.subhead;
+      if (archetype && t.shareResultText) {
+        shareText = t.shareResultText.replace('{archetype}', archetype);
+      }
       if (navigator.share) {
-        navigator.share({ title: document.title, text: t.subhead, url: window.location.href }).catch(() => {});
-      } else {
-        navigator.clipboard.writeText(window.location.href);
-        alert('URL copied!');
+        const shareUrl = (window.Quiz && Quiz.buildShareURL) ? Quiz.buildShareURL() : window.location.href;
+        navigator.share({ title: document.title, text: shareText, url: shareUrl }).catch(() => {});
+      } else if (navigator.clipboard) {
+        const shareUrl = (window.Quiz && Quiz.buildShareURL) ? Quiz.buildShareURL() : window.location.href;
+        navigator.clipboard.writeText(shareUrl).then(() => {
+          alert(t.urlCopied || 'Link copied!');
+        }).catch(() => {});
       }
     });
 
@@ -283,12 +420,62 @@
       }
     });
 
+    // Секции для scroll-spy (подсветка активного пункта навигации)
+    const navMap = [
+      { nav: 'navAssessment', sec: 'test-section' },
+      { nav: 'navTracker',    sec: 'tracker-section' },
+      { nav: 'navGame',       sec: 'game-section' },
+      { nav: 'navPoll',       sec: 'poll-section' },
+      { nav: 'navProtocols',  sec: 'protocols-section' },
+      { nav: 'navFaq',        sec: 'faq-section' }
+    ];
+
+    let _scrollTick = false;
     window.addEventListener('scroll', () => {
-      const bar = document.getElementById('globalCTABar');
-      if (bar) {
-        if (window.scrollY > 800) bar.classList.add('visible');
-        else bar.classList.remove('visible');
-      }
-    });
+      if (_scrollTick) return;
+      _scrollTick = true;
+      window.requestAnimationFrame(() => {
+        const y = window.scrollY;
+
+        // 1. Плавающая CTA-панель
+        const bar = document.getElementById('globalCTABar');
+        if (bar) bar.classList.toggle('visible', y > 800);
+
+        // 2. Кнопка "наверх"
+        const topBtn = document.getElementById('scrollTopBtn');
+        if (topBtn) {
+          if (y > 600) topBtn.removeAttribute('hidden');
+          else topBtn.setAttribute('hidden', '');
+        }
+
+        // 3. Индикатор прогресса чтения
+        const prog = document.getElementById('readingProgress');
+        if (prog) {
+          const h = document.documentElement.scrollHeight - window.innerHeight;
+          prog.style.width = h > 0 ? (y / h * 100) + '%' : '0%';
+        }
+
+        // 4. Scroll-spy: подсветка активной секции
+        let activeNav = null;
+        for (const m of navMap) {
+          const sec = document.getElementById(m.sec);
+          if (sec && sec.getBoundingClientRect().top <= 120) activeNav = m.nav;
+        }
+        navMap.forEach(m => {
+          const link = document.getElementById(m.nav);
+          if (link) link.classList.toggle('nav-active', m.nav === activeNav);
+        });
+
+        _scrollTick = false;
+      });
+    }, { passive: true });
+
+    // Кнопка "наверх" — плавный возврат
+    const _topBtn = document.getElementById('scrollTopBtn');
+    if (_topBtn) {
+      _topBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
   });
 })();

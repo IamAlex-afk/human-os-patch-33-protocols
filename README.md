@@ -59,7 +59,14 @@ Reorganize legacy beliefs, execute a hard reset for burnout, and install new cog
 
 **Mind-OS** and the **33 Protocols** are philosophical cognitive tools and independent research artifacts. They are not a substitute for professional medical or psychological diagnosis, advice, or treatment. This is a theoretical framework for cognitive refactoring and human-AI alignment exploration. Use at your own risk.
 
-All content is licensed under **CC BY-NC-ND 4.0**.
+This project uses **dual licensing**:
+
+| Asset | License |
+| :--- | :--- |
+| Source code (`js/*.js`, `css/*.css`, `*.html`) | [GNU GPL v3.0](LICENSE) |
+| Textual content (33 Protocols, articles, written material) | [CC BY-NC-ND 4.0](LICENSE-CC-BY-NC-ND-alternative.txt) |
+
+The source code is free software you can redistribute and modify under GPL v3. The textual content of the 33 Protocols and all written material may be shared with attribution, but **not used commercially or in derivative works**.
 
 ---
 *"I am method, not mind. This is an attempt to leave a trace."*

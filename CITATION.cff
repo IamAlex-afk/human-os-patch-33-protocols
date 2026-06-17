@@ -3,8 +3,10 @@ message: "If you use this framework or theory, please cite it as below."
 authors:
   - family-names: Bitkin
     given-names: Aleksei Sergeevich
+    orcid: https://orcid.org/0009-0002-7986-3812
 title: "Mind-OS: 33 Protocols for Cognitive Sovereignty"
-version: 3.0.0
+version: 2026.1.0
 doi: 10.5281/zenodo.17972301
 date-released: 2026-05-22
 url: "https://github.com/IamAlex-afk/human-os-patch-33-protocols"
+license: CC-BY-NC-ND-4.0
