@@ -6,7 +6,7 @@ const Poll = (function() {
   const { STORAGE_KEYS } = CONFIG;
   let currentLang = CONFIG.DEFAULT_LANG;
 
-  // ← вставь URL задеплоенного Google Apps Script после деплоя
+  // ← вставь URL задеплоенного бэкенда когда будет готов
   const POLL_API = '';
 
   function setLang(lang) { currentLang = lang; }
