@@ -84,7 +84,14 @@
       item.setAttribute('data-lang', l);
       item.setAttribute('aria-selected', l === currentLang ? 'true' : 'false');
       item.innerHTML = `<span class="lang-flag" aria-hidden="true">${meta.flag}</span><span class="lang-name">${meta.name}</span>`;
-      item.onclick = () => { applyLanguage(l); closeLangDropdown(); };
+      item.onclick = () => {
+        if (window.SITE_LANG) {
+          window.location.href = l === 'en' ? '../' : '../' + l + '/';
+        } else {
+          applyLanguage(l);
+          closeLangDropdown();
+        }
+      };
       dropdown.appendChild(item);
     });
 
@@ -136,14 +143,16 @@
 
     storage.set(STORAGE_KEYS.LANG, lang);
 
-    const url = new URL(window.location);
-    if (lang === 'en') url.searchParams.delete('lang');
-    else url.searchParams.set('lang', lang);
-    window.history.replaceState(null, '', url);
-    const _canon = document.getElementById('dynamicCanonical');
-    if (_canon) {
-      const _base = 'https://iamalex-afk.github.io/human-os-patch-33-protocols/';
-      _canon.href = lang === 'en' ? _base : _base + '?lang=' + lang;
+    if (!window.SITE_LANG) {
+      const url = new URL(window.location);
+      if (lang === 'en') url.searchParams.delete('lang');
+      else url.searchParams.set('lang', lang);
+      window.history.replaceState(null, '', url);
+      const _canon = document.getElementById('dynamicCanonical');
+      if (_canon) {
+        const _base = 'https://iamalex-afk.github.io/human-os-patch-33-protocols/';
+        _canon.href = lang === 'en' ? _base : _base + lang + '/';
+      }
     }
 
     document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -355,7 +364,7 @@
 
     const savedLang = storage.get(STORAGE_KEYS.LANG);
     const urlParams = new URLSearchParams(window.location.search);
-    const lang = urlParams.get('lang') || savedLang || DEFAULT_LANG;
+    const lang = window.SITE_LANG || urlParams.get('lang') || savedLang || DEFAULT_LANG;
     applyLanguage(lang);
 
     const tSlider = document.getElementById('trackerScore');
