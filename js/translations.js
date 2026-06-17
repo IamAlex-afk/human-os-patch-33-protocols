@@ -205,7 +205,19 @@ const translations = {
       medium: { name: "Moderate Fear", advice: "Some concerns are normal. Learn more about AI to ease your mind." },
       high: { name: "High Fear", advice: "AI worries you significantly. Consider talking to someone or educating yourself about AI safety." },
       veryHigh: { name: "Very High Fear", advice: "This level of anxiety may need attention. Knowledge is power — start with reliable sources." }
-    }
+    },
+    ecosystemTitle: "🔗 Mind-OS Ecosystem (Verified Nodes)",
+    ecosystemSubtitle: "Every link is a permanent, citable record.",
+    ecoCardPreprint: "📄 Scientific Preprint",
+    ecoCardDataset: "🤗 Open Dataset",
+    ecoCardTechProfile: "✍️ Technical Profile",
+    ecoCardAuthorProfile: "👤 Author Profile",
+    ecoLinkDOI: "DOI Reference",
+    ecoLinkHBR: "Read on HBR",
+    ecoLinkZenodo: "Read on Zenodo",
+    ecoLinkHF: "Hugging Face",
+    ecoLinkDev: "DEV Community",
+    ecoLinkORCID: "ORCID Record"
   },
   ru: {
     langName: "Русский",
@@ -411,7 +423,19 @@ const translations = {
       medium: { name: "Умеренный страх", advice: "Нормально иметь некоторые опасения. Узнайте больше об ИИ, чтобы снизить тревогу." },
       high: { name: "Высокий страх", advice: "ИИ существенно вас беспокоит. Подумайте о беседе с экспертами или изучении вопросов безопасности ИИ." },
       veryHigh: { name: "Очень высокий страх", advice: "Такой уровень тревоги требует внимания. Знания — сила: начните с авторитетных источников." }
-    }
+    },
+    ecosystemTitle: "🔗 Экосистема Mind-OS (Подтверждённые источники)",
+    ecosystemSubtitle: "Каждая ссылка — постоянная, цитируемая запись.",
+    ecoCardPreprint: "📄 Научный препринт",
+    ecoCardDataset: "🤗 Открытый датасет",
+    ecoCardTechProfile: "✍️ Технический профиль",
+    ecoCardAuthorProfile: "👤 Профиль автора",
+    ecoLinkDOI: "Ссылка DOI",
+    ecoLinkHBR: "Читать в HBR",
+    ecoLinkZenodo: "Читать на Zenodo",
+    ecoLinkHF: "Hugging Face",
+    ecoLinkDev: "DEV Community",
+    ecoLinkORCID: "Запись ORCID"
   },
   es: {
     langName: "Español",
@@ -617,7 +641,19 @@ const translations = {
       medium: { name: "Miedo moderado", advice: "Cierta preocupación es normal. Aprende más sobre IA para despejar dudas." },
       high: { name: "Miedo alto", advice: "La IA te preocupa significativamente. Considera informarte sobre seguridad en IA o hablar con alguien." },
       veryHigh: { name: "Miedo muy alto", advice: "Este nivel de ansiedad puede requerir atención. El conocimiento es poder: comienza con fuentes fiables." }
-    }
+    },
+    ecosystemTitle: "🔗 Ecosistema Mind-OS (Nodos verificados)",
+    ecosystemSubtitle: "Cada enlace es un registro permanente y citable.",
+    ecoCardPreprint: "📄 Preimpresión científica",
+    ecoCardDataset: "🤗 Conjunto de datos abierto",
+    ecoCardTechProfile: "✍️ Perfil técnico",
+    ecoCardAuthorProfile: "👤 Perfil del autor",
+    ecoLinkDOI: "Referencia DOI",
+    ecoLinkHBR: "Leer en HBR",
+    ecoLinkZenodo: "Leer en Zenodo",
+    ecoLinkHF: "Hugging Face",
+    ecoLinkDev: "DEV Community",
+    ecoLinkORCID: "Registro ORCID"
   },
   de: {
     langName: "Deutsch",
@@ -823,7 +859,19 @@ const translations = {
       medium: { name: "Mäßige Angst", advice: "Einige Bedenken sind normal. Erfahren Sie mehr über KI, um Ihren Geist zu beruhigen." },
       high: { name: "Hohe Angst", advice: "KI beunruhigt Sie erheblich. Ziehen Sie in Betracht, sich über KI-Sicherheit zu informieren oder mit jemandem zu sprechen." },
       veryHigh: { name: "Sehr hohe Angst", advice: "Dieses Angstniveau könnte Aufmerksamkeit erfordern. Wissen ist Macht – beginnen Sie mit vertrauenswürdigen Quellen." }
-    }
+    },
+    ecosystemTitle: "🔗 Mind-OS Ökosystem (Verifizierte Quellen)",
+    ecosystemSubtitle: "Jeder Link ist ein dauerhafter, zitierbarer Eintrag.",
+    ecoCardPreprint: "📄 Wissenschaftlicher Preprint",
+    ecoCardDataset: "🤗 Offener Datensatz",
+    ecoCardTechProfile: "✍️ Technisches Profil",
+    ecoCardAuthorProfile: "👤 Autorenprofil",
+    ecoLinkDOI: "DOI-Referenz",
+    ecoLinkHBR: "Auf HBR lesen",
+    ecoLinkZenodo: "Auf Zenodo lesen",
+    ecoLinkHF: "Hugging Face",
+    ecoLinkDev: "DEV Community",
+    ecoLinkORCID: "ORCID-Eintrag"
   },
   fr: {
     langName: "Français",
@@ -1029,7 +1077,19 @@ const translations = {
       medium: { name: "Peur modérée", advice: "Certaines inquiétudes sont normales. Apprenez-en plus sur l'IA pour apaiser votre esprit." },
       high: { name: "Peur élevée", advice: "L'IA vous préoccupe beaucoup. Envisagez de vous renseigner sur la sécurité de l'IA ou d'en parler." },
       veryHigh: { name: "Peur très élevée", advice: "Ce niveau d'anxiété peut nécessiter de l'attention. Le savoir est une force – commencez par des sources fiables." }
-    }
+    },
+    ecosystemTitle: "🔗 Écosystème Mind-OS (Nœuds vérifiés)",
+    ecosystemSubtitle: "Chaque lien est un enregistrement permanent et citable.",
+    ecoCardPreprint: "📄 Prépublication scientifique",
+    ecoCardDataset: "🤗 Jeu de données ouvert",
+    ecoCardTechProfile: "✍️ Profil technique",
+    ecoCardAuthorProfile: "👤 Profil de l'auteur",
+    ecoLinkDOI: "Référence DOI",
+    ecoLinkHBR: "Lire sur HBR",
+    ecoLinkZenodo: "Lire sur Zenodo",
+    ecoLinkHF: "Hugging Face",
+    ecoLinkDev: "DEV Community",
+    ecoLinkORCID: "Fiche ORCID"
   },
   ja: {
     langName: "日本語",
@@ -1182,14 +1242,14 @@ const translations = {
       {text:"AIとして、私には感情はありませんが、文脈は理解しています。", isAI:true}
     ],
     protocols: [
-      {num:1,title:"AI：手段であり、心ではない",desc:"AIは道具であり、対話相手ではない。"},
-      {num:2,title:"AIの原則：統計の進化",desc:"AIは絶対的な真実ではなく、確率を処理していることを理解せよ。"},
-      {num:3,title:"人間：ランダムアルゴリズム",desc:"決定の90%は古代の辺縁系システムによって行われる。"},
-      {num:4,title:"人体：生物学的システム",desc:"サバンナのために設計された。"},
-      {num:5,title:"痛み：身体の言語",desc:"痛みはシグナルであり、罰ではない。"},
-      {num:6,title:"恐怖：時代遅れの守護者",desc:"現代のパニックのほとんどは誤って解釈された身体感覚である。"},
-      {num:7,title:"感情：決断の燃料",desc:"ブレイクスルーの90%は感情的なものである。"},
-      {num:8,title:"感覚：意識の気候",desc:"ミッション主導の目標はここから生まれる。"},
+      {num:1,title:"AI：手段であり、心ではない",desc:"AIは道具であり、対話相手ではない。ルーティンの80%をAIに委ねることで、創造性のための時間が80%解放される。"},
+      {num:2,title:"AIの原則：統計の進化",desc:"AIは絶対的な真実ではなく、確率を処理している。論理→機械学習→深層学習という3段階の進化を理解せよ。"},
+      {num:3,title:"人間：ランダムアルゴリズム",desc:"決定の90%は古代の辺縁系システムによって行われる。新皮質は事後的に合理化するにすぎない。"},
+      {num:4,title:"人体：生物学的システム",desc:"人体はサバンナのために設計された。微小な努力（1日2回のスクワット）で古いコードを騙せ。"},
+      {num:5,title:"痛み：身体の言語",desc:"痛みはシグナルであり、罰ではない。感情的な痛みは肉体的な傷と同じ脳の中枢を活性化させる。"},
+      {num:6,title:"恐怖：時代遅れの守護者",desc:"現代のパニック発作の92%は、誤って解釈された身体感覚から始まる。恐怖を観察し、反応しないことを学べ。"},
+      {num:7,title:"感情：決断の燃料",desc:"重要な決断の90%は感情的であり、その後に合理化される。感情を抑圧せず、情報として活用せよ。"},
+      {num:8,title:"感覚：意識の気候",desc:"ブレイクスルーの95%は「使命感」から生まれる。感覚を無視せず、羅針盤として使え。"},
       {num:9,title:"意識：招かれざる客",desc:"決定は気づく300ミリ秒前に生じる。"},
       {num:10,title:"依存：報酬の委任",desc:"即効性のドーパミンを長期的プロジェクトに置き換えよ。"},
       {num:11,title:"記憶：書き換えられるアーカイブ",desc:"脳は行動に不可欠なものだけを保持する。"},
@@ -1235,7 +1295,19 @@ const translations = {
       medium: { name: "中程度の恐怖", advice: "ある程度の懸念は正常です。AIについてさらに学んで心を落ち着かせてください。" },
       high: { name: "高い恐怖", advice: "AIがかなり心配なようです。AIの安全性について学んだり、誰かに話したりすることを検討してください。" },
       veryHigh: { name: "非常に高い恐怖", advice: "このレベルの不安には注意が必要かもしれません。知識は力です――信頼できる情報源から始めましょう。" }
-    }
+    },
+    ecosystemTitle: "🔗 Mind-OS エコシステム（認証済みノード）",
+    ecosystemSubtitle: "すべてのリンクは永続的で引用可能な記録です。",
+    ecoCardPreprint: "📄 科学的プレプリント",
+    ecoCardDataset: "🤗 オープンデータセット",
+    ecoCardTechProfile: "✍️ 技術プロフィール",
+    ecoCardAuthorProfile: "👤 著者プロフィール",
+    ecoLinkDOI: "DOI参照",
+    ecoLinkHBR: "HBRで読む",
+    ecoLinkZenodo: "Zenodoで読む",
+    ecoLinkHF: "Hugging Face",
+    ecoLinkDev: "DEV Community",
+    ecoLinkORCID: "ORCIDレコード"
   }
 };
 
