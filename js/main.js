@@ -187,6 +187,7 @@
     ut('navPoll', t.navPoll);
     ut('navProtocols', t.navProtocols);
     ut('navFaq', t.navFaq);
+    ut('pwaInstallText', t.installApp);
     ut('mainTitle', t.mainTitle);
     ut('subheadText', t.subhead);
     ut('infoTitle', t.infoTitle);
@@ -229,6 +230,7 @@
     ut('submitPoll', t.submitPoll);
     ut('pollResultsTitle', t.pollResultsTitle);
     uh('pollBridge', t.pollBridge);
+    ut('pollInviteText', t.pollInviteText);
 
     /* ПАТЧ: ctaText и pollPrivacy — гарантированно обновляются */
     ut('ctaText', t.ctaText);
@@ -402,6 +404,19 @@
 
     if (window.Poll) {
       document.getElementById('submitPoll')?.addEventListener('click', () => Poll.submit());
+      document.getElementById('pollInviteBtn')?.addEventListener('click', () => {
+        const t = getT(currentLang);
+        const base = window.location.origin + window.location.pathname.replace(/\/(ru|es|de|fr|ja)\/?$/, '/');
+        const pollUrl = base + '#poll-section';
+        const text = (t.pollInviteShareText || 'How do you feel about AI? Vote anonymously in the global Mind-OS poll:');
+        if (navigator.share) {
+          navigator.share({ title: 'Mind-OS Global AI Poll', text, url: pollUrl }).catch(() => {});
+        } else if (navigator.clipboard) {
+          navigator.clipboard.writeText(text + ' ' + pollUrl).then(() => {
+            alert(t.urlCopied || 'Link copied!');
+          }).catch(() => {});
+        }
+      });
     }
 
     initFAQ();
@@ -491,5 +506,28 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     }
+
+    // PWA install prompt
+    let _pwaPrompt = null;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      _pwaPrompt = e;
+      const li = document.getElementById('pwaInstallLi');
+      if (li) li.style.display = '';
+    });
+    document.getElementById('pwaInstallBtn')?.addEventListener('click', () => {
+      if (!_pwaPrompt) return;
+      _pwaPrompt.prompt();
+      _pwaPrompt.userChoice.then(() => {
+        _pwaPrompt = null;
+        const li = document.getElementById('pwaInstallLi');
+        if (li) li.style.display = 'none';
+      });
+    });
+    window.addEventListener('appinstalled', () => {
+      _pwaPrompt = null;
+      const li = document.getElementById('pwaInstallLi');
+      if (li) li.style.display = 'none';
+    });
   });
 })();
