@@ -15,7 +15,9 @@
     es: { flag: '🇪🇸', name: 'Español',  code: 'ES' },
     de: { flag: '🇩🇪', name: 'Deutsch',  code: 'DE' },
     fr: { flag: '🇫🇷', name: 'Français', code: 'FR' },
-    ja: { flag: '🇯🇵', name: '日本語',    code: 'JA' }
+    ja: { flag: '🇯🇵', name: '日本語',    code: 'JA' },
+    vi: { flag: '🇻🇳', name: 'Tiếng Việt', code: 'VI' },
+    th: { flag: '🇹🇭', name: 'ภาษาไทย',   code: 'TH' }
   };
 
   function escapeHtml(str) {
