@@ -187,6 +187,7 @@
     ut('navPoll', t.navPoll);
     ut('navProtocols', t.navProtocols);
     ut('navFaq', t.navFaq);
+    ut('pwaInstallText', t.installApp);
     ut('mainTitle', t.mainTitle);
     ut('subheadText', t.subhead);
     ut('infoTitle', t.infoTitle);
@@ -491,5 +492,28 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     }
+
+    // PWA install prompt
+    let _pwaPrompt = null;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      _pwaPrompt = e;
+      const li = document.getElementById('pwaInstallLi');
+      if (li) li.style.display = '';
+    });
+    document.getElementById('pwaInstallBtn')?.addEventListener('click', () => {
+      if (!_pwaPrompt) return;
+      _pwaPrompt.prompt();
+      _pwaPrompt.userChoice.then(() => {
+        _pwaPrompt = null;
+        const li = document.getElementById('pwaInstallLi');
+        if (li) li.style.display = 'none';
+      });
+    });
+    window.addEventListener('appinstalled', () => {
+      _pwaPrompt = null;
+      const li = document.getElementById('pwaInstallLi');
+      if (li) li.style.display = 'none';
+    });
   });
 })();
