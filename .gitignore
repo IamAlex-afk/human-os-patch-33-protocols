@@ -1,0 +1,9 @@
+.DS_Store
+Thumbs.db
+*.swp
+node_modules/
+.env
+__pycache__/
+*.zip
+verify.py
+LICENSE-CC-BY-NC-ND-alternative.txt
