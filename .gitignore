@@ -3,3 +3,6 @@ Thumbs.db
 *.swp
 node_modules/
 .env
+__pycache__/
+*.zip
+verify.py

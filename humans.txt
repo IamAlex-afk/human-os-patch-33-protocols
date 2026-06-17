@@ -1,0 +1,17 @@
+/* TEAM */
+Creator & Researcher: Aleksei Sergeevich Bitkin
+ORCID: https://orcid.org/0009-0002-7986-3812
+
+/* ABOUT */
+Mind-OS: AI Dependency Self-Assessment
+World's first free anonymous browser-based AI dependency test
+No data collection. No signup. No tracking.
+First published: 2025
+
+/* TECHNOLOGY */
+HTML5, CSS3, Vanilla JavaScript, PWA
+Languages: English, Russian, Spanish, German, French, Japanese
+
+/* SCIENCE */
+LLM-D12 Scale | AI Anxiety Scale (AIAS) | AIRD Framework
+Preprint: https://zenodo.org/record/17972301
