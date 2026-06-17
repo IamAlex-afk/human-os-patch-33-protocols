@@ -2,6 +2,7 @@
 
 const storage = {
   set(k, v) {
+    if (k === undefined || k === null) { console.warn('[storage] undefined key rejected'); return; }
     try { localStorage.setItem(k, JSON.stringify(v)); } catch(e) {}
   },
   get(k) {
