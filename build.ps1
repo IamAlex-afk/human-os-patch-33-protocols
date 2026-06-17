@@ -30,6 +30,16 @@ $langs = @{
     desc   = "認知的オフロード、AI不安、デジタル燃え尽き症候群の科学的かつ匿名のアセスメント。登録不要、データ収集なし。"
     locale = "ja_JP"
   }
+  vi = @{
+    title  = "Bài kiểm tra phụ thuộc AI miễn phí – Hiểu thói quen AI của bạn"
+    desc   = "Đánh giá ẩn danh dựa trên khoa học về giảm tải nhận thức, lo lắng AI và kiệt sức kỹ thuật số. Không đăng ký, không thu thập dữ liệu."
+    locale = "vi_VN"
+  }
+  th = @{
+    title  = "แบบทดสอบการพึ่งพา AI ฟรี – เข้าใจนิสัยของคุณ"
+    desc   = "การประเมินแบบไม่ระบุตัวตนตามหลักวิทยาศาสตร์เกี่ยวกับการถ่ายโอนงานด้านความคิด ความวิตกกังวลด้าน AI และความหมดไฟดิจิทัล ไม่ต้องสมัครสมาชิก ไม่เก็บข้อมูล"
+    locale = "th_TH"
+  }
 }
 
 $template = Get-Content "index.html" -Raw -Encoding UTF8
