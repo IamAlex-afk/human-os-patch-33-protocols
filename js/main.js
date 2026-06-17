@@ -267,6 +267,20 @@
     const cLink = document.getElementById('ctaBarLink');
     if (cLink) { cLink.href = t.bookUrl || '#'; }
 
+    ut('ecosystemTitle', t.ecosystemTitle);
+    ut('ecosystemSubtitle', t.ecosystemSubtitle);
+    ut('ecoCardPreprint', t.ecoCardPreprint);
+    ut('ecoCardDataset', t.ecoCardDataset);
+    ut('ecoCardTechProfile', t.ecoCardTechProfile);
+    ut('ecoCardAuthorProfile', t.ecoCardAuthorProfile);
+    ut('ecoLink1', t.ecoLinkDOI);
+    ut('ecoLink2', t.ecoLinkHBR);
+    ut('ecoLink3', t.ecoLinkDOI);
+    ut('ecoLink4', t.ecoLinkZenodo);
+    ut('ecoLink5', t.ecoLinkHF);
+    ut('ecoLink6', t.ecoLinkDev);
+    ut('ecoLink7', t.ecoLinkORCID);
+
     ut('faqTitle', t.faqTitle);
     for (let i = 1; i <= 8; i++) {
       ut(`faqQ${i}`, t[`faqQ${i}`] || '');
