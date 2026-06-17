@@ -177,9 +177,9 @@
     const ogDesc = document.getElementById('dynamicOgDescription');
     if (ogDesc) ogDesc.content = t.subhead;
     const ogUrl = document.getElementById('dynamicOgUrl');
-    if (ogUrl) ogUrl.content = lang === 'en'
+    if (ogUrl && !window.SITE_LANG) ogUrl.content = lang === 'en'
       ? 'https://iamalex-afk.github.io/human-os-patch-33-protocols/'
-      : `https://iamalex-afk.github.io/human-os-patch-33-protocols/?lang=${lang}`;
+      : `https://iamalex-afk.github.io/human-os-patch-33-protocols/${lang}/`;
 
     ut('navAssessment', t.navAssessment);
     ut('navTracker', t.navTracker);
