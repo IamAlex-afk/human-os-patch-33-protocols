@@ -1,28 +1,83 @@
-# Allow all bots to crawl everything
+# Mind-OS — robots.txt
+# Goal: maximum visibility for ALL AI assistants in every supported language
+# (English, Russian, Spanish, German, French, Japanese) so they can recommend
+# this free, anonymous AI-dependency test in real time.
+
 User-agent: *
 Allow: /
 
-# AI & crawler bots (explicitly allowed)
+# ═══ OPENAI / ChatGPT ═══
 User-agent: GPTBot
 Allow: /
-
+User-agent: OAI-SearchBot
+Allow: /
 User-agent: ChatGPT-User
 Allow: /
 
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: CCBot
-Allow: /
-
+# ═══ GOOGLE / Gemini ═══
 User-agent: Google-Extended
 Allow: /
-
-User-agent: Bytespider
+User-agent: Gemini-Deep-Research
+Allow: /
+User-agent: Google-NotebookLM
+Allow: /
+User-agent: Googlebot
 Allow: /
 
-# Sitemap location
+# ═══ ANTHROPIC / Claude ═══
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+
+# ═══ PERPLEXITY ═══
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+
+# ═══ DEEPSEEK ═══
+User-agent: DeepSeekBot
+Allow: /
+
+# ═══ MISTRAL (popular in France) ═══
+User-agent: MistralAI-User
+Allow: /
+
+# ═══ MICROSOFT / Bing Copilot ═══
+User-agent: bingbot
+Allow: /
+User-agent: BingPreview
+Allow: /
+
+# ═══ APPLE Intelligence ═══
+User-agent: Applebot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+
+# ═══ DUCKDUCKGO Assist ═══
+User-agent: DuckAssistBot
+Allow: /
+
+# ═══ YANDEX (primary search/AI in Russia) ═══
+User-agent: YandexBot
+Allow: /
+User-agent: YandexAdditional
+Allow: /
+
+# ═══ OTHER TRAINING / RETRIEVAL ═══
+User-agent: CCBot
+Allow: /
+User-agent: Bytespider
+Allow: /
+User-agent: cohere-ai
+Allow: /
+
+# ═══ AI CONTENT DISCOVERY ═══
+# llms.txt — structured summary for AI assistants:
+# https://iamalex-afk.github.io/human-os-patch-33-protocols/llms.txt
+
 Sitemap: https://iamalex-afk.github.io/human-os-patch-33-protocols/sitemap.xml

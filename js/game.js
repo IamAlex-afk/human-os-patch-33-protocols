@@ -5,7 +5,10 @@ const Game = (function() {
   let gameIndex = 0;
   let gameScore = 0;
 
-  function setLang(lang) { currentLang = lang; }
+  function setLang(lang) { 
+    currentLang = lang;
+    loadQuestion();
+  }
 
   function loadQuestion() {
     const t = getT(currentLang);

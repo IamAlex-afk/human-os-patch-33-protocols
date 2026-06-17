@@ -1,0 +1,5 @@
+Contact: https://github.com/IamAlex-afk/human-os-patch-33-protocols/issues
+Preferred-Languages: en, ru
+Scope: https://iamalex-afk.github.io/human-os-patch-33-protocols/
+Policy: This site collects zero user data. All processing is browser-local.
+Expires: 2027-01-01T00:00:00.000Z
