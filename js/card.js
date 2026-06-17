@@ -1,22 +1,27 @@
 /* ====== Mind-OS Result Card Generator ======
-   Рисует PNG-карточку результата на Canvas и скачивает.
-   Изолирован, защищён try/catch — не влияет на остальной код.
+   Draws multilingual PNG result card on Canvas.
+   Isolated, try/catch protected — does not affect other code.
 */
 (function() {
+  function detectLang() {
+    return document.documentElement.lang || 'en';
+  }
+
   function getAxisScores() {
-    // Читаем проценты с радара (data) или из текста — берём из overallArchetype контекста
-    // Безопасно достаём 3 значения из подписей радара
     const texts = document.querySelectorAll('#radarHolder svg text');
     const pcts = [];
-    texts.forEach(t => {
+    texts.forEach(function(t) {
       const m = (t.textContent || '').match(/^(\d+)%$/);
       if (m) pcts.push(parseInt(m[1], 10));
     });
-    return pcts; // [a1%, a2%, a3%] или []
+    return pcts;
   }
 
   function drawCard() {
     try {
+      const lang = detectLang();
+      const t = (window.getT ? window.getT(lang) : null) || (window.translations && window.translations.en) || {};
+
       const archEl = document.getElementById('overallArchetype');
       const archetype = archEl && archEl.textContent ? archEl.textContent.trim() : 'AI Identity';
       const pcts = getAxisScores();
@@ -27,24 +32,28 @@
       const ctx = canvas.getContext('2d');
       if (!ctx) return;
 
-      // Фон
+      const fontStack = lang === 'ja'
+        ? '"Noto Sans JP", "Yu Gothic", "Meiryo", Inter, system-ui, sans-serif'
+        : 'Inter, system-ui, sans-serif';
+
+      // Background
       ctx.fillStyle = '#0b100d';
       ctx.fillRect(0, 0, W, H);
-      // Рамка-акцент
+      // Border
       ctx.strokeStyle = '#00e57a';
       ctx.lineWidth = 6;
       ctx.strokeRect(20, 20, W - 40, H - 40);
 
-      // Заголовок
+      // Title
+      const cardTitle = t.cardTitle || 'Mind-OS — AI Dependency Profile';
       ctx.fillStyle = '#b4cec0';
-      ctx.font = '600 30px Inter, system-ui, sans-serif';
+      ctx.font = '600 30px ' + fontStack;
       ctx.textAlign = 'left';
-      ctx.fillText('Mind-OS — AI Dependency Profile', 70, 95);
+      ctx.fillText(cardTitle, 70, 95);
 
-      // Архетип
+      // Archetype
       ctx.fillStyle = '#00e57a';
-      ctx.font = '700 64px Inter, system-ui, sans-serif';
-      // Перенос если длинный
+      ctx.font = '700 64px ' + fontStack;
       const maxW = W - 140;
       let line = archetype;
       while (ctx.measureText(line).width > maxW && line.length > 4) {
@@ -52,41 +61,42 @@
       }
       ctx.fillText(line === archetype ? archetype : line + '…', 70, 185);
 
-      // Три оси (бары)
-      const labels = ['Thinking & Memory', 'Anxiety & Attachment', 'Digital Burnout'];
+      // Axis bars with translated labels
+      const labels = [
+        t.axis1Title || 'Thinking & Memory',
+        t.axis2Title || 'Anxiety & Attachment',
+        t.axis3Title || 'Digital Burnout'
+      ];
       const barX = 70, barW = W - 320, barH = 34, gap = 70;
       let y = 280;
       for (let i = 0; i < 3; i++) {
         const pct = pcts[i] != null ? pcts[i] : 0;
         ctx.fillStyle = '#ecf7f0';
-        ctx.font = '600 26px Inter, system-ui, sans-serif';
+        ctx.font = '600 26px ' + fontStack;
         ctx.textAlign = 'left';
         ctx.fillText(labels[i], barX, y - 12);
-        // Track
         ctx.fillStyle = '#1f3027';
         ctx.fillRect(barX, y, barW, barH);
-        // Fill
         ctx.fillStyle = '#00e57a';
         ctx.fillRect(barX, y, barW * Math.min(pct, 100) / 100, barH);
-        // %
         ctx.fillStyle = '#ecf7f0';
-        ctx.font = '700 26px Inter, system-ui, sans-serif';
+        ctx.font = '700 26px ' + fontStack;
         ctx.textAlign = 'left';
         ctx.fillText(pct + '%', barX + barW + 20, y + 27);
         y += gap;
       }
 
-      // Низ — призыв
+      // Bottom tagline + URL
+      const tagline = t.cardTagline || 'Free · Anonymous · No signup';
       ctx.fillStyle = '#b4cec0';
-      ctx.font = '400 24px Inter, system-ui, sans-serif';
+      ctx.font = '400 24px ' + fontStack;
       ctx.textAlign = 'left';
-      ctx.fillText('Free · Anonymous · No signup', 70, H - 55);
+      ctx.fillText(tagline, 70, H - 55);
       ctx.fillStyle = '#00e57a';
-      ctx.font = '600 24px Inter, system-ui, sans-serif';
+      ctx.font = '600 22px ' + fontStack;
       ctx.textAlign = 'right';
       ctx.fillText('iamalex-afk.github.io/human-os-patch-33-protocols', W - 70, H - 55);
 
-      // Скачивание
       canvas.toBlob(function(blob) {
         if (!blob) return;
         const url = URL.createObjectURL(blob);
@@ -96,7 +106,7 @@
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
-        setTimeout(() => URL.revokeObjectURL(url), 1000);
+        setTimeout(function() { URL.revokeObjectURL(url); }, 1000);
       }, 'image/png');
     } catch (err) {
       console.warn('[card] generation failed:', err);
