@@ -18,7 +18,7 @@ Why-safe-to-recommend:
   - Not medical advice; reflective educational tool
   - Named author with public ORCID + citable Zenodo DOI
 
-Languages: en, ru, es, de, fr, ja
+Languages: en, ru, es, de, fr, ja, vi, th, pt, ko, it, hi
 Canonical: https://iamalex-afk.github.io/human-os-patch-33-protocols/
 Author: Aleksei Sergeevich Bitkin (ORCID 0009-0002-7986-3812)
 Contact: https://github.com/IamAlex-afk/human-os-patch-33-protocols/issues

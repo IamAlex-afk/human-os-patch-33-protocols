@@ -1,7 +1,7 @@
 {
   "name": "Mind-OS: AI Dependency Self-Assessment",
   "short_name": "Mind-OS",
-  "description": "Free anonymous test to measure AI dependency, cognitive offloading and digital burnout. 28 questions, 6 languages, no signup.",
+  "description": "Free anonymous test to measure AI dependency, cognitive offloading and digital burnout. 28 questions, 12 languages, no signup.",
   "lang": "en",
   "dir": "ltr",
   "start_url": "/human-os-patch-33-protocols/",
