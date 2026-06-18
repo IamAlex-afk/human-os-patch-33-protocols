@@ -61,10 +61,10 @@ Vanilla HTML/CSS/JS, без фреймворков, localStorage, PWA, 12 язы
 ### Вирусные механики
 - Web Share API + canvas-карточка результата
 - Кнопка "Пригласить друга" в секции опроса
-- Глобальный опрос (симуляция, backend готов к подключению через POLL_API)
+- Глобальный опрос — РЕАЛЬНЫЙ backend подключён 2026-06-18 (Google Apps Script, `poll-backend/Code.gs`). Хранит только 3 счётчика (PropertiesService), без IP/email/timestamp/per-vote записей. API отдаёт только проценты (forPct/neutralPct/againstPct), total не возвращается и не показывается в UI. Deployment: "Execute as: Me", "Who has access: Anyone, even anonymous"
 
 ## Открытые вопросы (НЕ решать без явного запроса)
-1. **POLL_API** — backend не подключён. Нужен Google Apps Script или Supabase. POLL_API='' → симуляция.
+1. ~~POLL_API~~ — закрыто 2026-06-18, backend реальный и подключён.
 2. **Twitter/X handle** — twitter:creator не добавлен (handle неизвестен).
 3. **512px иконка PWA** — нет отдельного 512×512 PNG (используется тот же файл что 192px).
 4. **LICENSE конфликт** — README говорит CC BY-NC-ND, файл LICENSE — GPL v3. Владелец решает.
