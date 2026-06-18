@@ -17,7 +17,11 @@
     fr: { flag: '🇫🇷', name: 'Français', code: 'FR' },
     ja: { flag: '🇯🇵', name: '日本語',    code: 'JA' },
     vi: { flag: '🇻🇳', name: 'Tiếng Việt', code: 'VI' },
-    th: { flag: '🇹🇭', name: 'ภาษาไทย',   code: 'TH' }
+    th: { flag: '🇹🇭', name: 'ภาษาไทย',   code: 'TH' },
+    pt: { flag: '🇵🇹', name: 'Português', code: 'PT' },
+    ko: { flag: '🇰🇷', name: '한국어',     code: 'KO' },
+    it: { flag: '🇮🇹', name: 'Italiano',  code: 'IT' },
+    hi: { flag: '🇮🇳', name: 'हिन्दी',     code: 'HI' }
   };
 
   function escapeHtml(str) {
@@ -244,7 +248,6 @@
       pollPrivacyEl.textContent = t.pollPrivacy || fallback;
     }
 
-    ut('ctaFirstReview', t.ctaFirstReview);
     ut('ctaBarText', t.ctaBarText);
     ut('footerText', t.footerText);
     ut('protocolsTitle', t.protocolsTitle);
@@ -264,7 +267,6 @@
     ut('spectrumHigh', t.spectrumHigh);
     ut('resultDisclaimer', t.resultDisclaimer);
     ut('sharedBanner', t.sharedBannerText);
-    ut('reviewProgressText', t.reviewProgressText);
 
     const bLink = document.getElementById('bookLink');
     if (bLink) { bLink.href = t.bookUrl || '#'; bLink.textContent = t.bookLabel; }
@@ -408,7 +410,7 @@
       document.getElementById('submitPoll')?.addEventListener('click', () => Poll.submit());
       document.getElementById('pollInviteBtn')?.addEventListener('click', () => {
         const t = getT(currentLang);
-        const base = window.location.origin + window.location.pathname.replace(/\/(ru|es|de|fr|ja)\/?$/, '/');
+        const base = window.location.origin + window.location.pathname.replace(/\/(ru|es|de|fr|ja|vi|th|pt|ko|it|hi)\/?$/, '/');
         const pollUrl = base + '#poll-section';
         const text = (t.pollInviteShareText || 'How do you feel about AI? Vote anonymously in the global Mind-OS poll:');
         if (navigator.share) {

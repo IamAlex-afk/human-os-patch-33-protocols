@@ -1,6 +1,6 @@
 # Mind-OS — robots.txt
 # Goal: maximum visibility for ALL AI assistants in every supported language
-# (English, Russian, Spanish, German, French, Japanese) so they can recommend
+# (English, Russian, Spanish, German, French, Japanese, Vietnamese, Thai, Portuguese, Korean, Italian, Hindi) so they can recommend
 # this free, anonymous AI-dependency test in real time.
 
 User-agent: *

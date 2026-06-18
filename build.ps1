@@ -40,6 +40,26 @@ $langs = @{
     desc   = "การประเมินแบบไม่ระบุตัวตนตามหลักวิทยาศาสตร์เกี่ยวกับการถ่ายโอนงานด้านความคิด ความวิตกกังวลด้าน AI และความหมดไฟดิจิทัล ไม่ต้องสมัครสมาชิก ไม่เก็บข้อมูล"
     locale = "th_TH"
   }
+  pt = @{
+    title  = "Teste Gratuito de Dependência de IA – Entenda Seus Hábitos com IA"
+    desc   = "Avaliação anônima com base científica sobre sobrecarga cognitiva, ansiedade por IA e esgotamento digital. Sem cadastro, sem coleta de dados."
+    locale = "pt_PT"
+  }
+  ko = @{
+    title  = "무료 AI 의존도 테스트 – 나의 AI 습관 이해하기"
+    desc   = "인지적 외주화, AI 불안, 디지털 탈진에 대한 과학적 기반의 익명 평가. 가입 불필요, 데이터 수집 없음."
+    locale = "ko_KR"
+  }
+  it = @{
+    title  = "Test Gratuito sulla Dipendenza dall'IA – Comprendi le Tue Abitudini con l'IA"
+    desc   = "Valutazione anonima su base scientifica del sovraccarico cognitivo, dell'ansia da IA e dell'esaurimento digitale. Senza registrazione, senza raccolta dati."
+    locale = "it_IT"
+  }
+  hi = @{
+    title  = "मुफ़्त AI निर्भरता परीक्षण – अपनी AI आदतों को समझें"
+    desc   = "संज्ञानात्मक भार, AI चिंता और डिजिटल थकान का वैज्ञानिक आधार पर गुमनाम मूल्यांकन। कोई साइनअप नहीं, कोई डेटा संग्रह नहीं।"
+    locale = "hi_IN"
+  }
 }
 
 $template = Get-Content "index.html" -Raw -Encoding UTF8
