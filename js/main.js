@@ -82,7 +82,7 @@
     if (!toggle || !dropdown) return;
 
     dropdown.innerHTML = '';
-    Object.keys(translations).forEach(l => {
+    Object.keys(LANG_META).forEach(l => {
       const meta = LANG_META[l] || { flag: '', name: translations[l].langName, code: l.toUpperCase() };
       const item = document.createElement('button');
       item.className = `lang-option lang-btn ${l === currentLang ? 'active' : ''}`;
