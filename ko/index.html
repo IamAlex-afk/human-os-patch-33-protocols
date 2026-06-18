@@ -12,7 +12,7 @@
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=()">
   <meta name="yandex-verification" content="5356814ecf72e704">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://script.google.com https://script.googleusercontent.com; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://script.google.com https://script.googleusercontent.com https://fonts.gstatic.com;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://script.google.com https://script.googleusercontent.com; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; connect-src 'self' https://script.google.com https://script.googleusercontent.com;">
   
   <link rel="canonical" id="dynamicCanonical" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/">
   <link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/">
@@ -61,14 +61,8 @@
   <link rel="author" href="../humans.txt">
   <link rel="manifest" href="../manifest.json">
   <meta name="theme-color" content="#0b100d">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-  <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-  </noscript>
+  <link rel="preload" href="../css/fonts.css" as="style">
+  <link rel="stylesheet" href="../css/fonts.css">
   <link rel="preload" href="../css/style.css" as="style">
   <link rel="stylesheet" href="../css/style.css">
 
@@ -574,7 +568,9 @@
 </div>
 <script src="../js/config.js" defer></script>
 <script src="../js/storage.js" defer></script>
-<script src="../js/translations.js" defer></script>
+<script src="../js/translations-core.js" defer></script>
+<script src="../js/translations/en.js" defer></script>
+<script src="../js/translations/ko.js" defer></script>
 <script src="../js/quiz.js" defer></script>
 <script src="../js/tracker.js" defer></script>
 <script src="../js/game.js" defer></script>
