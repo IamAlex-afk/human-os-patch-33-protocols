@@ -6,8 +6,7 @@ const Poll = (function() {
   const { STORAGE_KEYS } = CONFIG;
   let currentLang = CONFIG.DEFAULT_LANG;
 
-  // ← вставь URL задеплоенного бэкенда когда будет готов
-  const POLL_API = '';
+  const POLL_API = 'https://script.google.com/macros/s/AKfycbzuPpzgXRHcTl-fBSthX3Te9NuPTT917s-HKDIs2xgzmlwXkFIZCFzUZBmi7ViHyNvt/exec';
 
   function setLang(lang) { currentLang = lang; }
 
@@ -16,7 +15,7 @@ const Poll = (function() {
       const f = Math.floor(Math.random() * 30) + 45; // 45–75
       const n = Math.floor(Math.random() * 20) + 15; // 15–35
       const a = 100 - f - n;
-      storage.set(STORAGE_KEYS.POLL_BASE, { forPct: f, neutralPct: n, againstPct: a, total: 0 });
+      storage.set(STORAGE_KEYS.POLL_BASE, { forPct: f, neutralPct: n, againstPct: a });
     }
     return storage.get(STORAGE_KEYS.POLL_BASE);
   }
@@ -27,8 +26,7 @@ const Poll = (function() {
     return {
       forPct: data['for'] || 0,
       neutralPct: data['neutral'] || 0,
-      againstPct: data['against'] || 0,
-      total: data.total || 0
+      againstPct: data['against'] || 0
     };
   }
 
@@ -50,10 +48,9 @@ const Poll = (function() {
         </div>`;
       }).join('');
     }
+    // По требованию владельца: показываем только проценты, без количества голосов.
     const totalEl = document.getElementById('pollTotal');
-    if (totalEl && data.total > 0) {
-      totalEl.textContent = data.total.toLocaleString() + ' ' + (t.pollTotalVotes || 'votes worldwide');
-    }
+    if (totalEl) totalEl.textContent = '';
   }
 
   function showResults(data) {
