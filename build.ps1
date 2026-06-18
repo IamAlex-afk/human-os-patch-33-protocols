@@ -115,6 +115,9 @@ foreach ($lang in $langs.Keys) {
     $html = $html -replace '\s*<!-- JP_FONT_PLACEHOLDER -->\r?\n', "`n"
   }
 
+  # 10c. Load this language's translation file (en.js is always loaded as fallback)
+  $html = $html -replace '<!-- TRANSLATIONS_LANG_PLACEHOLDER -->', "<script src=`"js/translations/$lang.js`" defer></script>"
+
   # 11. Fix relative asset paths (add ../ prefix)
   $html = $html -replace 'href="css/', 'href="../css/'
   $html = $html -replace 'href="js/', 'href="../js/'

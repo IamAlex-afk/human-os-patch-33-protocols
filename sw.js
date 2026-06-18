@@ -1,5 +1,5 @@
 /* Mind-OS Service Worker v2026.1 — офлайн + PWA установка */
-const CACHE = 'mindos-2026-6';
+const CACHE = 'mindos-2026-7';
 const PRECACHE = ['./','./index.html','./css/style.css','./css/fonts.css',
   './css/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2',
   './css/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2',
@@ -8,7 +8,7 @@ const PRECACHE = ['./','./index.html','./css/style.css','./css/fonts.css',
   './css/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2',
   './css/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7SUc.woff2',
   './css/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7SUc.woff2',
-  './js/config.js','./js/storage.js','./js/translations.js',
+  './js/config.js','./js/storage.js','./js/translations-core.js','./js/translations/en.js',
   './js/quiz.js','./js/tracker.js','./js/game.js','./js/poll.js','./js/main.js','./js/card.js',
   './manifest.json','./favicon.ico','./apple-touch-icon.png','./cover.jpg',
   './ru/','./es/','./de/','./fr/','./ja/','./vi/','./th/','./pt/','./ko/','./it/','./hi/'];
