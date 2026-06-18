@@ -82,7 +82,7 @@
     if (!toggle || !dropdown) return;
 
     dropdown.innerHTML = '';
-    Object.keys(translations).forEach(l => {
+    Object.keys(LANG_META).forEach(l => {
       const meta = LANG_META[l] || { flag: '', name: translations[l].langName, code: l.toUpperCase() };
       const item = document.createElement('button');
       item.className = `lang-option lang-btn ${l === currentLang ? 'active' : ''}`;
@@ -93,9 +93,12 @@
       item.onclick = () => {
         if (window.SITE_LANG) {
           window.location.href = l === 'en' ? '../' : '../' + l + '/';
-        } else {
+        } else if (l === 'en' || translations[l]) {
           applyLanguage(l);
           closeLangDropdown();
+        } else {
+          // translations/<l>.js isn't loaded on this page (only en.js is) — navigate instead
+          window.location.href = l + '/' + window.location.hash;
         }
       };
       dropdown.appendChild(item);
@@ -385,6 +388,11 @@
     const savedLang = storage.get(STORAGE_KEYS.LANG);
     const urlParams = new URLSearchParams(window.location.search);
     const lang = window.SITE_LANG || urlParams.get('lang') || savedLang || DEFAULT_LANG;
+    if (!window.SITE_LANG && lang !== 'en' && !translations[lang]) {
+      // translations/<lang>.js isn't loaded on this (English) page — navigate to the real page instead
+      window.location.href = lang + '/' + window.location.hash;
+      return;
+    }
     applyLanguage(lang);
 
     const tSlider = document.getElementById('trackerScore');
