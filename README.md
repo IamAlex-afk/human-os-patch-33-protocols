@@ -1,29 +1,29 @@
-# Mind-OS: 33 Protocols for Consciousness Reboot
+# Mind-OS — Free Anonymous AI Dependency Test
 
-**Executable logic for the human mind. A systematic approach to cognitive refactoring in the AI era.**
+**A free, anonymous, browser-only self-assessment that measures your psychological dependency on AI — no signup, no data collection.**
 
-Mind-OS is not motivational self-help. It is a **philosophical cognitive tool** and a systems-engineering manual co-authored through a Human-in-the-Loop (HITL) process. It treats human cognition as an operating system that requires debugging, patching, and upgrading to survive the shift towards human-AI symbiosis.
+Mind-OS is a client-side test measuring cognitive offloading, AI anxiety, and digital burnout, plus a standalone Fear-of-AI index — 28 questions total, available in 12 languages. It also includes a 7-day cognitive load tracker, an "AI or Not?" perception game, and a real-time global AI sentiment poll.
+
+It's built around **the 33 Protocols** — a philosophical cognitive tool and systems-engineering framework, co-authored through a Human-in-the-Loop (HITL) process, that treats human cognition as an operating system that can be debugged, patched, and upgraded for the AI era.
 
 By Aleksei Sergeevich Bitkin.
 
 ---
 
-## 🧪 Quick Start: Cognitive Alignment Simulator
+## 🧪 Take the Free Test
 
-Before accessing the protocols, define your current integration vector. 
+**[> RUN THE FREE TEST](https://iamalex-afk.github.io/human-os-patch-33-protocols/)**
 
-**[> RUN THE LOCAL SIMULATOR](https://iamalex-afk.github.io/human-os-patch-33-protocols/)**
-
-The simulator is a privacy-first, client-side thought experiment (no data leaves your device) that diagnoses your stance on AI integration:
+It's a privacy-first, client-side assessment (no data leaves your device) that diagnoses your stance on AI integration:
 * **Augmented Pioneer:** High symbiosis. *Risk: Cognitive atrophy and over-delegation.*
 * **Biological Purist:** High resistance. *Risk: AI-induced anxiety and cognitive fatigue.*
 * **Uncalibrated Observer:** Neutral. *Risk: Sudden systemic shock.*
 
 ---
 
-## ⚙️ System Architecture (The 33 Protocols)
+## ⚙️ Related Framework: The 33 Protocols
 
-The framework translates abstract psychological issues into solvable engineering tasks.
+The book translates abstract psychological issues into solvable engineering tasks.
 
 ### [MOD_01] Debug Anxiety
 Identify loops, isolate cognitive exceptions, and patch irrational fear responses.
