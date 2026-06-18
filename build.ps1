@@ -99,6 +99,22 @@ foreach ($lang in $langs.Keys) {
   # 10. twitter:description
   $html = $html -replace '(<meta name="twitter:description" content=")[^"]*(")', "`$1$($t.desc)`$2"
 
+  # 10b. Noto Sans JP (Google Fonts) — only needed on /ja/, self-hosted Inter covers the rest
+  if ($lang -eq 'ja') {
+    $jpFontBlock = @'
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet"></noscript>
+'@
+    $html = $html -replace '<!-- JP_FONT_PLACEHOLDER -->', $jpFontBlock
+    $html = $html -replace "style-src 'self' 'unsafe-inline';", "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;"
+    $html = $html -replace "font-src 'self';", "font-src 'self' https://fonts.gstatic.com;"
+    $html = $html -replace 'https://script\.googleusercontent\.com;\"', 'https://script.googleusercontent.com https://fonts.gstatic.com;"'
+  } else {
+    $html = $html -replace '\s*<!-- JP_FONT_PLACEHOLDER -->\r?\n', "`n"
+  }
+
   # 11. Fix relative asset paths (add ../ prefix)
   $html = $html -replace 'href="css/', 'href="../css/'
   $html = $html -replace 'href="js/', 'href="../js/'
