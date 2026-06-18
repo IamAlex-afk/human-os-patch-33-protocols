@@ -1,9 +1,10 @@
 /* Mind-OS Service Worker v2026.1 — офлайн + PWA установка */
-const CACHE = 'mindos-2026-3';
+const CACHE = 'mindos-2026-5';
 const PRECACHE = ['./','./index.html','./css/style.css',
   './js/config.js','./js/storage.js','./js/translations.js',
   './js/quiz.js','./js/tracker.js','./js/game.js','./js/poll.js','./js/main.js','./js/card.js',
-  './manifest.json','./favicon.ico','./apple-touch-icon.png','./cover.jpg'];
+  './manifest.json','./favicon.ico','./apple-touch-icon.png','./cover.jpg',
+  './ru/','./es/','./de/','./fr/','./ja/','./vi/','./th/','./pt/','./ko/','./it/','./hi/'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c=>c.addAll(PRECACHE)).then(()=>self.skipWaiting()));
 });

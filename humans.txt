@@ -10,7 +10,7 @@ First published: 2025
 
 /* TECHNOLOGY */
 HTML5, CSS3, Vanilla JavaScript, PWA
-Languages: English, Russian, Spanish, German, French, Japanese
+Languages: English, Russian, Spanish, German, French, Japanese, Vietnamese, Thai, Portuguese, Korean, Italian, Hindi
 
 /* SCIENCE */
 LLM-D12 Scale | AI Anxiety Scale (AIAS) | AIRD Framework
