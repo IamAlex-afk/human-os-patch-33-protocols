@@ -1,5 +1,5 @@
 /* Mind-OS Service Worker v2026.1 — офлайн + PWA установка */
-const CACHE = 'mindos-2026-8';
+const CACHE = 'mindos-2026-9';
 const PRECACHE = ['./','./index.html','./css/style.css','./css/fonts.css',
   './css/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2',
   './css/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2',
@@ -10,7 +10,7 @@ const PRECACHE = ['./','./index.html','./css/style.css','./css/fonts.css',
   './css/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7SUc.woff2',
   './js/config.js','./js/storage.js','./js/translations-core.js','./js/translations/en.js',
   './js/quiz.js','./js/tracker.js','./js/game.js','./js/poll.js','./js/main.js','./js/card.js',
-  './manifest.json','./favicon.ico','./apple-touch-icon.png','./cover.jpg',
+  './manifest.json','./favicon.ico','./apple-touch-icon.png','./apple-touch-icon-192.png','./apple-touch-icon-512.png','./cover.jpg',
   './ru/','./es/','./de/','./fr/','./ja/','./vi/','./th/','./pt/','./ko/','./it/','./hi/'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c=>c.addAll(PRECACHE)).then(()=>self.skipWaiting()));

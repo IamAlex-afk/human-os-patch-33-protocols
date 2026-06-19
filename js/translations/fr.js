@@ -131,7 +131,7 @@ window.translations.fr = {
     faqQ6: "Comment les scores sont-ils calculés ?",
     faqA6: "Nous utilisons une échelle de Likert à 5 points avec des éléments inversés. Maximum 32 par axe et 96 au total.",
     faqQ7: "Ce test est-il anonyme ?",
-    faqA7: "Oui. Tout le traitement se fait dans votre navigateur. Rien n'est stocké sur aucun serveur.",
+    faqA7: "Oui. Tout le traitement se fait dans votre navigateur. Rien n'est stocké sur aucun serveur, à l'exception du sondage mondial facultatif, qui ne stocke que 3 compteurs de votes anonymes (sans IP, email ni horodatage).",
     faqQ8: "Utiliser l'IA me rend-il moins intelligent ?",
     faqA8: "C'est possible, si vous en dépendez trop. La décharge cognitive peut affaiblir la mémoire avec le temps.",
     resetTestConfirm: "Êtes-vous sûr(e) de vouloir recommencer l'évaluation ?",
