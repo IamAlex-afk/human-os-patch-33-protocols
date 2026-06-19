@@ -131,7 +131,7 @@ window.translations.de = {
     faqQ6: "Wie werden die Punktzahlen berechnet?",
     faqA6: "Mit einer 5-Punkte-Likert-Skala und invertierten Items. Maximal 32 pro Achse und 96 insgesamt.",
     faqQ7: "Ist dieser Test anonym?",
-    faqA7: "Ja. Die gesamte Verarbeitung findet in Ihrem Browser statt.",
+    faqA7: "Ja. Die gesamte Verarbeitung findet in Ihrem Browser statt. Es wird nichts auf einem Server gespeichert, mit Ausnahme der optionalen globalen Umfrage, die nur 3 anonyme Stimmzähler speichert (ohne IP, E-Mail oder Zeitstempel). Der Tracker verwendet den lokalen Speicher.",
     faqQ8: "Macht KI mich weniger intelligent?",
     faqA8: "Es kann, wenn Sie sich zu sehr darauf verlassen.",
     resetTestConfirm: "Möchtest du den Test wirklich neu starten?",

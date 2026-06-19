@@ -131,7 +131,7 @@ window.translations.es = {
     faqQ6: "¿Cómo se calculan las puntuaciones?",
     faqA6: "Usamos una escala Likert de 5 puntos con ítems invertidos en tres ejes. Máximo 32 por eje y 96 en total.",
     faqQ7: "¿Es anónimo este test?",
-    faqA7: "Sí. Todo el procesamiento ocurre en tu navegador. No se envía nada a ningún servidor.",
+    faqA7: "Sí. Todo el procesamiento ocurre en tu navegador. No se envía nada a ningún servidor, excepto la encuesta global opcional, que almacena solo 3 contadores anónimos de votos (sin IP, email ni marca de tiempo).",
     faqQ8: "¿Usar IA me hace menos inteligente?",
     faqA8: "Puede, si dependes demasiado de ella. La descarga cognitiva puede debilitar la memoria con el tiempo.",
     resetTestConfirm: "¿Estás seguro de que quieres reiniciar la evaluación?",

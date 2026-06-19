@@ -131,7 +131,7 @@ window.translations.it = {
     faqQ6: "Come vengono calcolati i punteggi del test?",
     faqA6: "Usiamo una scala Likert a 5 punti con voci a punteggio inverso su tre assi. Ogni asse ha 8 domande, per un massimo di 32 per asse e 96 in totale.",
     faqQ7: "Questo test è anonimo?",
-    faqA7: "Sì. Tutta l'elaborazione avviene nel tuo browser. Niente viene memorizzato su alcun server. Il tracker usa l'archiviazione locale.",
+    faqA7: "Sì. Tutta l'elaborazione avviene nel tuo browser. Niente viene memorizzato su alcun server, eccetto il sondaggio globale opzionale, che memorizza solo 3 contatori di voti anonimi (senza IP, email o timestamp). Il tracker usa l'archiviazione locale.",
     faqQ8: "Usare l'IA mi rende meno intelligente?",
     faqA8: "Può succedere, se ne fai un uso eccessivo. Il sovraccarico cognitivo può debolire la memoria e le capacità di pensiero nel tempo.",
     resetTestConfirm: "Sei sicuro di voler ricominciare la valutazione?",
