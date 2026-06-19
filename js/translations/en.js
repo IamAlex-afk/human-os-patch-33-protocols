@@ -131,7 +131,7 @@ window.translations.en = {
     faqQ6: "How are the test scores calculated?",
     faqA6: "We use a 5-point Likert scale with reverse-keyed items across three axes. Each axis has 8 questions, for a maximum of 32 per axis and 96 overall.",
     faqQ7: "Is this test anonymous?",
-    faqA7: "Yes. All processing happens in your browser. Nothing is stored on any server. The tracker uses local storage.",
+    faqA7: "Yes. All processing happens in your browser. Nothing is stored on any server, except the optional global poll, which stores only 3 anonymous vote counters (no IP, email, or timestamp). The tracker uses local storage.",
     faqQ8: "Does using AI make me less intelligent?",
     faqA8: "It can, if you over-rely on it. Cognitive offloading may weaken memory and thinking skills over time.",
     resetTestConfirm: "Are you sure you want to restart the assessment?",
