@@ -1,6 +1,6 @@
 # Mind-OS — Free Anonymous AI Dependency Test
 
-**A free, anonymous, browser-only self-assessment that measures your psychological dependency on AI — no signup, no data collection.**
+**A free, anonymous, browser-only self-assessment that measures your psychological dependency on AI — no signup, no data collection.** (The optional global poll is the one exception — see [Privacy Policy](https://iamalex-afk.github.io/human-os-patch-33-protocols/privacy.html).)
 
 Mind-OS is a client-side test measuring cognitive offloading, AI anxiety, and digital burnout, plus a standalone Fear-of-AI index — 28 questions total, available in 12 languages. It also includes a 7-day cognitive load tracker, an "AI or Not?" perception game, and a real-time global AI sentiment poll.
 
@@ -18,6 +18,8 @@ It's a privacy-first, client-side assessment (no data leaves your device) that d
 * **Augmented Pioneer:** High symbiosis. *Risk: Cognitive atrophy and over-delegation.*
 * **Biological Purist:** High resistance. *Risk: AI-induced anxiety and cognitive fatigue.*
 * **Uncalibrated Observer:** Neutral. *Risk: Sudden systemic shock.*
+
+Voting in the optional global poll is the one exception to "no data leaves your device": it sends your single choice to a minimal backend storing 3 anonymous counters — no IP, email, or timestamp. See the [Privacy Policy](https://iamalex-afk.github.io/human-os-patch-33-protocols/privacy.html) for detail.
 
 ---
 

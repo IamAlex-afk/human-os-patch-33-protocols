@@ -42,18 +42,22 @@
 </head>
 <body>
   <h1>Privacy Policy</h1>
-  <p class="sub">Last updated: 2026-06-12 · Plain language, no legalese.</p>
+  <p class="sub">Last updated: 2026-06-19 · Plain language, no legalese.</p>
 
   <div class="highlight">
-    <strong>The short version:</strong> Mind-OS collects nothing. There is no server,
-    no database, no analytics, no cookies, and no tracking. Everything you do —
-    every answer, every result — stays inside your own browser and never leaves
-    your device. We literally cannot see your data, because we never receive it.
+    <strong>The short version:</strong> The assessment, tracker, and game collect
+    nothing — no server, no database, no analytics, no cookies, no tracking.
+    Everything you do there stays inside your own browser and never leaves your
+    device. The one exception is the optional global poll: if you choose to vote,
+    it sends your single choice to a minimal backend that stores only 3 aggregate
+    counters (For/Neutral/Against) — no IP, email, timestamp, or per-vote record.
+    See "The one exception: the global poll" below for the full detail.
   </div>
 
   <h2>What data we collect</h2>
-  <p><strong>None.</strong> Mind-OS is a static website. It has no backend server
-  that could receive or store information about you.</p>
+  <p><strong>None, except 3 numbers if you vote in the poll.</strong> Mind-OS is a
+  static website with no backend server for the assessment, tracker, or game.
+  The optional global poll is the only feature with a backend — see below.</p>
 
   <h2>Where your answers go</h2>
   <p>Your test answers, tracker entries, and language preference are saved only in
@@ -70,10 +74,19 @@
   fingerprinting, and no third-party trackers. We do not know who you are or that
   you visited.</p>
 
+  <h2>The one exception: the global poll</h2>
+  <p>The "Global AI Sentiment Poll" feature is entirely optional — the assessment
+  works fully without it. If you choose to vote, your single choice (For/Neutral/
+  Against) is sent to a minimal backend (Google Apps Script) that stores only 3
+  running totals, one per option. It does not store your IP address, email,
+  timestamp, or any per-vote record — there is no way to link a vote back to you.
+  The API only ever returns percentages, never raw vote counts.</p>
+
   <h2>Third-party services</h2>
-  <p>The site loads fonts from Google Fonts (Inter and Noto Sans JP) to render text.
-  This is the only external request, and it carries no personal data about you. No
-  other third-party service is contacted.</p>
+  <p>The site loads fonts from Google Fonts (Inter, and Noto Sans JP on the
+  Japanese page) to render text. If you vote in the poll, your vote is sent to a
+  Google Apps Script backend as described above. No other third-party service is
+  contacted, and neither carries personal data about you.</p>
 
   <h2>Children</h2>
   <p>Mind-OS contains no harmful content and collects no data, so it poses no data
@@ -87,8 +100,11 @@
 
   <h2>How to verify this yourself</h2>
   <p>Open your browser's developer tools (F12) → Network tab, and use the site.
-  You will see no requests sending your answers anywhere. All processing happens in
-  the JavaScript running locally in your browser. The source is openly viewable.</p>
+  Taking the assessment, using the tracker, or playing the game sends no requests
+  anywhere — all processing happens in the JavaScript running locally in your
+  browser. The only request you'll ever see is triggered by clicking "Submit your
+  vote" in the poll, and it carries only your single vote choice. The source is
+  openly viewable.</p>
 
   <h2>Contact</h2>
   <p>Questions? Open an issue:

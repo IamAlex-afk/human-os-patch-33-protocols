@@ -130,7 +130,7 @@ window.translations.vi = {
     faqQ6: "Điểm được tính như thế nào?",
     faqA6: "Chúng tôi dùng thang Likert 5 điểm với câu đảo chiều trên ba trục. Mỗi trục 8 câu, tối đa 32 điểm/trục và 96 điểm tổng.",
     faqQ7: "Bài kiểm tra có ẩn danh không?",
-    faqA7: "Có. Tất cả xử lý trong trình duyệt của bạn. Không có gì lưu trên máy chủ.",
+    faqA7: "Có. Tất cả xử lý trong trình duyệt của bạn. Không có gì lưu trên máy chủ, ngoại trừ khảo sát toàn cầu tùy chọn, chỉ lưu 3 bộ đếm phiếu bầu ẩn danh (không IP, email hay thời gian).",
     faqQ8: "Dùng AI có làm tôi kém thông minh không?",
     faqA8: "Có thể, nếu bạn phụ thuộc quá nhiều. Giảm tải nhận thức có thể làm suy yếu trí nhớ và kỹ năng tư duy.",
     resetTestConfirm: "Bạn có chắc muốn bắt đầu lại đánh giá không?",

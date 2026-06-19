@@ -131,7 +131,7 @@ window.translations.pt = {
     faqQ6: "Como as pontuações do teste são calculadas?",
     faqA6: "Usamos uma escala Likert de 5 pontos com itens invertidos em três eixos. Cada eixo tem 8 perguntas, com máximo de 32 por eixo e 96 no total.",
     faqQ7: "Este teste é anônimo?",
-    faqA7: "Sim. Todo o processamento ocorre no seu navegador. Nada é armazenado em nenhum servidor. O monitor usa armazenamento local.",
+    faqA7: "Sim. Todo o processamento ocorre no seu navegador. Nada é armazenado em nenhum servidor, exceto a sondagem global opcional, que armazena apenas 3 contadores de votos anônimos (sem IP, e-mail ou data/hora). O monitor usa armazenamento local.",
     faqQ8: "Usar IA me torna menos inteligente?",
     faqA8: "Pode ser, se você depender excessivamente dela. A sobrecarga cognitiva pode debilitar a memória e as habilidades de pensamento ao longo do tempo.",
     resetTestConfirm: "Tem certeza de que deseja reiniciar a avaliação?",
