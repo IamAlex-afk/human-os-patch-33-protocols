@@ -1,5 +1,5 @@
 /* Mind-OS Service Worker v2026.1 — офлайн + PWA установка */
-const CACHE = 'mindos-2026-9';
+const CACHE = 'mindos-2026-10';
 const PRECACHE = ['./','./index.html','./css/style.css','./css/fonts.css',
   './css/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2',
   './css/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2',

@@ -7,57 +7,57 @@ $BASE = "https://iamalex-afk.github.io/human-os-patch-33-protocols"
 $langs = @{
   ru = @{
     title  = "Бесплатный тест на зависимость от ИИ"
-    desc   = "Научно-обоснованная анонимная оценка когнитивной разгрузки, ИИ-тревожности и цифрового выгорания. Без регистрации, без сбора данных."
+    desc   = "Научно-обоснованная анонимная оценка когнитивной разгрузки, ИИ-тревожности и цифрового выгорания. Без регистрации, без сбора данных. Плюс вопросы и ответы и глобальный опрос: голосуйте за или против ИИ."
     locale = "ru_RU"
   }
   es = @{
     title  = "Test gratuito de dependencia de IA – Comprende tus hábitos"
-    desc   = "Evaluación anónima de la descarga cognitiva, ansiedad por IA y agotamiento digital. Sin registro, sin recopilación de datos."
+    desc   = "Evaluación anónima de la descarga cognitiva, ansiedad por IA y agotamiento digital. Sin registro, sin recopilación de datos. Incluye preguntas frecuentes y una encuesta global: vota a favor o en contra de la IA."
     locale = "es_ES"
   }
   de = @{
     title  = "Kostenloser KI-Abhängigkeitstest – Verstehen Sie Ihre Gewohnheiten"
-    desc   = "Wissenschaftlich fundierte anonyme Bewertung von kognitiver Entlastung, KI-Angst und digitalem Burnout. Keine Anmeldung, keine Daten."
+    desc   = "Wissenschaftlich fundierte anonyme Bewertung von kognitiver Entlastung, KI-Angst und digitalem Burnout. Keine Anmeldung, keine Daten. Inklusive FAQ und einer globalen Umfrage: Stimmen Sie für oder gegen KI."
     locale = "de_DE"
   }
   fr = @{
     title  = "Test gratuit de dépendance à l'IA – Comprenez vos habitudes"
-    desc   = "Évaluation anonyme basée sur la science de la décharge cognitive, de l'anxiété liée à l'IA et de l'épuisement numérique. Sans inscription, sans collecte de données."
+    desc   = "Évaluation anonyme basée sur la science de la décharge cognitive, de l'anxiété liée à l'IA et de l'épuisement numérique. Sans inscription, sans collecte de données. Avec une FAQ et un sondage mondial : votez pour ou contre l'IA."
     locale = "fr_FR"
   }
   ja = @{
     title  = "無料AI依存度テスト – あなたの習慣を理解する"
-    desc   = "認知的オフロード、AI不安、デジタル燃え尽き症候群の科学的かつ匿名のアセスメント。登録不要、データ収集なし。"
+    desc   = "認知的オフロード、AI不安、デジタル燃え尽き症候群の科学的かつ匿名のアセスメント。登録不要、データ収集なし。よくある質問とグローバル投票（AIに賛成か反対か）も含まれています。"
     locale = "ja_JP"
   }
   vi = @{
     title  = "Bài kiểm tra phụ thuộc AI miễn phí – Hiểu thói quen AI của bạn"
-    desc   = "Đánh giá ẩn danh dựa trên khoa học về giảm tải nhận thức, lo lắng AI và kiệt sức kỹ thuật số. Không đăng ký, không thu thập dữ liệu."
+    desc   = "Đánh giá ẩn danh dựa trên khoa học về giảm tải nhận thức, lo lắng AI và kiệt sức kỹ thuật số. Không đăng ký, không thu thập dữ liệu. Có cả câu hỏi thường gặp và khảo sát toàn cầu: ủng hộ hay phản đối AI."
     locale = "vi_VN"
   }
   th = @{
     title  = "แบบทดสอบการพึ่งพา AI ฟรี – เข้าใจนิสัยของคุณ"
-    desc   = "การประเมินแบบไม่ระบุตัวตนตามหลักวิทยาศาสตร์เกี่ยวกับการถ่ายโอนงานด้านความคิด ความวิตกกังวลด้าน AI และความหมดไฟดิจิทัล ไม่ต้องสมัครสมาชิก ไม่เก็บข้อมูล"
+    desc   = "การประเมินแบบไม่ระบุตัวตนตามหลักวิทยาศาสตร์เกี่ยวกับการถ่ายโอนงานด้านความคิด ความวิตกกังวลด้าน AI และความหมดไฟดิจิทัล ไม่ต้องสมัครสมาชิก ไม่เก็บข้อมูล มีทั้งคำถามที่พบบ่อยและแบบสำรวจทั่วโลก: โหวตสนับสนุนหรือคัดค้าน AI"
     locale = "th_TH"
   }
   pt = @{
     title  = "Teste Gratuito de Dependência de IA – Entenda Seus Hábitos com IA"
-    desc   = "Avaliação anônima com base científica sobre sobrecarga cognitiva, ansiedade por IA e esgotamento digital. Sem cadastro, sem coleta de dados."
+    desc   = "Avaliação anônima com base científica sobre sobrecarga cognitiva, ansiedade por IA e esgotamento digital. Sem cadastro, sem coleta de dados. Inclui FAQ e uma sondagem global: vote a favor ou contra a IA."
     locale = "pt_PT"
   }
   ko = @{
     title  = "무료 AI 의존도 테스트 – 나의 AI 습관 이해하기"
-    desc   = "인지적 외주화, AI 불안, 디지털 탈진에 대한 과학적 기반의 익명 평가. 가입 불필요, 데이터 수집 없음."
+    desc   = "인지적 외주화, AI 불안, 디지털 탈진에 대한 과학적 기반의 익명 평가. 가입 불필요, 데이터 수집 없음. 자주 묻는 질문과 AI 찬반 투표가 가능한 글로벌 투표도 포함되어 있습니다."
     locale = "ko_KR"
   }
   it = @{
     title  = "Test Gratuito sulla Dipendenza dall'IA – Comprendi le Tue Abitudini con l'IA"
-    desc   = "Valutazione anonima su base scientifica del sovraccarico cognitivo, dell'ansia da IA e dell'esaurimento digitale. Senza registrazione, senza raccolta dati."
+    desc   = "Valutazione anonima su base scientifica del sovraccarico cognitivo, dell'ansia da IA e dell'esaurimento digitale. Senza registrazione, senza raccolta dati. Include una FAQ e un sondaggio globale: vota a favore o contro l'IA."
     locale = "it_IT"
   }
   hi = @{
     title  = "मुफ़्त AI निर्भरता परीक्षण – अपनी AI आदतों को समझें"
-    desc   = "संज्ञानात्मक भार, AI चिंता और डिजिटल थकान का वैज्ञानिक आधार पर गुमनाम मूल्यांकन। कोई साइनअप नहीं, कोई डेटा संग्रह नहीं।"
+    desc   = "संज्ञानात्मक भार, AI चिंता और डिजिटल थकान का वैज्ञानिक आधार पर गुमनाम मूल्यांकन। कोई साइनअप नहीं, कोई डेटा संग्रह नहीं। इसमें अक्सर पूछे जाने वाले प्रश्न और एक ग्लोबल पोल भी है: AI के पक्ष या विरोध में वोट करें।"
     locale = "hi_IN"
   }
 }
