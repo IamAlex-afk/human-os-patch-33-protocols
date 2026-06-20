@@ -7,3 +7,6 @@ __pycache__/
 *.zip
 verify.py
 LICENSE-CC-BY-NC-ND-alternative.txt
+claude-telegram.yaml
+data/
+modules/
