@@ -21,7 +21,6 @@ const Poll = (function() {
   }
 
   function normalizeLegacy(data) {
-    // старый формат: { for, neutral, against } → новый: { forPct, neutralPct, againstPct }
     if (data.forPct !== undefined) return data;
     return {
       forPct: data['for'] || 0,
@@ -48,7 +47,6 @@ const Poll = (function() {
         </div>`;
       }).join('');
     }
-    // По требованию владельца: показываем только проценты, без количества голосов.
     const totalEl = document.getElementById('pollTotal');
     if (totalEl) totalEl.textContent = '';
   }

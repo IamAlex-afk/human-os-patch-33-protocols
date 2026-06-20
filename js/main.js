@@ -1,8 +1,4 @@
 /* ====== Mind-OS Main Application ====== */
-/* PATCH 2026-06-06:
-   1. confirm() теперь использует t.resetTestConfirm вместо лейбла кнопки
-   2. ctaText и pollPrivacy теперь создаются в DOM если не найдены в HTML
-*/
 
 (function() {
   const { DEFAULT_LANG, STORAGE_KEYS } = CONFIG;
@@ -163,9 +159,7 @@
     });
   }
 
-  /* ПАТЧ: гарантируем существование ctaText и pollPrivacy в DOM */
   function ensureDynamicElements() {
-    /* ctaText — вставляем в .poll-block если нет */
     if (!document.getElementById('ctaText')) {
       const pollBlock = document.querySelector('.poll-block');
       if (pollBlock) {
@@ -282,7 +276,6 @@
     uh('pollBridge', t.pollBridge);
     ut('pollInviteText', t.pollInviteText);
 
-    /* ПАТЧ: ctaText и pollPrivacy — гарантированно обновляются */
     ut('ctaText', t.ctaText);
     const pollPrivacyEl = document.querySelector('[data-i18n="pollPrivacy"]');
     if (pollPrivacyEl) {
@@ -299,7 +292,7 @@
     ut('donateText', t.donateText);
     ut('shareBtnText', t.shareBtn);
     ut('downloadCardText', t.downloadCardText);
-    ut('resetBtnText', t.resetTestBtn);  // FIX: кнопка перезапуска была всегда на английском
+    ut('resetBtnText', t.resetTestBtn);
     ut('howTitle', t.howTitle);
     ut('howText', t.howText);
     ut('trustNoSignup', t.trustNoSignup);
@@ -398,7 +391,6 @@
   document.addEventListener('DOMContentLoaded', () => {
     if (window.Quiz) Quiz.loadPersisted();
 
-    /* ПАТЧ: создаём динамические элементы до applyLanguage */
     ensureDynamicElements();
 
     initLangBar();
@@ -494,7 +486,6 @@
       }
     });
 
-    /* ПАТЧ: исправлен диалог сброса — использует корректный вопрос, не лейбл кнопки */
     document.getElementById('resetTestButton')?.addEventListener('click', () => {
       const t = getT(currentLang);
       const msg = t.resetTestConfirm || 'Are you sure you want to restart the assessment?';
