@@ -19,8 +19,8 @@ Vanilla HTML/CSS/JS, без фреймворков, localStorage, PWA, 12 язы
 - Репозиторий: github.com/IamAlex-afk/human-os-patch-33-protocols
 - Автор: Aleksei Sergeevich Bitkin, ORCID 0009-0002-7986-3812, Zenodo DOI 10.5281/zenodo.17972301
 
-## Текущее состояние git (по состоянию на 2026-06-18)
-**Ветка:** main (задеплоена — PR #5 смержен, сайт живой)
+## Текущее состояние git (по состоянию на 2026-06-20)
+**Ветка:** main (задеплоена — PR #14 смержен 2026-06-20, коммит `a2ce8ac`, сайт живой)
 
 **Что в продакшене:**
 - 12 языков: en, ru, es, de, fr, ja, vi, th, pt, ko, it, hi
@@ -28,8 +28,9 @@ Vanilla HTML/CSS/JS, без фреймворков, localStorage, PWA, 12 язы
 - `js/translations.js` (304 КБ, все 12 языков) разбит на `js/translations-core.js` (логика getT/Proxy) + `js/translations/<lang>.js` (по языку, ~20-43 КБ). Каждая страница грузит только свой язык + en.js (фолбэк)
 - Шрифты: Inter самохостится (`css/fonts.css` + `css/fonts/*.woff2`, 7 файлов/228 КБ), Google Fonts больше не используется на 11 из 12 страниц. Noto Sans JP остаётся на Google Fonts, но подключается только на `/ja/` (через `TRANSLATIONS_LANG_PLACEHOLDER`/`JP_FONT_PLACEHOLDER` в build.ps1)
 - CSP сужен (`style-src`/`font-src`/`connect-src` без Google-доменов) везде кроме `/ja/`, где он расширяется обратно
-- PWA: кнопка "Install App" в nav, beforeinstallprompt, SW mindos-2026-7
-- Глобальный опрос: POLL_API='' (симуляция), кнопка "Пригласить друга"
+- PWA: кнопка "Install App" в nav, beforeinstallprompt, SW mindos-2026-9
+- Глобальный опрос: реальный backend (Google Apps Script), кнопка "Пригласить друга"
+- Иконки PWA: `apple-touch-icon-192.png` и `apple-touch-icon-512.png` — настоящие файлы этих размеров (добавлены 2026-06-19, до этого `manifest.json` врал про размеры, отдавая один файл 180×180 на оба слота)
 - `.github/workflows/refresh-sitemap.yml` УДАЛЁН 2026-06-18 — еженедельно проставлял lastmod всем 12 URL без реальных изменений контента; по данным Google Search Central это подрывает доверие к lastmod как сигналу для переиндексации. Теперь lastmod в sitemap.xml обновляется вручную только при реальном изменении контента
 - sitemap.xml: 12 URL со schema, hreflang, image sitemap
 - Schema.org: WebPage + Quiz (inLanguage все 12 языков) + FAQPage(13) + SoftwareApplication (inLanguage все 12)
@@ -54,7 +55,7 @@ Vanilla HTML/CSS/JS, без фреймворков, localStorage, PWA, 12 язы
 - Inter самохостится, Noto Sans JP только на /ja/ — закрывает противоречие между "zero data collection" заявлением и кросс-доменными запросами к Google Fonts на остальных 11 страницах
 
 ### PWA
-- sw.js: CACHE mindos-2026-7, PRECACHE включает core assets + translations-core.js + en.js (остальные языки кэшируются лениво при первом визите) + все 11 языковых страниц
+- sw.js: CACHE mindos-2026-9, PRECACHE включает core assets + translations-core.js + en.js (остальные языки кэшируются лениво при первом визите) + apple-touch-icon-192.png/-512.png + все 11 языковых страниц
 - manifest.json: standalone, theme_color, shortcuts
 - Кнопка установки в nav (скрыта до beforeinstallprompt)
 
@@ -63,10 +64,16 @@ Vanilla HTML/CSS/JS, без фреймворков, localStorage, PWA, 12 язы
 - Кнопка "Пригласить друга" в секции опроса
 - Глобальный опрос — РЕАЛЬНЫЙ backend подключён 2026-06-18 (Google Apps Script, `poll-backend/Code.gs`). Хранит только 3 счётчика (PropertiesService), без IP/email/timestamp/per-vote записей. API отдаёт только проценты (forPct/neutralPct/againstPct), total не возвращается и не показывается в UI. Deployment: "Execute as: Me", "Who has access: Anyone, even anonymous"
 
+### Точность privacy-текста и PWA-иконки (2026-06-19, PR #14)
+- Фикс 2026-06-18 (`7834861`) скопировал оговорку про опрос ("ничего не хранится на сервере, кроме опроса") только в `llms.txt`/`ai.txt`. `index.html` (FAQ + JSON-LD), все 12 `js/translations/<lang>.js` (ключ `faqA7`), `privacy.html` и `README.md` остались с безусловным "nothing is stored on any server" — расхождение нашёл и исправил владелец, синхронизировано везде на родном языке каждого перевода
+- `privacy.html`: добавлен раздел "The one exception: the global poll", дата обновления 2026-06-19
+- `manifest.json` указывал sizes 192x192/512x512, но физически отдавал один файл `apple-touch-icon.png` 180×180 на оба слота — добавлены настоящие `apple-touch-icon-192.png`/`-512.png` (апскейл существующей иконки через Pillow/Lanczos, не новый дизайн), `manifest.json` и `sw.js` PRECACHE обновлены
+- SW cache поднят до `mindos-2026-9` (иначе старый закэшированный `en.js`/`index.html` маскировал бы фикс у вернувшихся посетителей — те же грабли, что 2026-06-18)
+
 ## Открытые вопросы (НЕ решать без явного запроса)
 1. ~~POLL_API~~ — закрыто 2026-06-18, backend реальный и подключён.
-2. **Twitter/X handle** — twitter:creator не добавлен (handle неизвестен).
-3. **512px иконка PWA** — нет отдельного 512×512 PNG (используется тот же файл что 192px).
+2. **Twitter/X handle** — twitter:creator не добавлен (handle неизвестен, владелец сознательно пропустил 2026-06-19).
+3. ~~512px иконка PWA~~ — закрыто 2026-06-19, настоящий файл добавлен.
 4. **LICENSE конфликт** — README говорит CC BY-NC-ND, файл LICENSE — GPL v3. Владелец решает.
 5. **Google Search Console** — запросить индексацию для: /, /ru/, /es/, /de/, /fr/, /ja/, /th/, /pt/, /ko/, /it/, /hi/ (vi/ уже запрошен). Лимит 10/день.
 
