@@ -24,6 +24,47 @@
     hi: { flag: '🇮🇳', name: 'हिन्दी',     code: 'HI' }
   };
 
+  // Сообщения для мягкого баннера "похоже, вы предпочитаете другой язык" — на языке, который предлагается
+  const LANG_SUGGEST = {
+    en: { text: 'It looks like your browser is set to English.', link: 'View in English', close: 'Close' },
+    ru: { text: 'Похоже, ваш браузер настроен на русский язык.', link: 'Открыть на русском', close: 'Закрыть' },
+    es: { text: 'Parece que tu navegador está en español.', link: 'Ver en español', close: 'Cerrar' },
+    de: { text: 'Ihr Browser scheint auf Deutsch eingestellt zu sein.', link: 'Auf Deutsch anzeigen', close: 'Schließen' },
+    fr: { text: 'Il semble que votre navigateur soit en français.', link: 'Voir en français', close: 'Fermer' },
+    ja: { text: 'お使いのブラウザは日本語に設定されているようです。', link: '日本語で表示', close: '閉じる' },
+    vi: { text: 'Có vẻ trình duyệt của bạn đang dùng tiếng Việt.', link: 'Xem bằng tiếng Việt', close: 'Đóng' },
+    th: { text: 'ดูเหมือนเบราว์เซอร์ของคุณตั้งค่าเป็นภาษาไทย', link: 'ดูเป็นภาษาไทย', close: 'ปิด' },
+    pt: { text: 'Parece que o seu navegador está em português.', link: 'Ver em português', close: 'Fechar' },
+    ko: { text: '브라우저 언어가 한국어로 설정된 것 같습니다.', link: '한국어로 보기', close: '닫기' },
+    it: { text: 'Sembra che il tuo browser sia impostato in italiano.', link: 'Vedi in italiano', close: 'Chiudi' },
+    hi: { text: 'लगता है आपका ब्राउज़र हिंदी में सेट है।', link: 'हिंदी में देखें', close: 'बंद करें' }
+  };
+
+  function initLangSuggestBanner() {
+    const banner = document.getElementById('langSuggestBanner');
+    if (!banner) return;
+    const browserLang = (navigator.language || '').split('-')[0];
+    const msg = LANG_SUGGEST[browserLang];
+    if (!msg || browserLang === currentLang) return;
+    if (storage.get(STORAGE_KEYS.LANG_BANNER_DISMISSED) === browserLang) return;
+
+    document.getElementById('langSuggestText').textContent = msg.text;
+    const link = document.getElementById('langSuggestLink');
+    link.textContent = msg.link;
+    link.href = window.SITE_LANG
+      ? (browserLang === 'en' ? '../' : '../' + browserLang + '/')
+      : (browserLang === 'en' ? './' : browserLang + '/');
+
+    const closeBtn = document.getElementById('langSuggestClose');
+    closeBtn.setAttribute('aria-label', msg.close);
+    closeBtn.onclick = () => {
+      banner.hidden = true;
+      storage.set(STORAGE_KEYS.LANG_BANNER_DISMISSED, browserLang);
+    };
+
+    banner.hidden = false;
+  }
+
   function escapeHtml(str) {
     return String(str).replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[m]);
   }
@@ -394,6 +435,7 @@
       return;
     }
     applyLanguage(lang);
+    initLangSuggestBanner();
 
     const tSlider = document.getElementById('trackerScore');
     if (tSlider) {
