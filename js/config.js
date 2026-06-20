@@ -12,7 +12,8 @@ const CONFIG = {
     TEST_ANSWERS:   'mindos_test_answers',
     TEST_WIZARD:    'mindos_test_wizard',
     TEST_COMPLETED: 'mindos_test_completed',
-    LANG:           'mindos_lang'
+    LANG:           'mindos_lang',
+    LANG_BANNER_DISMISSED: 'mindos_lang_banner_dismissed'
   },
 
   DEFAULT_LANG: 'en'
