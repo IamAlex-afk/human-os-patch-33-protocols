@@ -46,6 +46,48 @@ body {
   margin: 0 auto;
 }
 
+/* ====== Language Suggestion Banner ====== */
+.lang-suggest-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.92rem;
+  color: var(--text);
+}
+
+.lang-suggest-link {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.lang-suggest-link:hover {
+  text-decoration: underline;
+}
+
+.lang-suggest-close {
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  margin-left: auto;
+}
+
+.lang-suggest-close:hover {
+  color: var(--text);
+}
+
 /* ====== Language Bar ====== */
 .lang-bar {
   display: flex;
