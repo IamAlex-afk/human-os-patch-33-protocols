@@ -262,6 +262,7 @@
 
     ut('pollTitle', t.pollTitle);
     ut('pollDesc', t.pollDesc);
+    ut('pollMilestone', t.pollMilestone);
     ut('pollFor', t.pollFor);
     ut('pollNeutral', t.pollNeutral);
     ut('pollAgainst', t.pollAgainst);
@@ -326,6 +327,7 @@
     }
 
     ut('faqSlangTitle', t.faqSlangTitle);
+    ut('faqSlangSubtitle', t.faqSlangSubtitle);
     for (let i = 1; i <= 5; i++) {
       ut(`faqSlangQ${i}`, t[`faqSlangQ${i}`] || '');
       uh(`faqSlangA${i}`, t[`faqSlangA${i}`] || '');

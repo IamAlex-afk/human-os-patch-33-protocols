@@ -4,6 +4,8 @@
    Отдаёт только процент по каждому варианту, не сырые количества. */
 
 var ALLOWED_VOTES = ['for', 'neutral', 'against'];
+var MAX_VOTES_PER_WINDOW = 200;
+var RATE_WINDOW_SECONDS = 60;
 
 function doGet(e) {
   return respond_();
@@ -13,7 +15,7 @@ function doPost(e) {
   try {
     var body = JSON.parse(e.postData.contents);
     var vote = body.vote;
-    if (ALLOWED_VOTES.indexOf(vote) !== -1) {
+    if (ALLOWED_VOTES.indexOf(vote) !== -1 && !isRateLimited_()) {
       var lock = LockService.getScriptLock();
       lock.waitLock(5000);
       try {
@@ -29,6 +31,18 @@ function doPost(e) {
     // некорректный запрос — просто игнорируем, отдаём текущие результаты
   }
   return respond_();
+}
+
+/* Глобальный лимит скорости — не привязан к личности/IP, просто счётчик
+   с истекающим TTL в CacheService. Гасит примитивный flood-скрипт, не
+   мешает настоящему всплеску трафика (порог высокий). */
+function isRateLimited_() {
+  var cache = CacheService.getScriptCache();
+  var key = 'vote_window_count';
+  var count = parseInt(cache.get(key) || '0', 10);
+  if (count >= MAX_VOTES_PER_WINDOW) return true;
+  cache.put(key, String(count + 1), RATE_WINDOW_SECONDS);
+  return false;
 }
 
 function respond_() {
