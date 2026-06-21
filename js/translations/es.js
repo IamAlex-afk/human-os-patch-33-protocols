@@ -215,6 +215,7 @@ window.translations.es = {
     ecoCardDataset: "🤗 Conjunto de datos abierto",
     ecoCardTechProfile: "✍️ Perfil técnico",
     ecoCardAuthorProfile: "👤 Perfil del autor",
+    authorBioText: "Aleksei Sergeevich Bitkin es un investigador independiente en arquitectura cognitiva y autor del preprint «Glitch Theory of Consciousness» y del marco «AI Biohacking: 33 Protocols». Mind-OS es su proyecto de investigación abierto y sin publicidad para medir la dependencia de la IA, creado y mantenido de forma independiente, sin financiación institucional.",
     ecoLinkDOI: "Referencia DOI",
     ecoLinkHBR: "Leer en HBR",
     ecoLinkZenodo: "Leer en Zenodo",

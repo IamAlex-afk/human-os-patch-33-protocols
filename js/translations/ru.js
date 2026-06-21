@@ -215,6 +215,7 @@ window.translations.ru = {
     ecoCardDataset: "🤗 Открытый датасет",
     ecoCardTechProfile: "✍️ Технический профиль",
     ecoCardAuthorProfile: "👤 Профиль автора",
+    authorBioText: "Алексей Сергеевич Биткин — независимый исследователь в области когнитивной архитектуры, автор препринта «Glitch Theory of Consciousness» и фреймворка «AI Biohacking: 33 Protocols». Mind-OS — его открытый, без рекламы исследовательский проект для измерения зависимости от ИИ, созданный и поддерживаемый самостоятельно, без институционального финансирования.",
     ecoLinkDOI: "Ссылка DOI",
     ecoLinkHBR: "Читать в HBR",
     ecoLinkZenodo: "Читать на Zenodo",

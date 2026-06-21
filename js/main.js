@@ -316,6 +316,7 @@
     ut('ecoCardDataset', t.ecoCardDataset);
     ut('ecoCardTechProfile', t.ecoCardTechProfile);
     ut('ecoCardAuthorProfile', t.ecoCardAuthorProfile);
+    ut('authorBioText', t.authorBioText);
     ut('ecoLink1', t.ecoLinkDOI);
     ut('ecoLink2', t.ecoLinkHBR);
     ut('ecoLink3', t.ecoLinkDOI);
