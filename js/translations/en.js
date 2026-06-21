@@ -196,7 +196,7 @@ window.translations.en = {
     faqAiHistoryQ: "When did AI appear?",
     faqAiHistoryA: "The term 'artificial intelligence' was coined in 1956 at the Dartmouth Conference, but ideas of thinking machines go back to antiquity. Massive development started in the 2010s with more computing power and data. <br><small style='opacity:0.7'>Source: <a href='https://plato.stanford.edu/entries/artificial-intelligence/' target='_blank' rel='noopener' style='color:var(--accent)'>Stanford Encyclopedia</a></small>",
     faqAiHowWorkQ: "How does AI work?",
-    faqAiHowWorkA: "Modern AI uses machine learning: it analyzes millions of examples, finds patterns, and builds mathematical models. <br><small style='opacity:0.7'>Source: <a href='https://www.technologyreview.com/2018/11/17/103924/how-does-ai-work/' target='_blank' rel='noopener' style='color:var(--accent)'>MIT Tech Review</a></small>",
+    faqAiHowWorkA: "Modern AI uses machine learning: it analyzes millions of examples, finds patterns, and builds mathematical models. <br><small style='opacity:0.7'>Source: <a href='https://www.ibm.com/think/topics/machine-learning' target='_blank' rel='noopener' style='color:var(--accent)'>IBM</a></small>",
     faqAiTypesQ: "What are the types of AI?",
     faqAiTypesA: "Three levels are usually cited: Narrow AI (solves one task, like ChatGPT), General AI (AGI — hypothetical, human-level), and Super AI (exceeds humans, doesn't exist yet). <br><small style='opacity:0.7'>Source: <a href='https://en.wikipedia.org/wiki/Artificial_general_intelligence' target='_blank' rel='noopener' style='color:var(--accent)'>Wikipedia</a></small>",
     faqAiDangerQ: "Is AI dangerous?",

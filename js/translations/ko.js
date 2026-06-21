@@ -196,7 +196,7 @@ window.translations.ko = {
     faqAiHistoryQ: "AI는 언제 등장했나요?",
     faqAiHistoryA: "'인공지능'이라는 용어는 1956년 다트머스 컨퍼런스에서 만들어졌지만, 생각하는 기계에 대한 아이디어는 고대로 거슬러 올라갑니다. 본격적인 발전은 더 많은 컴퓨팅 파워와 데이터를 갖춘 2010년대에 시작되었습니다. <br><small style='opacity:0.7'>출처: <a href='https://plato.stanford.edu/entries/artificial-intelligence/' target='_blank' rel='noopener' style='color:var(--accent)'>Stanford Encyclopedia</a></small>",
     faqAiHowWorkQ: "AI는 어떻게 작동하나요?",
-    faqAiHowWorkA: "현대 AI는 머신러닝을 사용합니다: 수백만 개의 예시를 분석하고 패턴을 찾아 수학적 모델을 구축합니다. <br><small style='opacity:0.7'>출처: <a href='https://www.technologyreview.com/2018/11/17/103924/how-does-ai-work/' target='_blank' rel='noopener' style='color:var(--accent)'>MIT Tech Review</a></small>",
+    faqAiHowWorkA: "현대 AI는 머신러닝을 사용합니다: 수백만 개의 예시를 분석하고 패턴을 찾아 수학적 모델을 구축합니다. <br><small style='opacity:0.7'>출처: <a href='https://www.ibm.com/think/topics/machine-learning' target='_blank' rel='noopener' style='color:var(--accent)'>IBM</a></small>",
     faqAiTypesQ: "AI의 종류는 무엇인가요?",
     faqAiTypesA: "일반적으로 세 단계가 언급됩니다: 약한 AI(ChatGPT처럼 하나의 작업을 해결), 범용 AI(AGI — 가설적, 인간 수준), 초인공지능(인간을 초월, 아직 존재하지 않음). <br><small style='opacity:0.7'>출처: <a href='https://en.wikipedia.org/wiki/Artificial_general_intelligence' target='_blank' rel='noopener' style='color:var(--accent)'>위키백과</a></small>",
     faqAiDangerQ: "AI는 위험한가요?",

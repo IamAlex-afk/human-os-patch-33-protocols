@@ -196,7 +196,7 @@ window.translations.ja = {
     faqAiHistoryQ: "AIはいつ登場しましたか？",
     faqAiHistoryA: "1956年に造語されましたが、計算能力の向上に伴い2010年代に大規模な開発が始まりました。 <br><small style='opacity:0.7'>Source: <a href='https://plato.stanford.edu/entries/artificial-intelligence/' target='_blank' rel='noopener' style='color:var(--accent)'>Stanford Encyclopedia</a></small>",
     faqAiHowWorkQ: "AIはどのように機能しますか？",
-    faqAiHowWorkA: "機械学習を使用し、数百万の例を分析し、パターンを見つけて数学的モデルを構築します。 <br><small style='opacity:0.7'>Source: <a href='https://www.technologyreview.com/2018/11/17/103924/how-does-ai-work/' target='_blank' rel='noopener' style='color:var(--accent)'>MIT Tech Review</a></small>",
+    faqAiHowWorkA: "機械学習を使用し、数百万の例を分析し、パターンを見つけて数学的モデルを構築します。 <br><small style='opacity:0.7'>Source: <a href='https://www.ibm.com/think/topics/machine-learning' target='_blank' rel='noopener' style='color:var(--accent)'>IBM</a></small>",
     faqAiTypesQ: "AIにはどのような種類がありますか？",
     faqAiTypesA: "特化型AI（ChatGPTなど）、汎用AI（AGI — 仮説上の人間レベル）、そしてスーパーAI（まだ存在しない）があります。 <br><small style='opacity:0.7'>Source: <a href='https://ja.wikipedia.org/wiki/%E6%B1%8E%E7%94%A8%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD' target='_blank' rel='noopener' style='color:var(--accent)'>Wikipedia</a></small>",
     faqAiDangerQ: "AIは危険ですか？",

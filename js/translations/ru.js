@@ -196,7 +196,7 @@ window.translations.ru = {
     faqAiHistoryQ: "Когда появился искусственный интеллект?",
     faqAiHistoryA: "Термин впервые прозвучал в 1956 году на Дартмутской конференции. Массовое развитие началось в 2010‑х. <br><small style='opacity:0.7'>Источник: <a href='https://plato.stanford.edu/entries/artificial-intelligence/' target='_blank' rel='noopener' style='color:var(--accent)'>Stanford Encyclopedia</a></small>",
     faqAiHowWorkQ: "Как работает ИИ?",
-    faqAiHowWorkA: "Современный ИИ использует машинное обучение: анализирует множество примеров, находит закономерности и строит модели. <br><small style='opacity:0.7'>Источник: <a href='https://www.technologyreview.com/2018/11/17/103924/how-does-ai-work/' target='_blank' rel='noopener' style='color:var(--accent)'>MIT Tech Review</a></small>",
+    faqAiHowWorkA: "Современный ИИ использует машинное обучение: анализирует множество примеров, находит закономерности и строит модели. <br><small style='opacity:0.7'>Источник: <a href='https://www.ibm.com/think/topics/machine-learning' target='_blank' rel='noopener' style='color:var(--accent)'>IBM</a></small>",
     faqAiTypesQ: "Какие бывают виды ИИ?",
     faqAiTypesA: "Узкий ИИ (как ChatGPT), Общий ИИ (AGI, гипотетический) и Супер-ИИ (не существует). <br><small style='opacity:0.7'>Источник: <a href='https://ru.wikipedia.org/wiki/Сильный_искусственный_интеллект' target='_blank' rel='noopener' style='color:var(--accent)'>Википедия</a></small>",
     faqAiDangerQ: "Опасен ли ИИ?",
