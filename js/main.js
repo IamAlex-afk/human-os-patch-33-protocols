@@ -325,6 +325,12 @@
       uh(`faqA${i}`, t[`faqA${i}`] || '');
     }
 
+    ut('faqSlangTitle', t.faqSlangTitle);
+    for (let i = 1; i <= 5; i++) {
+      ut(`faqSlangQ${i}`, t[`faqSlangQ${i}`] || '');
+      uh(`faqSlangA${i}`, t[`faqSlangA${i}`] || '');
+    }
+
     ut('aiFaqTitle', t.aiFaqTitle);
     ut('faqAiWhatQ', t.faqAiWhatQ);    uh('faqAiWhatA', t.faqAiWhatA);
     ut('faqAiHistoryQ', t.faqAiHistoryQ); uh('faqAiHistoryA', t.faqAiHistoryA);
