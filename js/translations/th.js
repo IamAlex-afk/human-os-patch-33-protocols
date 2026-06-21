@@ -148,11 +148,11 @@ window.translations.th = {
     fearQ: ["ความคิดที่ว่า AI จะแข็งแกร่งขึ้นทำให้คุณกลัวหรือไม่?","คุณหลีกเลี่ยงการอ่านข่าว AI เพราะรู้สึกไม่สบายใจหรือไม่?","คุณรู้สึกปวดท้องเมื่อได้ยินเกี่ยวกับความก้าวหน้าใหม่ของ AI หรือไม่?","คุณบอกว่า AI เป็นหนึ่งในความกังวลใหญ่ที่สุดของคุณเกี่ยวกับอนาคตหรือไม่?"],
     reverseKeys: { q1:[5,6,7], q2:[5,6,7], q3:[5,6,7], fearQ:[] },
     gameTexts: [
-      {text:"The sun dipped below the horizon, painting the sky in shades of orange.", isAI:true},
-      {text:"I couldn't believe my eyes. We had actually won after brutal practice.", isAI:false},
-      {text:"In quantum mechanics, particles exist in multiple states simultaneously.", isAI:true},
-      {text:"Made the best lasagna. Secret ingredient? Way too much garlic.", isAI:false},
-      {text:"As an AI, I don't have feelings, but I understand context.", isAI:true}
+      {text:"ดวงอาทิตย์ลับขอบฟ้า แต่งแต้มท้องฟ้าด้วยเฉดสีส้ม", isAI:true},
+      {text:"ฉันไม่อยากเชื่อตาตัวเอง เราชนะจริง ๆ หลังจากฝึกซ้อมอย่างหนัก", isAI:false},
+      {text:"ในกลศาสตร์ควอนตัม อนุภาคสามารถอยู่ในหลายสถานะพร้อมกันได้", isAI:true},
+      {text:"ทำลาซานญ่าที่อร่อยที่สุด ส่วนผสมลับคืออะไร? กระเทียมเยอะเกินไป", isAI:false},
+      {text:"ในฐานะ AI ฉันไม่มีความรู้สึก แต่ฉันเข้าใจบริบท", isAI:true}
     ],
     protocols: [
       {num:1,title:"AI: วิธีการ ไม่ใช่จิตใจ",desc:"AI คือเครื่องมือ ไม่ใช่คู่สนทนา การแทนที่งานประจำ 80% ด้วย AI ช่วยปลดปล่อยเวลา 80% สำหรับความคิดสร้างสรรค์"},
