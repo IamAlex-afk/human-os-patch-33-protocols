@@ -215,6 +215,7 @@ window.translations.ko = {
     ecoCardDataset: "🤗 공개 데이터셋",
     ecoCardTechProfile: "✍️ 기술 프로필",
     ecoCardAuthorProfile: "👤 저자 프로필",
+    authorBioText: "알렉세이 세르게예비치 비트킨은 인지 아키텍처 분야의 독립 연구자이며, 프리프린트 「Glitch Theory of Consciousness」와 「AI Biohacking: 33 Protocols」 프레임워크의 저자입니다. Mind-OS는 AI 의존도를 측정하기 위한 그의 개방형, 광고 없는 연구 프로젝트로, 기관의 자금 지원 없이 독립적으로 제작 및 운영되고 있습니다.",
     ecoLinkDOI: "DOI 참조",
     ecoLinkHBR: "HBR에서 읽기",
     ecoLinkZenodo: "Zenodo에서 읽기",
