@@ -215,6 +215,7 @@ window.translations.hi = {
     ecoCardDataset: "🤗 ओपन डेटासेट",
     ecoCardTechProfile: "✍️ तकनीकी प्रोफ़ाइल",
     ecoCardAuthorProfile: "👤 लेखक प्रोफ़ाइल",
+    authorBioText: "अलेक्सेई सर्गेयेविच बिटकिन संज्ञानात्मक वास्तुकला के क्षेत्र में एक स्वतंत्र शोधकर्ता हैं और \"Glitch Theory of Consciousness\" प्रीप्रिंट तथा \"AI Biohacking: 33 Protocols\" फ्रेमवर्क के लेखक हैं। Mind-OS उनका खुला, विज्ञापन-रहित शोध प्रोजेक्ट है जो AI पर निर्भरता को मापने के लिए बनाया गया है — यह पूरी तरह स्वतंत्र रूप से बनाया और संचालित किया जाता है, बिना किसी संस्थागत फंडिंग के।",
     ecoLinkDOI: "DOI संदर्भ",
     ecoLinkHBR: "HBR पर पढ़ें",
     ecoLinkZenodo: "Zenodo पर पढ़ें",

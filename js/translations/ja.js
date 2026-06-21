@@ -215,6 +215,7 @@ window.translations.ja = {
     ecoCardDataset: "🤗 オープンデータセット",
     ecoCardTechProfile: "✍️ 技術プロフィール",
     ecoCardAuthorProfile: "👤 著者プロフィール",
+    authorBioText: "アレクセイ・セルゲーヴィチ・ビトキンは、認知アーキテクチャの分野で独立して活動する研究者であり、プレプリント「Glitch Theory of Consciousness」および「AI Biohacking: 33 Protocols」フレームワークの著者です。Mind-OSは、AI依存度を測定するための、広告なし・オープンな研究プロジェクトであり、機関からの資金提供を受けず、独立して制作・運営されています。",
     ecoLinkDOI: "DOI参照",
     ecoLinkHBR: "HBRで読む",
     ecoLinkZenodo: "Zenodoで読む",
