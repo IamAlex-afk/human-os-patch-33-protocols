@@ -148,11 +148,11 @@ window.translations.vi = {
     fearQ: ["Suy nghĩ về AI mạnh hơn có làm bạn sợ không?","Bạn có tránh đọc tin tức AI vì khó chịu không?","Bạn có cảm thấy nặng nề khi nghe về đột phá AI mới không?","Bạn có coi AI là một trong những lo lắng lớn nhất về tương lai không?"],
     reverseKeys: { q1:[5,6,7], q2:[5,6,7], q3:[5,6,7], fearQ:[] },
     gameTexts: [
-      {text:"The sun dipped below the horizon, painting the sky in shades of orange.", isAI:true},
-      {text:"I couldn't believe my eyes. We had actually won after brutal practice.", isAI:false},
-      {text:"In quantum mechanics, particles exist in multiple states simultaneously.", isAI:true},
-      {text:"Made the best lasagna. Secret ingredient? Way too much garlic.", isAI:false},
-      {text:"As an AI, I don't have feelings, but I understand context.", isAI:true}
+      {text:"Mặt trời lặn xuống dưới đường chân trời, tô màu bầu trời thành những sắc cam.", isAI:true},
+      {text:"Tôi không thể tin vào mắt mình. Chúng tôi đã thực sự thắng sau những buổi tập luyện khắc nghiệt.", isAI:false},
+      {text:"Trong cơ học lượng tử, các hạt tồn tại ở nhiều trạng thái cùng một lúc.", isAI:true},
+      {text:"Làm món lasagna ngon nhất. Nguyên liệu bí mật? Quá nhiều tỏi.", isAI:false},
+      {text:"Là một AI, tôi không có cảm xúc, nhưng tôi hiểu ngữ cảnh.", isAI:true}
     ],
     protocols: [
       {num:1,title:"AI: Phương pháp, không phải Tâm trí",desc:"AI là công cụ, không phải đối tác. 80% thói quen thay bằng AI giải phóng 80% thời gian sáng tạo."},
