@@ -51,6 +51,7 @@ window.translations.it = {
     gameFeedbackHuman: "Era un Umano.",
     pollTitle: "🌍 Sondaggio Globale sul Sentimento verso l'IA",
     pollDesc: "Vota in modo anonimo. Questa è la tua posizione personale.",
+    pollMilestone: "Senza registrazione, senza raccolta dati, i voti contano da ogni paese del mondo. Obiettivo: 1000 voti &mdash; arriviamoci insieme.",
     pollFor: "👍 Favorevole (ottimista)",
     pollNeutral: "😐 Neutrale",
     pollAgainst: "👎 Contrario (preoccupato)",

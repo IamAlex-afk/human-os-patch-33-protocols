@@ -51,6 +51,7 @@ window.translations.es = {
     gameFeedbackHuman: "Era Humano.",
     pollTitle: "🌍 Encuesta Global sobre IA",
     pollDesc: "Vota anónimamente. Esta es tu postura personal.",
+    pollMilestone: "Sin registro, sin recopilación de datos, los votos cuentan desde cualquier país del mundo. Meta: 1000 votos &mdash; lleguemos juntos.",
     pollFor: "👍 A favor (optimista)",
     pollNeutral: "😐 Neutral",
     pollAgainst: "👎 En contra (preocupado)",

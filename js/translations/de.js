@@ -51,6 +51,7 @@ window.translations.de = {
     gameFeedbackHuman: "Es war ein Mensch.",
     pollTitle: "🌍 Globale KI-Umfrage",
     pollDesc: "Stimmen Sie anonym ab. Dies ist Ihre persönliche Haltung.",
+    pollMilestone: "Keine Anmeldung, keine Datenerfassung, Stimmen zählen aus jedem Land der Welt. Ziel: 1000 Stimmen &mdash; schaffen wir das zusammen.",
     pollFor: "👍 Dafür (optimistisch)",
     pollNeutral: "😐 Neutral",
     pollAgainst: "👎 Dagegen (besorgt)",

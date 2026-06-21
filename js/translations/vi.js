@@ -51,6 +51,7 @@ window.translations.vi = {
     gameFeedbackHuman: "Đó là con người.",
     pollTitle: "🌍 Khảo sát tâm lý AI toàn cầu",
     pollDesc: "Bỏ phiếu ẩn danh. Đây là quan điểm cá nhân của bạn.",
+    pollMilestone: "Không cần đăng ký, không thu thập dữ liệu, phiếu bầu được tính từ mọi quốc gia trên thế giới. Mục tiêu: 1.000 phiếu &mdash; cùng nhau đạt được nhé.",
     pollFor: "👍 Ủng hộ (lạc quan)",
     pollNeutral: "😐 Trung lập",
     pollAgainst: "👎 Phản đối (lo ngại)",
