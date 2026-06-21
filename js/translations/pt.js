@@ -196,7 +196,7 @@ window.translations.pt = {
     faqAiHistoryQ: "Quando a IA surgiu?",
     faqAiHistoryA: "O termo 'inteligência artificial' foi criado em 1956 na Conferência de Dartmouth, mas ideias sobre máquinas pensantes remontam à antiguidade. O desenvolvimento massivo começou na década de 2010 com mais poder de computação e dados. <br><small style='opacity:0.7'>Fonte: <a href='https://plato.stanford.edu/entries/artificial-intelligence/' target='_blank' rel='noopener' style='color:var(--accent)'>Stanford Encyclopedia</a></small>",
     faqAiHowWorkQ: "Como a IA funciona?",
-    faqAiHowWorkA: "A IA moderna usa aprendizado de máquina: ela analisa milhões de exemplos, encontra padrões e constrói modelos matemáticos. <br><small style='opacity:0.7'>Fonte: <a href='https://www.technologyreview.com/2018/11/17/103924/how-does-ai-work/' target='_blank' rel='noopener' style='color:var(--accent)'>MIT Tech Review</a></small>",
+    faqAiHowWorkA: "A IA moderna usa aprendizado de máquina: ela analisa milhões de exemplos, encontra padrões e constrói modelos matemáticos. <br><small style='opacity:0.7'>Fonte: <a href='https://www.ibm.com/think/topics/machine-learning' target='_blank' rel='noopener' style='color:var(--accent)'>IBM</a></small>",
     faqAiTypesQ: "Quais são os tipos de IA?",
     faqAiTypesA: "Normalmente são citados três níveis: IA Restrita (resolve uma tarefa, como o ChatGPT), IA Geral (AGI — hipotética, nível humano) e Super IA (supera os humanos, ainda não existe). <br><small style='opacity:0.7'>Fonte: <a href='https://en.wikipedia.org/wiki/Artificial_general_intelligence' target='_blank' rel='noopener' style='color:var(--accent)'>Wikipédia</a></small>",
     faqAiDangerQ: "A IA é perigosa?",

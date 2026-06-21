@@ -195,7 +195,7 @@ window.translations.vi = {
     faqAiHistoryQ: "AI xuất hiện khi nào?",
     faqAiHistoryA: "Thuật ngữ 'trí tuệ nhân tạo' được đặt ra năm 1956. Phát triển mạnh bắt đầu những năm 2010. <br><small style='opacity:0.7'>Nguồn: <a href='https://plato.stanford.edu/entries/artificial-intelligence/' target='_blank' rel='noopener' style='color:var(--accent)'>Stanford Encyclopedia</a></small>",
     faqAiHowWorkQ: "AI hoạt động như thế nào?",
-    faqAiHowWorkA: "AI hiện đại dùng học máy: phân tích hàng triệu ví dụ, tìm mẫu và xây dựng mô hình toán học. <br><small style='opacity:0.7'>Nguồn: <a href='https://www.technologyreview.com/2018/11/17/103924/how-does-ai-work/' target='_blank' rel='noopener' style='color:var(--accent)'>MIT Tech Review</a></small>",
+    faqAiHowWorkA: "AI hiện đại dùng học máy: phân tích hàng triệu ví dụ, tìm mẫu và xây dựng mô hình toán học. <br><small style='opacity:0.7'>Nguồn: <a href='https://www.ibm.com/think/topics/machine-learning' target='_blank' rel='noopener' style='color:var(--accent)'>IBM</a></small>",
     faqAiTypesQ: "Có những loại AI nào?",
     faqAiTypesA: "Ba cấp: AI Hẹp (như ChatGPT), AI Tổng quát (AGI — giả thuyết) và Siêu AI (chưa tồn tại). <br><small style='opacity:0.7'>Nguồn: <a href='https://en.wikipedia.org/wiki/Artificial_general_intelligence' target='_blank' rel='noopener' style='color:var(--accent)'>Wikipedia</a></small>",
     faqAiDangerQ: "AI có nguy hiểm không?",

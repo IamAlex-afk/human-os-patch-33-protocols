@@ -196,7 +196,7 @@ window.translations.hi = {
     faqAiHistoryQ: "AI कब प्रकट हुआ?",
     faqAiHistoryA: "'आर्टिफिशियल इंटेलिजेंस' शब्द 1956 में डार्टमाउथ कॉन्फ्रेंस में बनाया गया था, लेकिन सोचने वाली मशीनों के विचार प्राचीन काल से चले आ रहे हैं। बड़े पैमाने पर विकास 2010 के दशक में अधिक कंप्यूटिंग शक्ति और डेटा के साथ शुरू हुआ। <br><small style='opacity:0.7'>स्रोत: <a href='https://plato.stanford.edu/entries/artificial-intelligence/' target='_blank' rel='noopener' style='color:var(--accent)'>Stanford Encyclopedia</a></small>",
     faqAiHowWorkQ: "AI कैसे काम करता है?",
-    faqAiHowWorkA: "आधुनिक AI मशीन लर्निंग का उपयोग करता है: यह लाखों उदाहरणों का विश्लेषण करता है, पैटर्न ढूंढता है, और गणितीय मॉडल बनाता है। <br><small style='opacity:0.7'>स्रोत: <a href='https://www.technologyreview.com/2018/11/17/103924/how-does-ai-work/' target='_blank' rel='noopener' style='color:var(--accent)'>MIT Tech Review</a></small>",
+    faqAiHowWorkA: "आधुनिक AI मशीन लर्निंग का उपयोग करता है: यह लाखों उदाहरणों का विश्लेषण करता है, पैटर्न ढूंढता है, और गणितीय मॉडल बनाता है। <br><small style='opacity:0.7'>स्रोत: <a href='https://www.ibm.com/think/topics/machine-learning' target='_blank' rel='noopener' style='color:var(--accent)'>IBM</a></small>",
     faqAiTypesQ: "AI के प्रकार क्या हैं?",
     faqAiTypesA: "आमतौर पर तीन स्तरों का उल्लेख किया जाता है: नैरो AI (एक काम हल करता है, जैसे ChatGPT), जनरल AI (AGI — काल्पनिक, मानव-स्तर), और सुपर AI (मानवों से आगे, अभी मौजूद नहीं है)। <br><small style='opacity:0.7'>स्रोत: <a href='https://en.wikipedia.org/wiki/Artificial_general_intelligence' target='_blank' rel='noopener' style='color:var(--accent)'>विकिपीडिया</a></small>",
     faqAiDangerQ: "क्या AI खतरनाक है?",

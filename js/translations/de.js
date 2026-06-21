@@ -196,7 +196,7 @@ window.translations.de = {
     faqAiHistoryQ: "Wann entstand KI?",
     faqAiHistoryA: "Der Begriff wurde 1956 geprägt. Die massenhafte Entwicklung begann in den 2010er Jahren mit mehr Rechenleistung. <br><small style='opacity:0.7'>Quelle: <a href='https://plato.stanford.edu/entries/artificial-intelligence/' target='_blank' rel='noopener' style='color:var(--accent)'>Stanford Encyclopedia</a></small>",
     faqAiHowWorkQ: "Wie funktioniert KI?",
-    faqAiHowWorkA: "Moderne KI nutzt maschinelles Lernen: Sie analysiert Millionen von Beispielen und baut mathematische Modelle. <br><small style='opacity:0.7'>Quelle: <a href='https://www.technologyreview.com/2018/11/17/103924/how-does-ai-work/' target='_blank' rel='noopener' style='color:var(--accent)'>MIT Tech Review</a></small>",
+    faqAiHowWorkA: "Moderne KI nutzt maschinelles Lernen: Sie analysiert Millionen von Beispielen und baut mathematische Modelle. <br><small style='opacity:0.7'>Quelle: <a href='https://www.ibm.com/think/topics/machine-learning' target='_blank' rel='noopener' style='color:var(--accent)'>IBM</a></small>",
     faqAiTypesQ: "Welche Arten von KI gibt es?",
     faqAiTypesA: "Schwache KI (löst eine Aufgabe, wie ChatGPT), Allgemeine KI (AGI — hypothetisch) und Super-KI. <br><small style='opacity:0.7'>Quelle: <a href='https://de.wikipedia.org/wiki/Starke_K%C3%BCnstliche_Intelligenz' target='_blank' rel='noopener' style='color:var(--accent)'>Wikipedia</a></small>",
     faqAiDangerQ: "Ist KI gefährlich?",

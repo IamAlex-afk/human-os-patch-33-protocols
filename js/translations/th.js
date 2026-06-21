@@ -195,7 +195,7 @@ window.translations.th = {
     faqAiHistoryQ: "AI ปรากฏขึ้นเมื่อไหร่?",
     faqAiHistoryA: "คำว่า 'ปัญญาประดิษฐ์' ถูกบัญญัติขึ้นในปี 1956 ที่การประชุม Dartmouth การพัฒนาครั้งใหญ่เริ่มในทศวรรษ 2010 <br><small style='opacity:0.7'>ที่มา: <a href='https://plato.stanford.edu/entries/artificial-intelligence/' target='_blank' rel='noopener' style='color:var(--accent)'>Stanford Encyclopedia</a></small>",
     faqAiHowWorkQ: "AI ทำงานอย่างไร?",
-    faqAiHowWorkA: "AI สมัยใหม่ใช้การเรียนรู้ของเครื่อง: วิเคราะห์ตัวอย่างล้านรายการ หาแบบแผน และสร้างแบบจำลองทางคณิตศาสตร์ <br><small style='opacity:0.7'>ที่มา: <a href='https://www.technologyreview.com/2018/11/17/103924/how-does-ai-work/' target='_blank' rel='noopener' style='color:var(--accent)'>MIT Tech Review</a></small>",
+    faqAiHowWorkA: "AI สมัยใหม่ใช้การเรียนรู้ของเครื่อง: วิเคราะห์ตัวอย่างล้านรายการ หาแบบแผน และสร้างแบบจำลองทางคณิตศาสตร์ <br><small style='opacity:0.7'>ที่มา: <a href='https://www.ibm.com/think/topics/machine-learning' target='_blank' rel='noopener' style='color:var(--accent)'>IBM</a></small>",
     faqAiTypesQ: "AI มีกี่ประเภท?",
     faqAiTypesA: "สามระดับ: Narrow AI (แก้งานเดียว เช่น ChatGPT), General AI (AGI — สมมติ) และ Super AI (เกินมนุษย์ ยังไม่มีอยู่จริง) <br><small style='opacity:0.7'>ที่มา: <a href='https://en.wikipedia.org/wiki/Artificial_general_intelligence' target='_blank' rel='noopener' style='color:var(--accent)'>Wikipedia</a></small>",
     faqAiDangerQ: "AI อันตรายหรือไม่?",

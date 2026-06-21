@@ -196,7 +196,7 @@ window.translations.fr = {
     faqAiHistoryQ: "Quand l'IA est-elle apparue ?",
     faqAiHistoryA: "Le terme a été inventé en 1956, mais le développement massif a commencé dans les années 2010 avec plus de puissance de calcul. <br><small style='opacity:0.7'>Source: <a href='https://plato.stanford.edu/entries/artificial-intelligence/' target='_blank' rel='noopener' style='color:var(--accent)'>Stanford Encyclopedia</a></small>",
     faqAiHowWorkQ: "Comment fonctionne l'IA ?",
-    faqAiHowWorkA: "Elle utilise l'apprentissage automatique : elle analyse des millions d'exemples, trouve des modèles et construit des modèles mathématiques. <br><small style='opacity:0.7'>Source: <a href='https://www.technologyreview.com/2018/11/17/103924/how-does-ai-work/' target='_blank' rel='noopener' style='color:var(--accent)'>MIT Tech Review</a></small>",
+    faqAiHowWorkA: "Elle utilise l'apprentissage automatique : elle analyse des millions d'exemples, trouve des modèles et construit des modèles mathématiques. <br><small style='opacity:0.7'>Source: <a href='https://www.ibm.com/think/topics/machine-learning' target='_blank' rel='noopener' style='color:var(--accent)'>IBM</a></small>",
     faqAiTypesQ: "Quels sont les types d'IA ?",
     faqAiTypesA: "L'IA étroite (résout une tâche, comme ChatGPT), l'IA générale (AGI — hypothétique, niveau humain) et la Super IA (n'existe pas encore). <br><small style='opacity:0.7'>Source: <a href='https://fr.wikipedia.org/wiki/Intelligence_artificielle_g%C3%A9n%C3%A9rale' target='_blank' rel='noopener' style='color:var(--accent)'>Wikipedia</a></small>",
     faqAiDangerQ: "L'IA est-elle dangereuse ?",
