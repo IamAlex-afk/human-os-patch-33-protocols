@@ -60,11 +60,14 @@ const Quiz = (function() {
 
     const qText = document.createElement('div');
     qText.className = 'question-text';
+    qText.id = `${containerId}_q${currentIndex}`;
     qText.textContent = `${currentIndex + 1}. ${questions[currentIndex]}`;
     stepDiv.appendChild(qText);
 
     const optsDiv = document.createElement('div');
     optsDiv.className = 'options';
+    optsDiv.setAttribute('role', 'radiogroup');
+    optsDiv.setAttribute('aria-labelledby', qText.id);
 
     t.options.forEach((optText, i) => {
       const label = document.createElement('label');
