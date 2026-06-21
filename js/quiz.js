@@ -9,7 +9,6 @@ const Quiz = (function() {
   const userAnswers = { a1: {}, a2: {}, a3: {}, fear: {} };
   const wizardState = { a1: 0, a2: 0, a3: 0, fear: 0 };
 
-  // Load persisted state
   function loadPersisted() {
     const saved = storage.get(STORAGE_KEYS.TEST_ANSWERS);
     const savedWiz = storage.get(STORAGE_KEYS.TEST_WIZARD);
@@ -47,12 +46,10 @@ const Quiz = (function() {
     const total = questions.length;
     container.innerHTML = '';
 
-    // If already completed, show nothing (result shown instead)
     const isCompleted = prefix === 'fear'
       ? document.getElementById('fearResult')?.style.display === 'block'
       : document.getElementById(prefix === 'a1' ? 'r1' : prefix === 'a2' ? 'r2' : 'r3')?.style.display === 'block';
 
-    // Skip rendering wizard if axis is completed
     if (prefix !== 'fear' && COMPLETED_AXES[prefix]) return;
 
     const stepDiv = document.createElement('div');
@@ -100,7 +97,6 @@ const Quiz = (function() {
 
     stepDiv.appendChild(optsDiv);
 
-    // Navigation
     const navDiv = document.createElement('div');
     navDiv.className = 'wizard-nav';
 
@@ -223,7 +219,6 @@ const Quiz = (function() {
     }
   }
 
-  // ── РАДАР-ГРАФИК (SVG, без библиотек) ──
   function renderRadar(s1, s2, s3) {
     const holder = document.getElementById('radarHolder');
     if (!holder) return;
@@ -238,29 +233,24 @@ const Quiz = (function() {
     const ang = i => (Math.PI/2) + (i * 2*Math.PI/3) * -1 - Math.PI; // старт сверху
     const pt = (i, r) => [cx + r*Math.cos(ang(i)), cy + r*Math.sin(ang(i))];
 
-    // Сетка (3 кольца)
     let grid = '';
     for (let ring=1; ring<=3; ring++) {
       const rr = R*ring/3;
       const pts = [0,1,2].map(i => pt(i, rr).map(n=>n.toFixed(1)).join(',')).join(' ');
       grid += `<polygon points="${pts}" fill="none" stroke="var(--border)" stroke-width="1" opacity="0.5"/>`;
     }
-    // Лучи
     let spokes = '';
     [0,1,2].forEach(i => {
       const [x,y] = pt(i, R);
       spokes += `<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="var(--border)" stroke-width="1" opacity="0.5"/>`;
     });
-    // Данные (заполненный треугольник)
     const dataPts = axes.map((a,i) => pt(i, R*Math.max(a.v,0.04)).map(n=>n.toFixed(1)).join(',')).join(' ');
     const dataPoly = `<polygon points="${dataPts}" fill="var(--accent)" fill-opacity="0.25" stroke="var(--accent)" stroke-width="2.5"/>`;
-    // Точки + значения
     let dots = '';
     axes.forEach((a,i) => {
       const [x,y] = pt(i, R*Math.max(a.v,0.04));
       dots += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4" fill="var(--accent)"/>`;
     });
-    // Подписи осей
     let labels = '';
     axes.forEach((a,i) => {
       const [x,y] = pt(i, R+24);
@@ -273,7 +263,6 @@ const Quiz = (function() {
     holder.innerHTML = `<svg viewBox="0 0 ${size} ${size}" width="${size}" height="${size}" role="img" aria-label="Radar chart of your three AI dependency axes">${grid}${spokes}${dataPoly}${dots}${labels}</svg>`;
   }
 
-  // ── СПЕКТР ЗАВИСИМОСТИ ──
   function renderSpectrum(ratio) {
     const marker = document.getElementById('spectrumMarker');
     if (!marker) return;
@@ -284,7 +273,6 @@ const Quiz = (function() {
     setTimeout(() => { marker.style.left = pct + '%'; }, 100);
   }
 
-  // ── БЛОК "ЧТО ДЕЛАТЬ" — по самой высокой оси ──
   function renderWhatToDo(s1, s2, s3) {
     const box = document.getElementById('whatToDo');
     const txt = document.getElementById('whatToDoText');
@@ -365,7 +353,6 @@ const Quiz = (function() {
     } catch (e) { return false; }
   }
 
-  // Матрица Зависимость × Страх — храним оба показателя
   let _depRatio = null, _fearRatio = null;
 
   function renderMatrix() {
@@ -429,7 +416,6 @@ const Quiz = (function() {
       document.getElementById('overallPercentile').textContent = t.overallPercentileLabel.replace('{percentile}', arch.percentile);
       document.getElementById('overallAdvice').textContent = arch.advice;
 
-      // Предупреждение о качестве ответов (если прямые ответы в 2+ осях)
       const warnEl = document.getElementById('answerQualityWarning');
       if (warnEl) {
         if (straightLineCount >= 2 && t.answerQualityWarning) {
@@ -440,7 +426,6 @@ const Quiz = (function() {
         }
       }
 
-      // Визуализация: радар, спектр, что делать
       renderRadar(s1, s2, s3);
       renderSpectrum(ratio);
       renderWhatToDo(s1, s2, s3);
@@ -448,7 +433,6 @@ const Quiz = (function() {
       _raw.s1 = s1; _raw.s2 = s2; _raw.s3 = s3;
       renderMatrix();
 
-      // Show reset button
       const resetBtn = document.getElementById('resetTestButton');
       if (resetBtn) resetBtn.style.display = 'inline-flex';
 
@@ -456,7 +440,6 @@ const Quiz = (function() {
     }
   }
 
-  // Overall progress bar across all axes
   function updateOverallProgress() {
     const t = getT(currentLang);
     const totalQuestions = 28; // 8+8+8+4
@@ -476,12 +459,10 @@ const Quiz = (function() {
       if (progressFill) progressFill.style.width = pct + '%';
       if (progressLabel) progressLabel.textContent = t.overallProgressLabel;
       if (progressCount) progressCount.textContent = t.overallProgressText.replace('{answered}', answered).replace('{total}', totalQuestions);
-      // Анимированный счётчик процентов
       animateCounter(progressFill, pct);
     }
   }
 
-  // Плавная анимация процента (уважает prefers-reduced-motion)
   function animateCounter(el, target) {
     if (!el) return;
     const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -500,7 +481,6 @@ const Quiz = (function() {
     requestAnimationFrame(step);
   }
 
-  // Reset entire test
   function resetTest() {
     clearAll();
     straightLineCount = 0;
@@ -509,7 +489,6 @@ const Quiz = (function() {
     _raw = { s1: null, s2: null, s3: null, fear: -1 };
     const _mx = document.getElementById('depFearMatrix');
     if (_mx) _mx.setAttribute('hidden', '');
-    // Reset UI
     ['q1Container', 'q2Container', 'q3Container', 'qFearContainer'].forEach(id => {
       const el = document.getElementById(id);
       if (el) el.style.display = 'block';
@@ -527,7 +506,6 @@ const Quiz = (function() {
     const progressEl = document.getElementById('overallProgress');
     if (progressEl) progressEl.classList.remove('visible');
 
-    // Re-render
     const t = getT(currentLang);
     renderWizard('q1Container', t.q1, 'a1', t);
     renderWizard('q2Container', t.q2, 'a2', t);

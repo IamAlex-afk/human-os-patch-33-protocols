@@ -36,22 +36,18 @@
         ? '"Noto Sans JP", "Yu Gothic", "Meiryo", Inter, system-ui, sans-serif'
         : 'Inter, system-ui, sans-serif';
 
-      // Background
       ctx.fillStyle = '#0b100d';
       ctx.fillRect(0, 0, W, H);
-      // Border
       ctx.strokeStyle = '#00e57a';
       ctx.lineWidth = 6;
       ctx.strokeRect(20, 20, W - 40, H - 40);
 
-      // Title
       const cardTitle = t.cardTitle || 'Mind-OS — AI Dependency Profile';
       ctx.fillStyle = '#b4cec0';
       ctx.font = '600 30px ' + fontStack;
       ctx.textAlign = 'left';
       ctx.fillText(cardTitle, 70, 95);
 
-      // Archetype
       ctx.fillStyle = '#00e57a';
       ctx.font = '700 64px ' + fontStack;
       const maxW = W - 140;
@@ -61,7 +57,6 @@
       }
       ctx.fillText(line === archetype ? archetype : line + '…', 70, 185);
 
-      // Axis bars with translated labels
       const labels = [
         t.axis1Title || 'Thinking & Memory',
         t.axis2Title || 'Anxiety & Attachment',
@@ -86,7 +81,6 @@
         y += gap;
       }
 
-      // Bottom tagline + URL
       const tagline = t.cardTagline || 'Free · Anonymous · No signup';
       ctx.fillStyle = '#b4cec0';
       ctx.font = '400 24px ' + fontStack;
