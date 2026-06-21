@@ -4,7 +4,6 @@
   const { DEFAULT_LANG, STORAGE_KEYS } = CONFIG;
   let currentLang = DEFAULT_LANG;
 
-  // Флаг + название + код для каждого языка
   const LANG_META = {
     en: { flag: '🇬🇧', name: 'English',  code: 'EN' },
     ru: { flag: '🇷🇺', name: 'Русский',  code: 'RU' },
@@ -20,7 +19,6 @@
     hi: { flag: '🇮🇳', name: 'हिन्दी',     code: 'HI' }
   };
 
-  // Сообщения для мягкого баннера "похоже, вы предпочитаете другой язык" — на языке, который предлагается
   const LANG_SUGGEST = {
     en: { text: 'It looks like your browser is set to English.', link: 'View in English', close: 'Close' },
     ru: { text: 'Похоже, ваш браузер настроен на русский язык.', link: 'Открыть на русском', close: 'Закрыть' },
@@ -147,13 +145,11 @@
       else closeLangDropdown();
     };
 
-    // Закрытие по клику вне окна
     document.addEventListener('click', (e) => {
       const sel = document.getElementById('langSelector');
       if (sel && !sel.contains(e.target)) closeLangDropdown();
     });
 
-    // Закрытие по Esc
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closeLangDropdown();
     });
@@ -169,7 +165,6 @@
         pollBlock.appendChild(el);
       }
     }
-    /* pollPrivacy — вставляем в pollResults если нет */
     if (!document.querySelector('[data-i18n="pollPrivacy"]')) {
       const pollResults = document.getElementById('pollResults');
       if (pollResults) {
@@ -204,7 +199,6 @@
       btn.classList.toggle('active', isActive);
       if (btn.hasAttribute('aria-selected')) btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
     });
-    // Обновляем код языка на кнопке-планете
     const _code = document.getElementById('langCurrentCode');
     if (_code) _code.textContent = (LANG_META[lang] || { code: lang.toUpperCase() }).code;
 
@@ -396,18 +390,15 @@
 
     initLangBar();
 
-    // Открыт по ссылке с результатом? Показываем его
     if (window.Quiz && Quiz.checkSharedResult) { try { Quiz.checkSharedResult(); } catch(e) {} }
 
-    // Клавиши 1-5 для ответа на текущий вопрос теста
     document.addEventListener('keydown', (e) => {
       if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
       const k = parseInt(e.key, 10);
       if (k >= 1 && k <= 5) {
-        // Находим видимый активный шаг теста
         const steps = document.querySelectorAll('.question-step.active');
         for (const step of steps) {
-          if (step.offsetParent === null) continue; // невидим
+          if (step.offsetParent === null) continue;
           const inputs = step.querySelectorAll('input[type="radio"]');
           if (inputs[k-1]) {
             inputs[k-1].checked = true;
@@ -495,7 +486,6 @@
       }
     });
 
-    // Секции для scroll-spy (подсветка активного пункта навигации)
     const navMap = [
       { nav: 'navAssessment', sec: 'test-section' },
       { nav: 'navTracker',    sec: 'tracker-section' },
@@ -512,25 +502,21 @@
       window.requestAnimationFrame(() => {
         const y = window.scrollY;
 
-        // 1. Плавающая CTA-панель
         const bar = document.getElementById('globalCTABar');
         if (bar) bar.classList.toggle('visible', y > 800);
 
-        // 2. Кнопка "наверх"
         const topBtn = document.getElementById('scrollTopBtn');
         if (topBtn) {
           if (y > 600) topBtn.removeAttribute('hidden');
           else topBtn.setAttribute('hidden', '');
         }
 
-        // 3. Индикатор прогресса чтения
         const prog = document.getElementById('readingProgress');
         if (prog) {
           const h = document.documentElement.scrollHeight - window.innerHeight;
           prog.style.width = h > 0 ? (y / h * 100) + '%' : '0%';
         }
 
-        // 4. Scroll-spy: подсветка активной секции
         let activeNav = null;
         for (const m of navMap) {
           const sec = document.getElementById(m.sec);
@@ -545,7 +531,6 @@
       });
     }, { passive: true });
 
-    // Кнопка "наверх" — плавный возврат
     const _topBtn = document.getElementById('scrollTopBtn');
     if (_topBtn) {
       _topBtn.addEventListener('click', () => {
@@ -553,7 +538,6 @@
       });
     }
 
-    // PWA install prompt
     let _pwaPrompt = null;
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
