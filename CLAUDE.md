@@ -31,6 +31,7 @@ Vanilla HTML/CSS/JS, без фреймворков, localStorage, PWA, 12 язы
 - sitemap.xml: 12 URL, hreflang (13 тегов на странице, включая x-default), schema.org (WebPage + Quiz + FAQPage + SoftwareApplication + BreadcrumbList)
 - robots.txt: AI-боты разрешены, sitemap указан
 - Google Search Console: верификация файлом `googled8a35f2a8c073799.html`
+- Порядок секций на странице (после Poll): AI FAQ → основной FAQ → FAQ slang ("Popular Questions and Answers") → Ecosystem (база знаний со ссылками) → 33 Protocols → How it works. Менять порядок — только в `index.html`, затем `.\build.ps1` пересобирает все 12 языков.
 
 ## Структура теста (ФАКТ, проверено по коду)
 - 3 оси зависимости × 8 вопросов = 24 вопроса (q1=мышление, q2=эмоции, q3=продуктивность)
@@ -38,9 +39,10 @@ Vanilla HTML/CSS/JS, без фреймворков, localStorage, PWA, 12 язы
 - Итого 28 вопросов. config: MAX_AXIS=32, TOTAL_MAX=96, FEAR_MAX=16
 
 ## Открытые вопросы
-1. **Twitter/X handle** — twitter:creator не добавлен, handle не указан.
-2. **LICENSE конфликт** — README говорит CC BY-NC-ND, файл LICENSE — GPL v3.
-3. **Google Search Console** — индексация запрошена не для всех 12 языковых URL (лимит 10/день).
+1. **LICENSE конфликт** — README говорит CC BY-NC-ND, файл LICENSE — GPL v3.
+2. **Google Search Console** — индексация запрошена не для всех 12 языковых URL (лимит 10/день).
+
+Twitter/X handle — решено не добавлять (владелец подтвердил, что не нужен).
 
 ## Как запустить build.ps1 (генерация языковых страниц)
 ```powershell
