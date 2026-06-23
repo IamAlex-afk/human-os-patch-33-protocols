@@ -203,6 +203,7 @@ window.translations.en = {
       {num:32,title:"Self-Awareness: Reprogramming",desc:"87% suffer inattentional blindness. Observer mode is key."},
       {num:33,title:"Meta-Code: Final Reboot",desc:"Neuroplasticity: 21 days to create new network. Epigenetics: intention switches genes."}
     ],
+    protocolCategories: ["Mind & AI", "Body & Emotions", "Inner Mechanics", "Relationships", "Purpose & Discipline", "Growth & Meta-Awareness"],
     aiFaqTitle: "🧠 What is AI? Simple answers",
     faqAiWhatQ: "What is artificial intelligence?",
     faqAiWhatA: "Artificial intelligence (AI) is a computer system that can do tasks that normally require human intelligence — like understanding language, recognizing images, making decisions, and learning from experience. Modern AI learns from large amounts of data. <br><small style='opacity:0.7'>Source: <a href='https://en.wikipedia.org/wiki/Artificial_intelligence' target='_blank' rel='noopener' style='color:var(--accent)'>Wikipedia</a></small>",

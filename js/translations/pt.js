@@ -191,6 +191,7 @@ window.translations.pt = {
       {num:32,title:"Autoconsciência: Reprogramação",desc:"87% sofrem de cegueira por desatenção. O modo observador é fundamental."},
       {num:33,title:"Meta-Código: Reinicialização Final",desc:"Neuroplasticidade: 21 dias para criar uma nova rede. Epigenética: a intenção ativa genes."}
     ],
+    protocolCategories: ["Mente e IA", "Corpo e emoções", "Mecânica interior", "Relacionamentos", "Propósito e disciplina", "Crescimento e metaconsciência"],
     aiFaqTitle: "🧠 O que é IA? Respostas simples",
     faqAiWhatQ: "O que é inteligência artificial?",
     faqAiWhatA: "Inteligência artificial (IA) é um sistema computacional capaz de realizar tarefas que normalmente exigem inteligência humana — como entender linguagem, reconhecer imagens, tomar decisões e aprender com a experiência. A IA moderna aprende a partir de grandes quantidades de dados. <br><small style='opacity:0.7'>Fonte: <a href='https://pt.wikipedia.org/wiki/Intelig%C3%AAncia_artificial' target='_blank' rel='noopener' style='color:var(--accent)'>Wikipédia</a></small>",

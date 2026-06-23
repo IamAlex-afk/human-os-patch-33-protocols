@@ -190,6 +190,7 @@ window.translations.th = {
       {num:32,title:"การตระหนักรู้ตนเอง: การเขียนโปรแกรมใหม่",desc:"87% ทนทุกข์จากความตาบอดไม่ตั้งใจ โหมดผู้สังเกตคือกุญแจ"},
       {num:33,title:"Meta-Code: การรีบูตขั้นสุดท้าย",desc:"ความยืดหยุ่นของระบบประสาท: 21 วันสร้างเครือข่ายใหม่ Epigenetics: ความตั้งใจเปิดยีน"}
     ],
+    protocolCategories: ["จิตใจและ AI", "ร่างกายและอารมณ์", "กลไกภายใน", "ความสัมพันธ์", "เป้าหมายและวินัย", "การเติบโตและอภิปัญญา"],
     aiFaqTitle: "🧠 AI คืออะไร? คำตอบง่ายๆ",
     faqAiWhatQ: "ปัญญาประดิษฐ์คืออะไร?",
     faqAiWhatA: "AI คือระบบคอมพิวเตอร์ที่ทำงานที่ปกติต้องการสติปัญญาของมนุษย์ AI สมัยใหม่เรียนรู้จากข้อมูลจำนวนมาก <br><small style='opacity:0.7'>ที่มา: <a href='https://en.wikipedia.org/wiki/Artificial_intelligence' target='_blank' rel='noopener' style='color:var(--accent)'>Wikipedia</a></small>",

@@ -191,6 +191,7 @@ window.translations.fr = {
       {num:32,title:"Conscience de soi",desc:"Mode observateur. Le suivi stratégique est le cœur du changement dynamique."},
       {num:33,title:"Méta-Code",desc:"Reboot final. L'intention consciente modifie l'expression biologique."}
     ],
+    protocolCategories: ["Esprit et IA", "Corps et émotions", "Mécanique intérieure", "Relations", "Objectif et discipline", "Croissance et méta-conscience"],
     aiFaqTitle: "🧠 Qu'est-ce que l'IA ? Réponses simples",
     faqAiWhatQ: "Qu'est-ce que l'intelligence artificielle ?",
     faqAiWhatA: "L'intelligence artificielle (IA) est un système informatique qui accomplit des tâches nécessitant normalement l'intelligence humaine : comprendre le langage, reconnaître des images, prendre des décisions. <br><small style='opacity:0.7'>Source: <a href='https://fr.wikipedia.org/wiki/Intelligence_artificielle' target='_blank' rel='noopener' style='color:var(--accent)'>Wikipedia</a></small>",
