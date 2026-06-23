@@ -149,3 +149,7 @@ foreach ($lang in $langs.Keys) {
 }
 
 Write-Host "Done. Generated: $($langs.Keys -join ', ')"
+
+# Localize JSON-LD structured data (WebPage/Quiz/FAQPage/BreadcrumbList) per language.
+# Done in Python for reliable UTF-8 handling.
+python localize_jsonld.py
