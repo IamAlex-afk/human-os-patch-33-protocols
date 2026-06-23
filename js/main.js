@@ -63,33 +63,58 @@
     return String(str).replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[m]);
   }
 
+  const PROTOCOL_GROUPS = [[1, 4], [5, 9], [10, 14], [15, 20], [21, 27], [28, 33]];
+
+  function makeToggle(className, label, count) {
+    const btn = document.createElement('button');
+    btn.className = className;
+    btn.setAttribute('aria-expanded', 'false');
+    btn.innerHTML = label + (count != null ? `<span class="protocol-category-count">${count}</span>` : '') + `<span class="protocol-arrow" aria-hidden="true">▼</span>`;
+    btn.addEventListener('click', () => {
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+      btn.classList.toggle('active', !open);
+    });
+    btn.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); btn.click(); }
+    });
+    return btn;
+  }
+
   function renderProtocols(list) {
     const grid = document.getElementById('protocolGrid');
     if (!grid) return;
     grid.innerHTML = '';
     const t = getT(currentLang);
     const word = (t.protocolWord || 'Protocol');
-    list.forEach(p => {
-      const item = document.createElement('div');
-      item.className = 'protocol-item';
-      const btn = document.createElement('button');
-      btn.className = 'protocol-toggle';
-      btn.setAttribute('aria-expanded', 'false');
-      btn.innerHTML = `<span class="protocol-num">${word} ${p.num}</span><span class="protocol-title">${escapeHtml(p.title)}</span><span class="protocol-arrow" aria-hidden="true">▼</span>`;
-      const body = document.createElement('div');
-      body.className = 'protocol-body';
-      body.innerHTML = `<p>${escapeHtml(p.desc)}</p>`;
-      btn.addEventListener('click', () => {
-        const open = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', open ? 'false' : 'true');
-        btn.classList.toggle('active', !open);
+    const catNames = t.protocolCategories || [];
+
+    PROTOCOL_GROUPS.forEach(([from, to], catIndex) => {
+      const items = list.filter(p => p.num >= from && p.num <= to);
+      if (!items.length) return;
+
+      const catWrap = document.createElement('div');
+      catWrap.className = 'protocol-category';
+      const catLabel = `<span class="protocol-category-title">${escapeHtml(catNames[catIndex] || `${word} ${from}–${to}`)}</span>`;
+      const catBtn = makeToggle('protocol-category-toggle', catLabel, items.length);
+      const catBody = document.createElement('div');
+      catBody.className = 'protocol-category-body';
+
+      items.forEach(p => {
+        const item = document.createElement('div');
+        item.className = 'protocol-item';
+        const btn = makeToggle('protocol-toggle', `<span class="protocol-num">${word} ${p.num}</span><span class="protocol-title">${escapeHtml(p.title)}</span>`);
+        const body = document.createElement('div');
+        body.className = 'protocol-body';
+        body.innerHTML = `<p>${escapeHtml(p.desc)}</p>`;
+        item.appendChild(btn);
+        item.appendChild(body);
+        catBody.appendChild(item);
       });
-      btn.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); btn.click(); }
-      });
-      item.appendChild(btn);
-      item.appendChild(body);
-      grid.appendChild(item);
+
+      catWrap.appendChild(catBtn);
+      catWrap.appendChild(catBody);
+      grid.appendChild(catWrap);
     });
   }
 

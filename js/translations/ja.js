@@ -203,6 +203,7 @@ window.translations.ja = {
       {num:32,title:"自己認識：観察者モード",desc:"戦略的追跡が変化の核心である。"},
       {num:33,title:"メタコード：最終再起動",desc:"意識的な意図が生物学的発現を変化させる。"}
     ],
+    protocolCategories: ["心とAI", "身体と感情", "内なる仕組み", "関係性", "目的と規律", "成長とメタ認知"],
     aiFaqTitle: "🧠 AIとは？ 簡単な答え",
     faqAiWhatQ: "人工知能とは何ですか？",
     faqAiWhatA: "人工知能（AI）は、言語の理解、画像の認識、意思決定など、通常人間の知能を必要とするタスクを実行するコンピュータシステムです。 <br><small style='opacity:0.7'>Source: <a href='https://ja.wikipedia.org/wiki/%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD' target='_blank' rel='noopener' style='color:var(--accent)'>Wikipedia</a></small>",

@@ -191,6 +191,7 @@ window.translations.de = {
       {num:32,title:"Selbstbewusstsein",desc:"Beobachtermodus. Strategische Verfolgung ist der Kern des Wandels."},
       {num:33,title:"Meta-Code",desc:"Finaler Reboot. Bewusste Absicht verändert die biologische Expression."}
     ],
+    protocolCategories: ["Geist & KI", "Körper & Emotionen", "Innere Mechanik", "Beziehungen", "Zweck & Disziplin", "Wachstum & Metabewusstsein"],
     aiFaqTitle: "🧠 Was ist KI? Einfache Antworten",
     faqAiWhatQ: "Was ist künstliche Intelligenz?",
     faqAiWhatA: "KI ist ein Computersystem, das Aufgaben ausführt, die normalerweise menschliche Intelligenz erfordern: Sprache verstehen, Bilder erkennen, lernen. <br><small style='opacity:0.7'>Quelle: <a href='https://de.wikipedia.org/wiki/K%C3%BCnstliche_Intelligenz' target='_blank' rel='noopener' style='color:var(--accent)'>Wikipedia</a></small>",

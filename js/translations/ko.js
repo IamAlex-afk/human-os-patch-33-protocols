@@ -203,6 +203,7 @@ window.translations.ko = {
       {num:32,title:"자기 인식: 재프로그래밍",desc:"87%가 무주의 맹시를 경험합니다. 관찰자 모드가 핵심입니다."},
       {num:33,title:"메타 코드: 최종 재부팅",desc:"신경가소성: 새로운 신경망을 만드는 데 21일이 걸립니다. 표현유전학: 의도가 유전자를 전환시킵니다."}
     ],
+    protocolCategories: ["마음과 AI", "몸과 감정", "내면의 메커니즘", "관계", "목적과 규율", "성장과 메타인지"],
     aiFaqTitle: "🧠 AI란 무엇인가? 쉬운 답변",
     faqAiWhatQ: "인공지능이란 무엇인가요?",
     faqAiWhatA: "인공지능(AI)은 언어 이해, 이미지 인식, 의사결정, 경험을 통한 학습처럼 보통 인간의 지능이 필요한 작업을 수행할 수 있는 컴퓨터 시스템입니다. 현대 AI는 대량의 데이터로부터 학습합니다. <br><small style='opacity:0.7'>출처: <a href='https://ko.wikipedia.org/wiki/인공지능' target='_blank' rel='noopener' style='color:var(--accent)'>위키백과</a></small>",

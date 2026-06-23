@@ -191,6 +191,7 @@ window.translations.es = {
       {num:32,title:"Autoconciencia",desc:"Modo observador. El seguimiento estratégico es el núcleo del cambio."},
       {num:33,title:"Meta-Código",desc:"Reinicio final. La intención consciente cambia la expresión biológica."}
     ],
+    protocolCategories: ["Mente e IA", "Cuerpo y emociones", "Mecánica interior", "Relaciones", "Propósito y disciplina", "Crecimiento y metaconciencia"],
     aiFaqTitle: "🧠 ¿Qué es la IA? Respuestas sencillas",
     faqAiWhatQ: "¿Qué es la inteligencia artificial?",
     faqAiWhatA: "La Inteligencia Artificial (IA) es un sistema informático que realiza tareas que normalmente requieren inteligencia humana. <br><small style='opacity:0.7'>Fuente: <a href='https://es.wikipedia.org/wiki/Inteligencia_artificial' target='_blank' rel='noopener' style='color:var(--accent)'>Wikipedia</a></small>",

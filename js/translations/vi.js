@@ -190,6 +190,7 @@ window.translations.vi = {
       {num:32,title:"Tự nhận thức: Lập trình lại",desc:"87% mắc chứng mù thị giác vô ý. Chế độ quan sát là chìa khóa."},
       {num:33,title:"Meta-Code: Khởi động lại cuối cùng",desc:"Tính dẻo thần kinh: 21 ngày tạo mạng mới. Biểu sinh học: ý định bật gen."}
     ],
+    protocolCategories: ["Tâm trí & AI", "Cơ thể & Cảm xúc", "Cơ chế nội tâm", "Quan hệ", "Mục đích & Kỷ luật", "Phát triển & Nhận thức bậc cao"],
     aiFaqTitle: "🧠 AI là gì? Câu trả lời đơn giản",
     faqAiWhatQ: "Trí tuệ nhân tạo là gì?",
     faqAiWhatA: "AI là hệ thống máy tính thực hiện các nhiệm vụ đòi hỏi trí thông minh con người. AI hiện đại học từ lượng lớn dữ liệu. <br><small style='opacity:0.7'>Nguồn: <a href='https://en.wikipedia.org/wiki/Artificial_intelligence' target='_blank' rel='noopener' style='color:var(--accent)'>Wikipedia</a></small>",
