@@ -18,6 +18,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
       - run: rm -f CLAUDE.md
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
@@ -25,3 +27,31 @@ jobs:
           path: '.'
       - id: deployment
         uses: actions/deploy-pages@v4
+      - name: Notify IndexNow (Bing/Yandex/Seznam/Naver) of all 12 language pages
+        run: |
+          CHANGED=$(git diff --name-only HEAD~1 HEAD -- index.html 'ru/index.html' 'es/index.html' 'de/index.html' 'fr/index.html' 'ja/index.html' 'vi/index.html' 'th/index.html' 'pt/index.html' 'ko/index.html' 'it/index.html' 'hi/index.html' sitemap.xml || true)
+          if [ -z "$CHANGED" ]; then
+            echo "No relevant page changes, skipping IndexNow ping."
+            exit 0
+          fi
+          curl -s -X POST "https://api.indexnow.org/IndexNow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d '{
+              "host": "iamalex-afk.github.io",
+              "key": "db1ef934887c65b2df9a80e30ed263aa",
+              "keyLocation": "https://iamalex-afk.github.io/human-os-patch-33-protocols/db1ef934887c65b2df9a80e30ed263aa.txt",
+              "urlList": [
+                "https://iamalex-afk.github.io/human-os-patch-33-protocols/",
+                "https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/",
+                "https://iamalex-afk.github.io/human-os-patch-33-protocols/es/",
+                "https://iamalex-afk.github.io/human-os-patch-33-protocols/de/",
+                "https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/",
+                "https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/",
+                "https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/",
+                "https://iamalex-afk.github.io/human-os-patch-33-protocols/th/",
+                "https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/",
+                "https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/",
+                "https://iamalex-afk.github.io/human-os-patch-33-protocols/it/",
+                "https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/"
+              ]
+            }'
