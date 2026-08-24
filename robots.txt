@@ -5,6 +5,7 @@
 
 User-agent: *
 Allow: /
+Disallow: /*?lang=
 
 # ═══ OPENAI / ChatGPT ═══
 User-agent: GPTBot
