@@ -22,6 +22,8 @@ window.translations.vi = {
     fearHint: "Trả lời theo bản năng. Không có câu trả lời đúng hay sai.",
     navAssessment: "▶ Bắt đầu bài kiểm tra",
     navAssessmentSub: "28 câu hỏi · ẩn danh · miễn phí",
+    skipLink: "Chuyển đến bài kiểm tra",
+    privacyLink: "Chính sách quyền riêng tư",
     navTracker: "📊 Theo dõi",
     navGame: "🎮 Trò chơi",
     navPoll: "🌍 Khảo sát",

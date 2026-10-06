@@ -22,6 +22,8 @@ window.translations.hi = {
     fearHint: "सहज रूप से उत्तर दें। कोई सही या गलत उत्तर नहीं हैं।",
     navAssessment: "▶ टेस्ट शुरू करें",
     navAssessmentSub: "28 सवाल · गुमनाम · मुफ़्त",
+    skipLink: "टेस्ट पर जाएँ",
+    privacyLink: "गोपनीयता नीति",
     navTracker: "📊 ट्रैकर",
     navGame: "🎮 AI गेम",
     navPoll: "🌍 वैश्विक सर्वेक्षण",

@@ -22,6 +22,8 @@ window.translations.de = {
     fearHint: "Antworte instinktiv. Es gibt keine richtigen oder falschen Antworten.",
     navAssessment: "▶ Test starten",
     navAssessmentSub: "28 Fragen · anonym · kostenlos",
+    skipLink: "Zum Test springen",
+    privacyLink: "Datenschutzerklärung",
     navTracker: "📊 Tracker",
     navGame: "🎮 KI-Spiel",
     navPoll: "🌍 Umfrage",

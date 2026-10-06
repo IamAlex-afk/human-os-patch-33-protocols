@@ -254,6 +254,8 @@
         na.appendChild(sub);
       }
     }
+    ut('skipLink', t.skipLink);
+    ut('privacyLink', t.privacyLink);
     ut('navTracker', t.navTracker);
     ut('navGame', t.navGame);
     ut('navPoll', t.navPoll);

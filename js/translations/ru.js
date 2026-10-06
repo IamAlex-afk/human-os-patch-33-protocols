@@ -22,6 +22,8 @@ window.translations.ru = {
     fearHint: "Отвечайте инстинктивно. Здесь нет правильных ответов.",
     navAssessment: "▶ Начать тест",
     navAssessmentSub: "28 вопросов · анонимно · бесплатно",
+    skipLink: "Перейти к тесту",
+    privacyLink: "Политика конфиденциальности",
     navTracker: "📊 Трекер",
     navGame: "🎮 Игра",
     navPoll: "🌍 Опрос",

@@ -22,6 +22,8 @@ window.translations.en = {
     fearHint: "Answer instinctively. There are no right or wrong answers.",
     navAssessment: "▶ Start the test",
     navAssessmentSub: "28 questions · anonymous · free",
+    skipLink: "Skip to assessment",
+    privacyLink: "Privacy Policy",
     navTracker: "📊 Tracker",
     navGame: "🎮 AI Game",
     navPoll: "🌍 Global Poll",
