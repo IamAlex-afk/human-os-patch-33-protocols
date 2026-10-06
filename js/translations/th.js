@@ -22,6 +22,8 @@ window.translations.th = {
     fearHint: "ตอบตามสัญชาตญาณ ไม่มีคำตอบถูกหรือผิด",
     navAssessment: "▶ เริ่มทำแบบทดสอบ",
     navAssessmentSub: "28 คำถาม · ไม่ระบุตัวตน · ฟรี",
+    skipLink: "ไปที่แบบทดสอบ",
+    privacyLink: "นโยบายความเป็นส่วนตัว",
     navTracker: "📊 ติดตาม",
     navGame: "🎮 เกม",
     navPoll: "🌍 โพล",

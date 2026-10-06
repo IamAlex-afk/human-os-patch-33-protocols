@@ -22,6 +22,8 @@ window.translations.it = {
     fearHint: "Rispondi istintivamente. Non ci sono risposte giuste o sbagliate.",
     navAssessment: "▶ Inizia il test",
     navAssessmentSub: "28 domande · anonimo · gratis",
+    skipLink: "Vai al test",
+    privacyLink: "Informativa sulla privacy",
     navTracker: "📊 Tracker",
     navGame: "🎮 Gioco IA",
     navPoll: "🌍 Sondaggio Globale",

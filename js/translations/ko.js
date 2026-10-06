@@ -22,6 +22,8 @@ window.translations.ko = {
     fearHint: "직감적으로 답하세요. 정답이나 오답은 없습니다.",
     navAssessment: "▶ 테스트 시작하기",
     navAssessmentSub: "28문항 · 익명 · 무료",
+    skipLink: "테스트로 이동",
+    privacyLink: "개인정보 처리방침",
     navTracker: "📊 트래커",
     navGame: "🎮 AI 게임",
     navPoll: "🌍 글로벌 투표",

@@ -22,6 +22,8 @@ window.translations.pt = {
     fearHint: "Responda por instinto. Não há respostas certas ou erradas.",
     navAssessment: "▶ Começar o teste",
     navAssessmentSub: "28 perguntas · anônimo · grátis",
+    skipLink: "Ir para o teste",
+    privacyLink: "Política de privacidade",
     navTracker: "📊 Monitor",
     navGame: "🎮 Jogo de IA",
     navPoll: "🌍 Pesquisa Global",

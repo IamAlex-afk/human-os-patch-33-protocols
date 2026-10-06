@@ -121,6 +121,7 @@ foreach ($lang in $langs.Keys) {
   # 11. Fix relative asset paths (add ../ prefix)
   $html = $html -replace 'href="css/', 'href="../css/'
   $html = $html -replace 'href="js/', 'href="../js/'
+  $html = $html -replace 'href="privacy.html"', 'href="../privacy.html"'
   $html = $html -replace 'src="js/', 'src="../js/'
   $html = $html -replace 'href="favicon\.ico"', 'href="../favicon.ico"'
   $html = $html -replace 'href="apple-touch-icon\.png"', 'href="../apple-touch-icon.png"'
