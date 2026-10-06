@@ -1,8 +1,8 @@
 window.translations = window.translations || {};
 window.translations.en = {
     langName: "English",
-    mainTitle: "Free AI Dependency Test – Understand Your AI Habits",
-    subhead: "Scientifically-based anonymous assessment of cognitive offloading, AI anxiety, and digital burnout. No signup, no data collection.",
+    mainTitle: "AI Dependency Test: How Much Do You Rely on ChatGPT?",
+    subhead: "Free, anonymous 28-question test: how much do you rely on AI and ChatGPT for thinking, emotions and work? Based on LLM-D12 and AIAS. No signup.",
     infoTitle: "📋 What this assessment measures",
     infoPara1: "This set of 28 questions helps you observe patterns in how you use AI for thinking, emotional comfort, and daily productivity. Designed for self-awareness, not clinical diagnosis. Based on the LLM-D12 dual-dimensional dependency scale, the AI Anxiety Scale (AIAS), and the AIRD framework.",
     infoPara2: "<strong>Who it's for:</strong> Anyone who wants to check whether their AI use is still intentional or becoming automatic. You'll get your personal AI Identity Profile with an archetype and percentile comparison.",

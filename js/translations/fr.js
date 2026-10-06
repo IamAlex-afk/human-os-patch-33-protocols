@@ -1,8 +1,8 @@
 window.translations = window.translations || {};
 window.translations.fr = {
     langName: "Français",
-    mainTitle: "Test gratuit de dépendance à l'IA – Comprenez vos habitudes",
-    subhead: "Évaluation anonyme basée sur la science de la décharge cognitive, de l'anxiété liée à l'IA et de l'épuisement numérique. Sans inscription, sans collecte de données.",
+    mainTitle: "Test de dépendance à l’IA et à ChatGPT, gratuit",
+    subhead: "Test anonyme de 28 questions : à quel point dépendez-vous de l’IA et de ChatGPT pour penser, ressentir et travailler ? Basé sur LLM-D12 et AIAS. Sans inscription.",
     infoTitle: "📋 Ce que mesure cette évaluation",
     infoPara1: "Cet ensemble de 28 questions vous aide à observer vos habitudes d'utilisation de l'IA. Basé sur les échelles LLM-D12, AIAS et AIRD.",
     infoPara2: "<strong>Pour qui :</strong> Toute personne souhaitant vérifier si son utilisation de l'IA est toujours intentionnelle. Vous obtiendrez votre Profil d'Identité IA.",

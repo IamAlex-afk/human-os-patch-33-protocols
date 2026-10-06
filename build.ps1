@@ -6,23 +6,23 @@ $BASE = "https://iamalex-afk.github.io/human-os-patch-33-protocols"
 
 $langs = @{
   ru = @{
-    title  = "Бесплатный тест на зависимость от ИИ"
-    desc   = "Научно-обоснованная анонимная оценка когнитивной разгрузки, ИИ-тревожности и цифрового выгорания. Без регистрации, без сбора данных. Плюс вопросы и ответы и глобальный опрос: голосуйте за или против ИИ."
+    title  = "Тест на зависимость от ИИ и ChatGPT — бесплатно"
+    desc   = "Анонимный тест из 28 вопросов: насколько вы полагаетесь на ИИ и ChatGPT в мышлении, эмоциях и работе. Основан на шкалах LLM-D12 и AIAS. Без регистрации."
     locale = "ru_RU"
   }
   es = @{
-    title  = "Test gratuito de dependencia de IA – Comprende tus hábitos"
-    desc   = "Evaluación anónima de la descarga cognitiva, ansiedad por IA y agotamiento digital. Sin registro, sin recopilación de datos. Incluye preguntas frecuentes y una encuesta global: vota a favor o en contra de la IA."
+    title  = "Test de dependencia de la IA y ChatGPT, gratis"
+    desc   = "Test anónimo de 28 preguntas: ¿cuánto dependes de la IA y de ChatGPT para pensar, sentir y trabajar? Basado en LLM-D12 y AIAS. Sin registro."
     locale = "es_ES"
   }
   de = @{
-    title  = "Kostenloser KI-Abhängigkeitstest – Verstehen Sie Ihre Gewohnheiten"
-    desc   = "Wissenschaftlich fundierte anonyme Bewertung von kognitiver Entlastung, KI-Angst und digitalem Burnout. Keine Anmeldung, keine Daten. Inklusive FAQ und einer globalen Umfrage: Stimmen Sie für oder gegen KI."
+    title  = "KI-Abhängigkeit: Selbsttest gratis (ChatGPT & Co.)"
+    desc   = "Anonymer Test mit 28 Fragen: Wie sehr verlassen Sie sich beim Denken, Fühlen und Arbeiten auf KI und ChatGPT? Basiert auf LLM-D12 und AIAS. Ohne Anmeldung."
     locale = "de_DE"
   }
   fr = @{
-    title  = "Test gratuit de dépendance à l'IA – Comprenez vos habitudes"
-    desc   = "Évaluation anonyme basée sur la science de la décharge cognitive, de l'anxiété liée à l'IA et de l'épuisement numérique. Sans inscription, sans collecte de données. Avec une FAQ et un sondage mondial : votez pour ou contre l'IA."
+    title  = "Test de dépendance à l’IA et à ChatGPT, gratuit"
+    desc   = "Test anonyme de 28 questions : à quel point dépendez-vous de l’IA et de ChatGPT pour penser, ressentir et travailler ? Basé sur LLM-D12 et AIAS. Sans inscription."
     locale = "fr_FR"
   }
   ja = @{
@@ -31,33 +31,33 @@ $langs = @{
     locale = "ja_JP"
   }
   vi = @{
-    title  = "Bài kiểm tra phụ thuộc AI miễn phí – Hiểu thói quen AI của bạn"
-    desc   = "Đánh giá ẩn danh dựa trên khoa học về giảm tải nhận thức, lo lắng AI và kiệt sức kỹ thuật số. Không đăng ký, không thu thập dữ liệu. Có cả câu hỏi thường gặp và khảo sát toàn cầu: ủng hộ hay phản đối AI."
+    title  = "Bài test mức độ phụ thuộc AI và ChatGPT miễn phí"
+    desc   = "Bài test ẩn danh gồm 28 câu hỏi: bạn dựa vào AI và ChatGPT đến mức nào khi suy nghĩ, cảm xúc và làm việc? Dựa trên thang LLM-D12 và AIAS. Không cần đăng ký."
     locale = "vi_VN"
   }
   th = @{
-    title  = "แบบทดสอบการพึ่งพา AI ฟรี – เข้าใจนิสัยของคุณ"
-    desc   = "การประเมินแบบไม่ระบุตัวตนตามหลักวิทยาศาสตร์เกี่ยวกับการถ่ายโอนงานด้านความคิด ความวิตกกังวลด้าน AI และความหมดไฟดิจิทัล ไม่ต้องสมัครสมาชิก ไม่เก็บข้อมูล มีทั้งคำถามที่พบบ่อยและแบบสำรวจทั่วโลก: โหวตสนับสนุนหรือคัดค้าน AI"
+    title  = "แบบทดสอบการพึ่งพา AI และ ChatGPT ฟรี"
+    desc   = "แบบทดสอบฟรีและไม่ระบุตัวตน 28 ข้อ: คุณพึ่งพา AI และ ChatGPT มากแค่ไหนในการคิด อารมณ์ และการทำงาน อ้างอิงมาตรวัด LLM-D12 และ AIAS ไม่ต้องสมัครสมาชิก"
     locale = "th_TH"
   }
   pt = @{
-    title  = "Teste Gratuito de Dependência de IA – Entenda Seus Hábitos com IA"
-    desc   = "Avaliação anônima com base científica sobre sobrecarga cognitiva, ansiedade por IA e esgotamento digital. Sem cadastro, sem coleta de dados. Inclui FAQ e uma sondagem global: vote a favor ou contra a IA."
+    title  = "Teste de dependência de IA e ChatGPT, grátis"
+    desc   = "Teste anônimo com 28 perguntas: quanto você depende da IA e do ChatGPT para pensar, sentir e trabalhar? Baseado em LLM-D12 e AIAS. Sem cadastro."
     locale = "pt_PT"
   }
   ko = @{
-    title  = "무료 AI 의존도 테스트 – 나의 AI 습관 이해하기"
-    desc   = "인지적 외주화, AI 불안, 디지털 탈진에 대한 과학적 기반의 익명 평가. 가입 불필요, 데이터 수집 없음. 자주 묻는 질문과 AI 찬반 투표가 가능한 글로벌 투표도 포함되어 있습니다."
+    title  = "AI·챗GPT 의존도 테스트 – 무료 자가진단"
+    desc   = "28문항 무료 익명 테스트: 생각, 감정, 업무에서 AI와 챗GPT에 얼마나 의존하고 있나요? LLM-D12와 AIAS 척도 기반. 가입 불필요."
     locale = "ko_KR"
   }
   it = @{
-    title  = "Test Gratuito sulla Dipendenza dall'IA – Comprendi le Tue Abitudini con l'IA"
-    desc   = "Valutazione anonima su base scientifica del sovraccarico cognitivo, dell'ansia da IA e dell'esaurimento digitale. Senza registrazione, senza raccolta dati. Include una FAQ e un sondaggio globale: vota a favore o contro l'IA."
+    title  = "Test di dipendenza da IA e ChatGPT, gratis"
+    desc   = "Test anonimo di 28 domande: quanto ti affidi all’IA e a ChatGPT per pensare, per le emozioni e per il lavoro? Basato su LLM-D12 e AIAS. Senza registrazione."
     locale = "it_IT"
   }
   hi = @{
-    title  = "मुफ़्त AI निर्भरता परीक्षण – अपनी AI आदतों को समझें"
-    desc   = "संज्ञानात्मक भार, AI चिंता और डिजिटल थकान का वैज्ञानिक आधार पर गुमनाम मूल्यांकन। कोई साइनअप नहीं, कोई डेटा संग्रह नहीं। इसमें अक्सर पूछे जाने वाले प्रश्न और एक ग्लोबल पोल भी है: AI के पक्ष या विरोध में वोट करें।"
+    title  = "AI और ChatGPT निर्भरता टेस्ट – मुफ़्त"
+    desc   = "28 सवालों का मुफ़्त और गुमनाम टेस्ट: सोचने, भावनाओं और काम के लिए आप AI और ChatGPT पर कितना निर्भर हैं? LLM-D12 और AIAS पर आधारित। साइन-अप की ज़रूरत नहीं।"
     locale = "hi_IN"
   }
 }

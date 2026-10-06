@@ -1,8 +1,8 @@
 window.translations = window.translations || {};
 window.translations.de = {
     langName: "Deutsch",
-    mainTitle: "Kostenloser KI-Abhängigkeitstest – Verstehen Sie Ihre Gewohnheiten",
-    subhead: "Wissenschaftlich fundierte anonyme Bewertung von kognitiver Entlastung, KI-Angst und digitalem Burnout. Keine Anmeldung, keine Daten.",
+    mainTitle: "KI-Abhängigkeit: Selbsttest gratis (ChatGPT & Co.)",
+    subhead: "Anonymer Test mit 28 Fragen: Wie sehr verlassen Sie sich beim Denken, Fühlen und Arbeiten auf KI und ChatGPT? Basiert auf LLM-D12 und AIAS. Ohne Anmeldung.",
     infoTitle: "📋 Was diese Bewertung misst",
     infoPara1: "Diese 28 Fragen helfen dir zu beobachten, wie du KI nutzt. Basierend auf LLM-D12, AIAS und AIRD.",
     infoPara2: "<strong>Für wen:</strong> Jeder, der prüfen möchte, ob die KI-Nutzung noch bewusst ist. Du erhältst dein persönliches KI-Profil.",

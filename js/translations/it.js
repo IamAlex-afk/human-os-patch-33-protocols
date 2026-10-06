@@ -1,8 +1,8 @@
 window.translations = window.translations || {};
 window.translations.it = {
     langName: "Italiano",
-    mainTitle: "Test Gratuito sulla Dipendenza dall'IA – Comprendi le Tue Abitudini con l'IA",
-    subhead: "Valutazione anonima su base scientifica del sovraccarico cognitivo, dell'ansia da IA e dell'esaurimento digitale. Senza registrazione, senza raccolta dati.",
+    mainTitle: "Test di dipendenza da IA e ChatGPT, gratis",
+    subhead: "Test anonimo di 28 domande: quanto ti affidi all’IA e a ChatGPT per pensare, per le emozioni e per il lavoro? Basato su LLM-D12 e AIAS. Senza registrazione.",
     infoTitle: "📋 Cosa misura questa valutazione",
     infoPara1: "Questo set di 28 domande ti aiuta a osservare i modelli nel modo in cui usi l'IA per pensare, per conforto emotivo e per la produttività quotidiana. Pensato per l'autoconsapevolezza, non per la diagnosi clinica. Basato sulla scala di dipendenza a doppia dimensione LLM-D12, sulla Scala di Ansia da IA (AIAS) e sul framework AIRD.",
     infoPara2: "<strong>Per chi è pensato:</strong> Chiunque voglia verificare se il proprio uso dell'IA è ancora intenzionale o sta diventando automatico. Riceverai il tuo Profilo di Identità IA personale con un archetipo e un confronto percentile.",
