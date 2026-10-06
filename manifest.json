@@ -52,7 +52,7 @@
       "name": "Take the AI Dependency Test",
       "short_name": "Test",
       "description": "Start the free anonymous assessment",
-      "url": "./?lang=en#test-section",
+      "url": "./#test-section",
       "icons": [
         {
           "src": "apple-touch-icon-192.png",

@@ -61,6 +61,8 @@ body {
   font-size: 0.92rem;
   color: var(--text);
 }
+/* display:flex above overrides the hidden attribute: without this an empty box shows for most visitors */
+.lang-suggest-banner[hidden] { display: none; }
 
 .lang-suggest-link {
   color: var(--accent);
@@ -1411,3 +1413,14 @@ img {
 @media (prefers-reduced-motion: reduce) {
   .protocol-category-body { transition: none; }
 }
+
+/* ====== Main call to action (2026-10-06): one primary button, the rest are secondary links ====== */
+nav.info-box ul { gap: 0.6rem !important; }
+nav.info-box li:has(#navAssessment) { flex-basis: 100%; display: flex; justify-content: center; }
+nav.info-box .book-link { margin-top: 0; padding: 0.5rem 1rem; font-size: 0.92rem;
+  background: transparent; color: var(--accent); border: 1px solid var(--border); }
+nav.info-box .book-link:hover, nav.info-box .book-link:focus-visible { background: var(--accent-soft); color: var(--text); transform: none; }
+nav.info-box #navAssessment { flex-direction: column; width: 100%; max-width: 26rem; padding: 1rem 1.5rem;
+  font-size: 1.2rem; background: var(--accent); color: var(--bg); border: none; box-shadow: 0 0 25px var(--accent-soft); }
+nav.info-box #navAssessment:hover, nav.info-box #navAssessment:focus-visible { background: #00ff88; color: var(--bg); transform: translateY(-2px); }
+nav.info-box #navAssessment .cta-sub { font-size: 0.82rem; font-weight: 600; opacity: 0.85; margin-top: 0.2rem; }

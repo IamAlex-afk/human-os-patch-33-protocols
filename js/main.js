@@ -245,6 +245,15 @@
       : `https://iamalex-afk.github.io/human-os-patch-33-protocols/${lang}/`;
 
     ut('navAssessment', t.navAssessment);
+    { // main call to action: label + one-line facts under it
+      const na = document.getElementById('navAssessment');
+      if (na && t.navAssessmentSub) {
+        const sub = document.createElement('span');
+        sub.className = 'cta-sub';
+        sub.textContent = t.navAssessmentSub;
+        na.appendChild(sub);
+      }
+    }
     ut('navTracker', t.navTracker);
     ut('navGame', t.navGame);
     ut('navPoll', t.navPoll);

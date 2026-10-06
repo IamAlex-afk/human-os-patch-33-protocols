@@ -8,10 +8,11 @@
 
 ## Architecture
 
-Mind-OS is a browser-only static site on GitHub Pages.
+Mind-OS is a static site on GitHub Pages; the assessment runs entirely in the browser.
 
-- No server — no backend to attack
-- No database — no data to steal
+- The assessment, tracker, game and protocols have no server and no database
+- The one exception is the optional global poll: a minimal Google Apps Script backend that stores only
+  3 aggregate counters (For / Neutral / Against) — no IP, email, timestamp or per-vote record
 - No user accounts — no credentials to compromise
 - No cookies — no session hijacking
 - All data stored in the user's own browser (localStorage)
