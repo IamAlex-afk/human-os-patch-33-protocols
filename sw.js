@@ -1,5 +1,5 @@
 /* Mind-OS Service Worker v2026.1 — офлайн + PWA установка */
-const CACHE = 'mindos-2026-15';
+const CACHE = 'mindos-2026-16';
 const PRECACHE = ['./','./index.html','./css/style.css','./css/fonts.css',
   './css/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2',
   './css/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2',
@@ -18,13 +18,21 @@ self.addEventListener('install', e => {
 self.addEventListener('activate', e => {
   e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));
 });
+// Pages: network first (returning visitors always get the latest page; cache only when offline).
+// Other files: cache first with a background refresh (fast; the next visit gets the updated file).
+function store(req, res){
+  if(res&&res.status===200&&res.type==='basic'){const c=res.clone();caches.open(CACHE).then(ca=>ca.put(req,c));}
+  return res;
+}
 self.addEventListener('fetch', e => {
   if(e.request.method!=='GET'||!e.request.url.startsWith(self.location.origin))return;
+  if(e.request.mode==='navigate'){
+    e.respondWith(fetch(e.request).then(res=>store(e.request,res))
+      .catch(()=>caches.match(e.request).then(c=>c||caches.match('./index.html'))));
+    return;
+  }
   e.respondWith(caches.match(e.request).then(cached=>{
-    if(cached)return cached;
-    return fetch(e.request).then(res=>{
-      if(res&&res.status===200&&res.type==='basic'){const c=res.clone();caches.open(CACHE).then(ca=>ca.put(e.request,c));}
-      return res;
-    }).catch(()=>caches.match('./index.html'));
+    const net=fetch(e.request).then(res=>store(e.request,res)).catch(()=>cached);
+    return cached||net;
   }));
 });
