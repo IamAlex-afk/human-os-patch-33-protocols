@@ -170,10 +170,48 @@ def make(full, lang, page):
     if notes:
         k = out.index('</section>', out.index('<main')) + len('</section>')
         out = out[:k] + chr(10) + chr(10) + chr(32) * 2 + notes + out[k:]
+    out = site_nav(out, page)
+    if page == 'index.html':                       # after the result block, before the questions about the test
+        k = out.rindex('<section', 0, out.index('id="faq-section"'))
+        out = out[:k] + poll_teaser(full) + '\n\n  ' + out[k:]
     for js in DROP_JS[page]:
         out, n = re.subn(r'<script src="(?:\.\./)?js/' + re.escape(js) + r'" defer></script>\r?\n?', '', out)
         assert n == 1, (page, js, n)
     return out
+
+
+def site_nav(out, page):
+    """Compact site header on every page: brand + links to the pages. The big 'start the test' button stays on the home page only."""
+    m = re.search(r'<nav aria-label="Table of Contents".*?</nav>', out, re.S)
+    old = m.group(0)
+    links = {}
+    for i in ('navAssessment', 'navGame', 'navPoll', 'navFaq', 'navProtocols'):
+        a = re.search(r'<a\b[^>]*\bid="' + i + r'"[^>]*>.*?</a>', old, re.S).group(0)
+        links[i] = a
+    def slim(a, cls):
+        a = re.sub(r'\s(?:class|style)="[^"]*"', '', a, count=0)
+        return a.replace('<a ', f'<a class="{cls}" ', 1)
+    items = [] if page == 'index.html' else [slim(links['navAssessment'], 'site-link site-link-cta')]
+    items += [slim(links[i], 'site-link') for i in ('navGame', 'navPoll', 'navFaq', 'navProtocols')]
+    nav = ('<nav class="site-nav" aria-label="Mind-OS">\n    <a class="site-brand" href="./">Mind-OS</a>\n    <div class="site-links">\n      '
+           + '\n      '.join(items) + '\n    </div>\n  </nav>')
+    if page == 'index.html':                     # the card keeps only the main call to action
+        card = old
+        for i in ('navGame', 'navPoll', 'navFaq', 'navProtocols'):
+            card = re.sub(r'\s*<li>' + re.escape(links[i]) + r'</li>', '', card)
+        out = out.replace(old, card)
+    else:
+        out = re.sub(re.escape(old) + r'\s*', '', out)
+    k = out.index('>', out.index('<main')) + 1
+    return out[:k] + '\n  ' + nav + out[k:]
+
+
+def poll_teaser(full):
+    """Home page: a visible invitation to the global poll, built from the poll's own heading, intro and button label."""
+    g = lambda i: re.search(r'<[a-z0-9]+\b[^>]*\bid="' + i + r'"[^>]*>(.*?)</[a-z0-9]+>', full, re.S).group(1).strip()
+    return ('<section class="poll-teaser" id="poll-teaser">\n    <div>\n'
+            f'      <h2>{g("pollTitle")}</h2>\n      <p>{g("pollDesc")}</p>\n    </div>\n'
+            f'    <a class="poll-teaser-btn" href="poll.html">{g("submitPoll")} →</a>\n  </section>')
 
 
 def sitemap():
