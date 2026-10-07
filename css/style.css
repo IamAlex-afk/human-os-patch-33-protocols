@@ -997,7 +997,7 @@ img {
    ЯПОНСКИЙ ШРИФТ — системные шрифты устройства (ничего не грузится с чужих серверов)
    ════════════════════════════════════════════════ */
 :lang(ja), [lang="ja"] {
-  font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Noto Sans CJK JP', 'Yu Gothic', 'Meiryo', system-ui, sans-serif;
+  font-family: 'Inter', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Noto Sans CJK JP', 'Yu Gothic', 'Meiryo', system-ui, sans-serif;
 }
 
 /* ════════════════════════════════════════════════
@@ -1432,3 +1432,40 @@ nav.info-box #navAssessment .cta-sub { font-size: 0.82rem; font-weight: 600; opa
 .research-notes li{margin-bottom:.9rem;line-height:1.6;}
 .research-notes a{color:var(--accent);text-decoration:underline;word-break:break-word;font-size:.9em;}
 .research-note{color:var(--text-dim);font-size:.95rem;margin:0;}
+
+/* ====== Site header (2026-10-07): brand + links to the standalone pages; room on the right for the fixed language button ====== */
+.site-nav { display: flex; align-items: center; gap: 0.9rem; padding: 0.55rem 5.5rem 0.55rem 0; margin-bottom: 1.4rem; min-height: 3rem; }
+.site-brand { font-weight: 800; font-size: 1.1rem; color: var(--text); text-decoration: none; white-space: nowrap; letter-spacing: 0.01em; }
+.site-brand:hover, .site-brand:focus-visible { color: var(--accent); }
+.site-links { display: flex; gap: 0.4rem; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; padding: 0.15rem 0; }
+.site-links::-webkit-scrollbar { display: none; }
+.site-link { white-space: nowrap; padding: 0.4rem 0.85rem; border-radius: 2rem; border: 1px solid var(--border); color: var(--accent);
+  text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+.site-link:hover, .site-link:focus-visible { background: var(--accent-soft); color: var(--text); }
+.site-link[aria-current="page"] { background: var(--accent-soft); color: var(--text); border-color: var(--accent); }
+.site-link-cta { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+.site-link-cta:hover, .site-link-cta:focus-visible { background: #00ff88; color: var(--bg); }
+.site-link .cta-sub { display: none; }
+@media (max-width: 600px) {
+  .site-nav { padding-right: 4.6rem; gap: 0.6rem; margin-bottom: 1rem; }
+  .site-link { padding: 0.35rem 0.7rem; font-size: 0.85rem; }
+}
+@media print { .site-nav { display: none; } }
+
+/* ====== Invitation to the global poll on the home page ====== */
+.poll-teaser { display: flex; align-items: center; justify-content: space-between; gap: 1.25rem; flex-wrap: wrap;
+  background: var(--surface); border: 1px solid var(--accent); border-radius: 1.5rem; padding: 1.5rem 1.75rem; margin: 2.2rem 0; }
+.poll-teaser h2 { margin: 0 0 0.35rem; font-size: 1.35rem; }
+.poll-teaser p { margin: 0; color: var(--text-dim); }
+.poll-teaser-btn { white-space: nowrap; padding: 0.8rem 1.5rem; border-radius: 3rem; background: var(--accent); color: var(--bg);
+  font-weight: 700; text-decoration: none; }
+.poll-teaser-btn:hover, .poll-teaser-btn:focus-visible { background: #00ff88; transform: translateY(-2px); }
+@media (max-width: 600px) { .poll-teaser { padding: 1.25rem; } .poll-teaser-btn { width: 100%; text-align: center; } }
+@media print { .poll-teaser { display: none; } }
+
+/* ====== Standalone poll and game pages (2026-10-07): no empty band under the header, larger main controls ====== */
+.lang-bar[hidden] { display: none; }
+#submitPoll { background: var(--accent); color: var(--bg); font-size: 1.05rem; padding: 0.9rem 2.4rem; }
+#submitPoll:hover, #submitPoll:focus-visible { background: #00ff88; color: var(--bg); }
+#gameQuestion { font-size: 1.25rem !important; }
+#gameBtnHuman, #gameBtnAI { font-size: 1.1rem; padding: 0.9rem 2rem; flex: 1 1 9rem; max-width: 18rem; }
