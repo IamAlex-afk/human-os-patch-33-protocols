@@ -343,7 +343,7 @@
     ut('ecoLink7', t.ecoLinkORCID);
 
     ut('faqTitle', t.faqTitle);
-    for (let i = 1; i <= 8; i++) {
+    for (let i = 1; i <= 9; i++) {
       ut(`faqQ${i}`, t[`faqQ${i}`] || '');
       uh(`faqA${i}`, t[`faqA${i}`] || '');
     }
@@ -397,10 +397,12 @@
         document.querySelectorAll('.faq-question').forEach(el => {
           el.setAttribute('aria-expanded', 'false');
           el.classList.remove('active');
+          el.closest('.faq-item')?.classList.remove('open');
         });
         if (!active) {
           q.setAttribute('aria-expanded', 'true');
           q.classList.add('active');
+          q.closest('.faq-item')?.classList.add('open');   // the answer is shown by .faq-item.open (the button sits inside a heading)
         }
       });
       q.addEventListener('keydown', (e) => {

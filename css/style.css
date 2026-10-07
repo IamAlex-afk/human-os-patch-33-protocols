@@ -554,6 +554,9 @@ input[type="radio"]:focus-visible {
 }
 
 /* Совместимость: JS добавляет класс active, атрибут aria-expanded на будущее */
+/* the question button sits inside <h3 class="faq-h"> (2026-10-07), so the answer is the heading's sibling */
+.faq-h { margin: 0; font-size: inherit; font-weight: inherit; }
+.faq-item.open > .faq-answer,
 .faq-question.active + .faq-answer,
 .faq-question[aria-expanded="true"] + .faq-answer {
   display: block;
@@ -1485,3 +1488,5 @@ nav.info-box #navAssessment .cta-sub { font-size: 0.82rem; font-weight: 600; opa
 
 /* Protocols page: once the categories are rendered (collapsed), do not keep the tall placeholder under them */
 .protocol-grid:has(.protocol-category) { min-height: 0; }
+
+.faq-answer a { color: var(--accent); text-decoration: underline; }
