@@ -126,7 +126,7 @@ window.translations.it = {
     faqQ1: "Cos'è il sovraccarico cognitivo?",
     faqA1: "Il sovraccarico cognitivo è il processo di affidarsi a strumenti esterni (come l'IA) per svolgere compiti mentali che altrimenti faresti da solo, il che può debolire la memoria e il pensiero indipendente nel tempo.",
     faqQ2: "Come provoca l'IA la 'nebbia mentale'?",
-    faqA2: "Quando esternalizzi costantemente il pensiero all'IA, le vie neurali del cervello per la risoluzione dei problemi diventano meno attive, portando a una lentezza mentale.",
+    faqA2: "La “nebbia mentale” non è una diagnosi medica, e la scienza non ha stabilito che sia l’IA a causarla. Ciò che esiste finora: in un esperimento del 2025, le persone che scrivevano saggi con un assistente IA mostravano la connettività cerebrale più debole di tre gruppi. È un preprint con 54 partecipanti non sottoposto a revisione paritaria. Se dopo un lungo ricorso all’IA il pensiero ti sembra rallentato, è un motivo per svolgere alcune attività senza di essa. <br><small style='opacity:0.7'>Fonte: <a href='https://arxiv.org/abs/2506.08872' target='_blank' rel='noopener' style='color:var(--accent)'>Kosmyna et al., arXiv:2506.08872</a></small>",
     faqQ3: "Cos'è l'ansia da IA (AIAS)?",
     faqA3: "Una forma moderna di stress tecnologico caratterizzata dalla paura di perdere il lavoro, ansia algoritmica e preoccupazione ossessiva che l'IA sostituisca l'identità umana.",
     faqQ4: "Cos'è la Disfunzione da Sostituzione IA (AIRD)?",

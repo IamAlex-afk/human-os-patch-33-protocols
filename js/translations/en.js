@@ -126,7 +126,7 @@ window.translations.en = {
     faqQ1: "What is cognitive offloading?",
     faqA1: "Cognitive offloading is the process of relying on external tools (like AI) to perform mental tasks that you would otherwise do yourself, which can weaken memory and independent thinking over time.",
     faqQ2: "How does AI cause 'brain fog'?",
-    faqA2: "When you consistently outsource thinking to AI, your brain's neural pathways for problem-solving become less active, leading to mental sluggishness.",
+    faqA2: "“Brain fog” is not a medical diagnosis, and science has not established that AI causes it. What there is so far: in a 2025 experiment, people who wrote essays with an AI assistant showed the weakest brain connectivity of three groups. That is a preprint with 54 participants and has not been peer-reviewed. If your thinking feels sluggish after leaning on AI for a long time, that is a reason to do some tasks without it. <br><small style='opacity:0.7'>Source: <a href='https://arxiv.org/abs/2506.08872' target='_blank' rel='noopener' style='color:var(--accent)'>Kosmyna et al., arXiv:2506.08872</a></small>",
     faqQ3: "What is AI anxiety (AIAS)?",
     faqA3: "A modern form of technostress characterized by fear of job loss, algorithmic anxiety, and obsessive concern about AI replacing human identity.",
     faqQ4: "What is AI Replacement Dysfunction (AIRD)?",

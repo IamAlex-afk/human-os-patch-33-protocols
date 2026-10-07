@@ -126,7 +126,7 @@ window.translations.pt = {
     faqQ1: "O que é sobrecarga cognitiva?",
     faqA1: "Sobrecarga cognitiva é o processo de depender de ferramentas externas (como a IA) para realizar tarefas mentais que você faria por conta própria, o que pode debilitar a memória e o pensamento independente ao longo do tempo.",
     faqQ2: "Como a IA causa 'névoa mental'?",
-    faqA2: "Quando você terceiriza o pensamento para a IA de forma consistente, as vias neurais do seu cérebro para resolução de problemas ficam menos ativas, levando à lentidão mental.",
+    faqA2: "“Névoa mental” não é um diagnóstico médico, e a ciência não estabeleceu que a IA a cause. O que existe até agora: em um experimento de 2025, pessoas que escreveram redações com um assistente de IA mostraram a conectividade cerebral mais fraca de três grupos. É um preprint com 54 participantes que não passou por revisão por pares. Se o seu raciocínio parece lento depois de se apoiar muito tempo na IA, esse é um motivo para fazer algumas tarefas sem ela. <br><small style='opacity:0.7'>Fonte: <a href='https://arxiv.org/abs/2506.08872' target='_blank' rel='noopener' style='color:var(--accent)'>Kosmyna et al., arXiv:2506.08872</a></small>",
     faqQ3: "O que é ansiedade por IA (AIAS)?",
     faqA3: "Uma forma moderna de tecnoestresse caracterizada pelo medo de perder o emprego, ansiedade algorítmica e preocupação obsessiva com a IA substituindo a identidade humana.",
     faqQ4: "O que é Disfunção de Substituição por IA (AIRD)?",
