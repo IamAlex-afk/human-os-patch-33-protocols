@@ -191,12 +191,12 @@
       }
     }
     if (!document.querySelector('[data-i18n="pollPrivacy"]')) {
-      const pollResults = document.getElementById('pollResults');
-      if (pollResults) {
+      const pollSubmit = document.getElementById('submitPoll');   // shown before voting, right under the button
+      if (pollSubmit) {
         const el = document.createElement('p');
         el.setAttribute('data-i18n', 'pollPrivacy');
         el.style.cssText = 'font-size:0.8rem;color:var(--text-dim);margin-top:0.8rem;opacity:0.75;';
-        pollResults.appendChild(el);
+        pollSubmit.insertAdjacentElement('afterend', el);
       }
     }
   }
@@ -312,8 +312,8 @@
     const pollPrivacyEl = document.querySelector('[data-i18n="pollPrivacy"]');
     if (pollPrivacyEl) {
       const fallback = lang === 'ru'
-        ? 'Данные хранятся только в вашем браузере и никуда не передаются.'
-        : 'Data is stored locally in your browser and is not transmitted anywhere.';
+        ? 'При голосовании на сервер Google Apps Script отправляется только ваш выбор; сервер хранит три общих счётчика и не хранит IP-адрес, email и время голоса. Пока вы не нажали кнопку, ничего не отправляется.'
+        : 'Voting sends only your choice to a Google Apps Script server, which keeps three totals — no IP address, email or time of the vote is stored. Nothing is sent unless you press the button.';
       pollPrivacyEl.textContent = t.pollPrivacy || fallback;
     }
 

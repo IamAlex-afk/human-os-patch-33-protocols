@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>गोपनीयता नीति — Mind-OS</title>
+<meta name="description" content="Mind-OS कोई निजी डेटा इकट्ठा नहीं करता। न कुकी, न ट्रैकिंग; टेस्ट आपके ब्राउज़र में चलता है। सरल भाषा में पूरी गोपनीयता नीति।">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/privacy.html">
+<link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/privacy.html">
+<link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/privacy.html">
+<link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/privacy.html">
+<link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/privacy.html">
+<link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/privacy.html">
+<link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/privacy.html">
+<link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/privacy.html">
+<link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/privacy.html">
+<link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/privacy.html">
+<link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/privacy.html">
+<link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/privacy.html">
+<link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/privacy.html">
+<style>
+  :root { --bg:#0b100d; --surface:#131e18; --accent:#00e57a; --text:#ecf7f0; --text-dim:#b4cec0; --border:#1f3027; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--text); font-family:'Inter',system-ui,sans-serif; line-height:1.7;
+    padding:2rem 1.5rem; max-width:760px; margin:0 auto; }
+  a { color:var(--accent); }
+  h1 { font-size:2rem; margin-bottom:0.5rem; }
+  .sub { color:var(--text-dim); margin-bottom:2.5rem; }
+  h2 { color:var(--accent); font-size:1.25rem; margin:2rem 0 0.75rem; }
+  p, li { color:var(--text); margin-bottom:0.75rem; }
+  .highlight { background:rgba(0,229,122,0.1); border:1px solid var(--accent); border-radius:1rem; padding:1.5rem; margin:1.5rem 0; }
+  .highlight strong { color:var(--accent); }
+  .back { display:inline-block; margin-top:2.5rem; padding:0.75rem 2rem; background:var(--accent); color:#0b100d;
+    border-radius:3rem; text-decoration:none; font-weight:700; }
+  footer { margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--border); color:var(--text-dim); font-size:0.85rem; }
+  code { background:var(--surface); padding:0.15rem 0.45rem; border-radius:0.35rem; font-size:0.9em; color:var(--accent); }
+  .ref { color:var(--text-dim); font-size:0.9rem; }
+</style>
+</head>
+<body>
+  <h1>गोपनीयता नीति</h1>
+  <p class="sub">अंतिम अपडेट: 2026-10-07 · सरल भाषा में, क़ानूनी शब्दजाल के बिना।</p>
+
+  <div class="highlight">
+    <strong>संक्षेप में:</strong> टेस्ट, ट्रैकर और गेम कुछ भी इकट्ठा नहीं करते — न सर्वर, न डेटाबेस, न एनालिटिक्स, न कुकी, न ट्रैकिंग। वहाँ आप जो भी करते हैं वह आपके ब्राउज़र में ही रहता है और आपके डिवाइस से बाहर नहीं जाता। एकमात्र अपवाद वैकल्पिक ग्लोबल पोल है: अगर आप वोट देना चुनते हैं, तो आपकी एक पसंद एक छोटे सर्वर को भेजी जाती है जो केवल 3 कुल गिनतियाँ (पक्ष में / तटस्थ / विरोध में) रखता है — न IP, न ईमेल, न समय, न हर वोट का रिकॉर्ड।
+  </div>
+
+  <h2>हम कौन-सा डेटा इकट्ठा करते हैं</h2>
+  <p><strong>कोई नहीं, सिवाय 3 संख्याओं के अगर आप पोल में वोट देते हैं।</strong> Mind-OS एक स्टैटिक वेबसाइट है: टेस्ट, ट्रैकर और गेम का कोई सर्वर नहीं है। सर्वर केवल वैकल्पिक ग्लोबल पोल का है — नीचे देखें।</p>
+
+  <h2>आपके जवाब कहाँ जाते हैं</h2>
+  <p>आपके टेस्ट के जवाब, ट्रैकर की एंट्री और चुनी हुई भाषा केवल आपके ब्राउज़र के <code>localStorage</code> में सेव होती हैं — यह आपके अपने डिवाइस पर एक निजी स्टोरेज है। इसे कहीं नहीं भेजा जाता। आप इसे कभी भी ब्राउज़र डेटा साफ़ करके या साइट के रीसेट बटन से मिटा सकते हैं।</p>
+
+  <h2>कुकी</h2>
+  <p>हम किसी भी तरह की कुकी इस्तेमाल नहीं करते — न एनालिटिक्स के लिए, न विज्ञापन के लिए, न सेशन के लिए। सहमति देने जैसा कुछ नहीं है, क्योंकि कुछ सेट ही नहीं होता।</p>
+
+  <h2>ट्रैकिंग और एनालिटिक्स</h2>
+  <p>कोई ट्रैकिंग पिक्सेल, Google Analytics, Facebook Pixel, फ़िंगरप्रिंटिंग या थर्ड-पार्टी ट्रैकर नहीं है। हमें नहीं पता कि आप कौन हैं या आप साइट पर आए थे।</p>
+
+  <h2>एकमात्र अपवाद: ग्लोबल पोल</h2>
+  <p>“वैश्विक AI भावना सर्वेक्षण” पूरी तरह वैकल्पिक है — टेस्ट इसके बिना भी पूरा काम करता है। अगर आप वोट देते हैं, तो आपकी एक पसंद (पक्ष में / तटस्थ / विरोध में) एक छोटे सर्वर (Google Apps Script) को भेजी जाती है जो केवल 3 कुल संख्याएँ रखता है, हर विकल्प की एक। यह आपका IP पता, ईमेल, समय या हर वोट का रिकॉर्ड नहीं रखता — वोट को आपसे जोड़ने का कोई तरीका नहीं है। सर्वर केवल प्रतिशत लौटाता है, वोटों की संख्या नहीं। सर्वर जो प्रतिशत लौटाता है वे आपके ब्राउज़र में सेव हो जाते हैं; अगली बार पेज उन्हें वहीं से दिखाता है और किसी सर्वर से संपर्क नहीं करता।</p>
+
+  <h2>थर्ड-पार्टी सेवाएँ</h2>
+  <p>फ़ॉन्ट इसी साइट से दिए जाते हैं या आपके डिवाइस से लिए जाते हैं; कोई भी पेज Google Fonts से कुछ लोड नहीं करता। अगर आप पोल में वोट देते हैं, तो आपका वोट ऊपर बताए अनुसार Google Apps Script सर्वर को जाता है। साइट GitHub Pages पर होस्ट है। इनमें से हर मामले में आपका ब्राउज़र उस कंपनी के सर्वर से जुड़ता है, जो किसी भी वेब रिक्वेस्ट की तरह आपका IP पता देखते हैं; हमें वह जानकारी नहीं मिलती और उनके लॉग तक हमारी पहुँच नहीं है। किसी और थर्ड-पार्टी सेवा से संपर्क नहीं किया जाता।</p>
+
+  <h2>बच्चे</h2>
+  <p>Mind-OS में कोई हानिकारक सामग्री नहीं है और यह डेटा इकट्ठा नहीं करता, इसलिए नाबालिगों सहित किसी के लिए भी डेटा का जोखिम नहीं है। यह आत्म-चिंतन का एक शैक्षिक टूल है, चिकित्सा सलाह या निदान नहीं।</p>
+
+  <h2>आपके अधिकार</h2>
+  <p>चूँकि हमारे पास आपका कोई डेटा नहीं है, इसलिए हमारी ओर से माँगने, एक्सपोर्ट करने या मिटाने के लिए कुछ नहीं है। पूरा नियंत्रण आपके पास है: आपका डेटा केवल आपके डिवाइस पर रहता है और केवल आप ही उसे देख या हटा सकते हैं।</p>
+
+  <h2>ख़ुद कैसे जाँचें</h2>
+  <p>अपने ब्राउज़र के डेवलपर टूल (F12) → Network टैब खोलें और साइट इस्तेमाल करें। टेस्ट देने, ट्रैकर चलाने या गेम खेलने पर कहीं कोई रिक्वेस्ट नहीं जाती — सारी प्रोसेसिंग आपके ब्राउज़र में चल रहे JavaScript में होती है। किसी दूसरे सर्वर को एकमात्र रिक्वेस्ट तब दिखती है जब आप “अपना वोट सबमिट करें” दबाते हैं। सोर्स कोड खुले तौर पर देखा जा सकता है।</p>
+
+  <h2>संपर्क</h2>
+  <p>सवाल हैं? एक issue खोलें: <a href="https://github.com/IamAlex-afk/human-os-patch-33-protocols/issues" target="_blank" rel="noopener">GitHub Issues</a>।</p>
+
+  <p class="ref">इस पाठ का अंग्रेज़ी संस्करण ही संदर्भ माना जाएगा। <a href="https://iamalex-afk.github.io/human-os-patch-33-protocols/privacy.html" hreflang="en">English</a></p>
+
+  <a class="back" href="./">← Mind-OS पर वापस जाएँ</a>
+
+  <footer>
+    Mind-OS — AI निर्भरता सेल्फ़-टेस्ट · निर्माता: Aleksei Sergeevich Bitkin · <a href="https://orcid.org/0009-0002-7986-3812" target="_blank" rel="noopener">ORCID</a>
+  </footer>
+</body>
+</html>

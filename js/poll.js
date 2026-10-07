@@ -1,6 +1,6 @@
 /* ====== Mind-OS Global AI Sentiment Poll ====== */
-/* Real-time results via Google Apps Script when POLL_API is set.
-   Falls back to local simulation if API is unavailable or not configured. */
+/* The vote is sent to a Google Apps Script backend only when the visitor presses the vote button;
+   the backend answers with the current percentages, which are then kept in this browser. */
 
 const Poll = (function() {
   const { STORAGE_KEYS } = CONFIG;
@@ -10,14 +10,10 @@ const Poll = (function() {
 
   function setLang(lang) { currentLang = lang; }
 
+  /* Results stored in this browser by the last real answer of the backend (set when a vote is sent).
+     Never simulated: without real numbers the bars stay empty. */
   function getLocalFallback() {
-    if (!storage.get(STORAGE_KEYS.POLL_BASE)) {
-      const f = Math.floor(Math.random() * 30) + 45; // 45–75
-      const n = Math.floor(Math.random() * 20) + 15; // 15–35
-      const a = 100 - f - n;
-      storage.set(STORAGE_KEYS.POLL_BASE, { forPct: f, neutralPct: n, againstPct: a });
-    }
-    return storage.get(STORAGE_KEYS.POLL_BASE);
+    return storage.get(STORAGE_KEYS.POLL_BASE) || null;
   }
 
   function normalizeLegacy(data) {
@@ -30,6 +26,11 @@ const Poll = (function() {
   }
 
   function renderBars(rawData) {
+    if (!rawData) {            // no real numbers yet (e.g. the vote request failed): show no bars rather than invented ones
+      const empty = document.getElementById('pollBars');
+      if (empty) empty.innerHTML = '';
+      return;
+    }
     const data = normalizeLegacy(rawData);
     const t = getT(currentLang);
     const items = [
@@ -74,16 +75,11 @@ const Poll = (function() {
     renderBars(data);
   }
 
+  /* Returning visitor who has voted: show the numbers saved in this browser. No network request here —
+     the only request this file makes is the vote itself, in submit(). */
   function syncUI() {
     if (!storage.get(STORAGE_KEYS.POLL_VOTED)) return;
-    if (POLL_API) {
-      fetch(POLL_API)
-        .then(r => r.json())
-        .then(data => { storage.set(STORAGE_KEYS.POLL_BASE, data); showResults(data); })
-        .catch(() => showResults(getLocalFallback()));
-    } else {
-      showResults(getLocalFallback());
-    }
+    showResults(getLocalFallback());
   }
 
   function submit() {

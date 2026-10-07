@@ -994,10 +994,10 @@ img {
 }
 
 /* ════════════════════════════════════════════════
-   ЯПОНСКИЙ ШРИФТ — Noto Sans JP (Inter не имеет kanji)
+   ЯПОНСКИЙ ШРИФТ — системные шрифты устройства (ничего не грузится с чужих серверов)
    ════════════════════════════════════════════════ */
 :lang(ja), [lang="ja"] {
-  font-family: 'Noto Sans JP', 'Inter', system-ui, sans-serif;
+  font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Noto Sans CJK JP', 'Yu Gothic', 'Meiryo', system-ui, sans-serif;
 }
 
 /* ════════════════════════════════════════════════

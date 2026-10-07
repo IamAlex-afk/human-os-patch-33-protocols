@@ -66,7 +66,7 @@ window.translations.ja = {
     pollTotalVotes: "票（世界全体）",
     pollInviteText: "📢 友達を投票に誘う",
     pollInviteShareText: "AIについてどう思いますか？Mind-OSの世界規模の匿名アンケートに投票してください：",
-    pollPrivacy: "データはブラウザにローカルに保存され、どこにも送信されません。",
+    pollPrivacy: "投票すると、選択内容だけがGoogle Apps Scriptのサーバーに送信されます。サーバーは3つの合計のみを保存し、IPアドレス・メール・投票時刻は保存しません。ボタンを押さない限り、何も送信されません。",
     ctaText: "構造化されたガイダンスが必要ですか？「33プロトコル」の本には、主権を取り戻すための毎日のマイクロエクササイズが用意されています。",
     ctaBarText: "33のプロトコルを探求する",
     footerText: "© Mind-OS – Aleksei Sergeevich Bitkinによる作成。独立した研究プロジェクト。",
