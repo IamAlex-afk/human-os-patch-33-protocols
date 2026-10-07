@@ -22,7 +22,7 @@ def ids_from_main():
     body = s[s.index("function applyLanguage"):]
     body = body[:body.index("if (window.Quiz) Quiz.setLang")]
     ids = re.findall(r"\b(?:ut|uh)\('([A-Za-z0-9_]+)'", body)
-    for tpl, a, b in [("axis{}Title", 1, 3), ("axis{}Desc", 1, 3), ("axis{}Hint", 1, 3), ("faqQ{}", 1, 8), ("faqA{}", 1, 8),
+    for tpl, a, b in [("axis{}Title", 1, 3), ("axis{}Desc", 1, 3), ("axis{}Hint", 1, 3), ("faqQ{}", 1, 9), ("faqA{}", 1, 9),
                       ("faqSlangQ{}", 1, 5), ("faqSlangA{}", 1, 5)]:
         ids += [tpl.format(i) for i in range(a, b + 1)]
     # containers rebuilt at runtime: protocol list, first question of each quiz wizard, tracker summary, game question

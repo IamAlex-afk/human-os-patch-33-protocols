@@ -7,7 +7,7 @@ FAQ_KEY_PAIRS = [
     ("faqAiWhatQ", "faqAiWhatA"), ("faqAiHistoryQ", "faqAiHistoryA"), ("faqAiHowWorkQ", "faqAiHowWorkA"),
     ("faqAiTypesQ", "faqAiTypesA"), ("faqAiDangerQ", "faqAiDangerA"),
     ("faqQ1", "faqA1"), ("faqQ2", "faqA2"), ("faqQ3", "faqA3"), ("faqQ4", "faqA4"),
-    ("faqQ5", "faqA5"), ("faqQ6", "faqA6"), ("faqQ7", "faqA7"), ("faqQ8", "faqA8"),
+    ("faqQ5", "faqA5"), ("faqQ6", "faqA6"), ("faqQ7", "faqA7"), ("faqQ8", "faqA8"), ("faqQ9", "faqA9"),
     ("faqSlangQ1", "faqSlangA1"), ("faqSlangQ2", "faqSlangA2"), ("faqSlangQ3", "faqSlangA3"),
     ("faqSlangQ4", "faqSlangA4"), ("faqSlangQ5", "faqSlangA5"),
 ]

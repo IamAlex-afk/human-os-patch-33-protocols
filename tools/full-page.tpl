@@ -234,6 +234,14 @@
         },
         {
           "@type": "Question",
+          "name": "Is this test a medical diagnosis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. It is a self-reflection tool, not a medical or psychological diagnosis. The score thresholds come from how answers are spread across the scale, not from validated population norms. If your use of AI worries you or gets in the way of daily life, talk to a qualified professional."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "Is ChatGPT making me stupid?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -478,83 +486,87 @@
   <section class="ai-faq-section" id="ai-faq-section">
     <h2 id="aiFaqTitle">🧠 What is AI? Simple answers</h2>
     <div class="faq-item">
-      <button class="faq-question" aria-expanded="false" aria-controls="faqAiWhatA"><span id="faqAiWhatQ">What is artificial intelligence?</span><span class="faq-arrow">▼</span></button>
+      <h3 class="faq-h"><button class="faq-question" aria-expanded="false" aria-controls="faqAiWhatA"><span id="faqAiWhatQ">What is artificial intelligence?</span><span class="faq-arrow">▼</span></button></h3>
       <div class="faq-answer" id="faqAiWhatA">Artificial intelligence (AI) is a computer system that can do tasks that normally require human intelligence — like understanding language, recognizing images, making decisions, and learning from experience. Modern AI learns from large amounts of data. <br /><small style="opacity:0.7">Source: <a href="https://en.wikipedia.org/wiki/Artificial_intelligence" target="_blank" rel="noopener" style="color:var(--accent)">Wikipedia</a></small></div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" aria-expanded="false" aria-controls="faqAiHistoryA"><span id="faqAiHistoryQ">When did AI appear?</span><span class="faq-arrow">▼</span></button>
+      <h3 class="faq-h"><button class="faq-question" aria-expanded="false" aria-controls="faqAiHistoryA"><span id="faqAiHistoryQ">When did AI appear?</span><span class="faq-arrow">▼</span></button></h3>
       <div class="faq-answer" id="faqAiHistoryA">The term &#39;artificial intelligence&#39; was coined in 1956 at the Dartmouth Conference, but ideas of thinking machines go back to antiquity. Massive development started in the 2010s with more computing power and data. <br /><small style="opacity:0.7">Source: <a href="https://plato.stanford.edu/entries/artificial-intelligence/" target="_blank" rel="noopener" style="color:var(--accent)">Stanford Encyclopedia</a></small></div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" aria-expanded="false" aria-controls="faqAiHowWorkA"><span id="faqAiHowWorkQ">How does AI work?</span><span class="faq-arrow">▼</span></button>
+      <h3 class="faq-h"><button class="faq-question" aria-expanded="false" aria-controls="faqAiHowWorkA"><span id="faqAiHowWorkQ">How does AI work?</span><span class="faq-arrow">▼</span></button></h3>
       <div class="faq-answer" id="faqAiHowWorkA">Modern AI uses machine learning: it analyzes millions of examples, finds patterns, and builds mathematical models. <br /><small style="opacity:0.7">Source: <a href="https://www.ibm.com/think/topics/machine-learning" target="_blank" rel="noopener" style="color:var(--accent)">IBM</a></small></div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" aria-expanded="false" aria-controls="faqAiTypesA"><span id="faqAiTypesQ">What are the types of AI?</span><span class="faq-arrow">▼</span></button>
+      <h3 class="faq-h"><button class="faq-question" aria-expanded="false" aria-controls="faqAiTypesA"><span id="faqAiTypesQ">What are the types of AI?</span><span class="faq-arrow">▼</span></button></h3>
       <div class="faq-answer" id="faqAiTypesA">Three levels are usually cited: Narrow AI (solves one task, like ChatGPT), General AI (AGI — hypothetical, human-level), and Super AI (exceeds humans, doesn&#39;t exist yet). <br /><small style="opacity:0.7">Source: <a href="https://en.wikipedia.org/wiki/Artificial_general_intelligence" target="_blank" rel="noopener" style="color:var(--accent)">Wikipedia</a></small></div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" aria-expanded="false" aria-controls="faqAiDangerA"><span id="faqAiDangerQ">Is AI dangerous?</span><span class="faq-arrow">▼</span></button>
+      <h3 class="faq-h"><button class="faq-question" aria-expanded="false" aria-controls="faqAiDangerA"><span id="faqAiDangerQ">Is AI dangerous?</span><span class="faq-arrow">▼</span></button></h3>
       <div class="faq-answer" id="faqAiDangerA">Like any technology, AI brings risks: uncontrolled use, spreading misinformation, job losses. But with responsible approach, AI remains a powerful tool that helps people. <br /><small style="opacity:0.7">Source: <a href="https://futureoflife.org/ai/" target="_blank" rel="noopener" style="color:var(--accent)">Future of Life Institute</a></small></div>
     </div>
   </section>
   <section class="faq-section" id="faq-section">
     <h2 id="faqTitle">❓ Frequently Asked Questions</h2>
     <div class="faq-item">
-      <button class="faq-question" aria-expanded="false" aria-controls="faqA1"><span id="faqQ1">What is cognitive offloading?</span><span class="faq-arrow">▼</span></button>
+      <h3 class="faq-h"><button class="faq-question" aria-expanded="false" aria-controls="faqA1"><span id="faqQ1">What is cognitive offloading?</span><span class="faq-arrow">▼</span></button></h3>
       <div class="faq-answer" id="faqA1">Cognitive offloading is the process of relying on external tools (like AI) to perform mental tasks that you would otherwise do yourself, which can weaken memory and independent thinking over time.</div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" aria-expanded="false" aria-controls="faqA2"><span id="faqQ2">How does AI cause &#39;brain fog&#39;?</span><span class="faq-arrow">▼</span></button>
+      <h3 class="faq-h"><button class="faq-question" aria-expanded="false" aria-controls="faqA2"><span id="faqQ2">How does AI cause &#39;brain fog&#39;?</span><span class="faq-arrow">▼</span></button></h3>
       <div class="faq-answer" id="faqA2">“Brain fog” is not a medical diagnosis, and science has not established that AI causes it. What there is so far: in a 2025 experiment, people who wrote essays with an AI assistant showed the weakest brain connectivity of three groups. That is a preprint with 54 participants and has not been peer-reviewed. If your thinking feels sluggish after leaning on AI for a long time, that is a reason to do some tasks without it. <br><small style="opacity:0.7">Source: <a href="https://arxiv.org/abs/2506.08872" target="_blank" rel="noopener" style="color:var(--accent)">Kosmyna et al., arXiv:2506.08872</a></small></div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" aria-expanded="false" aria-controls="faqA3"><span id="faqQ3">What is AI anxiety (AIAS)?</span><span class="faq-arrow">▼</span></button>
+      <h3 class="faq-h"><button class="faq-question" aria-expanded="false" aria-controls="faqA3"><span id="faqQ3">What is AI anxiety (AIAS)?</span><span class="faq-arrow">▼</span></button></h3>
       <div class="faq-answer" id="faqA3">A modern form of technostress characterized by fear of job loss, algorithmic anxiety, and obsessive concern about AI replacing human identity.</div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" aria-expanded="false" aria-controls="faqA4"><span id="faqQ4">What is AI Replacement Dysfunction (AIRD)?</span><span class="faq-arrow">▼</span></button>
+      <h3 class="faq-h"><button class="faq-question" aria-expanded="false" aria-controls="faqA4"><span id="faqQ4">What is AI Replacement Dysfunction (AIRD)?</span><span class="faq-arrow">▼</span></button></h3>
       <div class="faq-answer" id="faqA4">AIRD is a proposed clinical construct, not an official diagnosis: distress and impaired functioning linked to the fear that AI is replacing a person’s work role. It was described by University of Florida researchers in the journal Cureus.</div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" aria-expanded="false" aria-controls="faqA5"><span id="faqQ5">Am I addicted to ChatGPT?</span><span class="faq-arrow">▼</span></button>
+      <h3 class="faq-h"><button class="faq-question" aria-expanded="false" aria-controls="faqA5"><span id="faqQ5">Am I addicted to ChatGPT?</span><span class="faq-arrow">▼</span></button></h3>
       <div class="faq-answer" id="faqA5">If you feel anxious without AI, constantly check for responses, or prefer AI over human interaction, it&#39;s a sign to rebalance your digital habits.</div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" aria-expanded="false" aria-controls="faqA6"><span id="faqQ6">How are the test scores calculated?</span><span class="faq-arrow">▼</span></button>
+      <h3 class="faq-h"><button class="faq-question" aria-expanded="false" aria-controls="faqA6"><span id="faqQ6">How are the test scores calculated?</span><span class="faq-arrow">▼</span></button></h3>
       <div class="faq-answer" id="faqA6">We use a 5-point Likert scale with reverse-keyed items across three axes. Each axis has 8 questions, for a maximum of 32 per axis and 96 overall.</div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" aria-expanded="false" aria-controls="faqA7"><span id="faqQ7">Is this test anonymous?</span><span class="faq-arrow">▼</span></button>
+      <h3 class="faq-h"><button class="faq-question" aria-expanded="false" aria-controls="faqA7"><span id="faqQ7">Is this test anonymous?</span><span class="faq-arrow">▼</span></button></h3>
       <div class="faq-answer" id="faqA7">Yes. All processing happens in your browser. Nothing is stored on any server, except the optional global poll, which stores only 3 anonymous vote counters (no IP, email, or timestamp).</div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" aria-expanded="false" aria-controls="faqA8"><span id="faqQ8">Does using AI make me less intelligent?</span><span class="faq-arrow">▼</span></button>
+      <h3 class="faq-h"><button class="faq-question" aria-expanded="false" aria-controls="faqA8"><span id="faqQ8">Does using AI make me less intelligent?</span><span class="faq-arrow">▼</span></button></h3>
       <div class="faq-answer" id="faqA8">It can, if you over-rely on it. Cognitive offloading may weaken memory and thinking skills over time.</div>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-h"><button class="faq-question" aria-expanded="false" aria-controls="faqA9"><span id="faqQ9">Is this test a medical diagnosis?</span><span class="faq-arrow">▼</span></button></h3>
+      <div class="faq-answer" id="faqA9">No. It is a self-reflection tool, not a medical or psychological diagnosis. The score thresholds come from how answers are spread across the scale, not from validated population norms. If your use of AI worries you or gets in the way of daily life, talk to a qualified professional.</div>
     </div>
   </section>
   <section class="faq-section" id="faq-slang-section">
     <h2 id="faqSlangTitle">💬 Popular Questions and Answers</h2>
     <p id="faqSlangSubtitle" style="color:var(--text-dim); font-size:0.9rem; margin-top:-0.5rem; margin-bottom:1.5rem;">Quick, plain-language answers to what people commonly ask.</p>
     <div class="faq-item">
-      <button class="faq-question" aria-expanded="false" aria-controls="faqSlangA1"><span id="faqSlangQ1">Is ChatGPT making me stupid?</span><span class="faq-arrow">▼</span></button>
-      <div class="faq-answer" id="faqSlangA1">If you can't solve basic problems without it anymore, that's a real pattern worth checking, not just a joke. The free test above gives you an actual answer instead of a guess.</div>
+      <h3 class="faq-h"><button class="faq-question" aria-expanded="false" aria-controls="faqSlangA1"><span id="faqSlangQ1">Is ChatGPT making me stupid?</span><span class="faq-arrow">▼</span></button></h3>
+      <div class="faq-answer" id="faqSlangA1">If you can't solve basic problems without it anymore, that's a real pattern worth checking, not just a joke. The free <a href="./">test</a> gives you an actual answer instead of a guess.</div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" aria-expanded="false" aria-controls="faqSlangA2"><span id="faqSlangQ2">Is AI giving me brain rot?</span><span class="faq-arrow">▼</span></button>
+      <h3 class="faq-h"><button class="faq-question" aria-expanded="false" aria-controls="faqSlangA2"><span id="faqSlangQ2">Is AI giving me brain rot?</span><span class="faq-arrow">▼</span></button></h3>
       <div class="faq-answer" id="faqSlangA2">Outsourcing your thinking to AI regularly can dull problem-solving skills over time &mdash; researchers call it cognitive offloading. "Brain rot" isn't far off the mark.</div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" aria-expanded="false" aria-controls="faqSlangA3"><span id="faqSlangQ3">Why can't I think without ChatGPT anymore?</span><span class="faq-arrow">▼</span></button>
+      <h3 class="faq-h"><button class="faq-question" aria-expanded="false" aria-controls="faqSlangA3"><span id="faqSlangQ3">Why can't I think without ChatGPT anymore?</span><span class="faq-arrow">▼</span></button></h3>
       <div class="faq-answer" id="faqSlangA3">That's cognitive offloading in action &mdash; your brain stops practicing what it hands off to AI. The fix isn't quitting cold turkey, it's doing one small task without AI first.</div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" aria-expanded="false" aria-controls="faqSlangA4"><span id="faqSlangQ4">Am I addicted, or just using ChatGPT a lot?</span><span class="faq-arrow">▼</span></button>
+      <h3 class="faq-h"><button class="faq-question" aria-expanded="false" aria-controls="faqSlangA4"><span id="faqSlangQ4">Am I addicted, or just using ChatGPT a lot?</span><span class="faq-arrow">▼</span></button></h3>
       <div class="faq-answer" id="faqSlangA4">Frequency and dependency aren't the same thing. This test measures the difference instead of guessing.</div>
     </div>
     <div class="faq-item">
-      <button class="faq-question" aria-expanded="false" aria-controls="faqSlangA5"><span id="faqSlangQ5">How do I know if I'm too dependent on AI?</span><span class="faq-arrow">▼</span></button>
-      <div class="faq-answer" id="faqSlangA5">You don't have to guess. The free test above gives you an actual number instead of a feeling.</div>
+      <h3 class="faq-h"><button class="faq-question" aria-expanded="false" aria-controls="faqSlangA5"><span id="faqSlangQ5">How do I know if I'm too dependent on AI?</span><span class="faq-arrow">▼</span></button></h3>
+      <div class="faq-answer" id="faqSlangA5">You don't have to guess. The free <a href="./">test</a> gives you an actual number instead of a feeling.</div>
     </div>
   </section>
   <section class="info-box" style="border-left:3px solid var(--accent)">
