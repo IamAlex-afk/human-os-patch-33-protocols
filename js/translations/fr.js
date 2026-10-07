@@ -126,7 +126,7 @@ window.translations.fr = {
     faqQ1: "Qu'est-ce que la décharge cognitive ?",
     faqA1: "C'est le processus consistant à s'appuyer sur des outils externes (comme l'IA) pour effectuer des tâches mentales, ce qui peut affaiblir la mémoire à long terme.",
     faqQ2: "Comment l'IA provoque-t-elle un 'brouillard mental' ?",
-    faqA2: "En externalisant constamment la réflexion vers l'IA, les voies neuronales deviennent moins actives, entraînant une lenteur mentale.",
+    faqA2: "Le « brouillard mental » n’est pas un diagnostic médical, et la science n’a pas établi que l’IA le provoque. Ce dont on dispose à ce jour : dans une expérience de 2025, les personnes qui rédigeaient des essais avec un assistant IA présentaient la connectivité cérébrale la plus faible de trois groupes. C’est une prépublication portant sur 54 participants, non évaluée par les pairs. Si votre pensée vous semble ralentie après un long recours à l’IA, c’est une raison de faire certaines tâches sans elle. <br><small style='opacity:0.7'>Source : <a href='https://arxiv.org/abs/2506.08872' target='_blank' rel='noopener' style='color:var(--accent)'>Kosmyna et al., arXiv:2506.08872</a></small>",
     faqQ3: "Qu'est-ce que l'anxiété liée à l'IA (AIAS) ?",
     faqA3: "Une forme moderne de technostress caractérisée par la peur de la perte d'emploi et l'anxiété algorithmique.",
     faqQ4: "Qu'est-ce que le Dysfonctionnement de Remplacement par l'IA (AIRD) ?",

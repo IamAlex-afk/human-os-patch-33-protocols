@@ -126,7 +126,7 @@ window.translations.es = {
     faqQ1: "¿Qué es la descarga cognitiva?",
     faqA1: "Es el proceso de depender de herramientas externas (como la IA) para tareas mentales que podrías hacer tú mismo, lo que debilita la memoria a largo plazo.",
     faqQ2: "¿Cómo causa la IA 'niebla mental'?",
-    faqA2: "Al externalizar el pensamiento a la IA, las vías neuronales se vuelven menos activas, provocando lentitud mental.",
+    faqA2: "La «niebla mental» no es un diagnóstico médico, y la ciencia no ha establecido que la IA la cause. Lo que hay hasta ahora: en un experimento de 2025, las personas que escribieron ensayos con un asistente de IA mostraron la conectividad cerebral más débil de tres grupos. Es un preprint con 54 participantes que no ha pasado revisión por pares. Si notas el pensamiento lento tras apoyarte mucho tiempo en la IA, es un motivo para hacer algunas tareas sin ella. <br><small style='opacity:0.7'>Fuente: <a href='https://arxiv.org/abs/2506.08872' target='_blank' rel='noopener' style='color:var(--accent)'>Kosmyna et al., arXiv:2506.08872</a></small>",
     faqQ3: "¿Qué es la ansiedad por IA (AIAS)?",
     faqA3: "Una forma de tecnoestrés caracterizada por miedo a la pérdida de empleo y preocupación por el reemplazo humano.",
     faqQ4: "¿Qué es la Disfunción por Reemplazo de IA (AIRD)?",

@@ -125,7 +125,7 @@ window.translations.vi = {
     faqQ1: "Giảm tải nhận thức là gì?",
     faqA1: "Giảm tải nhận thức là quá trình dựa vào công cụ bên ngoài (như AI) để thực hiện các nhiệm vụ tinh thần, điều này có thể làm suy yếu trí nhớ và tư duy độc lập theo thời gian.",
     faqQ2: "AI gây 'mờ não' như thế nào?",
-    faqA2: "Khi bạn liên tục uỷ thác tư duy cho AI, các đường dẫn thần kinh giải quyết vấn đề trở nên kém hoạt động, dẫn đến trì trệ tinh thần.",
+    faqA2: "“Sương mù não” không phải là chẩn đoán y khoa, và khoa học chưa xác lập rằng AI gây ra nó. Điều hiện có: trong một thí nghiệm năm 2025, những người viết bài luận với trợ lý AI có mức kết nối não yếu nhất trong ba nhóm. Đây là bản thảo với 54 người tham gia, chưa qua bình duyệt. Nếu sau một thời gian dài dựa vào AI bạn thấy suy nghĩ chậm chạp, đó là lý do để tự làm một số việc không cần AI. <br><small style='opacity:0.7'>Nguồn: <a href='https://arxiv.org/abs/2506.08872' target='_blank' rel='noopener' style='color:var(--accent)'>Kosmyna et al., arXiv:2506.08872</a></small>",
     faqQ3: "Lo lắng AI (AIAS) là gì?",
     faqA3: "Một dạng căng thẳng công nghệ hiện đại đặc trưng bởi nỗi sợ mất việc làm và lo lắng về việc AI thay thế bản sắc con người.",
     faqQ4: "Rối loạn thay thế AI (AIRD) là gì?",

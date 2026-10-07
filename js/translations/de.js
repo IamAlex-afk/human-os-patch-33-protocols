@@ -126,7 +126,7 @@ window.translations.de = {
     faqQ1: "Was ist kognitive Entlastung?",
     faqA1: "Sich auf externe Werkzeuge (wie KI) zu verlassen, um mentale Aufgaben auszuführen, was das unabhängige Denken schwächen kann.",
     faqQ2: "Wie verursacht KI 'Gehirnnebel'?",
-    faqA2: "Wenn Sie das Denken ständig auslagern, werden die neuronalen Pfade weniger aktiv, was zu geistiger Trägheit führt.",
+    faqA2: "„Brain Fog“ ist keine medizinische Diagnose, und die Wissenschaft hat nicht belegt, dass KI ihn verursacht. Was es bisher gibt: In einem Experiment von 2025 zeigten Personen, die Essays mit einem KI-Assistenten schrieben, die schwächste Hirnkonnektivität von drei Gruppen. Das ist ein Preprint mit 54 Teilnehmenden ohne Peer-Review. Wenn sich Ihr Denken nach langer Nutzung von KI träge anfühlt, ist das ein Anlass, manche Aufgaben ohne sie zu erledigen. <br><small style='opacity:0.7'>Quelle: <a href='https://arxiv.org/abs/2506.08872' target='_blank' rel='noopener' style='color:var(--accent)'>Kosmyna et al., arXiv:2506.08872</a></small>",
     faqQ3: "Was ist KI-Angst (AIAS)?",
     faqA3: "Angst vor Arbeitsplatzverlust und die obsessive Sorge, dass KI die menschliche Identität ersetzt.",
     faqQ4: "Was ist KI-Ersatz-Dysfunktion (AIRD)?",
