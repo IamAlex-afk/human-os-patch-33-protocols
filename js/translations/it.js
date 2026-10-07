@@ -66,7 +66,7 @@ window.translations.it = {
     pollTotalVotes: "voti in tutto il mondo",
     pollInviteText: "📢 Invita un amico a votare",
     pollInviteShareText: "Cosa pensi dell'IA? Vota in modo anonimo nel sondaggio globale di Mind-OS:",
-    pollPrivacy: "I dati sono memorizzati localmente nel tuo browser e non vengono trasmessi da nessuna parte.",
+    pollPrivacy: "Votando viene inviata solo la tua scelta a un server Google Apps Script, che conserva tre totali — senza memorizzare indirizzo IP, e-mail o ora del voto. Se non premi il pulsante non viene inviato nulla.",
     ctaText: "Vuoi una guida strutturata? Il libro dei 33 Protocolli offre micro-esercizi quotidiani per ripristinare la sovranità cognitiva.",
     ctaBarText: "Esplora i 33 Protocolli",
     footerText: "© Mind-OS – Creato da Aleksei Sergeevich Bitkin. Progetto di ricerca indipendente.",

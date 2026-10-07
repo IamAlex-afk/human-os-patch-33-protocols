@@ -66,7 +66,7 @@ window.translations.en = {
     pollTotalVotes: "votes worldwide",
     pollInviteText: "📢 Send this to a friend",
     pollInviteShareText: "How do you feel about AI? Vote anonymously in the global Mind-OS poll:",
-    pollPrivacy: "Data is stored locally in your browser and is not transmitted anywhere.",
+    pollPrivacy: "Voting sends only your choice to a Google Apps Script server, which keeps three totals — no IP address, email or time of the vote is stored. Nothing is sent unless you press the button.",
     ctaText: "Want structured guidance? The 33 Protocols book offers daily micro-exercises to restore cognitive sovereignty.",
     ctaBarText: "Explore the 33 Protocols",
     footerText: "© Mind-OS – Created by Aleksei Sergeevich Bitkin. Independent research project.",

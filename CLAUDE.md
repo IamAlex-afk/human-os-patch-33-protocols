@@ -22,8 +22,8 @@ Vanilla HTML/CSS/JS, без фреймворков, localStorage, PWA, 12 язы
 ## Что в продакшене
 - 12 языков: en, ru, es, de, fr, ja, vi, th, pt, ko, it, hi — статические страницы генерируются через `.\build.ps1`
 - `js/translations-core.js` (логика getT/Proxy) + `js/translations/<lang>.js` (по языку). Каждая страница грузит только свой язык + en.js (фолбэк)
-- Шрифты: Inter самохостится (`css/fonts.css` + `css/fonts/*.woff2`). Noto Sans JP подключается только на `/ja/` через Google Fonts
-- CSP сужен (без Google-доменов в style-src/font-src/connect-src) везде кроме `/ja/`
+- Шрифты: Inter самохостится (`css/fonts.css` + `css/fonts/*.woff2`). На `/ja/` — системные японские шрифты устройства; Google Fonts не используется нигде (с 2026-10-07)
+- CSP одинаковый на всех 12 страницах (без Google-доменов в style-src/font-src)
 - PWA: манифест с одной иконкой `apple-touch-icon.png` (180×180), кнопка "Install App" в nav, beforeinstallprompt
 - sw.js: precache core assets + translations-core.js + en.js + все языковые страницы
 - Глобальный опрос: реальный backend на Google Apps Script (`poll-backend/Code.gs`), хранит только 3 счётчика, без IP/email/timestamp. API отдаёт только проценты (forPct/neutralPct/againstPct)

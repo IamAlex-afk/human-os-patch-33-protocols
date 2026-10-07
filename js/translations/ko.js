@@ -66,7 +66,7 @@ window.translations.ko = {
     pollTotalVotes: "전 세계 투표 수",
     pollInviteText: "📢 친구를 투표에 초대하기",
     pollInviteShareText: "AI에 대해 어떻게 생각하나요? Mind-OS 글로벌 투표에 익명으로 참여하세요:",
-    pollPrivacy: "데이터는 브라우저에 로컬로 저장되며 어디로도 전송되지 않습니다.",
+    pollPrivacy: "투표하면 선택 내용만 Google Apps Script 서버로 전송됩니다. 서버는 세 가지 합계만 저장하며 IP 주소, 이메일, 투표 시각은 저장하지 않습니다. 버튼을 누르지 않으면 아무것도 전송되지 않습니다.",
     ctaText: "체계적인 안내가 필요하신가요? 33가지 프로토콜 도서는 인지적 주권을 회복하기 위한 매일의 작은 훈련을 제공합니다.",
     ctaBarText: "33가지 프로토콜 살펴보기",
     footerText: "© Mind-OS – Aleksei Sergeevich Bitkin 제작. 독립 연구 프로젝트.",

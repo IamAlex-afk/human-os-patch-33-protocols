@@ -66,7 +66,7 @@ window.translations.de = {
     pollTotalVotes: "Stimmen weltweit",
     pollInviteText: "📢 Freund:in zum Abstimmen einladen",
     pollInviteShareText: "Wie stehst du zu KI? Stimme anonym in der weltweiten Mind-OS-Umfrage ab:",
-    pollPrivacy: "Daten werden lokal in Ihrem Browser gespeichert und nirgendwohin übertragen.",
+    pollPrivacy: "Beim Abstimmen wird nur Ihre Auswahl an einen Google-Apps-Script-Server gesendet, der drei Summen speichert — weder IP-Adresse noch E-Mail oder Zeitpunkt der Stimme. Ohne Klick auf die Schaltfläche wird nichts gesendet.",
     ctaText: "Möchten Sie strukturierte Anleitung? Das 33-Protokolle-Buch bietet tägliche Mikro-Übungen.",
     ctaBarText: "Die 33 Protokolle entdecken",
     footerText: "© Mind-OS – Erstellt von Aleksei Sergeevich Bitkin. Unabhängiges Forschungsprojekt.",

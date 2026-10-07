@@ -135,6 +135,17 @@ def main():
     for ic in man.get('icons', []):
         if not os.path.exists(ROOT + ic['src'].lstrip('./')):
             errors.append(f'manifest.json: icon missing: {ic["src"]}')
+    # privacy policy exists in every language, in that language, and no page loads anything from another host
+    for L in LANGS:
+        rel = ('' if L == 'en' else L + '/') + 'privacy.html'
+        if not os.path.exists(ROOT + rel):
+            errors.append(f'{rel}: missing')
+        elif f'<html lang="{L}">' not in read(rel):
+            errors.append(f'{rel}: wrong html lang')
+    for L, s in pages.items():
+        ext = re.findall(r'<(?:script|img|iframe)[^>]*src="(https?://[^"]+)"|<link[^>]*rel="(?:stylesheet|preconnect|preload|dns-prefetch)"[^>]*href="(https?://[^"]+)"|<link[^>]*href="(https?://[^"]+)"[^>]*rel="(?:stylesheet|preconnect|preload|dns-prefetch)"', s)
+        for g in ext:
+            errors.append(f'{page(L)}: loads from another host: {[x for x in g if x][0][:70]}')
     # sitemap = the 12 pages
     locs = set(re.findall(r'<loc>([^<]+)</loc>', read('sitemap.xml')))
     want = {SITE + ('' if L == 'en' else L + '/') for L in LANGS}

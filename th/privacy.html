@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>นโยบายความเป็นส่วนตัว — Mind-OS</title>
+<meta name="description" content="Mind-OS ไม่เก็บข้อมูลส่วนบุคคล ไม่มีคุกกี้ ไม่มีการติดตาม แบบทดสอบทำงานในเบราว์เซอร์ของคุณ นโยบายความเป็นส่วนตัวฉบับเต็มในภาษาที่เข้าใจง่าย">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/privacy.html">
+<link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/privacy.html">
+<link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/privacy.html">
+<link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/privacy.html">
+<link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/privacy.html">
+<link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/privacy.html">
+<link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/privacy.html">
+<link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/privacy.html">
+<link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/privacy.html">
+<link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/privacy.html">
+<link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/privacy.html">
+<link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/privacy.html">
+<link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/privacy.html">
+<style>
+  :root { --bg:#0b100d; --surface:#131e18; --accent:#00e57a; --text:#ecf7f0; --text-dim:#b4cec0; --border:#1f3027; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--text); font-family:'Inter',system-ui,sans-serif; line-height:1.7;
+    padding:2rem 1.5rem; max-width:760px; margin:0 auto; }
+  a { color:var(--accent); }
+  h1 { font-size:2rem; margin-bottom:0.5rem; }
+  .sub { color:var(--text-dim); margin-bottom:2.5rem; }
+  h2 { color:var(--accent); font-size:1.25rem; margin:2rem 0 0.75rem; }
+  p, li { color:var(--text); margin-bottom:0.75rem; }
+  .highlight { background:rgba(0,229,122,0.1); border:1px solid var(--accent); border-radius:1rem; padding:1.5rem; margin:1.5rem 0; }
+  .highlight strong { color:var(--accent); }
+  .back { display:inline-block; margin-top:2.5rem; padding:0.75rem 2rem; background:var(--accent); color:#0b100d;
+    border-radius:3rem; text-decoration:none; font-weight:700; }
+  footer { margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--border); color:var(--text-dim); font-size:0.85rem; }
+  code { background:var(--surface); padding:0.15rem 0.45rem; border-radius:0.35rem; font-size:0.9em; color:var(--accent); }
+  .ref { color:var(--text-dim); font-size:0.9rem; }
+</style>
+</head>
+<body>
+  <h1>นโยบายความเป็นส่วนตัว</h1>
+  <p class="sub">อัปเดตล่าสุด: 2026-10-07 · เขียนด้วยภาษาที่เข้าใจง่าย ไม่ใช้ศัพท์กฎหมาย</p>
+
+  <div class="highlight">
+    <strong>สรุปสั้น ๆ:</strong> แบบทดสอบ ตัวติดตาม และเกม ไม่เก็บอะไรเลย ไม่มีเซิร์ฟเวอร์ ฐานข้อมูล ระบบวิเคราะห์ คุกกี้ หรือการติดตาม ทุกอย่างที่คุณทำอยู่ในเบราว์เซอร์ของคุณและไม่ออกจากอุปกรณ์ ข้อยกเว้นเดียวคือโพลระดับโลกซึ่งไม่บังคับ: หากคุณเลือกโหวต ระบบจะส่งตัวเลือกเดียวของคุณไปยังเซิร์ฟเวอร์ขนาดเล็กที่เก็บเพียงตัวนับรวม 3 ค่า (เห็นด้วย / เป็นกลาง / ไม่เห็นด้วย) ไม่มี IP อีเมล เวลา หรือบันทึกรายโหวต
+  </div>
+
+  <h2>เราเก็บข้อมูลอะไร</h2>
+  <p><strong>ไม่มี ยกเว้นตัวเลข 3 ค่าหากคุณโหวตในโพล</strong> Mind-OS เป็นเว็บไซต์แบบสแตติก แบบทดสอบ ตัวติดตาม และเกมไม่มีเซิร์ฟเวอร์ มีเพียงโพลระดับโลกซึ่งไม่บังคับเท่านั้นที่มีเซิร์ฟเวอร์ ดูรายละเอียดด้านล่าง</p>
+
+  <h2>คำตอบของคุณไปอยู่ที่ไหน</h2>
+  <p>คำตอบแบบทดสอบ รายการในตัวติดตาม และภาษาที่เลือก ถูกบันทึกเฉพาะใน <code>localStorage</code> ของเบราว์เซอร์ ซึ่งเป็นพื้นที่จัดเก็บส่วนตัวบนอุปกรณ์ของคุณเอง ไม่มีการส่งออกไปที่ใด คุณลบได้ทุกเมื่อด้วยการล้างข้อมูลเบราว์เซอร์หรือใช้ปุ่มรีเซ็ตในเว็บไซต์</p>
+
+  <h2>คุกกี้</h2>
+  <p>เราไม่ใช้คุกกี้ใด ๆ ทั้งสิ้น ไม่ว่าเพื่อการวิเคราะห์ โฆษณา หรือเซสชัน จึงไม่มีอะไรให้ต้องยินยอม เพราะไม่มีการตั้งค่าอะไรเลย</p>
+
+  <h2>การติดตามและการวิเคราะห์</h2>
+  <p>ไม่มีพิกเซลติดตาม Google Analytics, Facebook Pixel การทำลายนิ้วมือเบราว์เซอร์ หรือตัวติดตามของบุคคลที่สาม เราไม่รู้ว่าคุณเป็นใครและไม่รู้ว่าคุณเข้ามาเยี่ยมชม</p>
+
+  <h2>ข้อยกเว้นเดียว: โพลระดับโลก</h2>
+  <p>“โพลความรู้สึกต่อ AI ทั่วโลก” ไม่บังคับเลย แบบทดสอบใช้งานได้ครบถ้วนโดยไม่ต้องโหวต หากคุณเลือกโหวต ตัวเลือกเดียวของคุณ (เห็นด้วย / เป็นกลาง / ไม่เห็นด้วย) จะถูกส่งไปยังเซิร์ฟเวอร์ขนาดเล็ก (Google Apps Script) ที่เก็บเพียงผลรวม 3 ค่า ค่าละหนึ่งตัวเลือก ไม่เก็บ IP อีเมล เวลา หรือบันทึกรายโหวต จึงไม่มีทางเชื่อมโยงโหวตกลับมาหาคุณได้ เซิร์ฟเวอร์ส่งกลับเฉพาะเปอร์เซ็นต์ ไม่ส่งจำนวนโหวต เปอร์เซ็นต์ที่ส่งกลับมาจะถูกบันทึกไว้ในเบราว์เซอร์ของคุณ เมื่อกลับมาครั้งต่อไปหน้าเว็บจะแสดงจากที่นั่นและไม่ติดต่อเซิร์ฟเวอร์ใด</p>
+
+  <h2>บริการของบุคคลที่สาม</h2>
+  <p>ฟอนต์ให้บริการจากเว็บไซต์นี้เองหรือใช้ฟอนต์ในอุปกรณ์ของคุณ ไม่มีหน้าใดโหลดอะไรจาก Google Fonts หากคุณโหวต โหวตของคุณจะถูกส่งไปยังเซิร์ฟเวอร์ Google Apps Script ตามที่อธิบายข้างต้น เว็บไซต์นี้โฮสต์บน GitHub Pages ในแต่ละกรณี เบราว์เซอร์ของคุณจะเชื่อมต่อกับเซิร์ฟเวอร์ของบริษัทนั้น ซึ่งจะเห็น IP ของคุณเช่นเดียวกับคำขอเว็บทั่วไป เราไม่ได้รับข้อมูลนั้นและเข้าถึงบันทึกของพวกเขาไม่ได้ ไม่มีการติดต่อบริการของบุคคลที่สามอื่นใด</p>
+
+  <h2>เด็ก</h2>
+  <p>Mind-OS ไม่มีเนื้อหาที่เป็นอันตรายและไม่เก็บข้อมูล จึงไม่มีความเสี่ยงด้านข้อมูลต่อผู้ใด รวมถึงผู้เยาว์ นี่เป็นเครื่องมือเพื่อการทบทวนตนเองเชิงการศึกษา ไม่ใช่คำแนะนำทางการแพทย์หรือการวินิจฉัย</p>
+
+  <h2>สิทธิ์ของคุณ</h2>
+  <p>เนื่องจากเราไม่ได้เก็บข้อมูลเกี่ยวกับคุณ จึงไม่มีสิ่งใดให้ร้องขอ ส่งออก หรือลบจากฝั่งเรา คุณควบคุมได้เต็มที่: ข้อมูลอยู่บนอุปกรณ์ของคุณเท่านั้น และมีเพียงคุณที่เข้าถึงหรือลบได้</p>
+
+  <h2>วิธีตรวจสอบด้วยตนเอง</h2>
+  <p>เปิดเครื่องมือสำหรับนักพัฒนาของเบราว์เซอร์ (F12) → แท็บ Network แล้วใช้งานเว็บไซต์ การทำแบบทดสอบ ใช้ตัวติดตาม หรือเล่นเกม ไม่ส่งคำขอใด ๆ การประมวลผลทั้งหมดเกิดขึ้นใน JavaScript ที่ทำงานในเบราว์เซอร์ของคุณ คำขอเดียวที่ส่งไปยังเซิร์ฟเวอร์อื่นจะปรากฏเมื่อคุณกด “ส่งคะแนน” ซอร์สโค้ดเปิดให้ดูได้</p>
+
+  <h2>ติดต่อ</h2>
+  <p>มีคำถาม? เปิด issue ได้ที่ <a href="https://github.com/IamAlex-afk/human-os-patch-33-protocols/issues" target="_blank" rel="noopener">GitHub Issues</a></p>
+
+  <p class="ref">ฉบับภาษาอังกฤษเป็นฉบับอ้างอิง <a href="https://iamalex-afk.github.io/human-os-patch-33-protocols/privacy.html" hreflang="en">English</a></p>
+
+  <a class="back" href="./">← กลับไปที่ Mind-OS</a>
+
+  <footer>
+    Mind-OS — แบบประเมินตนเองเรื่องการพึ่งพา AI · สร้างโดย Aleksei Sergeevich Bitkin · <a href="https://orcid.org/0009-0002-7986-3812" target="_blank" rel="noopener">ORCID</a>
+  </footer>
+</body>
+</html>

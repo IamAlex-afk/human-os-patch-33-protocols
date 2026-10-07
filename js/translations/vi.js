@@ -66,7 +66,7 @@ window.translations.vi = {
     pollTotalVotes: "phiếu bầu trên toàn thế giới",
     pollInviteText: "📢 Mời bạn bè bỏ phiếu",
     pollInviteShareText: "Bạn cảm thấy thế nào về AI? Bỏ phiếu ẩn danh trong khảo sát Mind-OS toàn cầu:",
-    pollPrivacy: "Dữ liệu lưu cục bộ trong trình duyệt, không truyền đi đâu.",
+    pollPrivacy: "Khi bỏ phiếu, chỉ lựa chọn của bạn được gửi tới máy chủ Google Apps Script, nơi lưu ba tổng số — không lưu địa chỉ IP, email hay thời điểm bỏ phiếu. Nếu bạn không bấm nút thì không có gì được gửi đi.",
     ctaText: "Muốn hướng dẫn có cấu trúc? Cuốn sách 33 Giao thức cung cấp bài tập vi mô hàng ngày để khôi phục chủ quyền nhận thức.",
     ctaBarText: "Khám phá 33 Giao thức",
     footerText: "© Mind-OS – Tạo bởi Aleksei Sergeevich Bitkin. Dự án nghiên cứu độc lập.",
