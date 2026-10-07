@@ -9,56 +9,79 @@ $langs = @{
     title  = "Тест на зависимость от ИИ и ChatGPT — бесплатно"
     desc   = "Анонимный тест из 28 вопросов: насколько вы полагаетесь на ИИ и ChatGPT в мышлении, эмоциях и работе. Основан на шкалах LLM-D12 и AIAS. Без регистрации."
     locale = "ru_RU"
+    nojsT  = "Включите JavaScript"
+    nojsP  = "Тест работает целиком в вашем браузере — так защищается ваша приватность. Для него нужен JavaScript."
   }
   es = @{
     title  = "Test de dependencia de la IA y ChatGPT, gratis"
     desc   = "Test anónimo de 28 preguntas: ¿cuánto dependes de la IA y de ChatGPT para pensar, sentir y trabajar? Basado en LLM-D12 y AIAS. Sin registro."
     locale = "es_ES"
+    nojsT  = "Activa JavaScript"
+    nojsP  = "Este test interactivo funciona por completo en tu navegador para proteger tu privacidad. Necesita JavaScript."
   }
   de = @{
     title  = "KI-Abhängigkeit: Selbsttest gratis (ChatGPT & Co.)"
     desc   = "Anonymer Test mit 28 Fragen: Wie sehr verlassen Sie sich beim Denken, Fühlen und Arbeiten auf KI und ChatGPT? Basiert auf LLM-D12 und AIAS. Ohne Anmeldung."
     locale = "de_DE"
+    nojsT  = "Bitte JavaScript aktivieren"
+    nojsP  = "Dieser interaktive Test läuft vollständig in Ihrem Browser, um Ihre Privatsphäre zu schützen. Dafür ist JavaScript erforderlich."
   }
   fr = @{
     title  = "Test de dépendance à l’IA et à ChatGPT, gratuit"
     desc   = "Test anonyme de 28 questions : à quel point dépendez-vous de l’IA et de ChatGPT pour penser, ressentir et travailler ? Basé sur LLM-D12 et AIAS. Sans inscription."
     locale = "fr_FR"
+    nojsT  = "Veuillez activer JavaScript"
+    nojsP  = "Ce test interactif fonctionne entièrement dans votre navigateur afin de protéger votre vie privée. JavaScript est nécessaire."
   }
   ja = @{
     title  = "AI依存度チェック【無料・匿名】28の質問で診断"
     desc   = "AI依存度を28問で無料チェック。認知的オフロード、AI不安、デジタル燃え尽き症候群を科学的根拠に基づき匿名で診断。登録不要、データ収集なし。よくある質問とグローバル投票も含まれています。"
+    ogdesc = "認知的オフロード、AI不安、デジタル燃え尽き症候群の科学的かつ匿名のアセスメント。登録不要、データ収集なし。よくある質問とグローバル投票（AIに賛成か反対か）も含まれています。"
     locale = "ja_JP"
+    nojsT  = "JavaScriptを有効にしてください"
+    nojsP  = "このチェックはプライバシー保護のため、すべてお使いのブラウザ内で動作します。利用にはJavaScriptが必要です。"
   }
   vi = @{
     title  = "Bài test mức độ phụ thuộc AI và ChatGPT miễn phí"
     desc   = "Bài test ẩn danh gồm 28 câu hỏi: bạn dựa vào AI và ChatGPT đến mức nào khi suy nghĩ, cảm xúc và làm việc? Dựa trên thang LLM-D12 và AIAS. Không cần đăng ký."
     locale = "vi_VN"
+    nojsT  = "Vui lòng bật JavaScript"
+    nojsP  = "Bài test tương tác này chạy hoàn toàn trong trình duyệt của bạn để bảo vệ quyền riêng tư. Cần bật JavaScript."
   }
   th = @{
     title  = "แบบทดสอบการพึ่งพา AI และ ChatGPT ฟรี"
     desc   = "แบบทดสอบฟรีและไม่ระบุตัวตน 28 ข้อ: คุณพึ่งพา AI และ ChatGPT มากแค่ไหนในการคิด อารมณ์ และการทำงาน อ้างอิงมาตรวัด LLM-D12 และ AIAS ไม่ต้องสมัครสมาชิก"
     locale = "th_TH"
+    nojsT  = "โปรดเปิดใช้ JavaScript"
+    nojsP  = "แบบทดสอบนี้ทำงานในเบราว์เซอร์ของคุณทั้งหมดเพื่อปกป้องความเป็นส่วนตัว จำเป็นต้องใช้ JavaScript"
   }
   pt = @{
     title  = "Teste de dependência de IA e ChatGPT, grátis"
     desc   = "Teste anônimo com 28 perguntas: quanto você depende da IA e do ChatGPT para pensar, sentir e trabalhar? Baseado em LLM-D12 e AIAS. Sem cadastro."
     locale = "pt_PT"
+    nojsT  = "Ative o JavaScript"
+    nojsP  = "Este teste interativo funciona inteiramente no seu navegador para proteger sua privacidade. É necessário o JavaScript."
   }
   ko = @{
     title  = "AI·챗GPT 의존도 테스트 – 무료 자가진단"
     desc   = "28문항 무료 익명 테스트: 생각, 감정, 업무에서 AI와 챗GPT에 얼마나 의존하고 있나요? LLM-D12와 AIAS 척도 기반. 가입 불필요."
     locale = "ko_KR"
+    nojsT  = "JavaScript를 켜 주세요"
+    nojsP  = "이 테스트는 개인정보 보호를 위해 브라우저 안에서만 작동합니다. JavaScript가 필요합니다."
   }
   it = @{
     title  = "Test di dipendenza da IA e ChatGPT, gratis"
     desc   = "Test anonimo di 28 domande: quanto ti affidi all’IA e a ChatGPT per pensare, per le emozioni e per il lavoro? Basato su LLM-D12 e AIAS. Senza registrazione."
     locale = "it_IT"
+    nojsT  = "Attiva JavaScript"
+    nojsP  = "Questo test interattivo funziona interamente nel tuo browser per proteggere la tua privacy. È necessario JavaScript."
   }
   hi = @{
     title  = "AI और ChatGPT निर्भरता टेस्ट – मुफ़्त"
     desc   = "28 सवालों का मुफ़्त और गुमनाम टेस्ट: सोचने, भावनाओं और काम के लिए आप AI और ChatGPT पर कितना निर्भर हैं? LLM-D12 और AIAS पर आधारित। साइन-अप की ज़रूरत नहीं।"
     locale = "hi_IN"
+    nojsT  = "कृपया JavaScript चालू करें"
+    nojsP  = "आपकी निजता की रक्षा के लिए यह टेस्ट पूरी तरह आपके ब्राउज़र में चलता है। इसके लिए JavaScript ज़रूरी है।"
   }
 }
 
@@ -66,38 +89,43 @@ $template = Get-Content "index.html" -Raw -Encoding UTF8
 
 foreach ($lang in $langs.Keys) {
   $t = $langs[$lang]
+  # values written into HTML: '&' must be '&amp;'; a language may carry its own social description (ogdesc)
+  $titleH  = $t.title.Replace('&', '&amp;')
+  $descH   = $t.desc.Replace('&', '&amp;')
+  $ogDescH = $descH
+  if ($t.ogdesc) { $ogDescH = $t.ogdesc.Replace('&', '&amp;') }
   $html = $template
 
   # 1. html lang attribute
-  $html = $html -replace '(<html lang=")[^"]*(")', "`$1$lang`$2"
+  $html = $html -replace '(<html lang=")[^"]*(")', "`${1}$lang`${2}"
 
   # 2. title tag
   $safeTitle = [regex]::Escape($t.title) -replace '\$', '$$$$'
-  $html = $html -replace '(<title id="dynamicTitle">)[^<]*(</title>)', "`$1$($t.title) | Mind-OS`$2"
+  $html = $html -replace '(<title id="dynamicTitle">)[^<]*(</title>)', "`${1}$titleH | Mind-OS`${2}"
 
   # 3. meta description
-  $html = $html -replace '(<meta name="description" id="dynamicDescription" content=")[^"]*(")', "`$1$($t.desc)`$2"
+  $html = $html -replace '(<meta name="description" id="dynamicDescription" content=")[^"]*(")', "`${1}$descH`${2}"
 
   # 4. canonical href
-  $html = $html -replace '(<link rel="canonical" id="dynamicCanonical" href=")[^"]*(")', "`$1$BASE/$lang/`$2"
+  $html = $html -replace '(<link rel="canonical" id="dynamicCanonical" href=")[^"]*(")', "`${1}$BASE/$lang/`${2}"
 
   # 5. og:url
-  $html = $html -replace '(<meta property="og:url" id="dynamicOgUrl" content=")[^"]*(")', "`$1$BASE/$lang/`$2"
+  $html = $html -replace '(<meta property="og:url" id="dynamicOgUrl" content=")[^"]*(")', "`${1}$BASE/$lang/`${2}"
 
   # 6. og:title
-  $html = $html -replace '(<meta property="og:title" id="dynamicOgTitle" content=")[^"]*(")', "`$1$($t.title)`$2"
+  $html = $html -replace '(<meta property="og:title" id="dynamicOgTitle" content=")[^"]*(")', "`${1}$titleH`${2}"
 
   # 7. og:description
-  $html = $html -replace '(<meta property="og:description" id="dynamicOgDescription" content=")[^"]*(")', "`$1$($t.desc)`$2"
+  $html = $html -replace '(<meta property="og:description" id="dynamicOgDescription" content=")[^"]*(")', "`${1}$ogDescH`${2}"
 
   # 8. og:locale (primary)
-  $html = $html -replace '(<meta property="og:locale" content=")[^"]*(")', "`$1$($t.locale)`$2"
+  $html = $html -replace '(<meta property="og:locale" content=")[^"]*(")', "`${1}$($t.locale)`${2}"
 
   # 9. twitter:title
-  $html = $html -replace '(<meta name="twitter:title" content=")[^"]*(")', "`$1$($t.title)`$2"
+  $html = $html -replace '(<meta name="twitter:title" content=")[^"]*(")', "`${1}$titleH`${2}"
 
   # 10. twitter:description
-  $html = $html -replace '(<meta name="twitter:description" content=")[^"]*(")', "`$1$($t.desc)`$2"
+  $html = $html -replace '(<meta name="twitter:description" content=")[^"]*(")', "`${1}$ogDescH`${2}"
 
   # 10b. Noto Sans JP (Google Fonts) — only needed on /ja/, self-hosted Inter covers the rest
   if ($lang -eq 'ja') {
@@ -138,10 +166,14 @@ foreach ($lang in $langs.Keys) {
   $html = $html -replace '</head>', "<script>window.SITE_LANG='$lang';</script>`n</head>"
 
   # 14. Replace H1 inline text (fallback visible before JS loads)
-  $html = $html -replace '(<h1 id="mainTitle"[^>]*>)[^<]*', "`$1$($t.title)"
+  $html = $html -replace '(<h1 id="mainTitle"[^>]*>)[^<]*', "`${1}$titleH"
 
   # 15. Replace subhead inline text
-  $html = $html -replace '(<div class="subhead" id="subheadText">)[^<]*', "`$1$($t.desc)"
+  $html = $html -replace '(<div class="subhead" id="subheadText">)[^<]*', "`${1}$descH"
+
+  # 15b. Translate the <noscript> notice (visitors and crawlers without JavaScript)
+  $html = $html -replace 'Please enable JavaScript', $t.nojsT
+  $html = $html -replace 'This interactive assessment runs entirely in your browser to protect your privacy\. JavaScript is required\.', $t.nojsP
 
   # 16. Write output
   New-Item -ItemType Directory -Force -Path $lang | Out-Null

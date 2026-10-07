@@ -1,3 +1,4 @@
+from html import unescape as _unescape
 import io, json, re, os
 
 LANGS = ["ru", "es", "de", "fr", "ja", "vi", "th", "pt", "ko", "it", "hi"]
@@ -57,8 +58,9 @@ def localize(lang):
     if not title_m or not desc_m:
         print("SKIP", lang, "- could not find title/description")
         return
-    title = title_m.group(1)
-    desc = desc_m.group(1)
+    # the page stores these HTML-escaped; structured data needs the plain characters
+    title = _unescape(title_m.group(1))
+    desc = _unescape(desc_m.group(1))
     base_url = "https://iamalex-afk.github.io/human-os-patch-33-protocols/" + lang + "/"
 
     with io.open(os.path.join("js", "translations", lang + ".js"), "r", encoding="utf-8") as f:

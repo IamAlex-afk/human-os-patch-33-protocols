@@ -268,6 +268,7 @@
     ut('infoPara1', t.infoPara1);
     uh('infoPara2', t.infoPara2);
     uh('infoPara3', t.infoPara3);
+    uh('infoSources', t.infoSources);
     ut('infoDisclaimer', t.infoDisclaimer);
 
     ['1', '2', '3'].forEach(i => {
