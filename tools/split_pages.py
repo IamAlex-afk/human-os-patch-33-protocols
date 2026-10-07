@@ -4,7 +4,6 @@
     faq.html        "What is AI?" answers + popular questions
     protocols.html  the 33 protocols + ecosystem links
     poll.html       the global poll
-    game.html       the "AI or not?" game
 
 Source: tools/full-page.tpl (English) and, for the other 11 languages, the full <lang>/index.html that build.ps1 +
 tools/prerender.py have just produced (already translated in the HTML). Every page keeps the same head, menu, language
@@ -22,12 +21,11 @@ sys.stdout.reconfigure(encoding='utf-8')
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + os.sep
 SITE = 'https://iamalex-afk.github.io/human-os-patch-33-protocols/'
 LANGS = ['en', 'ru', 'es', 'de', 'fr', 'ja', 'vi', 'th', 'pt', 'ko', 'it', 'hi']
-PAGES = ['index.html', 'faq.html', 'protocols.html', 'poll.html', 'game.html']
+PAGES = ['index.html', 'faq.html', 'protocols.html', 'poll.html']
 # scripts a page does not need (their sections are not on it)
-DROP_JS = {'index.html': ['game.js', 'poll.js'], 'faq.html': ['quiz.js', 'card.js', 'game.js', 'poll.js'],
-           'protocols.html': ['quiz.js', 'card.js', 'game.js', 'poll.js'], 'poll.html': ['quiz.js', 'card.js', 'game.js'],
-           'game.html': ['quiz.js', 'card.js', 'poll.js']}
-NAV_ID = {'faq.html': 'navFaq', 'protocols.html': 'navProtocols', 'poll.html': 'navPoll', 'game.html': 'navGame'}
+DROP_JS = {'index.html': ['poll.js'], 'faq.html': ['quiz.js', 'card.js', 'poll.js'],
+           'protocols.html': ['quiz.js', 'card.js', 'poll.js'], 'poll.html': ['quiz.js', 'card.js']}
+NAV_ID = {'faq.html': 'navFaq', 'protocols.html': 'navProtocols', 'poll.html': 'navPoll'}
 
 
 def text(x):
@@ -51,13 +49,13 @@ def blocks(full):
         j = full.index('</section>', i) + len('</section>')
         assert full[i:j].count('<section') == 1, name
         b[name] = (i, j)
-    for name, marker in (('game', 'id="game-section"'), ('poll', 'id="poll-section"'), ('aifaq', 'id="ai-faq-section"'),
+    for name, marker in (('poll', 'id="poll-section"'), ('aifaq', 'id="ai-faq-section"'),
                          ('faq', 'id="faq-section"'), ('slang', 'id="faq-slang-section"'), ('protocols', 'id="protocols-section"'),
                          ('test1', 'id="test-section"'), ('info', 'id="infoTitle"')):
         sec(name, marker)
-    # the three unnamed test cards and the result block sit between the first test card and the game
+    # the three unnamed test cards and the result block sit between the first test card and the poll
     i = b['test1'][1]
-    rest = full[i:b['game'][0]]
+    rest = full[i:b['poll'][0]]
     b['testrest'] = (i, i + len(rest.rstrip()))
     i = full.rindex('<div', 0, full.index('id="overallProgress"'))
     b['progress'] = (i, b['test1'][0])
@@ -72,8 +70,8 @@ def blocks(full):
 
 
 KEEP = {'index.html': ['header', 'info', 'progress', 'test1', 'testrest', 'faq', 'how'],
-        'faq.html': ['aifaq', 'slang'], 'protocols.html': ['protocols', 'ecosystem'], 'poll.html': ['poll'], 'game.html': ['game']}
-ALL = ['header', 'info', 'progress', 'test1', 'testrest', 'game', 'poll', 'aifaq', 'faq', 'slang', 'ecosystem', 'protocols', 'how']
+        'faq.html': ['aifaq', 'slang'], 'protocols.html': ['protocols', 'ecosystem'], 'poll.html': ['poll']}
+ALL = ['header', 'info', 'progress', 'test1', 'testrest', 'poll', 'aifaq', 'faq', 'slang', 'ecosystem', 'protocols', 'how']
 
 
 def faq_pairs(part):
@@ -185,19 +183,19 @@ def site_nav(out, page):
     m = re.search(r'<nav aria-label="Table of Contents".*?</nav>', out, re.S)
     old = m.group(0)
     links = {}
-    for i in ('navAssessment', 'navGame', 'navPoll', 'navFaq', 'navProtocols'):
+    for i in ('navAssessment', 'navPoll', 'navFaq', 'navProtocols'):
         a = re.search(r'<a\b[^>]*\bid="' + i + r'"[^>]*>.*?</a>', old, re.S).group(0)
         links[i] = a
     def slim(a, cls):
         a = re.sub(r'\s(?:class|style)="[^"]*"', '', a, count=0)
         return a.replace('<a ', f'<a class="{cls}" ', 1)
     items = [] if page == 'index.html' else [slim(links['navAssessment'], 'site-link site-link-cta')]
-    items += [slim(links[i], 'site-link') for i in ('navGame', 'navPoll', 'navFaq', 'navProtocols')]
+    items += [slim(links[i], 'site-link') for i in ('navPoll', 'navFaq', 'navProtocols')]
     nav = ('<nav class="site-nav" aria-label="Mind-OS">\n    <a class="site-brand" href="./">Mind-OS</a>\n    <div class="site-links">\n      '
            + '\n      '.join(items) + '\n    </div>\n  </nav>')
     if page == 'index.html':                     # the card keeps only the main call to action
         card = old
-        for i in ('navGame', 'navPoll', 'navFaq', 'navProtocols'):
+        for i in ('navPoll', 'navFaq', 'navProtocols'):
             card = re.sub(r'\s*<li>' + re.escape(links[i]) + r'</li>', '', card)
         out = out.replace(old, card)
     else:

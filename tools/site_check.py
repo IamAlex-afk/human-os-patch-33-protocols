@@ -12,7 +12,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + os.sep
 SITE = 'https://iamalex-afk.github.io/human-os-patch-33-protocols/'
 LANGS = ['en', 'ru', 'es', 'de', 'fr', 'ja', 'vi', 'th', 'pt', 'ko', 'it', 'hi']
-PAGES = ['index.html', 'faq.html', 'protocols.html', 'poll.html', 'game.html']     # tools/split_pages.py
+PAGES = ['index.html', 'faq.html', 'protocols.html', 'poll.html']     # tools/split_pages.py
 
 
 def page(lang, name='index.html'):

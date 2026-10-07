@@ -1,12 +1,10 @@
-"""'What research says' blocks for protocols.html, game.html and poll.html, in 12 languages.
+"""'What research says' blocks for protocols.html and poll.html, in 12 languages.
 Every statement was checked against the primary source on 2026-10-07 (abstract on the publisher / arXiv / Crossref page):
   risko    Risko & Gilbert, "Cognitive Offloading", Trends in Cognitive Sciences 20(9), 2016
   sparrow  Sparrow, Liu, Wegner, "Google Effects on Memory", Science 333, 2011 - abstract: more likely to encode "where" than "what"
   lee      Lee et al., CHI 2025 - 319 knowledge workers; higher confidence in GenAI ~ less critical thinking, self-confidence ~ more
   gerlich  Gerlich, Societies 15(1):6, 2025 - 666 participants; negative correlation AI tool use / critical thinking (a correction exists)
   kosmyna  Kosmyna et al., arXiv:2506.08872 - 54 participants, 3 groups, LLM group weakest connectivity; preprint, not peer reviewed
-  jakesch  Jakesch, Hancock, Naaman, PNAS 120(11), 2023 - 4,600 participants, six experiments, unable to detect AI self-presentations
-  liang    Liang et al., arXiv:2304.02819 - GPT detectors misclassify non-native English writing as AI-generated
   pew      Pew Research Center, 2025-04-03 - 17% public / 56% experts positive; 51% public / 15% experts more concerned than excited;
            5,410 US adults (Aug 12-18, 2024), 1,013 AI experts (Aug 14 - Oct 31, 2024)
 Each item is (text, source key). Do not add a number or claim that is not in the list above.
@@ -17,11 +15,9 @@ SRC = {
     'lee': ('Lee et al., CHI 2025', 'https://doi.org/10.1145/3706598.3713778'),
     'gerlich': ('Gerlich, Societies, 2025', 'https://doi.org/10.3390/soc15010006'),
     'kosmyna': ('Kosmyna et al., arXiv:2506.08872', 'https://arxiv.org/abs/2506.08872'),
-    'jakesch': ('Jakesch, Hancock & Naaman, PNAS, 2023', 'https://doi.org/10.1073/pnas.2208839120'),
-    'liang': ('Liang et al., arXiv:2304.02819', 'https://arxiv.org/abs/2304.02819'),
     'pew': ('Pew Research Center, 2025', 'https://www.pewresearch.org/internet/2025/04/03/how-the-us-public-and-ai-experts-view-artificial-intelligence/'),
 }
-ORDER = {'protocols.html': ['risko', 'sparrow', 'lee', 'gerlich', 'kosmyna'], 'game.html': ['jakesch', 'liang'], 'poll.html': ['pew', 'pew']}
+ORDER = {'protocols.html': ['risko', 'sparrow', 'lee', 'gerlich', 'kosmyna'], 'poll.html': ['pew', 'pew']}
 
 # per language: page -> (heading, [item texts in ORDER], closing note)
 N = {
@@ -33,10 +29,6 @@ N = {
     'In a study of 666 people, frequent use of AI tools was associated with lower critical-thinking scores. This is a correlation: it does not prove that AI is the cause.',
     'In an experiment with 54 participants writing essays, the group using an AI assistant showed the weakest brain connectivity of the three groups. This is a preprint that has not been peer-reviewed.'],
     'The field is young: these studies are small or based on self-reports. The 33 protocols are the author’s own practice built on these ideas, not a tested treatment.'),
-  'game.html': ('Can people tell AI text from human text?', [
-    'In six experiments with 4,600 participants, people could not tell AI-written self-descriptions from human ones. They relied on cues that do not work: first-person pronouns, contractions and mentions of family were taken as signs of a human.',
-    'Automatic detectors make mistakes too: in one study they consistently flagged texts by non-native English writers as AI-generated.'],
-    'So a wrong guess in this game is normal. Treat it as attention training, not as an exam.'),
   'poll.html': ('What large surveys show', [
     '17% of US adults said AI will have a positive effect on the country over the next 20 years; among AI experts the figure was 56%.',
     '51% of adults were more concerned than excited about the growing use of AI; among experts, 15%. The surveys covered 5,410 US adults (August 2024) and 1,013 AI experts (August–October 2024).'],
@@ -50,10 +42,6 @@ N = {
     'В исследовании с участием 666 человек частое использование ИИ-инструментов было связано с более низкими показателями критического мышления. Это корреляция: она не доказывает, что причина в ИИ.',
     'В эксперименте с 54 участниками, писавшими эссе, у группы с ИИ-ассистентом связность мозговой активности была самой слабой из трёх групп. Это препринт, он не прошёл рецензирование.'],
     'Область молодая: эти исследования небольшие или основаны на самоотчётах. 33 протокола — авторская практика, построенная на этих идеях, а не проверенное лечение.'),
-  'game.html': ('Отличают ли люди текст ИИ от человеческого?', [
-    'В шести экспериментах с 4600 участниками люди не смогли отличить самоописания, написанные ИИ, от человеческих. Они опирались на признаки, которые не работают: местоимения первого лица, разговорные сокращения и упоминания семьи принимали за признак человека.',
-    'Автоматические детекторы тоже ошибаются: в одном исследовании они систематически помечали тексты авторов, для которых английский не родной, как написанные ИИ.'],
-    'Поэтому ошибка в этой игре — это нормально. Считайте её тренировкой внимания, а не экзаменом.'),
   'poll.html': ('Что показывают большие опросы', [
     '17% взрослых жителей США сказали, что ИИ положительно повлияет на страну в ближайшие 20 лет; среди экспертов по ИИ — 56%.',
     '51% взрослых испытывают по поводу распространения ИИ больше беспокойства, чем воодушевления; среди экспертов — 15%. Опрошены 5410 взрослых жителей США (август 2024) и 1013 экспертов по ИИ (август–октябрь 2024).'],
@@ -67,10 +55,6 @@ N = {
     'En un estudio con 666 personas, el uso frecuente de herramientas de IA se asoció con puntuaciones más bajas de pensamiento crítico. Es una correlación: no demuestra que la IA sea la causa.',
     'En un experimento con 54 participantes que escribían ensayos, el grupo que usó un asistente de IA mostró la conectividad cerebral más débil de los tres grupos. Es un preprint que no ha pasado revisión por pares.'],
     'El campo es joven: estos estudios son pequeños o se basan en autoinformes. Los 33 protocolos son la práctica propia del autor construida sobre estas ideas, no un tratamiento probado.'),
-  'game.html': ('¿Distinguimos un texto de IA de uno humano?', [
-    'En seis experimentos con 4.600 participantes, las personas no pudieron distinguir las autodescripciones escritas por IA de las humanas. Se guiaban por señales que no funcionan: los pronombres en primera persona, las contracciones y las menciones a la familia se tomaban como señal de un humano.',
-    'Los detectores automáticos también se equivocan: en un estudio marcaron de forma sistemática como generados por IA los textos de autores cuya lengua materna no es el inglés.'],
-    'Por eso, fallar en este juego es normal. Tómalo como un entrenamiento de la atención, no como un examen.'),
   'poll.html': ('Qué muestran las grandes encuestas', [
     'El 17 % de los adultos de EE. UU. dijo que la IA tendrá un efecto positivo en el país en los próximos 20 años; entre los expertos en IA, el 56 %.',
     'El 51 % de los adultos siente más preocupación que entusiasmo por el uso creciente de la IA; entre los expertos, el 15 %. Se encuestó a 5.410 adultos de EE. UU. (agosto de 2024) y a 1.013 expertos en IA (agosto–octubre de 2024).'],
@@ -84,10 +68,6 @@ N = {
     'In einer Studie mit 666 Personen hing häufige Nutzung von KI-Werkzeugen mit niedrigeren Werten im kritischen Denken zusammen. Das ist eine Korrelation: Sie beweist nicht, dass KI die Ursache ist.',
     'In einem Experiment mit 54 Teilnehmenden, die Essays schrieben, zeigte die Gruppe mit KI-Assistent die schwächste Hirnkonnektivität der drei Gruppen. Es handelt sich um einen Preprint ohne Peer-Review.'],
     'Das Forschungsfeld ist jung: Diese Studien sind klein oder beruhen auf Selbstauskünften. Die 33 Protokolle sind die eigene Praxis des Autors auf Basis dieser Ideen, keine geprüfte Behandlung.'),
-  'game.html': ('Können Menschen KI-Text von menschlichem Text unterscheiden?', [
-    'In sechs Experimenten mit 4.600 Teilnehmenden konnten Menschen KI-geschriebene Selbstbeschreibungen nicht von menschlichen unterscheiden. Sie verließen sich auf Hinweise, die nicht funktionieren: Ich-Pronomen, umgangssprachliche Kurzformen und Erwähnungen der Familie galten als Zeichen für einen Menschen.',
-    'Auch automatische Detektoren irren sich: In einer Studie stuften sie Texte von Nicht-Muttersprachlern des Englischen durchgehend als KI-generiert ein.'],
-    'Ein falscher Tipp in diesem Spiel ist also normal. Sehen Sie es als Aufmerksamkeitstraining, nicht als Prüfung.'),
   'poll.html': ('Was große Umfragen zeigen', [
     '17 % der Erwachsenen in den USA sagten, KI werde sich in den nächsten 20 Jahren positiv auf das Land auswirken; unter KI-Fachleuten waren es 56 %.',
     '51 % der Erwachsenen sind über die zunehmende Nutzung von KI eher besorgt als begeistert; unter Fachleuten 15 %. Befragt wurden 5.410 Erwachsene in den USA (August 2024) und 1.013 KI-Fachleute (August–Oktober 2024).'],
@@ -101,10 +81,6 @@ N = {
     'Dans une étude portant sur 666 personnes, l’usage fréquent d’outils d’IA était associé à des scores d’esprit critique plus faibles. C’est une corrélation : elle ne prouve pas que l’IA en soit la cause.',
     'Dans une expérience où 54 participants rédigeaient des essais, le groupe utilisant un assistant IA présentait la connectivité cérébrale la plus faible des trois groupes. Il s’agit d’une prépublication non évaluée par les pairs.'],
     'Le domaine est jeune : ces études sont de petite taille ou reposent sur des auto-déclarations. Les 33 protocoles sont la pratique personnelle de l’auteur, construite sur ces idées, et non un traitement validé.'),
-  'game.html': ('Sait-on distinguer un texte d’IA d’un texte humain ?', [
-    'Dans six expériences réunissant 4 600 participants, les personnes n’ont pas su distinguer les présentations de soi écrites par une IA de celles écrites par des humains. Elles se fiaient à des indices qui ne fonctionnent pas : les pronoms à la première personne, les contractions et les mentions de la famille étaient pris pour des signes d’humanité.',
-    'Les détecteurs automatiques se trompent aussi : dans une étude, ils classaient systématiquement comme générés par IA les textes d’auteurs dont l’anglais n’est pas la langue maternelle.'],
-    'Se tromper dans ce jeu est donc normal. Voyez-le comme un entraînement de l’attention, pas comme un examen.'),
   'poll.html': ('Ce que montrent les grandes enquêtes', [
     '17 % des adultes américains estiment que l’IA aura un effet positif sur le pays dans les 20 prochaines années ; parmi les experts en IA, 56 %.',
     '51 % des adultes se disent plus inquiets qu’enthousiastes face à l’usage croissant de l’IA ; parmi les experts, 15 %. Les enquêtes ont porté sur 5 410 adultes américains (août 2024) et 1 013 experts en IA (août–octobre 2024).'],
@@ -118,10 +94,6 @@ N = {
     '666人を対象とした研究では、AIツールを頻繁に使うことと批判的思考のスコアの低さに関連が見られました。これは相関であり、AIが原因だと証明するものではありません。',
     '54人がエッセイを書く実験では、AIアシスタントを使ったグループの脳の結合性が3グループの中で最も弱いという結果でした。これは査読前のプレプリントです。'],
     'この分野はまだ新しく、これらの研究は小規模か自己申告に基づいています。33のプロトコルはこうした考え方をもとにした著者自身の実践であり、検証済みの治療法ではありません。'),
-  'game.html': ('人はAIの文章と人間の文章を見分けられるか', [
-    '4,600人が参加した6つの実験で、人々はAIが書いた自己紹介文と人間が書いたものを見分けられませんでした。一人称の代名詞、くだけた短縮形、家族への言及といった、実際には当てにならない手がかりを「人間らしさ」と判断していました。',
-    '自動検出ツールも間違えます。ある研究では、英語を母語としない人の文章を一貫してAI生成と誤判定しました。'],
-    'ですから、このゲームで間違えるのは普通のことです。試験ではなく、注意力のトレーニングとして楽しんでください。'),
   'poll.html': ('大規模調査が示すこと', [
     '米国の成人の17%が、今後20年間でAIは国に良い影響を与えると答えました。AIの専門家では56%でした。',
     'AIの利用拡大について、成人の51%が期待より懸念のほうが大きいと答え、専門家では15%でした。調査対象は米国の成人5,410人（2024年8月）とAI専門家1,013人（2024年8月〜10月）です。'],
@@ -135,10 +107,6 @@ N = {
     'Trong một nghiên cứu với 666 người, việc dùng công cụ AI thường xuyên có liên quan đến điểm tư duy phản biện thấp hơn. Đây là mối tương quan: nó không chứng minh AI là nguyên nhân.',
     'Trong một thí nghiệm với 54 người viết bài luận, nhóm dùng trợ lý AI có mức kết nối não yếu nhất trong ba nhóm. Đây là bản thảo chưa qua bình duyệt.'],
     'Lĩnh vực này còn mới: các nghiên cứu trên có quy mô nhỏ hoặc dựa trên tự báo cáo. 33 giao thức là thực hành riêng của tác giả dựa trên những ý tưởng này, không phải phương pháp điều trị đã được kiểm chứng.'),
-  'game.html': ('Con người có phân biệt được văn bản AI với văn bản của người không?', [
-    'Trong sáu thí nghiệm với 4.600 người tham gia, mọi người không phân biệt được đoạn tự giới thiệu do AI viết với đoạn do người viết. Họ dựa vào những dấu hiệu không đáng tin: đại từ ngôi thứ nhất, cách viết rút gọn thân mật và việc nhắc đến gia đình bị coi là dấu hiệu của con người.',
-    'Các công cụ phát hiện tự động cũng sai: trong một nghiên cứu, chúng liên tục gắn nhãn “do AI tạo” cho bài viết của những người không phải người bản ngữ tiếng Anh.'],
-    'Vì vậy đoán sai trong trò chơi này là chuyện bình thường. Hãy coi đây là bài luyện sự chú ý, không phải bài thi.'),
   'poll.html': ('Các khảo sát lớn cho thấy gì', [
     '17% người trưởng thành ở Mỹ cho rằng AI sẽ tác động tích cực đến đất nước trong 20 năm tới; trong giới chuyên gia AI, con số này là 56%.',
     '51% người trưởng thành lo ngại nhiều hơn là hào hứng trước việc AI được dùng ngày càng nhiều; ở chuyên gia là 15%. Khảo sát gồm 5.410 người trưởng thành ở Mỹ (tháng 8/2024) và 1.013 chuyên gia AI (tháng 8–10/2024).'],
@@ -152,10 +120,6 @@ N = {
     'ในการศึกษากับผู้เข้าร่วม 666 คน การใช้เครื่องมือ AI บ่อยสัมพันธ์กับคะแนนการคิดเชิงวิพากษ์ที่ต่ำกว่า นี่เป็นความสัมพันธ์ ไม่ได้พิสูจน์ว่า AI เป็นสาเหตุ',
     'ในการทดลองกับผู้เข้าร่วม 54 คนที่เขียนเรียงความ กลุ่มที่ใช้ผู้ช่วย AI มีการเชื่อมต่อของสมองอ่อนที่สุดในสามกลุ่ม งานนี้เป็นฉบับก่อนตีพิมพ์ที่ยังไม่ผ่านการประเมินโดยผู้ทรงคุณวุฒิ'],
     'สาขานี้ยังใหม่ งานวิจัยเหล่านี้มีขนาดเล็กหรืออาศัยการรายงานตนเอง โปรโตคอล 33 ข้อเป็นแนวปฏิบัติของผู้เขียนเองที่สร้างจากแนวคิดเหล่านี้ ไม่ใช่วิธีรักษาที่ผ่านการทดสอบแล้ว'),
-  'game.html': ('คนแยกข้อความ AI ออกจากข้อความของมนุษย์ได้หรือไม่', [
-    'ในการทดลองหกครั้งกับผู้เข้าร่วม 4,600 คน ผู้คนแยกไม่ออกว่าข้อความแนะนำตัวใดเขียนโดย AI และใดเขียนโดยมนุษย์ พวกเขาอาศัยสัญญาณที่ใช้ไม่ได้จริง เช่น สรรพนามบุรุษที่หนึ่ง รูปย่อแบบภาษาพูด และการเอ่ยถึงครอบครัว ซึ่งถูกมองว่าเป็นสัญญาณของมนุษย์',
-    'เครื่องมือตรวจจับอัตโนมัติก็ผิดพลาดได้ ในงานวิจัยหนึ่ง เครื่องมือเหล่านี้ระบุงานเขียนของผู้ที่ไม่ได้ใช้ภาษาอังกฤษเป็นภาษาแม่ว่าเป็นงานที่ AI สร้างอยู่เป็นประจำ'],
-    'ดังนั้นการทายผิดในเกมนี้เป็นเรื่องปกติ ให้มองว่าเป็นการฝึกสมาธิ ไม่ใช่การสอบ'),
   'poll.html': ('ผลสำรวจขนาดใหญ่บอกอะไร', [
     'ผู้ใหญ่ในสหรัฐฯ 17% กล่าวว่า AI จะส่งผลดีต่อประเทศในอีก 20 ปีข้างหน้า ส่วนในกลุ่มผู้เชี่ยวชาญด้าน AI ตัวเลขคือ 56%',
     'ผู้ใหญ่ 51% รู้สึกกังวลมากกว่าตื่นเต้นกับการใช้ AI ที่เพิ่มขึ้น ส่วนผู้เชี่ยวชาญคือ 15% การสำรวจครอบคลุมผู้ใหญ่ในสหรัฐฯ 5,410 คน (สิงหาคม 2024) และผู้เชี่ยวชาญด้าน AI 1,013 คน (สิงหาคม–ตุลาคม 2024)'],
@@ -169,10 +133,6 @@ N = {
     'Num estudo com 666 pessoas, o uso frequente de ferramentas de IA esteve associado a pontuações mais baixas de pensamento crítico. É uma correlação: não prova que a IA seja a causa.',
     'Num experimento com 54 participantes escrevendo redações, o grupo que usou um assistente de IA mostrou a conectividade cerebral mais fraca dos três grupos. É um preprint que não passou por revisão por pares.'],
     'A área é nova: esses estudos são pequenos ou baseados em autorrelato. Os 33 protocolos são a prática do próprio autor construída sobre essas ideias, não um tratamento testado.'),
-  'game.html': ('As pessoas distinguem texto de IA de texto humano?', [
-    'Em seis experimentos com 4.600 participantes, as pessoas não conseguiram distinguir autodescrições escritas por IA das escritas por humanos. Elas se apoiavam em sinais que não funcionam: pronomes na primeira pessoa, contrações e menções à família eram tomados como sinal de um humano.',
-    'Os detectores automáticos também erram: em um estudo, eles marcaram de forma consistente como gerados por IA os textos de autores que não têm o inglês como língua materna.'],
-    'Por isso, errar neste jogo é normal. Encare como um treino de atenção, não como uma prova.'),
   'poll.html': ('O que mostram as grandes pesquisas', [
     '17% dos adultos dos EUA disseram que a IA terá um efeito positivo no país nos próximos 20 anos; entre especialistas em IA, 56%.',
     '51% dos adultos estão mais preocupados do que animados com o uso crescente da IA; entre especialistas, 15%. Foram ouvidos 5.410 adultos dos EUA (agosto de 2024) e 1.013 especialistas em IA (agosto–outubro de 2024).'],
@@ -186,10 +146,6 @@ N = {
     '666명을 대상으로 한 연구에서, AI 도구를 자주 사용하는 것은 낮은 비판적 사고 점수와 관련이 있었습니다. 이는 상관관계이며 AI가 원인이라는 증거는 아닙니다.',
     '54명이 에세이를 쓴 실험에서, AI 어시스턴트를 사용한 그룹의 뇌 연결성이 세 그룹 중 가장 약했습니다. 이 연구는 동료 심사를 거치지 않은 프리프린트입니다.'],
     '이 분야는 아직 초기 단계이며, 이 연구들은 규모가 작거나 자기 보고에 기반합니다. 33개 프로토콜은 이러한 생각을 바탕으로 한 저자 자신의 실천법이며 검증된 치료법이 아닙니다.'),
-  'game.html': ('사람은 AI 글과 사람 글을 구별할 수 있을까요?', [
-    '4,600명이 참여한 여섯 차례의 실험에서 사람들은 AI가 쓴 자기소개와 사람이 쓴 자기소개를 구별하지 못했습니다. 1인칭 대명사, 구어체 축약형, 가족 언급처럼 실제로는 통하지 않는 단서를 사람의 흔적으로 여겼습니다.',
-    '자동 탐지 도구도 틀립니다. 한 연구에서 탐지 도구들은 영어가 모국어가 아닌 사람의 글을 일관되게 AI 생성으로 분류했습니다.'],
-    '그러니 이 게임에서 틀리는 것은 자연스러운 일입니다. 시험이 아니라 주의력 훈련으로 생각하세요.'),
   'poll.html': ('대규모 설문조사가 보여 주는 것', [
     '미국 성인의 17%가 앞으로 20년 동안 AI가 나라에 긍정적인 영향을 줄 것이라고 답했습니다. AI 전문가 중에서는 56%였습니다.',
     '성인의 51%는 AI 사용 확대에 대해 기대보다 우려가 더 크다고 답했고, 전문가 중에서는 15%였습니다. 조사 대상은 미국 성인 5,410명(2024년 8월)과 AI 전문가 1,013명(2024년 8월~10월)입니다.'],
@@ -203,10 +159,6 @@ N = {
     'In uno studio su 666 persone, l’uso frequente di strumenti di IA era associato a punteggi più bassi di pensiero critico. È una correlazione: non dimostra che la causa sia l’IA.',
     'In un esperimento con 54 partecipanti impegnati a scrivere saggi, il gruppo che usava un assistente IA mostrava la connettività cerebrale più debole dei tre gruppi. È un preprint non sottoposto a revisione paritaria.'],
     'Il campo è giovane: questi studi sono piccoli o basati su autovalutazioni. I 33 protocolli sono la pratica personale dell’autore costruita su queste idee, non un trattamento verificato.'),
-  'game.html': ('Sappiamo distinguere un testo dell’IA da uno umano?', [
-    'In sei esperimenti con 4.600 partecipanti, le persone non sono riuscite a distinguere le autopresentazioni scritte dall’IA da quelle umane. Si affidavano a indizi che non funzionano: pronomi in prima persona, forme contratte e riferimenti alla famiglia venivano presi per segni di un essere umano.',
-    'Anche i rilevatori automatici sbagliano: in uno studio hanno classificato sistematicamente come generati dall’IA i testi di autori non madrelingua inglese.'],
-    'Quindi sbagliare in questo gioco è normale. Consideralo un allenamento dell’attenzione, non un esame.'),
   'poll.html': ('Cosa mostrano i grandi sondaggi', [
     'Il 17% degli adulti statunitensi ha detto che l’IA avrà un effetto positivo sul Paese nei prossimi 20 anni; tra gli esperti di IA, il 56%.',
     'Il 51% degli adulti è più preoccupato che entusiasta per l’uso crescente dell’IA; tra gli esperti, il 15%. Sono stati intervistati 5.410 adulti statunitensi (agosto 2024) e 1.013 esperti di IA (agosto–ottobre 2024).'],
@@ -220,10 +172,6 @@ N = {
     '666 लोगों के एक अध्ययन में, AI टूल का बार-बार इस्तेमाल आलोचनात्मक सोच के कम अंकों से जुड़ा पाया गया। यह सह-संबंध है: इससे यह साबित नहीं होता कि कारण AI है।',
     'निबंध लिखने वाले 54 प्रतिभागियों के एक प्रयोग में, AI असिस्टेंट इस्तेमाल करने वाले समूह की मस्तिष्क कनेक्टिविटी तीनों समूहों में सबसे कमज़ोर थी। यह एक प्रीप्रिंट है जिसकी पीयर रिव्यू नहीं हुई है।'],
     'यह क्षेत्र नया है: ये अध्ययन छोटे हैं या आत्म-रिपोर्ट पर आधारित हैं। 33 प्रोटोकॉल इन विचारों पर बना लेखक का अपना अभ्यास है, कोई परखा हुआ इलाज नहीं।'),
-  'game.html': ('क्या लोग AI के लिखे और इंसान के लिखे में फ़र्क़ कर पाते हैं?', [
-    '4,600 प्रतिभागियों वाले छह प्रयोगों में लोग AI के लिखे आत्म-परिचय और इंसानों के लिखे आत्म-परिचय में फ़र्क़ नहीं कर पाए। वे ऐसे संकेतों पर भरोसा करते थे जो काम नहीं करते: “मैं” जैसे सर्वनाम, बोलचाल के संक्षिप्त रूप और परिवार का ज़िक्र इंसान की निशानी मान लिए जाते थे।',
-    'ऑटोमैटिक डिटेक्टर भी ग़लती करते हैं: एक अध्ययन में उन्होंने उन लेखकों के लेखन को लगातार AI-जनित बताया जिनकी मातृभाषा अंग्रेज़ी नहीं है।'],
-    'इसलिए इस गेम में ग़लत अंदाज़ा लगाना सामान्य है। इसे परीक्षा नहीं, ध्यान का अभ्यास समझें।'),
   'poll.html': ('बड़े सर्वे क्या दिखाते हैं', [
     'अमेरिका के 17% वयस्कों ने कहा कि अगले 20 वर्षों में AI का देश पर सकारात्मक असर होगा; AI विशेषज्ञों में यह आँकड़ा 56% था।',
     '51% वयस्क AI के बढ़ते इस्तेमाल को लेकर उत्साह से ज़्यादा चिंता महसूस करते हैं; विशेषज्ञों में 15%। सर्वे में 5,410 अमेरिकी वयस्क (अगस्त 2024) और 1,013 AI विशेषज्ञ (अगस्त–अक्टूबर 2024) शामिल थे।'],
