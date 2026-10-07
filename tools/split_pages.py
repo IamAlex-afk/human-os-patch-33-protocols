@@ -15,6 +15,9 @@ Pipeline (always in this order, from the site folder):
 """
 import datetime, html, json, os, re, sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import research_notes
+
 sys.stdout.reconfigure(encoding='utf-8')
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + os.sep
 SITE = 'https://iamalex-afk.github.io/human-os-patch-33-protocols/'
@@ -163,6 +166,10 @@ def make(full, lang, page):
     lds = list(re.finditer(r'<script type="application/ld\+json"[^>]*>.*?</script>', out, re.S))
     for k, m in reversed(list(enumerate(lds))):
         out = out[:m.start()] + (ld if k == 0 else '') + out[m.end():]
+    notes = research_notes.block(lang, page)        # sourced "what research says" block, right after the page's main section
+    if notes:
+        k = out.index('</section>', out.index('<main')) + len('</section>')
+        out = out[:k] + chr(10) + chr(10) + chr(32) * 2 + notes + out[k:]
     for js in DROP_JS[page]:
         out, n = re.subn(r'<script src="(?:\.\./)?js/' + re.escape(js) + r'" defer></script>\r?\n?', '', out)
         assert n == 1, (page, js, n)
