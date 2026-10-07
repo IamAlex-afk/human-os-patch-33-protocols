@@ -12,10 +12,15 @@ sys.stdout.reconfigure(encoding='utf-8')
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + os.sep
 SITE = 'https://iamalex-afk.github.io/human-os-patch-33-protocols/'
 LANGS = ['en', 'ru', 'es', 'de', 'fr', 'ja', 'vi', 'th', 'pt', 'ko', 'it', 'hi']
+PAGES = ['index.html', 'faq.html', 'protocols.html', 'poll.html', 'game.html']     # tools/split_pages.py
 
 
-def page(lang):
-    return 'index.html' if lang == 'en' else lang + '/index.html'
+def page(lang, name='index.html'):
+    return name if lang == 'en' else lang + '/' + name
+
+
+def url(lang, name):
+    return SITE + ('' if lang == 'en' else lang + '/') + ('' if name == 'index.html' else name)
 
 
 def read(rel):
@@ -49,11 +54,11 @@ def keys(lang):
 
 def main():
     errors, notes = [], []
-    pages = {L: read(page(L)) for L in LANGS}
-    en_lines = {l.strip() for l in visible(pages['en']).split('\n') if len(l.strip()) > 30 and re.search(r'[a-z]{4,} [a-z]{3,} [a-z]{3,}', l)}
+    pages = {(L, N): read(page(L, N)) for N in PAGES for L in LANGS}
+    en_lines = {l.strip() for l in visible(pages[('en', 'index.html')]).split('\n') if len(l.strip()) > 30 and re.search(r'[a-z]{4,} [a-z]{3,} [a-z]{3,}', l)}
     titles, descs = {}, {}
-    for L, s in pages.items():
-        rel = page(L)
+    for (L, N), s in pages.items():
+        rel = page(L, N)
         d = os.path.dirname(rel)
         head = s[:s.find('</head>')]
         # html lang
@@ -61,7 +66,7 @@ def main():
         if not m or m.group(1) != L:
             errors.append(f'{rel}: <html lang> is {m.group(1) if m else None}, expected {L}')
         # canonical, og:url
-        want = SITE + ('' if L == 'en' else L + '/')
+        want = url(L, N)
         c = re.search(r'<link rel="canonical"[^>]*href="([^"]+)"', head)
         if not c or c.group(1) != want:
             errors.append(f'{rel}: canonical {c.group(1) if c else "missing"} != {want}')
@@ -71,7 +76,7 @@ def main():
         # hreflang: x-default + all 12, each pointing at an existing page
         hl = dict(re.findall(r'<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"', head))
         for X in LANGS + ['x-default']:
-            exp = SITE + ('' if X in ('en', 'x-default') else X + '/')
+            exp = url('en' if X == 'x-default' else X, N)
             if hl.get(X) != exp:
                 errors.append(f'{rel}: hreflang {X} is {hl.get(X)}, expected {exp}')
         # title / description
@@ -92,6 +97,11 @@ def main():
                 target = os.path.normpath(os.path.join(d, h))
             if target and not os.path.exists(ROOT + target):
                 errors.append(f'{rel}: broken link or asset {h}')
+        if len(re.findall(r'<h1[ >]', s)) != 1:
+            errors.append(f'{rel}: expected exactly one <h1>')
+        for N2 in PAGES[1:]:
+            if f'href="{N2}"' not in s:
+                errors.append(f'{rel}: menu link to {N2} missing')
         # in-page anchors
         ids = set(re.findall(r'\bid="([^"]+)"', s))
         for h in set(re.findall(r'<a\b[^>]*\bhref="#([^"]+)"', s)):
@@ -111,7 +121,7 @@ def main():
                 if squash(q.get('name', '')) not in vis:
                     errors.append(f'{rel}: FAQ markup question not visible on the page: {q.get("name", "")[:70]}')
         # English left in the static HTML of a language page
-        if L != 'en':
+        if L != 'en' and N == 'index.html':
             left = [l.strip() for l in visible(s).split('\n') if l.strip() in en_lines]
             if left:
                 notes.append(f'{rel}: {len(left)} English lines in the static HTML, e.g. "{left[0][:70]}"')
@@ -142,13 +152,13 @@ def main():
             errors.append(f'{rel}: missing')
         elif f'<html lang="{L}">' not in read(rel):
             errors.append(f'{rel}: wrong html lang')
-    for L, s in pages.items():
+    for (L, N), s in pages.items():
         ext = re.findall(r'<(?:script|img|iframe)[^>]*src="(https?://[^"]+)"|<link[^>]*rel="(?:stylesheet|preconnect|preload|dns-prefetch)"[^>]*href="(https?://[^"]+)"|<link[^>]*href="(https?://[^"]+)"[^>]*rel="(?:stylesheet|preconnect|preload|dns-prefetch)"', s)
         for g in ext:
-            errors.append(f'{page(L)}: loads from another host: {[x for x in g if x][0][:70]}')
-    # sitemap = the 12 pages
+            errors.append(f'{page(L, N)}: loads from another host: {[x for x in g if x][0][:70]}')
+    # sitemap = every page in every language
     locs = set(re.findall(r'<loc>([^<]+)</loc>', read('sitemap.xml')))
-    want = {SITE + ('' if L == 'en' else L + '/') for L in LANGS}
+    want = {url(L, N) for N in PAGES for L in LANGS}
     for u in sorted(want - locs):
         errors.append(f'sitemap.xml: page missing: {u}')
     for u in sorted(locs - want):

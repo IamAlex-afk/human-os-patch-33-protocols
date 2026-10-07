@@ -35,8 +35,8 @@ $langs = @{
   }
   ja = @{
     title  = "AI依存度チェック【無料・匿名】28の質問で診断"
-    desc   = "AI依存度を28問で無料チェック。認知的オフロード、AI不安、デジタル燃え尽き症候群を科学的根拠に基づき匿名で診断。登録不要、データ収集なし。よくある質問とグローバル投票も含まれています。"
-    ogdesc = "認知的オフロード、AI不安、デジタル燃え尽き症候群の科学的かつ匿名のアセスメント。登録不要、データ収集なし。よくある質問とグローバル投票（AIに賛成か反対か）も含まれています。"
+    desc   = "AI依存度を28問で無料チェック。認知的オフロード、AI不安、デジタル燃え尽き症候群を科学的根拠に基づき匿名で診断。登録不要、データ収集なし。よくある質問も掲載しています。"
+    ogdesc = "認知的オフロード、AI不安、デジタル燃え尽き症候群の科学的かつ匿名のアセスメント。登録不要、データ収集なし。よくある質問も掲載しています。"
     locale = "ja_JP"
     nojsT  = "JavaScriptを有効にしてください"
     nojsP  = "このチェックはプライバシー保護のため、すべてお使いのブラウザ内で動作します。利用にはJavaScriptが必要です。"
@@ -85,7 +85,8 @@ $langs = @{
   }
 }
 
-$template = Get-Content "index.html" -Raw -Encoding UTF8
+# The full single-page source (all sections). tools/split_pages.py cuts it into the home page and the standalone pages.
+$template = Get-Content "tools/full-page.tpl" -Raw -Encoding UTF8
 
 foreach ($lang in $langs.Keys) {
   $t = $langs[$lang]

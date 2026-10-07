@@ -1,250 +1,1024 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/</loc>
-    <lastmod>2026-08-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-10-07</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
-    <xhtml:link rel="alternate" hreflang="ru"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/"/>
-    <xhtml:link rel="alternate" hreflang="es"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/"/>
-    <xhtml:link rel="alternate" hreflang="de"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/"/>
-    <xhtml:link rel="alternate" hreflang="fr"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/"/>
-    <xhtml:link rel="alternate" hreflang="ja"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/"/>
-    <xhtml:link rel="alternate" hreflang="vi"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/"/>
-    <xhtml:link rel="alternate" hreflang="th"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/"/>
-    <xhtml:link rel="alternate" hreflang="pt"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/"/>
-    <xhtml:link rel="alternate" hreflang="ko"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/"/>
-    <xhtml:link rel="alternate" hreflang="it"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/"/>
-    <xhtml:link rel="alternate" hreflang="hi"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/"/>
-    <image:image>
-      <image:loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/cover.jpg</image:loc>
-      <image:title>Mind-OS: Free Anonymous AI Dependency Test</image:title>
-    </image:image>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/"/>
   </url>
-
   <url>
     <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/</loc>
-    <lastmod>2026-08-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-10-07</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
-    <xhtml:link rel="alternate" hreflang="ru"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/"/>
-    <xhtml:link rel="alternate" hreflang="es"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/"/>
-    <xhtml:link rel="alternate" hreflang="de"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/"/>
-    <xhtml:link rel="alternate" hreflang="fr"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/"/>
-    <xhtml:link rel="alternate" hreflang="ja"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/"/>
-    <xhtml:link rel="alternate" hreflang="vi"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/"/>
-    <xhtml:link rel="alternate" hreflang="th"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/"/>
-    <xhtml:link rel="alternate" hreflang="pt"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/"/>
-    <xhtml:link rel="alternate" hreflang="ko"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/"/>
-    <xhtml:link rel="alternate" hreflang="it"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/"/>
-    <xhtml:link rel="alternate" hreflang="hi"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/"/>
   </url>
-
   <url>
     <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/es/</loc>
-    <lastmod>2026-08-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-10-07</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
-    <xhtml:link rel="alternate" hreflang="ru"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/"/>
-    <xhtml:link rel="alternate" hreflang="es"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/"/>
-    <xhtml:link rel="alternate" hreflang="de"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/"/>
-    <xhtml:link rel="alternate" hreflang="fr"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/"/>
-    <xhtml:link rel="alternate" hreflang="ja"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/"/>
-    <xhtml:link rel="alternate" hreflang="vi"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/"/>
-    <xhtml:link rel="alternate" hreflang="th"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/"/>
-    <xhtml:link rel="alternate" hreflang="pt"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/"/>
-    <xhtml:link rel="alternate" hreflang="ko"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/"/>
-    <xhtml:link rel="alternate" hreflang="it"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/"/>
-    <xhtml:link rel="alternate" hreflang="hi"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/"/>
   </url>
-
   <url>
     <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/de/</loc>
-    <lastmod>2026-08-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-10-07</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
-    <xhtml:link rel="alternate" hreflang="ru"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/"/>
-    <xhtml:link rel="alternate" hreflang="es"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/"/>
-    <xhtml:link rel="alternate" hreflang="de"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/"/>
-    <xhtml:link rel="alternate" hreflang="fr"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/"/>
-    <xhtml:link rel="alternate" hreflang="ja"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/"/>
-    <xhtml:link rel="alternate" hreflang="vi"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/"/>
-    <xhtml:link rel="alternate" hreflang="th"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/"/>
-    <xhtml:link rel="alternate" hreflang="pt"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/"/>
-    <xhtml:link rel="alternate" hreflang="ko"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/"/>
-    <xhtml:link rel="alternate" hreflang="it"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/"/>
-    <xhtml:link rel="alternate" hreflang="hi"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/"/>
   </url>
-
   <url>
     <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/</loc>
-    <lastmod>2026-08-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-10-07</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
-    <xhtml:link rel="alternate" hreflang="ru"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/"/>
-    <xhtml:link rel="alternate" hreflang="es"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/"/>
-    <xhtml:link rel="alternate" hreflang="de"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/"/>
-    <xhtml:link rel="alternate" hreflang="fr"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/"/>
-    <xhtml:link rel="alternate" hreflang="ja"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/"/>
-    <xhtml:link rel="alternate" hreflang="vi"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/"/>
-    <xhtml:link rel="alternate" hreflang="th"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/"/>
-    <xhtml:link rel="alternate" hreflang="pt"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/"/>
-    <xhtml:link rel="alternate" hreflang="ko"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/"/>
-    <xhtml:link rel="alternate" hreflang="it"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/"/>
-    <xhtml:link rel="alternate" hreflang="hi"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/"/>
   </url>
-
   <url>
     <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/</loc>
-    <lastmod>2026-08-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-10-07</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
-    <xhtml:link rel="alternate" hreflang="ru"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/"/>
-    <xhtml:link rel="alternate" hreflang="es"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/"/>
-    <xhtml:link rel="alternate" hreflang="de"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/"/>
-    <xhtml:link rel="alternate" hreflang="fr"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/"/>
-    <xhtml:link rel="alternate" hreflang="ja"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/"/>
-    <xhtml:link rel="alternate" hreflang="vi"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/"/>
-    <xhtml:link rel="alternate" hreflang="th"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/"/>
-    <xhtml:link rel="alternate" hreflang="pt"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/"/>
-    <xhtml:link rel="alternate" hreflang="ko"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/"/>
-    <xhtml:link rel="alternate" hreflang="it"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/"/>
-    <xhtml:link rel="alternate" hreflang="hi"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/"/>
   </url>
-
   <url>
     <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/</loc>
-    <lastmod>2026-08-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-10-07</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
-    <xhtml:link rel="alternate" hreflang="ru"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/"/>
-    <xhtml:link rel="alternate" hreflang="es"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/"/>
-    <xhtml:link rel="alternate" hreflang="de"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/"/>
-    <xhtml:link rel="alternate" hreflang="fr"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/"/>
-    <xhtml:link rel="alternate" hreflang="ja"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/"/>
-    <xhtml:link rel="alternate" hreflang="vi"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/"/>
-    <xhtml:link rel="alternate" hreflang="th"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/"/>
-    <xhtml:link rel="alternate" hreflang="pt"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/"/>
-    <xhtml:link rel="alternate" hreflang="ko"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/"/>
-    <xhtml:link rel="alternate" hreflang="it"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/"/>
-    <xhtml:link rel="alternate" hreflang="hi"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/"/>
   </url>
-
   <url>
     <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/th/</loc>
-    <lastmod>2026-08-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-10-07</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
-    <xhtml:link rel="alternate" hreflang="ru"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/"/>
-    <xhtml:link rel="alternate" hreflang="es"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/"/>
-    <xhtml:link rel="alternate" hreflang="de"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/"/>
-    <xhtml:link rel="alternate" hreflang="fr"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/"/>
-    <xhtml:link rel="alternate" hreflang="ja"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/"/>
-    <xhtml:link rel="alternate" hreflang="vi"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/"/>
-    <xhtml:link rel="alternate" hreflang="th"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/"/>
-    <xhtml:link rel="alternate" hreflang="pt"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/"/>
-    <xhtml:link rel="alternate" hreflang="ko"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/"/>
-    <xhtml:link rel="alternate" hreflang="it"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/"/>
-    <xhtml:link rel="alternate" hreflang="hi"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/"/>
   </url>
-
   <url>
     <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/</loc>
-    <lastmod>2026-08-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-10-07</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
-    <xhtml:link rel="alternate" hreflang="ru"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/"/>
-    <xhtml:link rel="alternate" hreflang="es"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/"/>
-    <xhtml:link rel="alternate" hreflang="de"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/"/>
-    <xhtml:link rel="alternate" hreflang="fr"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/"/>
-    <xhtml:link rel="alternate" hreflang="ja"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/"/>
-    <xhtml:link rel="alternate" hreflang="vi"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/"/>
-    <xhtml:link rel="alternate" hreflang="th"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/"/>
-    <xhtml:link rel="alternate" hreflang="pt"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/"/>
-    <xhtml:link rel="alternate" hreflang="ko"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/"/>
-    <xhtml:link rel="alternate" hreflang="it"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/"/>
-    <xhtml:link rel="alternate" hreflang="hi"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/"/>
   </url>
-
   <url>
     <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/</loc>
-    <lastmod>2026-08-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-10-07</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
-    <xhtml:link rel="alternate" hreflang="ru"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/"/>
-    <xhtml:link rel="alternate" hreflang="es"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/"/>
-    <xhtml:link rel="alternate" hreflang="de"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/"/>
-    <xhtml:link rel="alternate" hreflang="fr"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/"/>
-    <xhtml:link rel="alternate" hreflang="ja"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/"/>
-    <xhtml:link rel="alternate" hreflang="vi"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/"/>
-    <xhtml:link rel="alternate" hreflang="th"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/"/>
-    <xhtml:link rel="alternate" hreflang="pt"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/"/>
-    <xhtml:link rel="alternate" hreflang="ko"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/"/>
-    <xhtml:link rel="alternate" hreflang="it"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/"/>
-    <xhtml:link rel="alternate" hreflang="hi"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/"/>
   </url>
-
   <url>
     <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/it/</loc>
-    <lastmod>2026-08-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-10-07</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
-    <xhtml:link rel="alternate" hreflang="ru"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/"/>
-    <xhtml:link rel="alternate" hreflang="es"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/"/>
-    <xhtml:link rel="alternate" hreflang="de"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/"/>
-    <xhtml:link rel="alternate" hreflang="fr"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/"/>
-    <xhtml:link rel="alternate" hreflang="ja"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/"/>
-    <xhtml:link rel="alternate" hreflang="vi"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/"/>
-    <xhtml:link rel="alternate" hreflang="th"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/"/>
-    <xhtml:link rel="alternate" hreflang="pt"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/"/>
-    <xhtml:link rel="alternate" hreflang="ko"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/"/>
-    <xhtml:link rel="alternate" hreflang="it"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/"/>
-    <xhtml:link rel="alternate" hreflang="hi"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/"/>
   </url>
-
   <url>
     <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/</loc>
-    <lastmod>2026-08-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-10-07</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
-    <xhtml:link rel="alternate" hreflang="ru"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/"/>
-    <xhtml:link rel="alternate" hreflang="es"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/"/>
-    <xhtml:link rel="alternate" hreflang="de"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/"/>
-    <xhtml:link rel="alternate" hreflang="fr"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/"/>
-    <xhtml:link rel="alternate" hreflang="ja"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/"/>
-    <xhtml:link rel="alternate" hreflang="vi"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/"/>
-    <xhtml:link rel="alternate" hreflang="th"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/"/>
-    <xhtml:link rel="alternate" hreflang="pt"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/"/>
-    <xhtml:link rel="alternate" hreflang="ko"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/"/>
-    <xhtml:link rel="alternate" hreflang="it"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/"/>
-    <xhtml:link rel="alternate" hreflang="hi"        href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/"/>
   </url>
-
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/faq.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/faq.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/faq.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/faq.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/es/faq.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/faq.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/de/faq.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/faq.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/faq.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/faq.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/faq.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/faq.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/faq.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/faq.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/th/faq.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/faq.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/faq.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/faq.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/faq.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/faq.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/it/faq.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/faq.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/faq.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/faq.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/protocols.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/protocols.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/protocols.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/protocols.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/es/protocols.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/protocols.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/de/protocols.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/protocols.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/protocols.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/protocols.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/protocols.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/protocols.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/protocols.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/protocols.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/th/protocols.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/protocols.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/protocols.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/protocols.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/protocols.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/protocols.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/it/protocols.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/protocols.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/protocols.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/protocols.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/protocols.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/poll.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/poll.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/poll.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/poll.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/es/poll.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/poll.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/de/poll.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/poll.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/poll.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/poll.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/poll.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/poll.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/poll.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/poll.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/th/poll.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/poll.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/poll.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/poll.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/poll.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/poll.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/it/poll.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/poll.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/poll.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/poll.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/poll.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/game.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/game.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/game.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/game.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/game.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/game.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/game.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/game.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/game.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/game.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/game.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/game.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/game.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/game.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/game.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/game.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/game.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/game.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/game.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/game.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/game.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/game.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/es/game.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/game.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/game.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/game.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/game.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/game.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/game.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/game.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/game.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/game.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/game.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/de/game.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/game.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/game.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/game.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/game.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/game.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/game.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/game.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/game.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/game.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/game.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/game.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/game.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/game.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/game.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/game.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/game.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/game.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/game.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/game.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/game.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/game.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/game.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/game.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/game.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/game.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/game.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/game.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/game.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/game.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/game.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/game.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/game.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/game.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/game.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/game.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/game.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/game.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/game.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/game.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/game.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/game.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/game.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/game.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/th/game.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/game.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/game.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/game.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/game.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/game.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/game.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/game.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/game.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/game.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/game.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/game.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/game.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/game.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/game.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/game.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/game.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/game.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/game.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/game.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/game.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/game.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/game.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/game.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/game.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/game.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/game.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/game.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/game.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/game.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/game.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/game.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/game.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/it/game.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/game.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/game.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/game.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/game.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/game.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/game.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/game.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/game.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/game.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/game.html"/>
+  </url>
+  <url>
+    <loc>https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/game.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/game.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/game.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/game.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/game.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/game.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/game.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/game.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/game.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/game.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/game.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/game.html"/>
+  </url>
 </urlset>

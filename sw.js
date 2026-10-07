@@ -1,6 +1,6 @@
 /* Mind-OS Service Worker v2026.1 — офлайн + PWA установка */
-const CACHE = 'mindos-2026-18';
-const PRECACHE = ['./','./index.html','./css/style.css','./css/fonts.css',
+const CACHE = 'mindos-2026-19';
+const PRECACHE = ['./','./index.html','./faq.html','./protocols.html','./poll.html','./game.html','./css/style.css','./css/fonts.css',
   './css/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2',
   './css/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2',
   './css/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7SUc.woff2',
@@ -9,7 +9,7 @@ const PRECACHE = ['./','./index.html','./css/style.css','./css/fonts.css',
   './css/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7SUc.woff2',
   './css/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7SUc.woff2',
   './js/config.js','./js/storage.js','./js/translations-core.js','./js/translations/en.js',
-  './js/quiz.js','./js/tracker.js','./js/game.js','./js/poll.js','./js/main.js','./js/card.js',
+  './js/quiz.js','./js/game.js','./js/poll.js','./js/main.js','./js/card.js',
   './manifest.json','./favicon.ico','./apple-touch-icon.png','./apple-touch-icon-192.png','./apple-touch-icon-512.png','./cover.jpg',
   './ru/','./es/','./de/','./fr/','./ja/','./vi/','./th/','./pt/','./ko/','./it/','./hi/'];
 self.addEventListener('install', e => {

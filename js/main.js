@@ -152,13 +152,13 @@
       item.innerHTML = `<span class="lang-flag" aria-hidden="true">${meta.flag}</span><span class="lang-name">${meta.name}</span>`;
       item.onclick = () => {
         if (window.SITE_LANG) {
-          window.location.href = l === 'en' ? '../' : '../' + l + '/';
+          window.location.href = (l === 'en' ? '../' : '../' + l + '/') + (window.PAGE_FILE || '');
         } else if (l === 'en' || translations[l]) {
           applyLanguage(l);
           closeLangDropdown();
         } else {
           // translations/<l>.js isn't loaded on this page (only en.js is) — navigate instead
-          window.location.href = l + '/' + window.location.hash;
+          window.location.href = l + '/' + (window.PAGE_FILE || '') + window.location.hash;
         }
       };
       dropdown.appendChild(item);
@@ -232,13 +232,14 @@
     const ut = (id, val) => { const el = document.getElementById(id); if (el && val !== undefined) el.textContent = val; };
     const uh = (id, val) => { const el = document.getElementById(id); if (el && val !== undefined) el.innerHTML = val; };
 
-    document.title = `${t.mainTitle} | Mind-OS`;
+    const PM = window.PAGE_META || null;          // set on faq / protocols / poll / game pages
+    document.title = PM ? PM.title : `${t.mainTitle} | Mind-OS`;
     const descMeta = document.getElementById('dynamicDescription');
-    if (descMeta) descMeta.content = t.subhead;
+    if (descMeta) descMeta.content = PM ? PM.desc : t.subhead;
     const ogTitle = document.getElementById('dynamicOgTitle');
-    if (ogTitle) ogTitle.content = t.mainTitle;
+    if (ogTitle) ogTitle.content = PM ? PM.title.replace(' | Mind-OS', '') : t.mainTitle;
     const ogDesc = document.getElementById('dynamicOgDescription');
-    if (ogDesc) ogDesc.content = t.subhead;
+    if (ogDesc && !PM) ogDesc.content = t.subhead;
     const ogUrl = document.getElementById('dynamicOgUrl');
     if (ogUrl && !window.SITE_LANG) ogUrl.content = lang === 'en'
       ? 'https://iamalex-afk.github.io/human-os-patch-33-protocols/'
@@ -256,7 +257,6 @@
     }
     ut('skipLink', t.skipLink);
     ut('privacyLink', t.privacyLink);
-    ut('navTracker', t.navTracker);
     ut('navGame', t.navGame);
     ut('navPoll', t.navPoll);
     ut('navProtocols', t.navProtocols);
@@ -281,13 +281,6 @@
     ut('fearDesc', t.fearDesc);
     ut('fearHint', t.fearHint);
 
-    ut('trackerTitle', t.trackerTitle);
-    ut('trackerDesc', t.trackerDesc);
-    ut('trackerLowLabel', t.trackerLowLabel);
-    ut('trackerMidLabel', t.trackerMidLabel);
-    ut('trackerHighLabel', t.trackerHighLabel);
-    ut('saveTrackerEntry', t.saveBtn);
-    ut('resetTrackerData', t.resetBtn);
 
     ut('gameTitle', t.gameTitle);
     ut('gameDesc', t.gameDesc);
@@ -378,7 +371,6 @@
     ut('faqAiDangerQ', t.faqAiDangerQ);  uh('faqAiDangerA', t.faqAiDangerA);
 
     if (window.Quiz) Quiz.setLang(lang);
-    if (window.Tracker) Tracker.setLang(lang);
     if (window.Game) Game.setLang(lang);
     if (window.Poll) Poll.setLang(lang);
 
@@ -403,7 +395,6 @@
     }
 
     renderProtocols(t.protocols);
-    if (window.Tracker) Tracker.updateUI();
     if (window.Game) Game.loadQuestion();
     if (window.Poll) Poll.syncUI();
     if (window.Quiz) Quiz.updateOverallProgress();
@@ -460,23 +451,11 @@
     const lang = window.SITE_LANG || urlParams.get('lang') || savedLang || DEFAULT_LANG;
     if (!window.SITE_LANG && lang !== 'en' && !translations[lang]) {
       // translations/<lang>.js isn't loaded on this (English) page — navigate to the real page instead
-      window.location.href = lang + '/' + window.location.hash;
+      window.location.href = lang + '/' + (window.PAGE_FILE || '') + window.location.hash;
       return;
     }
     applyLanguage(lang);
     initLangSuggestBanner();
-
-    const tSlider = document.getElementById('trackerScore');
-    if (tSlider) {
-      tSlider.addEventListener('input', (e) => {
-        document.getElementById('trackerValueDisplay').textContent = e.target.value;
-      });
-    }
-
-    if (window.Tracker) {
-      document.getElementById('saveTrackerEntry')?.addEventListener('click', Tracker.saveEntry);
-      document.getElementById('resetTrackerData')?.addEventListener('click', Tracker.resetData);
-    }
 
     if (window.Game) {
       document.getElementById('gameBtnHuman')?.addEventListener('click', () => Game.handleGuess(false));
@@ -489,8 +468,7 @@
       document.getElementById('submitPoll')?.addEventListener('click', () => Poll.submit());
       document.getElementById('pollInviteBtn')?.addEventListener('click', () => {
         const t = getT(currentLang);
-        const base = window.location.origin + window.location.pathname.replace(/\/(ru|es|de|fr|ja|vi|th|pt|ko|it|hi)\/?$/, '/');
-        const pollUrl = base + '#poll-section';
+        const pollUrl = new URL('poll.html', window.location.href).href;
         const text = (t.pollInviteShareText || 'How do you feel about AI? Vote anonymously in the global Mind-OS poll:');
         if (navigator.share) {
           navigator.share({ title: 'Mind-OS Global AI Poll', text, url: pollUrl }).catch(() => {});
@@ -533,7 +511,6 @@
 
     const navMap = [
       { nav: 'navAssessment', sec: 'test-section' },
-      { nav: 'navTracker',    sec: 'tracker-section' },
       { nav: 'navGame',       sec: 'game-section' },
       { nav: 'navPoll',       sec: 'poll-section' },
       { nav: 'navProtocols',  sec: 'protocols-section' },

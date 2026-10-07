@@ -1025,7 +1025,7 @@ img {
 @media print {
   /* Скрываем навигацию, селектор, кнопки, неважные секии */
   .lang-selector, .scroll-top-btn, .reading-progress,
-  nav, #globalCTABar, #tracker-section, #game-section,
+  nav, #globalCTABar, #game-section,
   #poll-section, footer, .donate-link, #shareButton,
   #resetTestButton, noscript {
     display: none !important;

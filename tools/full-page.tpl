@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en" translate="no"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title id="dynamicTitle">AI Dependency Test: How Much Do You Rely on ChatGPT? | Mind-OS</title>
+  
+  <meta name="description" id="dynamicDescription" content="Free, anonymous 28-question test: how much do you rely on AI and ChatGPT for thinking, emotions and work? Based on LLM-D12 and AIAS. No signup." />
+  
+  <meta name="author" content="Aleksei Sergeevich Bitkin">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=()">
+  <meta name="google-site-verification" content="DFpki1t_QAVQIUVjut75ixmRHQke0Q7i9VDaP8Y4bxo" />
+  <meta name="yandex-verification" content="5356814ecf72e704">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://script.google.com https://script.googleusercontent.com; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; connect-src 'self' https://script.google.com https://script.googleusercontent.com;">
+  
+  <link rel="canonical" id="dynamicCanonical" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/">
+  <link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/">
+  <link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/">
+  <link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/">
+  <link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/">
+  <link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/">
+  <link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/">
+  <link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/">
+  <link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/">
+  <link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/">
+  <link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/">
+  <link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/">
+  <link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/">
+  <link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/">
+  
+  <meta property="og:url" id="dynamicOgUrl" content="https://iamalex-afk.github.io/human-os-patch-33-protocols/">
+  <meta property="og:title" id="dynamicOgTitle" content="AI Dependency Test: How Much Do You Rely on ChatGPT?" />
+  <meta property="og:description" id="dynamicOgDescription" content="Free, anonymous 28-question test: how much do you rely on AI and ChatGPT for thinking, emotions and work? Based on LLM-D12 and AIAS. No signup." />
+  <meta property="og:image" content="https://iamalex-afk.github.io/human-os-patch-33-protocols/cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mind-OS: Free AI Dependency Test — No Data Collection, 12 Languages">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ru_RU">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta property="og:locale:alternate" content="ja_JP">
+  <meta property="og:locale:alternate" content="vi_VN">
+  <meta property="og:locale:alternate" content="th_TH">
+  <meta property="og:locale:alternate" content="pt_PT">
+  <meta property="og:locale:alternate" content="ko_KR">
+  <meta property="og:locale:alternate" content="it_IT">
+  <meta property="og:locale:alternate" content="hi_IN">
+  <meta property="og:site_name" content="Mind-OS">
+  <meta property="article:published_time" content="2025-01-01T00:00:00Z">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Dependency Test: How Much Do You Rely on ChatGPT?">
+  <meta name="twitter:description" content="Free, anonymous 28-question test: how much do you rely on AI and ChatGPT for thinking, emotions and work? Based on LLM-D12 and AIAS. No signup.">
+  <meta name="twitter:image" content="https://iamalex-afk.github.io/human-os-patch-33-protocols/cover.jpg">
+  
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="author" href="humans.txt">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0b100d">
+  <link rel="preload" href="css/fonts.css" as="style">
+  <link rel="stylesheet" href="css/fonts.css">
+  <!-- JP_FONT_PLACEHOLDER -->
+  <link rel="preload" href="css/style.css" as="style">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "AI Dependency Test",
+      "url": "https://iamalex-afk.github.io/human-os-patch-33-protocols/",
+      "description": "A psychological and cognitive self-assessment test designed to measure human dependency and addiction to Artificial Intelligence tools.",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Artificial Intelligence Dependency",
+          "sameAs": "https://en.wikipedia.org/wiki/Digital_addiction"
+        },
+        {
+          "@type": "Thing",
+          "name": "Behavioral Addiction"
+        }
+      ],
+      "datePublished": "2025-01-01",
+      "dateModified": "2026-06-23",
+      "author": {
+        "@type": "Person",
+        "name": "Aleksei Sergeevich Bitkin",
+        "url": "https://orcid.org/0009-0002-7986-3812",
+        "sameAs": [
+          "https://orcid.org/0009-0002-7986-3812",
+          "https://doi.org/10.5281/zenodo.17972301",
+          "https://github.com/IamAlex-afk"
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Quiz",
+      "name": "AI Dependency Self-Assessment (Mind-OS)",
+      "description": "A free, anonymous 28-question self-assessment measuring cognitive offloading, AI anxiety, and digital burnout across three axes, plus a Fear-of-AI index.",
+      "url": "https://iamalex-afk.github.io/human-os-patch-33-protocols/",
+      "numberOfItems": 28,
+      "educationalLevel": "general public",
+      "about": {
+        "@type": "Thing",
+        "name": "AI Dependency Assessment"
+      },
+      "assesses": "AI usage patterns, cognitive offloading, AI anxiety, digital burnout",
+      "isAccessibleForFree": true,
+      "inLanguage": ["en", "ru", "es", "de", "fr", "ja", "vi", "th", "pt", "ko", "it", "hi"],
+      "author": {
+        "@type": "Person",
+        "name": "Aleksei Sergeevich Bitkin",
+        "sameAs": [
+          "https://orcid.org/0009-0002-7986-3812",
+          "https://doi.org/10.5281/zenodo.17972301"
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is artificial intelligence?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Artificial intelligence (AI) is a computer system that can do tasks that normally require human intelligence — like understanding language, recognizing images, making decisions, and learning from experience. Modern AI learns from large amounts of data."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When did AI appear?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The term 'artificial intelligence' was coined in 1956 at the Dartmouth Conference, but ideas of thinking machines go back to antiquity. Massive development started in the 2010s with more computing power and data."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does AI work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Modern AI uses machine learning: it analyzes millions of examples, finds patterns, and builds mathematical models."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the types of AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Three levels are usually cited: Narrow AI (solves one task, like ChatGPT), General AI (AGI — hypothetical, human-level), and Super AI (exceeds humans, doesn't exist yet)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is AI dangerous?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Like any technology, AI brings risks: uncontrolled use, spreading misinformation, job losses. But with responsible approach, AI remains a powerful tool that helps people."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is cognitive offloading?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cognitive offloading is the process of relying on external tools (like AI) to perform mental tasks that you would otherwise do yourself, which can weaken memory and independent thinking over time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does AI cause 'brain fog'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When you consistently outsource thinking to AI, your brain's neural pathways for problem-solving become less active, leading to mental sluggishness."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is AI anxiety (AIAS)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A modern form of technostress characterized by fear of job loss, algorithmic anxiety, and obsessive concern about AI replacing human identity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is AI Replacement Dysfunction (AIRD)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AIRD is a proposed clinical construct, not an official diagnosis: distress and impaired functioning linked to the fear that AI is replacing a person’s work role. It was described by University of Florida researchers in the journal Cureus."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Am I addicted to ChatGPT?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If you feel anxious without AI, constantly check for responses, or prefer AI over human interaction, it's a sign to rebalance your digital habits."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How are the test scores calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We use a 5-point Likert scale with reverse-keyed items across three axes. Each axis has 8 questions, for a maximum of 32 per axis and 96 overall."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this test anonymous?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. All processing happens in your browser. Nothing is stored on any server, except the optional global poll, which stores only 3 anonymous vote counters (no IP, email, or timestamp)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does using AI make me less intelligent?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It can, if you over-rely on it. Cognitive offloading may weaken memory and thinking skills over time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is ChatGPT making me stupid?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If you can't solve basic problems without it anymore, that's a real pattern worth checking, not just a joke. The free test on this page gives you an actual answer instead of a guess."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is AI giving me brain rot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Outsourcing your thinking to AI regularly can dull problem-solving skills over time — researchers call it cognitive offloading. 'Brain rot' isn't far off the mark."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why can't I think without ChatGPT anymore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That's cognitive offloading in action — your brain stops practicing what it hands off to AI. The fix isn't quitting cold turkey, it's doing one small task without AI first."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Am I addicted, or just using ChatGPT a lot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Frequency and dependency aren't the same thing. This test measures the difference instead of guessing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I know if I'm too dependent on AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You don't have to guess. The free test on this page gives you an actual number instead of a feeling."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Mind-OS AI Dependency Self-Assessment",
+      "url": "https://iamalex-afk.github.io/human-os-patch-33-protocols/",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web Browser",
+      "datePublished": "2025-01-01",
+      "inLanguage": ["en","ru","es","de","fr","ja","vi","th","pt","ko","it","hi"],
+      "isAccessibleForFree": true,
+      "offers": {"@type":"Offer","price":"0","priceCurrency":"USD"},
+      "author": {
+        "@type": "Person",
+        "name": "Aleksei Sergeevich Bitkin",
+        "url": "https://orcid.org/0009-0002-7986-3812",
+        "sameAs": [
+          "https://orcid.org/0009-0002-7986-3812",
+          "https://doi.org/10.5281/zenodo.17972301",
+          "https://github.com/IamAlex-afk"
+        ]
+      },
+      "sameAs": [
+        "https://doi.org/10.5281/zenodo.17972301",
+        "https://github.com/IamAlex-afk/human-os-patch-33-protocols"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Assessment","item":"https://iamalex-afk.github.io/human-os-patch-33-protocols/#test-section"},
+        {"@type":"ListItem","position":2,"name":"Cognitive Load Tracker","item":"https://iamalex-afk.github.io/human-os-patch-33-protocols/#tracker-section"},
+        {"@type":"ListItem","position":3,"name":"33 Protocols","item":"https://iamalex-afk.github.io/human-os-patch-33-protocols/#protocols-section"},
+        {"@type":"ListItem","position":4,"name":"FAQ","item":"https://iamalex-afk.github.io/human-os-patch-33-protocols/#faq-section"}
+      ]
+    }
+  ]
+  </script>
+</head>
+<body>
+<a href="#test-section" class="skip-link" id="skipLink">Skip to assessment</a>
+<noscript>
+  <div style="padding:2rem;background:var(--surface);border:1px solid var(--accent);border-radius:1rem;margin-bottom:2rem;text-align:center;">
+    <h2 style="color:var(--accent);">Please enable JavaScript</h2>
+    <p>This interactive assessment runs entirely in your browser to protect your privacy. JavaScript is required.</p>
+  </div>
+</noscript>
+<div id="readingProgress" class="reading-progress" aria-hidden="true"></div>
+<main class="container">
+  <div class="lang-selector" id="langSelector">
+    <button class="lang-toggle" id="langToggle" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">
+      <span class="lang-globe" aria-hidden="true">🌐</span>
+      <span class="lang-current" id="langCurrentCode">EN</span>
+      <span class="lang-arrow" aria-hidden="true">▾</span>
+    </button>
+    <div class="lang-dropdown" id="langDropdown" role="listbox" aria-label="Languages" hidden></div>
+  </div>
+  <div class="lang-bar" id="langBar" hidden></div>
+  <div class="lang-suggest-banner" id="langSuggestBanner" hidden>
+    <span id="langSuggestText"></span>
+    <a class="lang-suggest-link" id="langSuggestLink" href="#"></a>
+    <button class="lang-suggest-close" id="langSuggestClose" type="button">×</button>
+  </div>
+  <header style="min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
+    <h1 id="mainTitle" style="min-height: 60px; margin-bottom: 0.5rem;">AI Dependency Test: How Much Do You Rely on ChatGPT?</h1>
+    <div class="subhead" id="subheadText">Free, anonymous 28-question test: how much do you rely on AI and ChatGPT for thinking, emotions and work? Based on LLM-D12 and AIAS. No signup.</div>
+  </header>
+  <nav aria-label="Table of Contents" class="info-box" style="padding:1rem 2rem;margin-bottom:2.2rem; display:flex; align-items:center;">
+    <ul style="list-style:none;display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;padding:0;font-weight:600; width:100%;">
+      <li><a href="#test-section" id="navAssessment" class="book-link" style="text-decoration:none;">📋 Assessment</a></li>
+      <li><a href="game.html" id="navGame" class="book-link" style="text-decoration:none;">🎮 AI Game</a></li>
+      <li><a href="poll.html" id="navPoll" class="book-link" style="text-decoration:none;">🌍 Global Poll</a></li>
+      <li><a href="faq.html" id="navFaq" class="book-link" style="text-decoration:none;">❓ FAQ</a></li>
+      <li><a href="protocols.html" id="navProtocols" class="book-link" style="text-decoration:none;">📖 33 Protocols</a></li>
+    </ul>
+  </nav>
+  <section class="info-box" style="min-height: 380px;">
+    <h2 id="infoTitle" style="min-height: 35px;">📋 What this assessment measures</h2>
+    <p id="infoPara1" style="margin-bottom:1rem; min-height: 65px;">This set of 28 questions helps you observe patterns in how you use AI for thinking, emotional comfort, and daily productivity. Designed for self-awareness, not clinical diagnosis. Based on the LLM-D12 dual-dimensional dependency scale, the AI Anxiety Scale (AIAS), and the AIRD framework.</p>
+    <p id="infoPara2" style="margin-bottom:1rem; min-height: 65px;"><strong>Who it&#39;s for:</strong> Anyone who wants to check whether their AI use is still intentional or becoming automatic. You&#39;ll get your personal AI Identity Profile with an archetype and percentile comparison.</p>
+    <p id="infoPara3" style="margin-bottom:1.5rem; min-height: 65px;"><strong>How it works:</strong> Answer 8 questions per axis plus a Fear assessment. Everything runs inside your browser — no data leaves your device.</p>
+    <p class="disclaimer-micro" id="infoSources" style="text-align:left;line-height:1.6;">Sources: the questions are our own and draw on published research; this self-check is not one of these validated scales.<br>• LLM-D12 — Yankouskaya A., Babiker A. B., Rizvi S. W. F., Alshakhsi S., Liebherr M., Ali R. (2025). <a href="https://doi.org/10.48550/arXiv.2506.06874" target="_blank" rel="noopener">arXiv:2506.06874</a><br>• AIAS — Wang Y.-Y., Wang Y.-S. Interactive Learning Environments. <a href="https://doi.org/10.1080/10494820.2019.1674887" target="_blank" rel="noopener">doi:10.1080/10494820.2019.1674887</a><br>• AIRD — McNamara S., Thornton J. Cureus. <a href="https://www.cureus.com/articles/407877-artificial-intelligence-replacement-dysfunction-aird-a-call-to-action-for-mental-health-professionals-in-an-era-of-workforce-displacement" target="_blank" rel="noopener">cureus.com/articles/407877</a></p>
+    <p class="disclaimer-micro" id="infoDisclaimer" style="min-height: 30px;">This is a self-reflection tool, not a medical diagnosis. 100% anonymous.</p>
+  </section>
+  <div class="overall-progress" id="overallProgress">
+    <div class="overall-progress-track">
+      <div class="overall-progress-fill" id="overallProgressFill" style="width: 0%;"></div>
+    </div>
+    <div class="overall-progress-label">
+      <span id="overallProgressLabel"></span>
+      <span id="overallProgressCount"></span>
+    </div>
+  </div>
+  <section class="test-card" id="test-section">
+    <div class="test-title"><span>🧠</span><h2 id="axis1Title" style="margin:0;">Thinking &amp; Memory</h2></div>
+    <div class="test-desc" id="axis1Desc">Do you delegate thinking to AI? Measures cognitive offloading, memory outsourcing, and trust in AI over own reasoning.</div>
+    <div class="test-hint" id="axis1Hint">Answer honestly. Some questions are reverse-worded to ensure accuracy.</div>
+    <div class="progress" id="a1Progress">Question 1 of 8</div>
+    <div id="q1Container"><div class="question-step active"><div class="question-text">1. Ask AI instead of trying to recall?</div><div class="options"><label class="option-label"><input type="radio" name="a1_0" value="0" />Never</label><label class="option-label"><input type="radio" name="a1_0" value="1" />Rarely</label><label class="option-label"><input type="radio" name="a1_0" value="2" />Sometimes</label><label class="option-label"><input type="radio" name="a1_0" value="3" />Often</label><label class="option-label"><input type="radio" name="a1_0" value="4" />Constantly</label></div><div class="wizard-nav"><button class="btn-nav" disabled>← Back</button><button class="btn-nav" disabled>Next →</button></div></div></div>
+    <div id="r1" class="result"></div>
+  </section>
+  <section class="test-card">
+    <div class="test-title"><span>💬</span><h2 id="axis2Title" style="margin:0;">Anxiety &amp; Emotional Attachment</h2></div>
+    <div class="test-desc" id="axis2Desc">Do you feel threatened by AI or emotionally connected to chatbots? Measures AI anxiety, fear of replacement, and attachment.</div>
+    <div class="test-hint" id="axis2Hint">Answer honestly. Some questions are reverse-worded.</div>
+    <div class="progress" id="a2Progress">Question 1 of 8</div>
+    <div id="q2Container"><div class="question-step active"><div class="question-text">1. Feel threatened by AI&#39;s development?</div><div class="options"><label class="option-label"><input type="radio" name="a2_0" value="0" />Never</label><label class="option-label"><input type="radio" name="a2_0" value="1" />Rarely</label><label class="option-label"><input type="radio" name="a2_0" value="2" />Sometimes</label><label class="option-label"><input type="radio" name="a2_0" value="3" />Often</label><label class="option-label"><input type="radio" name="a2_0" value="4" />Constantly</label></div><div class="wizard-nav"><button class="btn-nav" disabled>← Back</button><button class="btn-nav" disabled>Next →</button></div></div></div>
+    <div id="r2" class="result"></div>
+  </section>
+  <section class="test-card">
+    <div class="test-title"><span>⚙️</span><h2 id="axis3Title" style="margin:0;">Digital Burnout &amp; Procrastination</h2></div>
+    <div class="test-desc" id="axis3Desc">Do you feel exhausted by AI, or do you postpone tasks waiting for AI help? Measures digital fatigue and loss of autonomy.</div>
+    <div class="test-hint" id="axis3Hint">Answer honestly. Some questions are reverse-worded.</div>
+    <div class="progress" id="a3Progress">Question 1 of 8</div>
+    <div id="q3Container"><div class="question-step active"><div class="question-text">1. Rely on AI to plan daily schedule?</div><div class="options"><label class="option-label"><input type="radio" name="a3_0" value="0" />Never</label><label class="option-label"><input type="radio" name="a3_0" value="1" />Rarely</label><label class="option-label"><input type="radio" name="a3_0" value="2" />Sometimes</label><label class="option-label"><input type="radio" name="a3_0" value="3" />Often</label><label class="option-label"><input type="radio" name="a3_0" value="4" />Constantly</label></div><div class="wizard-nav"><button class="btn-nav" disabled>← Back</button><button class="btn-nav" disabled>Next →</button></div></div></div>
+    <div id="r3" class="result"></div>
+  </section>
+  <section class="fear-test-card">
+    <div class="test-title"><span>😨</span><h2 id="fearTitle" style="margin:0;">Fear of AI</h2></div>
+    <div class="test-desc" id="fearDesc">How much does the thought of AI scare you? Measures your emotional response to AI development.</div>
+    <div class="test-hint" id="fearHint">Answer instinctively. There are no right or wrong answers.</div>
+    <div class="progress" id="fearProgress">Question 1 of 4</div>
+    <div id="qFearContainer"><div class="question-step active"><div class="question-text">1. Does the thought of AI becoming more powerful scare you?</div><div class="options"><label class="option-label"><input type="radio" name="fear_0" value="0" />Never</label><label class="option-label"><input type="radio" name="fear_0" value="1" />Rarely</label><label class="option-label"><input type="radio" name="fear_0" value="2" />Sometimes</label><label class="option-label"><input type="radio" name="fear_0" value="3" />Often</label><label class="option-label"><input type="radio" name="fear_0" value="4" />Constantly</label></div><div class="wizard-nav"><button class="btn-nav" disabled>← Back</button><button class="btn-nav" disabled>Next →</button></div></div></div>
+    <div id="fearResult" class="result"></div>
+  </section>
+  <div class="overall-result" id="overallBlock">
+    <div id="sharedBanner" class="shared-banner" hidden></div>
+    <h2 id="overallTitle">Your AI Identity Profile</h2>
+    <div class="overall-archetype" id="overallArchetype"></div>
+    <div class="overall-percentile" id="overallPercentile"></div>
+    <p id="overallAdvice" style="font-size:1.1rem; line-height:1.6; max-width:800px; margin:0 auto;"></p>
+
+    <div id="answerQualityWarning" class="answer-quality-warning" role="alert" hidden></div>
+
+    <div id="radarHolder" class="radar-holder" aria-hidden="true"></div>
+
+    <div id="spectrumHolder" class="spectrum-holder">
+      <div class="spectrum-bar"><div id="spectrumMarker" class="spectrum-marker"></div></div>
+      <div class="spectrum-labels">
+        <span id="spectrumLow">Low</span>
+        <span id="spectrumMid">Balanced</span>
+        <span id="spectrumHigh">High</span>
+      </div>
+    </div>
+
+    <div id="whatToDo" class="what-to-do" hidden>
+      <h3 id="whatToDoTitle">Your focus area</h3>
+      <p id="whatToDoText"></p>
+    </div>
+
+    <div id="depFearMatrix" class="dep-fear-matrix" hidden>
+      <h3 id="matrixTitle" class="matrix-title"></h3>
+      <div class="matrix-grid-wrap">
+        <div class="matrix-yaxis"><span id="matrixDepAxis"></span></div>
+        <div class="matrix-main">
+          <div class="matrix-grid">
+            <div class="matrix-cell" data-q="confident"><span class="cell-name"></span></div>
+            <div class="matrix-cell" data-q="anxious"><span class="cell-name"></span></div>
+            <div class="matrix-cell" data-q="sovereign"><span class="cell-name"></span></div>
+            <div class="matrix-cell" data-q="rejecting"><span class="cell-name"></span></div>
+          </div>
+          <div class="matrix-xaxis"><span id="matrixFearAxis"></span></div>
+        </div>
+      </div>
+      <div id="matrixResult" class="matrix-result"></div>
+      <p id="matrixNote" class="matrix-note"></p>
+    </div>
+
+    <p id="resultDisclaimer" class="result-disclaimer"></p>
+
+    <div class="text-center" style="margin-top:2rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <button id="shareButton" class="book-link" style="margin:0;">📤 <span id="shareBtnText">Share your result</span></button>
+      <button id="downloadCardBtn" class="btn-nav" style="margin:0;">🖼️ <span id="downloadCardText">Save image card</span></button>
+      <button id="resetTestButton" class="btn-nav" style="display:none;margin:0;">↺ <span id="resetBtnText">Restart</span></button>
+    </div>
+  </div>
+  <section class="game-block" id="game-section">
+    <h2 id="gameTitle">🎮 AI or Not?</h2>
+    <p id="gameDesc" style="margin-bottom:1.5rem;">Can you tell if a text was written by a human or generated by AI?</p>
+    <div id="gameQuestion" style="padding:1.5rem; background:var(--bg); border-radius:1rem; margin-bottom:1.5rem; font-size:1.15rem; line-height:1.6;">The sun dipped below the horizon, painting the sky in shades of orange.</div>
+    <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:1.2rem;">
+      <button class="btn-submit" id="gameBtnHuman" style="margin-top: 0px; display: inline-flex;">👤 Human</button>
+      <button class="btn-submit" id="gameBtnAI" style="margin-top: 0px; display: inline-flex;">🤖 AI</button>
+    </div>
+    <div id="gameFeedback" style="font-weight:600; min-height:1.5rem; margin-bottom:1rem; font-size:1.1rem;"></div>
+    <div style="display:flex; gap:1rem;">
+      <button class="btn-nav" id="gameNextBtn" style="display:none; margin-top:0;">Next text →</button>
+      <button class="btn-nav" id="gameRestartBtn" style="display:none; margin-top:0;">Play again ↺</button>
+    </div>
+    <p style="font-size:0.9rem; color:var(--text-dim); margin-top:1rem; font-weight:600;">✅ <span id="gameScoreLabel">Score:</span> <span id="gameScore">0</span> / <span id="gameTotal">5</span></p>
+  </section>
+  <section class="poll-block" id="poll-section" style="border-left: 3px solid var(--accent);">
+    <h2 id="pollTitle">🌍 Global AI Sentiment Poll</h2>
+    <p id="pollDesc" style="margin-bottom:0.5rem;">Vote anonymously. This is your personal stance.</p>
+    <p id="pollMilestone" style="margin-bottom:1.5rem; color:var(--text-dim); font-size:0.9rem;">No signup, no data collection, votes count from every country in the world. Goal: 1,000 votes &mdash; let's get there together.</p>
+    <div id="pollOptions" style="display:flex; flex-wrap:wrap; gap:1rem; margin-bottom:1.5rem;">
+      <label class="option-label" style="border-radius:3rem;"><input type="radio" name="aiPoll" value="for"> <span id="pollFor">👍 For (optimistic)</span></label>
+      <label class="option-label" style="border-radius:3rem;"><input type="radio" name="aiPoll" value="neutral"> <span id="pollNeutral">😐 Neutral</span></label>
+      <label class="option-label" style="border-radius:3rem;"><input type="radio" name="aiPoll" value="against"> <span id="pollAgainst">👎 Against (concerned)</span></label>
+    </div>
+    <button class="btn-submit" id="submitPoll" style="margin-top:0;">Submit your vote</button>
+    <div id="pollResults" style="display:none; margin-top:2rem;">
+      <h3 id="pollResultsTitle" style="color:var(--accent); margin-bottom:1.5rem; font-size:1.4rem;">🌐 Current results:</h3>
+      <div id="pollBars"></div>
+      <p id="pollTotal" style="color:var(--text-dim); font-size:0.9rem; margin-top:0.5rem; text-align:right;"></p>
+      <div style="margin-top:1.5rem; text-align:center;">
+        <button id="pollInviteBtn" class="book-link" style="display:none; margin:0;"><span id="pollInviteText">📢 Invite a friend to vote</span></button>
+      </div>
+      <div style="margin-top:2.5rem; padding:1.5rem; background:var(--bg); border-radius:1rem; border:1px solid var(--accent-soft);">
+        <p id="pollBridge" style="color:var(--text); font-size:1.1rem; line-height:1.6; margin-bottom:1.5rem;">Want to dive deeper into the 33 Protocols? The full book offers structured daily exercises to restore cognitive sovereignty.</p>
+        <div class="text-center">
+          <a href="https://www.amazon.com/dp/B0G35SBQR3" id="bookLink" class="book-link" target="_blank" rel="noopener">📘 Find the book on Amazon</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="ai-faq-section" id="ai-faq-section">
+    <h2 id="aiFaqTitle">🧠 What is AI? Simple answers</h2>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faqAiWhatA"><span id="faqAiWhatQ">What is artificial intelligence?</span><span class="faq-arrow">▼</span></button>
+      <div class="faq-answer" id="faqAiWhatA">Artificial intelligence (AI) is a computer system that can do tasks that normally require human intelligence — like understanding language, recognizing images, making decisions, and learning from experience. Modern AI learns from large amounts of data. <br /><small style="opacity:0.7">Source: <a href="https://en.wikipedia.org/wiki/Artificial_intelligence" target="_blank" rel="noopener" style="color:var(--accent)">Wikipedia</a></small></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faqAiHistoryA"><span id="faqAiHistoryQ">When did AI appear?</span><span class="faq-arrow">▼</span></button>
+      <div class="faq-answer" id="faqAiHistoryA">The term &#39;artificial intelligence&#39; was coined in 1956 at the Dartmouth Conference, but ideas of thinking machines go back to antiquity. Massive development started in the 2010s with more computing power and data. <br /><small style="opacity:0.7">Source: <a href="https://plato.stanford.edu/entries/artificial-intelligence/" target="_blank" rel="noopener" style="color:var(--accent)">Stanford Encyclopedia</a></small></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faqAiHowWorkA"><span id="faqAiHowWorkQ">How does AI work?</span><span class="faq-arrow">▼</span></button>
+      <div class="faq-answer" id="faqAiHowWorkA">Modern AI uses machine learning: it analyzes millions of examples, finds patterns, and builds mathematical models. <br /><small style="opacity:0.7">Source: <a href="https://www.ibm.com/think/topics/machine-learning" target="_blank" rel="noopener" style="color:var(--accent)">IBM</a></small></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faqAiTypesA"><span id="faqAiTypesQ">What are the types of AI?</span><span class="faq-arrow">▼</span></button>
+      <div class="faq-answer" id="faqAiTypesA">Three levels are usually cited: Narrow AI (solves one task, like ChatGPT), General AI (AGI — hypothetical, human-level), and Super AI (exceeds humans, doesn&#39;t exist yet). <br /><small style="opacity:0.7">Source: <a href="https://en.wikipedia.org/wiki/Artificial_general_intelligence" target="_blank" rel="noopener" style="color:var(--accent)">Wikipedia</a></small></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faqAiDangerA"><span id="faqAiDangerQ">Is AI dangerous?</span><span class="faq-arrow">▼</span></button>
+      <div class="faq-answer" id="faqAiDangerA">Like any technology, AI brings risks: uncontrolled use, spreading misinformation, job losses. But with responsible approach, AI remains a powerful tool that helps people. <br /><small style="opacity:0.7">Source: <a href="https://futureoflife.org/ai/" target="_blank" rel="noopener" style="color:var(--accent)">Future of Life Institute</a></small></div>
+    </div>
+  </section>
+  <section class="faq-section" id="faq-section">
+    <h2 id="faqTitle">❓ Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faqA1"><span id="faqQ1">What is cognitive offloading?</span><span class="faq-arrow">▼</span></button>
+      <div class="faq-answer" id="faqA1">Cognitive offloading is the process of relying on external tools (like AI) to perform mental tasks that you would otherwise do yourself, which can weaken memory and independent thinking over time.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faqA2"><span id="faqQ2">How does AI cause &#39;brain fog&#39;?</span><span class="faq-arrow">▼</span></button>
+      <div class="faq-answer" id="faqA2">When you consistently outsource thinking to AI, your brain&#39;s neural pathways for problem-solving become less active, leading to mental sluggishness.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faqA3"><span id="faqQ3">What is AI anxiety (AIAS)?</span><span class="faq-arrow">▼</span></button>
+      <div class="faq-answer" id="faqA3">A modern form of technostress characterized by fear of job loss, algorithmic anxiety, and obsessive concern about AI replacing human identity.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faqA4"><span id="faqQ4">What is AI Replacement Dysfunction (AIRD)?</span><span class="faq-arrow">▼</span></button>
+      <div class="faq-answer" id="faqA4">AIRD is a proposed clinical construct, not an official diagnosis: distress and impaired functioning linked to the fear that AI is replacing a person’s work role. It was described by University of Florida researchers in the journal Cureus.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faqA5"><span id="faqQ5">Am I addicted to ChatGPT?</span><span class="faq-arrow">▼</span></button>
+      <div class="faq-answer" id="faqA5">If you feel anxious without AI, constantly check for responses, or prefer AI over human interaction, it&#39;s a sign to rebalance your digital habits.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faqA6"><span id="faqQ6">How are the test scores calculated?</span><span class="faq-arrow">▼</span></button>
+      <div class="faq-answer" id="faqA6">We use a 5-point Likert scale with reverse-keyed items across three axes. Each axis has 8 questions, for a maximum of 32 per axis and 96 overall.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faqA7"><span id="faqQ7">Is this test anonymous?</span><span class="faq-arrow">▼</span></button>
+      <div class="faq-answer" id="faqA7">Yes. All processing happens in your browser. Nothing is stored on any server, except the optional global poll, which stores only 3 anonymous vote counters (no IP, email, or timestamp).</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faqA8"><span id="faqQ8">Does using AI make me less intelligent?</span><span class="faq-arrow">▼</span></button>
+      <div class="faq-answer" id="faqA8">It can, if you over-rely on it. Cognitive offloading may weaken memory and thinking skills over time.</div>
+    </div>
+  </section>
+  <section class="faq-section" id="faq-slang-section">
+    <h2 id="faqSlangTitle">💬 Popular Questions and Answers</h2>
+    <p id="faqSlangSubtitle" style="color:var(--text-dim); font-size:0.9rem; margin-top:-0.5rem; margin-bottom:1.5rem;">Quick, plain-language answers to what people commonly ask.</p>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faqSlangA1"><span id="faqSlangQ1">Is ChatGPT making me stupid?</span><span class="faq-arrow">▼</span></button>
+      <div class="faq-answer" id="faqSlangA1">If you can't solve basic problems without it anymore, that's a real pattern worth checking, not just a joke. The free test above gives you an actual answer instead of a guess.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faqSlangA2"><span id="faqSlangQ2">Is AI giving me brain rot?</span><span class="faq-arrow">▼</span></button>
+      <div class="faq-answer" id="faqSlangA2">Outsourcing your thinking to AI regularly can dull problem-solving skills over time &mdash; researchers call it cognitive offloading. "Brain rot" isn't far off the mark.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faqSlangA3"><span id="faqSlangQ3">Why can't I think without ChatGPT anymore?</span><span class="faq-arrow">▼</span></button>
+      <div class="faq-answer" id="faqSlangA3">That's cognitive offloading in action &mdash; your brain stops practicing what it hands off to AI. The fix isn't quitting cold turkey, it's doing one small task without AI first.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faqSlangA4"><span id="faqSlangQ4">Am I addicted, or just using ChatGPT a lot?</span><span class="faq-arrow">▼</span></button>
+      <div class="faq-answer" id="faqSlangA4">Frequency and dependency aren't the same thing. This test measures the difference instead of guessing.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faqSlangA5"><span id="faqSlangQ5">How do I know if I'm too dependent on AI?</span><span class="faq-arrow">▼</span></button>
+      <div class="faq-answer" id="faqSlangA5">You don't have to guess. The free test above gives you an actual number instead of a feeling.</div>
+    </div>
+  </section>
+  <section class="info-box" style="border-left:3px solid var(--accent)">
+    <h2 id="ecosystemTitle" style="color:var(--accent)">🔗 Mind-OS Ecosystem (Verified Nodes)</h2>
+    <p id="ecosystemSubtitle" style="margin-bottom:1.5rem;color:var(--text-dim)">Every link is a permanent, citable record.</p>
+    <ul style="list-style:none; padding:0; display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:1rem;">
+      <li style="background:var(--bg); border:1px solid var(--border); border-radius:0.75rem; padding:1.2rem;"><strong>🧠 Nature Human Behaviour</strong><br><span style="font-size:0.85rem;opacity:0.9">How the internet is changing cognition</span><br><a id="ecoLink1" href="https://doi.org/10.1038/s41562-021-01162-0" target="_blank" rel="noopener" class="book-link">DOI Reference</a></li>
+      <li style="background:var(--bg); border:1px solid var(--border); border-radius:0.75rem; padding:1.2rem;"><strong>💡 Harvard Business Review</strong><br><span style="font-size:0.85rem;opacity:0.9">When Using AI Leads to Brain Fry</span><br><a id="ecoLink2" href="https://hbr.org/2026/03/when-using-ai-leads-to-brain-fry" target="_blank" rel="noopener" class="book-link">Read on HBR</a></li>
+      <li style="background:var(--bg); border:1px solid var(--border); border-radius:0.75rem; padding:1.2rem;"><strong>📚 Acta Psychologica</strong><br><span style="font-size:0.85rem;opacity:0.9">AI dependence &amp; critical thinking</span><br><a id="ecoLink3" href="https://doi.org/10.1016/j.actpsy.2025.105725" target="_blank" rel="noopener" class="book-link">DOI Reference</a></li>
+      <li style="background:var(--bg); border:1px solid var(--border); border-radius:0.75rem; padding:1.2rem;"><strong id="ecoCardPreprint">📄 Scientific Preprint</strong><br><span style="font-size:0.85rem;opacity:0.9">The Glitch Theory of Consciousness</span><br><a id="ecoLink4" href="https://doi.org/10.5281/zenodo.17972301" target="_blank" rel="noopener" class="book-link">Read on Zenodo</a></li>
+      <li style="background:var(--bg); border:1px solid var(--border); border-radius:0.75rem; padding:1.2rem;"><strong id="ecoCardDataset">🤗 Open Dataset</strong><br><span style="font-size:0.85rem;opacity:0.9">33 Protocols</span><br><a id="ecoLink5" href="https://huggingface.co/datasets/MindOSProducer/Mind-OS-33-Protocols" target="_blank" rel="noopener" class="book-link">Hugging Face</a></li>
+      <li style="background:var(--bg); border:1px solid var(--border); border-radius:0.75rem; padding:1.2rem;"><strong id="ecoCardTechProfile">✍️ Technical Profile</strong><br><a id="ecoLink6" href="https://dev.to/bitkin_aleksei_sergeevich" target="_blank" rel="noopener" class="book-link">DEV Community</a></li>
+      <li style="background:var(--bg); border:1px solid var(--border); border-radius:0.75rem; padding:1.2rem;"><strong id="ecoCardAuthorProfile">👤 Author Profile</strong><br><span style="font-size:0.85rem;opacity:0.9">Aleksei Sergeevich Bitkin</span><br><a id="ecoLink7" href="https://orcid.org/0009-0002-7986-3812" target="_blank" rel="noopener" class="book-link">ORCID Record</a></li>
+    </ul>
+    <p id="authorBioText" style="margin-top:1.5rem; color:var(--text-dim); font-size:0.95rem; max-width:65ch;">Aleksei Sergeevich Bitkin is an independent researcher in cognitive architecture and the author of the "Glitch Theory of Consciousness" preprint and the "AI Biohacking: 33 Protocols" framework. Mind-OS is his open, ad-free research project for measuring AI dependency — built and maintained independently, with no institutional funding.</p>
+  </section>
+  <section class="protocol-section" id="protocols-section">
+    <h2 id="protocolsTitle">📖 The 33 Protocols for Cognitive Sovereignty</h2>
+    <p id="protocolsDesc">A structured framework to reverse AI-induced brain fog and restore independent thinking.</p>
+    <div class="protocol-grid" id="protocolGrid"><div class="protocol-card"><div class="protocol-num">Protocol 1</div><div class="protocol-title">AI: Method, Not Mind</div><div class="protocol-desc">AI is a tool, not a conversation partner. 80% routine replaced by AI frees 80% time for creativity.</div></div><div class="protocol-card"><div class="protocol-num">Protocol 2</div><div class="protocol-title">AI Principles: Evolution of Statistics</div><div class="protocol-desc">From brute force to probability. Three stages: Logical → Machine → Deep Learning.</div></div><div class="protocol-card"><div class="protocol-num">Protocol 3</div><div class="protocol-title">Human: Random Algorithm</div><div class="protocol-desc">90% decisions made by ancient/limbic systems. Neocortex rationalises post-factum.</div></div><div class="protocol-card"><div class="protocol-num">Protocol 4</div><div class="protocol-title">Human Body: Biological System</div><div class="protocol-desc">Designed for savannah. Trick ancient code with micro-efforts (2 squats/day).</div></div><div class="protocol-card"><div class="protocol-num">Protocol 5</div><div class="protocol-title">Pain: The Language of the Body</div><div class="protocol-desc">Pain is a signal, not punishment. Emotional pain activates same centers as physical injury.</div></div><div class="protocol-card"><div class="protocol-num">Protocol 6</div><div class="protocol-title">Fear: Outdated Guardian</div><div class="protocol-desc">92% panic attacks start from misinterpreted bodily sensations.</div></div><div class="protocol-card"><div class="protocol-num">Protocol 7</div><div class="protocol-title">Emotions: Decision Fuel</div><div class="protocol-desc">90% major decisions are emotional, then rationalised.</div></div><div class="protocol-card"><div class="protocol-num">Protocol 8</div><div class="protocol-title">Feelings: Climate of Consciousness</div><div class="protocol-desc">95% breakthroughs come from a &#39;sense of mission&#39;.</div></div><div class="protocol-card"><div class="protocol-num">Protocol 9</div><div class="protocol-title">Consciousness: The Guest</div><div class="protocol-desc">Decision arises 300ms before awareness. Meditation = observe noise.</div></div><div class="protocol-card"><div class="protocol-num">Protocol 10</div><div class="protocol-title">Dependencies: Delegation of Reward</div><div class="protocol-desc">Replace fast dopamine with long-term complexity projects.</div></div><div class="protocol-card"><div class="protocol-num">Protocol 11</div><div class="protocol-title">Memory: Rewriting Archive</div><div class="protocol-desc">70% can &#39;remember&#39; false events. Use forced archiving.</div></div><div class="protocol-card"><div class="protocol-num">Protocol 12</div><div class="protocol-title">Willpower: Finite Resource</div><div class="protocol-desc">Willpower is a battery, not a muscle. Automate trivial decisions.</div></div><div class="protocol-card"><div class="protocol-num">Protocol 13</div><div class="protocol-title">Choice: Structural Illusion</div><div class="protocol-desc">Too many choices → paralysis. Limit choices to save energy.</div></div><div class="protocol-card"><div class="protocol-num">Protocol 14</div><div class="protocol-title">Inner Dialogue: Noise</div><div class="protocol-desc">Observe thoughts without engaging. DMN decreases during meditation.</div></div><div class="protocol-card"><div class="protocol-num">Protocol 15</div><div class="protocol-title">Loneliness: Disconnection Signal</div><div class="protocol-desc">Chronic loneliness as deadly as smoking. Quality over quantity.</div></div><div class="protocol-card"><div class="protocol-num">Protocol 16</div><div class="protocol-title">Love: System Glitch</div><div class="protocol-desc">Infatuation lasts 12-18 months. Then conscious decision.</div></div><div class="protocol-card"><div class="protocol-num">Protocol 17</div><div class="protocol-title">Attachment: Unconscious Contracts</div><div class="protocol-desc">Brain prefers familiar pain to unpredictable freedom.</div></div><div class="protocol-card"><div class="protocol-num">Protocol 18</div><div class="protocol-title">Friendship: Non-genetic Altruism</div><div class="protocol-desc">5+ true friends best predictor of longevity.</div></div><div class="protocol-card"><div class="protocol-num">Protocol 19</div><div class="protocol-title">Family: Primary Firmware</div><div class="protocol-desc">Epigenetics: trauma can be inherited. Rewrite, don&#39;t rupture.</div></div><div class="protocol-card"><div class="protocol-num">Protocol 20</div><div class="protocol-title">Social Masks: Energy Shields</div><div class="protocol-desc">Authenticity saves energy. Reduce performance time.</div></div><div class="protocol-card"><div class="protocol-num">Protocol 21</div><div class="protocol-title">Purpose: Acceleration Vector</div><div class="protocol-desc">Purpose must be measurable and within your control zone.</div></div><div class="protocol-card"><div class="protocol-num">Protocol 22</div><div class="protocol-title">Discipline: Freedom Through Limits</div><div class="protocol-desc">Motivation follows action. 21-66 days to automate.</div></div><div class="protocol-card"><div class="protocol-num">Protocol 23</div><div class="protocol-title">Procrastination: Pain Protection</div><div class="protocol-desc">2-minute rule lowers entry barrier.</div></div><div class="protocol-card"><div class="protocol-num">Protocol 24</div><div class="protocol-title">Perfectionism: Fear of Failure</div><div class="protocol-desc">MVP success rate 75% higher. Release &#39;good enough&#39;.</div></div><div class="protocol-card"><div class="protocol-num">Protocol 25</div><div class="protocol-title">Habits: Success Automation</div><div class="protocol-desc">Habit stacking: attach new to existing trigger.</div></div><div class="protocol-card"><div class="protocol-num">Protocol 26</div><div class="protocol-title">Resources: Energy, Time, Attention</div><div class="protocol-desc">Context switch costs 20min recovery. Deep work &gt; shallow work.</div></div><div class="protocol-card"><div class="protocol-num">Protocol 27</div><div class="protocol-title">Efficiency: Max Result, Min Waste</div><div class="protocol-desc">Parkinson&#39;s law. Pomodoro technique forces scarcity.</div></div><div class="protocol-card"><div class="protocol-num">Protocol 28</div><div class="protocol-title">Meditation: Reboot Your OS</div><div class="protocol-desc">Thickens prefrontal cortex, reduces amygdala.</div></div><div class="protocol-card"><div class="protocol-num">Protocol 29</div><div class="protocol-title">Acceptance: Surrender to Reality</div><div class="protocol-desc">Saves 30% cognitive energy.</div></div><div class="protocol-card"><div class="protocol-num">Protocol 30</div><div class="protocol-title">Meaning: Self-Created Beacon</div><div class="protocol-desc">Logotherapy: meaning stronger than pleasure.</div></div><div class="protocol-card"><div class="protocol-num">Protocol 31</div><div class="protocol-title">Creativity: Systemic Hack</div><div class="protocol-desc">Morning pages increase creativity 72% in 30 days.</div></div><div class="protocol-card"><div class="protocol-num">Protocol 32</div><div class="protocol-title">Self-Awareness: Reprogramming</div><div class="protocol-desc">87% suffer inattentional blindness. Observer mode is key.</div></div><div class="protocol-card"><div class="protocol-num">Protocol 33</div><div class="protocol-title">Meta-Code: Final Reboot</div><div class="protocol-desc">Neuroplasticity: 21 days to create new network. Epigenetics: intention switches genes.</div></div></div>
+  </section>
+  <div class="how-it-works text-center">
+    <h2 id="howTitle">📌 How this works</h2>
+    <p id="howText" style="margin-bottom:1.5rem;">Each axis has short questions. Your answers are processed in real-time within your browser. At the end, you&#39;ll receive your personal AI Identity Profile.</p>
+    <div class="trust-badge">
+      <span id="trustNoSignup">🔒 No signup</span>
+      <span id="trustLocal">📁 Runs locally</span>
+      <span id="trustAnonymous">🧾 100% Anonymous</span>
+    </div>
+  </div>
+  <footer>
+    <div class="text-center" style="margin-bottom:2rem;">
+      <a href="https://ko-fi.com/alekseisergeevich" target="_blank" rel="noopener" class="donate-link" id="donateLink">☕ <span id="donateText">Support this project on Ko-fi</span></a>
+    </div>
+    <p style="margin-bottom:0.75rem;"><a href="privacy.html" id="privacyLink" style="color:var(--accent);font-size:0.9rem;">Privacy Policy</a></p>
+    <p id="footerText" style="font-size:0.9rem; opacity:0.8;">© Mind-OS – Created by Aleksei Sergeevich Bitkin. Independent research project.</p>
+  
+    <p id="pwaInstallLi" style="display:none;margin-top:1rem;"><button id="pwaInstallBtn" class="book-link" style="cursor:pointer;font:inherit;"><span id="pwaInstallText">📲 Install app</span></button></p>
+  </footer>
+</main>
+<div class="cta-bar" id="globalCTABar">
+  <a href="https://www.amazon.com/dp/B0G35SBQR3" id="ctaBarLink" class="book-link" target="_blank" rel="noopener" style="display:inline-block; width:100%; max-width:400px; text-align:center; font-size:1.1rem; padding:1rem;">⚡ <span id="ctaBarText">Explore the 33 Protocols</span></a>
+</div>
+<script src="js/config.js" defer></script>
+<script src="js/storage.js" defer></script>
+<script src="js/translations-core.js" defer></script>
+<script src="js/translations/en.js" defer></script>
+<!-- TRANSLATIONS_LANG_PLACEHOLDER -->
+<script src="js/quiz.js" defer></script>
+<script src="js/game.js" defer></script>
+<script src="js/poll.js" defer></script>
+<script src="js/card.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('./sw.js').catch(function(){});});}</script>
+  <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top" hidden>↑</button>
+</body></html>

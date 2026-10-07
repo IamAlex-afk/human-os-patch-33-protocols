@@ -67,3 +67,12 @@ python tools/prerender.py          # все 11 языков (или: python tool
 python -m http.server 8000
 # затем открыть http://localhost:8000
 ```
+
+## Отдельные страницы (с 2026-10-07)
+
+Сайт разделён на самостоятельные страницы на каждом из 12 языков: `index.html` (тест + 8 вопросов о тесте), `faq.html`, `protocols.html`, `poll.html`, `game.html`. Трекер удалён по решению владельца.
+
+- Исходник всех секций — `tools/full-page.tpl` (английский). Править его, а не готовые страницы.
+- Сборка строго по порядку из папки `site`: `build.ps1` → `python tools/prerender.py` → `python tools/split_pages.py` → `python tools/site_check.py` (должно быть `ERRORS: 0`).
+- `split_pages.py` сам ставит title, description, canonical, hreflang, JSON-LD и пишет `sitemap.xml` (60 адресов).
+- Адреса теста (`/`, `/ja/` …) не менять — они стоят в поиске.
