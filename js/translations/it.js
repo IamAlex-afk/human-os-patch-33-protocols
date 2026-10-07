@@ -154,11 +154,11 @@ window.translations.it = {
     resetTestConfirm: "Sei sicuro di voler ricominciare la valutazione?",
     donateText: "Sostieni questo progetto su Ko-fi",
     overallTitle: "Il Tuo Profilo di Identità IA",
-    overallPercentileLabel: "Migliore del {percentile}% degli utenti",
+    overallPercentileLabel: "Il tuo punteggio: {score} su {max}",
     archetypes: {
-      low: { name: "Maestro Zen Digitale", percentile: 15, advice: "Mantieni la sovranità cognitiva. Continua a scegliere consapevolmente quando interagire con l'IA." },
-      medium: { name: "Navigatore Equilibrato", percentile: 50, advice: "Ti appoggi all'IA senza perdere te stesso. Piccole abitudini rafforzano l'autonomia." },
-      high: { name: "Delegante Dipendente dall'IA", percentile: 85, advice: "Esternalizzi molto pensiero all'IA. Prova una disintossicazione digitale per affinare la tua concentrazione." }
+      low: { name: "Maestro Zen Digitale", advice: "Mantieni la sovranità cognitiva. Continua a scegliere consapevolmente quando interagire con l'IA." },
+      medium: { name: "Navigatore Equilibrato", advice: "Ti appoggi all'IA senza perdere te stesso. Piccole abitudini rafforzano l'autonomia." },
+      high: { name: "Delegante Dipendente dall'IA", advice: "Esternalizzi molto pensiero all'IA. Prova una disintossicazione digitale per affinare la tua concentrazione." }
     },
     q1: ["Chiedi all'IA invece di provare a ricordare?","Usi l'IA per verificare fatti semplici?","Chiedi consiglio all'IA prima di decidere?","La memoria è peggiorata da quando usi l'IA?","Ti fidi delle conclusioni dell'IA più delle tue?","Controllo due volte l'output dell'IA perché non mi fido.","Capace di risolvere problemi senza l'IA.","Pratico regolarmente a ricordare senza l'IA."],
     q2: ["Ti senti minacciato dallo sviluppo dell'IA?","Sei ansioso quando l'IA non è disponibile?","Condividi i sentimenti con l'IA più che con gli amici?","Preferisci la compagnia dell'IA a quella delle persone?","Sentiresti una perdita se il tuo chatbot preferito scomparisse?","Non sono preoccupato che l'IA tolga posti di lavoro.","Parlare con le persone risulta più gratificante.","L'IA è solo uno strumento, non un'amica."],

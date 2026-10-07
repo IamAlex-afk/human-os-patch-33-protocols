@@ -426,7 +426,6 @@
 
     initLangBar();
 
-    if (window.Quiz && Quiz.checkSharedResult) { try { Quiz.checkSharedResult(); } catch(e) {} }
 
     document.addEventListener('keydown', (e) => {
       if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
@@ -456,6 +455,7 @@
     }
     applyLanguage(lang);
     initLangSuggestBanner();
+    if (window.Quiz && Quiz.checkSharedResult) { try { Quiz.checkSharedResult(); } catch(e) {} }
 
     if (window.Game) {
       document.getElementById('gameBtnHuman')?.addEventListener('click', () => Game.handleGuess(false));

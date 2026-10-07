@@ -154,11 +154,11 @@ window.translations.de = {
     resetTestConfirm: "Möchtest du den Test wirklich neu starten?",
     donateText: "Unterstütze uns auf Ko-fi",
     overallTitle: "Dein KI-Identitätsprofil",
-    overallPercentileLabel: "Besser als {percentile}% der Nutzer",
+    overallPercentileLabel: "Ihr Ergebnis: {score} von {max} Punkten",
     archetypes: {
-      low: { name: "Digitaler Zen-Meister", percentile: 15, advice: "Sie bewahren kognitive Souveränität. Wählen Sie weiterhin bewusst, wann Sie KI einsetzen." },
-      medium: { name: "Ausgeglichener Navigator", percentile: 50, advice: "Sie stützen sich auf KI, ohne sich zu verlieren. Kleine Gewohnheiten stärken Ihre Autonomie." },
-      high: { name: "KI-abhängiger Delegierer", percentile: 85, advice: "Sie lagern viel Denken an KI aus. Ziehen Sie einen digitalen Entzugstag in Betracht." }
+      low: { name: "Digitaler Zen-Meister", advice: "Sie bewahren kognitive Souveränität. Wählen Sie weiterhin bewusst, wann Sie KI einsetzen." },
+      medium: { name: "Ausgeglichener Navigator", advice: "Sie stützen sich auf KI, ohne sich zu verlieren. Kleine Gewohnheiten stärken Ihre Autonomie." },
+      high: { name: "KI-abhängiger Delegierer", advice: "Sie lagern viel Denken an KI aus. Ziehen Sie einen digitalen Entzugstag in Betracht." }
     },
     q1: ["Fragst du KI, statt dich selbst zu erinnern?","Nutzt du KI für einfache Fakten?","Holst du vor einer Entscheidung KI-Rat ein?","Ist dein Gedächtnis durch KI-Nutzung schlechter geworden?","Vertraust du KI mehr als dir selbst?","Ich überprüfe KI-Antworten oft doppelt.","Ohne KI kann ich Probleme selbst lösen.","Ich übe, mir Dinge ohne KI zu merken."],
     q2: ["Fühlst du dich durch die schnelle KI-Entwicklung bedroht?","Wirst du ängstlich, wenn KI nicht verfügbar ist?","Teilst du Gefühle eher mit KI als mit Freunden?","Bevorzugst du die Gesellschaft von KI gegenüber Menschen?","Hättest du Verlustgefühle, wenn dein Chatbot verschwände?","Keine Angst, dass KI meinen Job übernimmt.","Echte Menschen sind erfüllender.","KI ist nur ein Werkzeug, kein Freund."],
