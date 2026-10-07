@@ -1484,3 +1484,6 @@ nav.info-box #navAssessment .cta-sub { font-size: 0.82rem; font-weight: 600; opa
 }
 .test-card .progress, .fear-test-card .progress { display: inline-block; padding: 0.3rem 0.8rem; border-radius: 2rem;
   background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.04em; }
+
+/* Protocols page: once the categories are rendered (collapsed), do not keep the tall placeholder under them */
+.protocol-grid:has(.protocol-category) { min-height: 0; }
