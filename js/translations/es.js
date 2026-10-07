@@ -154,11 +154,11 @@ window.translations.es = {
     resetTestConfirm: "¿Estás seguro de que quieres reiniciar la evaluación?",
     donateText: "Apoya este proyecto en Ko-fi",
     overallTitle: "Tu Perfil de Identidad de IA",
-    overallPercentileLabel: "Mejor que el {percentile}% de los usuarios",
+    overallPercentileLabel: "Tu puntuación: {score} de {max}",
     archetypes: {
-      low: { name: "Maestro Zen Digital", percentile: 15, advice: "Mantienes la soberanía cognitiva. Continúa eligiendo conscientemente cuándo usar la IA." },
-      medium: { name: "Navegante Equilibrado", percentile: 50, advice: "Te apoyas en la IA sin perderte. Pequeños hábitos refuerzan tu autonomía." },
-      high: { name: "Delegador Dependiente de IA", percentile: 85, advice: "Externalizas gran parte de tu pensamiento. Considera una desintoxicación digital." }
+      low: { name: "Maestro Zen Digital", advice: "Mantienes la soberanía cognitiva. Continúa eligiendo conscientemente cuándo usar la IA." },
+      medium: { name: "Navegante Equilibrado", advice: "Te apoyas en la IA sin perderte. Pequeños hábitos refuerzan tu autonomía." },
+      high: { name: "Delegador Dependiente de IA", advice: "Externalizas gran parte de tu pensamiento. Considera una desintoxicación digital." }
     },
     q1: ["¿Preguntas a la IA en lugar de intentar recordar?","¿Usas IA para datos sencillos?","¿Pides consejo a la IA antes de decidir?","¿Tu memoria ha empeorado desde que usas IA?","¿Confías más en la IA que en tu razonamiento?","Reviso las respuestas de la IA porque no confío plenamente.","Sin IA, puedo resolver problemas por mi cuenta.","Practico recordar cosas sin IA."],
     q2: ["¿Te asusta el rápido desarrollo de la IA?","¿Sientes ansiedad si la IA no está disponible?","¿Compartes sentimientos con la IA más que con amigos?","¿Prefieres la compañía de la IA a las personas?","¿Sufrirías si tu chatbot desapareciera?","No temo que la IA me quite el trabajo.","Hablar con humanos es más gratificante.","La IA es solo una herramienta, no un amigo."],

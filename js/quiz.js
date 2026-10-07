@@ -219,48 +219,20 @@ const Quiz = (function() {
     }
   }
 
+  // Three axes as labelled bars (replaced the radar chart 2026-10-07: its labels were cut off on phones).
   function renderRadar(s1, s2, s3) {
     const holder = document.getElementById('radarHolder');
     if (!holder) return;
     const t = getT(currentLang);
-    const max = MAX_AXIS; // 32
-    const size = 260, cx = size/2, cy = size/2 + 6, R = 88;
-    const axes = [
-      { v: s1/max, label: (t.axis1Title||'Thinking').replace(/^[^\wА-Яа-я]+/, '').trim() },
-      { v: s2/max, label: (t.axis2Title||'Anxiety').replace(/^[^\wА-Яа-я]+/, '').trim() },
-      { v: s3/max, label: (t.axis3Title||'Burnout').replace(/^[^\wА-Яа-я]+/, '').trim() }
-    ];
-    const ang = i => (Math.PI/2) + (i * 2*Math.PI/3) * -1 - Math.PI; // старт сверху
-    const pt = (i, r) => [cx + r*Math.cos(ang(i)), cy + r*Math.sin(ang(i))];
-
-    let grid = '';
-    for (let ring=1; ring<=3; ring++) {
-      const rr = R*ring/3;
-      const pts = [0,1,2].map(i => pt(i, rr).map(n=>n.toFixed(1)).join(',')).join(' ');
-      grid += `<polygon points="${pts}" fill="none" stroke="var(--border)" stroke-width="1" opacity="0.5"/>`;
-    }
-    let spokes = '';
-    [0,1,2].forEach(i => {
-      const [x,y] = pt(i, R);
-      spokes += `<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="var(--border)" stroke-width="1" opacity="0.5"/>`;
-    });
-    const dataPts = axes.map((a,i) => pt(i, R*Math.max(a.v,0.04)).map(n=>n.toFixed(1)).join(',')).join(' ');
-    const dataPoly = `<polygon points="${dataPts}" fill="var(--accent)" fill-opacity="0.25" stroke="var(--accent)" stroke-width="2.5"/>`;
-    let dots = '';
-    axes.forEach((a,i) => {
-      const [x,y] = pt(i, R*Math.max(a.v,0.04));
-      dots += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4" fill="var(--accent)"/>`;
-    });
-    let labels = '';
-    axes.forEach((a,i) => {
-      const [x,y] = pt(i, R+24);
-      const anchor = i===0 ? 'middle' : (x>cx ? 'start' : 'end');
-      const pctVal = Math.round(a.v*100);
-      labels += `<text x="${x.toFixed(1)}" y="${y.toFixed(1)}" text-anchor="${anchor}" font-size="12" font-weight="600" fill="var(--text)">${a.label}</text>`;
-      labels += `<text x="${x.toFixed(1)}" y="${(y+15).toFixed(1)}" text-anchor="${anchor}" font-size="11" fill="var(--accent)">${pctVal}%</text>`;
-    });
-
-    holder.innerHTML = `<svg viewBox="0 0 ${size} ${size}" width="${size}" height="${size}" role="img" aria-label="Radar chart of your three AI dependency axes">${grid}${spokes}${dataPoly}${dots}${labels}</svg>`;
+    const clean = s => (s || '').replace(/^[^\p{L}\p{N}]+/u, '').trim();
+    const axes = [[s1, t.axis1Title], [s2, t.axis2Title], [s3, t.axis3Title]];
+    holder.removeAttribute('aria-hidden');
+    holder.innerHTML = axes.map(([v, label]) => {
+      const pct = Math.round(v / MAX_AXIS * 100);
+      const lvl = pct > 70 ? 'high' : (pct > 40 ? 'mid' : 'low');   // same thresholds as the overall profile
+      return `<div class="axis-row"><div class="axis-head"><span class="axis-name">${clean(label)}</span><span class="axis-pct">${pct}%</span></div>` +
+             `<div class="axis-track"><div class="axis-fill axis-${lvl}" style="width:${Math.max(pct, 3)}%"></div></div></div>`;
+    }).join('');
   }
 
   function renderSpectrum(ratio) {
@@ -322,7 +294,7 @@ const Quiz = (function() {
     const pEl = document.getElementById('overallPercentile');
     const adEl = document.getElementById('overallAdvice');
     if (aEl) aEl.textContent = arch.name;
-    if (pEl) pEl.textContent = t.overallPercentileLabel.replace('{percentile}', arch.percentile);
+    if (pEl) pEl.textContent = t.overallPercentileLabel.replace('{score}', totalScore).replace('{max}', TOTAL_MAX);
     if (adEl) adEl.textContent = arch.advice;
 
     renderRadar(s1, s2, s3);
@@ -413,7 +385,7 @@ const Quiz = (function() {
       const block = document.getElementById('overallBlock');
       block.style.display = 'block';
       document.getElementById('overallArchetype').textContent = arch.name;
-      document.getElementById('overallPercentile').textContent = t.overallPercentileLabel.replace('{percentile}', arch.percentile);
+      document.getElementById('overallPercentile').textContent = t.overallPercentileLabel.replace('{score}', totalScore).replace('{max}', TOTAL_MAX);
       document.getElementById('overallAdvice').textContent = arch.advice;
 
       const warnEl = document.getElementById('answerQualityWarning');

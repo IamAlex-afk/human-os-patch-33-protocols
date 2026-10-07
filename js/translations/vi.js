@@ -153,11 +153,11 @@ window.translations.vi = {
     resetTestConfirm: "Bạn có chắc muốn bắt đầu lại đánh giá không?",
     donateText: "Ủng hộ dự án này trên Ko-fi",
     overallTitle: "Hồ sơ Nhận dạng AI của bạn",
-    overallPercentileLabel: "Tốt hơn {percentile}% người dùng",
+    overallPercentileLabel: "Điểm của bạn: {score}/{max}",
     archetypes: {
-      low: { name: "Bậc thầy Zen kỹ thuật số", percentile: 15, advice: "Bạn duy trì chủ quyền nhận thức. Tiếp tục chọn khi nào tương tác với AI có ý thức." },
-      medium: { name: "Người điều hướng cân bằng", percentile: 50, advice: "Bạn dựa vào AI mà không đánh mất bản thân. Những thói quen nhỏ củng cố tự chủ." },
-      high: { name: "Người ủy quyền phụ thuộc AI", percentile: 85, advice: "Bạn uỷ thác nhiều tư duy cho AI. Hãy thử cai kỹ thuật số để tăng cường tập trung." }
+      low: { name: "Bậc thầy Zen kỹ thuật số", advice: "Bạn duy trì chủ quyền nhận thức. Tiếp tục chọn khi nào tương tác với AI có ý thức." },
+      medium: { name: "Người điều hướng cân bằng", advice: "Bạn dựa vào AI mà không đánh mất bản thân. Những thói quen nhỏ củng cố tự chủ." },
+      high: { name: "Người ủy quyền phụ thuộc AI", advice: "Bạn uỷ thác nhiều tư duy cho AI. Hãy thử cai kỹ thuật số để tăng cường tập trung." }
     },
     q1: ["Hỏi AI thay vì tự nhớ?","Dùng AI kiểm tra dữ kiện đơn giản?","Hỏi AI trước khi quyết định?","Trí nhớ kém hơn khi dùng AI?","Tin AI hơn lý luận của mình?","Tôi kiểm tra lại kết quả AI vì không tin tưởng.","Có thể giải quyết vấn đề không cần AI.","Thường xuyên luyện tập nhớ không dùng AI."],
     q2: ["Cảm thấy bị đe dọa bởi AI?","Lo lắng khi AI không khả dụng?","Chia sẻ cảm xúc với AI hơn bạn bè?","Thích AI hơn giao tiếp với người?","Mất mát nếu chatbot yêu thích biến mất?","Không lo AI lấy đi việc làm.","Nói chuyện với người cảm thấy bổ ích hơn.","AI chỉ là công cụ, không phải bạn bè."],

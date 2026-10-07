@@ -154,11 +154,11 @@ window.translations.en = {
     resetTestConfirm: "Are you sure you want to restart the assessment?",
     donateText: "Support this project on Ko-fi",
     overallTitle: "Your AI Identity Profile",
-    overallPercentileLabel: "Better than {percentile}% of users",
+    overallPercentileLabel: "Your score: {score} of {max}",
     archetypes: {
-      low: { name: "Digital Zen Master", percentile: 15, advice: "You maintain cognitive sovereignty. Continue choosing when to engage AI consciously." },
-      medium: { name: "Balanced Navigator", percentile: 50, advice: "You lean on AI without losing yourself. Small habits reinforce autonomy." },
-      high: { name: "AI-Dependent Delegate", percentile: 85, advice: "You outsource much thinking to AI. Try a digital detox to sharpen your focus." }
+      low: { name: "Digital Zen Master", advice: "You maintain cognitive sovereignty. Continue choosing when to engage AI consciously." },
+      medium: { name: "Balanced Navigator", advice: "You lean on AI without losing yourself. Small habits reinforce autonomy." },
+      high: { name: "AI-Dependent Delegate", advice: "You outsource much thinking to AI. Try a digital detox to sharpen your focus." }
     },
     q1: ["Ask AI instead of trying to recall?","Use AI to check simple facts?","Ask AI for advice before deciding?","Memory worse since using AI?","Trust AI's conclusions over your own?","I double-check AI output because I don't trust it.","Capable of solving problems without AI.","Regularly practice remembering without AI."],
     q2: ["Feel threatened by AI's development?","Anxious when AI is unavailable?","Share feelings with AI more than friends?","Prefer AI's company over people?","Loss if favourite chatbot disappeared?","Not worried about AI taking jobs.","Talking to people feels more rewarding.","AI is just a tool, not a friend."],

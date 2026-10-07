@@ -154,11 +154,11 @@ window.translations.fr = {
     resetTestConfirm: "Êtes-vous sûr(e) de vouloir recommencer l'évaluation ?",
     donateText: "Soutenez ce projet sur Ko-fi",
     overallTitle: "Votre Profil d'Identité IA",
-    overallPercentileLabel: "Moins dépendant que {percentile}% des utilisateurs",
+    overallPercentileLabel: "Votre score : {score} sur {max}",
     archetypes: {
-      low: { name: "Maître Zen Numérique", percentile: 15, advice: "Vous maintenez votre souveraineté cognitive. Continuez à choisir consciemment quand utiliser l'IA." },
-      medium: { name: "Navigateur Équilibré", percentile: 50, advice: "Vous vous appuyez sur l'IA sans vous perdre. De petites habitudes renforcent votre autonomie." },
-      high: { name: "Délégué Dépendant de l'IA", percentile: 85, advice: "Vous externalisez une grande partie de votre réflexion. Envisagez une détox numérique." }
+      low: { name: "Maître Zen Numérique", advice: "Vous maintenez votre souveraineté cognitive. Continuez à choisir consciemment quand utiliser l'IA." },
+      medium: { name: "Navigateur Équilibré", advice: "Vous vous appuyez sur l'IA sans vous perdre. De petites habitudes renforcent votre autonomie." },
+      high: { name: "Délégué Dépendant de l'IA", advice: "Vous externalisez une grande partie de votre réflexion. Envisagez une détox numérique." }
     },
     q1: ["Demandez-vous à l'IA au lieu d'essayer de vous souvenir ?","Utilisez-vous l'IA pour des faits simples ?","Demandez-vous conseil à l'IA avant de décider ?","Votre mémoire a-t-elle empiré depuis que vous utilisez l'IA ?","Faites-vous plus confiance aux conclusions de l'IA qu'à votre propre raisonnement ?","Je vérifie souvent les réponses de l'IA car je ne m'y fie pas totalement.","Sans IA, je peux résoudre les problèmes par moi-même.","Je m'entraîne régulièrement à me souvenir sans IA."],
     q2: ["Vous sentez-vous menacé par le développement rapide de l'IA ?","Êtes-vous anxieux lorsque l'IA n'est pas disponible ?","Partagez-vous vos sentiments avec l'IA plus qu'avec vos amis ?","Préférez-vous la compagnie de l'IA à celle des gens ?","Ressentiriez-vous une véritable perte si votre chatbot disparaissait ?","Je ne crains pas que l'IA prenne le travail des humains.","Parler à de vraies personnes est plus gratifiant.","L'IA n'est qu'un outil, pas un ami."],

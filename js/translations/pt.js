@@ -154,11 +154,11 @@ window.translations.pt = {
     resetTestConfirm: "Tem certeza de que deseja reiniciar a avaliação?",
     donateText: "Apoie este projeto no Ko-fi",
     overallTitle: "Seu Perfil de Identidade de IA",
-    overallPercentileLabel: "Melhor que {percentile}% dos usuários",
+    overallPercentileLabel: "Sua pontuação: {score} de {max}",
     archetypes: {
-      low: { name: "Mestre Zen Digital", percentile: 15, advice: "Você mantém a soberania cognitiva. Continue escolhendo quando usar a IA de forma consciente." },
-      medium: { name: "Navegador Equilibrado", percentile: 50, advice: "Você se apoia na IA sem se perder. Pequenos hábitos reforçam a autonomia." },
-      high: { name: "Delegante Dependente de IA", percentile: 85, advice: "Você terceiriza muito do pensamento para a IA. Tente uma desintoxicação digital para aguçar seu foco." }
+      low: { name: "Mestre Zen Digital", advice: "Você mantém a soberania cognitiva. Continue escolhendo quando usar a IA de forma consciente." },
+      medium: { name: "Navegador Equilibrado", advice: "Você se apoia na IA sem se perder. Pequenos hábitos reforçam a autonomia." },
+      high: { name: "Delegante Dependente de IA", advice: "Você terceiriza muito do pensamento para a IA. Tente uma desintoxicação digital para aguçar seu foco." }
     },
     q1: ["Pergunta à IA em vez de tentar lembrar?","Usa a IA para checar fatos simples?","Pede conselhos à IA antes de decidir?","Memória pior desde que usa IA?","Confia mais nas conclusões da IA do que nas suas?","Verifico novamente a saída da IA porque não confio nela.","Capaz de resolver problemas sem IA.","Pratico regularmente lembrar sem IA."],
     q2: ["Sente-se ameaçado pelo desenvolvimento da IA?","Ansioso quando a IA está indisponível?","Compartilha sentimentos com a IA mais do que com amigos?","Prefere a companhia da IA à das pessoas?","Sentiria perda se seu chatbot favorito desaparecesse?","Não me preocupo com a IA tirando empregos.","Conversar com pessoas é mais gratificante.","A IA é só uma ferramenta, não uma amiga."],
