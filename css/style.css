@@ -1025,7 +1025,7 @@ img {
 @media print {
   /* Скрываем навигацию, селектор, кнопки, неважные секии */
   .lang-selector, .scroll-top-btn, .reading-progress,
-  nav, #globalCTABar, #game-section,
+  nav, #globalCTABar,
   #poll-section, footer, .donate-link, #shareButton,
   #resetTestButton, noscript {
     display: none !important;
@@ -1474,8 +1474,6 @@ nav.info-box #navAssessment .cta-sub { font-size: 0.82rem; font-weight: 600; opa
 .lang-bar[hidden] { display: none; }
 #submitPoll { background: var(--accent); color: var(--bg); font-size: 1.05rem; padding: 0.9rem 2.4rem; }
 #submitPoll:hover, #submitPoll:focus-visible { background: #00ff88; color: var(--bg); }
-#gameQuestion { font-size: 1.25rem !important; }
-#gameBtnHuman, #gameBtnAI { font-size: 1.1rem; padding: 0.9rem 2rem; flex: 1 1 9rem; max-width: 18rem; }
 
 /* ====== Question screen (2026-10-07): back / next side by side on phones, a clearer question counter ====== */
 @media (max-width: 600px) {

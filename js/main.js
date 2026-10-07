@@ -232,7 +232,7 @@
     const ut = (id, val) => { const el = document.getElementById(id); if (el && val !== undefined) el.textContent = val; };
     const uh = (id, val) => { const el = document.getElementById(id); if (el && val !== undefined) el.innerHTML = val; };
 
-    const PM = window.PAGE_META || null;          // set on faq / protocols / poll / game pages
+    const PM = window.PAGE_META || null;          // set on faq / protocols / poll pages
     document.title = PM ? PM.title : `${t.mainTitle} | Mind-OS`;
     const descMeta = document.getElementById('dynamicDescription');
     if (descMeta) descMeta.content = PM ? PM.desc : t.subhead;
@@ -257,7 +257,6 @@
     }
     ut('skipLink', t.skipLink);
     ut('privacyLink', t.privacyLink);
-    ut('navGame', t.navGame);
     ut('navPoll', t.navPoll);
     ut('navProtocols', t.navProtocols);
     ut('navFaq', t.navFaq);
@@ -282,13 +281,6 @@
     ut('fearHint', t.fearHint);
 
 
-    ut('gameTitle', t.gameTitle);
-    ut('gameDesc', t.gameDesc);
-    ut('gameBtnHuman', t.gameBtnHuman);
-    ut('gameBtnAI', t.gameBtnAI);
-    ut('gameNextBtn', t.gameNextBtn);
-    ut('gameRestartBtn', t.gameRestartBtn);
-    ut('gameScoreLabel', t.gameScoreLabel);
 
     ut('pollTitle', t.pollTitle);
     ut('pollDesc', t.pollDesc);
@@ -371,7 +363,6 @@
     ut('faqAiDangerQ', t.faqAiDangerQ);  uh('faqAiDangerA', t.faqAiDangerA);
 
     if (window.Quiz) Quiz.setLang(lang);
-    if (window.Game) Game.setLang(lang);
     if (window.Poll) Poll.setLang(lang);
 
     if (window.Quiz) {
@@ -395,7 +386,6 @@
     }
 
     renderProtocols(t.protocols);
-    if (window.Game) Game.loadQuestion();
     if (window.Poll) Poll.syncUI();
     if (window.Quiz) Quiz.updateOverallProgress();
   }
@@ -457,13 +447,6 @@
     initLangSuggestBanner();
     if (window.Quiz && Quiz.checkSharedResult) { try { Quiz.checkSharedResult(); } catch(e) {} }
 
-    if (window.Game) {
-      document.getElementById('gameBtnHuman')?.addEventListener('click', () => Game.handleGuess(false));
-      document.getElementById('gameBtnAI')?.addEventListener('click', () => Game.handleGuess(true));
-      document.getElementById('gameNextBtn')?.addEventListener('click', () => Game.next());
-      document.getElementById('gameRestartBtn')?.addEventListener('click', () => Game.restart());
-    }
-
     if (window.Poll) {
       document.getElementById('submitPoll')?.addEventListener('click', () => Poll.submit());
       document.getElementById('pollInviteBtn')?.addEventListener('click', () => {
@@ -511,7 +494,6 @@
 
     const navMap = [
       { nav: 'navAssessment', sec: 'test-section' },
-      { nav: 'navGame',       sec: 'game-section' },
       { nav: 'navPoll',       sec: 'poll-section' },
       { nav: 'navProtocols',  sec: 'protocols-section' },
       { nav: 'navFaq',        sec: 'faq-section' }
