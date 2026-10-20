@@ -2,7 +2,7 @@ window.translations = window.translations || {};
 window.translations.de = {
     langName: "Deutsch",
     mainTitle: "KI-Abhängigkeit: Selbsttest gratis (ChatGPT & Co.)",
-    subhead: "Anonymer Test mit 28 Fragen: Wie sehr verlassen Sie sich beim Denken, Fühlen und Arbeiten auf KI und ChatGPT? Angelehnt an LLM-D12 und AIAS. Ohne Anmeldung.",
+    subhead: "Anonymer Test mit 28 Fragen: Wie sehr verlassen Sie sich beim Denken, Fühlen und Arbeiten auf KI wie ChatGPT? Angelehnt an LLM-D12 und AIAS. Ohne Anmeldung.",
     infoTitle: "📋 Was diese Bewertung misst",
     infoPara1: "Diese 28 Fragen helfen dir zu beobachten, wie du KI nutzt. Die Fragen sind unsere eigenen und lehnen sich an die LLM-D12-Skala, die KI-Angst-Skala AIAS und das vorgeschlagene Konstrukt AIRD an.",
     infoPara2: "<strong>Für wen:</strong> Jeder, der prüfen möchte, ob die KI-Nutzung noch bewusst ist. Du erhältst dein persönliches KI-Profil.",

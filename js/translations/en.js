@@ -2,7 +2,7 @@ window.translations = window.translations || {};
 window.translations.en = {
     langName: "English",
     mainTitle: "AI Dependency Test: How Much Do You Rely on ChatGPT?",
-    subhead: "Free, anonymous 28-question test: how much do you rely on AI and ChatGPT for thinking, emotions and work? Draws on LLM-D12 and AIAS. No signup.",
+    subhead: "Free, anonymous 28-question test: how much do you rely on AI such as ChatGPT for thinking, emotions and work? Draws on LLM-D12 and AIAS. No signup.",
     infoTitle: "📋 What this assessment measures",
     infoPara1: "This set of 28 questions helps you observe patterns in how you use AI for thinking, emotional comfort, and daily productivity. Designed for self-awareness, not clinical diagnosis. The questions are our own and draw on the LLM-D12 scale, the AI Anxiety Scale (AIAS) and the proposed AIRD construct.",
     infoPara2: "<strong>Who it's for:</strong> Anyone who wants to check whether their AI use is still intentional or becoming automatic. You'll get your personal AI Identity Profile with an archetype and percentile comparison.",

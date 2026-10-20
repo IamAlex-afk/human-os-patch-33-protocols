@@ -1,8 +1,8 @@
 window.translations = window.translations || {};
 window.translations.fr = {
     langName: "Français",
-    mainTitle: "Test de dépendance à l’IA et à ChatGPT, gratuit",
-    subhead: "Test anonyme de 28 questions : à quel point dépendez-vous de l’IA et de ChatGPT pour penser, ressentir et travailler ? Inspiré de LLM-D12 et AIAS. Sans inscription.",
+    mainTitle: "Test de dépendance à l’IA (ChatGPT et autres), gratuit",
+    subhead: "Test anonyme de 28 questions : à quel point dépendez-vous de l’IA, comme ChatGPT, pour penser, ressentir et travailler ? Inspiré de LLM-D12 et AIAS. Sans inscription.",
     infoTitle: "📋 Ce que mesure cette évaluation",
     infoPara1: "Cet ensemble de 28 questions vous aide à observer vos habitudes d'utilisation de l'IA. Les questions sont les nôtres et s’inspirent de l’échelle LLM-D12, de l’échelle d’anxiété AIAS et du construit proposé AIRD.",
     infoPara2: "<strong>Pour qui :</strong> Toute personne souhaitant vérifier si son utilisation de l'IA est toujours intentionnelle. Vous obtiendrez votre Profil d'Identité IA.",

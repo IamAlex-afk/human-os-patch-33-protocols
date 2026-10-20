@@ -1,8 +1,8 @@
 window.translations = window.translations || {};
 window.translations.vi = {
     langName: "Tiếng Việt",
-    mainTitle: "Bài test mức độ phụ thuộc AI và ChatGPT miễn phí",
-    subhead: "Bài test ẩn danh gồm 28 câu hỏi: bạn dựa vào AI và ChatGPT đến mức nào khi suy nghĩ, cảm xúc và làm việc? Tham khảo thang LLM-D12 và AIAS. Không cần đăng ký.",
+    mainTitle: "Bài test phụ thuộc AI (ChatGPT và AI khác) miễn phí",
+    subhead: "Bài test ẩn danh gồm 28 câu hỏi: bạn dựa vào AI như ChatGPT đến mức nào khi suy nghĩ, cảm xúc và làm việc? Tham khảo thang LLM-D12 và AIAS. Không cần đăng ký.",
     infoTitle: "📋 Bài đánh giá này đo lường điều gì",
     infoPara1: "28 câu hỏi giúp bạn nhận ra các mô hình sử dụng AI. Câu hỏi do chúng tôi soạn, tham khảo thang LLM-D12, thang lo âu AI (AIAS) và khái niệm AIRD được đề xuất.",
     infoPara2: "<strong>Dành cho ai:</strong> Bất kỳ ai muốn kiểm tra việc dùng AI của mình có còn chủ ý không. Bạn sẽ nhận được Hồ sơ Nhận dạng AI cá nhân.",

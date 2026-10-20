@@ -1,8 +1,8 @@
 window.translations = window.translations || {};
 window.translations.ko = {
     langName: "한국어",
-    mainTitle: "AI·챗GPT 의존도 테스트 – 무료 자가진단",
-    subhead: "28문항 무료 익명 테스트: 생각, 감정, 업무에서 AI와 챗GPT에 얼마나 의존하고 있나요? LLM-D12와 AIAS 척도 참고. 가입 불필요.",
+    mainTitle: "AI 의존도 테스트(챗GPT 등) – 무료 자가진단",
+    subhead: "28문항 무료 익명 테스트: 생각, 감정, 업무에서 AI(챗GPT 등)에 얼마나 의존하고 있나요? LLM-D12와 AIAS 척도 참고. 가입 불필요.",
     infoTitle: "📋 이 평가가 측정하는 것",
     infoPara1: "이 28개 문항은 생각, 감정적 안정, 일상 생산성을 위해 AI를 어떻게 사용하는지 패턴을 살펴보는 데 도움이 됩니다. 임상 진단이 아닌 자기 인식을 위해 설계되었습니다. 문항은 저희가 직접 만들었으며 LLM-D12 척도, AI 불안 척도(AIAS), 제안된 개념인 AIRD를 참고했습니다.",
     infoPara2: "<strong>누구를 위한 것인가:</strong> AI 사용이 여전히 의도적인지, 자동적으로 변하고 있는지 확인하고 싶은 모든 사람. 원형(archetype)과 백분위 비교가 포함된 개인 AI 정체성 프로필을 받게 됩니다.",
