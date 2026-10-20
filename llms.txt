@@ -44,6 +44,9 @@ Short open tests of 10 questions each, scored 0–40 in the browser:
    Scale (Chen et al. 2025), Problematic ChatGPT Use Scale (2025).
 2. **Fear of AI** (https://iamalex-afk.github.io/human-os-patch-33-protocols/fear-of-ai.html) — jobs, keeping up with AI, control over AI, human-like AI;
    agreement scale; follows the four areas of the AI Anxiety Scale (Wang & Wang).
+3. **Emotional attachment to AI** (https://iamalex-afk.github.io/human-os-patch-33-protocols/emotional-attachment-to-ai.html) — AI as comfort, AI instead of people,
+   bond with the chatbot; frequency scale; follows Fang, Liu et al. 2025 (arXiv:2503.17473, MIT Media Lab & OpenAI
+   randomized study, 981 participants) and the mood-modification area of CAIDS.
 
 Levels: up to 40% of the maximum low, 41–70% moderate, above 70% high (thresholds from the answer scale, not population
 norms). No reverse-worded items. Not clinically validated; not a diagnosis. Questions and scoring are open (CC BY 4.0)

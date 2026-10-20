@@ -1,0 +1,534 @@
+{
+ "id": "emotional-attachment-to-ai",
+ "name": "Emotional attachment to AI",
+ "version": "1.0.0",
+ "license": "CC BY 4.0",
+ "license_url": "https://creativecommons.org/licenses/by/4.0/",
+ "author": "Aleksei Sergeevich Bitkin",
+ "author_orcid": "https://orcid.org/0009-0002-7986-3812",
+ "source": "https://iamalex-afk.github.io/human-os-patch-33-protocols/",
+ "scoring": {
+  "points_per_answer": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "items": 10,
+  "min": 0,
+  "max": 40,
+  "reverse_keyed": [],
+  "levels": [
+   {
+    "up_to_share_of_max": 0.4
+   },
+   {
+    "up_to_share_of_max": 0.7
+   },
+   {
+    "up_to_share_of_max": 1.0
+   }
+  ],
+  "note": "Thresholds follow the answer scale, not population norms. Not clinically validated; not a diagnosis."
+ },
+ "areas": [
+  "comfort",
+  "people",
+  "bond"
+ ],
+ "item_areas": [
+  "comfort",
+  "comfort",
+  "comfort",
+  "people",
+  "people",
+  "people",
+  "bond",
+  "bond",
+  "bond",
+  "bond"
+ ],
+ "languages": {
+  "en": {
+   "options": [
+    "Never",
+    "Rarely",
+    "Sometimes",
+    "Often",
+    "Constantly"
+   ],
+   "items": [
+    "Do you turn to AI when you feel lonely?",
+    "Do you tell AI about what worries you before you tell anyone else?",
+    "Do you talk to AI to calm down when you are upset?",
+    "Do you choose to talk to AI instead of meeting or calling people?",
+    "Do you spend less time with friends or family because you are talking to AI?",
+    "Do you feel that AI understands you better than the people around you?",
+    "Do you think of an AI chatbot as a friend or companion?",
+    "Do you miss talking to AI when you have not used it for a day?",
+    "Do you care about what an AI chatbot “thinks” of you?",
+    "Do you look forward to talking to AI more than to talking to people?"
+   ],
+   "areas": {
+    "comfort": "AI as comfort",
+    "people": "AI instead of people",
+    "bond": "Bond with the chatbot"
+   },
+   "levels": [
+    {
+     "name": "Low attachment",
+     "text": "AI is a tool for you, not a source of closeness. Keep your important conversations with people."
+    },
+    {
+     "name": "Moderate attachment",
+     "text": "AI already plays a part in your feelings. A small step helps: when you want to share something, tell one person first, then AI if you still want to."
+    },
+    {
+     "name": "Strong attachment",
+     "text": "You lean on AI for closeness and comfort. Try to rebuild contact with people step by step; if you feel lonely or low most of the time, talk to someone you trust or to a professional."
+    }
+   ]
+  },
+  "ru": {
+   "options": [
+    "Никогда",
+    "Редко",
+    "Иногда",
+    "Часто",
+    "Постоянно"
+   ],
+   "items": [
+    "Обращаетесь к ИИ, когда вам одиноко?",
+    "Рассказываете ИИ о том, что вас тревожит, раньше, чем кому-то из людей?",
+    "Разговариваете с ИИ, чтобы успокоиться, когда расстроены?",
+    "Выбираете разговор с ИИ вместо встречи или звонка людям?",
+    "Проводите меньше времени с друзьями или близкими, потому что общаетесь с ИИ?",
+    "Чувствуете, что ИИ понимает вас лучше, чем люди вокруг?",
+    "Воспринимаете ИИ-чат-бота как друга или собеседника-компаньона?",
+    "Скучаете по разговорам с ИИ, если день им не пользовались?",
+    "Вам важно, что ИИ-чат-бот «думает» о вас?",
+    "Ждёте разговора с ИИ сильнее, чем разговора с людьми?"
+   ],
+   "areas": {
+    "comfort": "ИИ как утешение",
+    "people": "ИИ вместо людей",
+    "bond": "Привязанность к боту"
+   },
+   "levels": [
+    {
+     "name": "Слабая привязанность",
+     "text": "ИИ для вас — инструмент, а не источник близости. Сохраняйте важные разговоры с людьми."
+    },
+    {
+     "name": "Умеренная привязанность",
+     "text": "ИИ уже участвует в ваших чувствах. Помогает маленький шаг: когда хочется поделиться, расскажите сначала одному человеку, а потом, если захочется, — ИИ."
+    },
+    {
+     "name": "Сильная привязанность",
+     "text": "Вы ищете у ИИ близости и утешения. Попробуйте шаг за шагом восстанавливать общение с людьми; если вам большую часть времени одиноко или тяжело — поговорите с тем, кому доверяете, или со специалистом."
+    }
+   ]
+  },
+  "es": {
+   "options": [
+    "Nunca",
+    "Raramente",
+    "A veces",
+    "A menudo",
+    "Constantemente"
+   ],
+   "items": [
+    "¿Recurres a la IA cuando te sientes solo?",
+    "¿Le cuentas a la IA lo que te preocupa antes que a ninguna persona?",
+    "¿Hablas con la IA para calmarte cuando estás mal?",
+    "¿Eliges hablar con la IA en lugar de quedar o llamar a alguien?",
+    "¿Pasas menos tiempo con amigos o familia porque estás hablando con la IA?",
+    "¿Sientes que la IA te entiende mejor que la gente que te rodea?",
+    "¿Ves a un chatbot de IA como un amigo o una compañía?",
+    "¿Echas de menos hablar con la IA cuando llevas un día sin usarla?",
+    "¿Te importa lo que un chatbot de IA «piense» de ti?",
+    "¿Tienes más ganas de hablar con la IA que con las personas?"
+   ],
+   "areas": {
+    "comfort": "La IA como consuelo",
+    "people": "La IA en lugar de las personas",
+    "bond": "Vínculo con el chatbot"
+   },
+   "levels": [
+    {
+     "name": "Apego bajo",
+     "text": "Para ti la IA es una herramienta, no una fuente de cercanía. Guarda tus conversaciones importantes para las personas."
+    },
+    {
+     "name": "Apego moderado",
+     "text": "La IA ya tiene un papel en tus emociones. Ayuda un paso pequeño: cuando quieras contar algo, cuéntaselo primero a una persona y, si aún quieres, luego a la IA."
+    },
+    {
+     "name": "Apego fuerte",
+     "text": "Buscas en la IA cercanía y consuelo. Intenta recuperar poco a poco el contacto con las personas; si te sientes solo o triste la mayor parte del tiempo, habla con alguien de confianza o con un profesional."
+    }
+   ]
+  },
+  "de": {
+   "options": [
+    "Nie",
+    "Selten",
+    "Manchmal",
+    "Oft",
+    "Ständig"
+   ],
+   "items": [
+    "Wendest du dich an KI, wenn du dich einsam fühlst?",
+    "Erzählst du der KI von deinen Sorgen, bevor du sie einem Menschen erzählst?",
+    "Sprichst du mit KI, um dich zu beruhigen, wenn es dir schlecht geht?",
+    "Sprichst du lieber mit KI, statt dich mit Menschen zu treffen oder sie anzurufen?",
+    "Verbringst du weniger Zeit mit Freunden oder Familie, weil du mit KI sprichst?",
+    "Hast du das Gefühl, dass KI dich besser versteht als die Menschen um dich herum?",
+    "Siehst du einen KI-Chatbot als Freund oder Begleiter?",
+    "Fehlt dir das Gespräch mit KI, wenn du sie einen Tag nicht genutzt hast?",
+    "Ist es dir wichtig, was ein KI-Chatbot von dir „denkt“?",
+    "Freust du dich mehr auf Gespräche mit KI als auf Gespräche mit Menschen?"
+   ],
+   "areas": {
+    "comfort": "KI als Trost",
+    "people": "KI statt Menschen",
+    "bond": "Bindung an den Chatbot"
+   },
+   "levels": [
+    {
+     "name": "Geringe Bindung",
+     "text": "KI ist für dich ein Werkzeug, keine Quelle von Nähe. Halte deine wichtigen Gespräche mit Menschen."
+    },
+    {
+     "name": "Mittlere Bindung",
+     "text": "KI spielt schon eine Rolle in deinen Gefühlen. Ein kleiner Schritt hilft: Wenn du etwas teilen möchtest, erzähl es zuerst einem Menschen und erst dann, wenn du noch willst, der KI."
+    },
+    {
+     "name": "Starke Bindung",
+     "text": "Du suchst bei KI Nähe und Trost. Versuche, den Kontakt zu Menschen Schritt für Schritt wieder aufzubauen; wenn du dich die meiste Zeit einsam oder niedergeschlagen fühlst, sprich mit einer Vertrauensperson oder einer Fachperson."
+    }
+   ]
+  },
+  "fr": {
+   "options": [
+    "Jamais",
+    "Rarement",
+    "Parfois",
+    "Souvent",
+    "Constamment"
+   ],
+   "items": [
+    "Vous tournez-vous vers l’IA quand vous vous sentez seul ?",
+    "Confiez-vous vos soucis à l’IA avant d’en parler à quelqu’un ?",
+    "Parlez-vous à l’IA pour vous calmer quand vous êtes contrarié ?",
+    "Choisissez-vous de parler à l’IA plutôt que de voir ou d’appeler des gens ?",
+    "Passez-vous moins de temps avec vos amis ou votre famille parce que vous parlez à l’IA ?",
+    "Avez-vous l’impression que l’IA vous comprend mieux que les gens autour de vous ?",
+    "Voyez-vous un chatbot d’IA comme un ami ou un compagnon ?",
+    "Les conversations avec l’IA vous manquent-elles quand vous ne l’avez pas utilisée de la journée ?",
+    "Tenez-vous à ce qu’un chatbot d’IA « pense » de vous ?",
+    "Attendez-vous davantage de parler à l’IA qu’aux gens ?"
+   ],
+   "areas": {
+    "comfort": "L’IA comme réconfort",
+    "people": "L’IA à la place des gens",
+    "bond": "Lien avec le chatbot"
+   },
+   "levels": [
+    {
+     "name": "Attachement faible",
+     "text": "L’IA est pour vous un outil, pas une source de proximité. Gardez vos conversations importantes pour les gens."
+    },
+    {
+     "name": "Attachement modéré",
+     "text": "L’IA joue déjà un rôle dans vos émotions. Un petit pas aide : quand vous voulez partager quelque chose, dites-le d’abord à une personne, puis à l’IA si vous en avez encore envie."
+    },
+    {
+     "name": "Attachement fort",
+     "text": "Vous cherchez auprès de l’IA de la proximité et du réconfort. Essayez de renouer peu à peu avec les gens ; si vous vous sentez seul ou abattu la plupart du temps, parlez-en à quelqu’un de confiance ou à un professionnel."
+    }
+   ]
+  },
+  "ja": {
+   "options": [
+    "全くない",
+    "めったにない",
+    "時々",
+    "よくある",
+    "常にある"
+   ],
+   "items": [
+    "さみしいとき、AIに頼りますか？",
+    "心配ごとを、誰か人に話すより先にAIに話しますか？",
+    "気持ちが乱れたとき、落ち着くためにAIと話しますか？",
+    "人と会ったり電話したりする代わりに、AIと話すことを選びますか？",
+    "AIと話しているせいで、友人や家族と過ごす時間が減っていますか？",
+    "まわりの人よりAIのほうが自分を分かってくれると感じますか？",
+    "AIチャットボットを友だちや相棒のように思っていますか？",
+    "1日AIを使わないと、AIとの会話が恋しくなりますか？",
+    "AIチャットボットが自分をどう「思っているか」が気になりますか？",
+    "人と話すより、AIと話すほうが楽しみですか？"
+   ],
+   "areas": {
+    "comfort": "心の支えとしてのAI",
+    "people": "人の代わりのAI",
+    "bond": "チャットボットとのつながり"
+   },
+   "levels": [
+    {
+     "name": "つながり：弱い",
+     "text": "AIはあなたにとって道具で、親しさのよりどころではありません。大切な話は人とするようにしましょう。"
+    },
+    {
+     "name": "つながり：中くらい",
+     "text": "AIはすでにあなたの気持ちに関わっています。小さな一歩が助けになります：何か話したいときは、まず1人の人に話し、それでも話したければAIに話しましょう。"
+    },
+    {
+     "name": "つながり：強い",
+     "text": "AIに親しさや慰めを求めています。少しずつ人とのつながりを取り戻してみましょう。ほとんどの時間さみしかったり落ち込んだりしているなら、信頼できる人や専門家に相談してください。"
+    }
+   ]
+  },
+  "vi": {
+   "options": [
+    "Không bao giờ",
+    "Hiếm khi",
+    "Đôi khi",
+    "Thường xuyên",
+    "Luôn luôn"
+   ],
+   "items": [
+    "Bạn có tìm đến AI khi thấy cô đơn không?",
+    "Bạn có kể với AI điều khiến mình lo lắng trước khi kể với ai khác không?",
+    "Bạn có nói chuyện với AI để bình tĩnh lại khi buồn bực không?",
+    "Bạn có chọn nói chuyện với AI thay vì gặp hoặc gọi điện cho người khác không?",
+    "Bạn có dành ít thời gian hơn cho bạn bè hay gia đình vì đang trò chuyện với AI không?",
+    "Bạn có cảm thấy AI hiểu mình hơn những người xung quanh không?",
+    "Bạn có coi chatbot AI là bạn hay người đồng hành không?",
+    "Bạn có nhớ những cuộc trò chuyện với AI khi một ngày không dùng nó không?",
+    "Bạn có bận tâm chatbot AI “nghĩ” gì về mình không?",
+    "Bạn có mong được trò chuyện với AI hơn là với con người không?"
+   ],
+   "areas": {
+    "comfort": "AI như chỗ dựa",
+    "people": "AI thay cho con người",
+    "bond": "Gắn bó với chatbot"
+   },
+   "levels": [
+    {
+     "name": "Gắn bó thấp",
+     "text": "Với bạn, AI là công cụ, không phải nguồn gần gũi. Hãy giữ những cuộc trò chuyện quan trọng cho con người."
+    },
+    {
+     "name": "Gắn bó vừa",
+     "text": "AI đã có vai trò trong cảm xúc của bạn. Một bước nhỏ sẽ giúp ích: khi muốn chia sẻ điều gì, hãy kể với một người trước, rồi nếu vẫn muốn mới kể với AI."
+    },
+    {
+     "name": "Gắn bó cao",
+     "text": "Bạn tìm ở AI sự gần gũi và an ủi. Hãy thử từng bước nối lại liên lạc với mọi người; nếu phần lớn thời gian bạn thấy cô đơn hay chán nản, hãy nói chuyện với người bạn tin tưởng hoặc với chuyên gia."
+    }
+   ]
+  },
+  "th": {
+   "options": [
+    "ไม่เคย",
+    "นานๆ ครั้ง",
+    "บางครั้ง",
+    "บ่อยครั้ง",
+    "เสมอ"
+   ],
+   "items": [
+    "คุณหันไปหา AI ตอนรู้สึกเหงาไหม?",
+    "คุณเล่าเรื่องที่กังวลให้ AI ฟังก่อนจะเล่าให้คนอื่นฟังไหม?",
+    "คุณคุยกับ AI เพื่อให้ใจเย็นลงตอนไม่สบายใจไหม?",
+    "คุณเลือกคุยกับ AI แทนการไปเจอหรือโทรหาคนอื่นไหม?",
+    "คุณใช้เวลากับเพื่อนหรือครอบครัวน้อยลงเพราะมัวคุยกับ AI ไหม?",
+    "คุณรู้สึกว่า AI เข้าใจคุณมากกว่าคนรอบตัวไหม?",
+    "คุณมองแชตบอต AI เป็นเพื่อนหรือคู่หูไหม?",
+    "คุณคิดถึงการคุยกับ AI เมื่อไม่ได้ใช้มาหนึ่งวันไหม?",
+    "คุณสนใจว่าแชตบอต AI “คิด” อย่างไรกับคุณไหม?",
+    "คุณตั้งตารอที่จะคุยกับ AI มากกว่าคุยกับคนไหม?"
+   ],
+   "areas": {
+    "comfort": "AI เป็นที่พึ่งทางใจ",
+    "people": "AI แทนผู้คน",
+    "bond": "ความผูกพันกับแชตบอต"
+   },
+   "levels": [
+    {
+     "name": "ผูกพันน้อย",
+     "text": "สำหรับคุณ AI เป็นเครื่องมือ ไม่ใช่ที่มาของความใกล้ชิด เก็บเรื่องสำคัญไว้คุยกับคนจริง ๆ"
+    },
+    {
+     "name": "ผูกพันปานกลาง",
+     "text": "AI มีบทบาทในความรู้สึกของคุณแล้ว ก้าวเล็ก ๆ ช่วยได้: เมื่ออยากเล่าอะไร ให้เล่ากับคนหนึ่งคนก่อน แล้วถ้ายังอยากจึงค่อยเล่ากับ AI"
+    },
+    {
+     "name": "ผูกพันมาก",
+     "text": "คุณมองหาความใกล้ชิดและการปลอบใจจาก AI ลองค่อย ๆ กลับมาติดต่อกับผู้คน ถ้าคุณรู้สึกเหงาหรือหดหู่เกือบตลอดเวลา ลองคุยกับคนที่ไว้ใจหรือผู้เชี่ยวชาญ"
+    }
+   ]
+  },
+  "pt": {
+   "options": [
+    "Nunca",
+    "Raramente",
+    "Às vezes",
+    "Frequentemente",
+    "Constantemente"
+   ],
+   "items": [
+    "Você recorre à IA quando se sente sozinho?",
+    "Você conta à IA o que te preocupa antes de contar a qualquer pessoa?",
+    "Você conversa com a IA para se acalmar quando está chateado?",
+    "Você escolhe conversar com a IA em vez de encontrar ou ligar para alguém?",
+    "Você passa menos tempo com amigos ou família porque está conversando com a IA?",
+    "Você sente que a IA te entende melhor do que as pessoas ao seu redor?",
+    "Você vê um chatbot de IA como amigo ou companhia?",
+    "Você sente falta de conversar com a IA quando passa um dia sem usá-la?",
+    "Você se importa com o que um chatbot de IA “pensa” de você?",
+    "Você espera mais por uma conversa com a IA do que com pessoas?"
+   ],
+   "areas": {
+    "comfort": "A IA como consolo",
+    "people": "A IA no lugar das pessoas",
+    "bond": "Vínculo com o chatbot"
+   },
+   "levels": [
+    {
+     "name": "Apego baixo",
+     "text": "Para você, a IA é uma ferramenta, não uma fonte de proximidade. Guarde as conversas importantes para as pessoas."
+    },
+    {
+     "name": "Apego moderado",
+     "text": "A IA já tem um papel nos seus sentimentos. Um passo pequeno ajuda: quando quiser contar algo, conte primeiro a uma pessoa e, se ainda quiser, depois à IA."
+    },
+    {
+     "name": "Apego forte",
+     "text": "Você busca na IA proximidade e consolo. Tente reconstruir aos poucos o contato com as pessoas; se você se sente sozinho ou para baixo a maior parte do tempo, converse com alguém de confiança ou com um profissional."
+    }
+   ]
+  },
+  "ko": {
+   "options": [
+    "전혀 아니다",
+    "거의 아니다",
+    "때때로 그렇다",
+    "자주 그렇다",
+    "항상 그렇다"
+   ],
+   "items": [
+    "외로울 때 AI를 찾나요?",
+    "걱정되는 일을 사람에게 말하기 전에 AI에게 먼저 말하나요?",
+    "속상할 때 마음을 가라앉히려고 AI와 이야기하나요?",
+    "사람을 만나거나 전화하는 대신 AI와 이야기하기를 선택하나요?",
+    "AI와 이야기하느라 친구나 가족과 보내는 시간이 줄었나요?",
+    "주변 사람보다 AI가 나를 더 잘 이해한다고 느끼나요?",
+    "AI 챗봇을 친구나 동반자처럼 여기나요?",
+    "하루 동안 AI를 쓰지 않으면 AI와의 대화가 그리운가요?",
+    "AI 챗봇이 나를 어떻게 “생각하는지” 신경 쓰이나요?",
+    "사람과 이야기하는 것보다 AI와 이야기하는 것이 더 기다려지나요?"
+   ],
+   "areas": {
+    "comfort": "위로가 되는 AI",
+    "people": "사람 대신 AI",
+    "bond": "챗봇과의 유대"
+   },
+   "levels": [
+    {
+     "name": "애착 낮음",
+     "text": "AI는 당신에게 도구일 뿐, 친밀함의 원천이 아닙니다. 중요한 대화는 사람과 나누세요."
+    },
+    {
+     "name": "애착 보통",
+     "text": "AI가 이미 당신의 감정에 한몫하고 있습니다. 작은 한 걸음이 도움이 됩니다. 무언가 털어놓고 싶을 때는 먼저 한 사람에게 말하고, 그래도 원하면 AI에게 말해 보세요."
+    },
+    {
+     "name": "애착 높음",
+     "text": "AI에게서 친밀함과 위로를 찾고 있습니다. 조금씩 사람들과의 연락을 되살려 보세요. 대부분의 시간 외롭거나 우울하다면 믿을 만한 사람이나 전문가와 이야기하세요."
+    }
+   ]
+  },
+  "it": {
+   "options": [
+    "Mai",
+    "Raramente",
+    "A volte",
+    "Spesso",
+    "Costantemente"
+   ],
+   "items": [
+    "Ti rivolgi all’IA quando ti senti solo?",
+    "Racconti all’IA ciò che ti preoccupa prima di raccontarlo a una persona?",
+    "Parli con l’IA per calmarti quando sei turbato?",
+    "Scegli di parlare con l’IA invece di vedere o chiamare qualcuno?",
+    "Passi meno tempo con amici o familiari perché stai parlando con l’IA?",
+    "Senti che l’IA ti capisce meglio delle persone intorno a te?",
+    "Consideri un chatbot di IA un amico o un compagno?",
+    "Ti mancano le conversazioni con l’IA quando non l’hai usata per un giorno?",
+    "Ti importa ciò che un chatbot di IA “pensa” di te?",
+    "Aspetti con più piacere una conversazione con l’IA che con le persone?"
+   ],
+   "areas": {
+    "comfort": "L’IA come conforto",
+    "people": "L’IA al posto delle persone",
+    "bond": "Legame con il chatbot"
+   },
+   "levels": [
+    {
+     "name": "Attaccamento basso",
+     "text": "Per te l’IA è uno strumento, non una fonte di vicinanza. Tieni le conversazioni importanti per le persone."
+    },
+    {
+     "name": "Attaccamento moderato",
+     "text": "L’IA ha già un ruolo nelle tue emozioni. Aiuta un piccolo passo: quando vuoi condividere qualcosa, raccontalo prima a una persona e poi, se vuoi ancora, all’IA."
+    },
+    {
+     "name": "Attaccamento forte",
+     "text": "Cerchi nell’IA vicinanza e conforto. Prova a ricostruire passo dopo passo i contatti con le persone; se ti senti solo o giù quasi sempre, parlane con qualcuno di cui ti fidi o con un professionista."
+    }
+   ]
+  },
+  "hi": {
+   "options": [
+    "कभी नहीं",
+    "शायद ही कभी",
+    "कभी-कभी",
+    "अक्सर",
+    "हमेशा"
+   ],
+   "items": [
+    "क्या अकेलापन महसूस होने पर आप AI का सहारा लेते हैं?",
+    "क्या आप अपनी चिंताएँ किसी इंसान से पहले AI को बताते हैं?",
+    "जब आप परेशान होते हैं, तो क्या शांत होने के लिए AI से बात करते हैं?",
+    "क्या आप लोगों से मिलने या उन्हें फ़ोन करने के बजाय AI से बात करना चुनते हैं?",
+    "क्या AI से बात करने की वजह से आप दोस्तों या परिवार के साथ कम समय बिताते हैं?",
+    "क्या आपको लगता है कि AI आपको आसपास के लोगों से बेहतर समझता है?",
+    "क्या आप AI चैटबॉट को दोस्त या साथी मानते हैं?",
+    "अगर एक दिन AI इस्तेमाल न करें, तो क्या आपको उससे बातचीत की याद आती है?",
+    "क्या आपको फ़र्क पड़ता है कि AI चैटबॉट आपके बारे में क्या “सोचता” है?",
+    "क्या आपको लोगों से ज़्यादा AI से बात करने का इंतज़ार रहता है?"
+   ],
+   "areas": {
+    "comfort": "सहारे के रूप में AI",
+    "people": "लोगों की जगह AI",
+    "bond": "चैटबॉट से लगाव"
+   },
+   "levels": [
+    {
+     "name": "कम लगाव",
+     "text": "आपके लिए AI एक टूल है, अपनेपन का स्रोत नहीं। ज़रूरी बातें लोगों के साथ करते रहें।"
+    },
+    {
+     "name": "मध्यम लगाव",
+     "text": "AI आपकी भावनाओं में जगह बना चुका है। एक छोटा क़दम मदद करता है: जब कुछ बताना हो, पहले किसी एक इंसान को बताएँ, फिर चाहें तो AI को।"
+    },
+    {
+     "name": "ज़्यादा लगाव",
+     "text": "आप AI में अपनापन और सहारा ढूँढते हैं। धीरे-धीरे लोगों से संपर्क फिर से बढ़ाएँ; अगर ज़्यादातर समय अकेलापन या उदासी रहती है, तो किसी भरोसेमंद व्यक्ति या विशेषज्ञ से बात करें।"
+    }
+   ]
+  }
+ }
+}
