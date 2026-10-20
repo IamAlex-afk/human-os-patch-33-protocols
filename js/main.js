@@ -319,7 +319,8 @@
     ut('spectrumLow', t.spectrumLow);
     ut('spectrumMid', t.spectrumMid);
     ut('spectrumHigh', t.spectrumHigh);
-    ut('resultDisclaimer', t.resultDisclaimer);
+    uh('resultDisclaimer', t.resultDisclaimer);
+    ut('whatToDoTitle', t.whatToDoTitle);
     ut('sharedBanner', t.sharedBannerText);
 
     const bLink = document.getElementById('bookLink');
