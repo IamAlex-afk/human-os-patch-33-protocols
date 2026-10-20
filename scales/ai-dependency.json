@@ -1,0 +1,534 @@
+{
+ "id": "ai-dependency",
+ "name": "AI dependency",
+ "version": "1.0.0",
+ "license": "CC BY 4.0",
+ "license_url": "https://creativecommons.org/licenses/by/4.0/",
+ "author": "Aleksei Sergeevich Bitkin",
+ "author_orcid": "https://orcid.org/0009-0002-7986-3812",
+ "source": "https://iamalex-afk.github.io/human-os-patch-33-protocols/",
+ "scoring": {
+  "points_per_answer": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "items": 10,
+  "min": 0,
+  "max": 40,
+  "reverse_keyed": [],
+  "levels": [
+   {
+    "up_to_share_of_max": 0.4
+   },
+   {
+    "up_to_share_of_max": 0.7
+   },
+   {
+    "up_to_share_of_max": 1.0
+   }
+  ],
+  "note": "Thresholds follow the answer scale, not population norms. Not clinically validated; not a diagnosis."
+ },
+ "areas": [
+  "craving",
+  "control",
+  "withdrawal"
+ ],
+ "item_areas": [
+  "craving",
+  "craving",
+  "craving",
+  "control",
+  "control",
+  "control",
+  "control",
+  "withdrawal",
+  "withdrawal",
+  "withdrawal"
+ ],
+ "languages": {
+  "en": {
+   "options": [
+    "Never",
+    "Rarely",
+    "Sometimes",
+    "Often",
+    "Constantly"
+   ],
+   "items": [
+    "Do you think about using AI even when you are not using it?",
+    "Do you open AI out of habit, before you know whether you need it?",
+    "Do you spend more time with AI than you planned?",
+    "Have you tried to use AI less and not managed to?",
+    "Do you put off your own tasks because you are busy with AI?",
+    "Has your use of AI caused problems at school, at work or with people close to you?",
+    "Do you feel you can no longer do things you used to do without AI?",
+    "Do you feel irritable or restless when you cannot use AI?",
+    "Do you feel lost when AI is unavailable for a while?",
+    "Do you turn to AI to feel better when you are stressed or down?"
+   ],
+   "areas": {
+    "craving": "Pull towards AI",
+    "control": "Control and consequences",
+    "withdrawal": "Without AI and mood"
+   },
+   "levels": [
+    {
+     "name": "Low dependency",
+     "text": "AI is a tool for you, and you stay in charge of it. Keep noticing when you reach for it out of habit."
+    },
+    {
+     "name": "Moderate dependency",
+     "text": "AI already takes up a noticeable place in your day. A small step helps: do one task a day on your own first, then check it with AI."
+    },
+    {
+     "name": "High dependency",
+     "text": "Your answers point to strong dependency on AI. Try set times without AI and notice what changes; if it gets in the way of school, work or relationships, ask for support."
+    }
+   ]
+  },
+  "ru": {
+   "options": [
+    "Никогда",
+    "Редко",
+    "Иногда",
+    "Часто",
+    "Постоянно"
+   ],
+   "items": [
+    "Думаете о том, чтобы воспользоваться ИИ, даже когда им не пользуетесь?",
+    "Открываете ИИ по привычке, ещё не понимая, нужен ли он?",
+    "Проводите с ИИ больше времени, чем собирались?",
+    "Пытались пользоваться ИИ меньше — и не получалось?",
+    "Откладываете свои дела, потому что заняты ИИ?",
+    "Из-за ИИ возникали проблемы в учёбе, на работе или с близкими?",
+    "Чувствуете, что уже не можете без ИИ делать то, что раньше делали сами?",
+    "Раздражаетесь или не находите себе места, когда нельзя воспользоваться ИИ?",
+    "Чувствуете растерянность, когда ИИ какое-то время недоступен?",
+    "Обращаетесь к ИИ, чтобы стало легче, когда вам тяжело или грустно?"
+   ],
+   "areas": {
+    "craving": "Тяга к ИИ",
+    "control": "Контроль и последствия",
+    "withdrawal": "Без ИИ и настроение"
+   },
+   "levels": [
+    {
+     "name": "Низкая зависимость",
+     "text": "ИИ для вас — инструмент, и управляете им вы. Продолжайте замечать, когда тянетесь к нему по привычке."
+    },
+    {
+     "name": "Умеренная зависимость",
+     "text": "ИИ уже занимает заметное место в вашем дне. Помогает маленький шаг: каждый день делайте одну задачу сначала сами, а потом проверяйте с ИИ."
+    },
+    {
+     "name": "Высокая зависимость",
+     "text": "Ответы говорят о сильной зависимости от ИИ. Попробуйте выделить время без ИИ и посмотрите, что изменится; если это мешает учёбе, работе или отношениям — обратитесь за поддержкой."
+    }
+   ]
+  },
+  "es": {
+   "options": [
+    "Nunca",
+    "Raramente",
+    "A veces",
+    "A menudo",
+    "Constantemente"
+   ],
+   "items": [
+    "¿Piensas en usar la IA incluso cuando no la estás usando?",
+    "¿Abres la IA por costumbre, antes de saber si la necesitas?",
+    "¿Pasas con la IA más tiempo del que pensabas?",
+    "¿Has intentado usar menos la IA sin conseguirlo?",
+    "¿Aplazas tus propias tareas porque estás ocupado con la IA?",
+    "¿El uso de la IA te ha causado problemas en los estudios, en el trabajo o con personas cercanas?",
+    "¿Sientes que ya no puedes hacer sin IA cosas que antes hacías tú?",
+    "¿Te pones irritable o inquieto cuando no puedes usar la IA?",
+    "¿Te sientes perdido cuando la IA no está disponible durante un rato?",
+    "¿Recurres a la IA para sentirte mejor cuando estás estresado o triste?"
+   ],
+   "areas": {
+    "craving": "Atracción por la IA",
+    "control": "Control y consecuencias",
+    "withdrawal": "Sin IA y estado de ánimo"
+   },
+   "levels": [
+    {
+     "name": "Dependencia baja",
+     "text": "Para ti la IA es una herramienta y la controlas tú. Sigue notando cuándo recurres a ella por costumbre."
+    },
+    {
+     "name": "Dependencia moderada",
+     "text": "La IA ya ocupa un lugar notable en tu día. Ayuda un paso pequeño: cada día haz una tarea primero tú y luego revísala con la IA."
+    },
+    {
+     "name": "Dependencia alta",
+     "text": "Tus respuestas indican una dependencia fuerte de la IA. Prueba a reservar ratos sin IA y observa qué cambia; si afecta a tus estudios, tu trabajo o tus relaciones, pide apoyo."
+    }
+   ]
+  },
+  "de": {
+   "options": [
+    "Nie",
+    "Selten",
+    "Manchmal",
+    "Oft",
+    "Ständig"
+   ],
+   "items": [
+    "Denkst du daran, KI zu nutzen, auch wenn du sie gerade nicht nutzt?",
+    "Öffnest du KI aus Gewohnheit, bevor du weißt, ob du sie brauchst?",
+    "Verbringst du mehr Zeit mit KI, als du vorhattest?",
+    "Hast du versucht, KI weniger zu nutzen, und es nicht geschafft?",
+    "Schiebst du eigene Aufgaben auf, weil du mit KI beschäftigt bist?",
+    "Hat deine KI-Nutzung zu Problemen in Schule, Studium, Arbeit oder mit nahestehenden Menschen geführt?",
+    "Hast du das Gefühl, Dinge, die du früher selbst gemacht hast, nicht mehr ohne KI zu können?",
+    "Wirst du gereizt oder unruhig, wenn du KI nicht nutzen kannst?",
+    "Fühlst du dich verloren, wenn KI eine Weile nicht verfügbar ist?",
+    "Greifst du zu KI, um dich besser zu fühlen, wenn du gestresst oder niedergeschlagen bist?"
+   ],
+   "areas": {
+    "craving": "Sog zur KI",
+    "control": "Kontrolle und Folgen",
+    "withdrawal": "Ohne KI und Stimmung"
+   },
+   "levels": [
+    {
+     "name": "Geringe Abhängigkeit",
+     "text": "KI ist für dich ein Werkzeug, und du behältst die Kontrolle. Achte weiter darauf, wann du aus Gewohnheit zu ihr greifst."
+    },
+    {
+     "name": "Mittlere Abhängigkeit",
+     "text": "KI nimmt schon einen spürbaren Platz in deinem Tag ein. Ein kleiner Schritt hilft: Erledige jeden Tag eine Aufgabe zuerst selbst und prüfe sie dann mit KI."
+    },
+    {
+     "name": "Hohe Abhängigkeit",
+     "text": "Deine Antworten deuten auf eine starke Abhängigkeit von KI hin. Plane feste Zeiten ohne KI ein und beobachte, was sich ändert; wenn es Schule, Arbeit oder Beziehungen beeinträchtigt, hol dir Unterstützung."
+    }
+   ]
+  },
+  "fr": {
+   "options": [
+    "Jamais",
+    "Rarement",
+    "Parfois",
+    "Souvent",
+    "Constamment"
+   ],
+   "items": [
+    "Pensez-vous à utiliser l’IA même quand vous ne l’utilisez pas ?",
+    "Ouvrez-vous l’IA par habitude, avant de savoir si vous en avez besoin ?",
+    "Passez-vous plus de temps avec l’IA que prévu ?",
+    "Avez-vous essayé d’utiliser moins l’IA sans y parvenir ?",
+    "Repoussez-vous vos propres tâches parce que vous êtes occupé avec l’IA ?",
+    "Votre usage de l’IA vous a-t-il causé des problèmes dans vos études, au travail ou avec vos proches ?",
+    "Avez-vous l’impression de ne plus pouvoir faire sans IA ce que vous faisiez seul avant ?",
+    "Devenez-vous irritable ou agité quand vous ne pouvez pas utiliser l’IA ?",
+    "Vous sentez-vous perdu quand l’IA est indisponible un moment ?",
+    "Vous tournez-vous vers l’IA pour vous sentir mieux quand vous êtes stressé ou abattu ?"
+   ],
+   "areas": {
+    "craving": "Attrait pour l’IA",
+    "control": "Contrôle et conséquences",
+    "withdrawal": "Sans IA et humeur"
+   },
+   "levels": [
+    {
+     "name": "Dépendance faible",
+     "text": "L’IA est pour vous un outil, et c’est vous qui gardez la main. Continuez à repérer les moments où vous y allez par habitude."
+    },
+    {
+     "name": "Dépendance modérée",
+     "text": "L’IA occupe déjà une place notable dans votre journée. Un petit pas aide : chaque jour, faites d’abord une tâche vous-même, puis vérifiez-la avec l’IA."
+    },
+    {
+     "name": "Dépendance élevée",
+     "text": "Vos réponses indiquent une forte dépendance à l’IA. Essayez des moments sans IA et observez ce qui change ; si cela gêne vos études, votre travail ou vos relations, demandez du soutien."
+    }
+   ]
+  },
+  "ja": {
+   "options": [
+    "全くない",
+    "めったにない",
+    "時々",
+    "よくある",
+    "常にある"
+   ],
+   "items": [
+    "AIを使っていないときでも、AIを使うことを考えていますか？",
+    "必要かどうか分かる前に、習慣でAIを開いていますか？",
+    "予定していたよりも長い時間AIを使っていますか？",
+    "AIを使う量を減らそうとして、できなかったことがありますか？",
+    "AIに夢中で、自分のやるべきことを後回しにしていますか？",
+    "AIの使い方が原因で、学校・仕事・身近な人との間で問題が起きたことがありますか？",
+    "以前は自分でできていたことが、AIなしではもうできないと感じますか？",
+    "AIが使えないと、イライラしたり落ち着かなくなったりしますか？",
+    "しばらくAIが使えないと、途方に暮れたように感じますか？",
+    "ストレスや落ち込みを感じたとき、気分を楽にするためにAIに頼りますか？"
+   ],
+   "areas": {
+    "craving": "AIへの引きつけ",
+    "control": "コントロールと影響",
+    "withdrawal": "AIがないとき・気分"
+   },
+   "levels": [
+    {
+     "name": "依存度：低い",
+     "text": "AIはあなたにとって道具で、主導権はあなたにあります。習慣でAIに手が伸びる瞬間に、これからも気づいていきましょう。"
+    },
+    {
+     "name": "依存度：中くらい",
+     "text": "AIはすでに一日の中でかなりの位置を占めています。小さな一歩が助けになります：毎日1つ、まず自分でやってからAIで確認しましょう。"
+    },
+    {
+     "name": "依存度：高い",
+     "text": "回答からは、AIへの強い依存がうかがえます。AIを使わない時間を決めて、何が変わるか見てみましょう。学校・仕事・人間関係に支障が出ているなら、周りに助けを求めてください。"
+    }
+   ]
+  },
+  "vi": {
+   "options": [
+    "Không bao giờ",
+    "Hiếm khi",
+    "Đôi khi",
+    "Thường xuyên",
+    "Luôn luôn"
+   ],
+   "items": [
+    "Bạn có nghĩ đến việc dùng AI ngay cả khi không dùng nó không?",
+    "Bạn có mở AI theo thói quen, trước khi biết mình có cần hay không?",
+    "Bạn có dành cho AI nhiều thời gian hơn dự định không?",
+    "Bạn có từng cố dùng AI ít đi mà không làm được không?",
+    "Bạn có trì hoãn việc của mình vì đang bận với AI không?",
+    "Việc dùng AI có từng gây rắc rối cho bạn ở trường, ở chỗ làm hoặc với người thân không?",
+    "Bạn có thấy mình không còn làm được những việc trước đây tự làm nếu thiếu AI không?",
+    "Bạn có bực bội hoặc bồn chồn khi không dùng được AI không?",
+    "Bạn có thấy mất phương hướng khi AI tạm thời không dùng được không?",
+    "Bạn có tìm đến AI để thấy dễ chịu hơn khi căng thẳng hoặc buồn không?"
+   ],
+   "areas": {
+    "craving": "Sức hút của AI",
+    "control": "Kiểm soát và hậu quả",
+    "withdrawal": "Khi thiếu AI và tâm trạng"
+   },
+   "levels": [
+    {
+     "name": "Phụ thuộc thấp",
+     "text": "Với bạn, AI là công cụ và bạn vẫn làm chủ. Hãy tiếp tục để ý những lúc bạn tìm đến nó theo thói quen."
+    },
+    {
+     "name": "Phụ thuộc vừa",
+     "text": "AI đã chiếm một vị trí đáng kể trong ngày của bạn. Một bước nhỏ sẽ giúp ích: mỗi ngày tự làm trước một việc rồi mới kiểm tra lại bằng AI."
+    },
+    {
+     "name": "Phụ thuộc cao",
+     "text": "Câu trả lời cho thấy bạn phụ thuộc nhiều vào AI. Hãy thử đặt ra những khoảng thời gian không dùng AI và xem điều gì thay đổi; nếu việc này ảnh hưởng đến học tập, công việc hay các mối quan hệ, hãy tìm sự hỗ trợ."
+    }
+   ]
+  },
+  "th": {
+   "options": [
+    "ไม่เคย",
+    "นานๆ ครั้ง",
+    "บางครั้ง",
+    "บ่อยครั้ง",
+    "เสมอ"
+   ],
+   "items": [
+    "คุณคิดถึงการใช้ AI แม้ตอนที่ไม่ได้ใช้ไหม?",
+    "คุณเปิด AI เพราะความเคยชิน ก่อนจะรู้ว่าจำเป็นหรือไม่ไหม?",
+    "คุณใช้เวลากับ AI มากกว่าที่ตั้งใจไว้ไหม?",
+    "คุณเคยพยายามใช้ AI ให้น้อยลงแต่ทำไม่ได้ไหม?",
+    "คุณเลื่อนงานของตัวเองออกไปเพราะมัวแต่ใช้ AI ไหม?",
+    "การใช้ AI เคยทำให้เกิดปัญหาเรื่องเรียน งาน หรือกับคนใกล้ชิดไหม?",
+    "คุณรู้สึกว่าทำสิ่งที่เคยทำเองได้ไม่ได้แล้วถ้าไม่มี AI ไหม?",
+    "คุณหงุดหงิดหรือกระสับกระส่ายเมื่อใช้ AI ไม่ได้ไหม?",
+    "คุณรู้สึกไม่รู้จะทำอย่างไรเมื่อใช้ AI ไม่ได้สักพักไหม?",
+    "คุณหันไปหา AI เพื่อให้รู้สึกดีขึ้นตอนเครียดหรือเศร้าไหม?"
+   ],
+   "areas": {
+    "craving": "แรงดึงดูดของ AI",
+    "control": "การควบคุมและผลกระทบ",
+    "withdrawal": "เมื่อไม่มี AI และอารมณ์"
+   },
+   "levels": [
+    {
+     "name": "พึ่งพาน้อย",
+     "text": "สำหรับคุณ AI เป็นเครื่องมือ และคุณยังเป็นคนควบคุม ลองสังเกตต่อไปว่าเมื่อไรที่คุณหยิบมันขึ้นมาเพราะความเคยชิน"
+    },
+    {
+     "name": "พึ่งพาปานกลาง",
+     "text": "AI มีพื้นที่ในวันของคุณมากพอสมควรแล้ว ก้าวเล็ก ๆ ช่วยได้: ทุกวันลองทำงานหนึ่งอย่างด้วยตัวเองก่อน แล้วค่อยตรวจด้วย AI"
+    },
+    {
+     "name": "พึ่งพามาก",
+     "text": "คำตอบของคุณบ่งบอกว่าพึ่งพา AI มาก ลองกำหนดช่วงเวลาที่ไม่ใช้ AI แล้วสังเกตว่าอะไรเปลี่ยนไป ถ้าสิ่งนี้กระทบการเรียน งาน หรือความสัมพันธ์ ลองขอความช่วยเหลือ"
+    }
+   ]
+  },
+  "pt": {
+   "options": [
+    "Nunca",
+    "Raramente",
+    "Às vezes",
+    "Frequentemente",
+    "Constantemente"
+   ],
+   "items": [
+    "Você pensa em usar IA mesmo quando não está usando?",
+    "Você abre a IA por hábito, antes de saber se precisa dela?",
+    "Você passa mais tempo com a IA do que tinha planejado?",
+    "Você já tentou usar menos IA e não conseguiu?",
+    "Você adia suas próprias tarefas porque está ocupado com a IA?",
+    "O uso de IA já te causou problemas na escola, no trabalho ou com pessoas próximas?",
+    "Você sente que já não consegue fazer sem IA coisas que antes fazia sozinho?",
+    "Você fica irritado ou inquieto quando não pode usar IA?",
+    "Você se sente perdido quando a IA fica indisponível por um tempo?",
+    "Você recorre à IA para se sentir melhor quando está estressado ou para baixo?"
+   ],
+   "areas": {
+    "craving": "Atração pela IA",
+    "control": "Controle e consequências",
+    "withdrawal": "Sem IA e humor"
+   },
+   "levels": [
+    {
+     "name": "Dependência baixa",
+     "text": "Para você, a IA é uma ferramenta, e quem manda é você. Continue percebendo quando recorre a ela por hábito."
+    },
+    {
+     "name": "Dependência moderada",
+     "text": "A IA já ocupa um espaço considerável no seu dia. Um passo pequeno ajuda: todo dia, faça primeiro uma tarefa sozinho e só depois confira com a IA."
+    },
+    {
+     "name": "Dependência alta",
+     "text": "Suas respostas indicam uma dependência forte de IA. Tente reservar momentos sem IA e observe o que muda; se isso atrapalha os estudos, o trabalho ou as relações, procure apoio."
+    }
+   ]
+  },
+  "ko": {
+   "options": [
+    "전혀 아니다",
+    "거의 아니다",
+    "때때로 그렇다",
+    "자주 그렇다",
+    "항상 그렇다"
+   ],
+   "items": [
+    "AI를 쓰고 있지 않을 때도 AI를 쓸 생각을 하나요?",
+    "필요한지 알기도 전에 습관처럼 AI를 여나요?",
+    "계획했던 것보다 AI에 더 많은 시간을 쓰나요?",
+    "AI를 덜 쓰려고 했는데 잘 안 된 적이 있나요?",
+    "AI에 빠져서 내가 할 일을 미루나요?",
+    "AI 사용 때문에 학교나 직장, 가까운 사람과의 관계에서 문제가 생긴 적이 있나요?",
+    "예전에는 혼자 하던 일을 이제는 AI 없이 못 한다고 느끼나요?",
+    "AI를 쓸 수 없을 때 짜증이 나거나 안절부절못하나요?",
+    "AI를 한동안 쓸 수 없으면 어찌할 바를 모르겠다고 느끼나요?",
+    "스트레스를 받거나 우울할 때 기분을 풀려고 AI를 찾나요?"
+   ],
+   "areas": {
+    "craving": "AI에 끌림",
+    "control": "통제와 영향",
+    "withdrawal": "AI가 없을 때와 기분"
+   },
+   "levels": [
+    {
+     "name": "의존도 낮음",
+     "text": "AI는 당신에게 도구이고, 주도권은 당신에게 있습니다. 습관처럼 AI를 찾는 순간을 계속 알아차려 보세요."
+    },
+    {
+     "name": "의존도 보통",
+     "text": "AI가 이미 하루에서 꽤 큰 자리를 차지하고 있습니다. 작은 한 걸음이 도움이 됩니다. 매일 한 가지 일은 먼저 스스로 하고, 그다음 AI로 확인해 보세요."
+    },
+    {
+     "name": "의존도 높음",
+     "text": "답변을 보면 AI에 대한 의존이 큰 편입니다. AI 없이 지내는 시간을 정해 두고 무엇이 달라지는지 살펴보세요. 학업, 일, 관계에 지장이 있다면 도움을 요청하세요."
+    }
+   ]
+  },
+  "it": {
+   "options": [
+    "Mai",
+    "Raramente",
+    "A volte",
+    "Spesso",
+    "Costantemente"
+   ],
+   "items": [
+    "Pensi di usare l’IA anche quando non la stai usando?",
+    "Apri l’IA per abitudine, prima di sapere se ti serve?",
+    "Passi con l’IA più tempo di quanto avevi previsto?",
+    "Hai provato a usare meno l’IA senza riuscirci?",
+    "Rimandi i tuoi compiti perché sei preso dall’IA?",
+    "L’uso dell’IA ti ha causato problemi a scuola, al lavoro o con le persone vicine?",
+    "Senti di non riuscire più a fare senza IA cose che prima facevi da solo?",
+    "Diventi irritabile o irrequieto quando non puoi usare l’IA?",
+    "Ti senti spaesato quando l’IA non è disponibile per un po’?",
+    "Ti rivolgi all’IA per sentirti meglio quando sei stressato o giù di morale?"
+   ],
+   "areas": {
+    "craving": "Attrazione per l’IA",
+    "control": "Controllo e conseguenze",
+    "withdrawal": "Senza IA e umore"
+   },
+   "levels": [
+    {
+     "name": "Dipendenza bassa",
+     "text": "Per te l’IA è uno strumento e sei tu a decidere. Continua a notare quando ci ricorri per abitudine."
+    },
+    {
+     "name": "Dipendenza moderata",
+     "text": "L’IA occupa già un posto importante nella tua giornata. Aiuta un piccolo passo: ogni giorno fai prima da solo un compito e poi controllalo con l’IA."
+    },
+    {
+     "name": "Dipendenza alta",
+     "text": "Le tue risposte indicano una forte dipendenza dall’IA. Prova a fissare momenti senza IA e osserva cosa cambia; se interferisce con studio, lavoro o relazioni, chiedi supporto."
+    }
+   ]
+  },
+  "hi": {
+   "options": [
+    "कभी नहीं",
+    "शायद ही कभी",
+    "कभी-कभी",
+    "अक्सर",
+    "हमेशा"
+   ],
+   "items": [
+    "क्या आप AI इस्तेमाल न करते समय भी उसे इस्तेमाल करने के बारे में सोचते हैं?",
+    "क्या आप यह जाने बिना कि ज़रूरत है या नहीं, आदत से AI खोल लेते हैं?",
+    "क्या आप AI के साथ सोचे हुए समय से ज़्यादा समय बिताते हैं?",
+    "क्या आपने AI कम इस्तेमाल करने की कोशिश की और नहीं कर पाए?",
+    "क्या आप AI में लगे रहने की वजह से अपने काम टालते हैं?",
+    "क्या AI के इस्तेमाल से पढ़ाई, काम या करीबी लोगों के साथ कोई दिक्कत हुई है?",
+    "क्या आपको लगता है कि जो काम आप पहले ख़ुद करते थे, वे अब बिना AI के नहीं कर पाते?",
+    "जब आप AI इस्तेमाल नहीं कर पाते, तो क्या चिड़चिड़ाहट या बेचैनी होती है?",
+    "जब कुछ समय के लिए AI उपलब्ध नहीं होता, तो क्या आप ख़ुद को खोया हुआ महसूस करते हैं?",
+    "क्या तनाव या उदासी में बेहतर महसूस करने के लिए आप AI का सहारा लेते हैं?"
+   ],
+   "areas": {
+    "craving": "AI की ओर खिंचाव",
+    "control": "नियंत्रण और असर",
+    "withdrawal": "AI के बिना और मूड"
+   },
+   "levels": [
+    {
+     "name": "कम निर्भरता",
+     "text": "आपके लिए AI एक टूल है और नियंत्रण आपके हाथ में है। ध्यान देते रहें कि कब आप आदत से उसकी ओर बढ़ते हैं।"
+    },
+    {
+     "name": "मध्यम निर्भरता",
+     "text": "AI आपके दिन में अच्छी-ख़ासी जगह ले चुका है। एक छोटा क़दम मदद करता है: हर दिन एक काम पहले ख़ुद करें, फिर AI से जाँचें।"
+    },
+    {
+     "name": "ज़्यादा निर्भरता",
+     "text": "आपके जवाब AI पर ज़्यादा निर्भरता दिखाते हैं। बिना AI का कुछ समय तय करें और देखें कि क्या बदलता है; अगर इससे पढ़ाई, काम या रिश्तों पर असर पड़ रहा है, तो मदद लें।"
+    }
+   ]
+  }
+ }
+}

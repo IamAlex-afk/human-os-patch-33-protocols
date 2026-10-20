@@ -2,7 +2,7 @@
 
 **A free, anonymous, browser-only self-assessment that measures your psychological dependency on AI — no signup, no data collection.** (The optional global poll is the one exception — see [Privacy Policy](https://iamalex-afk.github.io/human-os-patch-33-protocols/privacy.html).)
 
-Mind-OS is a client-side test measuring cognitive offloading, AI anxiety, and digital burnout, plus a standalone Fear-of-AI index — 28 questions total, available in 12 languages. It also includes a 7-day cognitive load tracker, an "AI or Not?" perception game, and a real-time global AI sentiment poll.
+Mind-OS has short client-side tests of 10 questions — AI dependency (home page) and fear of AI — available in 12 languages, plus a global AI sentiment poll. The questions, answer options and scoring are open under CC BY 4.0 in [scales/](scales/).
 
 It's built around **the 33 Protocols** — a philosophical cognitive tool and systems-engineering framework, co-authored through a Human-in-the-Loop (HITL) process, that treats human cognition as an operating system that can be debugged, patched, and upgraded for the AI era.
 

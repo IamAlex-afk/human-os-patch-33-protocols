@@ -1,7 +1,7 @@
 {
   "name": "Mind-OS: AI Dependency Self-Assessment",
   "short_name": "Mind-OS",
-  "description": "Free anonymous test to measure AI dependency, cognitive offloading and digital burnout. 28 questions, 12 languages, no signup.",
+  "description": "Free anonymous tests of AI dependency and fear of AI. 10 questions each, 12 languages, no signup, nothing is stored.",
   "lang": "en",
   "dir": "ltr",
   "start_url": "/human-os-patch-33-protocols/",
@@ -61,10 +61,10 @@
       ]
     },
     {
-      "name": "Cognitive Load Tracker",
-      "short_name": "Tracker",
-      "description": "Log your daily cognitive load",
-      "url": "./#tracker-section",
+      "name": "Fear of AI test",
+      "short_name": "Fear of AI",
+      "description": "Ten statements about fear of AI",
+      "url": "./fear-of-ai.html",
       "icons": [
         {
           "src": "apple-touch-icon-192.png",

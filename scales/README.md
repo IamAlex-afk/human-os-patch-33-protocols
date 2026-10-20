@@ -5,6 +5,7 @@ anyone can read, reuse, translate or test them. The live tests: https://iamalex-
 
 | File | Scale | Items | Version |
 |---|---|---|---|
+| `ai-dependency.json` | AI dependency | 10 | 1.0.0 |
 | `fear-of-ai.json` | Fear of AI test | 10 | 1.0.0 |
 
 ## How a scale is scored
