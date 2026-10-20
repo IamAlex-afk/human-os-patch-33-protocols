@@ -61,7 +61,7 @@ Result: a personal AI Identity Profile with an archetype and percentile.
 - **Questions**: 28 (8 + 8 + 8 + 4)
 - **Languages**: English, Russian, Spanish, German, French, Japanese, Vietnamese, Thai, Portuguese, Korean, Italian, Hindi
 - **Works offline**: yes (installable PWA)
-- **Scientific basis**: LLM-D12 dual-dimensional dependency scale, AI Anxiety Scale (AIAS), AIRD framework
+- **Research it draws on**: the LLM-D12 scale, the AI Anxiety Scale (AIAS) and the proposed AIRD construct (the questions are our own; Mind-OS is not one of these validated scales)
 - **Extra tools**: 7-day cognitive load tracker, "AI or Not?" perception game,
   global sentiment poll, 33 Protocols framework for cognitive sovereignty
 

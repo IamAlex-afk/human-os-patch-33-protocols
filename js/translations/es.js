@@ -2,9 +2,9 @@ window.translations = window.translations || {};
 window.translations.es = {
     langName: "Español",
     mainTitle: "Test de dependencia de la IA y ChatGPT, gratis",
-    subhead: "Test anónimo de 28 preguntas: ¿cuánto dependes de la IA y de ChatGPT para pensar, sentir y trabajar? Basado en LLM-D12 y AIAS. Sin registro.",
+    subhead: "Test anónimo de 28 preguntas: ¿cuánto dependes de la IA y de ChatGPT para pensar, sentir y trabajar? Inspirado en LLM-D12 y AIAS. Sin registro.",
     infoTitle: "📋 Qué mide esta evaluación",
-    infoPara1: "Este conjunto de 28 preguntas te ayuda a observar cómo usas la IA para pensar, apoyo emocional y productividad. Basado en las escalas LLM-D12, AIAS y AIRD.",
+    infoPara1: "Este conjunto de 28 preguntas te ayuda a observar cómo usas la IA para pensar, apoyo emocional y productividad. Las preguntas son nuestras y se inspiran en la escala LLM-D12, la escala de ansiedad AIAS y el constructo propuesto AIRD.",
     infoPara2: "<strong>Para quién:</strong> Cualquiera que quiera comprobar si su uso de IA es aún intencionado. Obtendrás tu Perfil de Identidad de IA con arquetipo y percentil.",
     infoPara3: "<strong>Cómo funciona:</strong> Responde 8 preguntas por eje y un test de miedo. Todo ocurre en tu navegador.",
     infoSources: "Fuentes: las preguntas son propias y se apoyan en investigación publicada; este test no es ninguna de estas escalas validadas.<br>• LLM-D12 — Yankouskaya A., Babiker A. B., Rizvi S. W. F., Alshakhsi S., Liebherr M., Ali R. (2025). <a href='https://doi.org/10.48550/arXiv.2506.06874' target='_blank' rel='noopener'>arXiv:2506.06874</a><br>• AIAS — Wang Y.-Y., Wang Y.-S. Interactive Learning Environments. <a href='https://doi.org/10.1080/10494820.2019.1674887' target='_blank' rel='noopener'>doi:10.1080/10494820.2019.1674887</a><br>• AIRD — McNamara S., Thornton J. Cureus. <a href='https://www.cureus.com/articles/407877-artificial-intelligence-replacement-dysfunction-aird-a-call-to-action-for-mental-health-professionals-in-an-era-of-workforce-displacement' target='_blank' rel='noopener'>cureus.com/articles/407877</a>",
@@ -85,6 +85,7 @@ window.translations.es = {
     installApp: "📲 Instalar app",
     answerQualityWarning: "Nota: seleccionaste la misma respuesta en casi todas las preguntas. Para un perfil más preciso, considera repetir el test respondiendo cada ítem de forma honesta e individual.",
     resultDisclaimer: "Esta es una autoevaluación para reflexionar, no un diagnóstico médico o psicológico. Los umbrales se basan en la distribución de la escala de respuestas, no en normas poblacionales validadas. Si tu uso de la IA te preocupa o interfiere en tu vida diaria, consulta a un profesional cualificado. <a href='#infoSources'>Fuentes ↑</a>",
+    resultMethLink: "Cómo se calcula la puntuación",
 
     sharedBannerText: "Estás viendo un resultado compartido. ¿Quieres el tuyo? Haz el test gratuito abajo.",
 

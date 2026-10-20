@@ -2,9 +2,9 @@ window.translations = window.translations || {};
 window.translations.vi = {
     langName: "Tiếng Việt",
     mainTitle: "Bài test mức độ phụ thuộc AI và ChatGPT miễn phí",
-    subhead: "Bài test ẩn danh gồm 28 câu hỏi: bạn dựa vào AI và ChatGPT đến mức nào khi suy nghĩ, cảm xúc và làm việc? Dựa trên thang LLM-D12 và AIAS. Không cần đăng ký.",
+    subhead: "Bài test ẩn danh gồm 28 câu hỏi: bạn dựa vào AI và ChatGPT đến mức nào khi suy nghĩ, cảm xúc và làm việc? Tham khảo thang LLM-D12 và AIAS. Không cần đăng ký.",
     infoTitle: "📋 Bài đánh giá này đo lường điều gì",
-    infoPara1: "28 câu hỏi giúp bạn nhận ra các mô hình sử dụng AI. Dựa trên thang LLM-D12, Thang lo lắng AI (AIAS) và khung AIRD.",
+    infoPara1: "28 câu hỏi giúp bạn nhận ra các mô hình sử dụng AI. Câu hỏi do chúng tôi soạn, tham khảo thang LLM-D12, thang lo âu AI (AIAS) và khái niệm AIRD được đề xuất.",
     infoPara2: "<strong>Dành cho ai:</strong> Bất kỳ ai muốn kiểm tra việc dùng AI của mình có còn chủ ý không. Bạn sẽ nhận được Hồ sơ Nhận dạng AI cá nhân.",
     infoPara3: "<strong>Cách hoạt động:</strong> Trả lời 8 câu hỏi mỗi trục và bài kiểm tra Nỗi sợ. Tất cả chạy trong trình duyệt — không có dữ liệu nào rời thiết bị.",
     infoSources: "Nguồn: các câu hỏi do chúng tôi tự soạn, dựa trên những nghiên cứu đã công bố; bài test này không phải là một trong các thang đo đã được kiểm định dưới đây.<br>• LLM-D12 — Yankouskaya A., Babiker A. B., Rizvi S. W. F., Alshakhsi S., Liebherr M., Ali R. (2025). <a href='https://doi.org/10.48550/arXiv.2506.06874' target='_blank' rel='noopener'>arXiv:2506.06874</a><br>• AIAS — Wang Y.-Y., Wang Y.-S. Interactive Learning Environments. <a href='https://doi.org/10.1080/10494820.2019.1674887' target='_blank' rel='noopener'>doi:10.1080/10494820.2019.1674887</a><br>• AIRD — McNamara S., Thornton J. Cureus. <a href='https://www.cureus.com/articles/407877-artificial-intelligence-replacement-dysfunction-aird-a-call-to-action-for-mental-health-professionals-in-an-era-of-workforce-displacement' target='_blank' rel='noopener'>cureus.com/articles/407877</a>",
@@ -85,6 +85,7 @@ window.translations.vi = {
     installApp: "📲 Cài đặt ứng dụng",
     answerQualityWarning: "Lưu ý: bạn chọn cùng câu trả lời cho hầu hết câu hỏi. Để có hồ sơ chính xác hơn, hãy làm lại và trả lời thành thật từng câu.",
     resultDisclaimer: "Đây là tự đánh giá để suy ngẫm, không phải chẩn đoán y tế hay tâm lý. Ngưỡng dựa trên phân phối thang đánh giá. Nếu việc dùng AI khiến bạn lo lắng hoặc ảnh hưởng đến cuộc sống hằng ngày, hãy trao đổi với chuyên gia có chuyên môn. <a href='#infoSources'>Nguồn ↑</a>",
+    resultMethLink: "Cách tính điểm",
     sharedBannerText: "Bạn đang xem kết quả được chia sẻ. Muốn kết quả của mình? Làm bài kiểm tra miễn phí bên dưới.",
     protocolWord: "Giao thức",
     matrix: {

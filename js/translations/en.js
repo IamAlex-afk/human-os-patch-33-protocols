@@ -2,9 +2,9 @@ window.translations = window.translations || {};
 window.translations.en = {
     langName: "English",
     mainTitle: "AI Dependency Test: How Much Do You Rely on ChatGPT?",
-    subhead: "Free, anonymous 28-question test: how much do you rely on AI and ChatGPT for thinking, emotions and work? Based on LLM-D12 and AIAS. No signup.",
+    subhead: "Free, anonymous 28-question test: how much do you rely on AI and ChatGPT for thinking, emotions and work? Draws on LLM-D12 and AIAS. No signup.",
     infoTitle: "📋 What this assessment measures",
-    infoPara1: "This set of 28 questions helps you observe patterns in how you use AI for thinking, emotional comfort, and daily productivity. Designed for self-awareness, not clinical diagnosis. Based on the LLM-D12 dual-dimensional dependency scale, the AI Anxiety Scale (AIAS), and the AIRD framework.",
+    infoPara1: "This set of 28 questions helps you observe patterns in how you use AI for thinking, emotional comfort, and daily productivity. Designed for self-awareness, not clinical diagnosis. The questions are our own and draw on the LLM-D12 scale, the AI Anxiety Scale (AIAS) and the proposed AIRD construct.",
     infoPara2: "<strong>Who it's for:</strong> Anyone who wants to check whether their AI use is still intentional or becoming automatic. You'll get your personal AI Identity Profile with an archetype and percentile comparison.",
     infoPara3: "<strong>How it works:</strong> Answer 8 questions per axis plus a Fear assessment. Everything runs inside your browser — no data leaves your device.",
     infoSources: "Sources: the questions are our own and draw on published research; this self-check is not one of these validated scales.<br>• LLM-D12 — Yankouskaya A., Babiker A. B., Rizvi S. W. F., Alshakhsi S., Liebherr M., Ali R. (2025). <a href='https://doi.org/10.48550/arXiv.2506.06874' target='_blank' rel='noopener'>arXiv:2506.06874</a><br>• AIAS — Wang Y.-Y., Wang Y.-S. Interactive Learning Environments. <a href='https://doi.org/10.1080/10494820.2019.1674887' target='_blank' rel='noopener'>doi:10.1080/10494820.2019.1674887</a><br>• AIRD — McNamara S., Thornton J. Cureus. <a href='https://www.cureus.com/articles/407877-artificial-intelligence-replacement-dysfunction-aird-a-call-to-action-for-mental-health-professionals-in-an-era-of-workforce-displacement' target='_blank' rel='noopener'>cureus.com/articles/407877</a>",
@@ -85,6 +85,7 @@ window.translations.en = {
     installApp: "📲 Install app",
     answerQualityWarning: "Note: you selected the same answer for most questions. For a more accurate profile, consider retaking the test and answering each item honestly and individually.",
     resultDisclaimer: "This is a self-assessment for reflection, not a medical or psychological diagnosis. Thresholds are based on the response-scale distribution, not on validated population norms. If your use of AI worries you or gets in the way of daily life, talk to a qualified professional. <a href='#infoSources'>Sources ↑</a>",
+    resultMethLink: "How the score is calculated",
 
     sharedBannerText: "You are viewing a shared result. Want your own? Take the free test below.",
 

@@ -321,6 +321,7 @@
     ut('spectrumHigh', t.spectrumHigh);
     uh('resultDisclaimer', t.resultDisclaimer);
     ut('whatToDoTitle', t.whatToDoTitle);
+    ut('resultMethLink', t.resultMethLink);
     ut('sharedBanner', t.sharedBannerText);
 
     const bLink = document.getElementById('bookLink');
@@ -509,8 +510,9 @@
       window.requestAnimationFrame(() => {
         const y = window.scrollY;
 
+        // The book bar stays off the test page: it covered the answer options and the result.
         const bar = document.getElementById('globalCTABar');
-        if (bar) bar.classList.toggle('visible', y > 800);
+        if (bar) bar.classList.toggle('visible', y > 800 && !document.getElementById('test-section'));
 
         const topBtn = document.getElementById('scrollTopBtn');
         if (topBtn) {

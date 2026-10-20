@@ -2,9 +2,9 @@ window.translations = window.translations || {};
 window.translations.fr = {
     langName: "Français",
     mainTitle: "Test de dépendance à l’IA et à ChatGPT, gratuit",
-    subhead: "Test anonyme de 28 questions : à quel point dépendez-vous de l’IA et de ChatGPT pour penser, ressentir et travailler ? Basé sur LLM-D12 et AIAS. Sans inscription.",
+    subhead: "Test anonyme de 28 questions : à quel point dépendez-vous de l’IA et de ChatGPT pour penser, ressentir et travailler ? Inspiré de LLM-D12 et AIAS. Sans inscription.",
     infoTitle: "📋 Ce que mesure cette évaluation",
-    infoPara1: "Cet ensemble de 28 questions vous aide à observer vos habitudes d'utilisation de l'IA. Basé sur les échelles LLM-D12, AIAS et AIRD.",
+    infoPara1: "Cet ensemble de 28 questions vous aide à observer vos habitudes d'utilisation de l'IA. Les questions sont les nôtres et s’inspirent de l’échelle LLM-D12, de l’échelle d’anxiété AIAS et du construit proposé AIRD.",
     infoPara2: "<strong>Pour qui :</strong> Toute personne souhaitant vérifier si son utilisation de l'IA est toujours intentionnelle. Vous obtiendrez votre Profil d'Identité IA.",
     infoPara3: "<strong>Comment ça marche :</strong> Répondez à 8 questions par axe plus un test sur la peur. Tout s'exécute dans votre navigateur.",
     infoSources: "Sources : les questions sont les nôtres et s’appuient sur des recherches publiées ; ce test n’est aucune de ces échelles validées.<br>• LLM-D12 — Yankouskaya A., Babiker A. B., Rizvi S. W. F., Alshakhsi S., Liebherr M., Ali R. (2025). <a href='https://doi.org/10.48550/arXiv.2506.06874' target='_blank' rel='noopener'>arXiv:2506.06874</a><br>• AIAS — Wang Y.-Y., Wang Y.-S. Interactive Learning Environments. <a href='https://doi.org/10.1080/10494820.2019.1674887' target='_blank' rel='noopener'>doi:10.1080/10494820.2019.1674887</a><br>• AIRD — McNamara S., Thornton J. Cureus. <a href='https://www.cureus.com/articles/407877-artificial-intelligence-replacement-dysfunction-aird-a-call-to-action-for-mental-health-professionals-in-an-era-of-workforce-displacement' target='_blank' rel='noopener'>cureus.com/articles/407877</a>",
@@ -85,6 +85,7 @@ window.translations.fr = {
     installApp: "📲 Installer l'app",
     answerQualityWarning: "Remarque : vous avez choisi la même réponse pour presque toutes les questions. Pour un profil plus précis, refaites le test en répondant honnêtement et individuellement à chaque item.",
     resultDisclaimer: "Il s'agit d'une auto-évaluation à des fins de réflexion, et non d'un diagnostic médical ou psychologique. Les seuils sont basés sur la distribution de l'échelle de réponses, et non sur des normes de population validées. Si votre usage de l’IA vous inquiète ou gêne votre quotidien, consultez un professionnel qualifié. <a href='#infoSources'>Sources ↑</a>",
+    resultMethLink: "Comment le score est calculé",
 
     sharedBannerText: "Vous consultez un résultat partagé. Vous voulez le vôtre ? Faites le test gratuit ci-dessous.",
 

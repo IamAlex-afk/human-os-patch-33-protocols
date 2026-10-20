@@ -2,9 +2,9 @@ window.translations = window.translations || {};
 window.translations.ko = {
     langName: "한국어",
     mainTitle: "AI·챗GPT 의존도 테스트 – 무료 자가진단",
-    subhead: "28문항 무료 익명 테스트: 생각, 감정, 업무에서 AI와 챗GPT에 얼마나 의존하고 있나요? LLM-D12와 AIAS 척도 기반. 가입 불필요.",
+    subhead: "28문항 무료 익명 테스트: 생각, 감정, 업무에서 AI와 챗GPT에 얼마나 의존하고 있나요? LLM-D12와 AIAS 척도 참고. 가입 불필요.",
     infoTitle: "📋 이 평가가 측정하는 것",
-    infoPara1: "이 28개 문항은 생각, 감정적 안정, 일상 생산성을 위해 AI를 어떻게 사용하는지 패턴을 살펴보는 데 도움이 됩니다. 임상 진단이 아닌 자기 인식을 위해 설계되었습니다. LLM-D12 이중 차원 의존도 척도, AI 불안 척도(AIAS), AIRD 프레임워크를 기반으로 합니다.",
+    infoPara1: "이 28개 문항은 생각, 감정적 안정, 일상 생산성을 위해 AI를 어떻게 사용하는지 패턴을 살펴보는 데 도움이 됩니다. 임상 진단이 아닌 자기 인식을 위해 설계되었습니다. 문항은 저희가 직접 만들었으며 LLM-D12 척도, AI 불안 척도(AIAS), 제안된 개념인 AIRD를 참고했습니다.",
     infoPara2: "<strong>누구를 위한 것인가:</strong> AI 사용이 여전히 의도적인지, 자동적으로 변하고 있는지 확인하고 싶은 모든 사람. 원형(archetype)과 백분위 비교가 포함된 개인 AI 정체성 프로필을 받게 됩니다.",
     infoPara3: "<strong>작동 방식:</strong> 축마다 8개 문항과 두려움 평가에 답하세요. 모든 처리는 브라우저 내에서 이루어지며 — 어떤 데이터도 기기 밖으로 나가지 않습니다.",
     infoSources: "출처: 문항은 저희가 직접 만든 것으로 발표된 연구를 참고했습니다. 이 테스트는 아래의 검증된 척도 자체가 아닙니다.<br>• LLM-D12 — Yankouskaya A., Babiker A. B., Rizvi S. W. F., Alshakhsi S., Liebherr M., Ali R. (2025). <a href='https://doi.org/10.48550/arXiv.2506.06874' target='_blank' rel='noopener'>arXiv:2506.06874</a><br>• AIAS — Wang Y.-Y., Wang Y.-S. Interactive Learning Environments. <a href='https://doi.org/10.1080/10494820.2019.1674887' target='_blank' rel='noopener'>doi:10.1080/10494820.2019.1674887</a><br>• AIRD — McNamara S., Thornton J. Cureus. <a href='https://www.cureus.com/articles/407877-artificial-intelligence-replacement-dysfunction-aird-a-call-to-action-for-mental-health-professionals-in-an-era-of-workforce-displacement' target='_blank' rel='noopener'>cureus.com/articles/407877</a>",
@@ -85,6 +85,7 @@ window.translations.ko = {
     installApp: "📲 앱 설치",
     answerQualityWarning: "참고: 대부분의 문항에 같은 답을 선택하셨습니다. 더 정확한 프로필을 위해 테스트를 다시 하면서 각 항목에 솔직하고 개별적으로 답하는 것을 고려해 보세요.",
     resultDisclaimer: "이것은 성찰을 위한 자기 평가이며, 의학적이거나 심리적인 진단이 아닙니다. 기준점은 검증된 인구 규범이 아니라 응답 척도 분포에 기반합니다. AI 사용이 걱정되거나 일상생활에 지장을 준다면 전문가와 상담하세요. <a href='#infoSources'>출처 ↑</a>",
+    resultMethLink: "점수 계산",
 
     sharedBannerText: "공유된 결과를 보고 있습니다. 나만의 결과를 원하시나요? 아래에서 무료 테스트를 해보세요.",
 

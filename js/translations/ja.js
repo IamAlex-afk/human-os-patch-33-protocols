@@ -2,9 +2,9 @@ window.translations = window.translations || {};
 window.translations.ja = {
     langName: "日本語",
     mainTitle: "AI依存度チェック【無料・匿名】28の質問で診断",
-    subhead: "AI依存度を28問で無料チェック。認知的オフロード、AI不安、デジタル燃え尽き症候群を科学的根拠に基づき匿名で診断。登録不要、データ収集なし。",
+    subhead: "AI依存度を28問で無料チェック。認知的オフロード、AI不安、デジタル燃え尽き症候群を研究をもとに匿名で診断。登録不要、データ収集なし。",
     infoTitle: "📋 この評価で測定されるもの",
-    infoPara1: "この28の質問は、あなたが思考、精神的安定、生産性のためにAIをどう使用しているかのパターンを観察するのに役立ちます。LLM-D12、AIAS、AIRDの枠組みに基づいています。",
+    infoPara1: "この28の質問は、あなたが思考、精神的安定、生産性のためにAIをどう使用しているかのパターンを観察するのに役立ちます。質問は私たちのオリジナルで、LLM-D12尺度、AI不安尺度AIAS、提案段階の概念AIRDを参考にしています。",
     infoPara2: "<strong>対象者：</strong> 自分のAI利用が意図的なものか確認したいすべての人。結果として、あなたのAIアイデンティティプロファイルが得られます。",
     infoPara3: "<strong>仕組み：</strong> 各軸で8つの質問と、恐怖に関するテストに答えます。すべてお使いのブラウザ内で完結します。",
     infoSources: "出典：質問は当サイト独自のもので、公表された研究を参考にしています。このチェックは以下の検証済み尺度そのものではありません。<br>• LLM-D12 — Yankouskaya A., Babiker A. B., Rizvi S. W. F., Alshakhsi S., Liebherr M., Ali R. (2025). <a href='https://doi.org/10.48550/arXiv.2506.06874' target='_blank' rel='noopener'>arXiv:2506.06874</a><br>• AIAS — Wang Y.-Y., Wang Y.-S. Interactive Learning Environments. <a href='https://doi.org/10.1080/10494820.2019.1674887' target='_blank' rel='noopener'>doi:10.1080/10494820.2019.1674887</a><br>• AIRD — McNamara S., Thornton J. Cureus. <a href='https://www.cureus.com/articles/407877-artificial-intelligence-replacement-dysfunction-aird-a-call-to-action-for-mental-health-professionals-in-an-era-of-workforce-displacement' target='_blank' rel='noopener'>cureus.com/articles/407877</a>",
@@ -85,6 +85,7 @@ window.translations.ja = {
     installApp: "📲 アプリをインストール",
     answerQualityWarning: "注意：ほとんどの質問で同じ回答を選択しました。より正確なプロフィールのために、各項目に正直かつ個別に答えてテストを再受験することを検討してください。",
     resultDisclaimer: "これは振り返りのための自己評価であり、医学的・心理学的診断ではありません。閾値は回答尺度の分布に基づいており、検証された母集団規範に基づくものではありません。AIの使い方が不安な場合や日常生活に支障がある場合は、専門家に相談してください。<a href='#infoSources'>出典 ↑</a>",
+    resultMethLink: "スコアの計算",
 
     sharedBannerText: "共有された結果を見ています。自分の結果が欲しいですか？下の無料テストを受けてください。",
 

@@ -4,7 +4,7 @@ window.translations.th = {
     mainTitle: "แบบทดสอบการพึ่งพา AI และ ChatGPT ฟรี",
     subhead: "แบบทดสอบฟรีและไม่ระบุตัวตน 28 ข้อ: คุณพึ่งพา AI และ ChatGPT มากแค่ไหนในการคิด อารมณ์ และการทำงาน อ้างอิงมาตรวัด LLM-D12 และ AIAS ไม่ต้องสมัครสมาชิก",
     infoTitle: "📋 การประเมินนี้วัดอะไรบ้าง",
-    infoPara1: "คำถาม 28 ข้อช่วยให้คุณสังเกตรูปแบบการใช้ AI อ้างอิงจากมาตราส่วน LLM-D12 มาตรา AIAS และกรอบ AIRD",
+    infoPara1: "คำถาม 28 ข้อช่วยให้คุณสังเกตรูปแบบการใช้ AI คำถามเป็นของเราเอง โดยอ้างอิงมาตรวัด LLM-D12 มาตรวัดความวิตกกังวล AIAS และแนวคิด AIRD ที่มีการเสนอ",
     infoPara2: "<strong>เหมาะสำหรับ:</strong> ทุกคนที่ต้องการตรวจสอบว่าการใช้ AI ของตนยังมีเจตนาอยู่หรือกลายเป็นอัตโนมัติ คุณจะได้รับโปรไฟล์อัตลักษณ์ AI ส่วนตัว",
     infoPara3: "<strong>วิธีการทำงาน:</strong> ตอบคำถาม 8 ข้อในแต่ละแกนและการประเมินความกลัว ทุกอย่างทำงานในเบราว์เซอร์ — ไม่มีข้อมูลออกจากอุปกรณ์",
     infoSources: "แหล่งอ้างอิง: คำถามเป็นของเราเองโดยอิงจากงานวิจัยที่ตีพิมพ์แล้ว แบบทดสอบนี้ไม่ใช่มาตรวัดที่ผ่านการตรวจสอบความตรงเหล่านี้<br>• LLM-D12 — Yankouskaya A., Babiker A. B., Rizvi S. W. F., Alshakhsi S., Liebherr M., Ali R. (2025). <a href='https://doi.org/10.48550/arXiv.2506.06874' target='_blank' rel='noopener'>arXiv:2506.06874</a><br>• AIAS — Wang Y.-Y., Wang Y.-S. Interactive Learning Environments. <a href='https://doi.org/10.1080/10494820.2019.1674887' target='_blank' rel='noopener'>doi:10.1080/10494820.2019.1674887</a><br>• AIRD — McNamara S., Thornton J. Cureus. <a href='https://www.cureus.com/articles/407877-artificial-intelligence-replacement-dysfunction-aird-a-call-to-action-for-mental-health-professionals-in-an-era-of-workforce-displacement' target='_blank' rel='noopener'>cureus.com/articles/407877</a>",
@@ -85,6 +85,7 @@ window.translations.th = {
     installApp: "📲 ติดตั้งแอป",
     answerQualityWarning: "หมายเหตุ: คุณเลือกคำตอบเดียวกันสำหรับคำถามส่วนใหญ่ เพื่อโปรไฟล์ที่แม่นยำกว่า ลองทำแบบทดสอบอีกครั้งและตอบอย่างซื่อสัตย์",
     resultDisclaimer: "นี่คือการประเมินตนเองเพื่อการสะท้อนคิด ไม่ใช่การวินิจฉัยทางการแพทย์หรือจิตวิทยา หากการใช้ AI ทำให้คุณกังวลหรือรบกวนชีวิตประจำวัน ควรปรึกษาผู้เชี่ยวชาญ <a href='#infoSources'>แหล่งข้อมูล ↑</a>",
+    resultMethLink: "คิดคะแนนอย่างไร",
     sharedBannerText: "คุณกำลังดูผลลัพธ์ที่แชร์ ต้องการผลลัพธ์ของตัวเอง? ทำแบบทดสอบฟรีด้านล่าง",
     protocolWord: "โปรโตคอล",
     matrix: {

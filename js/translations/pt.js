@@ -2,9 +2,9 @@ window.translations = window.translations || {};
 window.translations.pt = {
     langName: "Português",
     mainTitle: "Teste de dependência de IA e ChatGPT, grátis",
-    subhead: "Teste anônimo com 28 perguntas: quanto você depende da IA e do ChatGPT para pensar, sentir e trabalhar? Baseado em LLM-D12 e AIAS. Sem cadastro.",
+    subhead: "Teste anônimo com 28 perguntas: quanto você depende da IA e do ChatGPT para pensar, sentir e trabalhar? Inspirado nas escalas LLM-D12 e AIAS. Sem cadastro.",
     infoTitle: "📋 O que esta avaliação mede",
-    infoPara1: "Este conjunto de 28 perguntas ajuda você a observar padrões no uso da IA para pensar, conforto emocional e produtividade diária. Criado para autoconhecimento, não diagnóstico clínico. Baseado na escala de dependência dual LLM-D12, na Escala de Ansiedade por IA (AIAS) e no framework AIRD.",
+    infoPara1: "Este conjunto de 28 perguntas ajuda você a observar padrões no uso da IA para pensar, conforto emocional e produtividade diária. Criado para autoconhecimento, não diagnóstico clínico. As perguntas são nossas e se inspiram na escala LLM-D12, na Escala de Ansiedade por IA (AIAS) e no construto proposto AIRD.",
     infoPara2: "<strong>Para quem é:</strong> Qualquer pessoa que queira verificar se o uso de IA ainda é intencional ou está se tornando automático. Você receberá seu Perfil de Identidade de IA com arquétipo e comparação percentual.",
     infoPara3: "<strong>Como funciona:</strong> Responda 8 perguntas por eixo, mais uma avaliação de Medo. Tudo é processado dentro do seu navegador — nenhum dado sai do seu dispositivo.",
     infoSources: "Fontes: as perguntas são nossas e se apoiam em pesquisas publicadas; este teste não é nenhuma destas escalas validadas.<br>• LLM-D12 — Yankouskaya A., Babiker A. B., Rizvi S. W. F., Alshakhsi S., Liebherr M., Ali R. (2025). <a href='https://doi.org/10.48550/arXiv.2506.06874' target='_blank' rel='noopener'>arXiv:2506.06874</a><br>• AIAS — Wang Y.-Y., Wang Y.-S. Interactive Learning Environments. <a href='https://doi.org/10.1080/10494820.2019.1674887' target='_blank' rel='noopener'>doi:10.1080/10494820.2019.1674887</a><br>• AIRD — McNamara S., Thornton J. Cureus. <a href='https://www.cureus.com/articles/407877-artificial-intelligence-replacement-dysfunction-aird-a-call-to-action-for-mental-health-professionals-in-an-era-of-workforce-displacement' target='_blank' rel='noopener'>cureus.com/articles/407877</a>",
@@ -85,6 +85,7 @@ window.translations.pt = {
     installApp: "📲 Instalar app",
     answerQualityWarning: "Nota: você selecionou a mesma resposta para a maioria das perguntas. Para um perfil mais preciso, considere refazer o teste e responder cada item com sinceridade e individualmente.",
     resultDisclaimer: "Esta é uma autoavaliação para reflexão, não um diagnóstico médico ou psicológico. Os limiares são baseados na distribuição da escala de respostas, não em normas populacionais validadas. Se o seu uso de IA preocupa você ou atrapalha o dia a dia, procure um profissional qualificado. <a href='#infoSources'>Fontes ↑</a>",
+    resultMethLink: "Como a pontuação é calculada",
 
     sharedBannerText: "Você está vendo um resultado compartilhado. Quer o seu? Faça o teste gratuito abaixo.",
 

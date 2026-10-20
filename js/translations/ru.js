@@ -2,9 +2,9 @@ window.translations = window.translations || {};
 window.translations.ru = {
     langName: "Русский",
     mainTitle: "Тест на зависимость от ИИ и ChatGPT — бесплатно",
-    subhead: "Анонимный тест из 28 вопросов: насколько вы полагаетесь на ИИ и ChatGPT в мышлении, эмоциях и работе. Основан на шкалах LLM-D12 и AIAS. Без регистрации.",
+    subhead: "Анонимный тест из 28 вопросов: насколько вы полагаетесь на ИИ и ChatGPT в мышлении, эмоциях и работе. Опирается на шкалы LLM-D12 и AIAS. Без регистрации.",
     infoTitle: "📋 Что измеряет эта оценка",
-    infoPara1: "Набор из 28 вопросов поможет вам увидеть паттерны использования ИИ. Основан на шкале LLM-D12, шкале тревожности AIAS и модели AIRD.",
+    infoPara1: "Набор из 28 вопросов поможет вам увидеть паттерны использования ИИ. Вопросы наши собственные и опираются на шкалу LLM-D12, шкалу тревоги AIAS и предложенный конструкт AIRD.",
     infoPara2: "<strong>Для кого:</strong> Для всех, кто хочет проверить, осознанно ли они используют ИИ. Вы получите персональный профиль с архетипом.",
     infoPara3: "<strong>Как это работает:</strong> Ответьте на 8 вопросов по каждой оси и тест на страх. Всё происходит локально в браузере.",
     infoSources: "Источники: вопросы теста составлены нами с опорой на опубликованные исследования; сам тест не является ни одной из этих валидированных шкал.<br>• LLM-D12 — Yankouskaya A., Babiker A. B., Rizvi S. W. F., Alshakhsi S., Liebherr M., Ali R. (2025). <a href='https://doi.org/10.48550/arXiv.2506.06874' target='_blank' rel='noopener'>arXiv:2506.06874</a><br>• AIAS — Wang Y.-Y., Wang Y.-S. Interactive Learning Environments. <a href='https://doi.org/10.1080/10494820.2019.1674887' target='_blank' rel='noopener'>doi:10.1080/10494820.2019.1674887</a><br>• AIRD — McNamara S., Thornton J. Cureus. <a href='https://www.cureus.com/articles/407877-artificial-intelligence-replacement-dysfunction-aird-a-call-to-action-for-mental-health-professionals-in-an-era-of-workforce-displacement' target='_blank' rel='noopener'>cureus.com/articles/407877</a>",
@@ -85,6 +85,7 @@ window.translations.ru = {
     installApp: "📲 Установить приложение",
     answerQualityWarning: "Примечание: вы выбрали одинаковый ответ почти на все вопросы. Для более точного профиля пройдите тест заново, отвечая на каждый пункт честно и по отдельности.",
     resultDisclaimer: "Это самооценка для размышления, а не медицинский или психологический диагноз. Пороги основаны на распределении ответов по шкале, а не на валидированных популяционных нормах. Если использование ИИ вас тревожит или мешает повседневной жизни, обратитесь к квалифицированному специалисту. <a href='#infoSources'>Источники ↑</a>",
+    resultMethLink: "Как считается балл",
 
     sharedBannerText: "Вы смотрите чужой результат. Хотите свой? Пройдите бесплатный тест ниже.",
 

@@ -2,9 +2,9 @@ window.translations = window.translations || {};
 window.translations.it = {
     langName: "Italiano",
     mainTitle: "Test di dipendenza da IA e ChatGPT, gratis",
-    subhead: "Test anonimo di 28 domande: quanto ti affidi all’IA e a ChatGPT per pensare, per le emozioni e per il lavoro? Basato su LLM-D12 e AIAS. Senza registrazione.",
+    subhead: "Test anonimo di 28 domande: quanto ti affidi all’IA e a ChatGPT per pensare, per le emozioni e per il lavoro? Ispirato a LLM-D12 e AIAS. Senza registrazione.",
     infoTitle: "📋 Cosa misura questa valutazione",
-    infoPara1: "Questo set di 28 domande ti aiuta a osservare i modelli nel modo in cui usi l'IA per pensare, per conforto emotivo e per la produttività quotidiana. Pensato per l'autoconsapevolezza, non per la diagnosi clinica. Basato sulla scala di dipendenza a doppia dimensione LLM-D12, sulla Scala di Ansia da IA (AIAS) e sul framework AIRD.",
+    infoPara1: "Questo set di 28 domande ti aiuta a osservare i modelli nel modo in cui usi l'IA per pensare, per conforto emotivo e per la produttività quotidiana. Pensato per l'autoconsapevolezza, non per la diagnosi clinica. Le domande sono nostre e si ispirano alla scala LLM-D12, alla Scala di Ansia da IA (AIAS) e al costrutto proposto AIRD.",
     infoPara2: "<strong>Per chi è pensato:</strong> Chiunque voglia verificare se il proprio uso dell'IA è ancora intenzionale o sta diventando automatico. Riceverai il tuo Profilo di Identità IA personale con un archetipo e un confronto percentile.",
     infoPara3: "<strong>Come funziona:</strong> Rispondi a 8 domande per asse più una valutazione della paura. Tutto viene elaborato all'interno del tuo browser — nessun dato lascia il tuo dispositivo.",
     infoSources: "Fonti: le domande sono nostre e si basano su ricerche pubblicate; questo test non è nessuna di queste scale validate.<br>• LLM-D12 — Yankouskaya A., Babiker A. B., Rizvi S. W. F., Alshakhsi S., Liebherr M., Ali R. (2025). <a href='https://doi.org/10.48550/arXiv.2506.06874' target='_blank' rel='noopener'>arXiv:2506.06874</a><br>• AIAS — Wang Y.-Y., Wang Y.-S. Interactive Learning Environments. <a href='https://doi.org/10.1080/10494820.2019.1674887' target='_blank' rel='noopener'>doi:10.1080/10494820.2019.1674887</a><br>• AIRD — McNamara S., Thornton J. Cureus. <a href='https://www.cureus.com/articles/407877-artificial-intelligence-replacement-dysfunction-aird-a-call-to-action-for-mental-health-professionals-in-an-era-of-workforce-displacement' target='_blank' rel='noopener'>cureus.com/articles/407877</a>",
@@ -85,6 +85,7 @@ window.translations.it = {
     installApp: "📲 Installa l'app",
     answerQualityWarning: "Nota: hai selezionato la stessa risposta per la maggior parte delle domande. Per un profilo più accurato, considera di rifare il test rispondendo a ogni voce in modo onesto e individuale.",
     resultDisclaimer: "Questa è un'autovalutazione per la riflessione, non una diagnosi medica o psicologica. Le soglie si basano sulla distribuzione della scala di risposta, non su norme di popolazione validate. Se il tuo uso dell’IA ti preoccupa o interferisce con la vita quotidiana, rivolgiti a un professionista qualificato. <a href='#infoSources'>Fonti ↑</a>",
+    resultMethLink: "Come si calcola il punteggio",
 
     sharedBannerText: "Stai visualizzando un risultato condiviso. Vuoi il tuo? Fai il test gratuito qui sotto.",
 

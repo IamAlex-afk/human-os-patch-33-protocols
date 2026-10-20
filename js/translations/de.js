@@ -2,9 +2,9 @@ window.translations = window.translations || {};
 window.translations.de = {
     langName: "Deutsch",
     mainTitle: "KI-Abhängigkeit: Selbsttest gratis (ChatGPT & Co.)",
-    subhead: "Anonymer Test mit 28 Fragen: Wie sehr verlassen Sie sich beim Denken, Fühlen und Arbeiten auf KI und ChatGPT? Basiert auf LLM-D12 und AIAS. Ohne Anmeldung.",
+    subhead: "Anonymer Test mit 28 Fragen: Wie sehr verlassen Sie sich beim Denken, Fühlen und Arbeiten auf KI und ChatGPT? Angelehnt an LLM-D12 und AIAS. Ohne Anmeldung.",
     infoTitle: "📋 Was diese Bewertung misst",
-    infoPara1: "Diese 28 Fragen helfen dir zu beobachten, wie du KI nutzt. Basierend auf LLM-D12, AIAS und AIRD.",
+    infoPara1: "Diese 28 Fragen helfen dir zu beobachten, wie du KI nutzt. Die Fragen sind unsere eigenen und lehnen sich an die LLM-D12-Skala, die KI-Angst-Skala AIAS und das vorgeschlagene Konstrukt AIRD an.",
     infoPara2: "<strong>Für wen:</strong> Jeder, der prüfen möchte, ob die KI-Nutzung noch bewusst ist. Du erhältst dein persönliches KI-Profil.",
     infoPara3: "<strong>Wie es funktioniert:</strong> Beantworte 8 Fragen pro Achse. Alles läuft lokal in deinem Browser.",
     infoSources: "Quellen: Die Fragen stammen von uns und stützen sich auf veröffentlichte Forschung; dieser Selbsttest ist keine dieser validierten Skalen.<br>• LLM-D12 — Yankouskaya A., Babiker A. B., Rizvi S. W. F., Alshakhsi S., Liebherr M., Ali R. (2025). <a href='https://doi.org/10.48550/arXiv.2506.06874' target='_blank' rel='noopener'>arXiv:2506.06874</a><br>• AIAS — Wang Y.-Y., Wang Y.-S. Interactive Learning Environments. <a href='https://doi.org/10.1080/10494820.2019.1674887' target='_blank' rel='noopener'>doi:10.1080/10494820.2019.1674887</a><br>• AIRD — McNamara S., Thornton J. Cureus. <a href='https://www.cureus.com/articles/407877-artificial-intelligence-replacement-dysfunction-aird-a-call-to-action-for-mental-health-professionals-in-an-era-of-workforce-displacement' target='_blank' rel='noopener'>cureus.com/articles/407877</a>",
@@ -85,6 +85,7 @@ window.translations.de = {
     installApp: "📲 App installieren",
     answerQualityWarning: "Hinweis: Du hast bei fast allen Fragen dieselbe Antwort gewählt. Für ein genaueres Profil wiederhole den Test und beantworte jede Frage ehrlich und einzeln.",
     resultDisclaimer: "Dies ist eine Selbsteinschätzung zur Reflexion, keine medizinische oder psychologische Diagnose. Die Schwellenwerte basieren auf der Verteilung der Antwortskala, nicht auf validierten Bevölkerungsnormen. Wenn Ihre KI-Nutzung Sie beunruhigt oder Ihren Alltag beeinträchtigt, wenden Sie sich an eine qualifizierte Fachperson. <a href='#infoSources'>Quellen ↑</a>",
+    resultMethLink: "Wie der Wert berechnet wird",
 
     sharedBannerText: "Du siehst ein geteiltes Ergebnis. Willst du dein eigenes? Mach unten den kostenlosen Test.",
 
