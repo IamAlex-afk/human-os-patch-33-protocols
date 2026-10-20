@@ -138,7 +138,7 @@ window.translations.it = {
     faqQ6: "Come vengono calcolati i punteggi del test?",
     faqA6: "Ognuna delle 10 risposte vale da 0 a 4 punti (da «Mai» a «Costantemente»), quindi il totale va da 0 a 40. Fino al 40% del massimo il livello è basso, dal 41 al 70% moderato, oltre il 70% alto. Non ci sono domande invertite. I dettagli sono nella pagina Metodologia.",
     faqQ7: "Questo test è anonimo?",
-    faqA7: "Sì. Tutta l'elaborazione avviene nel tuo browser. Niente viene memorizzato su alcun server, eccetto il sondaggio globale opzionale, che memorizza solo 3 contatori di voti anonimi (senza IP, email o timestamp).",
+    faqA7: "Sì. Tutto avviene nel tuo browser: le risposte vengono calcolate sul tuo dispositivo e non vengono inviate né salvate. Niente account, cookie o statistiche.",
     faqQ8: "Usare l'IA mi rende meno intelligente?",
     faqA8: "Non è dimostrato. Gli studi trovano legami, non prove di causa: un uso maggiore degli strumenti di IA si accompagna a punteggi più bassi di pensiero critico (<a href='https://doi.org/10.3390/soc15010006' target='_blank' rel='noopener'>Gerlich, 2025</a>), e chi si fida di più dell’IA generativa dichiara meno pensiero critico al lavoro (<a href='https://doi.org/10.1145/3706598.3713778' target='_blank' rel='noopener'>Lee et al., 2025</a>). Il test mostra quanto ti appoggi a essa.",
     faqQ9: "Questo test è una diagnosi medica?",

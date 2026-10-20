@@ -41,17 +41,17 @@
 </head>
 <body>
   <h1>Politique de confidentialité</h1>
-  <p class="sub">Dernière mise à jour : 2026-10-07 · En langage clair, sans jargon juridique.</p>
+  <p class="sub">Dernière mise à jour : 2026-10-20 · En langage clair, sans jargon juridique.</p>
 
   <div class="highlight">
-    <strong>En bref :</strong> le test ne collecte rien — pas de serveur, pas de base de données, pas d’analyse d’audience, pas de cookies, pas de suivi. Tout ce que vous y faites reste dans votre navigateur et ne quitte pas votre appareil. La seule exception est le sondage mondial facultatif : si vous choisissez de voter, votre unique choix est envoyé à un serveur minimal qui ne conserve que 3 compteurs globaux (Pour / Neutre / Contre) — ni adresse IP, ni e-mail, ni horodatage, ni trace de chaque vote.
+    <strong>En bref :</strong> Mind-OS ne collecte rien — pas de serveur, pas de base de données, pas de statistiques, pas de cookies, pas de traçage. Vos réponses sont calculées dans votre navigateur et ne quittent jamais votre appareil.
   </div>
 
   <h2>Quelles données nous collectons</h2>
-  <p><strong>Aucune, sauf 3 nombres si vous votez au sondage.</strong> Mind-OS est un site statique : le test n’a pas de serveur. Le sondage mondial facultatif est la seule fonction dotée d’un serveur — voir plus bas.</p>
+  <p><strong>Aucune.</strong> Mind-OS est un site statique : les tests n’ont pas de serveur et n’envoient rien.</p>
 
   <h2>Où vont vos réponses</h2>
-  <p>Vos réponses au test et la langue choisie sont enregistrées uniquement dans le <code>localStorage</code> de votre navigateur — un espace de stockage privé sur votre propre appareil. Il n’est jamais transmis. Vous pouvez l’effacer à tout moment en supprimant les données du navigateur ou avec les boutons de réinitialisation du site.</p>
+  <p>Vos réponses sont calculées dans votre navigateur tant que la page est ouverte, et ne sont ni enregistrées ni envoyées. Le site ne conserve que deux réglages dans le <code>localStorage</code> de votre navigateur, sur votre appareil : la langue choisie et le fait d’avoir fermé ou non la suggestion de langue. Pour fonctionner hors ligne, le navigateur garde aussi les fichiers du site lui-même ; ils ne contiennent rien sur vous. Effacer les données du site supprime le tout.</p>
 
   <h2>Cookies</h2>
   <p>Nous n’utilisons aucun cookie — ni pour l’analyse, ni pour la publicité, ni pour les sessions. Il n’y a rien à accepter, puisque rien n’est déposé.</p>
@@ -59,11 +59,8 @@
   <h2>Suivi et analyse d’audience</h2>
   <p>Il n’y a ni pixel de suivi, ni Google Analytics, ni Facebook Pixel, ni empreinte numérique, ni traceur tiers. Nous ne savons pas qui vous êtes ni que vous êtes venu.</p>
 
-  <h2>La seule exception : le sondage mondial</h2>
-  <p>Le « Sondage mondial sur l'IA » est entièrement facultatif — le test fonctionne sans lui. Si vous choisissez de voter, votre unique choix (Pour / Neutre / Contre) est envoyé à un serveur minimal (Google Apps Script) qui ne conserve que 3 totaux, un par option. Il ne conserve ni votre adresse IP, ni votre e-mail, ni l’heure, ni aucune trace de chaque vote : il est impossible de relier un vote à vous. Le serveur ne renvoie que des pourcentages, jamais le nombre de votes. Les pourcentages qu’il renvoie sont enregistrés dans votre navigateur ; lors des visites suivantes, la page les affiche à partir de là et ne contacte aucun serveur.</p>
-
   <h2>Services tiers</h2>
-  <p>Les polices sont servies par ce site lui-même ou proviennent de votre appareil ; aucune page ne charge quoi que ce soit depuis Google Fonts. Si vous votez au sondage, votre vote est envoyé à un serveur Google Apps Script, comme décrit ci-dessus. Le site est hébergé sur GitHub Pages. Dans chacun de ces cas, votre navigateur se connecte aux serveurs de l’entreprise concernée, qui voient votre adresse IP comme pour toute requête web ; nous n’en recevons rien et n’avons pas accès à leurs journaux. Aucun autre service tiers n’est contacté.</p>
+  <p>Les polices viennent de ce site ou de votre appareil ; aucune page ne charge quoi que ce soit depuis un autre serveur. Le site est hébergé sur GitHub Pages : comme tout hébergeur, il voit votre adresse IP quand votre navigateur demande une page. Nous n’en recevons rien et n’avons pas accès à ses journaux.</p>
 
   <h2>Enfants</h2>
   <p>Mind-OS ne contient aucun contenu nuisible et ne collecte aucune donnée ; il ne présente donc aucun risque pour les données de quiconque, mineurs compris. C’est un outil éducatif de réflexion, pas un avis médical ni un diagnostic.</p>
@@ -72,7 +69,7 @@
   <p>Comme nous ne détenons aucune donnée vous concernant, il n’y a rien à demander, exporter ou supprimer de notre côté. Vous gardez le contrôle total : vos données se trouvent uniquement sur votre appareil, et vous seul pouvez y accéder ou les supprimer.</p>
 
   <h2>Comment le vérifier vous-même</h2>
-  <p>Ouvrez les outils de développement de votre navigateur (F12) → onglet Network, puis utilisez le site. Passer le test n’envoie aucune requête — tout le traitement se fait dans le JavaScript exécuté localement dans votre navigateur. La seule requête vers un autre serveur apparaît lorsque vous cliquez sur « Soumettre votre vote ». Le code source est consultable librement.</p>
+  <p>Ouvrez les outils de développement du navigateur (F12) → onglet Network et faites un test : aucune requête ne part vers un autre serveur, car le calcul est fait par le JavaScript exécuté dans votre navigateur. Le code source est ouvert.</p>
 
   <h2>Contact</h2>
   <p>Des questions ? Ouvrez un ticket : <a href="https://github.com/IamAlex-afk/human-os-patch-33-protocols/issues" target="_blank" rel="noopener">GitHub Issues</a>.</p>

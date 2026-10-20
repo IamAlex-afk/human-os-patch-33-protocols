@@ -138,7 +138,7 @@ window.translations.es = {
     faqQ6: "¿Cómo se calculan las puntuaciones?",
     faqA6: "Cada una de las 10 respuestas da de 0 a 4 puntos (de «Nunca» a «Constantemente»), así que el total va de 0 a 40. Hasta el 40 % del máximo es un nivel bajo, del 41 al 70 % moderado y más del 70 % alto. No hay preguntas invertidas. Los detalles están en la página de metodología.",
     faqQ7: "¿Es anónimo este test?",
-    faqA7: "Sí. Todo el procesamiento ocurre en tu navegador. No se envía nada a ningún servidor, excepto la encuesta global opcional, que almacena solo 3 contadores anónimos de votos (sin IP, email ni marca de tiempo).",
+    faqA7: "Sí. Todo ocurre en tu navegador: tus respuestas se puntúan en tu dispositivo y no se envían ni se guardan. No hay cuenta, ni cookies, ni analítica.",
     faqQ8: "¿Usar IA me hace menos inteligente?",
     faqA8: "No está demostrado. Los estudios encuentran relaciones, no pruebas de causa: un uso mayor de herramientas de IA va con puntuaciones más bajas de pensamiento crítico (<a href='https://doi.org/10.3390/soc15010006' target='_blank' rel='noopener'>Gerlich, 2025</a>), y quienes más confían en la IA generativa dicen pensar de forma menos crítica en el trabajo (<a href='https://doi.org/10.1145/3706598.3713778' target='_blank' rel='noopener'>Lee et al., 2025</a>). El test muestra cuánto te apoyas en ella.",
     faqQ9: "¿Este test es un diagnóstico médico?",

@@ -41,17 +41,17 @@
 </head>
 <body>
   <h1>Política de privacidad</h1>
-  <p class="sub">Última actualización: 2026-10-07 · En lenguaje claro, sin jerga legal.</p>
+  <p class="sub">Última actualización: 2026-10-20 · En lenguaje claro, sin jerga legal.</p>
 
   <div class="highlight">
-    <strong>En pocas palabras:</strong> el test no recoge nada: no hay servidor, base de datos, analítica, cookies ni rastreo. Todo lo que haces ahí se queda en tu navegador y no sale de tu dispositivo. La única excepción es la encuesta global opcional: si decides votar, se envía tu única elección a un servidor mínimo que guarda solo 3 contadores totales (A favor / Neutral / En contra), sin IP, correo, hora ni registro de cada voto.
+    <strong>En pocas palabras:</strong> Mind-OS no recoge nada: no hay servidor, base de datos, analítica, cookies ni rastreo. Tus respuestas se puntúan en tu navegador y nunca salen de tu dispositivo.
   </div>
 
   <h2>Qué datos recogemos</h2>
-  <p><strong>Ninguno, salvo 3 números si votas en la encuesta.</strong> Mind-OS es un sitio estático: el test no tiene servidor. La encuesta global opcional es la única función con servidor; se explica más abajo.</p>
+  <p><strong>Ninguno.</strong> Mind-OS es un sitio estático: los tests no tienen servidor y no envían nada a ningún sitio.</p>
 
   <h2>Adónde van tus respuestas</h2>
-  <p>Tus respuestas del test y el idioma elegido se guardan solo en el <code>localStorage</code> de tu navegador, un almacenamiento privado en tu propio dispositivo. Nunca se transmite a ningún sitio. Puedes borrarlo cuando quieras limpiando los datos del navegador o con los botones de reinicio del sitio.</p>
+  <p>Tus respuestas se puntúan en tu navegador mientras la página está abierta y no se guardan ni se envían. El sitio guarda solo dos ajustes en el <code>localStorage</code> de tu navegador, en tu propio dispositivo: el idioma elegido y si cerraste la sugerencia de idioma. Para funcionar sin conexión, el navegador también guarda los archivos del propio sitio; no contienen nada sobre ti. Borrar los datos del sitio lo elimina todo.</p>
 
   <h2>Cookies</h2>
   <p>No usamos cookies de ningún tipo: ni de analítica, ni de publicidad, ni de sesión. No hay nada que aceptar, porque no se instala nada.</p>
@@ -59,11 +59,8 @@
   <h2>Rastreo y analítica</h2>
   <p>No hay píxeles de seguimiento, Google Analytics, Facebook Pixel, huella digital ni rastreadores de terceros. No sabemos quién eres ni que nos has visitado.</p>
 
-  <h2>La única excepción: la encuesta global</h2>
-  <p>La «Encuesta Global sobre IA» es totalmente opcional: el test funciona sin ella. Si decides votar, tu única elección (A favor / Neutral / En contra) se envía a un servidor mínimo (Google Apps Script) que guarda solo 3 totales, uno por opción. No guarda tu dirección IP, correo, hora ni ningún registro de cada voto: no hay forma de vincular un voto contigo. El servidor solo devuelve porcentajes, nunca el número de votos. Los porcentajes que devuelve se guardan en tu navegador; en visitas posteriores la página los muestra desde ahí y no contacta con ningún servidor.</p>
-
   <h2>Servicios de terceros</h2>
-  <p>Las fuentes se sirven desde este mismo sitio o se toman de tu dispositivo; ninguna página carga nada de Google Fonts. Si votas en la encuesta, tu voto va a un servidor de Google Apps Script, como se describe arriba. El sitio está alojado en GitHub Pages. En cada uno de estos casos tu navegador se conecta con los servidores de esa empresa, que ven tu dirección IP como en cualquier petición web; nosotros no recibimos esos datos ni tenemos acceso a sus registros. No se contacta con ningún otro servicio de terceros.</p>
+  <p>Las fuentes se sirven desde este sitio o se toman de tu dispositivo; ninguna página carga nada de otro servidor. El sitio está alojado en GitHub Pages: como cualquier alojamiento, ve tu dirección IP cuando tu navegador pide una página. Nosotros no recibimos esos datos ni tenemos acceso a sus registros.</p>
 
   <h2>Menores</h2>
   <p>Mind-OS no contiene contenido dañino y no recoge datos, por lo que no supone un riesgo de datos para nadie, incluidos los menores. Es una herramienta educativa de reflexión, no un consejo médico ni un diagnóstico.</p>
@@ -72,7 +69,7 @@
   <p>Como no tenemos datos sobre ti, no hay nada que solicitar, exportar o borrar por nuestra parte. El control es tuyo: tus datos están solo en tu dispositivo y solo tú puedes verlos o eliminarlos.</p>
 
   <h2>Cómo comprobarlo tú mismo</h2>
-  <p>Abre las herramientas de desarrollo del navegador (F12) → pestaña Network y usa el sitio. Hacer el test no envía ninguna petición: todo se procesa en el JavaScript que se ejecuta en tu navegador. La única petición a otro servidor aparece al pulsar «Enviar voto». El código fuente es público.</p>
+  <p>Abre las herramientas de desarrollo del navegador (F12) → pestaña Network y haz un test: ninguna petición va a otro servidor, porque la puntuación la hace el JavaScript que se ejecuta en tu navegador. El código fuente es abierto.</p>
 
   <h2>Contacto</h2>
   <p>¿Preguntas? Abre una incidencia: <a href="https://github.com/IamAlex-afk/human-os-patch-33-protocols/issues" target="_blank" rel="noopener">GitHub Issues</a>.</p>

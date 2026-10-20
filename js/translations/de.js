@@ -138,7 +138,7 @@ window.translations.de = {
     faqQ6: "Wie werden die Punktzahlen berechnet?",
     faqA6: "Jede der 10 Antworten zählt 0 bis 4 Punkte (von „Nie“ bis „Ständig“), insgesamt also 0–40. Bis 40 % des Maximums ist eine niedrige Stufe, 41–70 % eine mittlere, über 70 % eine hohe. Es gibt keine umgekehrt formulierten Fragen. Details stehen auf der Methodik-Seite.",
     faqQ7: "Ist dieser Test anonym?",
-    faqA7: "Ja. Die gesamte Verarbeitung findet in Ihrem Browser statt. Es wird nichts auf einem Server gespeichert, mit Ausnahme der optionalen globalen Umfrage, die nur 3 anonyme Stimmzähler speichert (ohne IP, E-Mail oder Zeitstempel).",
+    faqA7: "Ja. Alles passiert in deinem Browser: Deine Antworten werden auf deinem Gerät ausgewertet und weder gesendet noch gespeichert. Kein Konto, keine Cookies, keine Analyse.",
     faqQ8: "Macht KI mich weniger intelligent?",
     faqA8: "Das ist nicht belegt. Studien finden bisher Zusammenhänge, keinen Beweis für eine Ursache: Häufigere Nutzung von KI-Tools geht mit niedrigeren Werten beim kritischen Denken einher (<a href='https://doi.org/10.3390/soc15010006' target='_blank' rel='noopener'>Gerlich, 2025</a>), und wer generativer KI mehr vertraut, gibt bei der Arbeit weniger kritisches Denken an (<a href='https://doi.org/10.1145/3706598.3713778' target='_blank' rel='noopener'>Lee et al., 2025</a>). Der Test zeigt, wie sehr du dich auf sie stützt.",
     faqQ9: "Ist dieser Test eine medizinische Diagnose?",

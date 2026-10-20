@@ -41,17 +41,17 @@
 </head>
 <body>
   <h1>Privacy Policy</h1>
-  <p class="sub">Last updated: 2026-10-07 · Plain language, no legalese.</p>
+  <p class="sub">Last updated: 2026-10-20 · Plain language, no legalese.</p>
 
   <div class="highlight">
-    <strong>The short version:</strong> The assessment collects nothing — no server, no database, no analytics, no cookies, no tracking. Everything you do there stays inside your own browser and never leaves your device. The one exception is the optional global poll: if you choose to vote, it sends your single choice to a minimal backend that stores only 3 aggregate counters (For/Neutral/Against) — no IP, email, timestamp, or per-vote record.
+    <strong>The short version:</strong> Mind-OS collects nothing — no server, no database, no analytics, no cookies, no tracking. Your answers are scored in your browser and never leave your device.
   </div>
 
   <h2>What data we collect</h2>
-  <p><strong>None, except 3 numbers if you vote in the poll.</strong> Mind-OS is a static website with no backend server for the assessment. The optional global poll is the only feature with a backend — see below.</p>
+  <p><strong>None.</strong> Mind-OS is a static website: the tests have no server and send nothing anywhere.</p>
 
   <h2>Where your answers go</h2>
-  <p>Your test answers and language preference are saved only in your browser’s <code>localStorage</code> — a private storage area on your own device. It is never transmitted anywhere. You can erase it at any time by clearing your browser data or using the in-app reset buttons.</p>
+  <p>Your answers are scored in your browser while the page is open and are not saved or sent. The site keeps only two settings in your browser’s <code>localStorage</code>, on your own device: the language you chose and whether you closed the language suggestion. To work offline, the browser also keeps the site’s own files; they contain nothing about you. Clearing the site data removes all of it.</p>
 
   <h2>Cookies</h2>
   <p>We use no cookies of any kind — not for analytics, not for advertising, not for sessions. There is nothing to consent to, because nothing is set.</p>
@@ -59,11 +59,8 @@
   <h2>Tracking &amp; analytics</h2>
   <p>There are no tracking pixels, no Google Analytics, no Facebook Pixel, no fingerprinting, and no third-party trackers. We do not know who you are or that you visited.</p>
 
-  <h2>The one exception: the global poll</h2>
-  <p>The “Global AI Sentiment Poll” is entirely optional — the assessment works fully without it. If you choose to vote, your single choice (For/Neutral/Against) is sent to a minimal backend (Google Apps Script) that stores only 3 running totals, one per option. It does not store your IP address, email, timestamp, or any per-vote record — there is no way to link a vote back to you. The backend only ever returns percentages, never raw vote counts. The percentages it returns are saved in your browser; on later visits the page shows them from there and contacts no server.</p>
-
   <h2>Third-party services</h2>
-  <p>Fonts are served from this site itself or taken from your device; no page loads anything from Google Fonts. If you vote in the poll, your vote goes to a Google Apps Script backend as described above. The site is hosted on GitHub Pages. In each of these cases your browser connects to that company’s servers, which see your IP address as with any web request; we receive none of it and have no access to their logs. No other third-party service is contacted.</p>
+  <p>Fonts are served from this site or taken from your device; no page loads anything from another server. The site is hosted on GitHub Pages: like any web host, it sees your IP address when your browser requests a page. We receive none of it and have no access to its logs.</p>
 
   <h2>Children</h2>
   <p>Mind-OS contains no harmful content and collects no data, so it poses no data risk to anyone, including minors. It is an educational reflection tool, not medical advice or a diagnosis.</p>
@@ -72,7 +69,7 @@
   <p>Because we hold no data about you, there is nothing to request, export, or delete on our side. You have complete control: your data lives only on your device, and only you can access or remove it.</p>
 
   <h2>How to verify this yourself</h2>
-  <p>Open your browser’s developer tools (F12) → Network tab, and use the site. Taking the assessment sends no requests anywhere — all processing happens in the JavaScript running locally in your browser. The only request to another server appears when you click “Submit your vote”. The source code is openly viewable.</p>
+  <p>Open your browser’s developer tools (F12) → Network tab and take a test: no request goes to another server, because the scoring is done by JavaScript running in your browser. The source code is open.</p>
 
   <h2>Contact</h2>
   <p>Questions? Open an issue: <a href="https://github.com/IamAlex-afk/human-os-patch-33-protocols/issues" target="_blank" rel="noopener">GitHub Issues</a>.</p>

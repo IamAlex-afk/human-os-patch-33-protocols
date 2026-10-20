@@ -41,17 +41,17 @@
 </head>
 <body>
   <h1>Datenschutzerklärung</h1>
-  <p class="sub">Zuletzt aktualisiert: 2026-10-07 · In einfacher Sprache, ohne Juristendeutsch.</p>
+  <p class="sub">Zuletzt aktualisiert: 2026-10-20 · In einfacher Sprache, ohne Juristendeutsch.</p>
 
   <div class="highlight">
-    <strong>Kurz gesagt:</strong> Der Test erhebt nichts — kein Server, keine Datenbank, keine Analyse, keine Cookies, kein Tracking. Alles, was Sie dort tun, bleibt in Ihrem Browser und verlässt Ihr Gerät nicht. Die einzige Ausnahme ist die freiwillige globale Umfrage: Wenn Sie abstimmen, wird Ihre eine Auswahl an ein minimales Backend gesendet, das nur 3 Gesamtzähler speichert (Dafür / Neutral / Dagegen) — keine IP, keine E-Mail, keinen Zeitstempel und keinen Eintrag pro Stimme.
+    <strong>Kurz gesagt:</strong> Mind-OS erhebt nichts – kein Server, keine Datenbank, keine Analyse, keine Cookies, kein Tracking. Deine Antworten werden in deinem Browser ausgewertet und verlassen nie dein Gerät.
   </div>
 
   <h2>Welche Daten wir erheben</h2>
-  <p><strong>Keine, außer 3 Zahlen, wenn Sie an der Umfrage teilnehmen.</strong> Mind-OS ist eine statische Website: Der Test hat keinen Server. Nur die freiwillige globale Umfrage hat ein Backend — siehe unten.</p>
+  <p><strong>Keine.</strong> Mind-OS ist eine statische Website: Die Tests haben keinen Server und senden nichts.</p>
 
   <h2>Wohin Ihre Antworten gehen</h2>
-  <p>Ihre Testantworten und die gewählte Sprache werden nur im <code>localStorage</code> Ihres Browsers gespeichert — einem privaten Speicher auf Ihrem eigenen Gerät. Er wird nirgendwohin übertragen. Sie können ihn jederzeit löschen, indem Sie die Browserdaten löschen oder die Zurücksetzen-Schaltflächen der Website nutzen.</p>
+  <p>Deine Antworten werden in deinem Browser ausgewertet, solange die Seite offen ist, und weder gespeichert noch gesendet. Die Seite speichert im <code>localStorage</code> deines Browsers, auf deinem eigenen Gerät, nur zwei Einstellungen: die gewählte Sprache und ob du den Sprachhinweis geschlossen hast. Damit die Seite offline funktioniert, speichert der Browser außerdem ihre eigenen Dateien; über dich steht darin nichts. Das Löschen der Website-Daten entfernt alles.</p>
 
   <h2>Cookies</h2>
   <p>Wir verwenden keinerlei Cookies — weder für Analyse noch für Werbung oder Sitzungen. Es gibt nichts, dem Sie zustimmen müssten, weil nichts gesetzt wird.</p>
@@ -59,11 +59,8 @@
   <h2>Tracking und Analyse</h2>
   <p>Es gibt keine Tracking-Pixel, kein Google Analytics, kein Facebook Pixel, kein Fingerprinting und keine Tracker von Dritten. Wir wissen nicht, wer Sie sind oder dass Sie die Seite besucht haben.</p>
 
-  <h2>Die einzige Ausnahme: die globale Umfrage</h2>
-  <p>Die „Globale KI-Umfrage“ ist völlig freiwillig — der Test funktioniert vollständig ohne sie. Wenn Sie abstimmen, wird Ihre eine Auswahl (Dafür / Neutral / Dagegen) an ein minimales Backend (Google Apps Script) gesendet, das nur 3 Summen speichert, eine pro Option. Es speichert weder Ihre IP-Adresse noch E-Mail, Zeitstempel oder einen Eintrag pro Stimme — eine Stimme lässt sich nicht auf Sie zurückführen. Das Backend gibt nur Prozentwerte zurück, nie die Zahl der Stimmen. Die zurückgegebenen Prozentwerte werden in Ihrem Browser gespeichert; bei späteren Besuchen zeigt die Seite sie von dort an und kontaktiert keinen Server.</p>
-
   <h2>Dienste Dritter</h2>
-  <p>Schriften werden von dieser Website selbst geladen oder stammen von Ihrem Gerät; keine Seite lädt etwas von Google Fonts. Wenn Sie abstimmen, geht Ihre Stimme wie oben beschrieben an ein Google-Apps-Script-Backend. Die Website wird auf GitHub Pages gehostet. In jedem dieser Fälle verbindet sich Ihr Browser mit den Servern des jeweiligen Unternehmens, die Ihre IP-Adresse wie bei jeder Webanfrage sehen; wir erhalten davon nichts und haben keinen Zugriff auf deren Protokolle. Weitere Dienste Dritter werden nicht kontaktiert.</p>
+  <p>Schriften kommen von dieser Seite selbst oder von deinem Gerät; keine Seite lädt etwas von einem anderen Server. Die Seite liegt bei GitHub Pages: Wie jeder Webhoster sieht es deine IP-Adresse, wenn dein Browser eine Seite abruft. Wir erhalten davon nichts und haben keinen Zugriff auf seine Protokolle.</p>
 
   <h2>Kinder</h2>
   <p>Mind-OS enthält keine schädlichen Inhalte und erhebt keine Daten; es stellt daher für niemanden ein Datenrisiko dar, auch nicht für Minderjährige. Es ist ein Werkzeug zur Selbstreflexion mit Bildungscharakter, keine medizinische Beratung oder Diagnose.</p>
@@ -72,7 +69,7 @@
   <p>Da wir keine Daten über Sie speichern, gibt es bei uns nichts anzufordern, zu exportieren oder zu löschen. Sie haben die volle Kontrolle: Ihre Daten liegen nur auf Ihrem Gerät, und nur Sie können darauf zugreifen oder sie entfernen.</p>
 
   <h2>So prüfen Sie es selbst</h2>
-  <p>Öffnen Sie die Entwicklertools Ihres Browsers (F12) → Tab „Network“ und nutzen Sie die Website. Der Test sendet keine Anfragen — die gesamte Verarbeitung geschieht im JavaScript, das lokal in Ihrem Browser läuft. Die einzige Anfrage an einen fremden Server erscheint, wenn Sie auf „Stimme abgeben“ klicken. Der Quellcode ist offen einsehbar.</p>
+  <p>Öffne die Entwicklertools deines Browsers (F12) → Tab „Network“ und mach einen Test: Keine Anfrage geht an einen anderen Server, denn die Auswertung erledigt JavaScript in deinem Browser. Der Quellcode ist offen.</p>
 
   <h2>Kontakt</h2>
   <p>Fragen? Eröffnen Sie ein Issue: <a href="https://github.com/IamAlex-afk/human-os-patch-33-protocols/issues" target="_blank" rel="noopener">GitHub Issues</a>.</p>

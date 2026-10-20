@@ -138,7 +138,7 @@ window.translations.en = {
     faqQ6: "How are the test scores calculated?",
     faqA6: "Each of the 10 answers gives 0 to 4 points (from “Never” to “Constantly”), so the total is 0–40. Up to 40% of the maximum is a low level, 41–70% moderate, above 70% high. There are no reverse-worded questions. The details are on the methodology page.",
     faqQ7: "Is this test anonymous?",
-    faqA7: "Yes. All processing happens in your browser. Nothing is stored on any server, except the optional global poll, which stores only 3 anonymous vote counters (no IP, email, or timestamp).",
+    faqA7: "Yes. Everything happens in your browser: your answers are scored on your device and are not sent anywhere or saved. There is no account, no cookies and no analytics.",
     faqQ8: "Does using AI make me less intelligent?",
     faqA8: "That has not been shown. Studies so far find links, not proof of cause: heavier use of AI tools goes with lower critical-thinking scores (<a href='https://doi.org/10.3390/soc15010006' target='_blank' rel='noopener'>Gerlich, 2025</a>), and people who trust generative AI more report less critical thinking at work (<a href='https://doi.org/10.1145/3706598.3713778' target='_blank' rel='noopener'>Lee et al., 2025</a>). The test shows how much you rely on it.",
     faqQ9: "Is this test a medical diagnosis?",

@@ -137,7 +137,7 @@ window.translations.vi = {
     faqQ6: "Điểm được tính như thế nào?",
     faqA6: "Mỗi câu trong 10 câu trả lời được 0 đến 4 điểm (từ “Không bao giờ” đến “Luôn luôn”), nên tổng là 0–40. Đến 40% điểm tối đa là mức thấp, 41–70% là vừa, trên 70% là cao. Không có câu hỏi đảo ngược. Chi tiết ở trang Phương pháp.",
     faqQ7: "Bài kiểm tra có ẩn danh không?",
-    faqA7: "Có. Tất cả xử lý trong trình duyệt của bạn. Không có gì lưu trên máy chủ, ngoại trừ khảo sát toàn cầu tùy chọn, chỉ lưu 3 bộ đếm phiếu bầu ẩn danh (không IP, email hay thời gian).",
+    faqA7: "Có. Mọi thứ diễn ra trong trình duyệt của bạn: câu trả lời được tính điểm trên thiết bị và không được gửi đi hay lưu lại. Không tài khoản, không cookie, không phân tích.",
     faqQ8: "Dùng AI có làm tôi kém thông minh không?",
     faqA8: "Điều đó chưa được chứng minh. Các nghiên cứu mới thấy mối liên hệ, chưa phải nguyên nhân: dùng công cụ AI nhiều hơn đi kèm điểm tư duy phản biện thấp hơn (<a href='https://doi.org/10.3390/soc15010006' target='_blank' rel='noopener'>Gerlich, 2025</a>), và người tin AI tạo sinh nhiều hơn cho biết ít tư duy phản biện hơn trong công việc (<a href='https://doi.org/10.1145/3706598.3713778' target='_blank' rel='noopener'>Lee et al., 2025</a>). Bài test cho thấy bạn dựa vào AI đến mức nào.",
     faqQ9: "Bài test này có phải là chẩn đoán y khoa không?",
