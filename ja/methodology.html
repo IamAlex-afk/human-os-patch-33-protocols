@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html lang="ja" translate="no"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title id="dynamicTitle">テストのしくみ：方法と出典 | Mind-OS</title>
+  
+  <meta name="description" id="dynamicDescription" content="28問・3つの領域・AIへの不安の尺度。Mind-OSのスコアの計算方法、基準の決め方、参考にした研究、そしてテストの限界。" />
+  
+  <meta name="author" content="Aleksei Sergeevich Bitkin">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=()">
+  <meta name="google-site-verification" content="DFpki1t_QAVQIUVjut75ixmRHQke0Q7i9VDaP8Y4bxo" />
+  <meta name="yandex-verification" content="5356814ecf72e704">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://script.google.com https://script.googleusercontent.com; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; connect-src 'self' https://script.google.com https://script.googleusercontent.com;">
+  
+  <link rel="canonical" id="dynamicCanonical" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/methodology.html">
+  <link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/methodology.html">
+  <link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/methodology.html">
+  <link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/methodology.html">
+  <link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/methodology.html">
+  <link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/methodology.html">
+  <link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/methodology.html">
+  <link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/methodology.html">
+  <link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/methodology.html">
+  <link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/methodology.html">
+  <link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/methodology.html">
+  <link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/methodology.html">
+  <link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/methodology.html">
+  <link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/methodology.html">
+  
+  <meta property="og:url" id="dynamicOgUrl" content="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/methodology.html">
+  <meta property="og:title" id="dynamicOgTitle" content="テストのしくみ：方法と出典" />
+  <meta property="og:description" id="dynamicOgDescription" content="28問・3つの領域・AIへの不安の尺度。Mind-OSのスコアの計算方法、基準の決め方、参考にした研究、そしてテストの限界。" />
+  <meta property="og:image" content="https://iamalex-afk.github.io/human-os-patch-33-protocols/cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mind-OS: Free AI Dependency Test — No Data Collection, 12 Languages">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:locale:alternate" content="ru_RU">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta property="og:locale:alternate" content="ja_JP">
+  <meta property="og:locale:alternate" content="vi_VN">
+  <meta property="og:locale:alternate" content="th_TH">
+  <meta property="og:locale:alternate" content="pt_PT">
+  <meta property="og:locale:alternate" content="ko_KR">
+  <meta property="og:locale:alternate" content="it_IT">
+  <meta property="og:locale:alternate" content="hi_IN">
+  <meta property="og:site_name" content="Mind-OS">
+  <meta property="article:published_time" content="2025-01-01T00:00:00Z">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="テストのしくみ：方法と出典">
+  <meta name="twitter:description" content="28問・3つの領域・AIへの不安の尺度。Mind-OSのスコアの計算方法、基準の決め方、参考にした研究、そしてテストの限界。">
+  <meta name="twitter:image" content="https://iamalex-afk.github.io/human-os-patch-33-protocols/cover.jpg">
+  
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="author" href="../humans.txt">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#0b100d">
+  <link rel="preload" href="../css/fonts.css" as="style">
+  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="preload" href="../css/style.css" as="style">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/methodology.html",
+   "url": "https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/methodology.html",
+   "name": "テストのしくみ：方法と出典",
+   "description": "28問・3つの領域・AIへの不安の尺度。Mind-OSのスコアの計算方法、基準の決め方、参考にした研究、そしてテストの限界。",
+   "inLanguage": "ja",
+   "author": {
+    "@id": "https://orcid.org/0009-0002-7986-3812"
+   },
+   "isPartOf": {
+    "@type": "WebSite",
+    "name": "Mind-OS",
+    "url": "https://iamalex-afk.github.io/human-os-patch-33-protocols/"
+   },
+   "citation": [
+    "https://doi.org/10.48550/arXiv.2506.06874",
+    "https://doi.org/10.1080/10494820.2019.1674887",
+    "https://www.cureus.com/articles/407877",
+    "https://doi.org/10.1016/j.tics.2016.07.002",
+    "https://doi.org/10.3390/soc15010006",
+    "https://doi.org/10.1145/3706598.3713778",
+    "https://arxiv.org/abs/2506.08872"
+   ]
+  },
+  {
+   "@type": "Person",
+   "@id": "https://orcid.org/0009-0002-7986-3812",
+   "name": "Aleksei Sergeevich Bitkin",
+   "url": "https://orcid.org/0009-0002-7986-3812",
+   "sameAs": [
+    "https://orcid.org/0009-0002-7986-3812",
+    "https://github.com/IamAlex-afk/human-os-patch-33-protocols"
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Mind-OS",
+     "item": "https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Mind-OSテストのしくみ",
+     "item": "https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/methodology.html"
+    }
+   ]
+  }
+ ]
+}
+</script>
+<script>window.SITE_LANG='ja';</script>
+<script>window.PAGE_FILE="methodology.html";window.PAGE_META={"title": "テストのしくみ：方法と出典 | Mind-OS", "desc": "28問・3つの領域・AIへの不安の尺度。Mind-OSのスコアの計算方法、基準の決め方、参考にした研究、そしてテストの限界。"};</script>
+</head>
+<body>
+<noscript>
+  <div style="padding:2rem;background:var(--surface);border:1px solid var(--accent);border-radius:1rem;margin-bottom:2rem;text-align:center;">
+    <h2 style="color:var(--accent);">JavaScriptを有効にしてください</h2>
+    <p>このチェックはプライバシー保護のため、すべてお使いのブラウザ内で動作します。利用にはJavaScriptが必要です。</p>
+  </div>
+</noscript>
+<div id="readingProgress" class="reading-progress" aria-hidden="true"></div>
+<main class="container">
+  <nav class="site-nav" aria-label="Mind-OS">
+    <a class="site-brand" href="./">Mind-OS</a>
+    <div class="site-links">
+      <a class="site-link site-link-cta" href="./" id="navAssessment">▶ チェックを始める<span>28問・匿名・無料</span></a>
+      <a class="site-link" href="poll.html" id="navPoll">🌍 投票</a>
+      <a class="site-link" href="faq.html" id="navFaq">❓ FAQ</a>
+      <a class="site-link" href="protocols.html" id="navProtocols">📖 33のプロトコル</a>
+    </div>
+  </nav>
+  <div class="lang-selector" id="langSelector">
+    <button class="lang-toggle" id="langToggle" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">
+      <span class="lang-globe" aria-hidden="true">🌐</span>
+      <span class="lang-current" id="langCurrentCode">EN</span>
+      <span class="lang-arrow" aria-hidden="true">▾</span>
+    </button>
+    <div class="lang-dropdown" id="langDropdown" role="listbox" aria-label="Languages" hidden></div>
+  </div>
+  <div class="lang-bar" id="langBar" hidden></div>
+  <div class="lang-suggest-banner" id="langSuggestBanner" hidden>
+    <span id="langSuggestText"></span>
+    <a class="lang-suggest-link" id="langSuggestLink" href="#"></a>
+    <button class="lang-suggest-close" id="langSuggestClose" type="button">×</button>
+  </div>
+  <section class="faq-section info-page">
+    <h1>Mind-OSテストのしくみ</h1>
+    <h2>何を測るか</h2>
+    <p>3つの領域に各8問、計24問：「思考と記憶」「不安と感情的愛着」「デジタル燃え尽き症候群と先延ばし」。さらに4問で、AIへの不安を別に測ります。</p>
+    <h2>スコアの計算</h2>
+    <p>各回答は5段階で0〜4点です。各領域の3つの文は逆向きに書かれていて、点数も逆に数えます。1領域は0〜32点、3領域の合計は0〜96点。不安の質問は0〜16点です。</p>
+    <h2>レベルの意味</h2>
+    <p>プロフィールは最高点に対する割合で決まります：40%まで「デジタル禅マスター」、41〜70%「バランスナビゲーター」、70%超「AI依存型デリゲート」。AIへの不安：0〜4点「低い恐怖」、5〜8点「中程度の恐怖」、9〜12点「高い恐怖」、13〜16点「非常に高い恐怖」。依存×不安のマップは各尺度を50%で分けます。これらの基準は回答の尺度そのものに基づくもので、ある集団で測った基準値ではありません。つまりスコアは他人との比較ではありません。</p>
+    <h2>回答のチェック</h2>
+    <p>3つの領域のうち2つ以上で全問同じ答えを選ぶと、結果に「1問ずつ答えてやり直す」ことをすすめるメモが表示されます。</p>
+    <h2>参考にした研究</h2>
+    <p>質問は私たちのオリジナルです。参考にしたのは、大規模言語モデルへの依存を測る12項目の尺度LLM-D12（英国の526人で検証、<a href="https://doi.org/10.48550/arXiv.2506.06874" target="_blank" rel="noopener">Yankouskaya et al., 2025</a>）、AI不安尺度AIAS（<a href="https://doi.org/10.1080/10494820.2019.1674887" target="_blank" rel="noopener">Wang &amp; Wang</a>）、そして公式の診断名ではなく提案された臨床的概念であるAIRD（<a href="https://www.cureus.com/articles/407877-artificial-intelligence-replacement-dysfunction-aird-a-call-to-action-for-mental-health-professionals-in-an-era-of-workforce-displacement" target="_blank" rel="noopener">McNamara &amp; Thornton, Cureus</a>）です。Mind-OSはこれらの検証済み尺度そのものではありません。サイトの回答では<a href="https://doi.org/10.1016/j.tics.2016.07.002" target="_blank" rel="noopener">Risko &amp; Gilbert, 2016</a>、<a href="https://doi.org/10.3390/soc15010006" target="_blank" rel="noopener">Gerlich, 2025</a>、<a href="https://doi.org/10.1145/3706598.3713778" target="_blank" rel="noopener">Lee et al., 2025</a>、<a href="https://arxiv.org/abs/2506.08872" target="_blank" rel="noopener">Kosmyna et al., 2025</a>（査読前のプレプリント）も引用しています。</p>
+    <h2>限界</h2>
+    <p>セルフチェックは、自分の習慣を自分でどう見ているかを示すもので、客観的な測定ではありません。テストは臨床的な検証を受けておらず、結果は診断ではありません。AIの使い方が不安な場合や日常生活に支障がある場合は、専門家に相談してください。</p>
+    <h2>回答はあなたの手元に</h2>
+    <p>スコアはブラウザ内で計算され、回答はあなたの端末にだけ保存されます（<a href="privacy.html">プライバシーポリシー</a>）。</p>
+  </section>
+  <footer>
+    <div class="text-center" style="margin-bottom:2rem;">
+      <a href="https://ko-fi.com/alekseisergeevich" target="_blank" rel="noopener" class="donate-link" id="donateLink">☕ <span id="donateText">Ko-fiでプロジェクトを支援する</span></a>
+    </div>
+    <p style="margin-bottom:0.75rem;"><a href="privacy.html" id="privacyLink" style="color:var(--accent);font-size:0.9rem;">プライバシーポリシー</a> · <a href="about.html" id="aboutLink" style="color:var(--accent);font-size:0.9rem;">このサイトについて</a> · <a href="methodology.html" id="methodologyLink" style="color:var(--accent);font-size:0.9rem;">方法と出典</a></p>
+    <p id="footerText" style="font-size:0.9rem; opacity:0.8;">© Mind-OS – Aleksei Sergeevich Bitkinによる作成。独立した研究プロジェクト。</p>
+  
+    <p id="pwaInstallLi" style="display:none;margin-top:1rem;"><button id="pwaInstallBtn" class="book-link" style="cursor:pointer;font:inherit;"><span id="pwaInstallText">📲 アプリをインストール</span></button></p>
+  </footer>
+</main>
+<div class="cta-bar" id="globalCTABar">
+  <a href="https://www.amazon.com/dp/B0G35SBQR3" id="ctaBarLink" class="book-link" target="_blank" rel="noopener" style="display:inline-block; width:100%; max-width:400px; text-align:center; font-size:1.1rem; padding:1rem;">⚡ <span id="ctaBarText">33のプロトコルを探求する</span></a>
+</div>
+<script src="../js/config.js" defer></script>
+<script src="../js/storage.js" defer></script>
+<script src="../js/translations-core.js" defer></script>
+<script src="../js/translations/en.js" defer></script>
+<script src="../js/translations/ja.js" defer></script>
+  <script src="../js/main.js" defer></script>
+  <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('../sw.js').catch(function(){});});}</script>
+  <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top" hidden>↑</button>
+</body></html>

@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html lang="fr" translate="no"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title id="dynamicTitle">Comment fonctionne le test : méthode et sources | Mind-OS</title>
+  
+  <meta name="description" id="dynamicDescription" content="28 questions, trois domaines et une échelle de peur de l’IA : comment Mind-OS calcule votre score, d’où viennent les seuils, sur quelles recherches il s’appuie et quelles sont ses limites." />
+  
+  <meta name="author" content="Aleksei Sergeevich Bitkin">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=()">
+  <meta name="google-site-verification" content="DFpki1t_QAVQIUVjut75ixmRHQke0Q7i9VDaP8Y4bxo" />
+  <meta name="yandex-verification" content="5356814ecf72e704">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://script.google.com https://script.googleusercontent.com; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; connect-src 'self' https://script.google.com https://script.googleusercontent.com;">
+  
+  <link rel="canonical" id="dynamicCanonical" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/methodology.html">
+  <link rel="alternate" hreflang="x-default" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/methodology.html">
+  <link rel="alternate" hreflang="en" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/methodology.html">
+  <link rel="alternate" hreflang="ru" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ru/methodology.html">
+  <link rel="alternate" hreflang="es" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/es/methodology.html">
+  <link rel="alternate" hreflang="de" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/de/methodology.html">
+  <link rel="alternate" hreflang="fr" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/methodology.html">
+  <link rel="alternate" hreflang="ja" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ja/methodology.html">
+  <link rel="alternate" hreflang="vi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/vi/methodology.html">
+  <link rel="alternate" hreflang="th" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/th/methodology.html">
+  <link rel="alternate" hreflang="pt" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/pt/methodology.html">
+  <link rel="alternate" hreflang="ko" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/ko/methodology.html">
+  <link rel="alternate" hreflang="it" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/it/methodology.html">
+  <link rel="alternate" hreflang="hi" href="https://iamalex-afk.github.io/human-os-patch-33-protocols/hi/methodology.html">
+  
+  <meta property="og:url" id="dynamicOgUrl" content="https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/methodology.html">
+  <meta property="og:title" id="dynamicOgTitle" content="Comment fonctionne le test : méthode et sources" />
+  <meta property="og:description" id="dynamicOgDescription" content="28 questions, trois domaines et une échelle de peur de l’IA : comment Mind-OS calcule votre score, d’où viennent les seuils, sur quelles recherches il s’appuie et quelles sont ses limites." />
+  <meta property="og:image" content="https://iamalex-afk.github.io/human-os-patch-33-protocols/cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mind-OS: Free AI Dependency Test — No Data Collection, 12 Languages">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale:alternate" content="ru_RU">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta property="og:locale:alternate" content="ja_JP">
+  <meta property="og:locale:alternate" content="vi_VN">
+  <meta property="og:locale:alternate" content="th_TH">
+  <meta property="og:locale:alternate" content="pt_PT">
+  <meta property="og:locale:alternate" content="ko_KR">
+  <meta property="og:locale:alternate" content="it_IT">
+  <meta property="og:locale:alternate" content="hi_IN">
+  <meta property="og:site_name" content="Mind-OS">
+  <meta property="article:published_time" content="2025-01-01T00:00:00Z">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Comment fonctionne le test : méthode et sources">
+  <meta name="twitter:description" content="28 questions, trois domaines et une échelle de peur de l’IA : comment Mind-OS calcule votre score, d’où viennent les seuils, sur quelles recherches il s’appuie et quelles sont ses limites.">
+  <meta name="twitter:image" content="https://iamalex-afk.github.io/human-os-patch-33-protocols/cover.jpg">
+  
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="author" href="../humans.txt">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#0b100d">
+  <link rel="preload" href="../css/fonts.css" as="style">
+  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="preload" href="../css/style.css" as="style">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/methodology.html",
+   "url": "https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/methodology.html",
+   "name": "Comment fonctionne le test : méthode et sources",
+   "description": "28 questions, trois domaines et une échelle de peur de l’IA : comment Mind-OS calcule votre score, d’où viennent les seuils, sur quelles recherches il s’appuie et quelles sont ses limites.",
+   "inLanguage": "fr",
+   "author": {
+    "@id": "https://orcid.org/0009-0002-7986-3812"
+   },
+   "isPartOf": {
+    "@type": "WebSite",
+    "name": "Mind-OS",
+    "url": "https://iamalex-afk.github.io/human-os-patch-33-protocols/"
+   },
+   "citation": [
+    "https://doi.org/10.48550/arXiv.2506.06874",
+    "https://doi.org/10.1080/10494820.2019.1674887",
+    "https://www.cureus.com/articles/407877",
+    "https://doi.org/10.1016/j.tics.2016.07.002",
+    "https://doi.org/10.3390/soc15010006",
+    "https://doi.org/10.1145/3706598.3713778",
+    "https://arxiv.org/abs/2506.08872"
+   ]
+  },
+  {
+   "@type": "Person",
+   "@id": "https://orcid.org/0009-0002-7986-3812",
+   "name": "Aleksei Sergeevich Bitkin",
+   "url": "https://orcid.org/0009-0002-7986-3812",
+   "sameAs": [
+    "https://orcid.org/0009-0002-7986-3812",
+    "https://github.com/IamAlex-afk/human-os-patch-33-protocols"
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Mind-OS",
+     "item": "https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Comment fonctionne le test Mind-OS",
+     "item": "https://iamalex-afk.github.io/human-os-patch-33-protocols/fr/methodology.html"
+    }
+   ]
+  }
+ ]
+}
+</script>
+<script>window.SITE_LANG='fr';</script>
+<script>window.PAGE_FILE="methodology.html";window.PAGE_META={"title": "Comment fonctionne le test : méthode et sources | Mind-OS", "desc": "28 questions, trois domaines et une échelle de peur de l’IA : comment Mind-OS calcule votre score, d’où viennent les seuils, sur quelles recherches il s’appuie et quelles sont ses limites."};</script>
+</head>
+<body>
+<noscript>
+  <div style="padding:2rem;background:var(--surface);border:1px solid var(--accent);border-radius:1rem;margin-bottom:2rem;text-align:center;">
+    <h2 style="color:var(--accent);">Veuillez activer JavaScript</h2>
+    <p>Ce test interactif fonctionne entièrement dans votre navigateur afin de protéger votre vie privée. JavaScript est nécessaire.</p>
+  </div>
+</noscript>
+<div id="readingProgress" class="reading-progress" aria-hidden="true"></div>
+<main class="container">
+  <nav class="site-nav" aria-label="Mind-OS">
+    <a class="site-brand" href="./">Mind-OS</a>
+    <div class="site-links">
+      <a class="site-link site-link-cta" href="./" id="navAssessment">▶ Commencer le test<span>28 questions · anonyme · gratuit</span></a>
+      <a class="site-link" href="poll.html" id="navPoll">🌍 Sondage</a>
+      <a class="site-link" href="faq.html" id="navFaq">❓ FAQ</a>
+      <a class="site-link" href="protocols.html" id="navProtocols">📖 33 Protocoles</a>
+    </div>
+  </nav>
+  <div class="lang-selector" id="langSelector">
+    <button class="lang-toggle" id="langToggle" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">
+      <span class="lang-globe" aria-hidden="true">🌐</span>
+      <span class="lang-current" id="langCurrentCode">EN</span>
+      <span class="lang-arrow" aria-hidden="true">▾</span>
+    </button>
+    <div class="lang-dropdown" id="langDropdown" role="listbox" aria-label="Languages" hidden></div>
+  </div>
+  <div class="lang-bar" id="langBar" hidden></div>
+  <div class="lang-suggest-banner" id="langSuggestBanner" hidden>
+    <span id="langSuggestText"></span>
+    <a class="lang-suggest-link" id="langSuggestLink" href="#"></a>
+    <button class="lang-suggest-close" id="langSuggestClose" type="button">×</button>
+  </div>
+  <section class="faq-section info-page">
+    <h1>Comment fonctionne le test Mind-OS</h1>
+    <h2>Ce qu’il mesure</h2>
+    <p>24 questions dans trois domaines, 8 chacun : « Pensée et Mémoire », « Anxiété et Attachement émotionnel » et « Épuisement numérique et Procrastination ». Quatre autres questions mesurent à part la peur de l’IA.</p>
+    <h2>Comment le score est calculé</h2>
+    <p>Chaque réponse vaut de 0 à 4 points sur une échelle à cinq niveaux. Dans chaque domaine, trois affirmations sont formulées à l’inverse et notées dans l’autre sens. Un domaine donne 0 à 32 points, les trois ensemble 0 à 96. Les questions sur la peur donnent 0 à 16.</p>
+    <h2>Ce que signifient les niveaux</h2>
+    <p>Votre profil dépend de la part du maximum : jusqu’à 40 % — « Maître Zen Numérique », de 41 à 70 % — « Navigateur Équilibré », plus de 70 % — « Délégué Dépendant de l'IA ». Peur de l’IA : 0–4 points — « Peur faible », 5–8 — « Peur modérée », 9–12 — « Peur élevée », 13–16 — « Peur très élevée ». La carte dépendance × peur coupe chaque échelle à 50 %. Ces seuils découlent de l’échelle de réponse elle-même, pas de normes mesurées sur un groupe de personnes : votre score n’est donc pas une comparaison avec les autres.</p>
+    <h2>Contrôle des réponses</h2>
+    <p>Si vous donnez la même réponse à toutes les questions dans au moins deux des trois domaines, le résultat affiche une note vous invitant à refaire le test en répondant à chaque question séparément.</p>
+    <h2>Les recherches sur lesquelles il s’appuie</h2>
+    <p>Les questions sont les nôtres. Elles s’appuient sur LLM-D12, une échelle de 12 items sur la dépendance aux grands modèles de langage, testée auprès de 526 participants au Royaume-Uni (<a href="https://doi.org/10.48550/arXiv.2506.06874" target="_blank" rel="noopener">Yankouskaya et al., 2025</a>) ; sur l’échelle d’anxiété face à l’IA AIAS (<a href="https://doi.org/10.1080/10494820.2019.1674887" target="_blank" rel="noopener">Wang &amp; Wang</a>) ; et sur l’AIRD, un construit clinique proposé, pas un diagnostic officiel (<a href="https://www.cureus.com/articles/407877-artificial-intelligence-replacement-dysfunction-aird-a-call-to-action-for-mental-health-professionals-in-an-era-of-workforce-displacement" target="_blank" rel="noopener">McNamara &amp; Thornton, Cureus</a>). Mind-OS n’est aucune de ces échelles validées. Les réponses du site citent aussi <a href="https://doi.org/10.1016/j.tics.2016.07.002" target="_blank" rel="noopener">Risko &amp; Gilbert, 2016</a>, <a href="https://doi.org/10.3390/soc15010006" target="_blank" rel="noopener">Gerlich, 2025</a>, <a href="https://doi.org/10.1145/3706598.3713778" target="_blank" rel="noopener">Lee et al., 2025</a> et <a href="https://arxiv.org/abs/2506.08872" target="_blank" rel="noopener">Kosmyna et al., 2025</a> (une prépublication).</p>
+    <h2>Limites</h2>
+    <p>Un auto-test montre comment vous voyez vos propres habitudes ; ce n’est pas une mesure objective. Le test n’a pas été validé cliniquement, et son résultat n’est pas un diagnostic. Si votre usage de l’IA vous inquiète ou gêne votre quotidien, consultez un professionnel qualifié.</p>
+    <h2>Vos réponses restent chez vous</h2>
+    <p>Le score est calculé dans votre navigateur, et vos réponses ne sont enregistrées que sur votre appareil (<a href="privacy.html">Politique de confidentialité</a>).</p>
+  </section>
+  <footer>
+    <div class="text-center" style="margin-bottom:2rem;">
+      <a href="https://ko-fi.com/alekseisergeevich" target="_blank" rel="noopener" class="donate-link" id="donateLink">☕ <span id="donateText">Soutenez ce projet sur Ko-fi</span></a>
+    </div>
+    <p style="margin-bottom:0.75rem;"><a href="privacy.html" id="privacyLink" style="color:var(--accent);font-size:0.9rem;">Politique de confidentialité</a> · <a href="about.html" id="aboutLink" style="color:var(--accent);font-size:0.9rem;">À propos</a> · <a href="methodology.html" id="methodologyLink" style="color:var(--accent);font-size:0.9rem;">Méthodologie</a></p>
+    <p id="footerText" style="font-size:0.9rem; opacity:0.8;">© Mind-OS – Créé par Aleksei Sergeevich Bitkin. Projet de recherche indépendant.</p>
+  
+    <p id="pwaInstallLi" style="display:none;margin-top:1rem;"><button id="pwaInstallBtn" class="book-link" style="cursor:pointer;font:inherit;"><span id="pwaInstallText">📲 Installer l'app</span></button></p>
+  </footer>
+</main>
+<div class="cta-bar" id="globalCTABar">
+  <a href="https://www.amazon.com/dp/B0G35SBQR3" id="ctaBarLink" class="book-link" target="_blank" rel="noopener" style="display:inline-block; width:100%; max-width:400px; text-align:center; font-size:1.1rem; padding:1rem;">⚡ <span id="ctaBarText">Explorer les 33 Protocoles</span></a>
+</div>
+<script src="../js/config.js" defer></script>
+<script src="../js/storage.js" defer></script>
+<script src="../js/translations-core.js" defer></script>
+<script src="../js/translations/en.js" defer></script>
+<script src="../js/translations/fr.js" defer></script>
+  <script src="../js/main.js" defer></script>
+  <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('../sw.js').catch(function(){});});}</script>
+  <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top" hidden>↑</button>
+</body></html>
