@@ -1525,3 +1525,13 @@ nav.info-box #navAssessment, .poll-teaser-btn { box-shadow: none; }
   .overall-result h2 { font-size: 1.45rem; }
   .option-label { padding-top: 0.85rem; padding-bottom: 0.85rem; }
 }
+
+/* Book pitch under the protocols (2026-10-20) */
+.book-pitch { margin-top: 2rem; padding: 1.25rem; border: 1px solid var(--border); border-radius: 1.1rem; background: var(--surface); }
+.book-pitch p { margin-bottom: 1rem; line-height: 1.65; }
+.book-pitch .book-link { margin-top: 0; }
+.book-title { color: var(--text); font-size: 1.05em; }
+.book-points { list-style: none; margin: 1rem 0 1.25rem; padding: 0; display: grid; gap: 0.75rem; }
+.book-points li { display: flex; gap: 0.6rem; align-items: flex-start; line-height: 1.6; color: var(--text-dim); }
+.book-points li > span { flex: none; font-size: 1.15rem; line-height: 1.4; }
+#pollBridge { text-align: left; }

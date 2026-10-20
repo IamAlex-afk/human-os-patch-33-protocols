@@ -326,6 +326,9 @@
 
     const bLink = document.getElementById('bookLink');
     if (bLink) { bLink.href = t.bookUrl || '#'; bLink.textContent = t.bookLabel; }
+    const bLink2 = document.getElementById('bookLink2');
+    if (bLink2) { bLink2.href = t.bookUrl || '#'; bLink2.textContent = t.bookLabel; }
+    uh('bookPitch', t.bookPitch);
     const cLink = document.getElementById('ctaBarLink');
     if (cLink) { cLink.href = t.bookUrl || '#'; }
 
