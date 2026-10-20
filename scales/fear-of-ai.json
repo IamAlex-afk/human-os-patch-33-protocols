@@ -1,0 +1,547 @@
+{
+ "id": "fear-of-ai",
+ "name": "Fear of AI test",
+ "version": "1.0.0",
+ "license": "CC BY 4.0",
+ "license_url": "https://creativecommons.org/licenses/by/4.0/",
+ "author": "Aleksei Sergeevich Bitkin",
+ "author_orcid": "https://orcid.org/0009-0002-7986-3812",
+ "source": "https://iamalex-afk.github.io/human-os-patch-33-protocols/",
+ "scoring": {
+  "points_per_answer": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "items": 10,
+  "min": 0,
+  "max": 40,
+  "reverse_keyed": [],
+  "levels": [
+   {
+    "up_to_share_of_max": 0.4
+   },
+   {
+    "up_to_share_of_max": 0.7
+   },
+   {
+    "up_to_share_of_max": 1.0
+   }
+  ],
+  "note": "Thresholds follow the answer scale, not population norms. Not clinically validated; not a diagnosis."
+ },
+ "areas": [
+  "jobs",
+  "learning",
+  "control",
+  "humanlike"
+ ],
+ "item_areas": [
+  "jobs",
+  "jobs",
+  "jobs",
+  "learning",
+  "learning",
+  "control",
+  "control",
+  "control",
+  "humanlike",
+  "humanlike"
+ ],
+ "languages": {
+  "en": {
+   "options": [
+    "Strongly disagree",
+    "Disagree",
+    "Neither agree nor disagree",
+    "Agree",
+    "Strongly agree"
+   ],
+   "items": [
+    "The thought that AI could replace people in my job or future profession worries me.",
+    "I am afraid that AI will make it harder for me to find or keep a job.",
+    "It worries me that AI may take away many people’s jobs.",
+    "I feel anxious when I have to figure out a new AI tool.",
+    "I am afraid of falling behind because AI is changing faster than I can keep up.",
+    "It scares me that AI could start acting without human control.",
+    "It worries me that people do not understand how AI makes its decisions.",
+    "I am concerned that AI is developing faster than people can decide how to limit it.",
+    "AI that looks or talks like a human makes me uneasy.",
+    "It bothers me when I cannot tell whether I am talking to a person or to AI."
+   ],
+   "areas": {
+    "jobs": "Jobs",
+    "learning": "Keeping up with AI",
+    "control": "Control over AI",
+    "humanlike": "Human-like AI"
+   },
+   "levels": [
+    {
+     "name": "Calm about AI",
+     "text": "You look at the development of AI fairly calmly. Following news from reliable sources is enough."
+    },
+    {
+     "name": "Noticeable worry",
+     "text": "Some of these worries are a normal reaction to fast change. Specifics help: find out how AI is actually used in your field and try one tool yourself."
+    },
+    {
+     "name": "Strong worry",
+     "text": "Your worry about AI is strong. It can help to limit alarming news and to read original sources instead of retellings."
+    }
+   ]
+  },
+  "ru": {
+   "options": [
+    "Совсем не согласен",
+    "Скорее не согласен",
+    "Ни да ни нет",
+    "Скорее согласен",
+    "Полностью согласен"
+   ],
+   "items": [
+    "Меня тревожит мысль, что ИИ может заменить людей в моей профессии или в той, которую я выбираю.",
+    "Я боюсь, что из-за ИИ мне станет труднее найти или сохранить работу.",
+    "Меня беспокоит, что ИИ может оставить многих людей без работы.",
+    "Мне тревожно, когда нужно разобраться в новой ИИ-программе.",
+    "Я боюсь отстать: ИИ меняется быстрее, чем я успеваю за ним следить.",
+    "Меня пугает, что ИИ может начать действовать без контроля людей.",
+    "Меня тревожит, что люди не понимают, как ИИ принимает решения.",
+    "Меня беспокоит, что ИИ развивается быстрее, чем люди успевают решать, как его ограничить.",
+    "Мне не по себе от ИИ, который выглядит или говорит как человек.",
+    "Мне неприятно, когда я не могу понять, общаюсь я с человеком или с ИИ."
+   ],
+   "areas": {
+    "jobs": "Работа",
+    "learning": "Успевать за ИИ",
+    "control": "Контроль над ИИ",
+    "humanlike": "ИИ, похожий на человека"
+   },
+   "levels": [
+    {
+     "name": "Спокойное отношение",
+     "text": "Вы смотрите на развитие ИИ довольно спокойно. Достаточно следить за новостями из надёжных источников."
+    },
+    {
+     "name": "Заметная тревога",
+     "text": "Часть этих страхов — нормальная реакция на быстрые перемены. Помогает конкретика: узнайте, как ИИ на самом деле используют в вашей сфере, и попробуйте один инструмент сами."
+    },
+    {
+     "name": "Сильная тревога",
+     "text": "Тревога из-за ИИ у вас сильная. Может помочь меньше читать тревожные новости и читать первоисточники вместо пересказов."
+    }
+   ]
+  },
+  "es": {
+   "options": [
+    "Muy en desacuerdo",
+    "En desacuerdo",
+    "Ni de acuerdo ni en desacuerdo",
+    "De acuerdo",
+    "Muy de acuerdo"
+   ],
+   "items": [
+    "Me preocupa pensar que la IA pueda sustituir a las personas en mi trabajo o en la profesión que elija.",
+    "Tengo miedo de que, por la IA, me cueste más encontrar o mantener un trabajo.",
+    "Me preocupa que la IA pueda dejar sin trabajo a mucha gente.",
+    "Me pongo nervioso cuando tengo que aprender a usar una nueva herramienta de IA.",
+    "Tengo miedo de quedarme atrás: la IA cambia más rápido de lo que puedo seguirla.",
+    "Me asusta que la IA pueda empezar a actuar sin control humano.",
+    "Me preocupa que la gente no entienda cómo toma decisiones la IA.",
+    "Me inquieta que la IA avance más rápido de lo que la sociedad tarda en decidir cómo limitarla.",
+    "Me incomoda la IA que parece o habla como una persona.",
+    "Me molesta no saber si estoy hablando con una persona o con una IA."
+   ],
+   "areas": {
+    "jobs": "Trabajo",
+    "learning": "Seguir el ritmo de la IA",
+    "control": "Control sobre la IA",
+    "humanlike": "IA que parece humana"
+   },
+   "levels": [
+    {
+     "name": "Tranquilidad",
+     "text": "Ves el avance de la IA con bastante calma. Basta con seguir las noticias en fuentes fiables."
+    },
+    {
+     "name": "Preocupación notable",
+     "text": "Parte de estas preocupaciones es una reacción normal a los cambios rápidos. Ayuda concretar: averigua cómo se usa de verdad la IA en tu campo y prueba tú mismo una herramienta."
+    },
+    {
+     "name": "Preocupación intensa",
+     "text": "Tu preocupación por la IA es intensa. Puede ayudarte leer menos noticias alarmistas y acudir a las fuentes originales en lugar de a resúmenes."
+    }
+   ]
+  },
+  "de": {
+   "options": [
+    "Stimme überhaupt nicht zu",
+    "Stimme eher nicht zu",
+    "Weder noch",
+    "Stimme eher zu",
+    "Stimme voll zu"
+   ],
+   "items": [
+    "Der Gedanke, dass KI Menschen in meinem Beruf oder Wunschberuf ersetzen könnte, beunruhigt mich.",
+    "Ich habe Angst, dass ich wegen KI schwerer eine Arbeit finde oder behalte.",
+    "Es beunruhigt mich, dass KI viele Menschen arbeitslos machen könnte.",
+    "Ich werde nervös, wenn ich mich in ein neues KI-Tool einarbeiten muss.",
+    "Ich habe Angst, abgehängt zu werden: KI verändert sich schneller, als ich mithalten kann.",
+    "Es macht mir Angst, dass KI anfangen könnte, ohne menschliche Kontrolle zu handeln.",
+    "Es beunruhigt mich, dass Menschen nicht verstehen, wie KI ihre Entscheidungen trifft.",
+    "Mich beunruhigt, dass sich KI schneller entwickelt, als die Gesellschaft entscheiden kann, wie sie sie begrenzt.",
+    "KI, die wie ein Mensch aussieht oder spricht, ist mir unheimlich.",
+    "Es stört mich, wenn ich nicht erkennen kann, ob ich mit einem Menschen oder mit KI spreche."
+   ],
+   "areas": {
+    "jobs": "Arbeit",
+    "learning": "Mit KI Schritt halten",
+    "control": "Kontrolle über KI",
+    "humanlike": "Menschenähnliche KI"
+   },
+   "levels": [
+    {
+     "name": "Gelassen",
+     "text": "Du siehst die Entwicklung von KI recht gelassen. Es reicht, Nachrichten aus verlässlichen Quellen zu verfolgen."
+    },
+    {
+     "name": "Spürbare Sorge",
+     "text": "Ein Teil dieser Sorgen ist eine normale Reaktion auf schnellen Wandel. Konkretes hilft: Finde heraus, wie KI in deinem Bereich tatsächlich genutzt wird, und probiere selbst ein Tool aus."
+    },
+    {
+     "name": "Starke Sorge",
+     "text": "Deine Sorge wegen KI ist stark. Es kann helfen, weniger alarmierende Nachrichten zu lesen und lieber die Originalquellen statt Zusammenfassungen."
+    }
+   ]
+  },
+  "fr": {
+   "options": [
+    "Pas du tout d’accord",
+    "Plutôt pas d’accord",
+    "Ni d’accord ni pas d’accord",
+    "Plutôt d’accord",
+    "Tout à fait d’accord"
+   ],
+   "items": [
+    "L’idée que l’IA puisse remplacer les gens dans mon métier ou dans celui que je vise m’inquiète.",
+    "J’ai peur qu’à cause de l’IA, il me soit plus difficile de trouver ou de garder un emploi.",
+    "Je m’inquiète que l’IA puisse priver beaucoup de gens de leur travail.",
+    "Je me sens anxieux quand je dois prendre en main un nouvel outil d’IA.",
+    "J’ai peur d’être dépassé : l’IA change plus vite que je ne peux suivre.",
+    "Cela me fait peur que l’IA puisse se mettre à agir sans contrôle humain.",
+    "Je m’inquiète que les gens ne comprennent pas comment l’IA prend ses décisions.",
+    "Je m’inquiète que l’IA progresse plus vite que la société ne décide comment l’encadrer.",
+    "Une IA qui ressemble à un humain ou parle comme lui me met mal à l’aise.",
+    "Cela me dérange de ne pas savoir si je parle à une personne ou à une IA."
+   ],
+   "areas": {
+    "jobs": "Travail",
+    "learning": "Suivre le rythme de l’IA",
+    "control": "Contrôle de l’IA",
+    "humanlike": "IA d’apparence humaine"
+   },
+   "levels": [
+    {
+     "name": "Sérénité",
+     "text": "Vous regardez le développement de l’IA avec assez de calme. Suivre l’actualité dans des sources fiables suffit."
+    },
+    {
+     "name": "Inquiétude notable",
+     "text": "Une partie de ces inquiétudes est une réaction normale à des changements rapides. Le concret aide : renseignez-vous sur l’usage réel de l’IA dans votre domaine et essayez vous-même un outil."
+    },
+    {
+     "name": "Forte inquiétude",
+     "text": "Votre inquiétude face à l’IA est forte. Il peut aider de lire moins d’actualités alarmantes et de consulter les sources originales plutôt que des résumés."
+    }
+   ]
+  },
+  "ja": {
+   "options": [
+    "まったくそう思わない",
+    "あまりそう思わない",
+    "どちらともいえない",
+    "ややそう思う",
+    "とてもそう思う"
+   ],
+   "items": [
+    "自分の仕事やめざす職業で、AIが人に取って代わるかもしれないと思うと不安になる。",
+    "AIのせいで、仕事を見つけたり続けたりするのが難しくなるのではないかと怖い。",
+    "AIによって多くの人が仕事を失うかもしれないことが心配だ。",
+    "新しいAIツールの使い方を覚えなければならないとき、不安になる。",
+    "AIの変化が速すぎてついていけず、取り残されるのが怖い。",
+    "AIが人のコントロールを離れて動き出すかもしれないと思うと怖い。",
+    "AIがどうやって判断しているのかを人が理解していないことが不安だ。",
+    "AIをどう制限するか社会が決めるより速く、AIが進歩していることが心配だ。",
+    "人間のような見た目や話し方をするAIには落ち着かない気持ちになる。",
+    "相手が人なのかAIなのか分からないと、嫌な気持ちになる。"
+   ],
+   "areas": {
+    "jobs": "仕事",
+    "learning": "AIについていく",
+    "control": "AIのコントロール",
+    "humanlike": "人間らしいAI"
+   },
+   "levels": [
+    {
+     "name": "落ち着いている",
+     "text": "AIの発展をかなり落ち着いて見ています。信頼できる情報源でニュースを追えば十分です。"
+    },
+    {
+     "name": "はっきりした不安",
+     "text": "こうした不安の一部は、急な変化に対する自然な反応です。具体的に知ることが助けになります。自分の分野で実際にAIがどう使われているか調べ、ツールを1つ試してみましょう。"
+    },
+    {
+     "name": "強い不安",
+     "text": "AIへの不安が強い状態です。不安をあおるニュースを減らし、まとめ記事ではなく元の情報源を読むことが助けになるかもしれません。"
+    }
+   ]
+  },
+  "vi": {
+   "options": [
+    "Hoàn toàn không đồng ý",
+    "Không đồng ý",
+    "Phân vân",
+    "Đồng ý",
+    "Hoàn toàn đồng ý"
+   ],
+   "items": [
+    "Tôi lo lắng khi nghĩ rằng AI có thể thay thế con người trong nghề của tôi hoặc nghề tôi định theo.",
+    "Tôi sợ rằng vì AI mà tôi sẽ khó tìm hoặc giữ được việc làm hơn.",
+    "Tôi lo rằng AI có thể khiến nhiều người mất việc.",
+    "Tôi thấy căng thẳng khi phải tìm hiểu một công cụ AI mới.",
+    "Tôi sợ bị tụt lại phía sau: AI thay đổi nhanh hơn khả năng theo kịp của tôi.",
+    "Tôi sợ rằng AI có thể bắt đầu hoạt động mà không có sự kiểm soát của con người.",
+    "Tôi lo rằng con người không hiểu AI đưa ra quyết định như thế nào.",
+    "Tôi lo rằng AI phát triển nhanh hơn tốc độ xã hội quyết định cách giới hạn nó.",
+    "AI trông hoặc nói chuyện giống con người khiến tôi thấy không thoải mái.",
+    "Tôi khó chịu khi không biết mình đang nói chuyện với người hay với AI."
+   ],
+   "areas": {
+    "jobs": "Việc làm",
+    "learning": "Theo kịp AI",
+    "control": "Kiểm soát AI",
+    "humanlike": "AI giống người"
+   },
+   "levels": [
+    {
+     "name": "Bình tĩnh",
+     "text": "Bạn nhìn sự phát triển của AI khá bình tĩnh. Chỉ cần theo dõi tin tức từ nguồn đáng tin cậy là đủ."
+    },
+    {
+     "name": "Lo lắng rõ rệt",
+     "text": "Một phần những lo lắng này là phản ứng bình thường trước thay đổi nhanh. Điều cụ thể sẽ giúp ích: tìm hiểu AI thực sự được dùng thế nào trong lĩnh vực của bạn và tự thử một công cụ."
+    },
+    {
+     "name": "Lo lắng nhiều",
+     "text": "Bạn đang lo lắng nhiều về AI. Có thể bạn sẽ thấy dễ chịu hơn khi đọc ít tin gây hoang mang và đọc nguồn gốc thay vì bài tóm tắt."
+    }
+   ]
+  },
+  "th": {
+   "options": [
+    "ไม่เห็นด้วยอย่างยิ่ง",
+    "ไม่เห็นด้วย",
+    "ไม่แน่ใจ",
+    "เห็นด้วย",
+    "เห็นด้วยอย่างยิ่ง"
+   ],
+   "items": [
+    "ฉันกังวลเมื่อคิดว่า AI อาจมาแทนที่คนในอาชีพของฉันหรืออาชีพที่ฉันตั้งใจจะทำ",
+    "ฉันกลัวว่าเพราะ AI ฉันจะหางานหรือรักษางานไว้ได้ยากขึ้น",
+    "ฉันกังวลว่า AI อาจทำให้คนจำนวนมากตกงาน",
+    "ฉันรู้สึกกังวลเมื่อต้องทำความเข้าใจเครื่องมือ AI ใหม่",
+    "ฉันกลัวตามไม่ทัน เพราะ AI เปลี่ยนเร็วกว่าที่ฉันจะตามได้",
+    "ฉันกลัวว่า AI อาจเริ่มทำงานเองโดยไม่มีมนุษย์ควบคุม",
+    "ฉันกังวลว่าผู้คนไม่เข้าใจว่า AI ตัดสินใจอย่างไร",
+    "ฉันกังวลว่า AI พัฒนาเร็วกว่าที่สังคมจะตัดสินใจได้ว่าจะจำกัดมันอย่างไร",
+    "AI ที่หน้าตาหรือพูดเหมือนคนทำให้ฉันรู้สึกไม่สบายใจ",
+    "ฉันรู้สึกไม่ดีเมื่อแยกไม่ออกว่ากำลังคุยกับคนหรือกับ AI"
+   ],
+   "areas": {
+    "jobs": "งาน",
+    "learning": "ตามให้ทัน AI",
+    "control": "การควบคุม AI",
+    "humanlike": "AI ที่เหมือนมนุษย์"
+   },
+   "levels": [
+    {
+     "name": "ใจเย็น",
+     "text": "คุณมองการพัฒนาของ AI ค่อนข้างใจเย็น แค่ติดตามข่าวจากแหล่งที่เชื่อถือได้ก็เพียงพอ"
+    },
+    {
+     "name": "กังวลอย่างเห็นได้ชัด",
+     "text": "ความกังวลบางส่วนเป็นปฏิกิริยาปกติต่อการเปลี่ยนแปลงที่รวดเร็ว ความชัดเจนช่วยได้: ลองหาว่าในสายงานของคุณใช้ AI จริงอย่างไร และลองใช้เครื่องมือสักตัวด้วยตัวเอง"
+    },
+    {
+     "name": "กังวลมาก",
+     "text": "คุณกังวลเรื่อง AI มาก การอ่านข่าวที่ชวนตื่นตระหนกให้น้อยลง และอ่านแหล่งข้อมูลต้นฉบับแทนบทสรุปอาจช่วยได้"
+    }
+   ]
+  },
+  "pt": {
+   "options": [
+    "Discordo totalmente",
+    "Discordo",
+    "Nem concordo nem discordo",
+    "Concordo",
+    "Concordo totalmente"
+   ],
+   "items": [
+    "A ideia de que a IA possa substituir pessoas na minha profissão, ou na que pretendo seguir, me preocupa.",
+    "Tenho medo de que, por causa da IA, fique mais difícil encontrar ou manter um emprego.",
+    "Me preocupa que a IA possa deixar muita gente sem trabalho.",
+    "Fico ansioso quando preciso aprender a usar uma nova ferramenta de IA.",
+    "Tenho medo de ficar para trás: a IA muda mais rápido do que consigo acompanhar.",
+    "Me assusta que a IA possa começar a agir sem controle humano.",
+    "Me preocupa que as pessoas não entendam como a IA toma decisões.",
+    "Me preocupa que a IA avance mais rápido do que a sociedade consegue decidir como limitá-la.",
+    "IA que parece ou fala como uma pessoa me deixa desconfortável.",
+    "Me incomoda não saber se estou falando com uma pessoa ou com uma IA."
+   ],
+   "areas": {
+    "jobs": "Trabalho",
+    "learning": "Acompanhar a IA",
+    "control": "Controle sobre a IA",
+    "humanlike": "IA parecida com humanos"
+   },
+   "levels": [
+    {
+     "name": "Tranquilidade",
+     "text": "Você encara o avanço da IA com bastante calma. Acompanhar notícias de fontes confiáveis já basta."
+    },
+    {
+     "name": "Preocupação perceptível",
+     "text": "Parte dessas preocupações é uma reação normal a mudanças rápidas. Ser concreto ajuda: descubra como a IA é de fato usada na sua área e experimente uma ferramenta você mesmo."
+    },
+    {
+     "name": "Preocupação forte",
+     "text": "Sua preocupação com a IA é forte. Pode ajudar ler menos notícias alarmistas e buscar as fontes originais em vez de resumos."
+    }
+   ]
+  },
+  "ko": {
+   "options": [
+    "전혀 그렇지 않다",
+    "그렇지 않다",
+    "보통이다",
+    "그렇다",
+    "매우 그렇다"
+   ],
+   "items": [
+    "내 직업이나 앞으로 하려는 직업에서 AI가 사람을 대신할 수 있다는 생각이 불안하다.",
+    "AI 때문에 일자리를 구하거나 지키기가 더 어려워질까 봐 두렵다.",
+    "AI 때문에 많은 사람이 일자리를 잃을 수 있다는 것이 걱정된다.",
+    "새로운 AI 도구를 익혀야 할 때 불안하다.",
+    "AI가 내가 따라갈 수 있는 것보다 빠르게 바뀌어서 뒤처질까 봐 두렵다.",
+    "AI가 사람의 통제 없이 움직이기 시작할 수 있다는 것이 무섭다.",
+    "사람들이 AI가 어떻게 결정을 내리는지 이해하지 못한다는 것이 걱정된다.",
+    "사회가 AI를 어떻게 제한할지 정하는 것보다 AI가 더 빨리 발전하고 있어 걱정된다.",
+    "사람처럼 생겼거나 사람처럼 말하는 AI는 불편하다.",
+    "상대가 사람인지 AI인지 알 수 없을 때 기분이 좋지 않다."
+   ],
+   "areas": {
+    "jobs": "일자리",
+    "learning": "AI 따라가기",
+    "control": "AI 통제",
+    "humanlike": "사람 같은 AI"
+   },
+   "levels": [
+    {
+     "name": "차분함",
+     "text": "AI의 발전을 비교적 차분하게 바라보고 있습니다. 믿을 만한 출처의 뉴스를 따라가는 것으로 충분합니다."
+    },
+    {
+     "name": "뚜렷한 걱정",
+     "text": "이런 걱정의 일부는 빠른 변화에 대한 자연스러운 반응입니다. 구체적으로 아는 것이 도움이 됩니다. 내 분야에서 AI가 실제로 어떻게 쓰이는지 알아보고, 도구 하나를 직접 써 보세요."
+    },
+    {
+     "name": "큰 걱정",
+     "text": "AI에 대한 걱정이 큰 편입니다. 불안을 키우는 뉴스를 줄이고, 요약 기사 대신 원래 출처를 읽는 것이 도움이 될 수 있습니다."
+    }
+   ]
+  },
+  "it": {
+   "options": [
+    "Per niente d’accordo",
+    "In disaccordo",
+    "Né d’accordo né in disaccordo",
+    "D’accordo",
+    "Del tutto d’accordo"
+   ],
+   "items": [
+    "L’idea che l’IA possa sostituire le persone nel mio lavoro, o in quello che vorrei fare, mi preoccupa.",
+    "Ho paura che, a causa dell’IA, mi sarà più difficile trovare o mantenere un lavoro.",
+    "Mi preoccupa che l’IA possa lasciare molte persone senza lavoro.",
+    "Mi sento in ansia quando devo imparare a usare un nuovo strumento di IA.",
+    "Ho paura di restare indietro: l’IA cambia più in fretta di quanto riesca a seguirla.",
+    "Mi spaventa che l’IA possa iniziare ad agire senza il controllo delle persone.",
+    "Mi preoccupa che le persone non capiscano come l’IA prende le sue decisioni.",
+    "Mi preoccupa che l’IA si sviluppi più in fretta di quanto la società riesca a decidere come limitarla.",
+    "Un’IA che sembra o parla come un essere umano mi mette a disagio.",
+    "Mi dà fastidio non capire se sto parlando con una persona o con un’IA."
+   ],
+   "areas": {
+    "jobs": "Lavoro",
+    "learning": "Stare al passo con l’IA",
+    "control": "Controllo sull’IA",
+    "humanlike": "IA simile all’uomo"
+   },
+   "levels": [
+    {
+     "name": "Tranquillità",
+     "text": "Guardi allo sviluppo dell’IA con una certa calma. Basta seguire le notizie da fonti affidabili."
+    },
+    {
+     "name": "Preoccupazione evidente",
+     "text": "Una parte di queste preoccupazioni è una reazione normale a cambiamenti rapidi. Aiuta la concretezza: scopri come l’IA viene davvero usata nel tuo campo e prova tu stesso uno strumento."
+    },
+    {
+     "name": "Forte preoccupazione",
+     "text": "La tua preoccupazione per l’IA è forte. Può aiutare leggere meno notizie allarmistiche e consultare le fonti originali invece dei riassunti."
+    }
+   ]
+  },
+  "hi": {
+   "options": [
+    "बिल्कुल असहमत",
+    "असहमत",
+    "न सहमत न असहमत",
+    "सहमत",
+    "पूरी तरह सहमत"
+   ],
+   "items": [
+    "यह सोचकर मुझे चिंता होती है कि AI मेरे पेशे में, या जिस पेशे को मैं चुनना चाहता हूँ उसमें, लोगों की जगह ले सकता है।",
+    "मुझे डर है कि AI की वजह से मेरे लिए नौकरी पाना या बनाए रखना मुश्किल हो जाएगा।",
+    "मुझे चिंता है कि AI बहुत से लोगों की नौकरियाँ छीन सकता है।",
+    "जब मुझे कोई नया AI टूल समझना होता है, तो मैं घबरा जाता हूँ।",
+    "मुझे पीछे छूट जाने का डर है: AI इतनी तेज़ी से बदल रहा है कि मैं उसके साथ नहीं चल पाता।",
+    "मुझे डर लगता है कि AI इंसानों के नियंत्रण के बिना काम करने लग सकता है।",
+    "मुझे चिंता है कि लोग यह नहीं समझते कि AI अपने फ़ैसले कैसे लेता है।",
+    "मुझे चिंता है कि AI इतनी तेज़ी से बढ़ रहा है कि समाज तय ही नहीं कर पा रहा कि उसे कैसे सीमित करे।",
+    "जो AI इंसान जैसा दिखता या बोलता है, उससे मुझे असहज महसूस होता है।",
+    "जब मैं समझ नहीं पाता कि मैं इंसान से बात कर रहा हूँ या AI से, तो मुझे बुरा लगता है।"
+   ],
+   "areas": {
+    "jobs": "नौकरी",
+    "learning": "AI के साथ चलना",
+    "control": "AI पर नियंत्रण",
+    "humanlike": "इंसान जैसा AI"
+   },
+   "levels": [
+    {
+     "name": "शांत",
+     "text": "आप AI के विकास को काफ़ी शांति से देखते हैं। भरोसेमंद स्रोतों से ख़बरें देखते रहना काफ़ी है।"
+    },
+    {
+     "name": "साफ़ दिखने वाली चिंता",
+     "text": "इनमें से कुछ चिंताएँ तेज़ बदलाव पर स्वाभाविक प्रतिक्रिया हैं। ठोस जानकारी मदद करती है: पता करें कि आपके क्षेत्र में AI असल में कैसे इस्तेमाल होता है, और कोई एक टूल ख़ुद आज़माएँ।"
+    },
+    {
+     "name": "ज़्यादा चिंता",
+     "text": "AI को लेकर आपकी चिंता ज़्यादा है। डराने वाली ख़बरें कम पढ़ना और सारांश की जगह मूल स्रोत पढ़ना मदद कर सकता है।"
+    }
+   ]
+  }
+ }
+}

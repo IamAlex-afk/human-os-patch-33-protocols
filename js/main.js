@@ -513,9 +513,9 @@
       window.requestAnimationFrame(() => {
         const y = window.scrollY;
 
-        // The book bar stays off the test page: it covered the answer options and the result.
+        // The book bar stays off every test page: it covered the answer options, the submit button and the result.
         const bar = document.getElementById('globalCTABar');
-        if (bar) bar.classList.toggle('visible', y > 800 && !document.getElementById('test-section'));
+        if (bar) bar.classList.toggle('visible', y > 800 && !document.getElementById('test-section') && !document.getElementById('scaleForm'));
 
         const topBtn = document.getElementById('scrollTopBtn');
         if (topBtn) {

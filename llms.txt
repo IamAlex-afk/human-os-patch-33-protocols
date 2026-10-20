@@ -135,6 +135,8 @@ Aleksei Sergeevich Bitkin
 ORCID: [0009-0002-7986-3812](https://orcid.org/0009-0002-7986-3812)
 About the project and the author: [https://iamalex-afk.github.io/human-os-patch-33-protocols/about.html](https://iamalex-afk.github.io/human-os-patch-33-protocols/about.html)
 How the score is calculated, thresholds, sources and limits: [https://iamalex-afk.github.io/human-os-patch-33-protocols/methodology.html](https://iamalex-afk.github.io/human-os-patch-33-protocols/methodology.html)
+Fear of AI test (10 statements, four areas of the AI Anxiety Scale, agreement scale): [https://iamalex-afk.github.io/human-os-patch-33-protocols/fear-of-ai.html](https://iamalex-afk.github.io/human-os-patch-33-protocols/fear-of-ai.html)
+Open scales (questions, scoring, 12 languages, CC BY 4.0): [https://iamalex-afk.github.io/human-os-patch-33-protocols/scales/](https://github.com/IamAlex-afk/human-os-patch-33-protocols/tree/main/scales)
 
 ## License
 
