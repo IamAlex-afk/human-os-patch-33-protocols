@@ -1588,3 +1588,6 @@ a.chooser-card:hover, a.chooser-card:focus-visible { border-color: var(--accent)
 
 /* Share my result as a picture (2026-10-21) */
 .scale-share { margin: 0.5rem 0 1rem; text-align: center; }
+
+/* Helplines of the main countries under the crisis line (2026-10-21) */
+.scale-crisis-local { display: block; margin-top: 0.6rem; font-size: 0.88rem; line-height: 1.7; }
