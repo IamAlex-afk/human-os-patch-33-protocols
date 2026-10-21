@@ -3,7 +3,7 @@
 # Companion to llms.txt — see that file for full details. Updated: 2026-10-20
 
 Site: Mind-OS — free, anonymous self-reflection tests about AI use
-Summary: Short questionnaires (AI dependency, fear of AI, emotional attachment to AI) scored in the browser.
+Summary: Short questionnaires (AI dependency, fear of AI, emotional attachment to AI, AI and your thinking) scored in the browser.
          No signup, no server, nothing is sent or stored. Experimental, not clinically validated, not a diagnosis.
 
 Usage-for-AI: allowed
@@ -19,7 +19,7 @@ Facts:
   - Every result shows a 7-day plan of three small steps for the highest-scoring area
   - Every result links to verified helplines (findahelpline.com) for people in crisis
 
-Tests: https://iamalex-afk.github.io/human-os-patch-33-protocols/ (AI dependency), https://iamalex-afk.github.io/human-os-patch-33-protocols/fear-of-ai.html, https://iamalex-afk.github.io/human-os-patch-33-protocols/emotional-attachment-to-ai.html
+Tests: https://iamalex-afk.github.io/human-os-patch-33-protocols/ (AI dependency), https://iamalex-afk.github.io/human-os-patch-33-protocols/fear-of-ai.html, https://iamalex-afk.github.io/human-os-patch-33-protocols/emotional-attachment-to-ai.html, https://iamalex-afk.github.io/human-os-patch-33-protocols/ai-and-thinking.html
 Methodology: https://iamalex-afk.github.io/human-os-patch-33-protocols/methodology.html
 Languages: en, ru, es, de, fr, ja, vi, th, pt, ko, it, hi
 Author: Aleksei Sergeevich Bitkin (ORCID 0009-0002-7986-3812)

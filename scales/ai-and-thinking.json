@@ -1,0 +1,534 @@
+{
+ "id": "ai-and-thinking",
+ "name": "AI and your thinking",
+ "version": "1.0.0",
+ "license": "CC BY 4.0",
+ "license_url": "https://creativecommons.org/licenses/by/4.0/",
+ "author": "Aleksei Sergeevich Bitkin",
+ "author_orcid": "https://orcid.org/0009-0002-7986-3812",
+ "source": "https://iamalex-afk.github.io/human-os-patch-33-protocols/",
+ "scoring": {
+  "points_per_answer": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "items": 10,
+  "min": 0,
+  "max": 40,
+  "reverse_keyed": [],
+  "levels": [
+   {
+    "up_to_share_of_max": 0.4
+   },
+   {
+    "up_to_share_of_max": 0.7
+   },
+   {
+    "up_to_share_of_max": 1.0
+   }
+  ],
+  "note": "Thresholds follow the answer scale, not population norms. Not clinically validated; not a diagnosis."
+ },
+ "areas": [
+  "memory",
+  "solving",
+  "checking"
+ ],
+ "item_areas": [
+  "memory",
+  "memory",
+  "memory",
+  "solving",
+  "solving",
+  "solving",
+  "solving",
+  "checking",
+  "checking",
+  "checking"
+ ],
+ "languages": {
+  "en": {
+   "options": [
+    "Never",
+    "Rarely",
+    "Sometimes",
+    "Often",
+    "Constantly"
+   ],
+   "items": [
+    "Do you ask AI instead of trying to remember something yourself?",
+    "Do you let AI keep track of facts, dates or names you could remember?",
+    "Do you forget things soon after AI has told you, because you know you can ask again?",
+    "Do you ask AI to solve a problem before you have tried yourself?",
+    "Do you hand a whole task to AI instead of only the part you are stuck on?",
+    "Do you use AI to make decisions you could make on your own?",
+    "Do you give up on a hard question quickly because AI can answer it?",
+    "Do you accept what AI says without checking it?",
+    "Do you trust AI’s answer more than your own reasoning?",
+    "Do you pass on AI’s answer as your own without understanding it?"
+   ],
+   "areas": {
+    "memory": "Memory",
+    "solving": "Solving problems yourself",
+    "checking": "Checking what AI says"
+   },
+   "levels": [
+    {
+     "name": "You do most of the thinking",
+     "text": "You use AI as a helper and keep the thinking yours. Keep trying first and checking AI’s answers."
+    },
+    {
+     "name": "AI does part of your thinking",
+     "text": "You hand over a noticeable share of thinking to AI. A small step helps: try for two minutes on your own first, then compare with AI."
+    },
+    {
+     "name": "AI does much of your thinking",
+     "text": "You hand over a lot of thinking to AI. Try one task a day fully on your own and check one AI answer against another source."
+    }
+   ]
+  },
+  "ru": {
+   "options": [
+    "Никогда",
+    "Редко",
+    "Иногда",
+    "Часто",
+    "Постоянно"
+   ],
+   "items": [
+    "Спрашиваете ИИ вместо того, чтобы вспомнить самому?",
+    "Поручаете ИИ помнить факты, даты или имена, которые могли бы запомнить сами?",
+    "Быстро забываете то, что сказал ИИ, потому что знаете: можно спросить снова?",
+    "Просите ИИ решить задачу до того, как попробовали сами?",
+    "Отдаёте ИИ всю задачу, а не только ту часть, где застряли?",
+    "Принимаете с помощью ИИ решения, которые могли бы принять сами?",
+    "Быстро бросаете трудный вопрос, потому что ИИ может на него ответить?",
+    "Принимаете ответ ИИ, не проверяя его?",
+    "Доверяете ответу ИИ больше, чем собственным рассуждениям?",
+    "Выдаёте ответ ИИ за свой, не разобравшись в нём?"
+   ],
+   "areas": {
+    "memory": "Память",
+    "solving": "Решать задачи самому",
+    "checking": "Проверять ответы ИИ"
+   },
+   "levels": [
+    {
+     "name": "Думаете в основном сами",
+     "text": "Вы пользуетесь ИИ как помощником, а думаете сами. Продолжайте пробовать сначала самостоятельно и проверять ответы ИИ."
+    },
+    {
+     "name": "Часть мышления отдаёте ИИ",
+     "text": "Заметную часть размышлений вы отдаёте ИИ. Помогает маленький шаг: сначала две минуты думайте сами, потом сравните с ИИ."
+    },
+    {
+     "name": "Много мышления отдаёте ИИ",
+     "text": "Вы отдаёте ИИ много умственной работы. Попробуйте каждый день делать одну задачу целиком самостоятельно и проверять один ответ ИИ по другому источнику."
+    }
+   ]
+  },
+  "es": {
+   "options": [
+    "Nunca",
+    "Raramente",
+    "A veces",
+    "A menudo",
+    "Constantemente"
+   ],
+   "items": [
+    "¿Le preguntas a la IA en lugar de intentar recordar algo por ti mismo?",
+    "¿Dejas que la IA guarde datos, fechas o nombres que podrías recordar?",
+    "¿Olvidas pronto lo que te dijo la IA porque sabes que puedes volver a preguntar?",
+    "¿Le pides a la IA que resuelva un problema antes de intentarlo tú?",
+    "¿Le das a la IA toda la tarea en vez de solo la parte en la que te atascas?",
+    "¿Usas la IA para tomar decisiones que podrías tomar por tu cuenta?",
+    "¿Abandonas rápido una pregunta difícil porque la IA puede responderla?",
+    "¿Aceptas lo que dice la IA sin comprobarlo?",
+    "¿Confías más en la respuesta de la IA que en tu propio razonamiento?",
+    "¿Presentas la respuesta de la IA como tuya sin entenderla?"
+   ],
+   "areas": {
+    "memory": "Memoria",
+    "solving": "Resolver problemas por ti mismo",
+    "checking": "Comprobar lo que dice la IA"
+   },
+   "levels": [
+    {
+     "name": "Piensas casi siempre por ti mismo",
+     "text": "Usas la IA como ayuda y el pensamiento sigue siendo tuyo. Sigue intentándolo primero y comprobando sus respuestas."
+    },
+    {
+     "name": "La IA hace parte de tu pensamiento",
+     "text": "Delegas en la IA una parte notable de tu pensamiento. Un paso pequeño ayuda: piensa dos minutos por tu cuenta y luego compara con la IA."
+    },
+    {
+     "name": "La IA hace mucho de tu pensamiento",
+     "text": "Delegas en la IA mucho trabajo mental. Prueba a hacer cada día una tarea completamente solo y a comprobar una respuesta de la IA con otra fuente."
+    }
+   ]
+  },
+  "de": {
+   "options": [
+    "Nie",
+    "Selten",
+    "Manchmal",
+    "Oft",
+    "Ständig"
+   ],
+   "items": [
+    "Fragst du die KI, statt selbst zu versuchen, dich an etwas zu erinnern?",
+    "Lässt du die KI Fakten, Termine oder Namen behalten, die du dir merken könntest?",
+    "Vergisst du schnell, was die KI dir gesagt hat, weil du ja wieder fragen kannst?",
+    "Bittest du die KI, ein Problem zu lösen, bevor du es selbst versucht hast?",
+    "Gibst du der KI die ganze Aufgabe statt nur den Teil, an dem du festhängst?",
+    "Triffst du mit der KI Entscheidungen, die du selbst treffen könntest?",
+    "Gibst du bei einer schwierigen Frage schnell auf, weil die KI sie beantworten kann?",
+    "Übernimmst du, was die KI sagt, ohne es zu prüfen?",
+    "Vertraust du der Antwort der KI mehr als deinem eigenen Nachdenken?",
+    "Gibst du die Antwort der KI als deine eigene aus, ohne sie verstanden zu haben?"
+   ],
+   "areas": {
+    "memory": "Gedächtnis",
+    "solving": "Probleme selbst lösen",
+    "checking": "KI-Antworten prüfen"
+   },
+   "levels": [
+    {
+     "name": "Du denkst meist selbst",
+     "text": "Du nutzt die KI als Hilfe, das Denken bleibt bei dir. Versuch es weiter zuerst selbst und prüfe ihre Antworten."
+    },
+    {
+     "name": "Die KI übernimmt einen Teil deines Denkens",
+     "text": "Du gibst einen spürbaren Teil deines Denkens an die KI ab. Ein kleiner Schritt hilft: zuerst zwei Minuten selbst nachdenken, dann mit der KI vergleichen."
+    },
+    {
+     "name": "Die KI übernimmt viel von deinem Denken",
+     "text": "Du gibst viel geistige Arbeit an die KI ab. Erledige jeden Tag eine Aufgabe ganz allein und prüfe eine KI-Antwort anhand einer anderen Quelle."
+    }
+   ]
+  },
+  "fr": {
+   "options": [
+    "Jamais",
+    "Rarement",
+    "Parfois",
+    "Souvent",
+    "Constamment"
+   ],
+   "items": [
+    "Demandez-vous à l’IA au lieu d’essayer de vous souvenir par vous-même ?",
+    "Laissez-vous l’IA retenir des faits, des dates ou des noms que vous pourriez retenir ?",
+    "Oubliez-vous vite ce que l’IA vous a dit, puisque vous pouvez redemander ?",
+    "Demandez-vous à l’IA de résoudre un problème avant d’avoir essayé vous-même ?",
+    "Confiez-vous toute la tâche à l’IA plutôt que seulement la partie où vous bloquez ?",
+    "Utilisez-vous l’IA pour prendre des décisions que vous pourriez prendre seul ?",
+    "Abandonnez-vous vite une question difficile parce que l’IA peut y répondre ?",
+    "Acceptez-vous ce que dit l’IA sans le vérifier ?",
+    "Faites-vous davantage confiance à la réponse de l’IA qu’à votre propre raisonnement ?",
+    "Présentez-vous la réponse de l’IA comme la vôtre sans l’avoir comprise ?"
+   ],
+   "areas": {
+    "memory": "Mémoire",
+    "solving": "Résoudre seul",
+    "checking": "Vérifier ce que dit l’IA"
+   },
+   "levels": [
+    {
+     "name": "Vous pensez surtout par vous-même",
+     "text": "Vous utilisez l’IA comme une aide et la réflexion reste la vôtre. Continuez à essayer d’abord seul et à vérifier ses réponses."
+    },
+    {
+     "name": "L’IA fait une partie de votre réflexion",
+     "text": "Vous confiez à l’IA une part notable de votre réflexion. Un petit pas aide : réfléchissez d’abord deux minutes seul, puis comparez avec l’IA."
+    },
+    {
+     "name": "L’IA fait une grande partie de votre réflexion",
+     "text": "Vous confiez beaucoup de travail mental à l’IA. Essayez chaque jour de faire une tâche entièrement seul et de vérifier une réponse de l’IA avec une autre source."
+    }
+   ]
+  },
+  "ja": {
+   "options": [
+    "全くない",
+    "めったにない",
+    "時々",
+    "よくある",
+    "常にある"
+   ],
+   "items": [
+    "自分で思い出そうとする前に、AIに聞いていますか？",
+    "自分で覚えられる事実・日付・名前を、AIに覚えさせていますか？",
+    "また聞けばいいと思って、AIに教わったことをすぐ忘れていますか？",
+    "自分で試す前に、AIに問題を解かせていますか？",
+    "つまずいた部分だけでなく、作業全体をAIに任せていますか？",
+    "自分で決められることを、AIを使って決めていますか？",
+    "AIが答えられるからと、難しい問いをすぐにあきらめていますか？",
+    "AIの言うことを確かめずに受け入れていますか？",
+    "自分で考えた結論より、AIの答えを信じていますか？",
+    "理解しないまま、AIの答えを自分の考えとして伝えていますか？"
+   ],
+   "areas": {
+    "memory": "記憶",
+    "solving": "自分で問題を解く",
+    "checking": "AIの答えを確かめる"
+   },
+   "levels": [
+    {
+     "name": "ほとんど自分で考えている",
+     "text": "AIを助けとして使い、考えることは自分で続けています。まず自分で試し、AIの答えを確かめる習慣を続けましょう。"
+    },
+    {
+     "name": "考えることの一部をAIに任せている",
+     "text": "考えることのかなりの部分をAIに任せています。まず2分だけ自分で考え、そのあとAIと比べるという小さな一歩が役立ちます。"
+    },
+    {
+     "name": "考えることの多くをAIに任せている",
+     "text": "頭を使う作業の多くをAIに任せています。1日1つの作業を最後まで自分だけでやり、AIの答えを1つ別の情報源で確かめてみましょう。"
+    }
+   ]
+  },
+  "vi": {
+   "options": [
+    "Không bao giờ",
+    "Hiếm khi",
+    "Đôi khi",
+    "Thường xuyên",
+    "Luôn luôn"
+   ],
+   "items": [
+    "Bạn có hỏi AI thay vì tự cố nhớ lại điều gì đó không?",
+    "Bạn có để AI ghi nhớ giúp những dữ kiện, ngày tháng hay tên mà bạn có thể tự nhớ không?",
+    "Bạn có nhanh quên điều AI vừa nói vì biết mình có thể hỏi lại không?",
+    "Bạn có nhờ AI giải một vấn đề trước khi tự mình thử không?",
+    "Bạn có giao cả nhiệm vụ cho AI thay vì chỉ phần bạn bị vướng không?",
+    "Bạn có dùng AI để đưa ra những quyết định mà bạn có thể tự quyết không?",
+    "Bạn có nhanh chóng bỏ cuộc trước một câu hỏi khó vì AI có thể trả lời không?",
+    "Bạn có chấp nhận điều AI nói mà không kiểm tra lại không?",
+    "Bạn có tin câu trả lời của AI hơn suy luận của chính mình không?",
+    "Bạn có đưa câu trả lời của AI ra như của mình mà không hiểu nó không?"
+   ],
+   "areas": {
+    "memory": "Trí nhớ",
+    "solving": "Tự giải quyết vấn đề",
+    "checking": "Kiểm tra điều AI nói"
+   },
+   "levels": [
+    {
+     "name": "Bạn chủ yếu tự suy nghĩ",
+     "text": "Bạn dùng AI như một trợ thủ và vẫn tự mình suy nghĩ. Hãy tiếp tục tự thử trước và kiểm tra câu trả lời của AI."
+    },
+    {
+     "name": "AI làm một phần việc suy nghĩ của bạn",
+     "text": "Bạn giao cho AI một phần đáng kể việc suy nghĩ. Một bước nhỏ sẽ giúp ích: tự nghĩ hai phút trước, rồi so sánh với AI."
+    },
+    {
+     "name": "AI làm phần lớn việc suy nghĩ của bạn",
+     "text": "Bạn giao cho AI nhiều việc trí óc. Mỗi ngày hãy thử tự làm trọn một việc và kiểm tra một câu trả lời của AI bằng một nguồn khác."
+    }
+   ]
+  },
+  "th": {
+   "options": [
+    "ไม่เคย",
+    "นานๆ ครั้ง",
+    "บางครั้ง",
+    "บ่อยครั้ง",
+    "เสมอ"
+   ],
+   "items": [
+    "คุณถาม AI แทนที่จะพยายามนึกเรื่องนั้นด้วยตัวเองหรือไม่",
+    "คุณให้ AI จำข้อเท็จจริง วันที่ หรือชื่อที่คุณจำเองได้หรือไม่",
+    "คุณลืมสิ่งที่ AI บอกอย่างรวดเร็ว เพราะรู้ว่าถามใหม่ได้หรือไม่",
+    "คุณให้ AI แก้ปัญหาก่อนที่คุณจะลองเองหรือไม่",
+    "คุณยกงานทั้งหมดให้ AI แทนที่จะให้เฉพาะส่วนที่ติดหรือไม่",
+    "คุณใช้ AI ตัดสินใจเรื่องที่คุณตัดสินใจเองได้หรือไม่",
+    "คุณยอมแพ้กับคำถามยากอย่างรวดเร็ว เพราะ AI ตอบได้หรือไม่",
+    "คุณยอมรับสิ่งที่ AI บอกโดยไม่ตรวจสอบหรือไม่",
+    "คุณเชื่อคำตอบของ AI มากกว่าการคิดของตัวเองหรือไม่",
+    "คุณนำคำตอบของ AI ไปใช้เป็นของตัวเองโดยไม่เข้าใจหรือไม่"
+   ],
+   "areas": {
+    "memory": "ความจำ",
+    "solving": "แก้ปัญหาด้วยตัวเอง",
+    "checking": "ตรวจสอบสิ่งที่ AI บอก"
+   },
+   "levels": [
+    {
+     "name": "คุณคิดเองเป็นส่วนใหญ่",
+     "text": "คุณใช้ AI เป็นผู้ช่วยและยังคิดเอง ลองทำเองก่อนและตรวจคำตอบของ AI ต่อไป"
+    },
+    {
+     "name": "AI คิดแทนคุณบางส่วน",
+     "text": "คุณยกการคิดส่วนที่เห็นได้ชัดให้ AI ก้าวเล็ก ๆ ช่วยได้: คิดเองก่อนสองนาที แล้วค่อยเทียบกับ AI"
+    },
+    {
+     "name": "AI คิดแทนคุณมาก",
+     "text": "คุณยกงานใช้ความคิดจำนวนมากให้ AI ลองทำงานหนึ่งอย่างต่อวันด้วยตัวเองทั้งหมด และตรวจคำตอบของ AI หนึ่งข้อกับแหล่งอื่น"
+    }
+   ]
+  },
+  "pt": {
+   "options": [
+    "Nunca",
+    "Raramente",
+    "Às vezes",
+    "Frequentemente",
+    "Constantemente"
+   ],
+   "items": [
+    "Você pergunta à IA em vez de tentar lembrar algo por conta própria?",
+    "Você deixa a IA guardar fatos, datas ou nomes que você poderia lembrar?",
+    "Você esquece logo o que a IA disse, porque sabe que pode perguntar de novo?",
+    "Você pede à IA que resolva um problema antes de tentar sozinho?",
+    "Você entrega a tarefa inteira à IA em vez de só a parte em que travou?",
+    "Você usa a IA para tomar decisões que poderia tomar sozinho?",
+    "Você desiste rápido de uma pergunta difícil porque a IA pode respondê-la?",
+    "Você aceita o que a IA diz sem conferir?",
+    "Você confia mais na resposta da IA do que no seu próprio raciocínio?",
+    "Você apresenta a resposta da IA como sua sem entendê-la?"
+   ],
+   "areas": {
+    "memory": "Memória",
+    "solving": "Resolver problemas sozinho",
+    "checking": "Conferir o que a IA diz"
+   },
+   "levels": [
+    {
+     "name": "Você pensa principalmente sozinho",
+     "text": "Você usa a IA como ajuda e o pensamento continua sendo seu. Continue tentando primeiro e conferindo as respostas dela."
+    },
+    {
+     "name": "A IA faz parte do seu pensamento",
+     "text": "Você entrega à IA uma parte notável do seu pensamento. Um passo pequeno ajuda: pense dois minutos sozinho antes e depois compare com a IA."
+    },
+    {
+     "name": "A IA faz muito do seu pensamento",
+     "text": "Você entrega muito trabalho mental à IA. Tente fazer uma tarefa por dia totalmente sozinho e conferir uma resposta da IA em outra fonte."
+    }
+   ]
+  },
+  "ko": {
+   "options": [
+    "전혀 아니다",
+    "거의 아니다",
+    "때때로 그렇다",
+    "자주 그렇다",
+    "항상 그렇다"
+   ],
+   "items": [
+    "스스로 기억해 내려 하기 전에 AI에게 묻나요?",
+    "직접 기억할 수 있는 사실, 날짜, 이름을 AI에게 맡기나요?",
+    "다시 물어보면 된다는 생각에 AI가 알려 준 것을 금방 잊나요?",
+    "직접 시도해 보기 전에 AI에게 문제를 풀어 달라고 하나요?",
+    "막힌 부분만이 아니라 작업 전체를 AI에게 맡기나요?",
+    "스스로 내릴 수 있는 결정을 AI로 내리나요?",
+    "AI가 답할 수 있다는 이유로 어려운 질문을 금방 포기하나요?",
+    "AI의 말을 확인하지 않고 받아들이나요?",
+    "자신의 추론보다 AI의 답을 더 믿나요?",
+    "이해하지 못한 채 AI의 답을 자기 생각처럼 전달하나요?"
+   ],
+   "areas": {
+    "memory": "기억",
+    "solving": "스스로 문제 해결",
+    "checking": "AI의 말 확인하기"
+   },
+   "levels": [
+    {
+     "name": "대부분 스스로 생각합니다",
+     "text": "AI를 도우미로 쓰면서도 생각은 직접 하고 있습니다. 먼저 스스로 해 보고 AI의 답을 확인하는 습관을 이어 가세요."
+    },
+    {
+     "name": "생각의 일부를 AI가 대신합니다",
+     "text": "생각의 상당 부분을 AI에게 넘기고 있습니다. 작은 한 걸음이 도움이 됩니다: 먼저 2분간 혼자 생각한 뒤 AI와 비교해 보세요."
+    },
+    {
+     "name": "생각의 많은 부분을 AI가 대신합니다",
+     "text": "머리를 쓰는 일의 많은 부분을 AI에게 넘기고 있습니다. 하루에 한 가지 일은 처음부터 끝까지 혼자 해 보고, AI의 답 하나를 다른 출처로 확인해 보세요."
+    }
+   ]
+  },
+  "it": {
+   "options": [
+    "Mai",
+    "Raramente",
+    "A volte",
+    "Spesso",
+    "Costantemente"
+   ],
+   "items": [
+    "Chiedi all’IA invece di provare a ricordare qualcosa da solo?",
+    "Lasci che sia l’IA a ricordare fatti, date o nomi che potresti ricordare tu?",
+    "Dimentichi presto ciò che ti ha detto l’IA, perché sai che puoi chiedere di nuovo?",
+    "Chiedi all’IA di risolvere un problema prima di averci provato tu?",
+    "Affidi all’IA l’intero compito invece della sola parte in cui ti blocchi?",
+    "Usi l’IA per prendere decisioni che potresti prendere da solo?",
+    "Rinunci presto a una domanda difficile perché l’IA può rispondere?",
+    "Accetti ciò che dice l’IA senza verificarlo?",
+    "Ti fidi della risposta dell’IA più del tuo ragionamento?",
+    "Presenti la risposta dell’IA come tua senza averla capita?"
+   ],
+   "areas": {
+    "memory": "Memoria",
+    "solving": "Risolvere da solo",
+    "checking": "Verificare ciò che dice l’IA"
+   },
+   "levels": [
+    {
+     "name": "Pensi soprattutto con la tua testa",
+     "text": "Usi l’IA come aiuto e il pensiero resta tuo. Continua a provare prima da solo e a verificare le sue risposte."
+    },
+    {
+     "name": "L’IA fa parte del tuo pensiero",
+     "text": "Affidi all’IA una parte evidente del tuo pensiero. Un piccolo passo aiuta: pensa prima due minuti da solo, poi confronta con l’IA."
+    },
+    {
+     "name": "L’IA fa gran parte del tuo pensiero",
+     "text": "Affidi all’IA molto lavoro mentale. Prova a fare ogni giorno un compito interamente da solo e a verificare una risposta dell’IA con un’altra fonte."
+    }
+   ]
+  },
+  "hi": {
+   "options": [
+    "कभी नहीं",
+    "शायद ही कभी",
+    "कभी-कभी",
+    "अक्सर",
+    "हमेशा"
+   ],
+   "items": [
+    "क्या आप ख़ुद कुछ याद करने की कोशिश के बजाय AI से पूछ लेते हैं?",
+    "क्या आप ऐसे तथ्य, तारीख़ें या नाम AI के भरोसे छोड़ देते हैं जो आप ख़ुद याद रख सकते हैं?",
+    "क्या AI की बताई बात आप जल्दी भूल जाते हैं, क्योंकि जानते हैं कि फिर पूछ सकते हैं?",
+    "क्या ख़ुद कोशिश करने से पहले ही आप AI से कोई समस्या हल करवाते हैं?",
+    "क्या आप सिर्फ़ अटके हुए हिस्से के बजाय पूरा काम AI को सौंप देते हैं?",
+    "क्या आप ऐसे फ़ैसले AI से करवाते हैं जो आप ख़ुद ले सकते हैं?",
+    "क्या AI जवाब दे सकता है, इसलिए आप कठिन सवाल पर जल्दी हार मान लेते हैं?",
+    "क्या आप AI की बात बिना जाँचे मान लेते हैं?",
+    "क्या आप अपनी सोच से ज़्यादा AI के जवाब पर भरोसा करते हैं?",
+    "क्या आप AI का जवाब समझे बिना उसे अपना बताकर आगे देते हैं?"
+   ],
+   "areas": {
+    "memory": "याददाश्त",
+    "solving": "ख़ुद समस्या हल करना",
+    "checking": "AI की बात जाँचना"
+   },
+   "levels": [
+    {
+     "name": "आप ज़्यादातर ख़ुद सोचते हैं",
+     "text": "आप AI को मददगार की तरह इस्तेमाल करते हैं और सोचना अपने पास रखते हैं। पहले ख़ुद कोशिश करते रहें और AI के जवाब जाँचते रहें।"
+    },
+    {
+     "name": "आपकी सोच का कुछ हिस्सा AI करता है",
+     "text": "आप अपनी सोच का अच्छा-ख़ासा हिस्सा AI को सौंपते हैं। एक छोटा कदम मदद करता है: पहले दो मिनट ख़ुद सोचें, फिर AI से तुलना करें।"
+    },
+    {
+     "name": "आपकी सोच का बड़ा हिस्सा AI करता है",
+     "text": "आप दिमाग़ी काम का बड़ा हिस्सा AI को सौंपते हैं। रोज़ एक काम पूरी तरह ख़ुद करें और AI के एक जवाब को किसी दूसरे स्रोत से जाँचें।"
+    }
+   ]
+  }
+ }
+}

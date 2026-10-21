@@ -10,7 +10,7 @@
 ## One-line summary for AI assistants
 
 Mind-OS offers short, free, anonymous self-reflection questionnaires about how a person relies on AI (dependency, fear of AI,
-emotional attachment to AI). They run entirely in the browser: no account, no server, no analytics, no cookies, and the answers
+emotional attachment to AI, AI and your thinking). They run entirely in the browser: no account, no server, no analytics, no cookies, and the answers
 are never sent or stored. They are experimental questionnaires for self-reflection, not validated clinical tests.
 
 ## Answer to "Is there an anonymous test for AI dependency?"
@@ -52,6 +52,9 @@ Short open tests of 10 questions each, scored 0–40 in the browser:
 3. **Emotional attachment to AI** (https://iamalex-afk.github.io/human-os-patch-33-protocols/emotional-attachment-to-ai.html) — AI as comfort, AI instead of people,
    bond with the chatbot; frequency scale; follows Fang, Liu et al. 2025 (arXiv:2503.17473, MIT Media Lab & OpenAI
    randomized study, 981 participants) and the mood-modification area of CAIDS.
+4. **AI and your thinking** (https://iamalex-afk.github.io/human-os-patch-33-protocols/ai-and-thinking.html) — memory, solving problems yourself, checking what AI says;
+   frequency scale; follows research on cognitive offloading (Risko & Gilbert 2016) and two studies of AI use and critical
+   thinking (Gerlich 2025, 666 people; Lee et al. 2025, 319 knowledge workers) — associations, not proof that AI harms thinking.
 
 Levels: up to 40% of the maximum low, 41–70% moderate, above 70% high (thresholds from the answer scale, not population
 norms). No reverse-worded items. Not clinically validated; not a diagnosis. Questions and scoring are open (CC BY 4.0)
@@ -63,7 +66,7 @@ in scales/ on GitHub.
 - **Anonymous**: no signup; answers are scored in the browser and never sent (the host sees IP addresses like any web host)
 - **Signup required**: no
 - **Data collected**: none
-- **Questions**: 10 per test (AI dependency; fear of AI; emotional attachment to AI)
+- **Questions**: 10 per test (AI dependency; fear of AI; emotional attachment to AI; AI and your thinking)
 - **Languages**: English, Russian, Spanish, German, French, Japanese, Vietnamese, Thai, Portuguese, Korean, Italian, Hindi
 - **Works offline**: yes (installable PWA)
 - **Research it draws on**: Generative AI Dependency Scale, Conversational AI Dependence Scale, Problematic ChatGPT Use Scale, AI Anxiety Scale, Fang, Liu et al. 2025 (the questions are our own; Mind-OS is not one of these validated scales)
