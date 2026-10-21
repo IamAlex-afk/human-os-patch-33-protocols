@@ -1563,3 +1563,10 @@ a.chooser-card:hover, a.chooser-card:focus-visible { border-color: var(--accent)
 /* Crisis line under every result (audit 2026-10-20) */
 .scale-crisis { margin: 1rem auto 0; max-width: 640px; padding: 0.85rem 1rem; border-left: 3px solid #fbbf24; background: rgba(251, 191, 36, 0.08); border-radius: 0.5rem; font-size: 0.92rem; line-height: 1.55; }
 .scale-crisis a { color: #fbbf24; text-decoration: underline; }
+
+/* Plain words first, research details folded (2026-10-21) */
+.scale-plain { font-size: 1.02rem; line-height: 1.6; }
+.scale-more { margin: 0.75rem 0 0; border: 1px solid rgba(255, 255, 255, 0.14); border-radius: 0.6rem; padding: 0.2rem 1rem; }
+.scale-more summary { cursor: pointer; padding: 0.65rem 0; color: var(--accent); font-weight: 600; min-height: 44px; }
+.scale-more[open] summary { border-bottom: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 0.5rem; }
+.scale-more p { font-size: 0.92rem; line-height: 1.6; opacity: 0.92; }
