@@ -1,8 +1,8 @@
 # Mind-OS — Free Anonymous AI Dependency Test
 
-**A free, anonymous, browser-only self-assessment that measures your psychological dependency on AI — no signup, no data collection.**
+**Free, anonymous self-check tests about how you use AI — scored in your browser, no signup, no data collection.**
 
-Mind-OS has short client-side tests of 10 questions — AI dependency (home page) and fear of AI — available in 12 languages, plus the 33 Protocols. The questions, answer options and scoring are open under CC BY 4.0 in [scales/](scales/).
+Mind-OS has five short client-side tests of 10 questions each, in 12 languages, plus the 33 Protocols. The questions, answer options and scoring are open under CC BY 4.0 in [scales/](scales/).
 
 It's built around **the 33 Protocols** — a philosophical cognitive tool and systems-engineering framework, co-authored through a Human-in-the-Loop (HITL) process, that treats human cognition as an operating system that can be debugged, patched, and upgraded for the AI era.
 
@@ -10,16 +10,25 @@ By Aleksei Sergeevich Bitkin.
 
 ---
 
-## 🧪 Take the Free Test
+## 🧪 Take a Free Test
 
-**[> RUN THE FREE TEST](https://iamalex-afk.github.io/human-os-patch-33-protocols/)**
+| Test | What it looks at | Link |
+| :--- | :--- | :--- |
+| AI dependency | how much you lean on AI in thinking, feelings and work | [Take it](https://iamalex-afk.github.io/human-os-patch-33-protocols/) |
+| Fear of AI | worry about AI and the future | [Take it](https://iamalex-afk.github.io/human-os-patch-33-protocols/fear-of-ai.html) |
+| Emotional attachment to AI | feelings towards AI chatbots and companions | [Take it](https://iamalex-afk.github.io/human-os-patch-33-protocols/emotional-attachment-to-ai.html) |
+| AI and your thinking | handing your thinking over to AI | [Take it](https://iamalex-afk.github.io/human-os-patch-33-protocols/ai-and-thinking.html) |
+| AI and productivity | habits that can eat up the time AI saves | [Take it](https://iamalex-afk.github.io/human-os-patch-33-protocols/ai-and-productivity.html) |
 
-It's a privacy-first, client-side assessment (no data leaves your device) that diagnoses your stance on AI integration:
-* **Augmented Pioneer:** High symbiosis. *Risk: Cognitive atrophy and over-delegation.*
-* **Biological Purist:** High resistance. *Risk: AI-induced anxiety and cognitive fatigue.*
-* **Uncalibrated Observer:** Neutral. *Risk: Sudden systemic shock.*
+Each test has 10 questions (about two minutes), a result by area, a simple 7-day plan, helplines for your country, and an
+optional result picture to share. What published research says about AI and people is summed up on
+[What science knows about AI](https://iamalex-afk.github.io/human-os-patch-33-protocols/what-science-knows-about-ai.html).
 
-Nothing leaves your device: the tests are scored in the browser, and the site keeps only your language choice in localStorage.
+The tests are self-reflection tools, not validated clinical tests and not a diagnosis.
+
+Nothing leaves your device: the tests are scored in the browser. The site keeps your language choice in localStorage and,
+only if you press "Save this result on this device", the date, score and level of your last results (never the answers);
+one button deletes them.
 
 ---
 
