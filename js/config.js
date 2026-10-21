@@ -5,10 +5,6 @@ const CONFIG = {
   FEAR_MAX: 16,
 
   STORAGE_KEYS: {
-    TRACKER:        'mindos_tracker_v3',
-    POLL_VOTED:     'mindos_poll_v3_voted',
-    POLL_BASE:      'mindos_poll_v3_base',
-    POLL_VOTE:      'mindos_poll_v3_vote',
     TEST_ANSWERS:   'mindos_test_answers',
     TEST_WIZARD:    'mindos_test_wizard',
     TEST_COMPLETED: 'mindos_test_completed',

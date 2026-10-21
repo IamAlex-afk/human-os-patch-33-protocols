@@ -15,3 +15,5 @@ tools/
 build.ps1
 localize_jsonld.py
 CLAUDE.md
+js/quiz.js
+js/card.js

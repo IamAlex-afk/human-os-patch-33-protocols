@@ -181,24 +181,6 @@
   }
 
   function ensureDynamicElements() {
-    if (!document.getElementById('ctaText')) {
-      const pollBlock = document.querySelector('.poll-block');
-      if (pollBlock) {
-        const el = document.createElement('p');
-        el.id = 'ctaText';
-        el.style.cssText = 'font-size:0.95rem;color:var(--text-dim);margin-top:1rem;';
-        pollBlock.appendChild(el);
-      }
-    }
-    if (!document.querySelector('[data-i18n="pollPrivacy"]')) {
-      const pollSubmit = document.getElementById('submitPoll');   // shown before voting, right under the button
-      if (pollSubmit) {
-        const el = document.createElement('p');
-        el.setAttribute('data-i18n', 'pollPrivacy');
-        el.style.cssText = 'font-size:0.8rem;color:var(--text-dim);margin-top:0.8rem;opacity:0.75;';
-        pollSubmit.insertAdjacentElement('afterend', el);
-      }
-    }
   }
 
   function applyLanguage(lang) {
@@ -282,25 +264,7 @@
 
 
 
-    ut('pollTitle', t.pollTitle);
-    ut('pollDesc', t.pollDesc);
-    ut('pollMilestone', t.pollMilestone);
-    ut('pollFor', t.pollFor);
-    ut('pollNeutral', t.pollNeutral);
-    ut('pollAgainst', t.pollAgainst);
-    ut('submitPoll', t.submitPoll);
-    ut('pollResultsTitle', t.pollResultsTitle);
-    uh('pollBridge', t.pollBridge);
-    ut('pollInviteText', t.pollInviteText);
-
     ut('ctaText', t.ctaText);
-    const pollPrivacyEl = document.querySelector('[data-i18n="pollPrivacy"]');
-    if (pollPrivacyEl) {
-      const fallback = lang === 'ru'
-        ? 'При голосовании на сервер Google Apps Script отправляется только ваш выбор; сервер хранит три общих счётчика и не хранит IP-адрес, email и время голоса. Пока вы не нажали кнопку, ничего не отправляется.'
-        : 'Voting sends only your choice to a Google Apps Script server, which keeps three totals — no IP address, email or time of the vote is stored. Nothing is sent unless you press the button.';
-      pollPrivacyEl.textContent = t.pollPrivacy || fallback;
-    }
 
     ut('ctaBarText', t.ctaBarText);
     ut('footerText', t.footerText);
@@ -368,7 +332,6 @@
     ut('faqAiDangerQ', t.faqAiDangerQ);  uh('faqAiDangerA', t.faqAiDangerA);
 
     if (window.Quiz) Quiz.setLang(lang);
-    if (window.Poll) Poll.setLang(lang);
 
     if (window.Quiz) {
       if (!Quiz.COMPLETED_AXES.a1) Quiz.renderWizard('q1Container', t.q1, 'a1', t);
@@ -391,7 +354,6 @@
     }
 
     renderProtocols(t.protocols);
-    if (window.Poll) Poll.syncUI();
     if (window.Quiz) Quiz.updateOverallProgress();
   }
 
@@ -454,22 +416,6 @@
     initLangSuggestBanner();
     if (window.Quiz && Quiz.checkSharedResult) { try { Quiz.checkSharedResult(); } catch(e) {} }
 
-    if (window.Poll) {
-      document.getElementById('submitPoll')?.addEventListener('click', () => Poll.submit());
-      document.getElementById('pollInviteBtn')?.addEventListener('click', () => {
-        const t = getT(currentLang);
-        const pollUrl = new URL('poll.html', window.location.href).href;
-        const text = (t.pollInviteShareText || 'How do you feel about AI? Vote anonymously in the global Mind-OS poll:');
-        if (navigator.share) {
-          navigator.share({ title: 'Mind-OS Global AI Poll', text, url: pollUrl }).catch(() => {});
-        } else if (navigator.clipboard) {
-          navigator.clipboard.writeText(text + ' ' + pollUrl).then(() => {
-            alert(t.urlCopied || 'Link copied!');
-          }).catch(() => {});
-        }
-      });
-    }
-
     initFAQ();
 
     document.getElementById('shareButton')?.addEventListener('click', () => {
@@ -501,7 +447,6 @@
 
     const navMap = [
       { nav: 'navAssessment', sec: 'test-section' },
-      { nav: 'navPoll',       sec: 'poll-section' },
       { nav: 'navProtocols',  sec: 'protocols-section' },
       { nav: 'navFaq',        sec: 'faq-section' }
     ];
