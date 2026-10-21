@@ -1542,7 +1542,7 @@ nav.info-box #navAssessment .cta-sub { font-size: 0.82rem; font-weight: 600; opa
 /* Test chooser on the home page (2026-10-20): one card per test, live cards link, "soon" cards are muted */
 .test-chooser { margin: 0 0 2.2rem; }
 .test-chooser h2 { margin-bottom: 1rem; }
-.chooser-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 1rem; }
+.chooser-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr)); gap: 1rem; }
 .chooser-card { display: flex; flex-direction: column; gap: 0.4rem; padding: 1.25rem; border: 1px solid var(--border); border-radius: 1.25rem;
   background: var(--surface); color: var(--text); text-decoration: none; transition: border-color .2s, box-shadow .2s, transform .2s; min-height: 9rem; }
 a.chooser-card:hover, a.chooser-card:focus-visible { border-color: var(--accent); box-shadow: 0 0 24px var(--accent-soft); transform: translateY(-2px); }
@@ -1599,3 +1599,5 @@ a.chooser-card:hover, a.chooser-card:focus-visible { border-color: var(--accent)
 .sci-meta { font-size: 0.85rem; opacity: 0.9; }
 .sci-kind { font-weight: 600; }
 .sci-outro { margin-top: 1.5rem; }
+.chooser-more { margin: 1rem 0 0; text-align: center; }
+.chooser-more a { color: var(--accent); text-decoration: underline; font-weight: 600; }
