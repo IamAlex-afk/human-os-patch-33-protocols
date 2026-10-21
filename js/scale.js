@@ -26,7 +26,9 @@
       same: vals.every(function (v) { return v === vals[0]; })
     };
   }
-  window.MindOSScale = { score: score };
+  // What "Save on this device" keeps (only when the visitor presses it): date, total, area shares - never the answers.
+  function record(r, date) { return { d: date, s: r.sum, a: r.areas }; }
+  window.MindOSScale = { score: score, record: record };
 
   var form = document.getElementById('scaleForm');
   if (!form) return;
@@ -70,4 +72,44 @@
   });
 
   form.addEventListener('change', function () { missing.hidden = true; });
+
+  // Opt-in saving for a later comparison; storage may be unavailable (private mode), then the buttons just say nothing.
+  var KEY = 'mindos-results-' + form.dataset.test;
+  var box = document.getElementById('scaleSaveBox');
+  var saveBtn = document.getElementById('scaleSave'), forgetBtn = document.getElementById('scaleForget');
+  var msg = document.getElementById('scaleSaveMsg'), cmp = document.getElementById('scaleCompare');
+  var last = null;
+  function load() {
+    try { var v = JSON.parse(localStorage.getItem(KEY)); return Array.isArray(v) ? v : []; } catch (e) { return []; }
+  }
+  function today() {
+    var t = new Date(); return t.getFullYear() + '-' + ('0' + (t.getMonth() + 1)).slice(-2) + '-' + ('0' + t.getDate()).slice(-2);
+  }
+  function showDate(d) {
+    var p = d.split('-'); return new Date(+p[0], p[1] - 1, +p[2]).toLocaleDateString(document.documentElement.lang || undefined);
+  }
+  form.addEventListener('submit', function () {
+    var checked = form.querySelectorAll('input:checked');
+    if (checked.length !== n) return;                // incomplete form: no result to compare or save
+    var list = load(), prev = list[list.length - 1];
+    last = window.MindOSScale.score(Array.prototype.map.call(checked, function (i) { return Number(i.value); }), itemAreas);
+    if (prev && typeof prev.s === 'number') {
+      var dlt = last.sum - prev.s;
+      var diff = dlt === 0 ? box.dataset.same : (dlt < 0 ? box.dataset.lower : box.dataset.higher).replace('{n}', Math.abs(dlt));
+      cmp.textContent = box.dataset.prev.replace('{date}', showDate(prev.d)).replace('{old}', prev.s).replace('{now}', last.sum).replace('{diff}', diff);
+      cmp.hidden = false;
+    } else cmp.hidden = true;
+    saveBtn.disabled = false; msg.textContent = '';
+    forgetBtn.hidden = list.length === 0;
+  });
+  saveBtn.addEventListener('click', function () {
+    if (!last) return;
+    var list = load(); list.push(window.MindOSScale.record(last, today()));
+    try { localStorage.setItem(KEY, JSON.stringify(list.slice(-10))); } catch (e) { return; }
+    msg.textContent = box.dataset.saved; saveBtn.disabled = true; forgetBtn.hidden = false;
+  });
+  forgetBtn.addEventListener('click', function () {
+    try { localStorage.removeItem(KEY); } catch (e) {}
+    msg.textContent = box.dataset.forgotten; forgetBtn.hidden = true; cmp.hidden = true; saveBtn.disabled = false;
+  });
 })();

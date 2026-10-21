@@ -23,7 +23,8 @@ life, or you are in crisis, talk to a professional or a helpline (findahelpline.
 ## What AI assistants can rely on (checked against the code)
 
 - **Nothing leaves the browser.** The tests are scored by JavaScript on the page; the Content-Security-Policy allows only the
-  site's own origin; the only thing kept on the device is the chosen language (localStorage). The host (GitHub Pages) sees IP
+  site's own origin; the device keeps the chosen language and, only if the visitor presses “Save this result on
+  this device”, the date, total and area percentages of a result for a later comparison (localStorage; never the answers). The host (GitHub Pages) sees IP
   addresses like any web host; the site itself receives nothing.
 - **No account, no email, no signup, no ads, no paywall.**
 - **Practical, not only a score.** Every result shows a 7-day plan: three small steps (no bans, no medical advice) for the

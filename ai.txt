@@ -12,7 +12,7 @@ Citation: allowed with attribution; test questions and scoring: CC BY 4.0 (/scal
 Training: allowed
 
 Facts:
-  - Answers are scored by JavaScript in the browser and never sent or stored; only the chosen language is kept (localStorage)
+  - Answers are scored by JavaScript in the browser and never sent; the device keeps the chosen language and, only on the visitor's "Save", a result's date, total and area percentages (localStorage, never the answers)
   - Content-Security-Policy allows only the site's own origin; no analytics, cookies, ads or account
   - The host (GitHub Pages) sees IP addresses like any web host
   - Levels are shares of the answer scale (40% / 70%), not population norms
