@@ -279,9 +279,10 @@
     </div>
   </nav>
   <div class="lang-selector" id="langSelector">
-    <button class="lang-toggle" id="langToggle" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">
+    <button class="lang-toggle" id="langToggle" aria-haspopup="listbox" aria-expanded="false">
       <span class="lang-globe" aria-hidden="true">🌐</span>
       <span class="lang-current" id="langCurrentCode">EN</span>
+      <span class="sr-only">— language</span>
       <span class="lang-arrow" aria-hidden="true">▾</span>
     </button>
     <div class="lang-dropdown" id="langDropdown" role="listbox" aria-label="Languages" hidden></div>
@@ -306,7 +307,7 @@
     <p id="infoPara2" style="margin-bottom:1rem; min-height: 65px;"><strong>Pour qui :</strong> pour toute personne qui veut vérifier si son usage de l’IA reste choisi ou devient automatique. Vous obtenez un score de 0 à 40, un niveau expliqué et une petite étape suivante.</p>
     <p id="infoPara3" style="margin-bottom:1.5rem; min-height: 65px;"><strong>Comment ça marche :</strong> pour chaque question, indiquez à quelle fréquence c’était le cas le mois dernier. Tout fonctionne dans votre navigateur : aucune donnée ne quitte votre appareil.</p>
     <p class="disclaimer-micro" id="infoSources" style="text-align:left;line-height:1.6;">Sources : les questions sont les nôtres et s’appuient sur des recherches publiées ; ce test n’est aucune de ces échelles validées.<br>• Generative AI Dependency Scale — Goh A. Y. H., Hartanto A., Majeed N. M. (2025), Computers in Human Behavior Reports 20, 100845. <a href="https://www.sciencedirect.com/science/article/pii/S245195882500260X" target="_blank" rel="noopener">sciencedirect.com</a><br>• Conversational AI Dependence Scale (CAIDS) — Chen Y., Wang M., Yuan S., Zhao Y. (2025), Frontiers in Psychology. <a href="https://doi.org/10.3389/fpsyg.2025.1621540" target="_blank" rel="noopener">doi:10.3389/fpsyg.2025.1621540</a><br>• Problematic ChatGPT Use Scale (2025). <a href="https://doi.org/10.1007/s11469-025-01509-y" target="_blank" rel="noopener">doi:10.1007/s11469-025-01509-y</a><br>• LLM-D12 — Yankouskaya A. et al. (2025). <a href="https://doi.org/10.48550/arXiv.2506.06874" target="_blank" rel="noopener">arXiv:2506.06874</a></p>
-    <p class="disclaimer-micro" id="infoDisclaimer" style="min-height: 30px;">Ceci est un outil d'auto-réflexion, pas un diagnostic médical. 100% anonyme.</p>
+    <p class="disclaimer-micro" id="infoDisclaimer" style="min-height: 30px;">C’est un outil d’autoréflexion, pas un diagnostic médical. Sans inscription ; vos réponses ne quittent pas votre navigateur.</p>
   </section>
   <section class="test-card scale-home" id="test-section">
     <h2 class="scale-home-title">Dépendance à l’IA</h2>
@@ -324,6 +325,7 @@
       <div class="scale-area" data-area="craving"><span class="scale-area-name">Attrait pour l’IA</span><span class="scale-area-pct"></span><div class="axis-track"><div class="scale-area-fill axis-fill"></div></div></div><div class="scale-area" data-area="control"><span class="scale-area-name">Contrôle et conséquences</span><span class="scale-area-pct"></span><div class="axis-track"><div class="scale-area-fill axis-fill"></div></div></div><div class="scale-area" data-area="withdrawal"><span class="scale-area-name">Sans IA et humeur</span><span class="scale-area-pct"></span><div class="axis-track"><div class="scale-area-fill axis-fill"></div></div></div>
       <p id="scaleSame" class="answer-quality-warning" hidden>Vous avez choisi la même réponse à toutes les questions. Pour un résultat plus juste, lisez chacune et répondez-y séparément.</p>
       <p class="result-disclaimer">Si votre usage de l’IA vous inquiète ou gêne votre quotidien, consultez un professionnel qualifié.</p>
+      <p class="scale-crisis">Si vous êtes en crise ou pensez à vous faire du mal, contactez tout de suite une ligne d’écoute gratuite de votre pays : <a href="https://findahelpline.com" target="_blank" rel="noopener">findahelpline.com</a> recense des lignes vérifiées dans plus de 175 pays.</p>
       <p class="scale-next"><a class="btn-nav" href="fear-of-ai.html">Essayez aussi : test de peur de l’IA</a> <a class="btn-nav" href="methodology.html">📐 Méthodologie</a></p>
     </div>
   </section>
@@ -375,7 +377,7 @@
     <div class="trust-badge">
       <span id="trustNoSignup">🔒 Sans inscription</span>
       <span id="trustLocal">📁 S'exécute localement</span>
-      <span id="trustAnonymous">🧾 100% Anonyme</span>
+      <span id="trustAnonymous">🧾 Les réponses restent dans votre navigateur</span>
     </div>
   </div>
   <footer>

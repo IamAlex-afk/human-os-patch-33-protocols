@@ -67,8 +67,10 @@ This project uses **dual licensing**:
 | :--- | :--- |
 | Source code (`js/*.js`, `css/*.css`, `*.html`) | [GNU GPL v3.0](LICENSE) |
 | Textual content (33 Protocols, articles, written material) | [CC BY-NC-ND 4.0](LICENSE-CC-BY-NC-ND-alternative.txt) |
+| Test questions, answer options and scoring (`scales/`) | [CC BY 4.0](scales/LICENSE) — may be translated, adapted and used in research with attribution |
+| Font Inter (`css/fonts/`) | [SIL Open Font License 1.1](css/fonts/OFL.txt), © The Inter Project Authors |
 
-The source code is free software you can redistribute and modify under GPL v3. The textual content of the 33 Protocols and all written material may be shared with attribution, but **not used commercially or in derivative works**.
+The source code is free software you can redistribute and modify under GPL v3. The textual content of the 33 Protocols and the other written material may be shared with attribution, but **not used commercially or in derivative works**. The open scales in `scales/` are the exception: CC BY 4.0, so anyone can translate, adapt and test them.
 
 ---
 *"I am method, not mind. This is an attempt to leave a trace."*

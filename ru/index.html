@@ -279,9 +279,10 @@
     </div>
   </nav>
   <div class="lang-selector" id="langSelector">
-    <button class="lang-toggle" id="langToggle" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">
+    <button class="lang-toggle" id="langToggle" aria-haspopup="listbox" aria-expanded="false">
       <span class="lang-globe" aria-hidden="true">🌐</span>
       <span class="lang-current" id="langCurrentCode">EN</span>
+      <span class="sr-only">— language</span>
       <span class="lang-arrow" aria-hidden="true">▾</span>
     </button>
     <div class="lang-dropdown" id="langDropdown" role="listbox" aria-label="Languages" hidden></div>
@@ -306,7 +307,7 @@
     <p id="infoPara2" style="margin-bottom:1rem; min-height: 65px;"><strong>Для кого:</strong> для всех, кто хочет проверить, осознанно ли ещё пользуется ИИ или это уже автоматизм. Вы получите балл от 0 до 40, уровень словами и один маленький следующий шаг.</p>
     <p id="infoPara3" style="margin-bottom:1.5rem; min-height: 65px;"><strong>Как это работает:</strong> на каждый вопрос выберите, как часто это было с вами за последний месяц. Всё работает в вашем браузере — данные не покидают устройство.</p>
     <p class="disclaimer-micro" id="infoSources" style="text-align:left;line-height:1.6;">Источники: вопросы теста составлены нами с опорой на опубликованные исследования; сам тест не является ни одной из этих валидированных шкал.<br>• Generative AI Dependency Scale — Goh A. Y. H., Hartanto A., Majeed N. M. (2025), Computers in Human Behavior Reports 20, 100845. <a href="https://www.sciencedirect.com/science/article/pii/S245195882500260X" target="_blank" rel="noopener">sciencedirect.com</a><br>• Conversational AI Dependence Scale (CAIDS) — Chen Y., Wang M., Yuan S., Zhao Y. (2025), Frontiers in Psychology. <a href="https://doi.org/10.3389/fpsyg.2025.1621540" target="_blank" rel="noopener">doi:10.3389/fpsyg.2025.1621540</a><br>• Problematic ChatGPT Use Scale (2025). <a href="https://doi.org/10.1007/s11469-025-01509-y" target="_blank" rel="noopener">doi:10.1007/s11469-025-01509-y</a><br>• LLM-D12 — Yankouskaya A. et al. (2025). <a href="https://doi.org/10.48550/arXiv.2506.06874" target="_blank" rel="noopener">arXiv:2506.06874</a></p>
-    <p class="disclaimer-micro" id="infoDisclaimer" style="min-height: 30px;">Это инструмент саморефлексии, а не медицинский диагноз. 100% анонимно.</p>
+    <p class="disclaimer-micro" id="infoDisclaimer" style="min-height: 30px;">Это инструмент саморефлексии, а не медицинский диагноз. Без регистрации; ответы не покидают ваш браузер.</p>
   </section>
   <section class="test-card scale-home" id="test-section">
     <h2 class="scale-home-title">Зависимость от ИИ</h2>
@@ -324,6 +325,7 @@
       <div class="scale-area" data-area="craving"><span class="scale-area-name">Тяга к ИИ</span><span class="scale-area-pct"></span><div class="axis-track"><div class="scale-area-fill axis-fill"></div></div></div><div class="scale-area" data-area="control"><span class="scale-area-name">Контроль и последствия</span><span class="scale-area-pct"></span><div class="axis-track"><div class="scale-area-fill axis-fill"></div></div></div><div class="scale-area" data-area="withdrawal"><span class="scale-area-name">Без ИИ и настроение</span><span class="scale-area-pct"></span><div class="axis-track"><div class="scale-area-fill axis-fill"></div></div></div>
       <p id="scaleSame" class="answer-quality-warning" hidden>Вы выбрали один и тот же ответ на все вопросы. Для точного результата прочитайте каждый и ответьте отдельно.</p>
       <p class="result-disclaimer">Если использование ИИ вас тревожит или мешает повседневной жизни, обратитесь к квалифицированному специалисту.</p>
+      <p class="scale-crisis">Если вам очень тяжело или появляются мысли причинить себе вред, сразу обратитесь на бесплатную линию помощи в своей стране: на <a href="https://findahelpline.com" target="_blank" rel="noopener">findahelpline.com</a> собраны проверенные линии более чем в 175 странах.</p>
       <p class="scale-next"><a class="btn-nav" href="fear-of-ai.html">Ещё: тест на страх перед ИИ</a> <a class="btn-nav" href="methodology.html">📐 Методика</a></p>
     </div>
   </section>
@@ -375,7 +377,7 @@
     <div class="trust-badge">
       <span id="trustNoSignup">🔒 Без регистрации</span>
       <span id="trustLocal">📁 Работает в браузере</span>
-      <span id="trustAnonymous">🧾 100% Анонимно</span>
+      <span id="trustAnonymous">🧾 Ответы остаются в браузере</span>
     </div>
   </div>
   <footer>

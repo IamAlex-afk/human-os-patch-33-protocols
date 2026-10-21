@@ -279,9 +279,10 @@
     </div>
   </nav>
   <div class="lang-selector" id="langSelector">
-    <button class="lang-toggle" id="langToggle" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">
+    <button class="lang-toggle" id="langToggle" aria-haspopup="listbox" aria-expanded="false">
       <span class="lang-globe" aria-hidden="true">🌐</span>
       <span class="lang-current" id="langCurrentCode">EN</span>
+      <span class="sr-only">— language</span>
       <span class="lang-arrow" aria-hidden="true">▾</span>
     </button>
     <div class="lang-dropdown" id="langDropdown" role="listbox" aria-label="Languages" hidden></div>
@@ -306,7 +307,7 @@
     <p id="infoPara2" style="margin-bottom:1rem; min-height: 65px;"><strong>Für wen:</strong> für alle, die prüfen möchten, ob sie KI noch bewusst nutzen oder schon automatisch. Du bekommst einen Wert von 0 bis 40, eine Stufe in Worten und einen kleinen nächsten Schritt.</p>
     <p id="infoPara3" style="margin-bottom:1.5rem; min-height: 65px;"><strong>So funktioniert es:</strong> Wähle bei jeder Frage, wie oft das im letzten Monat auf dich zutraf. Alles läuft in deinem Browser – keine Daten verlassen dein Gerät.</p>
     <p class="disclaimer-micro" id="infoSources" style="text-align:left;line-height:1.6;">Quellen: Die Fragen stammen von uns und stützen sich auf veröffentlichte Forschung; dieser Selbsttest ist keine dieser validierten Skalen.<br>• Generative AI Dependency Scale — Goh A. Y. H., Hartanto A., Majeed N. M. (2025), Computers in Human Behavior Reports 20, 100845. <a href="https://www.sciencedirect.com/science/article/pii/S245195882500260X" target="_blank" rel="noopener">sciencedirect.com</a><br>• Conversational AI Dependence Scale (CAIDS) — Chen Y., Wang M., Yuan S., Zhao Y. (2025), Frontiers in Psychology. <a href="https://doi.org/10.3389/fpsyg.2025.1621540" target="_blank" rel="noopener">doi:10.3389/fpsyg.2025.1621540</a><br>• Problematic ChatGPT Use Scale (2025). <a href="https://doi.org/10.1007/s11469-025-01509-y" target="_blank" rel="noopener">doi:10.1007/s11469-025-01509-y</a><br>• LLM-D12 — Yankouskaya A. et al. (2025). <a href="https://doi.org/10.48550/arXiv.2506.06874" target="_blank" rel="noopener">arXiv:2506.06874</a></p>
-    <p class="disclaimer-micro" id="infoDisclaimer" style="min-height: 30px;">Dies ist ein Werkzeug zur Selbstreflexion, keine medizinische Diagnose. 100% anonym.</p>
+    <p class="disclaimer-micro" id="infoDisclaimer" style="min-height: 30px;">Ein Werkzeug zur Selbstreflexion, keine medizinische Diagnose. Ohne Anmeldung; deine Antworten verlassen deinen Browser nicht.</p>
   </section>
   <section class="test-card scale-home" id="test-section">
     <h2 class="scale-home-title">KI-Abhängigkeit</h2>
@@ -324,6 +325,7 @@
       <div class="scale-area" data-area="craving"><span class="scale-area-name">Sog zur KI</span><span class="scale-area-pct"></span><div class="axis-track"><div class="scale-area-fill axis-fill"></div></div></div><div class="scale-area" data-area="control"><span class="scale-area-name">Kontrolle und Folgen</span><span class="scale-area-pct"></span><div class="axis-track"><div class="scale-area-fill axis-fill"></div></div></div><div class="scale-area" data-area="withdrawal"><span class="scale-area-name">Ohne KI und Stimmung</span><span class="scale-area-pct"></span><div class="axis-track"><div class="scale-area-fill axis-fill"></div></div></div>
       <p id="scaleSame" class="answer-quality-warning" hidden>Du hast bei allen Fragen dieselbe Antwort gewählt. Für ein genaueres Ergebnis lies jede Frage und beantworte sie einzeln.</p>
       <p class="result-disclaimer">Wenn Ihre KI-Nutzung Sie beunruhigt oder Ihren Alltag beeinträchtigt, wenden Sie sich an eine qualifizierte Fachperson.</p>
+      <p class="scale-crisis">Wenn du in einer Krise bist oder daran denkst, dir etwas anzutun, wende dich sofort an eine kostenlose Hotline in deinem Land: <a href="https://findahelpline.com" target="_blank" rel="noopener">findahelpline.com</a> listet geprüfte Hilfetelefone in über 175 Ländern.</p>
       <p class="scale-next"><a class="btn-nav" href="fear-of-ai.html">Probier auch: Test zur Angst vor KI</a> <a class="btn-nav" href="methodology.html">📐 Methodik</a></p>
     </div>
   </section>
@@ -375,7 +377,7 @@
     <div class="trust-badge">
       <span id="trustNoSignup">🔒 Keine Anmeldung</span>
       <span id="trustLocal">📁 Läuft lokal</span>
-      <span id="trustAnonymous">🧾 100% Anonym</span>
+      <span id="trustAnonymous">🧾 Antworten bleiben im Browser</span>
     </div>
   </div>
   <footer>

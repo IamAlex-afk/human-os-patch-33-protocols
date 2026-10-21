@@ -279,9 +279,10 @@
     </div>
   </nav>
   <div class="lang-selector" id="langSelector">
-    <button class="lang-toggle" id="langToggle" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">
+    <button class="lang-toggle" id="langToggle" aria-haspopup="listbox" aria-expanded="false">
       <span class="lang-globe" aria-hidden="true">🌐</span>
       <span class="lang-current" id="langCurrentCode">EN</span>
+      <span class="sr-only">— language</span>
       <span class="lang-arrow" aria-hidden="true">▾</span>
     </button>
     <div class="lang-dropdown" id="langDropdown" role="listbox" aria-label="Languages" hidden></div>
@@ -306,7 +307,7 @@
     <p id="infoPara2" style="margin-bottom:1rem; min-height: 65px;"><strong>Dành cho ai:</strong> bất kỳ ai muốn kiểm tra xem mình còn dùng AI có chủ đích hay đã thành thói quen tự động. Bạn nhận được điểm từ 0 đến 40, mức độ bằng lời và một bước nhỏ tiếp theo.</p>
     <p id="infoPara3" style="margin-bottom:1.5rem; min-height: 65px;"><strong>Cách hoạt động:</strong> với mỗi câu, chọn mức độ thường xuyên điều đó xảy ra với bạn trong tháng qua. Mọi thứ chạy trong trình duyệt — không dữ liệu nào rời khỏi thiết bị.</p>
     <p class="disclaimer-micro" id="infoSources" style="text-align:left;line-height:1.6;">Nguồn: các câu hỏi do chúng tôi tự soạn, dựa trên những nghiên cứu đã công bố; bài test này không phải là một trong các thang đo đã được kiểm định dưới đây.<br>• Generative AI Dependency Scale — Goh A. Y. H., Hartanto A., Majeed N. M. (2025), Computers in Human Behavior Reports 20, 100845. <a href="https://www.sciencedirect.com/science/article/pii/S245195882500260X" target="_blank" rel="noopener">sciencedirect.com</a><br>• Conversational AI Dependence Scale (CAIDS) — Chen Y., Wang M., Yuan S., Zhao Y. (2025), Frontiers in Psychology. <a href="https://doi.org/10.3389/fpsyg.2025.1621540" target="_blank" rel="noopener">doi:10.3389/fpsyg.2025.1621540</a><br>• Problematic ChatGPT Use Scale (2025). <a href="https://doi.org/10.1007/s11469-025-01509-y" target="_blank" rel="noopener">doi:10.1007/s11469-025-01509-y</a><br>• LLM-D12 — Yankouskaya A. et al. (2025). <a href="https://doi.org/10.48550/arXiv.2506.06874" target="_blank" rel="noopener">arXiv:2506.06874</a></p>
-    <p class="disclaimer-micro" id="infoDisclaimer" style="min-height: 30px;">Đây là công cụ tự suy ngẫm, không phải chẩn đoán y tế. 100% ẩn danh.</p>
+    <p class="disclaimer-micro" id="infoDisclaimer" style="min-height: 30px;">Đây là công cụ tự nhìn lại bản thân, không phải chẩn đoán y khoa. Không cần đăng ký; câu trả lời không rời khỏi trình duyệt.</p>
   </section>
   <section class="test-card scale-home" id="test-section">
     <h2 class="scale-home-title">Phụ thuộc AI</h2>
@@ -324,6 +325,7 @@
       <div class="scale-area" data-area="craving"><span class="scale-area-name">Sức hút của AI</span><span class="scale-area-pct"></span><div class="axis-track"><div class="scale-area-fill axis-fill"></div></div></div><div class="scale-area" data-area="control"><span class="scale-area-name">Kiểm soát và hậu quả</span><span class="scale-area-pct"></span><div class="axis-track"><div class="scale-area-fill axis-fill"></div></div></div><div class="scale-area" data-area="withdrawal"><span class="scale-area-name">Khi thiếu AI và tâm trạng</span><span class="scale-area-pct"></span><div class="axis-track"><div class="scale-area-fill axis-fill"></div></div></div>
       <p id="scaleSame" class="answer-quality-warning" hidden>Bạn đã chọn cùng một đáp án cho mọi câu hỏi. Để có kết quả chính xác hơn, hãy đọc và trả lời từng câu riêng.</p>
       <p class="result-disclaimer">Nếu việc dùng AI khiến bạn lo lắng hoặc ảnh hưởng đến cuộc sống hằng ngày, hãy trao đổi với chuyên gia có chuyên môn.</p>
+      <p class="scale-crisis">Nếu bạn đang khủng hoảng hoặc có ý nghĩ tự làm hại bản thân, hãy liên hệ ngay đường dây hỗ trợ miễn phí ở nước bạn: <a href="https://findahelpline.com" target="_blank" rel="noopener">findahelpline.com</a> liệt kê các đường dây đã được xác minh tại hơn 175 quốc gia.</p>
       <p class="scale-next"><a class="btn-nav" href="fear-of-ai.html">Thử thêm: bài test nỗi sợ AI</a> <a class="btn-nav" href="methodology.html">📐 Phương pháp</a></p>
     </div>
   </section>
@@ -375,7 +377,7 @@
     <div class="trust-badge">
       <span id="trustNoSignup">🔒 Không cần đăng ký</span>
       <span id="trustLocal">📁 Chạy cục bộ</span>
-      <span id="trustAnonymous">🧾 100% Ẩn danh</span>
+      <span id="trustAnonymous">🧾 Câu trả lời ở lại trong trình duyệt</span>
     </div>
   </div>
   <footer>
