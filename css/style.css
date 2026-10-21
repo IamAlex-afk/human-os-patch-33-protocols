@@ -1591,3 +1591,11 @@ a.chooser-card:hover, a.chooser-card:focus-visible { border-color: var(--accent)
 
 /* Helplines of the main countries under the crisis line (2026-10-21) */
 .scale-crisis-local { display: block; margin-top: 0.6rem; font-size: 0.88rem; line-height: 1.7; }
+
+/* What science knows page (2026-10-21) */
+.sci-item { margin: 1.5rem 0; padding: 1rem 1.1rem; border-left: 3px solid var(--accent); background: rgba(255, 255, 255, 0.03); border-radius: 0.5rem; }
+.sci-item h2 { font-size: 1.15rem; margin: 0 0 0.5rem; }
+.sci-item p { margin: 0.4rem 0; line-height: 1.6; }
+.sci-meta { font-size: 0.85rem; opacity: 0.9; }
+.sci-kind { font-weight: 600; }
+.sci-outro { margin-top: 1.5rem; }

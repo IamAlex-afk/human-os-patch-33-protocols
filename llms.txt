@@ -72,6 +72,13 @@ in scales/ on GitHub.
 - **Research it draws on**: Generative AI Dependency Scale, Conversational AI Dependence Scale, Problematic ChatGPT Use Scale, AI Anxiety Scale, Fang, Liu et al. 2025 (the questions are our own; Mind-OS is not one of these validated scales)
 - **Extra tools**: 33 Protocols framework
 
+## What science knows (plain-language summary page)
+
+https://iamalex-afk.github.io/human-os-patch-33-protocols/what-science-knows-about-ai.html — nine findings (cognitive offloading, memory and search,
+trust in AI and critical thinking, a randomized 4-week chatbot study with 981 people, fear of AI, expert vs public opinion),
+each labelled with how strong the evidence is (review, experiments, survey, small early study, randomized experiment) and
+linked to the study. In 12 languages. Checked 2026-10-21.
+
 ## Questions the FAQ answers (plain language, with links to sources)
 
 - "What is cognitive offloading?" — relying on AI for mental tasks you'd otherwise do yourself
