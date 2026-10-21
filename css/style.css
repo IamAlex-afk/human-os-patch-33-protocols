@@ -1570,3 +1570,10 @@ a.chooser-card:hover, a.chooser-card:focus-visible { border-color: var(--accent)
 .scale-more summary { cursor: pointer; padding: 0.65rem 0; color: var(--accent); font-weight: 600; min-height: 44px; }
 .scale-more[open] summary { border-bottom: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 0.5rem; }
 .scale-more p { font-size: 0.92rem; line-height: 1.6; opacity: 0.92; }
+
+/* 7-day plan under the result (2026-10-21) */
+.scale-plan { margin: 1.25rem 0 0.5rem; padding: 1rem 1.1rem; border: 1px solid var(--accent); border-radius: 0.75rem; background: rgba(0, 230, 118, 0.06); text-align: left; }
+.scale-plan h3 { margin: 0 0 0.4rem; color: var(--accent); }
+.scale-plan ol { margin: 0.6rem 0; padding-left: 1.3rem; }
+.scale-plan li { margin: 0.45rem 0; line-height: 1.55; }
+.scale-plan-after { margin: 0.4rem 0 0; font-size: 0.92rem; opacity: 0.85; }

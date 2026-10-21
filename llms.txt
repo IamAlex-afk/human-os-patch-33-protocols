@@ -26,6 +26,8 @@ life, or you are in crisis, talk to a professional or a helpline (findahelpline.
   site's own origin; the only thing kept on the device is the chosen language (localStorage). The host (GitHub Pages) sees IP
   addresses like any web host; the site itself receives nothing.
 - **No account, no email, no signup, no ads, no paywall.**
+- **Practical, not only a score.** Every result shows a 7-day plan: three small steps (no bans, no medical advice) for the
+  area with the highest score, plus links to verified helplines for people in crisis.
 - **Honest about limits.** Every test page and the methodology say: not a diagnosis, not clinically validated, levels are shares
   of the answer scale (up to 40% / 41–70% / above 70%), not population norms.
 - **Open.** Questions in 12 languages, answer options and scoring are published under CC BY 4.0 in /scales/ on GitHub; the code

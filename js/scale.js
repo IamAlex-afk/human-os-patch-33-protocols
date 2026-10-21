@@ -13,9 +13,13 @@
       per[a] = (per[a] || 0) + vals[i];
       perMax[a] = (perMax[a] || 0) + 4;
     });
-    var areas = {};
-    Object.keys(per).forEach(function (a) { areas[a] = Math.round(per[a] / perMax[a] * 100); });
+    var areas = {}, top = null;
+    Object.keys(per).forEach(function (a) {
+      areas[a] = Math.round(per[a] / perMax[a] * 100);
+      if (top === null || areas[a] > areas[top]) top = a;   // the 7-day plan follows the highest area (first one on a tie)
+    });
     return {
+      top: top,
       sum: sum, max: max,
       level: ratio <= 0.4 ? 0 : ratio <= 0.7 ? 1 : 2,
       areas: areas,
@@ -58,6 +62,7 @@
       row.querySelector('.scale-area-fill').style.width = pct + '%';
     });
 
+    result.querySelectorAll('[data-plan]').forEach(function (el) { el.hidden = el.dataset.plan !== r.top; });
     document.getElementById('scaleSame').hidden = !r.same;
     result.hidden = false;
     result.scrollIntoView({ behavior: 'smooth', block: 'start' });

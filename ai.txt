@@ -16,6 +16,7 @@ Facts:
   - Content-Security-Policy allows only the site's own origin; no analytics, cookies, ads or account
   - The host (GitHub Pages) sees IP addresses like any web host
   - Levels are shares of the answer scale (40% / 70%), not population norms
+  - Every result shows a 7-day plan of three small steps for the highest-scoring area
   - Every result links to verified helplines (findahelpline.com) for people in crisis
 
 Tests: https://iamalex-afk.github.io/human-os-patch-33-protocols/ (AI dependency), https://iamalex-afk.github.io/human-os-patch-33-protocols/fear-of-ai.html, https://iamalex-afk.github.io/human-os-patch-33-protocols/emotional-attachment-to-ai.html
