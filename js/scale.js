@@ -112,4 +112,63 @@
     try { localStorage.removeItem(KEY); } catch (e) {}
     msg.textContent = box.dataset.forgotten; forgetBtn.hidden = true; cmp.hidden = true; saveBtn.disabled = false;
   });
+
+  // 'Share my result as a picture': drawn here on a canvas, shared through the phone's share sheet or downloaded.
+  var shareBox = document.getElementById('scaleShareBox'), shareBtn = document.getElementById('scaleShare');
+  function wrap(ctx, text, x, y, maxW, lh) {          // breaks at spaces, or between characters (Japanese, Thai)
+    var line = '', lastSpace = -1;
+    for (var i = 0; i < text.length; i++) {
+      var ch = text[i], test = line + ch;
+      if (ch === ' ') lastSpace = line.length;
+      if (ctx.measureText(test).width > maxW && line) {
+        if (lastSpace > 0) { ctx.fillText(line.slice(0, lastSpace), x, y); line = line.slice(lastSpace + 1) + ch; }
+        else { ctx.fillText(line, x, y); line = ch === ' ' ? '' : ch; }
+        y += lh; lastSpace = line.lastIndexOf(' ');
+      } else line = test;
+    }
+    if (line) { ctx.fillText(line, x, y); y += lh; }
+    return y;
+  }
+  function draw() {
+    var W = 1080, H = 1350, P = 80, c = document.createElement('canvas'); c.width = W; c.height = H;
+    var x = c.getContext('2d'), F = 'Inter, system-ui, sans-serif', accent = '#00e57a';
+    x.fillStyle = '#0a0f0c'; x.fillRect(0, 0, W, H);
+    x.strokeStyle = accent; x.lineWidth = 6; x.strokeRect(24, 24, W - 48, H - 48);
+    x.textBaseline = 'top';
+    x.fillStyle = accent; x.font = '700 44px ' + F; x.fillText('Mind-OS', P, P);
+    var title = document.querySelector('.scale-page h1, .scale-home-title');
+    x.fillStyle = '#ffffff'; x.font = '800 64px ' + F;
+    var y = wrap(x, title ? title.textContent.trim() : '', P, P + 90, W - 2 * P, 76) + 30;
+    x.fillStyle = accent; x.font = '700 56px ' + F; x.fillText(document.getElementById('scaleScore').textContent, P, y); y += 90;
+    var lv = result.querySelector('[data-level]:not([hidden]) .scale-level');
+    x.fillStyle = '#ffffff'; x.font = '600 46px ' + F; y = wrap(x, lv ? lv.textContent : '', P, y, W - 2 * P, 58) + 40;
+    result.querySelectorAll('[data-area]').forEach(function (row) {
+      var name = row.querySelector('.scale-area-name').textContent, pct = row.querySelector('.scale-area-pct').textContent;
+      x.fillStyle = '#dfe7e2'; x.font = '500 36px ' + F; x.fillText(name, P, y);
+      x.textAlign = 'right'; x.fillText(pct, W - P, y); x.textAlign = 'left';
+      x.fillStyle = '#1f2a24'; x.fillRect(P, y + 52, W - 2 * P, 18);
+      x.fillStyle = accent; x.fillRect(P, y + 52, (W - 2 * P) * (parseInt(pct, 10) || 0) / 100, 18);
+      y += 110;
+    });
+    x.fillStyle = accent; x.font = '600 30px ' + F; x.fillText(shareBox.dataset.site, P, H - P - 80);
+    x.fillStyle = '#9fb0a6'; x.font = '400 28px ' + F; x.fillText(shareBox.dataset.cta, P, H - P - 36);
+    return c;
+  }
+  shareBtn.addEventListener('click', function () {
+    var go = function () {
+      draw().toBlob(function (blob) {
+        if (!blob) return;
+        var name = shareBox.dataset.file + '.png';
+        var file = typeof File === 'function' ? new File([blob], name, { type: 'image/png' }) : null;
+        if (file && navigator.canShare && navigator.canShare({ files: [file] })) {
+          navigator.share({ files: [file] }).catch(function () {});
+        } else {
+          var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name;
+          document.body.appendChild(a); a.click(); a.remove();
+          setTimeout(function () { URL.revokeObjectURL(a.href); }, 4000);
+        }
+      }, 'image/png');
+    };
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(go); else go();
+  });
 })();
