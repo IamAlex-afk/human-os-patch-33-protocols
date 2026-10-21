@@ -1,0 +1,534 @@
+{
+ "id": "ai-and-productivity",
+ "name": "AI and productivity",
+ "version": "1.0.0",
+ "license": "CC BY 4.0",
+ "license_url": "https://creativecommons.org/licenses/by/4.0/",
+ "author": "Aleksei Sergeevich Bitkin",
+ "author_orcid": "https://orcid.org/0009-0002-7986-3812",
+ "source": "https://iamalex-afk.github.io/human-os-patch-33-protocols/",
+ "scoring": {
+  "points_per_answer": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "items": 10,
+  "min": 0,
+  "max": 40,
+  "reverse_keyed": [],
+  "levels": [
+   {
+    "up_to_share_of_max": 0.4
+   },
+   {
+    "up_to_share_of_max": 0.7
+   },
+   {
+    "up_to_share_of_max": 1.0
+   }
+  ],
+  "note": "Thresholds follow the answer scale, not population norms. Not clinically validated; not a diagnosis."
+ },
+ "areas": [
+  "time",
+  "flow",
+  "benefit"
+ ],
+ "item_areas": [
+  "time",
+  "time",
+  "time",
+  "flow",
+  "flow",
+  "flow",
+  "flow",
+  "benefit",
+  "benefit",
+  "benefit"
+ ],
+ "languages": {
+  "en": {
+   "options": [
+    "Never",
+    "Rarely",
+    "Sometimes",
+    "Often",
+    "Constantly"
+   ],
+   "items": [
+    "Do you spend longer rewording requests to AI than the task itself would take?",
+    "Do you use AI for small tasks that would be quicker to do yourself?",
+    "Do you drift into conversations with AI that have nothing to do with the task you sat down for?",
+    "Do you have to redo or fix work because an AI answer was wrong?",
+    "Do you rely on AI for complex decisions without checking whether it handles them well?",
+    "Do you put off starting a task until AI has given you a plan?",
+    "Do you lose your train of thought switching between your work and the AI chat?",
+    "Do you feel that AI makes you faster without checking whether it really does?",
+    "Do you end the day with fewer tasks done than planned, even though you used AI a lot?",
+    "Do you find it hard to say what AI actually saved you this week?"
+   ],
+   "areas": {
+    "time": "Time spent on AI",
+    "flow": "Flow of work",
+    "benefit": "Unclear benefit"
+   },
+   "levels": [
+    {
+     "name": "AI mostly helps your work",
+     "text": "Your habits leave room for the gains AI can bring. Keep choosing tasks where it really helps."
+    },
+    {
+     "name": "AI helps, but costs time too",
+     "text": "Some of your AI habits eat into the time it saves. A small step helps: before a task, decide whether AI is really needed for it."
+    },
+    {
+     "name": "AI may be costing you more than it gives",
+     "text": "Your habits may cancel out the gains. Try one week of noting which tasks AI really sped up, and do the rest without it."
+    }
+   ]
+  },
+  "ru": {
+   "options": [
+    "Никогда",
+    "Редко",
+    "Иногда",
+    "Часто",
+    "Постоянно"
+   ],
+   "items": [
+    "Тратите на переформулирование запросов к ИИ больше времени, чем заняла бы сама задача?",
+    "Поручаете ИИ мелкие задачи, которые быстрее сделать самому?",
+    "Уходите в разговоры с ИИ, не связанные с делом, ради которого сели работать?",
+    "Приходится переделывать или исправлять работу, потому что ответ ИИ оказался неверным?",
+    "Полагаетесь на ИИ в сложных решениях, не проверяя, хорошо ли он с ними справляется?",
+    "Откладываете начало задачи, пока ИИ не даст вам план?",
+    "Теряете нить, переключаясь между работой и чатом с ИИ?",
+    "Чувствуете, что с ИИ работаете быстрее, не проверяя, так ли это на самом деле?",
+    "Заканчиваете день, сделав меньше задуманного, хотя много пользовались ИИ?",
+    "Затрудняетесь сказать, что именно ИИ сэкономил вам за эту неделю?"
+   ],
+   "areas": {
+    "time": "Время на ИИ",
+    "flow": "Ход работы",
+    "benefit": "Неясная польза"
+   },
+   "levels": [
+    {
+     "name": "ИИ в основном помогает вашей работе",
+     "text": "Ваши привычки оставляют место для пользы, которую может дать ИИ. Продолжайте выбирать задачи, где он правда помогает."
+    },
+    {
+     "name": "ИИ помогает, но и отнимает время",
+     "text": "Часть привычек «съедает» время, которое ИИ экономит. Помогает маленький шаг: перед задачей решите, нужен ли для неё ИИ на самом деле."
+    },
+    {
+     "name": "ИИ может забирать больше, чем даёт",
+     "text": "Ваши привычки могут сводить пользу на нет. Попробуйте неделю отмечать, какие задачи ИИ правда ускорил, а остальные делать без него."
+    }
+   ]
+  },
+  "es": {
+   "options": [
+    "Nunca",
+    "Raramente",
+    "A veces",
+    "A menudo",
+    "Constantemente"
+   ],
+   "items": [
+    "¿Pasas más tiempo reformulando peticiones a la IA de lo que llevaría la propia tarea?",
+    "¿Le pides a la IA tareas pequeñas que harías más rápido tú?",
+    "¿Te desvías a conversaciones con la IA que no tienen que ver con la tarea para la que te sentaste?",
+    "¿Tienes que rehacer o corregir trabajo porque una respuesta de la IA era incorrecta?",
+    "¿Confías en la IA para decisiones complejas sin comprobar si las maneja bien?",
+    "¿Retrasas empezar una tarea hasta que la IA te da un plan?",
+    "¿Pierdes el hilo al cambiar entre tu trabajo y el chat con la IA?",
+    "¿Sientes que la IA te hace más rápido sin comprobar si de verdad es así?",
+    "¿Terminas el día con menos tareas hechas de las previstas, aunque usaste mucho la IA?",
+    "¿Te cuesta decir qué te ahorró realmente la IA esta semana?"
+   ],
+   "areas": {
+    "time": "Tiempo con la IA",
+    "flow": "Ritmo de trabajo",
+    "benefit": "Beneficio poco claro"
+   },
+   "levels": [
+    {
+     "name": "La IA ayuda sobre todo a tu trabajo",
+     "text": "Tus hábitos dejan espacio para lo que la IA puede aportar. Sigue eligiendo tareas en las que de verdad ayuda."
+    },
+    {
+     "name": "La IA ayuda, pero también quita tiempo",
+     "text": "Algunos hábitos se comen el tiempo que la IA ahorra. Un paso pequeño ayuda: antes de una tarea, decide si de verdad necesita IA."
+    },
+    {
+     "name": "La IA puede costarte más de lo que te da",
+     "text": "Tus hábitos pueden anular la ganancia. Prueba una semana a anotar qué tareas aceleró de verdad la IA y haz el resto sin ella."
+    }
+   ]
+  },
+  "de": {
+   "options": [
+    "Nie",
+    "Selten",
+    "Manchmal",
+    "Oft",
+    "Ständig"
+   ],
+   "items": [
+    "Brauchst du länger, um Anfragen an die KI umzuformulieren, als die Aufgabe selbst dauern würde?",
+    "Lässt du die KI kleine Aufgaben machen, die du selbst schneller erledigen würdest?",
+    "Gerätst du in Gespräche mit der KI, die nichts mit der Aufgabe zu tun haben, für die du dich hingesetzt hast?",
+    "Musst du Arbeit neu machen oder korrigieren, weil eine KI-Antwort falsch war?",
+    "Verlässt du dich bei komplexen Entscheidungen auf die KI, ohne zu prüfen, ob sie damit gut umgehen kann?",
+    "Schiebst du den Beginn einer Aufgabe auf, bis die KI dir einen Plan gegeben hat?",
+    "Verlierst du den Faden, wenn du zwischen deiner Arbeit und dem KI-Chat hin- und herwechselst?",
+    "Hast du das Gefühl, dass die KI dich schneller macht, ohne zu prüfen, ob es wirklich so ist?",
+    "Beendest du den Tag mit weniger erledigten Aufgaben als geplant, obwohl du viel KI genutzt hast?",
+    "Fällt es dir schwer zu sagen, was dir die KI diese Woche wirklich erspart hat?"
+   ],
+   "areas": {
+    "time": "Zeit mit KI",
+    "flow": "Arbeitsfluss",
+    "benefit": "Unklarer Nutzen"
+   },
+   "levels": [
+    {
+     "name": "KI hilft deiner Arbeit meistens",
+     "text": "Deine Gewohnheiten lassen Raum für den Nutzen, den KI bringen kann. Wähle weiter Aufgaben, bei denen sie wirklich hilft."
+    },
+    {
+     "name": "KI hilft, kostet aber auch Zeit",
+     "text": "Manche Gewohnheiten fressen die Zeit, die KI spart. Ein kleiner Schritt hilft: Entscheide vor einer Aufgabe, ob sie KI wirklich braucht."
+    },
+    {
+     "name": "KI kostet dich vielleicht mehr, als sie bringt",
+     "text": "Deine Gewohnheiten können den Gewinn aufheben. Notiere eine Woche lang, welche Aufgaben KI wirklich beschleunigt hat, und erledige den Rest ohne sie."
+    }
+   ]
+  },
+  "fr": {
+   "options": [
+    "Jamais",
+    "Rarement",
+    "Parfois",
+    "Souvent",
+    "Constamment"
+   ],
+   "items": [
+    "Passez-vous plus de temps à reformuler vos demandes à l’IA que ne prendrait la tâche elle-même ?",
+    "Confiez-vous à l’IA de petites tâches que vous feriez plus vite vous-même ?",
+    "Vous égarez-vous dans des conversations avec l’IA sans rapport avec la tâche pour laquelle vous vous êtes installé ?",
+    "Devez-vous refaire ou corriger un travail parce qu’une réponse de l’IA était fausse ?",
+    "Vous fiez-vous à l’IA pour des décisions complexes sans vérifier si elle s’en sort bien ?",
+    "Repoussez-vous le début d’une tâche jusqu’à ce que l’IA vous donne un plan ?",
+    "Perdez-vous le fil en passant de votre travail au chat avec l’IA ?",
+    "Avez-vous l’impression que l’IA vous rend plus rapide sans vérifier si c’est vraiment le cas ?",
+    "Finissez-vous la journée avec moins de tâches faites que prévu, alors que vous avez beaucoup utilisé l’IA ?",
+    "Avez-vous du mal à dire ce que l’IA vous a vraiment fait gagner cette semaine ?"
+   ],
+   "areas": {
+    "time": "Temps passé avec l’IA",
+    "flow": "Déroulement du travail",
+    "benefit": "Bénéfice flou"
+   },
+   "levels": [
+    {
+     "name": "L’IA aide surtout votre travail",
+     "text": "Vos habitudes laissent de la place à ce que l’IA peut apporter. Continuez à choisir les tâches où elle aide vraiment."
+    },
+    {
+     "name": "L’IA aide, mais prend aussi du temps",
+     "text": "Certaines habitudes grignotent le temps que l’IA fait gagner. Un petit pas aide : avant une tâche, décidez si elle a vraiment besoin de l’IA."
+    },
+    {
+     "name": "L’IA vous coûte peut-être plus qu’elle ne rapporte",
+     "text": "Vos habitudes peuvent annuler le gain. Pendant une semaine, notez les tâches que l’IA a vraiment accélérées et faites le reste sans elle."
+    }
+   ]
+  },
+  "ja": {
+   "options": [
+    "全くない",
+    "めったにない",
+    "時々",
+    "よくある",
+    "常にある"
+   ],
+   "items": [
+    "AIへの頼み方を言い直すのに、作業そのものより長い時間をかけていますか？",
+    "自分でやったほうが早い小さな作業を、AIに任せていますか？",
+    "取りかかるはずだった作業と関係のないAIとの会話に流れていますか？",
+    "AIの答えがまちがっていたせいで、作業をやり直したり直したりしていますか？",
+    "AIがうまく扱えるか確かめずに、複雑な判断をAIに頼っていますか？",
+    "AIに計画を出してもらうまで、作業を始めるのを先延ばしにしていますか？",
+    "作業とAIのチャットを行き来して、考えの流れが途切れていますか？",
+    "本当にそうか確かめずに、AIのおかげで速くなったと感じていますか？",
+    "AIをたくさん使ったのに、予定より少ない作業しか終わらずに1日が終わっていますか？",
+    "今週AIが実際に何を節約してくれたか、言うのが難しいですか？"
+   ],
+   "areas": {
+    "time": "AIに使う時間",
+    "flow": "作業の流れ",
+    "benefit": "はっきりしない効果"
+   },
+   "levels": [
+    {
+     "name": "AIはおおむね作業の役に立っている",
+     "text": "あなたの習慣は、AIがもたらす効果を生かせています。本当に役立つ作業を選び続けましょう。"
+    },
+    {
+     "name": "AIは役立つが、時間も取られている",
+     "text": "一部の習慣が、AIで浮いた時間を食いつぶしています。作業の前に、本当にAIが必要か決めるという小さな一歩が役立ちます。"
+    },
+    {
+     "name": "AIが、得るもの以上に時間を奪っているかも",
+     "text": "習慣のせいで効果が打ち消されているかもしれません。1週間、AIで本当に速くなった作業を記録し、それ以外はAIなしでやってみましょう。"
+    }
+   ]
+  },
+  "vi": {
+   "options": [
+    "Không bao giờ",
+    "Hiếm khi",
+    "Đôi khi",
+    "Thường xuyên",
+    "Luôn luôn"
+   ],
+   "items": [
+    "Bạn có mất nhiều thời gian diễn đạt lại yêu cầu cho AI hơn cả thời gian làm chính việc đó không?",
+    "Bạn có giao cho AI những việc nhỏ mà tự làm sẽ nhanh hơn không?",
+    "Bạn có sa vào trò chuyện với AI về những điều không liên quan đến việc bạn ngồi xuống để làm không?",
+    "Bạn có phải làm lại hay sửa công việc vì câu trả lời của AI bị sai không?",
+    "Bạn có dựa vào AI cho các quyết định phức tạp mà không kiểm tra xem nó có xử lý tốt không?",
+    "Bạn có trì hoãn bắt đầu một việc cho đến khi AI đưa ra kế hoạch không?",
+    "Bạn có bị đứt mạch suy nghĩ khi chuyển qua lại giữa công việc và cuộc trò chuyện với AI không?",
+    "Bạn có cảm thấy AI giúp mình nhanh hơn mà không kiểm tra xem có thật vậy không?",
+    "Bạn có kết thúc một ngày với ít việc xong hơn dự định dù đã dùng AI nhiều không?",
+    "Bạn có khó nói được AI thật sự đã tiết kiệm cho bạn điều gì trong tuần này không?"
+   ],
+   "areas": {
+    "time": "Thời gian dành cho AI",
+    "flow": "Nhịp làm việc",
+    "benefit": "Lợi ích không rõ"
+   },
+   "levels": [
+    {
+     "name": "AI chủ yếu giúp ích cho công việc của bạn",
+     "text": "Thói quen của bạn để chỗ cho lợi ích mà AI có thể mang lại. Hãy tiếp tục chọn những việc AI thật sự giúp được."
+    },
+    {
+     "name": "AI giúp ích, nhưng cũng tốn thời gian",
+     "text": "Một số thói quen đang “ăn” vào thời gian AI tiết kiệm được. Một bước nhỏ sẽ giúp: trước mỗi việc, hãy quyết định nó có thật cần AI không."
+    },
+    {
+     "name": "AI có thể lấy của bạn nhiều hơn là cho",
+     "text": "Thói quen của bạn có thể triệt tiêu lợi ích. Hãy thử một tuần ghi lại việc nào AI thật sự giúp nhanh hơn, còn lại tự làm không cần AI."
+    }
+   ]
+  },
+  "th": {
+   "options": [
+    "ไม่เคย",
+    "นานๆ ครั้ง",
+    "บางครั้ง",
+    "บ่อยครั้ง",
+    "เสมอ"
+   ],
+   "items": [
+    "คุณใช้เวลาเรียบเรียงคำขอให้ AI ใหม่ นานกว่าเวลาที่ทำงานนั้นเองหรือไม่",
+    "คุณให้ AI ทำงานเล็ก ๆ ที่ทำเองจะเร็วกว่าหรือไม่",
+    "คุณเผลอคุยกับ AI เรื่องที่ไม่เกี่ยวกับงานที่ตั้งใจจะทำหรือไม่",
+    "คุณต้องทำงานใหม่หรือแก้งาน เพราะคำตอบของ AI ผิดหรือไม่",
+    "คุณพึ่ง AI ในการตัดสินใจเรื่องซับซ้อน โดยไม่ตรวจว่ามันจัดการได้ดีหรือไม่",
+    "คุณเลื่อนการเริ่มงานจนกว่า AI จะให้แผนหรือไม่",
+    "คุณหลุดจากความคิดเมื่อสลับไปมาระหว่างงานกับแชต AI หรือไม่",
+    "คุณรู้สึกว่า AI ทำให้เร็วขึ้น โดยไม่ตรวจว่าเป็นจริงหรือไม่",
+    "คุณจบวันโดยทำงานได้น้อยกว่าที่วางแผน ทั้งที่ใช้ AI มากหรือไม่",
+    "คุณบอกได้ยากว่าสัปดาห์นี้ AI ช่วยประหยัดอะไรให้คุณจริง ๆ หรือไม่"
+   ],
+   "areas": {
+    "time": "เวลาที่ใช้กับ AI",
+    "flow": "ลำดับการทำงาน",
+    "benefit": "ประโยชน์ที่ไม่ชัด"
+   },
+   "levels": [
+    {
+     "name": "AI ช่วยงานของคุณเป็นส่วนใหญ่",
+     "text": "นิสัยของคุณเปิดทางให้ประโยชน์ที่ AI ให้ได้ เลือกงานที่ AI ช่วยได้จริงต่อไป"
+    },
+    {
+     "name": "AI ช่วยได้ แต่ก็กินเวลาด้วย",
+     "text": "นิสัยบางอย่างกินเวลาที่ AI ช่วยประหยัด ก้าวเล็ก ๆ ช่วยได้: ก่อนเริ่มงาน ให้ตัดสินใจว่างานนั้นต้องใช้ AI จริงหรือไม่"
+    },
+    {
+     "name": "AI อาจเอาไปมากกว่าที่ให้",
+     "text": "นิสัยของคุณอาจหักล้างประโยชน์ ลองจดหนึ่งสัปดาห์ว่างานไหนที่ AI ทำให้เร็วขึ้นจริง และทำงานที่เหลือโดยไม่ใช้ AI"
+    }
+   ]
+  },
+  "pt": {
+   "options": [
+    "Nunca",
+    "Raramente",
+    "Às vezes",
+    "Frequentemente",
+    "Constantemente"
+   ],
+   "items": [
+    "Você gasta mais tempo reformulando pedidos à IA do que a própria tarefa levaria?",
+    "Você pede à IA tarefas pequenas que faria mais rápido sozinho?",
+    "Você se perde em conversas com a IA que não têm nada a ver com a tarefa para a qual sentou?",
+    "Você precisa refazer ou corrigir trabalho porque uma resposta da IA estava errada?",
+    "Você confia na IA para decisões complexas sem conferir se ela lida bem com elas?",
+    "Você adia começar uma tarefa até a IA lhe dar um plano?",
+    "Você perde o fio da meada alternando entre o trabalho e o chat com a IA?",
+    "Você sente que a IA o deixa mais rápido sem conferir se isso é verdade?",
+    "Você termina o dia com menos tarefas feitas do que planejou, mesmo tendo usado muito a IA?",
+    "Você tem dificuldade de dizer o que a IA realmente lhe poupou nesta semana?"
+   ],
+   "areas": {
+    "time": "Tempo com a IA",
+    "flow": "Ritmo de trabalho",
+    "benefit": "Benefício pouco claro"
+   },
+   "levels": [
+    {
+     "name": "A IA ajuda principalmente o seu trabalho",
+     "text": "Seus hábitos deixam espaço para o ganho que a IA pode trazer. Continue escolhendo tarefas em que ela ajuda de verdade."
+    },
+    {
+     "name": "A IA ajuda, mas também toma tempo",
+     "text": "Alguns hábitos comem o tempo que a IA economiza. Um passo pequeno ajuda: antes de uma tarefa, decida se ela precisa mesmo de IA."
+    },
+    {
+     "name": "A IA pode estar custando mais do que dá",
+     "text": "Seus hábitos podem anular o ganho. Tente por uma semana anotar quais tarefas a IA realmente acelerou e faça o resto sem ela."
+    }
+   ]
+  },
+  "ko": {
+   "options": [
+    "전혀 아니다",
+    "거의 아니다",
+    "때때로 그렇다",
+    "자주 그렇다",
+    "항상 그렇다"
+   ],
+   "items": [
+    "AI에게 요청을 고쳐 쓰는 데 일 자체보다 더 많은 시간을 쓰나요?",
+    "직접 하면 더 빠른 작은 일을 AI에게 맡기나요?",
+    "하려고 앉은 일과 상관없는 AI와의 대화로 빠지나요?",
+    "AI의 답이 틀려서 일을 다시 하거나 고쳐야 하나요?",
+    "AI가 잘 처리하는지 확인하지 않고 복잡한 결정을 AI에 맡기나요?",
+    "AI가 계획을 줄 때까지 일을 시작하는 것을 미루나요?",
+    "일과 AI 채팅을 오가다가 생각의 흐름을 놓치나요?",
+    "정말 그런지 확인하지 않고 AI 덕분에 빨라졌다고 느끼나요?",
+    "AI를 많이 썼는데도 계획보다 적은 일을 하고 하루를 마치나요?",
+    "이번 주에 AI가 실제로 무엇을 아껴 주었는지 말하기 어렵나요?"
+   ],
+   "areas": {
+    "time": "AI에 쓰는 시간",
+    "flow": "일의 흐름",
+    "benefit": "불분명한 효과"
+   },
+   "levels": [
+    {
+     "name": "AI가 대체로 일에 도움이 됩니다",
+     "text": "내 습관은 AI가 줄 수 있는 효과를 살리고 있습니다. 정말 도움이 되는 일을 계속 골라 보세요."
+    },
+    {
+     "name": "AI가 돕지만 시간도 빼앗습니다",
+     "text": "일부 습관이 AI가 아껴 준 시간을 갉아먹고 있습니다. 일을 시작하기 전에 정말 AI가 필요한지 정하는 작은 걸음이 도움이 됩니다."
+    },
+    {
+     "name": "AI가 주는 것보다 가져가는 게 많을 수 있습니다",
+     "text": "습관 때문에 효과가 사라질 수 있습니다. 일주일 동안 AI로 정말 빨라진 일을 적어 보고, 나머지는 AI 없이 해 보세요."
+    }
+   ]
+  },
+  "it": {
+   "options": [
+    "Mai",
+    "Raramente",
+    "A volte",
+    "Spesso",
+    "Costantemente"
+   ],
+   "items": [
+    "Passi più tempo a riformulare le richieste all’IA di quanto ne richiederebbe il compito stesso?",
+    "Affidi all’IA piccoli compiti che faresti prima da solo?",
+    "Finisci in conversazioni con l’IA che non c’entrano con il compito per cui ti sei messo al lavoro?",
+    "Devi rifare o correggere un lavoro perché una risposta dell’IA era sbagliata?",
+    "Ti affidi all’IA per decisioni complesse senza verificare se le gestisce bene?",
+    "Rimandi l’inizio di un compito finché l’IA non ti dà un piano?",
+    "Perdi il filo passando dal lavoro alla chat con l’IA?",
+    "Hai la sensazione che l’IA ti renda più veloce senza verificare se è davvero così?",
+    "Finisci la giornata con meno compiti fatti del previsto, anche se hai usato molto l’IA?",
+    "Fai fatica a dire che cosa ti ha davvero fatto risparmiare l’IA questa settimana?"
+   ],
+   "areas": {
+    "time": "Tempo con l’IA",
+    "flow": "Andamento del lavoro",
+    "benefit": "Beneficio poco chiaro"
+   },
+   "levels": [
+    {
+     "name": "L’IA aiuta soprattutto il tuo lavoro",
+     "text": "Le tue abitudini lasciano spazio al vantaggio che l’IA può dare. Continua a scegliere i compiti in cui aiuta davvero."
+    },
+    {
+     "name": "L’IA aiuta, ma toglie anche tempo",
+     "text": "Alcune abitudini si mangiano il tempo che l’IA fa risparmiare. Un piccolo passo aiuta: prima di un compito, decidi se ha davvero bisogno dell’IA."
+    },
+    {
+     "name": "L’IA potrebbe costarti più di quanto ti dà",
+     "text": "Le tue abitudini possono annullare il vantaggio. Prova per una settimana ad annotare quali compiti l’IA ha davvero velocizzato e fai il resto senza."
+    }
+   ]
+  },
+  "hi": {
+   "options": [
+    "कभी नहीं",
+    "शायद ही कभी",
+    "कभी-कभी",
+    "अक्सर",
+    "हमेशा"
+   ],
+   "items": [
+    "क्या आप AI से अनुरोध दोबारा लिखने में उससे ज़्यादा समय लगाते हैं जितना ख़ुद काम करने में लगता?",
+    "क्या आप AI को ऐसे छोटे काम देते हैं जो ख़ुद करना ज़्यादा जल्दी होता?",
+    "क्या आप AI के साथ ऐसी बातचीत में उलझ जाते हैं जिसका उस काम से कोई लेना-देना नहीं जिसके लिए आप बैठे थे?",
+    "क्या AI का जवाब ग़लत होने से आपको काम दोबारा करना या सुधारना पड़ता है?",
+    "क्या आप जाँचे बिना कि AI उन्हें ठीक से संभालता है, जटिल फ़ैसलों में उस पर निर्भर रहते हैं?",
+    "क्या आप काम शुरू करना तब तक टालते हैं जब तक AI योजना न दे दे?",
+    "क्या काम और AI चैट के बीच आते-जाते आपकी सोच का सिलसिला टूट जाता है?",
+    "क्या आपको लगता है कि AI से आप तेज़ हो गए हैं, बिना यह जाँचे कि सच में ऐसा है?",
+    "क्या AI का बहुत इस्तेमाल करने के बाद भी आपका दिन सोचे से कम काम पूरा करके ख़त्म होता है?",
+    "क्या यह बताना मुश्किल लगता है कि इस हफ़्ते AI ने आपका असल में क्या बचाया?"
+   ],
+   "areas": {
+    "time": "AI पर लगने वाला समय",
+    "flow": "काम का प्रवाह",
+    "benefit": "अस्पष्ट फ़ायदा"
+   },
+   "levels": [
+    {
+     "name": "AI ज़्यादातर आपके काम में मदद करता है",
+     "text": "आपकी आदतें AI से मिलने वाले फ़ायदे की जगह छोड़ती हैं। ऐसे काम चुनते रहें जिनमें वह सच में मदद करता है।"
+    },
+    {
+     "name": "AI मदद करता है, पर समय भी लेता है",
+     "text": "कुछ आदतें AI से बचा समय खा जाती हैं। एक छोटा कदम मदद करता है: काम से पहले तय करें कि क्या उसमें सच में AI चाहिए।"
+    },
+    {
+     "name": "AI शायद जितना देता है उससे ज़्यादा ले रहा है",
+     "text": "आपकी आदतें फ़ायदे को ख़त्म कर सकती हैं। एक हफ़्ता लिखें कि किन कामों को AI ने सच में तेज़ किया, और बाक़ी बिना AI के करें।"
+    }
+   ]
+  }
+ }
+}

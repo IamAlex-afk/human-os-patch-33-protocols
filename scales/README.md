@@ -9,6 +9,7 @@ anyone can read, reuse, translate or test them. The live tests: https://iamalex-
 | `fear-of-ai.json` | Fear of AI test | 10 | 1.0.0 |
 | `emotional-attachment-to-ai.json` | Emotional attachment to AI | 10 | 1.0.0 |
 | `ai-and-thinking.json` | AI and your thinking | 10 | 1.0.0 |
+| `ai-and-productivity.json` | AI and productivity | 10 | 1.0.0 |
 
 ## How a scale is scored
 Every answer gives 0, 1, 2, 3 or 4 points (left to right on the answer scale); there are no reverse-keyed items.
