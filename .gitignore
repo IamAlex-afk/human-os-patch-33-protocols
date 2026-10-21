@@ -9,3 +9,9 @@ verify.py
 claude-telegram.yaml
 data/
 modules/
+
+# Local build tools and working notes (kept on the owner's computer only)
+tools/
+build.ps1
+localize_jsonld.py
+CLAUDE.md

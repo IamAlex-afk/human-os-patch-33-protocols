@@ -1,7 +1,7 @@
 // Mind-OS open scales: scores one test page in the browser. Nothing is sent or stored.
 // The page carries everything it needs: questions as radio groups q0..qN, data-max, item areas, level blocks.
 (function () {
-  // Pure scoring, also run by tools/test_scales.mjs, so the tests check exactly the code the pages use.
+  // Pure scoring, also run by the scoring tests, so the tests check exactly the code the pages use.
   // vals: points per answer (0-4); itemAreas: area key per item. Level: <= 40% of the maximum low (0),
   // <= 70% moderate (1), above high (2) - the thresholds stated on the methodology page.
   function score(vals, itemAreas) {
